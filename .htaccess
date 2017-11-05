@@ -1,0 +1,9 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^atanas\.sod\.bg$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.atanas\.sod\.bg$
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/.+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^/?$ "http\:\/\/atanas\.info" [R=301,L]
+
