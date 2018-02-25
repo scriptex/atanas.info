@@ -36,35 +36,7 @@
 	<?php include_once('assets/dist/sprite.svg'); ?>
 
 	<div class="o-wrapper">
-		<div class="c-header">
-			<div class="o-shell o-shell--flex">
-				<a href="#hello" class="c-logo js-internal-link">
-					<svg class="svg-logo">
-						<use xlink:href="#svg-logo" />
-					</svg><!-- /.svg-logo -->
-				</a>
-
-				<nav class="c-nav">
-					<ul>
-						<li>
-							<a href="#about" class="js-internal-link">About Me</a>
-						</li>
-
-						<li>
-							<a href="#skills" class="js-internal-link">Skills</a>
-						</li>
-
-						<li>
-							<a href="#portfolio" class="js-internal-link">Portfolio</a>
-						</li>
-
-						<li>
-							<a href="#hire" class="js-internal-link">Hire Me</a>
-						</li>
-					</ul>
-				</nav><!-- /.c-nav -->
-			</div><!-- /.o-shell o-shell-/-flex -->
-		</div><!-- /.c-header -->
+		<?php include_once('header.php'); ?>
 
 		<div class="o-main">
 			<section class="c-section c-section--hello is--current" id="hello">
@@ -88,63 +60,7 @@
 			</section><!-- /#hire.c-section c-section-/-hire -->
 		</div><!-- /.o-main -->
 
-		<div class="c-footer">
-			<div class="o-shell o-shell--flex">
-				<p>&copy; <?php echo date( 'Y' ); ?> Atanas Atanasov. All rights reserved.</p>
-
-				<nav class="c-socials">
-					<ul>
-						<li>
-							<a href="mailto:hi@atanas.info" target="_blank" rel="noopener noreferrer">
-								<svg class="svg-email">
-									<use xlink:href="#svg-email" />
-								</svg><!-- /.svg-email -->
-							</a>
-						</li>
-
-						<li>
-							<a href="https://github.com/scriptex" target="_blank" rel="noopener noreferrer">
-								<svg class="svg-github">
-									<use xlink:href="#svg-github" />
-								</svg><!-- /.svg-github -->
-							</a>
-						</li>
-
-						<li>
-							<a href="https://gitlab.com/scriptex" target="_blank" rel="noopener noreferrer">
-								<svg class="svg-gitlab">
-									<use xlink:href="#svg-gitlab" />
-								</svg><!-- /.svg-gitlab -->
-							</a>
-						</li>
-
-						<li>
-							<a href="https://twitter.com/scriptexbg" target="_blank" rel="noopener noreferrer">
-								<svg class="svg-twitter">
-									<use xlink:href="#svg-twitter" />
-								</svg><!-- /.svg-twitter -->
-							</a>
-						</li>
-
-						<li>
-							<a href="https://www.npmjs.com/~scriptex" target="_blank" rel="noopener noreferrer">
-								<svg class="svg-npm">
-									<use xlink:href="#svg-npm" />
-								</svg><!-- /.svg-npm -->
-							</a>
-						</li>
-
-						<li>
-							<a href="https://www.linkedin.com/in/scriptex/" target="_blank" rel="noopener noreferrer">
-								<svg class="svg-linkedin">
-									<use xlink:href="#svg-linkedin" />
-								</svg><!-- /.svg-linkedin -->
-							</a>
-						</li>
-					</ul>
-				</nav><!-- /.c-socials -->
-			</div><!-- /.o-shell o-shell-/-flex -->
-		</div><!-- /.c-footer -->
+		<?php include_once('footer.php'); ?>
 	</div><!-- /.o-wrapper -->
 
 	<script src="assets/dist/app.js"></script>

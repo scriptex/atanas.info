@@ -3,4 +3,5 @@
 .o-wrapper {
 	height: 100%;
 	@include flex-column(nowrap, stretch, flex-start);
+	background-color: rgba($color-black, 0.7);
 }

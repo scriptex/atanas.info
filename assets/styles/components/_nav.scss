@@ -1,0 +1,44 @@
+// Nav
+
+.c-nav {
+	font-size: 1.25rem;
+
+	ul {
+		@include flex-row(wrap, center, space-between);
+		margin: 0 -0.5rem;
+	}
+
+	li {
+		padding: 0 0.5rem;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+		display: block;
+		position: relative;
+		overflow: hidden;
+		perspective: 60rem;
+
+		span,
+		&:after {
+			display: block;
+			padding: 0.75rem 1rem;
+			transition: transform $timing $easing;
+		}
+
+		&:after {
+			content: attr(data-text);
+			position: absolute;
+			top: 100%;
+			right: 0;
+		}
+
+		@include hover {
+			span,
+			&:after {
+				transform: translateY(-100%);
+			}
+		}
+	}
+}

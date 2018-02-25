@@ -529,8 +529,8 @@ body {
   font-family: "Work Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.35;
-  color: #000;
-  min-width: 320px;
+  color: #fff;
+  min-width: 20rem;
   background: url(./0602a72d2d617f75dbcd1dfceace3c74.jpg) no-repeat 50% 50%/cover fixed; }
 
 html,
@@ -669,7 +669,10 @@ p:last-child,
 .o-main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0%;
-          flex: 1 1 0%; }
+          flex: 1 1 0%;
+  position: relative;
+  z-index: 20;
+  padding: 5.19rem 0 4.31rem; }
 
 .o-shell {
   max-width: 75rem;
@@ -710,7 +713,8 @@ p:last-child,
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap; }
+          flex-flow: column nowrap;
+  background-color: rgba(0, 0, 0, 0.7); }
 
 .alignleft {
   float: left;
@@ -819,6 +823,17 @@ p:last-child,
     padding-left: 0;
     padding-right: 0; }
 
+.c-footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 25;
+  padding: 1rem 0; }
+
+.c-footer p {
+    margin: 0.5rem 0; }
+
 [class^='ico-'] {
   overflow: hidden;
   text-indent: 101%;
@@ -832,16 +847,126 @@ p:last-child,
   list-style: none outside none; }
 
 .c-logo {
-  width: 100px;
-  height: 100px;
-  display: block;
-  background: url(./5d8a8a8e5c0363b1f074d4e0c384107c.png) no-repeat 0 0; }
+  display: block; }
+
+.c-nav {
+  font-size: 1.25rem; }
+
+.c-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    margin: 0 -0.5rem; }
+
+.c-nav li {
+    padding: 0 0.5rem; }
+
+.c-nav a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    -webkit-perspective: 60rem;
+            perspective: 60rem; }
+
+.c-nav a span, .c-nav a:after {
+      display: block;
+      padding: 0.75rem 1rem;
+      -webkit-transition: -webkit-transform 0.4s ease-in-out;
+      transition: -webkit-transform 0.4s ease-in-out;
+      transition: transform 0.4s ease-in-out;
+      transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out; }
+
+.c-nav a:after {
+      content: attr(data-text);
+      position: absolute;
+      top: 100%;
+      right: 0; }
+
+@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover) {
+      .c-nav a:hover span, .c-nav a:hover:after {
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%); } }
+
+.c-socials ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: 0 -0.5rem; }
+
+.c-socials li {
+  padding: 0 0.5rem; }
+
+.c-socials a,
+.c-socials svg {
+  display: block; }
 
 [class^='svg-'] {
   display: inline-block;
   vertical-align: middle; }
 
+.svg-email {
+  width: 1.94rem;
+  height: 2.19rem;
+  fill: #fff; }
+
+.svg-github {
+  width: 2.13rem;
+  height: 2.06rem;
+  fill: #fff; }
+
+.svg-gitlab {
+  width: 2.06rem;
+  height: 1.94rem;
+  fill: #fff; }
+
+.svg-twitter {
+  width: 2.13rem;
+  height: 1.69rem;
+  fill: #fff; }
+
+.svg-npm {
+  width: 5.25rem;
+  height: 2.06rem;
+  fill: #fff; }
+
+.svg-linkedin {
+  width: 2.19rem;
+  height: 2.06rem;
+  fill: #fff; }
+
+.svg-logo {
+  width: 50px;
+  height: 50px;
+  fill: #fff; }
+
 .c-header {
-  padding: 15px 0; }
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 30;
+  padding: 1rem 0; }
 
 /*# sourceMappingURL=app.css.map*/

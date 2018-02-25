@@ -1,0 +1,17 @@
+// Socials
+
+.c-socials {
+	ul {
+		@include flex-row(wrap, center, space-between);
+		margin: 0 -0.5rem;
+	}
+
+	li {
+		padding: 0 0.5rem;
+	}
+
+	a,
+	svg {
+		display: block;
+	}
+}
