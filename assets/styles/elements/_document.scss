@@ -11,5 +11,10 @@ body {
 	line-height: $line-height-base;
 	color: $color-black;
 	min-width: 320px;
-	background-color: $color-white;
+	background: url(../images/temp/desktop.jpg) no-repeat 50% 50% / cover fixed;
+}
+
+html,
+body {
+	height: 100%;
 }

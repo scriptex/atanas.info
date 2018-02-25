@@ -194,7 +194,7 @@ module.exports = env => {
 							options: {
 								name: '[hash].[ext]',
 								context: '',
-								publicPath: '../../',
+								publicPath: './',
 								outputPath: 'assets/dist/'
 							}
 						}
