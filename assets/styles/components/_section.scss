@@ -1,0 +1,13 @@
+// Section
+
+.c-section {
+	&--hello {
+		text-align: center;
+		height: 100vh;
+
+		.o-shell {
+			@include flex-row(nowrap, center, center);
+			height: 100%;
+		}
+	}
+}

@@ -39,9 +39,37 @@
 		<?php include_once('header.php'); ?>
 
 		<div class="o-main">
-			<section class="c-section c-section--hello is--current" id="hello">
-				<div class="o-shell">Hello</div><!-- /.o-shell -->
-			</section><!-- /#hello.c-section c-section-/-hello -->
+			<section class="c-section c-section--hello fullsize-background" id="hello" style="background-image: url(assets/images/temp/desktop.jpg);">
+				<div class="o-shell">
+					<div class="c-slider" id="slider-hello">
+						<h1>Atanas Atanasov</h1>
+
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<h2>Full Stack Web Developer</h2>
+								</div><!-- /.swiper-slide -->
+
+								<div class="swiper-slide">
+									<h2>CSS Experimenter</h2>
+								</div><!-- /.swiper-slide -->
+
+								<div class="swiper-slide">
+									<h2>JavaScript Master</h2>
+								</div><!-- /.swiper-slide -->
+
+								<div class="swiper-slide">
+									<h2>Father</h2>
+								</div><!-- /.swiper-slide -->
+
+								<div class="swiper-slide">
+									<h2>NodeJS Enthusiast</h2>
+								</div><!-- /.swiper-slide -->
+							</div><!-- /.swiper-wrapper -->
+						</div><!-- /.swiper-container -->
+					</div><!-- /#slider-hello.c-slider -->
+				</div><!-- /.o-shell -->
+			</section><!-- /#hello.c-section c-section-/-hello fullsize-background -->
 
 			<section class="c-section c-section--about" id="about">
 				<div class="o-shell">About</div><!-- /.o-shell -->
