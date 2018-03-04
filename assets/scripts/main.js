@@ -1,6 +1,7 @@
-import Swiper from 'swiper/dist/js/swiper';
+import { initSliders } from './slider';
+import { initCanvas, createDots } from './canvas';
 
-const hello = new Swiper('#slider-hello .swiper-container', {
-	loop: true,
-	effect: 'cube'
-});
+const canvas = initCanvas('canvas');
+
+createDots(canvas);
+initSliders();

@@ -39,10 +39,12 @@
 		<?php include_once('header.php'); ?>
 
 		<div class="o-main">
-			<section class="c-section c-section--hello fullsize-background" id="hello" style="background-image: url(assets/images/temp/desktop.jpg);">
+			<section class="c-section c-section--hello" id="hello">
 				<div class="o-shell">
+					<div class="c-canvas" id="canvas"></div><!-- /.c-canvas -->
+
 					<div class="c-slider" id="slider-hello">
-						<h1>Atanas Atanasov</h1>
+						<h1>Hello World! <br>I am Atanas Atanasov, a</h1>
 
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
@@ -69,11 +71,11 @@
 						</div><!-- /.swiper-container -->
 					</div><!-- /#slider-hello.c-slider -->
 				</div><!-- /.o-shell -->
-			</section><!-- /#hello.c-section c-section-/-hello fullsize-background -->
+			</section><!-- /#hello.c-section c-section-/-hello -->
 
-			<section class="c-section c-section--about" id="about">
+			<section class="c-section c-section--about fullsize-background" id="about" style="background-image: url(assets/images/temp/desktop.jpg);">
 				<div class="o-shell">About</div><!-- /.o-shell -->
-			</section><!-- /#about.c-section c-section-/-about -->
+			</section><!-- /#about.c-section c-section-/-about fullsize-background -->
 
 			<section class="c-section c-section--skills" id="skills">
 				<div class="o-shell">Skills</div><!-- /.o-shell -->

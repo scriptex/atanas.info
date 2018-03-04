@@ -4,6 +4,7 @@
 	&--hello {
 		text-align: center;
 		height: 100vh;
+		position: relative;
 
 		.o-shell {
 			@include flex-row(nowrap, center, center);

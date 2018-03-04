@@ -1,0 +1,15 @@
+// Canvas
+
+.c-canvas {
+	width: 100%;
+	height: 100%;
+	@include centered;
+	z-index: 1;
+	background-color: $color-black;
+
+	svg {
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+}

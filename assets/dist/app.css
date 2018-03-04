@@ -1504,6 +1504,23 @@ p:last-child,
     padding-left: 0;
     padding-right: 0; }
 
+.c-canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 1;
+  background-color: #000; }
+
+.c-canvas svg {
+    width: 100%;
+    height: 100%;
+    display: block; }
+
 .c-footer {
   position: relative;
   z-index: 25;
@@ -1587,7 +1604,8 @@ p:last-child,
 
 .c-section--hello {
   text-align: center;
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
 
 .c-section--hello .o-shell {
     display: -webkit-box;
@@ -1604,6 +1622,12 @@ p:last-child,
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
     height: 100%; }
+
+.c-slider {
+  max-width: 30rem;
+  position: relative;
+  z-index: 2;
+  margin: auto; }
 
 .c-socials ul {
   display: -webkit-box;
