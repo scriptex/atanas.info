@@ -1129,7 +1129,7 @@ textarea::placeholder {
 
 input:-webkit-autofill {
   -webkit-text-fill-color: inherit;
-  -webkit-box-shadow: 0 0 0 1000px #fff inset; }
+  -webkit-box-shadow: 0 0 0 62.5rem #fff inset; }
 
 *,
 *:before,
@@ -1210,7 +1210,7 @@ html {
 body {
   font-family: "Work Sans", sans-serif;
   font-size: 1rem;
-  line-height: 1.35;
+  line-height: 1.75;
   color: #fff;
   min-width: 20rem;
   background-color: #000; }
@@ -1399,24 +1399,28 @@ p:last-child,
 
 .alignleft {
   float: left;
-  margin: 0.35rem 1.25rem 1.25rem 0; }
+  margin: 0 2rem 2rem 0; }
 
 .alignright {
   float: right;
-  margin: 0.35rem 0 1.25rem 1.25rem; }
+  margin: 0 0 2rem 2rem; }
 
 .alignnone,
 .aligncenter {
-  float: none;
-  margin: 0.35rem 0 1.25rem; }
+  float: none; }
+
+.alignnone {
+  margin: 0 0 2rem; }
 
 .aligncenter {
-  display: block; }
+  display: block;
+  margin: 0 0 2rem; }
 
 .fullsize-background {
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: cover; }
+  background-size: cover;
+  background-attachment: fixed; }
 
 .hidden,
 [hidden] {
@@ -1485,6 +1489,75 @@ p:last-child,
 .text-right {
   text-align: right; }
 
+.c-article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+
+.c-article__block {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+    position: relative;
+    margin-bottom: 2rem; }
+
+.c-article__block:nth-of-type(1) {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 55.3%;
+              flex: 0 0 55.3%;
+      margin-right: 8rem; }
+
+.c-article__block:nth-of-type(2) {
+      margin-top: 1rem;
+      margin-left: 10%; }
+
+.c-article__block:nth-of-type(3) {
+      margin-top: 4rem; }
+
+.c-article__block:nth-of-type(4) {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 35%;
+              flex: 0 0 35%;
+      margin-top: -2rem;
+      margin-left: 2rem; }
+
+.c-article__block:nth-of-type(5) {
+      margin-top: 4rem;
+      left: -7rem; }
+
+.c-article__block:nth-of-type(6) {
+      margin-top: -2rem; }
+
+.c-article__block:nth-of-type(7) {
+      text-align: right;
+      margin-top: 8rem;
+      margin-right: 7rem; }
+
+.c-article h2 {
+    text-align: center;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%; }
+
+.c-article img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0%;
+            flex: 1 1 0%;
+    max-width: 15rem;
+    display: block;
+    margin-top: -2rem;
+    border-radius: 50%; }
+
 .c-btn {
   text-align: center;
   text-decoration: none;
@@ -1507,12 +1580,9 @@ p:last-child,
 .c-canvas {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  margin: auto;
   z-index: 1;
   background-color: #000; }
 
@@ -1524,7 +1594,8 @@ p:last-child,
 .c-footer {
   position: relative;
   z-index: 25;
-  padding: 1rem 0; }
+  padding: 1rem 0;
+  background-color: #000; }
 
 .c-footer p {
     margin: 0.5rem 0; }
@@ -1535,7 +1606,12 @@ p:last-child,
   right: 0;
   left: 0;
   z-index: 30;
-  padding: 1rem 0; }
+  padding: 1rem 0;
+  -webkit-transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out; }
+
+.c-header--with-background {
+    background-color: rgba(0, 0, 0, 0.85); }
 
 [class^='ico-'] {
   overflow: hidden;
@@ -1605,7 +1681,8 @@ p:last-child,
 .c-section--hello {
   text-align: center;
   height: 100vh;
-  position: relative; }
+  position: relative;
+  z-index: 1; }
 
 .c-section--hello .o-shell {
     display: -webkit-box;
@@ -1622,6 +1699,63 @@ p:last-child,
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
     height: 100%; }
+
+.c-section--about {
+  padding: 4rem 0;
+  position: relative;
+  z-index: 2;
+  background-color: #000; }
+
+.c-section--about:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5); }
+
+.c-section--about .o-shell {
+    position: relative;
+    z-index: 2; }
+
+.c-section--skills {
+  position: relative;
+  z-index: 2;
+  background-color: #fff; }
+
+.c-section--portfolio {
+  color: #000;
+  position: relative;
+  z-index: 2;
+  background-color: #ccc; }
+
+.c-section--portfolio .o-shell {
+    height: 64rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-line-pack: center;
+        align-content: center; }
+
+.c-section--portfolio h1,
+  .c-section--portfolio h2 {
+    text-align: center;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%; }
 
 .c-slider {
   max-width: 30rem;
@@ -1657,38 +1791,38 @@ p:last-child,
   vertical-align: middle; }
 
 .svg-email {
-  width: 1.94rem;
-  height: 2.19rem;
-  fill: #fff; }
-
-.svg-github {
-  width: 2.13rem;
-  height: 2.06rem;
-  fill: #fff; }
-
-.svg-gitlab {
-  width: 2.06rem;
-  height: 1.94rem;
-  fill: #fff; }
-
-.svg-twitter {
-  width: 2.13rem;
+  width: 1.5rem;
   height: 1.69rem;
   fill: #fff; }
 
+.svg-github {
+  width: 1.5rem;
+  height: 1.63rem;
+  fill: #fff; }
+
+.svg-gitlab {
+  width: 1.5rem;
+  height: 1.63rem;
+  fill: #fff; }
+
+.svg-twitter {
+  width: 1.5rem;
+  height: 1.38rem;
+  fill: #fff; }
+
 .svg-npm {
-  width: 5.25rem;
-  height: 2.06rem;
+  width: 4rem;
+  height: 1.5rem;
   fill: #fff; }
 
 .svg-linkedin {
-  width: 2.19rem;
-  height: 2.06rem;
+  width: 1.5rem;
+  height: 1.63rem;
   fill: #fff; }
 
 .svg-logo {
-  width: 50px;
-  height: 50px;
+  width: 3.13rem;
+  height: 3.13rem;
   fill: #fff; }
 
 /*# sourceMappingURL=app.css.map*/

@@ -29,7 +29,7 @@
 	<meta name="msapplication-square310x310logo" content="assets/images/favicon/mstile-310x310.png" />
 	<meta name="theme-color" content="#000000" />
 
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans%7CWork+Sans" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans%7CWork+Sans%7CAnton" />
 	<link rel="stylesheet" href="assets/dist/app.css" />
 </head>
 <body>
@@ -39,55 +39,13 @@
 		<?php include_once('header.php'); ?>
 
 		<div class="o-main">
-			<section class="c-section c-section--hello" id="hello">
-				<div class="o-shell">
-					<div class="c-canvas" id="canvas"></div><!-- /.c-canvas -->
+			<?php include_once('sections/hello.php'); ?>
 
-					<div class="c-slider" id="slider-hello">
-						<h1>Hello World! <br>I am Atanas Atanasov, a</h1>
+			<?php include_once('sections/about.php'); ?>
 
-						<div class="swiper-container">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<h2>Full Stack Web Developer</h2>
-								</div><!-- /.swiper-slide -->
+			<?php include_once('sections/skills.php'); ?>
 
-								<div class="swiper-slide">
-									<h2>CSS Experimenter</h2>
-								</div><!-- /.swiper-slide -->
-
-								<div class="swiper-slide">
-									<h2>JavaScript Master</h2>
-								</div><!-- /.swiper-slide -->
-
-								<div class="swiper-slide">
-									<h2>Father</h2>
-								</div><!-- /.swiper-slide -->
-
-								<div class="swiper-slide">
-									<h2>NodeJS Enthusiast</h2>
-								</div><!-- /.swiper-slide -->
-							</div><!-- /.swiper-wrapper -->
-						</div><!-- /.swiper-container -->
-					</div><!-- /#slider-hello.c-slider -->
-				</div><!-- /.o-shell -->
-			</section><!-- /#hello.c-section c-section-/-hello -->
-
-			<section class="c-section c-section--about fullsize-background" id="about" style="background-image: url(assets/images/temp/desktop.jpg);">
-				<div class="o-shell">About</div><!-- /.o-shell -->
-			</section><!-- /#about.c-section c-section-/-about fullsize-background -->
-
-			<section class="c-section c-section--skills" id="skills">
-				<div class="o-shell">Skills</div><!-- /.o-shell -->
-			</section><!-- /#skills.c-section c-section-/-skills -->
-
-			<section class="c-section c-section--portfolio" id="portfolio">
-				<div class="o-shell">Portfolio</div><!-- /.o-shell -->
-			</section><!-- /#portfolio.c-section c-section-/-portfolio -->
-
-			<section class="c-section c-section--hire" id="hire">
-				<div class="o-shell">Hire</div><!-- /.o-shell -->
-			</section><!-- /#hire.c-section c-section-/-hire -->
+			<?php include_once('sections/portfolio.php'); ?>
 		</div><!-- /.o-main -->
 
 		<?php include_once('footer.php'); ?>

@@ -1,0 +1,59 @@
+// Article
+
+.c-article {
+	@include flex-row(wrap, flex-start, space-between);
+
+	&__block {
+		flex: 0 0 40%;
+		position: relative;
+		margin-bottom: 2rem;
+
+		&:nth-of-type(1) {
+			flex: 0 0 55.3%;
+			margin-right: 8rem;
+		}
+
+		&:nth-of-type(2) {
+			margin-top: 1rem;
+			margin-left: 10%;
+		}
+
+		&:nth-of-type(3) {
+			margin-top: 4rem;
+		}
+
+		&:nth-of-type(4) {
+			flex: 0 0 35%;
+			margin-top: -2rem;
+			margin-left: 2rem;
+		}
+
+		&:nth-of-type(5) {
+			margin-top: 4rem;
+			left: -7rem;
+		}
+
+		&:nth-of-type(6) {
+			margin-top: -2rem;
+		}
+
+		&:nth-of-type(7) {
+			text-align: right;
+			margin-top: 8rem;
+			margin-right: 7rem;
+		}
+	}
+
+	h2 {
+		text-align: center;
+		flex: 0 0 100%;
+	}
+
+	img {
+		flex: 1;
+		max-width: 15rem;
+		display: block;
+		margin-top: -2rem;
+		border-radius: 50%;
+	}
+}

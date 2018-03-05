@@ -27,7 +27,7 @@
 				</li>
 
 				<li>
-					<a href="#hire" class="js-internal-link" data-text="Hire Me">
+					<a href="mailto:hi@atanas.info" data-text="Hire Me" target="_blank" rel="noopener noreferrer">
 						<span>Hire Me</span>
 					</a>
 				</li>

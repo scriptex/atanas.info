@@ -2,20 +2,24 @@
 
 .alignleft {
 	float: left;
-	margin: 0.35rem 1.25rem 1.25rem 0;
+	margin: 0 2rem 2rem 0;
 }
 
 .alignright {
 	float: right;
-	margin: 0.35rem 0 1.25rem 1.25rem;
+	margin: 0 0 2rem 2rem;
 }
 
 .alignnone,
 .aligncenter {
 	float: none;
-	margin: 0.35rem 0 1.25rem;
+}
+
+.alignnone {
+	margin: 0 0 2rem;
 }
 
 .aligncenter {
 	display: block;
+	margin: 0 0 2rem;
 }

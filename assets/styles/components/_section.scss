@@ -5,10 +5,55 @@
 		text-align: center;
 		height: 100vh;
 		position: relative;
+		z-index: 1;
 
 		.o-shell {
 			@include flex-row(nowrap, center, center);
 			height: 100%;
+		}
+	}
+
+	&--about {
+		padding: 4rem 0;
+		position: relative;
+		z-index: 2;
+		background-color: $color-black;
+
+		&:before {
+			content: '';
+			@include centered;
+			z-index: 1;
+			background-color: rgba($color-black, 0.5);
+		}
+
+		.o-shell {
+			position: relative;
+			z-index: 2;
+		}
+	}
+
+	&--skills {
+		position: relative;
+		z-index: 2;
+		background-color: $color-white;
+	}
+
+	&--portfolio {
+		color: $color-black;
+		position: relative;
+		z-index: 2;
+		background-color: #ccc;
+
+		.o-shell {
+			height: 64rem;
+			@include flex-row(wrap, center, center);
+			align-content: center;
+		}
+
+		h1,
+		h2 {
+			text-align: center;
+			flex: 0 0 100%;
 		}
 	}
 }

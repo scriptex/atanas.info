@@ -7,4 +7,9 @@
 	left: 0;
 	z-index: 30;
 	padding: 1rem 0;
+	transition: background-color $timing $easing;
+
+	&--with-background {
+		background-color: rgba($color-black, 0.85);
+	}
 }
