@@ -1,0 +1,21 @@
+// Skill
+
+.c-skill {
+  flex: 0 0 34%;
+
+  svg {
+    width: 20rem;
+    height: 20rem;
+    display: block;
+    margin: auto;
+  }
+
+  &s {
+    flex: 0 0 66%;
+
+    svg {
+      width: 100%;
+      display: block;
+    }
+  }
+}

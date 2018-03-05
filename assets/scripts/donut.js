@@ -1,97 +1,87 @@
 import * as d3 from 'd3';
+import { createSVG } from './canvas';
 
-export const drawDonut = () => {
-    var data = [{ name: 'USA', value: 40 }];
-    var text = '';
+const size = window.innerWidth / 5;
+const halfSize = size / 2;
+const fontSize = '2.0rem';
+const innerRadius = halfSize - 10;
+const transitionType = d3.easeQuadIn;
+const transitionsDelay = 250;
+const transitionsDuration = 1000;
+const arc = d3
+	.arc()
+	.outerRadius(halfSize)
+	.innerRadius(innerRadius);
+const pie = d3.pie().value(d => d.value);
+const svg = createSVG('skill-donut', size, size);
 
-    var width = 260;
-    var height = 260;
-    var thickness = 40;
-    var duration = 750;
+export const dispatch = d3.dispatch('change-skill');
 
-    var radius = Math.min(width, height) / 2;
-    var color = d3.scaleOrdinal(d3.schemeCategory10);
+dispatch.on('change-skill', data => {
+	svg.select('path').remove();
+	svg.select('text').remove();
 
-    var svg = d3
-        .select('#skill-donut')
-        .append('svg')
-        .attr('class', 'pie')
-        .attr('width', width)
-        .attr('height', height);
+	drawChartArcs(svg.select('g'), data);
+	drawPercentageText(svg.select('g'), data);
+});
 
-    var g = svg
-        .append('g')
-        .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
+export const drawDonut = data => {
+	const group = svg
+		.data([[data]])
+		.append('g')
+		.attr('transform', `translate(${halfSize},${halfSize})`);
 
-    var arc = d3
-        .arc()
-        .innerRadius(radius - thickness)
-        .outerRadius(radius);
+	drawChartArcs(group, data);
+	drawPercentageText(group, data);
+};
 
-    var pie = d3
-        .pie()
-        .value(function(d) {
-            return d.value;
-        })
-        .sort(null);
+export const drawChartArcs = (svg, data) => {
+	svg
+		.selectAll('g')
+		.data(pie)
+		.enter()
+		.append('path')
+		.attr('fill', data.color)
+		.each(d => {
+			d.endAngle = 0;
+		})
+		.attr('d', arc)
+		.transition()
+		.duration(transitionsDuration)
+		.delay(transitionsDelay)
+		.ease(transitionType)
+		.call(arcTween, this);
+};
 
-    var path = g
-        .selectAll('path')
-        .data(pie(data))
-        .enter()
-        .append('g')
-        .on('mouseover', function(d) {
-            let g = d3
-                .select(this)
-                .style('cursor', 'pointer')
-                .style('fill', 'black')
-                .append('g')
-                .attr('class', 'text-group');
+export const arcTween = transition => {
+	transition.attrTween('d', d => {
+		const min = 0;
+		const max = 360 * (d.value / 100) * Math.PI / 180;
+		const interpolate = d3.interpolate(min, max);
 
-            g
-                .append('text')
-                .attr('class', 'name-text')
-                .text(`${d.data.name}`)
-                .attr('text-anchor', 'middle')
-                .attr('dy', '-1.2em');
+		return t => {
+			d.endAngle = interpolate(t);
 
-            g
-                .append('text')
-                .attr('class', 'value-text')
-                .text(`${d.data.value}`)
-                .attr('text-anchor', 'middle')
-                .attr('dy', '.6em');
-        })
-        .on('mouseout', function(d) {
-            d3
-                .select(this)
-                .style('cursor', 'none')
-                .style('fill', color(this._current))
-                .select('.text-group')
-                .remove();
-        })
-        .append('path')
-        .attr('d', arc)
-        .attr('fill', (d, i) => color(i))
-        .on('mouseover', function(d) {
-            d3
-                .select(this)
-                .style('cursor', 'pointer')
-                .style('fill', 'black');
-        })
-        .on('mouseout', function(d) {
-            d3
-                .select(this)
-                .style('cursor', 'none')
-                .style('fill', color(this._current));
-        })
-        .each(function(d, i) {
-            this._current = i;
-        });
+			return arc(d);
+		};
+	});
+};
 
-    g
-        .append('text')
-        .attr('text-anchor', 'middle')
-        .attr('dy', '.35em')
-        .text(text);
+export const getTspan = (text, y) => `<tspan x="0" dy="${y}">${text}</tspan>`;
+
+export const drawPercentageText = (svg, data) => {
+	svg
+		.append('text')
+		.data([data])
+		.attr('font-family', 'Anton')
+		.attr('font-size', '0rem')
+		.attr('fill', data.color)
+		.attr('text-anchor', 'middle')
+		.attr('y', '1rem')
+		.html(getTspan(data.text, -20) + getTspan(data.value + '%', 50))
+		.transition()
+		.attr('font-size', fontSize)
+		.duration(transitionsDuration)
+		.delay(transitionsDelay)
+		.ease(transitionType);
 };
