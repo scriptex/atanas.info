@@ -46,7 +46,7 @@
 			<div class="c-article__block">
 				<h2>Today</h2>
 
-				<p>Now i am a full-stack web developer focused on the front-end but working with back-end technologies as well. <br>My daily tasks include coding HTML, CSS, JavaScript, PHP, Bash...</p>
+				<p>Now I am a full-stack web developer in a young and progressive web-development agency called Three11. I am now focused on the front-end but working with back-end technologies as well. <br>My daily tasks include coding HTML, CSS, JavaScript, PHP, Bash...</p>
 
 				<p>I am currently focused on creating, implementing and maintaining custom WordPress themes and single-page JavaScript applications but I am always open for new interesting and challenging tasks and projects.</p>
 			</div><!-- /.c-article__block -->

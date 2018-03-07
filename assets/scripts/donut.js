@@ -1,10 +1,12 @@
 import * as d3 from 'd3';
 import { createSVG } from './canvas';
 
-const size = window.innerWidth / 5;
+const winWidth = window.innerWidth;
+const size = winWidth / 5;
 const halfSize = size / 2;
-const fontSize = '2vw';
-const innerRadius = halfSize - 16;
+const fontSize = '1.75vw';
+const modifier = winWidth < 768 ? 4 : 16;
+const innerRadius = halfSize - modifier;
 const transitionType = d3.easeQuadIn;
 const transitionsDelay = 250;
 const transitionsDuration = 1000;
@@ -59,8 +61,6 @@ export const arcTween = transition => {
 	});
 };
 
-export const getTspan = (text, y) => `<tspan x="0" dy="${y}">${text}</tspan>`;
-
 export const drawPercentageText = (svg, data) => {
 	svg
 		.append('text')
@@ -71,14 +71,10 @@ export const drawPercentageText = (svg, data) => {
 		.attr('text-anchor', 'middle')
 		.attr('y', '1rem')
 		.html(() => {
-			const hasPercent = data.showPercent;
-			const textDY = hasPercent ? -20 : 5;
-			const text = getTspan(data.text, textDY);
-			const value = data.showPercent
-				? getTspan(data.value + '%', 50)
-				: '';
+			const text = data.text;
+			const value = data.showPercent ? `${data.value}%` : '';
 
-			return text + value;
+			return `${text}: ${value}`;
 		})
 		.transition()
 		.attr('font-size', fontSize)

@@ -9,4 +9,11 @@
 	p {
 		margin: 0;
 	}
+
+	@include mobile {
+		p {
+			flex: 0 0 100%;
+			margin-bottom: 1rem;
+		}
+	}
 }

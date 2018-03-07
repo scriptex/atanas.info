@@ -128,4 +128,24 @@
 			}
 		}
 	}
+
+	@include mobile {
+		&__toggler:checked {
+			~ .c-nav {
+				li {
+					&:first-child {
+						transform: translate(-45vw, 7vh) scale(1);
+					}
+
+					&:nth-child(2) {
+						transform: translate(-90vw, 25vh) scale(1);
+					}
+
+					&:nth-child(3) {
+						transform: translate(-60vw, 50vh) scale(1);
+					}
+				}
+			}
+		}
+	}
 }
