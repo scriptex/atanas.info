@@ -1916,6 +1916,15 @@ p:last-child,
   padding: 4rem 0;
   background-color: #fff; }
 
+.c-section--skills h2 {
+    font-size: 4vw;
+    text-align: center;
+    color: #000;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    margin-bottom: 2rem; }
+
 .c-section--portfolio {
   color: #000;
   position: relative;
