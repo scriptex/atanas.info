@@ -1,0 +1,93 @@
+// Skill
+
+.c-skill {
+  flex: 0 0 34%;
+
+  svg {
+    width: 20rem;
+    height: 20rem;
+    display: block;
+    margin: auto;
+
+    @include tablet-portrait {
+      text {
+        transform: translateY(-1.1vw);
+      }
+    }
+
+    @include mobile {
+      text {
+        transform: translateY(-3.2vw);
+      }
+    }
+  }
+
+  &s {
+    text-align: center;
+    flex: 0 0 66%;
+
+    svg {
+      width: 100%;
+      height: 25%;
+      display: block;
+    }
+
+    span {
+      font-family: 'Anton', serif;
+      font-size: 3vw;
+      line-height: 0.9;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 1vw;
+      cursor: pointer;
+    }
+
+    .c-skill {
+      &--1 {
+        font-size: 5vw;
+      }
+
+      &--2 {
+        font-size: 4vw;
+      }
+
+      &--3 {
+        font-size: 3vw;
+      }
+
+      &--4 {
+        font-size: 2.5vw;
+      }
+
+      &--5 {
+        font-size: 2vw;
+      }
+    }
+
+    @include tablet-portrait {
+      margin-bottom: 4rem;
+
+      .c-skill {
+        &--1 {
+          font-size: 10vw;
+        }
+
+        &--2 {
+          font-size: 8vw;
+        }
+
+        &--3 {
+          font-size: 6vw;
+        }
+
+        &--4 {
+          font-size: 5vw;
+        }
+
+        &--5 {
+          font-size: 4vw;
+        }
+      }
+    }
+  }
+}

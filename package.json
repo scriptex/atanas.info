@@ -1,0 +1,67 @@
+{
+	"name": "webpack-mpa",
+	"version": "1.4.0",
+	"description": "Multi page app setup with webpack",
+	"scripts": {
+		"build": "webpack --env.NODE_ENV=production",
+		"start": "webpack --watch --env.NODE_ENV=development",
+		"svg": "svgo -f assets/images/svg --config='{ \"plugins\": [{ \"cleanupAttrs\": true }, { \"removeDoctype\": true }, { \"removeXMLProcInst\": true }, { \"removeComments\": true }, { \"removeMetadata\": true }, { \"removeUselessDefs\": true }, { \"removeEditorsNSData\": true }, { \"removeEmptyAttrs\": true }, { \"removeHiddenElems\": false }, { \"removeEmptyText\": true }, { \"removeEmptyContainers\": true }, { \"cleanupEnableBackground\": true }, { \"removeViewBox\": false }, { \"cleanupIDs\": false }, { \"convertStyleToAttrs\": true }, { \"removeUselessStrokeAndFill\": true }] }' && spritesh -q -i assets/images/svg -o ./assets/dist/sprite.svg -p svg-"
+	},
+	"keywords": [
+		"MPA",
+		"webpack",
+		"setup",
+		"multi-page"
+	],
+	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (http://atanas.info)",
+	"repository": "https://github.com/scriptex/webpack-mpa",
+	"bugs": {
+		"url": "https://github.com/scriptex/webpack-mpa/issues",
+		"email": "scriptex.bg@gmail.com"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"@three11/animate-top-offset": "^0.1.0",
+		"d3": "^4.13.0",
+		"d3-cloud": "^1.2.5",
+		"normalize.css": "^8.0.0",
+		"swiper": "^4.1.6"
+	},
+	"devDependencies": {
+		"autoprefixer": "^8.0.0",
+		"babel-core": "^6.26.0",
+		"babel-loader": "^7.1.2",
+		"babel-preset-env": "^1.6.1",
+		"babel-preset-stage-2": "^6.24.1",
+		"browser-sync": "^2.23.5",
+		"browser-sync-webpack-plugin": "^2.0.1",
+		"clean-webpack-plugin": "^0.1.17",
+		"css-loader": "^0.28.8",
+		"cssnano": "^3.10.0",
+		"extract-text-webpack-plugin": "^3.0.2",
+		"file-loader": "^1.1.9",
+		"imagemin-mozjpeg": "^7.0.0",
+		"imagemin-pngquant": "^5.0.1",
+		"imagemin-webpack-plugin": "^2.0.0",
+		"node-sass": "^4.7.2",
+		"node-sass-magic-importer": "^5.1.0",
+		"postcss-easy-import": "^3.0.0",
+		"postcss-flexbugs-fixes": "^3.2.0",
+		"postcss-loader": "^2.0.10",
+		"postcss-merge-rules": "^2.1.2",
+		"postcss-url": "^7.3.0",
+		"postcss-utilities": "^0.8.0",
+		"sass-loader": "^6.0.6",
+		"spritesh": "^1.2.0",
+		"style-loader": "^0.20.2",
+		"uglifyjs-webpack-plugin": "^1.1.6",
+		"webpack": "^3.10.0",
+		"webpack-spritesmith": "^0.4.0"
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions"
+	],
+	"main": "assets/scripts/main.js",
+	"private": false
+}
