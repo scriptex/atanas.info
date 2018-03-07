@@ -18,9 +18,10 @@ export const drawSkills = words => {
 		.text(d => d.text)
 		.on('click', function(d) {
 			dispatch.call('change-skill', null, {
-				color: this.getAttribute('fill') || 'black',
+				color: this.style.color || 'black',
 				text: d.text,
-				value: d.value
+				value: d.value,
+				showPercent: true
 			});
 		});
 };

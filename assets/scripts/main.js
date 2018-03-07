@@ -9,7 +9,7 @@ const doc = document;
 const win = window;
 const header = doc.querySelector('.c-header');
 const toggleHeaderState = winO => {
-  header.classList.toggle('c-header--with-background', winO > 0);
+	header.classList.toggle('c-header--with-background', winO > 0);
 };
 
 const canvas = initCanvas('canvas');
@@ -17,12 +17,17 @@ const canvas = initCanvas('canvas');
 drawSkills(skills);
 createDots(canvas);
 textRotate('text', texts);
-drawDonut({ value: 100, color: 'black', text: 'Test' });
+drawDonut({
+	value: 100,
+	color: 'black',
+	text: 'Click on the words',
+	showPercent: false
+});
 
 win.addEventListener('load', event => {
-  toggleHeaderState(win.pageYOffset);
+	toggleHeaderState(win.pageYOffset);
 });
 
 win.addEventListener('scroll', event => {
-  toggleHeaderState(win.pageYOffset);
+	toggleHeaderState(win.pageYOffset);
 });

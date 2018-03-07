@@ -44,8 +44,6 @@
 			<?php include_once('sections/about.php'); ?>
 
 			<?php include_once('sections/skills.php'); ?>
-
-			<?php include_once('sections/portfolio.php'); ?>
 		</div><!-- /.o-main -->
 
 		<?php include_once('footer.php'); ?>

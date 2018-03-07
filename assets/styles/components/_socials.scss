@@ -14,4 +14,12 @@
 	svg {
 		display: block;
 	}
+
+	a {
+		@include hover {
+			svg {
+				fill: $color-action;
+			}
+		}
+	}
 }

@@ -20,7 +20,7 @@
 
 				<p>I started doing this in 2010 as an apprentice to a hardcore freelancer and pretty fast learned the basics of HTML and CSS.</p>
 
-				<p>Between 2012 and 2018 i was full-time employed in one of the best companies in my country - <a href="http://2create.bg/" target="_blank">2create</a></p>
+				<p>Between 2012 and 2018 i was full-time employed in one of the best companies in my city 2create and worked for some of the best PSDtoHTML brands out there.</p>
 			</div><!-- /.c-article__block -->
 
 			<div class="c-article__block">
@@ -54,9 +54,9 @@
 			<div class="c-article__block">
 				<h2>Connect with me</h2>
 
-				<p>I am open for hire to work on your awesome idea. If you think i can help you, do not hesitate and <a href="mailto:hi@atanas.info" target="_blank">drop me a line</a>.</p>
+				<p>I am open for hire to work on your awesome idea. If you think i can help you, do not hesitate and <strong><a href="mailto:hi@atanas.info" target="_blank">drop me a line</a></strong>.</p>
 
-				<p>I also like to contribute to open-source projects and i have created some myself. Feel free to use contact me if you want to talk about your open-source projects or <a href="https://github.com/scriptex" target="_blank">mine</a>.</p>
+				<p>I also like to contribute to open-source projects and i have created some myself. Feel free to use contact me if you want to talk about your open-source projects or <strong><a href="https://github.com/scriptex" target="_blank">mine</a></strong>.</p>
 			</div><!-- /.c-article__block -->
 		</article><!-- /.c-article -->
 	</div><!-- /.o-shell -->
