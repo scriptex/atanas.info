@@ -1194,10 +1194,10 @@ select,
 textarea,
 .c-btn,
 [class^='svg-'] {
-  -webkit-transition-property: color, opacity, border-color, background-color, fill, stroke, -webkit-box-shadow;
-  transition-property: color, opacity, border-color, background-color, fill, stroke, -webkit-box-shadow;
-  transition-property: color, opacity, border-color, background-color, box-shadow, fill, stroke;
-  transition-property: color, opacity, border-color, background-color, box-shadow, fill, stroke, -webkit-box-shadow;
+  -webkit-transition-property: color, opacity, border-color, background-color, fill, stroke, -webkit-box-shadow;
+  transition-property: color, opacity, border-color, background-color, fill, stroke, -webkit-box-shadow;
+  transition-property: color, opacity, border-color, background-color, box-shadow, fill, stroke;
+  transition-property: color, opacity, border-color, background-color, box-shadow, fill, stroke, -webkit-box-shadow;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
   -webkit-transition-timing-function: ease-in-out;
@@ -1796,6 +1796,7 @@ p:last-child,
 
 .c-skills svg {
       width: 100%;
+      height: 25%;
       display: block; }
 
 .c-slider {

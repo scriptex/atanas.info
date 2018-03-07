@@ -1,29 +1,20 @@
 import * as d3 from 'd3';
-import { createSVG } from './canvas';
 import { dispatch } from './donut';
-
-const cloud = require('d3-cloud');
 
 const width = window.innerWidth / 3 * 2;
 const height = 768;
 const fill = [...d3.schemeCategory20, ...d3.schemeCategory20];
 
-export const drawCloud = words => {
-	const svg = createSVG('skills-cloud', width, height);
-
-	svg
-		.append('g')
-		.attr('transform', `translate(${width / 2},${height / 2})`)
+export const drawSkills = words => {
+	d3
+		.select('#skills-cloud')
 		.selectAll('text')
 		.data(words)
 		.enter()
-		.append('text')
-		.style('font-family', 'Anton')
-		.style('font-size', d => `${d.size}px`)
-		.attr('fill', (d, i) => fill[i])
-		.attr('text-anchor', 'middle')
-		.attr('transform', d => `translate(${[d.x, d.y]})rotate(${d.rotate})`)
+		.append('span')
+		.attr('class', d => `c-skill--${d.size}`)
 		.attr('data-score', d => d.score)
+		.style('color', (d, i) => fill[i])
 		.text(d => d.text)
 		.on('click', function(d) {
 			dispatch.call('change-skill', null, {
@@ -32,15 +23,4 @@ export const drawCloud = words => {
 				value: d.value
 			});
 		});
-};
-
-export const drawSkills = skills => {
-	cloud()
-		.size([width, height])
-		.words(skills)
-		.rotate(() => ~~(Math.random() * 2) * 90)
-		.font('Anton')
-		.fontSize(d => d.size)
-		.on('end', drawCloud)
-		.start();
 };
