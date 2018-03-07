@@ -2,6 +2,20 @@
 
 .c-nav {
 	font-size: 1.25rem;
+	position: absolute;
+	top: 100%;
+	right: 0;
+
+	&:before {
+		content: '';
+		opacity: 0;
+		visibility: hidden;
+		@include centered;
+		z-index: 1;
+		pointer-events: none;
+		background-color: rgba($color-black, 0.9);
+		transition: all $timing $easing;
+	}
 
 	ul {
 		@include flex-row(wrap, center, space-between);
@@ -9,35 +23,108 @@
 	}
 
 	li {
-		padding: 0 0.5rem;
+		width: 7rem;
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		z-index: 3;
+		top: 1rem;
+		left: 0;
+		transition: all 0.7s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+		&:first-child {
+			transform: translate(-10vw, 50vh) scale(0);
+			transform-origin: 0% -100%;
+
+			a {
+				animation: floatX 7s infinite linear;
+			}
+		}
+
+		&:nth-child(2) {
+			transform: translate(-20vw, 30vh) scale(0);
+			transform-origin: -60% -100%;
+
+			a {
+				animation: floatY 10s infinite alternate-reverse;
+			}
+		}
+
+		&:nth-child(3) {
+			transform: translate(-40vw, 70vh) scale(0);
+			transform-origin: -100% -50%;
+
+			a {
+				animation: floatXY 5s infinite alternate;
+			}
+		}
 	}
 
 	a {
 		color: inherit;
+		text-align: center;
 		text-decoration: none;
+		height: 0;
 		display: block;
-		position: relative;
-		overflow: hidden;
-		perspective: 60rem;
+		padding-bottom: 100%;
+		background-color: rgba($color-white, 0.5);
+		border-radius: 50%;
 
-		span,
-		&:after {
-			display: block;
-			padding: 0.75rem 1rem;
-			transition: transform $timing $easing;
-		}
-
-		&:after {
-			content: attr(data-text);
+		span {
 			position: absolute;
-			top: 100%;
+			top: 50%;
 			right: 0;
+			left: 0;
+			margin-top: -1.1rem;
 		}
 
 		@include hover {
-			span,
-			&:after {
-				transform: translateY(-100%);
+			background-color: $color-action;
+		}
+	}
+
+	&__toggle {
+		width: 3.13rem;
+		height: 3.13rem;
+		@include flex-row(wrap, center, center);
+		align-content: center;
+		position: relative;
+		z-index: 2;
+		padding: 0 1rem;
+
+		span {
+			width: 1.25rem;
+			height: 0.1875rem;
+			display: block;
+			margin: 0.095rem auto;
+			background-color: currentColor;
+		}
+	}
+
+	&__toggler:checked {
+		~ .c-nav {
+			&:before {
+				opacity: 1;
+				visibility: visible;
+				position: fixed;
+				pointer-events: all;
+			}
+
+			li {
+				opacity: 1;
+				visibility: visible;
+
+				&:first-child {
+					transform: translate(-25vw, 10vh) scale(1);
+				}
+
+				&:nth-child(2) {
+					transform: translate(-50vw, 25vh) scale(1);
+				}
+
+				&:nth-child(3) {
+					transform: translate(-35vw, 50vh) scale(1);
+				}
 			}
 		}
 	}

@@ -12,4 +12,8 @@
 	&--with-background {
 		background-color: rgba($color-black, 0.85);
 	}
+
+	.o-shell {
+		position: relative;
+	}
 }

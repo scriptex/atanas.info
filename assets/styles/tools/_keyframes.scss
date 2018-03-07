@@ -1,0 +1,41 @@
+@keyframes floatY {
+	0% {
+		transform: translateY(0rem);
+	}
+
+	50% {
+		transform: translateY(-2vw);
+	}
+
+	100% {
+		transform: translateY(0rem);
+	}
+}
+
+@keyframes floatX {
+	0% {
+		transform: translateX(0rem);
+	}
+
+	50% {
+		transform: translateX(-2vw);
+	}
+
+	100% {
+		transform: translateX(0rem);
+	}
+}
+
+@keyframes floatXY {
+	0% {
+		transform: translate(0rem, 0rem);
+	}
+
+	50% {
+		transform: translate(-2vw, 2vw);
+	}
+
+	100% {
+		transform: translate(0rem, 0rem);
+	}
+}

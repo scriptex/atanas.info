@@ -6,28 +6,32 @@
 			</svg><!-- /.svg-logo -->
 		</a>
 
+		<input type="checkbox" name="nav_toggle" id="nav_toggle" class="c-nav__toggler hidden">
+
+		<label for="nav_toggle" class="c-nav__toggle">
+			<span></span>
+
+			<span></span>
+
+			<span></span>
+		</label>
+
 		<nav class="c-nav">
 			<ul>
 				<li>
-					<a href="#about" class="js-internal-link" data-text="About Me">
-						<span>About Me</span>
+					<a href="#about" class="js-internal-link">
+						<span>About</span>
 					</a>
 				</li>
 
 				<li>
-					<a href="#skills" class="js-internal-link" data-text="My Skills">
-						<span>My Skills</span>
+					<a href="#skills" class="js-internal-link">
+						<span>Skills</span>
 					</a>
 				</li>
 
 				<li>
-					<a href="#portfolio" class="js-internal-link" data-text="My Portfolio">
-						<span>My Portfolio</span>
-					</a>
-				</li>
-
-				<li>
-					<a href="mailto:hi@atanas.info" data-text="Hire Me" target="_blank" rel="noopener noreferrer">
+					<a href="mailto:hi@atanas.info" target="_blank" rel="noopener noreferrer">
 						<span>Hire Me</span>
 					</a>
 				</li>
