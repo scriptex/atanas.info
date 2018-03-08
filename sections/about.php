@@ -56,7 +56,7 @@
 
 				<p>I am open for hire to work on your awesome idea. If you think i can help you, do not hesitate and <strong><a href="mailto:hi@atanas.info" target="_blank">drop me a line</a></strong>.</p>
 
-				<p>I also like to contribute to open-source projects and i have created some myself. Feel free to use contact me if you want to talk about your open-source projects or <strong><a href="https://github.com/scriptex" target="_blank">mine</a></strong>.</p>
+				<p>I also like to contribute to open-source projects and i have created some myself. Feel free to contact me if you want to talk about your open-source projects or <strong><a href="https://github.com/scriptex" target="_blank">mine</a></strong>.</p>
 			</div><!-- /.c-article__block -->
 		</article><!-- /.c-article -->
 	</div><!-- /.o-shell -->
