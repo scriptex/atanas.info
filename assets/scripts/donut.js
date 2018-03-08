@@ -10,7 +10,6 @@ const innerRadius = halfSize - modifier;
 const transitionType = d3.easeQuadIn;
 const transitionsDelay = 250;
 const transitionsDuration = 1000;
-const pie = d3.pie().value(d => d.value);
 const svg = createSVG('skill-donut', size, size);
 const arc = d3
 	.arc()
@@ -30,6 +29,8 @@ export const drawDonut = data => {
 };
 
 export const drawChartArcs = (svg, data) => {
+	const pie = d3.pie().value(data.value);
+
 	svg
 		.selectAll('g')
 		.data(pie)
@@ -52,6 +53,7 @@ export const arcTween = transition => {
 		const min = 0;
 		const max = 360 * (d.value / 100) * Math.PI / 180;
 		const interpolate = d3.interpolate(min, max);
+		const pie = d3.pie().value(d.value);
 
 		return t => {
 			d.endAngle = interpolate(t);
