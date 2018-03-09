@@ -5,11 +5,21 @@ const width = window.innerWidth / 3 * 2;
 const height = 768;
 const fill = [...d3.schemeCategory20, ...d3.schemeCategory20];
 
+const shuffle = arr => {
+	for (let i = arr.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+
+		[arr[i], arr[j]] = [arr[j], arr[i]];
+	}
+
+	return arr;
+};
+
 export const drawSkills = words => {
 	d3
 		.select('#skills-cloud')
 		.selectAll('text')
-		.data(words)
+		.data(shuffle(words))
 		.enter()
 		.append('span')
 		.attr('class', d => `c-skill--${d.size}`)
