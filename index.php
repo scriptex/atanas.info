@@ -1,3 +1,10 @@
+<?php
+function autoversion($url) {
+	$ver  = filemtime(dirname(__FILE__) . DIRECTORY_SEPARATOR . $url);
+	echo $url . '?v=' . $ver;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +37,7 @@
 	<meta name="theme-color" content="#000000" />
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans%7CWork+Sans%7CAnton" />
-	<link rel="stylesheet" href="assets/dist/app.css" />
+	<link rel="stylesheet" href="<?php autoversion('assets/dist/app.css'); ?>" />
 </head>
 <body>
 	<?php include_once('assets/dist/sprite.svg'); ?>
@@ -49,7 +56,7 @@
 		<?php include_once('footer.php'); ?>
 	</div><!-- /.o-wrapper -->
 
-	<script src="assets/dist/app.js"></script>
+	<script src="<?php autoversion('assets/dist/app.js'); ?>"></script>
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-83446952-1"></script>
 
