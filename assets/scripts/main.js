@@ -1,7 +1,6 @@
 import { textRotate } from './slider';
 import { drawSkills } from './skills';
 import { initCanvas, createDots } from './canvas';
-import { drawDonut } from './donut';
 import { skills } from './skills-list';
 import { texts } from './hero-texts';
 import { animateTopOffset } from '@three11/animate-top-offset';
@@ -20,12 +19,6 @@ const canvas = initCanvas('canvas');
 drawSkills(skills);
 createDots(canvas);
 textRotate('text', texts);
-drawDonut({
-	value: 100,
-	color: 'black',
-	text: 'Click on the words',
-	showPercent: false
-});
 
 internalLinks.forEach(link => {
 	link.addEventListener('click', event => {

@@ -36,8 +36,8 @@
 		@include flex-row(wrap, center, space-between);
 		position: relative;
 		z-index: 2;
-		padding: 4rem 0;
-		background-color: $color-white;
+		padding: 2rem 0;
+		background-color: $color-black;
 
 		h2 {
 			font-size: 4vw;
@@ -45,6 +45,51 @@
 			color: $color-black;
 			flex: 0 0 100%;
 			margin-bottom: 2rem;
+		}
+
+		svg {
+			overflow: visible;
+		}
+
+		text {
+			font-size: 1rem;
+			line-height: 1;
+			fill: $color-white;
+			text-shadow: 0 0 2rem $color-black;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity $timing $easing, visibility $timing $easing;
+			pointer-events: none;
+			user-select: none;
+		}
+
+		image {
+			opacity: 1;
+			visibility: visible;
+			transition: opacity $timing $easing, visibility $timing $easing;
+			pointer-events: none;
+		}
+
+		circle {
+			stroke-width: 0.06rem;
+			transition: fill $timing $easing, stroke $timing $easing,
+				stroke-width $timing $easing;
+
+			&:hover {
+				fill: $color-action;
+				stroke: $color-action;
+				stroke-width: 1rem;
+
+				~ text {
+					opacity: 1;
+					visibility: visible;
+				}
+
+				~ image {
+					opacity: 0;
+					visibility: hidden;
+				}
+			}
 		}
 
 		@include tablet-portrait {
