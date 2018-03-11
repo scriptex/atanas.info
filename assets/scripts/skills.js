@@ -19,22 +19,7 @@ export const drawSkills = words => {
 	const height = window.innerHeight;
 	const svg = createSVG('skills', width, height);
 
-	renderSkills({
-		nodes: words.map(word => {
-			const adjustment = width < 768 ? 1.5 : 1;
-
-			return {
-				r: word.size * adjustment,
-				...word
-			};
-		}),
-		links: d3.range(0, range).map(() => ({
-			source: ~~d3.randomUniform(range)(),
-			target: ~~d3.randomUniform(range)()
-		}))
-	});
-
-	function renderSkills(data) {
+	const renderSkills = data => {
 		const simulation = createSimulation(width, height);
 		const links = createLinks(svg, data.links);
 		const nodes = createNodes(svg, data.nodes, dragHandler(simulation));
@@ -59,7 +44,22 @@ export const drawSkills = words => {
 		});
 
 		simulation.force('link').links(data.links);
-	}
+	};
+
+	renderSkills({
+		nodes: words.map(word => {
+			const adjustment = width < 768 ? 1.5 : 1;
+
+			return {
+				r: word.size * adjustment,
+				...word
+			};
+		}),
+		links: d3.range(0, range).map(() => ({
+			source: ~~d3.randomUniform(range)(),
+			target: ~~d3.randomUniform(range)()
+		}))
+	});
 };
 
 export const dragHandler = simulation => {
@@ -100,8 +100,7 @@ export const createLinks = (svg, data) => {
 		.selectAll('line')
 		.data(data)
 		.enter()
-		.append('line')
-		.attr('stroke', 'white');
+		.append('line');
 
 	return links;
 };
@@ -122,12 +121,15 @@ export const createNodes = (svg, data, callable) => {
 	nodes.each(function(d, i) {
 		const group = d3.select(this.parentNode);
 		const { width, height } = d;
+		const mod = window.innerWidth >= 768 ? 2 : 1;
+		const imgWidth = width * mod;
+		const imgHeight = height * mod;
 
 		group
 			.append('image')
-			.attr('width', width)
-			.attr('height', height)
-			.attr('transform', `translate(-${width / 2},-${height / 2})`)
+			.attr('width', imgWidth)
+			.attr('height', imgHeight)
+			.attr('transform', `translate(-${imgWidth / 2},-${imgHeight / 2})`)
 			.attr('xlink:xlink:href', `assets/images/svg/${d.icon}.svg`);
 
 		group

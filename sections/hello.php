@@ -3,7 +3,7 @@
 		<div class="c-canvas" id="canvas"></div><!-- /.c-canvas -->
 
 		<div class="c-slider" id="slider-hello">
-			<h1>Hello World! <br>I am Atanas Atanasov, a</h1>
+			<h1>Hello! <br>I am Atanas Atanasov, a</h1>
 
 			<h2 id="text"></h2>
 		</div><!-- /#slider-hello.c-slider -->

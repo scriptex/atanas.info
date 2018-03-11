@@ -1,7 +1,7 @@
 export const skills = [
 	{
 		text: 'JavaScript',
-		size: 3,
+		size: 4,
 		value: 100,
 		icon: 'javascript',
 		width: 30,
@@ -10,7 +10,7 @@ export const skills = [
 	},
 	{
 		text: 'React',
-		size: 3,
+		size: 4,
 		value: 75,
 		icon: 'react',
 		width: 30,
@@ -19,7 +19,7 @@ export const skills = [
 	},
 	{
 		text: 'Angular',
-		size: 3,
+		size: 4,
 		value: 90,
 		icon: 'angular',
 		width: 30,
@@ -28,7 +28,7 @@ export const skills = [
 	},
 	{
 		text: 'Vue',
-		size: 3,
+		size: 4,
 		value: 90,
 		icon: 'vue',
 		width: 30,
@@ -37,7 +37,7 @@ export const skills = [
 	},
 	{
 		text: 'BackboneJS',
-		size: 3,
+		size: 4,
 		value: 65,
 		icon: 'backbone',
 		width: 30,
@@ -46,7 +46,7 @@ export const skills = [
 	},
 	{
 		text: 'D3',
-		size: 3,
+		size: 4,
 		value: 95,
 		icon: 'd3',
 		width: 30,
@@ -55,7 +55,7 @@ export const skills = [
 	},
 	{
 		text: 'jQuery',
-		size: 3,
+		size: 4,
 		value: 100,
 		icon: 'jquery',
 		width: 30,
@@ -64,7 +64,7 @@ export const skills = [
 	},
 	{
 		text: 'nodejs',
-		size: 3,
+		size: 4,
 		value: 85,
 		icon: 'nodejs',
 		width: 30,
@@ -73,7 +73,7 @@ export const skills = [
 	},
 	{
 		text: 'Gulp',
-		size: 3,
+		size: 4,
 		value: 100,
 		icon: 'gulp',
 		width: 40,
@@ -82,7 +82,7 @@ export const skills = [
 	},
 	{
 		text: 'Grunt',
-		size: 3,
+		size: 4,
 		value: 95,
 		icon: 'grunt',
 		width: 30,
@@ -91,7 +91,7 @@ export const skills = [
 	},
 	{
 		text: 'Webpack',
-		size: 3,
+		size: 4,
 		value: 90,
 		icon: 'webpack',
 		width: 30,
@@ -100,7 +100,7 @@ export const skills = [
 	},
 	{
 		text: 'CSS / CSS3',
-		size: 3,
+		size: 4,
 		value: 100,
 		icon: 'css',
 		width: 30,
@@ -109,7 +109,7 @@ export const skills = [
 	},
 	{
 		text: 'LESS',
-		size: 3,
+		size: 4,
 		value: 100,
 		icon: 'less',
 		width: 30,
@@ -118,7 +118,7 @@ export const skills = [
 	},
 	{
 		text: 'SASS',
-		size: 3,
+		size: 4,
 		value: 100,
 		icon: 'sass',
 		width: 30,
@@ -127,7 +127,7 @@ export const skills = [
 	},
 	{
 		text: 'PostCSS',
-		size: 3,
+		size: 4,
 		value: 100,
 		icon: 'postcss',
 		width: 30,
@@ -136,7 +136,7 @@ export const skills = [
 	},
 	{
 		text: 'HTML / HTML5',
-		size: 3,
+		size: 4,
 		value: 100,
 		icon: 'html',
 		width: 30,
@@ -145,7 +145,7 @@ export const skills = [
 	},
 	{
 		text: 'SVG',
-		size: 3,
+		size: 4,
 		value: 95,
 		icon: 'svg',
 		width: 30,
@@ -154,7 +154,7 @@ export const skills = [
 	},
 	{
 		text: 'Ionic',
-		size: 3,
+		size: 4,
 		value: 90,
 		icon: 'ionic',
 		width: 30,
@@ -163,7 +163,7 @@ export const skills = [
 	},
 	{
 		text: 'Bootstrap',
-		size: 3,
+		size: 4,
 		value: 100,
 		icon: 'bootstrap',
 		width: 30,
@@ -172,7 +172,7 @@ export const skills = [
 	},
 	{
 		text: 'Foundation',
-		size: 3,
+		size: 4,
 		value: 95,
 		icon: 'foundation',
 		width: 30,
@@ -181,7 +181,7 @@ export const skills = [
 	},
 	{
 		text: 'SVN',
-		size: 3,
+		size: 4,
 		value: 80,
 		icon: 'svn',
 		width: 30,
@@ -190,7 +190,7 @@ export const skills = [
 	},
 	{
 		text: 'GIT',
-		size: 3,
+		size: 4,
 		value: 95,
 		icon: 'git',
 		width: 30,
@@ -199,7 +199,7 @@ export const skills = [
 	},
 	{
 		text: 'PHP',
-		size: 3,
+		size: 4,
 		value: 85,
 		icon: 'php',
 		width: 30,
@@ -208,7 +208,7 @@ export const skills = [
 	},
 	{
 		text: 'WordPress',
-		size: 3,
+		size: 4,
 		value: 85,
 		icon: 'wordpress',
 		width: 30,
@@ -217,7 +217,7 @@ export const skills = [
 	},
 	{
 		text: 'Photoshop',
-		size: 3,
+		size: 4,
 		value: 95,
 		icon: 'photoshop',
 		width: 30,
@@ -226,7 +226,7 @@ export const skills = [
 	},
 	{
 		text: 'Sketch',
-		size: 3,
+		size: 4,
 		value: 85,
 		icon: 'sketch',
 		width: 30,

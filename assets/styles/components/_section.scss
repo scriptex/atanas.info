@@ -50,6 +50,8 @@
 		}
 
 		svg {
+			width: 100%;
+			display: block;
 			overflow: visible;
 		}
 
@@ -63,6 +65,11 @@
 			transition: opacity $timing $easing, visibility $timing $easing;
 			pointer-events: none;
 			user-select: none;
+		}
+
+		line {
+			stroke: $color-white;
+			stroke-width: 0.13rem;
 		}
 
 		image {

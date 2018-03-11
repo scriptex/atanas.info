@@ -23271,23 +23271,7 @@ var drawSkills = exports.drawSkills = function drawSkills(words) {
 	var height = window.innerHeight;
 	var svg = (0, _canvas.createSVG)('skills', width, height);
 
-	renderSkills({
-		nodes: words.map(function (word) {
-			var adjustment = width < 768 ? 1.5 : 1;
-
-			return _extends({
-				r: word.size * adjustment
-			}, word);
-		}),
-		links: d3.range(0, range).map(function () {
-			return {
-				source: ~~d3.randomUniform(range)(),
-				target: ~~d3.randomUniform(range)()
-			};
-		})
-	});
-
-	function renderSkills(data) {
+	var renderSkills = function renderSkills(data) {
 		var simulation = createSimulation(width, height);
 		var links = createLinks(svg, data.links);
 		var nodes = createNodes(svg, data.nodes, dragHandler(simulation));
@@ -23328,7 +23312,23 @@ var drawSkills = exports.drawSkills = function drawSkills(words) {
 		});
 
 		simulation.force('link').links(data.links);
-	}
+	};
+
+	renderSkills({
+		nodes: words.map(function (word) {
+			var adjustment = width < 768 ? 1.5 : 1;
+
+			return _extends({
+				r: word.size * adjustment
+			}, word);
+		}),
+		links: d3.range(0, range).map(function () {
+			return {
+				source: ~~d3.randomUniform(range)(),
+				target: ~~d3.randomUniform(range)()
+			};
+		})
+	});
 };
 
 var dragHandler = exports.dragHandler = function dragHandler(simulation) {
@@ -23357,7 +23357,7 @@ var createSimulation = exports.createSimulation = function createSimulation(widt
 };
 
 var createLinks = exports.createLinks = function createLinks(svg, data) {
-	var links = svg.append('g').selectAll('line').data(data).enter().append('line').attr('stroke', 'white');
+	var links = svg.append('g').selectAll('line').data(data).enter().append('line');
 
 	return links;
 };
@@ -23376,8 +23376,11 @@ var createNodes = exports.createNodes = function createNodes(svg, data, callable
 		var width = d.width,
 		    height = d.height;
 
+		var mod = window.innerWidth >= 768 ? 2 : 1;
+		var imgWidth = width * mod;
+		var imgHeight = height * mod;
 
-		group.append('image').attr('width', width).attr('height', height).attr('transform', 'translate(-' + width / 2 + ',-' + height / 2 + ')').attr('xlink:xlink:href', 'assets/images/svg/' + d.icon + '.svg');
+		group.append('image').attr('width', imgWidth).attr('height', imgHeight).attr('transform', 'translate(-' + imgWidth / 2 + ',-' + imgHeight / 2 + ')').attr('xlink:xlink:href', 'assets/images/svg/' + d.icon + '.svg');
 
 		group.append('text').text(function (d) {
 			return '' + d.text;
@@ -23399,7 +23402,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 var skills = exports.skills = [{
 	text: 'JavaScript',
-	size: 3,
+	size: 4,
 	value: 100,
 	icon: 'javascript',
 	width: 30,
@@ -23407,7 +23410,7 @@ var skills = exports.skills = [{
 	fill: '#f0db4f'
 }, {
 	text: 'React',
-	size: 3,
+	size: 4,
 	value: 75,
 	icon: 'react',
 	width: 30,
@@ -23415,7 +23418,7 @@ var skills = exports.skills = [{
 	fill: '#fff'
 }, {
 	text: 'Angular',
-	size: 3,
+	size: 4,
 	value: 90,
 	icon: 'angular',
 	width: 30,
@@ -23423,7 +23426,7 @@ var skills = exports.skills = [{
 	fill: '#fff'
 }, {
 	text: 'Vue',
-	size: 3,
+	size: 4,
 	value: 90,
 	icon: 'vue',
 	width: 30,
@@ -23431,7 +23434,7 @@ var skills = exports.skills = [{
 	fill: '#4a5c71'
 }, {
 	text: 'BackboneJS',
-	size: 3,
+	size: 4,
 	value: 65,
 	icon: 'backbone',
 	width: 30,
@@ -23439,7 +23442,7 @@ var skills = exports.skills = [{
 	fill: '#bdc9ec'
 }, {
 	text: 'D3',
-	size: 3,
+	size: 4,
 	value: 95,
 	icon: 'd3',
 	width: 30,
@@ -23447,7 +23450,7 @@ var skills = exports.skills = [{
 	fill: '#5a4126'
 }, {
 	text: 'jQuery',
-	size: 3,
+	size: 4,
 	value: 100,
 	icon: 'jquery',
 	width: 30,
@@ -23455,7 +23458,7 @@ var skills = exports.skills = [{
 	fill: '#7bdffd'
 }, {
 	text: 'nodejs',
-	size: 3,
+	size: 4,
 	value: 85,
 	icon: 'nodejs',
 	width: 30,
@@ -23463,7 +23466,7 @@ var skills = exports.skills = [{
 	fill: '#1d4002'
 }, {
 	text: 'Gulp',
-	size: 3,
+	size: 4,
 	value: 100,
 	icon: 'gulp',
 	width: 40,
@@ -23471,7 +23474,7 @@ var skills = exports.skills = [{
 	fill: '#07267b'
 }, {
 	text: 'Grunt',
-	size: 3,
+	size: 4,
 	value: 95,
 	icon: 'grunt',
 	width: 30,
@@ -23479,7 +23482,7 @@ var skills = exports.skills = [{
 	fill: '#f39341'
 }, {
 	text: 'Webpack',
-	size: 3,
+	size: 4,
 	value: 90,
 	icon: 'webpack',
 	width: 30,
@@ -23487,7 +23490,7 @@ var skills = exports.skills = [{
 	fill: '#0d2748'
 }, {
 	text: 'CSS / CSS3',
-	size: 3,
+	size: 4,
 	value: 100,
 	icon: 'css',
 	width: 30,
@@ -23495,7 +23498,7 @@ var skills = exports.skills = [{
 	fill: '#122858'
 }, {
 	text: 'LESS',
-	size: 3,
+	size: 4,
 	value: 100,
 	icon: 'less',
 	width: 30,
@@ -23503,7 +23506,7 @@ var skills = exports.skills = [{
 	fill: '#b6ecec'
 }, {
 	text: 'SASS',
-	size: 3,
+	size: 4,
 	value: 100,
 	icon: 'sass',
 	width: 30,
@@ -23511,7 +23514,7 @@ var skills = exports.skills = [{
 	fill: '#faf4cf'
 }, {
 	text: 'PostCSS',
-	size: 3,
+	size: 4,
 	value: 100,
 	icon: 'postcss',
 	width: 30,
@@ -23519,7 +23522,7 @@ var skills = exports.skills = [{
 	fill: '#b0f1dc'
 }, {
 	text: 'HTML / HTML5',
-	size: 3,
+	size: 4,
 	value: 100,
 	icon: 'html',
 	width: 30,
@@ -23527,7 +23530,7 @@ var skills = exports.skills = [{
 	fill: '#52260c'
 }, {
 	text: 'SVG',
-	size: 3,
+	size: 4,
 	value: 95,
 	icon: 'svg',
 	width: 30,
@@ -23535,7 +23538,7 @@ var skills = exports.skills = [{
 	fill: '#ffb13b'
 }, {
 	text: 'Ionic',
-	size: 3,
+	size: 4,
 	value: 90,
 	icon: 'ionic',
 	width: 30,
@@ -23543,7 +23546,7 @@ var skills = exports.skills = [{
 	fill: '#fff'
 }, {
 	text: 'Bootstrap',
-	size: 3,
+	size: 4,
 	value: 100,
 	icon: 'bootstrap',
 	width: 30,
@@ -23551,7 +23554,7 @@ var skills = exports.skills = [{
 	fill: '#ccc'
 }, {
 	text: 'Foundation',
-	size: 3,
+	size: 4,
 	value: 95,
 	icon: 'foundation',
 	width: 30,
@@ -23559,7 +23562,7 @@ var skills = exports.skills = [{
 	fill: '#141e1f'
 }, {
 	text: 'SVN',
-	size: 3,
+	size: 4,
 	value: 80,
 	icon: 'svn',
 	width: 30,
@@ -23567,7 +23570,7 @@ var skills = exports.skills = [{
 	fill: '#2b1306'
 }, {
 	text: 'GIT',
-	size: 3,
+	size: 4,
 	value: 95,
 	icon: 'git',
 	width: 30,
@@ -23575,7 +23578,7 @@ var skills = exports.skills = [{
 	fill: '#f9d7d7'
 }, {
 	text: 'PHP',
-	size: 3,
+	size: 4,
 	value: 85,
 	icon: 'php',
 	width: 30,
@@ -23583,7 +23586,7 @@ var skills = exports.skills = [{
 	fill: '#f6c9fb'
 }, {
 	text: 'WordPress',
-	size: 3,
+	size: 4,
 	value: 85,
 	icon: 'wordpress',
 	width: 30,
@@ -23591,7 +23594,7 @@ var skills = exports.skills = [{
 	fill: '#111'
 }, {
 	text: 'Photoshop',
-	size: 3,
+	size: 4,
 	value: 95,
 	icon: 'photoshop',
 	width: 30,
@@ -23599,7 +23602,7 @@ var skills = exports.skills = [{
 	fill: '#333'
 }, {
 	text: 'Sketch',
-	size: 3,
+	size: 4,
 	value: 85,
 	icon: 'sketch',
 	width: 30,

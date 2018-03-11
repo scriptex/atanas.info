@@ -1336,6 +1336,8 @@ p:last-child,
       font-size: 1rem; }
 
 .c-section--skills svg {
+    width: 100%;
+    display: block;
     overflow: visible; }
 
 .c-section--skills text {
@@ -1352,6 +1354,10 @@ p:last-child,
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none; }
+
+.c-section--skills line {
+    stroke: #fff;
+    stroke-width: 0.13rem; }
 
 .c-section--skills image {
     opacity: 1;
@@ -1422,10 +1428,6 @@ p:last-child,
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%; }
-
-.c-skills svg {
-  width: 100%;
-  display: block; }
 
 .c-slider {
   max-width: 30rem;
