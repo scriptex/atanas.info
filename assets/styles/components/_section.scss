@@ -33,7 +33,8 @@
 	}
 
 	&--skills {
-		@include flex-row(wrap, center, space-between);
+		color: $color-white;
+		text-align: center;
 		position: relative;
 		z-index: 2;
 		padding: 2rem 0;
@@ -41,10 +42,11 @@
 
 		h2 {
 			font-size: 4vw;
-			text-align: center;
-			color: $color-black;
-			flex: 0 0 100%;
 			margin-bottom: 2rem;
+
+			small {
+				font-size: 1rem;
+			}
 		}
 
 		svg {
