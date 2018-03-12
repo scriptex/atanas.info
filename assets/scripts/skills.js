@@ -12,8 +12,6 @@ const shuffle = arr => {
 };
 
 export const drawSkills = words => {
-	words = shuffle(words);
-
 	const range = words.length;
 	const width = window.innerWidth;
 	const height = window.innerHeight;
@@ -22,7 +20,12 @@ export const drawSkills = words => {
 	const renderSkills = data => {
 		const simulation = createSimulation(width, height);
 		const links = createLinks(svg, data.links);
-		const nodes = createNodes(svg, data.nodes, dragHandler(simulation));
+		const nodes = createNodes(
+			svg,
+			data.nodes,
+			width,
+			dragHandler(simulation)
+		);
 
 		simulation.nodes(data.nodes).on('tick', () => {
 			links
@@ -48,10 +51,18 @@ export const drawSkills = words => {
 
 	renderSkills({
 		nodes: words.map(word => {
-			const adjustment = width < 768 ? 1.5 : 1;
+			let r = 40;
+
+			if (width < 1024) {
+				r = 30;
+			}
+
+			if (width < 768) {
+				r = 20;
+			}
 
 			return {
-				r: word.size * adjustment,
+				r,
 				...word
 			};
 		}),
@@ -82,12 +93,10 @@ export const dragHandler = simulation => {
 };
 
 export const createSimulation = (width, height) => {
-	const space = width / 64;
-
 	return d3
 		.forceSimulation()
 		.force('link', d3.forceLink().id(d => d.index))
-		.force('collide', d3.forceCollide(d => d.r * space).iterations(20))
+		.force('collide', d3.forceCollide(d => d.r * 1.75).iterations(20))
 		.force('charge', d3.forceManyBody())
 		.force('center', d3.forceCenter(width / 2, height / 2))
 		.force('y', d3.forceY(0))
@@ -95,17 +104,15 @@ export const createSimulation = (width, height) => {
 };
 
 export const createLinks = (svg, data) => {
-	const links = svg
+	return svg
 		.append('g')
 		.selectAll('line')
 		.data(data)
 		.enter()
 		.append('line');
-
-	return links;
 };
 
-export const createNodes = (svg, data, callable) => {
+export const createNodes = (svg, data, winWidth, callable) => {
 	const nodes = svg
 		.append('g')
 		.selectAll('circle')
@@ -113,7 +120,7 @@ export const createNodes = (svg, data, callable) => {
 		.enter()
 		.append('g')
 		.append('circle')
-		.attr('r', d => `${d.r}vw`)
+		.attr('r', d => d.r)
 		.attr('fill', d => d.fill)
 		.attr('stroke', d => d.fill)
 		.call(callable);
@@ -121,9 +128,19 @@ export const createNodes = (svg, data, callable) => {
 	nodes.each(function(d, i) {
 		const group = d3.select(this.parentNode);
 		const { width, height } = d;
-		const mod = window.innerWidth >= 768 ? 2 : 1;
+
+		let mod = 1.75;
+
+		if (winWidth < 1024) {
+			mod = 1.35;
+		}
+
+		if (winWidth < 768) {
+			mod = 1;
+		}
+
 		const imgWidth = width * mod;
-		const imgHeight = height * mod;
+		const imgHeight = width * mod;
 
 		group
 			.append('image')
