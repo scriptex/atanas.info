@@ -27,7 +27,7 @@
 
 <div class="c-footer">
 	<div class="o-shell o-shell--flex">
-		<p>&copy; <?php echo date( 'Y' ); ?> Atanas Atanasov. All rights reserved.</p>
+		<p>&copy; <?php echo date( 'Y' ); ?> Atanas Atanasov. <br class="visible-xs-block">All rights reserved.</p>
 
 		<nav class="c-socials">
 			<ul>
