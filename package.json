@@ -5,7 +5,8 @@
 	"scripts": {
 		"build": "webpack --env.NODE_ENV=production",
 		"start": "webpack --watch --env.NODE_ENV=development",
-		"svg": "svgo -f assets/images/svg --config='{ \"plugins\": [{ \"cleanupAttrs\": true }, { \"removeDoctype\": true }, { \"removeXMLProcInst\": true }, { \"removeComments\": true }, { \"removeMetadata\": true }, { \"removeUselessDefs\": true }, { \"removeEditorsNSData\": true }, { \"removeEmptyAttrs\": true }, { \"removeHiddenElems\": false }, { \"removeEmptyText\": true }, { \"removeEmptyContainers\": true }, { \"cleanupEnableBackground\": true }, { \"removeViewBox\": false }, { \"cleanupIDs\": false }, { \"convertStyleToAttrs\": true }, { \"removeUselessStrokeAndFill\": true }] }' && spritesh -q -i assets/images/svg -o ./assets/dist/sprite.svg -p svg-"
+		"svg": "svgo -f assets/images/svg --config='{ \"plugins\": [{ \"cleanupAttrs\": true }, { \"removeDoctype\": true }, { \"removeXMLProcInst\": true }, { \"removeComments\": true }, { \"removeMetadata\": true }, { \"removeUselessDefs\": true }, { \"removeEditorsNSData\": true }, { \"removeEmptyAttrs\": true }, { \"removeHiddenElems\": false }, { \"removeEmptyText\": true }, { \"removeEmptyContainers\": true }, { \"cleanupEnableBackground\": true }, { \"removeViewBox\": false }, { \"cleanupIDs\": false }, { \"convertStyleToAttrs\": true }, { \"removeUselessStrokeAndFill\": true }] }' && spritesh -q -i assets/images/svg -o ./assets/dist/sprite.svg -p svg-",
+		"a11y": "a11y https://atanas.info"
 	},
 	"keywords": [
 		"MPA",
@@ -27,6 +28,7 @@
 		"normalize.css": "^8.0.0"
 	},
 	"devDependencies": {
+		"a11y": "^0.5.1",
 		"autoprefixer": "^8.0.0",
 		"babel-core": "^6.26.0",
 		"babel-loader": "^7.1.2",
