@@ -180,5 +180,19 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#291212'
+	},
+	{
+		text: 'Bash',
+		icon: 'bash',
+		width: 30,
+		height: 30,
+		fill: '#48992a'
+	},
+	{
+		text: 'Cordova',
+		icon: 'cordova',
+		width: 30,
+		height: 30,
+		fill: '#97daa8'
 	}
 ];

@@ -39,6 +39,7 @@
 		z-index: 2;
 		padding: 3rem 0;
 		background-color: rgba($color-black, 0.8);
+		cursor: all-scroll;
 
 		h2 {
 			font-size: 4vw;
@@ -80,7 +81,9 @@
 		}
 
 		circle {
-			stroke-width: 0.06rem;
+			stroke: $color-white;
+			stroke-width: 1px;
+			cursor: pointer;
 			transition: fill $timing $easing, stroke $timing $easing,
 				stroke-width $timing $easing;
 
