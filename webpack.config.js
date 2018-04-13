@@ -1,5 +1,7 @@
+const fs = require('fs');
 const url = require('url');
 const path = require('path');
+const glob = require('glob');
 
 const magicImporter = require('node-sass-magic-importer');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
@@ -8,6 +10,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SpritesmithPlugin = require('webpack-spritesmith');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const WebpackShellPlugin = require('webpack-shell-plugin');
 
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageminPNGquant = require('imagemin-pngquant');
@@ -15,6 +18,27 @@ const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 
 const sourceMap = {
 	sourceMap: true
+};
+
+const svgoConfig = {
+	plugins: [
+		{ cleanupAttrs: true },
+		{ removeDoctype: true },
+		{ removeXMLProcInst: true },
+		{ removeComments: true },
+		{ removeMetadata: true },
+		{ removeUselessDefs: true },
+		{ removeEditorsNSData: true },
+		{ removeEmptyAttrs: true },
+		{ removeHiddenElems: false },
+		{ removeEmptyText: true },
+		{ removeEmptyContainers: true },
+		{ cleanupEnableBackground: true },
+		{ removeViewBox: false },
+		{ cleanupIDs: false },
+		{ convertStyleToAttrs: true },
+		{ removeUselessStrokeAndFill: true }
+	]
 };
 
 const postcssConfig = {
@@ -36,7 +60,7 @@ const babelConfig = [
 		options: {
 			cacheDirectory: true,
 			comments: false,
-			presets: ['env', 'stage-2']
+			presets: ['@babel/env', '@babel/stage-2']
 		}
 	}
 ];
@@ -70,7 +94,7 @@ const browserSyncConfig = {
 };
 
 const extractTextConfig = {
-	filename: 'assets/dist/app.css',
+	filename: 'dist/app.css',
 	allChunks: true
 };
 
@@ -96,28 +120,19 @@ const cleanConfig = {
 
 const imageminConfig = {
 	test: 'assets/**/*.{jpg,png,gif}',
+	externalImages: {
+		context: '.',
+		sources: [
+			...glob.sync('assets/images/temp/*.jpg'),
+			...glob.sync('assets/images/temp/*.png'),
+			...glob.sync('assets/images/temp/*.gif')
+		],
+		destination: '.'
+	},
 	gifsicle: {
 		interlaced: true
 	},
-	svgo: {
-		plugins: [
-			{ cleanupAttrs: true },
-			{ removeDoctype: true },
-			{ removeXMLProcInst: true },
-			{ removeComments: true },
-			{ removeMetadata: true },
-			{ removeUselessDefs: true },
-			{ removeEditorsNSData: true },
-			{ removeEmptyAttrs: true },
-			{ removeHiddenElems: false },
-			{ removeEmptyText: true },
-			{ removeEmptyContainers: true },
-			{ cleanupEnableBackground: true },
-			{ removeViewBox: true },
-			{ cleanupIDs: false },
-			{ convertStyleToAttrs: true }
-		]
-	},
+	svgo: svgoConfig,
 	plugins: [
 		imageminMozjpeg({
 			quality: 70
@@ -128,6 +143,20 @@ const imageminConfig = {
 		})
 	]
 };
+
+const shellScripts = [];
+const svgs = fs
+	.readdirSync('./assets/images/svg')
+	.filter(svg => svg[0] !== '.');
+
+if (svgs.length) {
+	shellScripts.push(
+		'svgo -f assets/images/svg --config=' + JSON.stringify(svgoConfig)
+	);
+	shellScripts.push(
+		'spritesh -q -i assets/images/svg -o ./assets/dist/sprite.svg -p svg-'
+	);
+}
 
 module.exports = env => {
 	const isDevelopment = env.NODE_ENV === 'development';
@@ -145,9 +174,11 @@ module.exports = env => {
 	}
 
 	const config = {
+		mode: env.NODE_ENV,
 		entry: ['./assets/styles/main.scss', './assets/scripts/main.js'],
 		output: {
-			filename: './assets/dist/app.js'
+			path: path.resolve(__dirname, './assets'),
+			filename: 'dist/app.js'
 		},
 		resolve: {
 			modules: [
@@ -195,7 +226,7 @@ module.exports = env => {
 								name: '[hash].[ext]',
 								context: '',
 								publicPath: './',
-								outputPath: 'assets/dist/'
+								outputPath: './dist/'
 							}
 						}
 					]
@@ -210,7 +241,10 @@ module.exports = env => {
 			}),
 			new ExtractTextPlugin(extractTextConfig),
 			new SpritesmithPlugin(spritesmithConfig),
-			new CleanWebpackPlugin(['./assets/dist/'], cleanConfig)
+			new CleanWebpackPlugin(['./assets/dist/'], cleanConfig),
+			new WebpackShellPlugin({
+				onBuildStart: shellScripts
+			})
 		],
 		cache: true,
 		bail: false,
