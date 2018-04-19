@@ -1,12 +1,10 @@
 {
 	"name": "webpack-mpa",
-	"version": "1.4.0",
+	"version": "1.6.4",
 	"description": "Multi page app setup with webpack",
 	"scripts": {
 		"build": "webpack --env.NODE_ENV=production",
-		"start": "webpack --watch --env.NODE_ENV=development",
-		"svg": "svgo -f assets/images/svg --config='{ \"plugins\": [{ \"cleanupAttrs\": true }, { \"removeDoctype\": true }, { \"removeXMLProcInst\": true }, { \"removeComments\": true }, { \"removeMetadata\": true }, { \"removeUselessDefs\": true }, { \"removeEditorsNSData\": true }, { \"removeEmptyAttrs\": true }, { \"removeHiddenElems\": false }, { \"removeEmptyText\": true }, { \"removeEmptyContainers\": true }, { \"cleanupEnableBackground\": true }, { \"removeViewBox\": false }, { \"cleanupIDs\": false }, { \"convertStyleToAttrs\": true }, { \"removeUselessStrokeAndFill\": true }] }' && spritesh -q -i assets/images/svg -o ./assets/dist/sprite.svg -p svg-",
-		"a11y": "a11y https://atanas.info"
+		"start": "webpack --watch --env.NODE_ENV=development"
 	},
 	"keywords": [
 		"MPA",
@@ -14,7 +12,7 @@
 		"setup",
 		"multi-page"
 	],
-	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (http://atanas.info)",
+	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
 	"repository": "https://github.com/scriptex/webpack-mpa",
 	"bugs": {
 		"url": "https://github.com/scriptex/webpack-mpa/issues",
@@ -22,19 +20,19 @@
 	},
 	"license": "MIT",
 	"dependencies": {
-		"@three11/animate-top-offset": "^0.2.0",
-		"d3": "^5.0.0",
+		"@three11/animate-top-offset": "^0.3.0",
+		"d3": "^5.1.0",
 		"normalize.css": "^8.0.0"
 	},
 	"devDependencies": {
 		"@babel/core": "7.0.0-beta.44",
 		"@babel/preset-env": "7.0.0-beta.44",
 		"@babel/preset-stage-2": "7.0.0-beta.44",
-		"a11y": "^0.5.1",
 		"autoprefixer": "^8.2.0",
 		"babel-loader": "^8.0.0-beta.0",
 		"browser-sync": "^2.23.5",
 		"browser-sync-webpack-plugin": "^2.2.2",
+		"chokidar": "^2.0.3",
 		"clean-webpack-plugin": "^0.1.19",
 		"css-loader": "^0.28.11",
 		"cssnano": "^3.10.0",
