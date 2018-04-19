@@ -1,7 +1,10 @@
 export const texts = [
-	'Full Stack Web Developer',
+	'Senior Web Developer',
 	'CSS Experimenter',
 	'JavaScript Master',
 	'Father',
-	'NodeJS Enthusiast'
+	'NodeJS Enthusiast',
+	'Front End Guru',
+	'UX Advocate',
+	'UI Polisher'
 ];
