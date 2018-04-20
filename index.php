@@ -36,10 +36,6 @@ function autoversion($url) {
 		<?php include_once('footer.php'); ?>
 	</div><!-- /.o-wrapper -->
 
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans%7CWork+Sans%7CAnton" />
-
-	<link rel="stylesheet" href="<?php autoversion('assets/dist/app.css'); ?>" />
-
 	<script src="<?php autoversion('assets/dist/app.js'); ?>" async defer></script>
 
 	<script src="https://www.googletagmanager.com/gtag/js?id=UA-83446952-1" async></script>

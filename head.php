@@ -27,3 +27,7 @@
 <meta name="theme-color" content="#ef4c23" />
 
 <?php critical_css(); ?>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans%7CWork+Sans%7CAnton" />
+
+<link rel="stylesheet" href="<?php autoversion('assets/dist/app.css'); ?>" />
