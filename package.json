@@ -1,17 +1,15 @@
 {
 	"name": "webpack-mpa",
-	"version": "1.6.4",
+	"version": "1.6.5",
 	"description": "Multi page app setup with webpack",
 	"scripts": {
 		"build": "webpack --env.NODE_ENV=production",
-		"start": "webpack --watch --env.NODE_ENV=development"
+		"start": "webpack --watch --env.NODE_ENV=development",
+		"optisize": "optisize --src=\"./assets/images\"",
+		"critical":
+			"critical index.php -c assets/dist/app.css -w 1280 -h 800 -e --ignore @font-face > assets/dist/critical.css"
 	},
-	"keywords": [
-		"MPA",
-		"webpack",
-		"setup",
-		"multi-page"
-	],
+	"keywords": ["MPA", "webpack", "setup", "multi-page"],
 	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
 	"repository": "https://github.com/scriptex/webpack-mpa",
 	"bugs": {
@@ -28,19 +26,18 @@
 		"@babel/core": "7.0.0-beta.44",
 		"@babel/preset-env": "7.0.0-beta.44",
 		"@babel/preset-stage-2": "7.0.0-beta.44",
+		"@three11/optisize": "^0.3.0",
 		"autoprefixer": "^8.2.0",
 		"babel-loader": "^8.0.0-beta.0",
 		"browser-sync": "^2.23.5",
 		"browser-sync-webpack-plugin": "^2.2.2",
 		"chokidar": "^2.0.3",
 		"clean-webpack-plugin": "^0.1.19",
+		"critical": "^1.2.2",
 		"css-loader": "^0.28.11",
 		"cssnano": "^3.10.0",
 		"extract-text-webpack-plugin": "^4.0.0-alpha.0",
 		"file-loader": "^1.1.11",
-		"imagemin-mozjpeg": "^7.0.0",
-		"imagemin-pngquant": "^5.1.0",
-		"imagemin-webpack-plugin": "^2.1.1",
 		"node-sass": "^4.8.3",
 		"node-sass-magic-importer": "^5.1.2",
 		"postcss-easy-import": "^3.0.0",
@@ -52,16 +49,12 @@
 		"sass-loader": "^7.0.0",
 		"spritesh": "^1.2.1",
 		"style-loader": "^0.20.3",
-		"uglifyjs-webpack-plugin": "^1.2.4",
 		"webpack": "^4.5.0",
 		"webpack-cli": "^2.0.14",
 		"webpack-shell-plugin": "^0.5.0",
 		"webpack-spritesmith": "^0.4.1"
 	},
-	"browserslist": [
-		"> 1%",
-		"last 2 versions"
-	],
+	"browserslist": ["> 1%", "last 2 versions"],
 	"main": "assets/scripts/main.js",
 	"private": false
 }

@@ -26,5 +26,7 @@
 <meta name="msapplication-square310x310logo" content="assets/images/favicon/mstile-310x310.png" />
 <meta name="theme-color" content="#ef4c23" />
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans%7CWork+Sans%7CAnton" />
-<link rel="stylesheet" href="<?php autoversion('assets/dist/app.css'); ?>" />
+<?php critical_css(); ?>
+
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans%7CWork+Sans%7CAnton" as="style" onload="this.rel='stylesheet'" />
+<link rel="preload" href="<?php autoversion('assets/dist/app.css'); ?>" as="style" onload="this.rel='stylesheet'" />

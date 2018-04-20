@@ -1,7 +1,16 @@
 <?php
+function critical_css($path = '/assets/dist/critical.css') {
+	$critical = __DIR__ . $path;
+
+	if ( file_exists($critical) ) {
+		$critical_css = file_get_contents($critical);
+
+		echo '<style type="text/css" id="critical-css">' . $critical_css . '</style>';
+	}
+}
+
 function autoversion($url) {
-	$ver  = filemtime(dirname(__FILE__) . DIRECTORY_SEPARATOR . $url);
-	echo $url . '?v=' . $ver;
+	echo $url . '?v=' . filemtime(__DIR__ . DIRECTORY_SEPARATOR . $url);
 }
 ?>
 
@@ -27,9 +36,9 @@ function autoversion($url) {
 		<?php include_once('footer.php'); ?>
 	</div><!-- /.o-wrapper -->
 
-	<script src="<?php autoversion('assets/dist/app.js'); ?>"></script>
+	<script src="<?php autoversion('assets/dist/app.js'); ?>" async defer></script>
 
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-83446952-1"></script>
+	<script src="https://www.googletagmanager.com/gtag/js?id=UA-83446952-1" async></script>
 
 	<script>
 		window.dataLayer = window.dataLayer || [];
