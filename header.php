@@ -31,6 +31,12 @@
 				</li>
 
 				<li>
+					<a href="projects/">
+						<span>Projects</span>
+					</a>
+				</li>
+
+				<li>
 					<a href="mailto:hi@atanas.info" target="_blank" rel="noopener noreferrer">
 						<span>Hire Me</span>
 					</a>
