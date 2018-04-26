@@ -32,7 +32,7 @@
 
 				<li>
 					<a href="projects/">
-						<span>Projects</span>
+						<span>Open Source</span>
 					</a>
 				</li>
 
