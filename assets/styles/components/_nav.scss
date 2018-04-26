@@ -58,6 +58,15 @@
 				animation: floatXY 5s infinite alternate;
 			}
 		}
+
+		&:nth-child(4) {
+			transform: translate(-40vw, 50vh) scale(0);
+			transform-origin: -100% -50%;
+
+			a {
+				animation: floatXY 5s infinite alternate;
+			}
+		}
 	}
 
 	a {
@@ -125,6 +134,10 @@
 				&:nth-child(3) {
 					transform: translate(-35vw, 50vh) scale(1);
 				}
+
+				&:nth-child(4) {
+					transform: translate(-20vw, 40vh) scale(1);
+				}
 			}
 		}
 	}
@@ -143,6 +156,10 @@
 
 					&:nth-child(3) {
 						transform: translate(-60vw, 50vh) scale(1);
+					}
+
+					&:nth-child(4) {
+						transform: translate(-40vw, 30vh) scale(1);
 					}
 				}
 			}
