@@ -1,9 +1,10 @@
+import animateTopOffset from '@three11/animate-top-offset';
+
 import { textRotate } from './slider';
 import { drawSkills } from './skills';
 import { initCanvas, createDots } from './canvas';
 import { skills } from './skills-list';
 import { texts } from './hero-texts';
-import { animateTopOffset } from '@three11/animate-top-offset';
 
 const doc = document;
 const win = window;
