@@ -1,19 +1,15 @@
 {
-	"name": "webpack-mpa",
-	"version": "1.6.7",
-	"description": "Multi page app setup with webpack",
+	"name": "atanas.info",
+	"version": "1.0.0",
+	"description": "Atanas Atanasov's Personal Website",
 	"scripts": {
 		"build": "webpack --env.NODE_ENV=production",
 		"start": "webpack --watch --env.NODE_ENV=development",
 		"optisize": "optisize --src=\"./assets/images\"",
-		"critical": "critical index.php -c assets/dist/app.css -w 1280 -h 800 -e --ignore @font-face > assets/dist/critical.css"
+		"critical":
+			"critical index.php -c assets/dist/app.css -w 1280 -h 800 -e --ignore @font-face > assets/dist/critical.css"
 	},
-	"keywords": [
-		"MPA",
-		"webpack",
-		"setup",
-		"multi-page"
-	],
+	"keywords": ["MPA", "webpack", "setup", "multi-page"],
 	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
 	"repository": "https://github.com/scriptex/webpack-mpa",
 	"bugs": {
@@ -58,10 +54,7 @@
 		"webpack-shell-plugin": "^0.5.0",
 		"webpack-spritesmith": "^0.4.1"
 	},
-	"browserslist": [
-		"> 1%",
-		"last 2 versions"
-	],
+	"browserslist": ["> 1%", "last 2 versions"],
 	"main": "assets/scripts/main.js",
-	"private": false
+	"private": true
 }
