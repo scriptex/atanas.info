@@ -6,7 +6,7 @@
 			<img src="assets/images/temp/atanas.jpg" alt="Atanas Atanasov" class="c-article__block">
 
 			<div class="c-article__block">
-				<p>My name is Atanas and I am a Full-Stack Web Developer.</p>
+				<p>My name is Atanas and I am a Senior Web Developer.</p>
 
 				<p>I am currently located in Varna, Bulgaria.</p>
 
@@ -46,9 +46,9 @@
 			<div class="c-article__block">
 				<h2>Today</h2>
 
-				<p>Now I am a full-stack web developer in a young and progressive web-development agency called Three11. I am now focused on the front-end but working with back-end technologies as well. <br>My daily tasks include coding HTML, CSS, JavaScript, PHP, Bash...</p>
+				<p>Now I am a web developer in a young and progressive web-development agency called <a href="https://three-11.com" target="_blank">Three11</a>. I am now focused on the front-end but working with back-end technologies as well. <br>My daily tasks include coding HTML, CSS, JavaScript, PHP, Bash...</p>
 
-				<p>I am currently focused on creating, implementing and maintaining custom WordPress themes and single-page JavaScript applications but I am always open for new interesting and challenging tasks and projects.</p>
+				<p>I am currently focused on creating, implementing and maintaining custom WordPress themes and single-page JavaScript applications using ReactJS or VueJS but I am always open for new interesting and challenging tasks and projects.</p>
 			</div><!-- /.c-article__block -->
 
 			<div class="c-article__block">
