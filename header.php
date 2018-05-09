@@ -41,6 +41,12 @@
 						<span>Hire Me</span>
 					</a>
 				</li>
+
+				<li>
+					<a href="#slides" class="js-internal-link">
+						<span>Slides</span>
+					</a>
+				</li>
 			</ul>
 		</nav><!-- /.c-nav -->
 	</div><!-- /.o-shell o-shell-/-flex -->
