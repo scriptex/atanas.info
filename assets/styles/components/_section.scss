@@ -149,4 +149,58 @@
 			flex: 0 0 100%;
 		}
 	}
+
+	&--slides {
+		color: $color-black;
+		position: relative;
+		z-index: 2;
+		padding: 2rem 0;
+		background-color: $color-white;
+
+		ul {
+			@include flex-row(wrap, center, center);
+		}
+
+		li {
+			padding: 0 1rem;
+		}
+
+		label {
+			text-transform: uppercase;
+			display: block;
+
+			@include hover {
+				color: $color-action;
+			}
+		}
+
+		iframe {
+			width: 100%;
+			height: 100%;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border: 0;
+		}
+
+		input:checked {
+			+ .c-section__frame {
+				display: block;
+			}
+		}
+
+		.c-section {
+			&__nav {
+				padding-bottom: 2rem;
+			}
+
+			&__frame {
+				height: 0;
+				display: none;
+				position: relative;
+				padding-bottom: 62.5%;
+			}
+		}
+	}
 }
