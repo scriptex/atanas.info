@@ -48,3 +48,5 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans%7CWork+Sans%7CAnton" />
 
 <link rel="stylesheet" href="<?php autoversion('assets/dist/app.css'); ?>" />
+
+<link rel="manifest" href="manifest.json" />
