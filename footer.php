@@ -1,27 +1,43 @@
 <?php $links = [
 	[
-		'url'  => 'mailto:hi@atanas.info',
-		'icon' => 'email'
+		'url'   => 'mailto:hi@atanas.info',
+		'icon'  => 'email',
+		'title' => 'Send me an email'
 	],
 	[
-		'url'  => 'https://www.linkedin.com/in/scriptex/',
-		'icon' => 'linkedin'
+		'url'   => 'https://www.linkedin.com/in/scriptex/',
+		'icon'  => 'linkedin',
+		'title' => 'Find me on LinkedIn'
 	],
 	[
-		'url'  => 'https://github.com/scriptex',
-		'icon' => 'github'
+		'url'   => 'https://plus.google.com/+AtanasAtanasov',
+		'icon'  => 'google-plus',
+		'title' => 'Find me on Google Plus'
 	],
 	[
-		'url'  => 'https://gitlab.com/scriptex',
-		'icon' => 'gitlab'
+		'url'   => 'https://github.com/scriptex',
+		'icon'  => 'github',
+		'title' => 'See my projects on Github'
 	],
 	[
-		'url'  => 'https://twitter.com/scriptexbg',
-		'icon' => 'twitter'
+		'url'   => 'https://gitlab.com/scriptex',
+		'icon'  => 'gitlab',
+		'title' => 'See my projects on Gitlab'
 	],
 	[
-		'url'  => 'https://www.npmjs.com/~scriptex',
-		'icon' => 'npm'
+		'url'   => 'https://twitter.com/scriptexbg',
+		'icon'  => 'twitter',
+		'title' => 'Follow me on Twitter'
+	],
+	[
+		'url'   => 'https://www.npmjs.com/~scriptex',
+		'icon'  => 'npm',
+		'title' => 'See my packages on NPM'
+	],
+	[
+		'url'   => 'https://codepen.io/scriptex/',
+		'icon'  => 'codepen',
+		'title' => 'See my work on Codepen'
 	],
 ]; ?>
 
@@ -33,9 +49,9 @@
 			<ul>
 				<?php foreach ($links as $link) : ?>
 					<li>
-						<a href="<?php echo $link['url'] ?>">
-							<svg class="svg-<?php echo $link['icon'] ?>">
-								<use xlink:href="#svg-<?php echo $link['icon'] ?>" />
+						<a href="<?php echo $link['url']; ?>" title="<?php echo $link['title']; ?>" target="_blank" rel="noopener noreferrer nofollow">
+							<svg class="svg-<?php echo $link['icon']; ?>">
+								<use xlink:href="#svg-<?php echo $link['icon']; ?>" />
 							</svg>
 						</a>
 					</li>
