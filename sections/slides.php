@@ -18,13 +18,13 @@
 			<input type="radio" name="toggle-slides" id="toggle-slides-1" class="hidden" checked />
 
 			<div class="c-section__frame">
-				<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTivcVmPyjYPdWgoJMChe_rrVyZEIw4ZgF37lCOlxUUm7DchxhMJouEV_BcrH6LDL8kiNmRSIWkiSxK/embed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+				<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTivcVmPyjYPdWgoJMChe_rrVyZEIw4ZgF37lCOlxUUm7DchxhMJouEV_BcrH6LDL8kiNmRSIWkiSxK/embed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="Presentation about improving workflow using Sublime Text editor"></iframe>
 			</div><!-- /.c-section__frame -->
 
 			<input type="radio" name="toggle-slides" id="toggle-slides-2" class="hidden" />
 
 			<div class="c-section__frame">
-				<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSA8qN0_3lb0YWDYJheJ3q0AAsXWlLLpP86pnmV0KWfPo_2G-SSdSK--GVRyJbwT8_kWyJ0TZxFoaH8/embed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+				<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSA8qN0_3lb0YWDYJheJ3q0AAsXWlLLpP86pnmV0KWfPo_2G-SSdSK--GVRyJbwT8_kWyJ0TZxFoaH8/embed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="Presentation about the EcmaScript language history and features"></iframe>
 			</div><!-- /.c-section__frame -->
 		</div><!-- /.c-section__body -->
 	</div><!-- /.o-shell -->

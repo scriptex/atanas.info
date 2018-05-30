@@ -46,7 +46,7 @@
 			<div class="c-article__block">
 				<h2>Today</h2>
 
-				<p>Now I am a web developer in a young and progressive web-development agency called <a href="https://three-11.com" target="_blank">Three11</a>. I am now focused on the front-end but working with back-end technologies as well. <br>My daily tasks include coding HTML, CSS, JavaScript, PHP, Bash...</p>
+				<p>Now I am a web developer in a young and progressive web-development agency called <a href="https://three-11.com" target="_blank" rel="noopener noreferrer nofollow">Three11</a>. I am now focused on the front-end but working with back-end technologies as well. <br>My daily tasks include coding HTML, CSS, JavaScript, PHP, Bash...</p>
 
 				<p>I am currently focused on creating, implementing and maintaining custom WordPress themes and single-page JavaScript applications using ReactJS or VueJS but I am always open for new interesting and challenging tasks and projects.</p>
 			</div><!-- /.c-article__block -->
@@ -54,9 +54,9 @@
 			<div class="c-article__block">
 				<h2>Connect with me</h2>
 
-				<p>I am open for hire to work on your awesome idea. If you think i can help you, do not hesitate and <strong><a href="mailto:hi@atanas.info" target="_blank">drop me a line</a></strong>.</p>
+				<p>I am open for hire to work on your awesome idea. If you think i can help you, do not hesitate and <strong><a href="mailto:hi@atanas.info" target="_blank" rel="noopener noreferrer nofollow">drop me a line</a></strong>.</p>
 
-				<p>I also like to contribute to open-source projects and i have created some myself. Feel free to contact me if you want to talk about your open-source projects or <strong><a href="https://github.com/scriptex" target="_blank">mine</a></strong>.</p>
+				<p>I also like to contribute to open-source projects and i have created some myself. Feel free to contact me if you want to talk about your open-source projects or <strong><a href="https://github.com/scriptex" target="_blank" rel="noopener noreferrer nofollow">mine</a></strong>.</p>
 			</div><!-- /.c-article__block -->
 		</article><!-- /.c-article -->
 	</div><!-- /.o-shell -->
