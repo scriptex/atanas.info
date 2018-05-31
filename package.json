@@ -3,11 +3,12 @@
 	"version": "1.0.0",
 	"description": "Atanas Atanasov's Personal Website",
 	"scripts": {
-		"build": "webpack --env.NODE_ENV=production",
-		"start": "webpack --watch --env.NODE_ENV=development",
+		"build": "yarn localga && webpack --env.NODE_ENV=production",
+		"start": "yarn localga && webpack --watch --env.NODE_ENV=development",
 		"optisize": "optisize --src=\"./assets/images\"",
 		"critical":
-			"critical index.php -c assets/dist/app.css -w 1280 -h 800 -e --ignore @font-face > assets/dist/critical.css"
+			"critical index.php -c assets/dist/app.css -w 1280 -h 800 -e --ignore @font-face > assets/dist/critical.css",
+		"localga": "localga --id UA-83446952-1 --folder ./assets/scripts"
 	},
 	"keywords": ["MPA", "webpack", "setup", "multi-page"],
 	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
@@ -37,6 +38,7 @@
 		"cssnano": "^3.10.0",
 		"extract-text-webpack-plugin": "^4.0.0-alpha.0",
 		"file-loader": "^1.1.11",
+		"localga": "^0.0.1",
 		"node-sass": "^4.9.0",
 		"node-sass-magic-importer": "^5.1.2",
 		"postcss-easy-import": "^3.0.0",

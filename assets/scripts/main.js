@@ -46,7 +46,7 @@ if ('serviceWorker' in navigator) {
 	});
 }
 
-require('./ga.js');
+require('./google-analytics-local.js');
 
 window.dataLayer = window.dataLayer || [];
 
