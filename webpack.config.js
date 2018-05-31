@@ -7,7 +7,6 @@ const { argv } = require('yargs');
 const magicImporter = require('node-sass-magic-importer');
 const { ProvidePlugin } = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const SpritesmithPlugin = require('webpack-spritesmith');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const WebpackShellPlugin = require('webpack-shell-plugin');
@@ -95,21 +94,6 @@ const browserSyncConfig = {
 const extractTextConfig = {
 	filename: 'dist/app.css',
 	allChunks: true
-};
-
-const spritesmithConfig = {
-	src: {
-		cwd: path.resolve(__dirname, 'assets/images/sprite'),
-		glob: '*.png'
-	},
-	target: {
-		image: path.resolve(__dirname, './assets/dist/sprite.png'),
-		css: path.resolve(__dirname, './assets/styles/_sprite.scss')
-	},
-	apiOptions: {
-		cssImageRef: '../dist/sprite.png'
-	},
-	retina: '@2x'
 };
 
 const cleanConfig = {
@@ -222,7 +206,6 @@ module.exports = env => {
 				'window.jQuery': 'jquery'
 			}),
 			new ExtractTextPlugin(extractTextConfig),
-			new SpritesmithPlugin(spritesmithConfig),
 			new CleanWebpackPlugin(['./assets/dist/'], cleanConfig),
 			new WebpackShellPlugin({
 				onBuildStart: shellScripts
