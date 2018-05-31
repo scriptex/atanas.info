@@ -45,8 +45,6 @@
 
 <?php critical_css(); ?>
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans%7CWork+Sans%7CAnton" />
-
-<link rel="stylesheet" href="<?php autoversion('assets/dist/app.css'); ?>" />
-
+<link rel="preload" href="<?php autoversion('assets/dist/app.css'); ?>" as="style" />
 <link rel="manifest" href="manifest.json" />
+<link rel="stylesheet" href="<?php autoversion('assets/dist/app.css'); ?>" />

@@ -39,18 +39,5 @@ function autoversion($url) {
 	</div><!-- /.o-wrapper -->
 
 	<script src="<?php autoversion('assets/dist/app.js'); ?>" async defer></script>
-
-	<script src="https://www.googletagmanager.com/gtag/js?id=UA-83446952-1" async></script>
-
-	<script>
-		window.dataLayer = window.dataLayer || [];
-
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-
-		gtag('js', new Date());
-		gtag('config', 'UA-83446952-1');
-	</script>
 </body>
 </html>

@@ -45,3 +45,14 @@ if ('serviceWorker' in navigator) {
 		navigator.serviceWorker.register('./service-worker.js');
 	});
 }
+
+require('./ga.js');
+
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+	dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+gtag('config', 'UA-83446952-1');
