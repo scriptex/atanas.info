@@ -1,18 +1,35 @@
-import * as d3 from 'd3';
+import { drag } from 'd3-drag';
+import { range } from 'd3-array';
+import { randomUniform } from 'd3-random';
+import {
+	select,
+	selectAll,
+	style,
+	text,
+	on,
+	attr,
+	event,
+	data
+} from 'd3-selection';
+import {
+	nodes,
+	links,
+	force,
+	forceX,
+	forceY,
+	restart,
+	forceLink,
+	alphaTarget,
+	forceCenter,
+	forceCollide,
+	forceManyBody,
+	forceSimulation
+} from 'd3-force';
+
 import { createSVG } from './canvas';
 
-const shuffle = arr => {
-	for (let i = arr.length - 1; i > 0; i--) {
-		const j = Math.floor(Math.random() * (i + 1));
-
-		[arr[i], arr[j]] = [arr[j], arr[i]];
-	}
-
-	return arr;
-};
-
 export const drawSkills = words => {
-	const range = words.length;
+	const all = words.length;
 	const width = window.innerWidth;
 	const height = window.innerHeight;
 	const svg = createSVG('skills', width, height);
@@ -38,8 +55,8 @@ export const drawSkills = words => {
 
 			nodes.each(function(d, i) {
 				const group = this.parentNode;
-				const text = d3.select(group.querySelector('text'));
-				const image = d3.select(group.querySelector('image'));
+				const text = select(group.querySelector('text'));
+				const image = select(group.querySelector('image'));
 
 				image.attr('x', d => d.x).attr('y', d => d.y);
 				text.attr('x', d => d.x).attr('y', d => d.y);
@@ -66,41 +83,39 @@ export const drawSkills = words => {
 				...word
 			};
 		}),
-		links: d3.range(0, range).map(() => ({
-			source: ~~d3.randomUniform(range)(),
-			target: ~~d3.randomUniform(range)()
+		links: range(0, all).map(() => ({
+			source: ~~randomUniform(all)(),
+			target: ~~randomUniform(all)()
 		}))
 	});
 };
 
 export const dragHandler = simulation => {
-	return d3
-		.drag()
+	return drag()
 		.on('start', d => {
-			if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+			if (!event.active) simulation.alphaTarget(0.3).restart();
 			d.fx = d.x;
 			d.fy = d.y;
 		})
 		.on('drag', d => {
-			d.fx = d3.event.x;
-			d.fy = d3.event.y;
+			d.fx = event.x;
+			d.fy = event.y;
 		})
 		.on('end', d => {
-			if (!d3.event.active) simulation.alphaTarget(0);
+			if (!event.active) simulation.alphaTarget(0);
 			d.fx = null;
 			d.fy = null;
 		});
 };
 
 export const createSimulation = (width, height) => {
-	return d3
-		.forceSimulation()
-		.force('link', d3.forceLink().id(d => d.index))
-		.force('collide', d3.forceCollide(d => d.r * 1.75).iterations(20))
-		.force('charge', d3.forceManyBody())
-		.force('center', d3.forceCenter(width / 2, height / 2))
-		.force('y', d3.forceY(0))
-		.force('x', d3.forceX(0));
+	return forceSimulation()
+		.force('link', forceLink().id(d => d.index))
+		.force('collide', forceCollide(d => d.r * 1.75).iterations(20))
+		.force('charge', forceManyBody())
+		.force('center', forceCenter(width / 2, height / 2))
+		.force('y', forceY(0))
+		.force('x', forceX(0));
 };
 
 export const createLinks = (svg, data) => {
@@ -126,7 +141,7 @@ export const createNodes = (svg, data, winWidth, callable) => {
 		.call(callable);
 
 	nodes.each(function(d, i) {
-		const group = d3.select(this.parentNode);
+		const group = select(this.parentNode);
 		const { width, height } = d;
 
 		let mod = 1.75;

@@ -1,30 +1,31 @@
-import * as d3 from 'd3';
+import { hsl } from 'd3-color';
+import { range } from 'd3-array';
+import { dispatch } from 'd3-dispatch';
+import { easeQuadIn } from 'd3-ease';
+import { transition, duration, ease } from 'd3-transition';
+import { select, append, attr, mouse, style, remove, on } from 'd3-selection';
 
 let circleIndex = 0;
 
-const { innerWidth, innerHeight } = window;
-const eventType = 'ontouchstart' in document ? 'touchmove' : 'mousemove';
-const dispatch = d3.dispatch('remove-circle');
 const rand = modifier => Math.random() * modifier;
+const eventType = 'ontouchstart' in document ? 'touchmove' : 'mousemove';
+const dispatcher = dispatch('remove-circle');
+const { innerWidth, innerHeight } = window;
 
-dispatch.on('remove-circle', canvas => {
+dispatcher.on('remove-circle', canvas => {
 	const newCircle = canvas.append('circle');
 	const newCircleData = generateCircleData(1);
 
 	setCircleData(canvas, newCircle.node(), newCircleData[0], circleIndex);
 });
 
-export const createSVG = (id, width, height) => {
-	const svg = d3
-		.select(`#${id}`)
+export const createSVG = (id, width, height) =>
+	select(`#${id}`)
 		.append('svg')
 		.attr('width', width)
 		.attr('height', height)
 		.attr('preserveAspectRatio', 'xMinYMin meet')
 		.attr('viewBox', `0 0 ${width} ${height}`);
-
-	return svg;
-};
 
 export const drawCircle = (canvas, data) => {
 	canvas
@@ -37,15 +38,14 @@ export const drawCircle = (canvas, data) => {
 		.style('fill', 'none')
 		.transition()
 		.duration(1000)
-		.ease(d3.easeQuadIn)
+		.ease(easeQuadIn)
 		.attr('r', 100)
 		.style('stroke-opacity', 0.001)
 		.remove();
 };
 
 export const setCircleData = (canvas, circle, data, index) => {
-	d3
-		.select(circle)
+	select(circle)
 		.attr('class', 'circle')
 		.attr('cx', d => data.cx)
 		.attr('cy', d => data.cy)
@@ -63,19 +63,19 @@ export const setCircleData = (canvas, circle, data, index) => {
 		.duration(1000)
 		.style('stroke-opacity', 0)
 		.on('end', function() {
-			dispatch.call('remove-circle', null, canvas);
+			dispatcher.call('remove-circle', null, canvas);
 
-			d3.select(this).remove();
+			select(this).remove();
 		});
 };
 
-export const generateCircleData = count => {
-	return d3.range(count).map(() => {
+export const generateCircleData = count =>
+	range(count).map(() => {
 		const cx = rand(innerWidth);
 		const cy = rand(innerHeight);
 		const r = rand(100);
 		const op = rand(1);
-		const color = d3.hsl((circleIndex = (circleIndex + 1) % 360), 1, 0.5);
+		const color = hsl((circleIndex = (circleIndex + 1) % 360), 1, 0.5);
 
 		return {
 			cx,
@@ -85,7 +85,6 @@ export const generateCircleData = count => {
 			color
 		};
 	});
-};
 
 export const initCanvas = id => {
 	let i = 0;
@@ -93,8 +92,8 @@ export const initCanvas = id => {
 	const canvas = createSVG(id, innerWidth, innerHeight);
 
 	canvas.on(eventType, function() {
-		const offset = d3.mouse(this);
-		const color = d3.hsl((i = (i + 1) % 360), 1, 0.5);
+		const offset = mouse(this);
+		const color = hsl((i = (i + 1) % 360), 1, 0.5);
 
 		drawCircle(canvas, {
 			color,

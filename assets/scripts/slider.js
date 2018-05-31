@@ -1,11 +1,11 @@
-import * as d3 from 'd3';
+import { select, style, text, on } from 'd3-selection';
+import { transition, duration, delay } from 'd3-transition';
 
 let i = 0;
 
 export const textRotate = (id, data) => {
 	const changeText = index => {
-		d3
-			.select(`#${id}`)
+		select(`#${id}`)
 			.transition()
 			.duration(500)
 			.style('transform', 'scale(0)')

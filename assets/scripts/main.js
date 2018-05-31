@@ -1,21 +1,20 @@
 import animateTopOffset from '@three11/animate-top-offset';
 
+import { texts } from './hero-texts';
+import { skills } from './skills-list';
 import { textRotate } from './slider';
 import { drawSkills } from './skills';
 import { initCanvas, createDots } from './canvas';
-import { skills } from './skills-list';
-import { texts } from './hero-texts';
 
 const doc = document;
 const win = window;
+const canvas = initCanvas('canvas');
 const header = doc.querySelector('.c-header');
+const navToggler = doc.getElementById('nav_toggle');
+const internalLinks = [...doc.querySelectorAll('.js-internal-link')];
 const toggleHeaderState = winO => {
 	header.classList.toggle('c-header--with-background', winO > 0);
 };
-const internalLinks = [...doc.querySelectorAll('.js-internal-link')];
-const navToggler = doc.getElementById('nav_toggle');
-
-const canvas = initCanvas('canvas');
 
 drawSkills(skills);
 createDots(canvas);
