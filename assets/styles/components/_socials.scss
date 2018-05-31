@@ -25,5 +25,13 @@
 
 	@include mobile {
 		flex: 0 0 100%;
+
+		ul {
+			margin: 0 -0.1275rem;
+		}
+
+		li {
+			padding: 0.1275rem;
+		}
 	}
 }
