@@ -3,8 +3,6 @@ const urlsToCache = [
 	'/index.php',
 	'/assets/dist/app.css',
 	'/assets/dist/app.js',
-	'/assets/dist/sprite.png',
-	'/assets/dist/sprite@2x.png',
 	'/assets/dist/sprite.svg',
 	'/assets/images/temp/atanas.jpg',
 	'/assets/images/temp/desktop.jpg',
