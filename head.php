@@ -43,8 +43,4 @@
 <link rel="icon" type="image/png" href="assets/images/favicon/favicon-128.png" sizes="128x128" />
 <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon/favicon.ico" />
 
-<?php critical_css(); ?>
-
-<link rel="preload" href="<?php autoversion('assets/dist/app.css'); ?>" as="style" />
 <link rel="manifest" href="manifest.json" />
-<link rel="stylesheet" href="<?php autoversion('assets/dist/app.css'); ?>" />

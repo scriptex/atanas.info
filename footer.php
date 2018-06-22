@@ -2,42 +2,42 @@
 	[
 		'url'   => 'mailto:hi@atanas.info',
 		'icon'  => 'email',
-		'title' => 'Send me an email'
+		'title' => 'Send me an email',
 	],
 	[
 		'url'   => 'https://www.linkedin.com/in/scriptex/',
 		'icon'  => 'linkedin',
-		'title' => 'Find me on LinkedIn'
+		'title' => 'Find me on LinkedIn',
 	],
 	[
 		'url'   => 'https://plus.google.com/+AtanasAtanasov',
 		'icon'  => 'google-plus',
-		'title' => 'Find me on Google Plus'
+		'title' => 'Find me on Google Plus',
 	],
 	[
 		'url'   => 'https://github.com/scriptex',
 		'icon'  => 'github',
-		'title' => 'See my projects on Github'
+		'title' => 'See my projects on Github',
 	],
 	[
 		'url'   => 'https://gitlab.com/scriptex',
 		'icon'  => 'gitlab',
-		'title' => 'See my projects on Gitlab'
+		'title' => 'See my projects on Gitlab',
 	],
 	[
 		'url'   => 'https://twitter.com/scriptexbg',
 		'icon'  => 'twitter',
-		'title' => 'Follow me on Twitter'
+		'title' => 'Follow me on Twitter',
 	],
 	[
 		'url'   => 'https://www.npmjs.com/~scriptex',
 		'icon'  => 'npm',
-		'title' => 'See my packages on NPM'
+		'title' => 'See my packages on NPM',
 	],
 	[
 		'url'   => 'https://codepen.io/scriptex/',
 		'icon'  => 'codepen',
-		'title' => 'See my work on Codepen'
+		'title' => 'See my work on Codepen',
 	],
 ]; ?>
 

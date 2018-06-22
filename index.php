@@ -18,6 +18,10 @@ function autoversion($url) {
 <html lang="en">
 <head>
 	<?php include_once('head.php'); ?>
+
+	<?php critical_css(); ?>
+
+	<link rel="preload" href="<?php autoversion('assets/dist/app.css'); ?>" as="style" />
 </head>
 <body>
 	<?php include_once('assets/dist/sprite.svg'); ?>
@@ -37,6 +41,8 @@ function autoversion($url) {
 
 		<?php include_once('footer.php'); ?>
 	</div><!-- /.o-wrapper -->
+
+	<link rel="stylesheet" href="<?php autoversion('assets/dist/app.css'); ?>" />
 
 	<script src="<?php autoversion('assets/dist/app.js'); ?>" async defer></script>
 </body>
