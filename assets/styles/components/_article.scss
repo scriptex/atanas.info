@@ -120,7 +120,7 @@
 
 			&:nth-of-type(3) {
 				flex: 0 0 75vw;
-				margin: 0 0 4vw 0;
+				margin: 0 0 4vw;
 			}
 
 			&:nth-of-type(4) {
@@ -150,6 +150,7 @@
 		display: block;
 
 		&__block {
+			// scss-lint:disable ImportantRule
 			margin: 0 auto 2rem !important;
 		}
 	}

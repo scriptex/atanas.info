@@ -1,5 +1,7 @@
+/* eslint-disable */
 import { select, style, text, on } from 'd3-selection';
 import { transition, duration, delay } from 'd3-transition';
+/* eslint-enable */
 
 let i = 0;
 

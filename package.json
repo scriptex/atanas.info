@@ -6,15 +6,11 @@
 		"build": "yarn localga && webpack --env.NODE_ENV=production",
 		"start": "yarn localga && webpack --watch --env.NODE_ENV=development",
 		"optisize": "optisize --src=\"./assets/images\"",
-		"critical": "critical index.php -c assets/dist/app.css -w 1280 -h 800 -e --ignore @font-face > assets/dist/critical.css",
+		"critical":
+			"critical https://atanas.info -w 1280 -h 800 -e --ignore @font-face > assets/dist/critical.css",
 		"localga": "localga --id UA-83446952-1 --folder ./assets/scripts"
 	},
-	"keywords": [
-		"MPA",
-		"webpack",
-		"setup",
-		"multi-page"
-	],
+	"keywords": ["MPA", "webpack", "setup", "multi-page"],
 	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
 	"repository": "https://github.com/scriptex/webpack-mpa",
 	"bugs": {
@@ -61,10 +57,7 @@
 		"webpack-spritesmith": "^0.4.1",
 		"yargs": "^11.0.0"
 	},
-	"browserslist": [
-		"> 1%",
-		"last 2 versions"
-	],
+	"browserslist": ["> 1%", "last 2 versions"],
 	"main": "assets/scripts/main.js",
 	"private": true
 }

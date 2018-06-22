@@ -2,8 +2,10 @@ import { hsl } from 'd3-color';
 import { range } from 'd3-array';
 import { dispatch } from 'd3-dispatch';
 import { easeQuadIn } from 'd3-ease';
+/* eslint-disable */
 import { transition, duration, ease } from 'd3-transition';
 import { select, append, attr, mouse, style, remove, on } from 'd3-selection';
+/* eslint-enable */
 
 let circleIndex = 0;
 
@@ -106,7 +108,7 @@ export const initCanvas = id => {
 };
 
 export const createDots = canvas => {
-	const circles = canvas
+	return canvas
 		.selectAll('circle')
 		.data(generateCircleData(30))
 		.enter()
@@ -114,6 +116,4 @@ export const createDots = canvas => {
 		.each(function(d, i) {
 			setCircleData(canvas, this, d, i);
 		});
-
-	return canvas;
 };

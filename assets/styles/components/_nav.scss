@@ -6,11 +6,11 @@
 	top: 100%;
 	right: 0;
 
-	&:before {
+	&::before {
+		@include centered;
 		content: '';
 		opacity: 0;
 		visibility: hidden;
-		@include centered;
 		z-index: 1;
 		pointer-events: none;
 		background-color: rgba($color-black, 0.9);
@@ -122,7 +122,7 @@
 
 	&__toggler:checked {
 		~ .c-nav {
-			&:before {
+			&::before {
 				opacity: 1;
 				visibility: visible;
 				position: fixed;

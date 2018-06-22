@@ -1,6 +1,6 @@
 @keyframes floatY {
 	0% {
-		transform: translateY(0rem);
+		transform: translateY(0);
 	}
 
 	50% {
@@ -8,13 +8,13 @@
 	}
 
 	100% {
-		transform: translateY(0rem);
+		transform: translateY(0);
 	}
 }
 
 @keyframes floatX {
 	0% {
-		transform: translateX(0rem);
+		transform: translateX(0);
 	}
 
 	50% {
@@ -22,13 +22,13 @@
 	}
 
 	100% {
-		transform: translateX(0rem);
+		transform: translateX(0);
 	}
 }
 
 @keyframes floatXY {
 	0% {
-		transform: translate(0rem, 0rem);
+		transform: translate(0, 0);
 	}
 
 	50% {
@@ -36,6 +36,6 @@
 	}
 
 	100% {
-		transform: translate(0rem, 0rem);
+		transform: translate(0, 0);
 	}
 }

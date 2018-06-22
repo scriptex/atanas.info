@@ -1,6 +1,7 @@
 import { drag } from 'd3-drag';
 import { range } from 'd3-array';
 import { randomUniform } from 'd3-random';
+/* eslint-disable */
 import {
 	select,
 	selectAll,
@@ -25,6 +26,7 @@ import {
 	forceManyBody,
 	forceSimulation
 } from 'd3-force';
+/* eslint-enable */
 
 import { createSVG } from './canvas';
 
@@ -142,7 +144,7 @@ export const createNodes = (svg, data, winWidth, callable) => {
 
 	nodes.each(function(d, i) {
 		const group = select(this.parentNode);
-		const { width, height } = d;
+		const { width } = d;
 
 		let mod = 1.75;
 
