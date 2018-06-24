@@ -6,11 +6,15 @@
 		"build": "yarn localga && webpack --env.NODE_ENV=production",
 		"start": "yarn localga && webpack --watch --env.NODE_ENV=development",
 		"optisize": "optisize --src=\"./assets/images\"",
-		"critical":
-			"critical https://atanas.info -w 1280 -h 800 -e --ignore @font-face > assets/dist/critical.css",
+		"critical": "critical https://atanas.info -w 1280 -h 800 -e --ignore @font-face > assets/dist/critical.css",
 		"localga": "localga --id UA-83446952-1 --folder ./assets/scripts"
 	},
-	"keywords": ["MPA", "webpack", "setup", "multi-page"],
+	"keywords": [
+		"MPA",
+		"webpack",
+		"setup",
+		"multi-page"
+	],
 	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
 	"repository": "https://github.com/scriptex/webpack-mpa",
 	"bugs": {
@@ -20,7 +24,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"@three11/animate-top-offset": "^0.3.0",
-		"d3": "^5.1.0",
+		"d3": "^5.5.0",
 		"normalize.css": "^8.0.0"
 	},
 	"devDependencies": {
@@ -28,7 +32,7 @@
 		"@babel/preset-env": "7.0.0-beta.51",
 		"@babel/preset-stage-2": "7.0.0-beta.51",
 		"@three11/optisize": "^0.5.0",
-		"autoprefixer": "^8.6.2",
+		"autoprefixer": "^8.6.3",
 		"babel-loader": "^8.0.0-beta.0",
 		"browser-sync": "^2.24.4",
 		"browser-sync-webpack-plugin": "^2.2.2",
@@ -52,12 +56,15 @@
 		"spritesh": "^1.2.1",
 		"style-loader": "^0.21.0",
 		"webpack": "^4.12.0",
-		"webpack-cli": "^3.0.4",
+		"webpack-cli": "^3.0.8",
 		"webpack-shell-plugin": "^0.5.0",
 		"webpack-spritesmith": "^0.4.1",
 		"yargs": "^11.0.0"
 	},
-	"browserslist": ["> 1%", "last 2 versions"],
+	"browserslist": [
+		"> 1%",
+		"last 2 versions"
+	],
 	"main": "assets/scripts/main.js",
 	"private": true
 }
