@@ -43,6 +43,7 @@ win.addEventListener('scroll', event => {
 if ('serviceWorker' in navigator) {
 	win.addEventListener('load', () => {
 		navigator.serviceWorker.register('./service-worker.js');
+		navigator.serviceWorker.register('./projects/service-worker.js');
 	});
 }
 
