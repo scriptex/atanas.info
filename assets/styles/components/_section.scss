@@ -78,7 +78,7 @@
 
 		line {
 			stroke: $color-white;
-			stroke-width: 0.13rem;
+			stroke-width: 0.1275rem;
 		}
 
 		image {
@@ -90,7 +90,7 @@
 
 		circle {
 			stroke: $color-white;
-			stroke-width: 1px;
+			stroke-width: 0.1275rem;
 			cursor: pointer;
 			transition: fill $timing $easing, stroke $timing $easing,
 				stroke-width $timing $easing;

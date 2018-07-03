@@ -194,5 +194,26 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#97daa8'
+	},
+	{
+		text: 'Redux',
+		icon: 'redux',
+		width: 30,
+		height: 30,
+		fill: '#222'
+	},
+	{
+		text: 'Redux Saga',
+		icon: 'redux-saga',
+		width: 30,
+		height: 30,
+		fill: '#9c3b2d'
+	},
+	{
+		text: 'BabylonJS',
+		icon: 'babylonjs',
+		width: 30,
+		height: 30,
+		fill: '#fff'
 	}
 ];
