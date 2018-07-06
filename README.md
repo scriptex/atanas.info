@@ -6,6 +6,8 @@
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/scriptex/atanas.info/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/scriptex/atanas.info/graphs/commit-activity)
 [![Greenkeeper badge](https://badges.greenkeeper.io/scriptex/atanas.info.svg)](https://greenkeeper.io/)
+[![devDependencies Status](https://david-dm.org/scriptex/atanas.info/dev-status.svg)](https://david-dm.org/scriptex/atanas.info?type=dev)
+[![dependencies Status](https://david-dm.org/scriptex/atanas.info/status.svg)](https://david-dm.org/scriptex/atanas.info)
 
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/scriptex/) 
 
