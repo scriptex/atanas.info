@@ -222,5 +222,12 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#fff'
+	},	
+	{
+		text: 'Typescript',
+		icon: 'typescript',
+		width: 30,
+		height: 30,
+		fill: '#007ACC'
 	}
 ];
