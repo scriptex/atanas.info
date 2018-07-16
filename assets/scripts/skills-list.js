@@ -215,5 +215,12 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#fff'
+	},	
+	{
+		text: 'Jest',
+		icon: 'jest',
+		width: 30,
+		height: 30,
+		fill: '#fff'
 	}
 ];
