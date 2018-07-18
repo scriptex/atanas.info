@@ -6,11 +6,15 @@
     "build": "yarn localga && webpack --env.NODE_ENV=production",
     "start": "yarn localga && webpack --watch --env.NODE_ENV=development",
     "optisize": "optisize --src=\"./assets/images\"",
-    "critical":
-      "critical https://atanas.info -w 1280 -h 800 -e --ignore @font-face > assets/dist/critical.css",
+    "critical": "critical https://atanas.info -w 1280 -h 800 -e --ignore @font-face > assets/dist/critical.css",
     "localga": "localga --id UA-83446952-1 --folder ./assets/scripts"
   },
-  "keywords": ["MPA", "webpack", "setup", "multi-page"],
+  "keywords": [
+    "MPA",
+    "webpack",
+    "setup",
+    "multi-page"
+  ],
   "author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
   "repository": "https://github.com/scriptex/webpack-mpa",
   "bugs": {
@@ -24,9 +28,9 @@
     "normalize.css": "^8.0.0"
   },
   "devDependencies": {
-    "@babel/core": "7.0.0-beta.53",
-    "@babel/preset-env": "7.0.0-beta.53",
-    "@babel/preset-stage-2": "7.0.0-beta.53",
+    "@babel/core": "7.0.0-beta.54",
+    "@babel/preset-env": "7.0.0-beta.54",
+    "@babel/preset-stage-2": "7.0.0-beta.54",
     "@three11/optisize": "^0.5.0",
     "autoprefixer": "^9.0.0",
     "babel-loader": "^8.0.0-beta.0",
@@ -35,29 +39,32 @@
     "clean-webpack-plugin": "^0.1.19",
     "critical": "^1.3.3",
     "css-loader": "^1.0.0",
-    "cssnano": "^4.0.0",
+    "cssnano": "^4.0.2",
     "extract-text-webpack-plugin": "^4.0.0-alpha.0",
     "file-loader": "^1.1.11",
     "localga": "^0.1.0",
     "node-sass": "^4.9.1",
-    "node-sass-magic-importer": "^5.1.2",
+    "node-sass-magic-importer": "^5.2.0",
     "postcss-easy-import": "^3.0.0",
     "postcss-flexbugs-fixes": "^3.3.1",
     "postcss-loader": "^2.1.5",
-    "postcss-merge-rules": "^4.0.0",
+    "postcss-merge-rules": "^4.0.1",
     "postcss-url": "^7.3.2",
     "postcss-utilities": "^0.8.0",
     "postcss-watch-folder": "^0.1.2",
     "sass-loader": "^7.0.3",
     "spritesh": "^1.2.1",
     "style-loader": "^0.21.0",
-    "webpack": "^4.15.1",
+    "webpack": "^4.16.1",
     "webpack-cli": "^3.0.8",
     "webpack-shell-plugin": "^0.5.0",
     "webpack-spritesmith": "^0.5.1",
     "yargs": "^12.0.1"
   },
-  "browserslist": ["> 1%", "last 2 versions"],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "main": "assets/scripts/main.js",
   "private": true
 }
