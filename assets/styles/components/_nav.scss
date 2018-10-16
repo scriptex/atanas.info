@@ -55,7 +55,7 @@
 			transform-origin: -100% -50%;
 
 			a {
-				animation: floatXY 5s infinite alternate;
+				animation: floatXY 8s infinite alternate;
 			}
 		}
 
@@ -64,7 +64,7 @@
 			transform-origin: -100% -50%;
 
 			a {
-				animation: floatXY 5s infinite alternate;
+				animation: floatXY 6s infinite alternate;
 			}
 		}
 
@@ -74,6 +74,15 @@
 
 			a {
 				animation: floatXY 5s infinite alternate;
+			}
+		}
+
+		&:nth-child(6) {
+			transform: translate(-50vw, 45vh) scale(0);
+			transform-origin: -100% -50%;
+
+			a {
+				animation: floatXY 9s infinite alternate;
 			}
 		}
 	}
@@ -94,6 +103,7 @@
 			top: 50%;
 			right: 0;
 			left: 0;
+			padding: 0 0.25rem;
 			transform: translateY(-50%);
 		}
 
@@ -150,7 +160,11 @@
 				}
 
 				&:nth-child(5) {
-					transform: translate(-37vw, 25vh) scale(1);
+					transform: translate(-35vw, 30vh) scale(1);
+				}
+
+				&:nth-child(6) {
+					transform: translate(-50vw, 45vh) scale(1);
 				}
 			}
 		}
@@ -161,15 +175,15 @@
 			~ .c-nav {
 				li {
 					&:first-child {
-						transform: translate(-45vw, 7vh) scale(1);
+						transform: translate(-45vw, 5vh) scale(1);
 					}
 
 					&:nth-child(2) {
-						transform: translate(-90vw, 25vh) scale(1);
+						transform: translate(-90vw, 22vh) scale(1);
 					}
 
 					&:nth-child(3) {
-						transform: translate(-60vw, 50vh) scale(1);
+						transform: translate(-60vw, 55vh) scale(1);
 					}
 
 					&:nth-child(4) {
@@ -178,6 +192,10 @@
 
 					&:nth-child(5) {
 						transform: translate(-82vw, 1vh) scale(1);
+					}
+
+					&:nth-child(6) {
+						transform: translate(-80vw, 39vh) scale(1);
 					}
 				}
 			}

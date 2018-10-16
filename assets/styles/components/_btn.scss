@@ -1,0 +1,25 @@
+// Button
+
+.c-btn {
+	font-size: 1rem;
+	line-height: 1.25;
+	color: $color-white;
+	font-weight: 400;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 1rem 3rem;
+	border: 1px solid $color-action;
+	background-color: $color-action;
+	border-radius: 0.25rem;
+	box-shadow: none;
+	appearance: none;
+
+	@include hover {
+		color: $color-action;
+		background-color: $color-white;
+	}
+}

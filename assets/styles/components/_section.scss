@@ -1,6 +1,11 @@
 // Section
 
 .c-section {
+	&__actions {
+		text-align: center;
+		padding-top: 1.5rem;
+	}
+
 	&--hello {
 		text-align: center;
 		height: 100vh;
@@ -168,6 +173,7 @@
 		label {
 			text-transform: uppercase;
 			display: block;
+			cursor: pointer;
 
 			@include hover {
 				color: $color-action;

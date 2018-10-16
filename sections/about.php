@@ -58,6 +58,12 @@
 
 				<p>I also like to contribute to open-source projects and i have created some myself. Feel free to contact me if you want to talk about your open-source projects or <strong><a href="https://github.com/scriptex" target="_blank" rel="noopener noreferrer nofollow">mine</a></strong>.</p>
 			</div><!-- /.c-article__block -->
+
+			<div class="c-article__actions">
+				<a href="mailto:hi@atanas.info" target="_blank" rel="noopener noreferrer" title="Hire Me" class="c-btn">
+					<span>Hire Me</span>
+				</a>
+			</div><!-- /.c-article__actions -->
 		</article><!-- /.c-article -->
 	</div><!-- /.o-shell -->
 </section><!-- /#about.c-section c-section-/-about fullsize-background -->

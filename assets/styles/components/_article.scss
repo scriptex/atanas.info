@@ -3,6 +3,12 @@
 .c-article {
 	@include flex-row(wrap, flex-start, space-between);
 
+	&__actions {
+		text-align: center;
+		flex: 0 0 100%;
+		padding-top: 3.5rem;
+	}
+
 	&__block {
 		flex: 0 0 30%;
 		position: relative;

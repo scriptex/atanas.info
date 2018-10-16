@@ -34,7 +34,7 @@ export const drawSkills = words => {
 	const all = words.length;
 	const width = window.innerWidth;
 	const height = window.innerHeight;
-	const svg = createSVG('skills', width, height);
+	const svg = createSVG('skills-graph', width, height);
 
 	const renderSkills = data => {
 		const simulation = createSimulation(width, height);
