@@ -68,7 +68,7 @@ const babelConfig = [
 				'@babel/plugin-syntax-import-meta',
 				['@babel/plugin-proposal-class-properties', { 'loose': false }],
 				'@babel/plugin-proposal-json-strings'
-			  ]
+			]
 		}
 	}
 ];
@@ -216,10 +216,10 @@ module.exports = env => {
 				'window.jQuery': 'jquery'
 			}),
 			new ExtractTextPlugin(extractTextConfig),
-			new CleanWebpackPlugin(['./assets/dist/'], cleanConfig),
 			new WebpackShellPlugin({
 				onBuildStart: shellScripts
-			})
+			}),
+			new CleanWebpackPlugin(['./assets/dist/*'], cleanConfig)
 		],
 		cache: true,
 		bail: false,
