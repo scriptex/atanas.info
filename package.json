@@ -3,11 +3,14 @@
   "version": "1.0.1",
   "description": "Atanas Atanasov's Personal Website",
   "scripts": {
+    "localga": "localga --id UA-83446952-1 --folder ./assets/scripts",
     "build": "yarn localga && webpack --env.NODE_ENV=production",
     "start": "yarn localga && webpack --watch --env.NODE_ENV=development",
     "optisize": "optisize --src=\"./assets/images\"",
-    "critical": "critical https://atanas.info -w 1280 -h 800 -e --ignore @font-face > assets/dist/critical.css",
-    "localga": "localga --id UA-83446952-1 --folder ./assets/scripts"
+    "html": "php index.php > index.html",
+    "rm-html": "rm index.html",
+    "critical": "critical index.html -w 1280 -h 800 -e --ignore @font-face > assets/dist/critical.css",
+    "prod": "yarn build && yarn html && yarn critical && yarn rm-html"
   },
   "keywords": [
     "MPA",
