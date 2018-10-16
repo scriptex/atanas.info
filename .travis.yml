@@ -5,5 +5,5 @@ node_js:
 install:
   - yarn
 script:
-  - yarn build
   - yarn optisize
+  - yarn prod
