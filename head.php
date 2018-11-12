@@ -3,8 +3,8 @@
 
 <title>Atanas Atanasov | Senior Web Developer</title>
 
-<meta name="description" content="Atanas Atanasov - Senior Web Developer -== Custom WordPress themes, Single Page Applications -- Vue.js, React, Laravel, State of the art Web Development ==-">
-<meta name="keywords" content="Web Development, WordPress Development, HTML Development, Website Development, JavaScript Development, WordPress, Laravel, WP, JS, JavaScript, Vue, Vue.js, VueJS, Nuxt, Single Page Apps, Single Page Application, CSS, CSS3, ES5, ES6, ES7, Website, Development">
+<meta name="description" content="Atanas Atanasov - Senior Web Developer -== Custom WordPress themes, Single Page Applications -- Vue.js, React, NodeJS, State of the art Web Development ==-">
+<meta name="keywords" content="React Development, NodeJS Devrlopment, TypeScript Development, Web Development, WordPress Development, HTML Development, Website Development, JavaScript Development, WordPress, WP, JS, JavaScript, Vue, Vue.js, VueJS, Nuxt, React, ReactJS, React JS, Node, NodeJS, Single Page Apps, Single Page Application, CSS, CSS3, ES5, ES6, ES7, Website, Development">
 <meta name="copyright" content="Atanas Atanasov">
 <meta name="language" content="EN">
 <meta name="robots" content="index,follow">
