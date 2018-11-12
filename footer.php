@@ -41,7 +41,7 @@
 	],
 ]; ?>
 
-<div class="c-footer">
+<footer class="c-footer">
 	<div class="o-shell o-shell--flex">
 		<p>&copy; <?php echo date( 'Y' ); ?> Atanas Atanasov. <br class="visible-xs-block">All rights reserved.</p>
 
@@ -59,4 +59,4 @@
 			</ul>
 		</nav><!-- /.c-socials -->
 	</div><!-- /.o-shell o-shell-/-flex -->
-</div><!-- /.c-footer -->
+</footer><!-- /.c-footer -->
