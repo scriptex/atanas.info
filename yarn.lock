@@ -2036,7 +2036,7 @@ cheerio@^0.20.0:
   optionalDependencies:
     jsdom "^7.0.2"
 
-chokidar@^2.0.2, chokidar@^2.0.3, chokidar@^2.0.4:
+chokidar@2.0.4, chokidar@^2.0.2, chokidar@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.0.4.tgz#356ff4e2b0e8e43e322d18a372460bbcf3accd26"
   dependencies:
@@ -7612,14 +7612,22 @@ postcss-value-parser@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-3.3.1.tgz#9ff822547e2893213cf1c30efa51ac5fd1ba8281"
 
-postcss-watch-folder@0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/postcss-watch-folder/-/postcss-watch-folder-0.1.2.tgz#24fc9fb8d1f31ae6cfef4b34013728bd9c0adfaf"
+postcss-watch-folder@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-watch-folder/-/postcss-watch-folder-1.0.0.tgz#f992100c80660e2fd5fc4d90068b9f55baab2ae3"
   dependencies:
-    chokidar "^2.0.3"
-    postcss "^6.0.22"
+    chokidar "2.0.4"
+    postcss "7.0.7"
 
-postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.11, postcss@^6.0.14, postcss@^6.0.16, postcss@^6.0.22:
+postcss@7.0.7:
+  version "7.0.7"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.7.tgz#2754d073f77acb4ef08f1235c36c5721a7201614"
+  dependencies:
+    chalk "^2.4.1"
+    source-map "^0.6.1"
+    supports-color "^5.5.0"
+
+postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.11, postcss@^6.0.14, postcss@^6.0.16:
   version "6.0.23"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
   dependencies:
