@@ -10,11 +10,6 @@
 		'title' => 'Find me on LinkedIn',
 	],
 	[
-		'url'   => 'https://plus.google.com/+AtanasAtanasov',
-		'icon'  => 'google-plus',
-		'title' => 'Find me on Google Plus',
-	],
-	[
 		'url'   => 'https://github.com/scriptex',
 		'icon'  => 'github',
 		'title' => 'See my projects on Github',
