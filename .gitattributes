@@ -189,3 +189,6 @@ Procfile    text
 ## EXECUTABLES
 *.exe binary
 *.pyc binary
+
+## Github Linguist Overrides
+*.php linguist-language=PHP
