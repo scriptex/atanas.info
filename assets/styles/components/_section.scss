@@ -213,6 +213,15 @@
 					transform: translateY(0%);
 					transition: all $timing $easing;
 				}
+
+				@include mobile {
+					display: block;
+
+					a {
+						width: 100%;
+						padding-bottom: 70%;
+					}
+				}
 			}
 		}
 	}
