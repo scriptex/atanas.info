@@ -6,9 +6,9 @@
 			<img src="assets/images/temp/atanas.jpg" alt="Atanas Atanasov" class="c-article__block">
 
 			<div class="c-article__block">
-				<p>My name is Atanas and I am a Senior Web Developer.</p>
+				<p>My name is Atanas and I am a Senior JavaScript/TypeScript Developer.</p>
 
-				<p>I am currently located in Varna, Bulgaria.</p>
+				<p>I am currently located in Varna, Bulgaria. That's on the south-east side of Europe, on the Black Sea.</p>
 
 				<p>Many friends refer to me as "uncle" because I was born in the previous millennium but I am actually not that old. <br>Being born in the 1980s has its pros and cons.</p>
 
@@ -20,43 +20,47 @@
 
 				<p>I started doing this in 2010 as an apprentice to a hardcore freelancer and pretty fast learned the basics of HTML and CSS.</p>
 
-				<p>Between 2012 and 2018 i was full-time employed in one of the best companies in my city 2create and worked for some of the best PSDtoHTML brands out there.</p>
+				<p>We even had our own small coding "company" - <a href="http://html-lab.com/" target="_blank" rel="noopener noreferrer">HTML Lab</a>. In this company I participated as a frontend developer and was mainly focused on slicing design files and turning them into static HTML pages.</p>
+			</div><!-- /.c-article__block -->
+
+			<div class="c-article__block">
+				<h3>It went serious:</h3>
+
+				<p>Between 2012 and 2018 I was full-time employed in one of the larges companies in Varna - 2create. In this company I worked for some of the biggest PSD to HTML brands out there - htmlBurger and htmlBoutique. I worked on thousands (yes thousands) of different projects for clients from all over the globe and was focused on the frontend part of all projects.</p>
 			</div><!-- /.c-article__block -->
 
 			<div class="c-article__block">
 				<h3>I've grown up.</h3>
 
-				<p>I started as a front-end developer and my daily tasks included HTML and CSS coding.</p>
+				<p>In 2create I worked as a frontend developer and my daily tasks included slicing of design files (mainly PhotoShop, but also on Sketch, Figma, Adobe XD, etc.) and converting them into a pixel-perfect HTML and CSS pages.</p>
 
-				<p>As months went by, i started using pre- and post-processors in CSS and slowly mastered LESS, SASS and POSTCSS which opened the way for learning how to use task runners such as Grunt, Gulp and Webpack.</p>
+				<p>As months went by, I started using pre- and post-processors in CSS and slowly mastered LESS, SASS and POSTCSS which opened the way for learning how to use task runners such as Grunt, Gulp and Webpack.</p>
 			</div><!-- /.c-article__block -->
 
 			<div class="c-article__block">
-				<p>Along CSS i learned JavaScript and it became my preferred language. <br>I love it and it appears it shares the feelings.</p>
+				<h3>Enter JavaScript!</h3>
 
-				<p>Since the beginning of 2018 i am employed in a start-up company located in Varna and operating internationally.</p>
-			</div><!-- /.c-article__block -->
+				<p>Along CSS and all build tools, I've learned and mastered JavaScript and it became my preferred language. <br>I love it and it appears it shares the feelings.</p>
 
-			<div class="c-article__block">
-				<h3>The best day ever</h3>
+				<p>Since the beginning of 2018 and until early 2019 I worked as a Senior JavaScript developer in a small startup located in Varna and operating internationally.</p>
 
-				<p>In the late 2015 a magical thing happened that transformed my entire life and gave it a new purpose: <br>My beloved wife gave birth to our first child - Stefan. <br>Our lives have new meaning now. <br>This is the best thing that can happen to a man!</p>
+				<p>In Three 11 we were focused on providing the best possible quality while using bleeding edge technologies. We worked on several in-house projects along with some interesting client websites and applications.</p>
 			</div><!-- /.c-article__block -->
 
 			<div class="c-article__block">
 				<h2>Today</h2>
 
-				<p>Now I am a web developer in a young and progressive web-development agency called <a href="https://three-11.com" target="_blank" rel="noopener noreferrer nofollow">Three11</a>. I am now focused on the front-end but working with back-end technologies as well. <br>My daily tasks include coding HTML, CSS, JavaScript, PHP, Bash...</p>
+				<p>Now I am a JavaScript and TypeScript developer with more than 8 years of professional experience. I am focused on the frontend but using a lot of back-end technologies as well. <br>My daily tasks include coding HTML, CSS, JavaScript, TypeScript, PHP, Bash...</p>
 
-				<p>I am currently focused on creating, implementing and maintaining custom WordPress themes and single-page JavaScript applications using ReactJS or VueJS but I am always open for new interesting and challenging tasks and projects.</p>
+				<p>The latest project I worked on is a large international IoT application for one of the world's largest investor-owned electric utility service providers which aims to provide users from all over Europe with the ability to control their homes' smart appliances and energy consumption.</p>
 			</div><!-- /.c-article__block -->
 
 			<div class="c-article__block">
 				<h2>Connect with me</h2>
 
-				<p>I am open for hire to work on your awesome idea. If you think i can help you, do not hesitate and <strong><a href="mailto:hi@atanas.info" target="_blank" rel="noopener noreferrer nofollow">drop me a line</a></strong>.</p>
+				<p>I am open for hire to work on your awesome idea. If you think I can help you, do not hesitate and <strong><a href="mailto:hi@atanas.info" target="_blank" rel="noopener noreferrer nofollow">drop me a line</a></strong>.</p>
 
-				<p>I also like to contribute to open-source projects and i have created some myself. Feel free to contact me if you want to talk about your open-source projects or <strong><a href="https://github.com/scriptex" target="_blank" rel="noopener noreferrer nofollow">mine</a></strong>.</p>
+				<p>I also like to contribute to open-source projects and I have created some myself. Feel free to contact me if you want to talk about your open-source projects or <strong><a href="https://github.com/scriptex" target="_blank" rel="noopener noreferrer nofollow">mine</a></strong>.</p>
 			</div><!-- /.c-article__block -->
 
 			<div class="c-article__actions">
