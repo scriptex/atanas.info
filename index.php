@@ -36,6 +36,8 @@ function autoversion($url) {
 
 			<?php include_once('sections/skills.php'); ?>
 
+			<?php include_once('sections/portfolio.php'); ?>
+
 			<?php include_once('sections/slides.php'); ?>
 		</div><!-- /.o-main -->
 
