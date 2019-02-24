@@ -97,8 +97,7 @@
 			stroke: $color-white;
 			stroke-width: 0.1275rem;
 			cursor: pointer;
-			transition: fill $timing $easing, stroke $timing $easing,
-				stroke-width $timing $easing;
+			transition: fill $timing $easing, stroke $timing $easing, stroke-width $timing $easing;
 
 			&:hover {
 				fill: $color-action;
@@ -137,21 +136,84 @@
 	}
 
 	&--portfolio {
-		color: $color-black;
+		color: $color-white;
+		text-align: center;
 		position: relative;
 		z-index: 2;
-		background-color: rgba($color-black, 0.5);
-
-		.o-shell {
-			height: 64rem;
-			@include flex-row(wrap, center, center);
-			align-content: center;
-		}
+		padding: 4rem 0 3.25rem;
+		background-color: rgba($color-white, 0.7);
 
 		h1,
 		h2 {
 			text-align: center;
 			flex: 0 0 100%;
+		}
+
+		h1 {
+			margin-bottom: 2rem;
+		}
+
+		.c-section {
+			&__body {
+				@include flex-row(wrap, stretch, space-between);
+
+				a {
+					font-size: 1.25rem;
+					line-height: 1.25;
+					color: $color-white;
+					text-decoration: none;
+					width: calc(50% - 1rem);
+					height: 1px;
+					display: block;
+					flex: 0 0 calc(50% - 1rem);
+					position: relative;
+					padding-bottom: 32%;
+					margin-bottom: 2rem;
+					background-repeat: no-repeat;
+					background-position: 50% 0%;
+					background-size: 100% auto;
+					transition: all $timing $easing;
+
+					&.disabled {
+						cursor: default;
+					}
+
+					&::before {
+						content: '';
+						@include centered;
+						opacity: 0;
+						background-color: rgba($color-black, 0.8);
+						transition: opacity $timing $easing;
+					}
+
+					@include hover {
+						box-shadow: 0 0 4.75rem rgba($color-white, 0.4);
+						background-size: 110% auto;
+
+						&::before {
+							opacity: 1;
+						}
+
+						strong {
+							opacity: 1;
+							transform: translateY(-50%);
+						}
+					}
+				}
+
+				strong {
+					text-transform: uppercase;
+					display: block;
+					opacity: 0;
+					position: absolute;
+					top: 50%;
+					right: 0;
+					left: 0;
+					padding: 1rem;
+					transform: translateY(0%);
+					transition: all $timing $easing;
+				}
+			}
 		}
 	}
 
@@ -168,15 +230,23 @@
 
 		li {
 			padding: 0 1rem;
-		}
 
-		label {
-			text-transform: uppercase;
-			display: block;
-			cursor: pointer;
+			a {
+				text-transform: uppercase;
+				text-decoration: none;
+				color: $color-black;
+				display: block;
+				cursor: pointer;
 
-			@include hover {
-				color: $color-action;
+				@include hover {
+					color: $color-action;
+				}
+			}
+
+			&.current {
+				a {
+					color: $color-action;
+				}
 			}
 		}
 
@@ -190,15 +260,13 @@
 			border: 0;
 		}
 
-		input:checked {
-			+ .c-section__frame {
-				display: block;
-			}
-		}
-
 		.c-section {
 			&__nav {
 				padding-bottom: 2rem;
+			}
+
+			&__body {
+				padding-bottom: 0.75rem;
 			}
 
 			&__frame {
@@ -206,6 +274,10 @@
 				display: none;
 				position: relative;
 				padding-bottom: 62.5%;
+
+				&.current {
+					display: block;
+				}
 			}
 		}
 	}
