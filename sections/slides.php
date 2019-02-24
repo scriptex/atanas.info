@@ -4,27 +4,23 @@
 			<h2>Slides</h2>
 
 			<ul>
-				<li>
-					<label for="toggle-slides-1">Do more with Sublime Text</label>
+				<li class="current">
+					<a href="#ecmascript-features" class="js-tab-toggle">EcmaScript Features</a>
 				</li>
 
 				<li>
-					<label for="toggle-slides-2">EcmaScript Features</label>
+					<a href="#do-more-with-sublime-text" class="js-tab-toggle">Do more with Sublime Text</a>
 				</li>
 			</ul>
 		</nav><!-- /.c-section__nav -->
 
 		<div class="c-section__body">
-			<input type="radio" name="toggle-slides" id="toggle-slides-1" class="hidden" checked />
-
-			<div class="c-section__frame">
-				<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTivcVmPyjYPdWgoJMChe_rrVyZEIw4ZgF37lCOlxUUm7DchxhMJouEV_BcrH6LDL8kiNmRSIWkiSxK/embed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="Presentation about improving workflow using Sublime Text editor"></iframe>
+			<div class="c-section__frame current" id="ecmascript-features">
+				<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSA8qN0_3lb0YWDYJheJ3q0AAsXWlLLpP86pnmV0KWfPo_2G-SSdSK--GVRyJbwT8_kWyJ0TZxFoaH8/embed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="Presentation about the EcmaScript language history and features"></iframe>
 			</div><!-- /.c-section__frame -->
 
-			<input type="radio" name="toggle-slides" id="toggle-slides-2" class="hidden" />
-
-			<div class="c-section__frame">
-				<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSA8qN0_3lb0YWDYJheJ3q0AAsXWlLLpP86pnmV0KWfPo_2G-SSdSK--GVRyJbwT8_kWyJ0TZxFoaH8/embed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="Presentation about the EcmaScript language history and features"></iframe>
+			<div class="c-section__frame" id="do-more-with-sublime-text">
+				<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTivcVmPyjYPdWgoJMChe_rrVyZEIw4ZgF37lCOlxUUm7DchxhMJouEV_BcrH6LDL8kiNmRSIWkiSxK/embed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="Presentation about improving workflow using Sublime Text editor"></iframe>
 			</div><!-- /.c-section__frame -->
 		</div><!-- /.c-section__body -->
 

@@ -11,6 +11,7 @@ const win = window;
 const canvas = initCanvas('canvas');
 const header = doc.querySelector('.c-header');
 const navToggler = doc.getElementById('nav_toggle');
+const tabToggles = doc.querySelectorAll('.js-tab-toggle');
 const internalLinks = [...doc.querySelectorAll('.js-internal-link')];
 const toggleHeaderState = winO => {
 	header.classList.toggle('c-header--with-background', winO > 0);
@@ -29,6 +30,27 @@ internalLinks.forEach(link => {
 
 		animateTopOffset(offset - header.clientHeight);
 		navToggler.checked = false;
+	});
+});
+
+tabToggles.forEach(toggle => {
+	toggle.addEventListener('click', event => {
+		event.preventDefault();
+
+		const li = toggle.parentNode;
+
+		if (li.classList.contains('current')) {
+			return;
+		}
+
+		const id = toggle.getAttribute('href');
+		const tab = doc.querySelector(id);
+
+		li.parentNode.querySelector('.current').classList.remove('current');
+		tab.parentNode.querySelector('.current').classList.remove('current');
+
+		li.classList.add('current');
+		tab.classList.add('current');
 	});
 });
 
