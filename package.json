@@ -9,7 +9,7 @@
 		"optisize": "optisize --src=\"./assets/images\"",
 		"html": "php index.php > index.html",
 		"rm-html": "rm index.html",
-		"critical": "critical index.html -w 1280 -h 800 -e --ignore @font-face --inline > assets/dist/critical.css",
+		"critical": "critical index.html -w 1280 -h 800 --ignore @font-face > assets/dist/critical.css",
 		"prod": "yarn build && yarn html && yarn critical && yarn rm-html"
 	},
 	"keywords": [
