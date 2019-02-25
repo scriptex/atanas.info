@@ -3,7 +3,7 @@ export const texts = [
 	'a CSS experimenter',
 	'an UX advocate',
 	'a JavaScript master',
-	'a gather',
+	'a father',
 	'a NodeJS enthusiast',
 	'a frontend lead',
 	'a TypeScript lover',
