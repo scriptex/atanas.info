@@ -49,8 +49,20 @@
 				</li>
 
 				<li>
-					<a href="https://at-the-wall.now.sh/" title="At the Wall - A Game of Thrones scene">
+					<a href="https://at-the-wall.now.sh/" title="At the Wall - A Game of Thrones scene" target="_blank" rel="noopener noreferrer">
 						<span>At the Wall</span>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://scriptex.js.org/2048/" title="Join the numbers and get to the 2048 tile!" target="_blank" rel="noopener noreferrer">
+						<span>2048</span>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://material-tetris.now.sh/" title="Material Tetris. Play here!" target="_blank" rel="noopener noreferrer">
+						<span>Material Tetris</span>
 					</a>
 				</li>
 			</ul>
