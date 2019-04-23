@@ -8,8 +8,7 @@ select,
 textarea,
 .c-btn,
 [class^='svg-'] {
-	transition-property: color, opacity, border-color, background-color,
-		box-shadow, fill, stroke;
+	transition-property: color, opacity, border-color, background-color, box-shadow, fill, stroke;
 	transition-duration: $timing;
 	transition-timing-function: $easing;
 }

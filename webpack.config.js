@@ -58,7 +58,7 @@ const babelConfig = [
 			presets: ['@babel/env'],
 			plugins: [
 				// Stage 2
-				['@babel/plugin-proposal-decorators', { 'legacy': true }],
+				['@babel/plugin-proposal-decorators', { legacy: true }],
 				'@babel/plugin-proposal-function-sent',
 				'@babel/plugin-proposal-export-namespace-from',
 				'@babel/plugin-proposal-numeric-separator',
@@ -66,7 +66,7 @@ const babelConfig = [
 				// Stage 3
 				'@babel/plugin-syntax-dynamic-import',
 				'@babel/plugin-syntax-import-meta',
-				['@babel/plugin-proposal-class-properties', { 'loose': false }],
+				['@babel/plugin-proposal-class-properties', { loose: false }],
 				'@babel/plugin-proposal-json-strings'
 			]
 		}
@@ -77,12 +77,7 @@ const browserSyncConfig = {
 	host: 'localhost',
 	port: 3000,
 	open: 'external',
-	files: [
-		'**/*.php',
-		'**/*.html',
-		'./assets/dist/app.css',
-		'./assets/dist/app.js'
-	],
+	files: ['**/*.php', '**/*.html', './assets/dist/app.css', './assets/dist/app.js'],
 	ghostMode: {
 		clicks: false,
 		scroll: true,
@@ -112,17 +107,11 @@ const cleanConfig = {
 };
 
 const shellScripts = [];
-const svgs = fs
-	.readdirSync('./assets/images/svg')
-	.filter(svg => svg[0] !== '.');
+const svgs = fs.readdirSync('./assets/images/svg').filter(svg => svg[0] !== '.');
 
 if (svgs.length) {
-	shellScripts.push(
-		'svgo -f assets/images/svg --config=' + JSON.stringify(svgoConfig)
-	);
-	shellScripts.push(
-		'spritesh -q -i assets/images/svg -o ./assets/dist/sprite.svg -p svg-'
-	);
+	shellScripts.push('svgo -f assets/images/svg --config=' + JSON.stringify(svgoConfig));
+	shellScripts.push('spritesh -q -i assets/images/svg -o ./assets/dist/sprite.svg -p svg-');
 }
 
 module.exports = env => {
@@ -157,11 +146,7 @@ module.exports = env => {
 			filename: 'dist/app.js'
 		},
 		resolve: {
-			modules: [
-				'node_modules',
-				'./assets/scripts',
-				'./assets/images/sprite'
-			]
+			modules: ['node_modules', './assets/scripts', './assets/images/sprite']
 		},
 		module: {
 			rules: [

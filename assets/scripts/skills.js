@@ -2,16 +2,7 @@ import { drag } from 'd3-drag';
 import { range } from 'd3-array';
 import { randomUniform } from 'd3-random';
 /* eslint-disable */
-import {
-	select,
-	selectAll,
-	style,
-	text,
-	on,
-	attr,
-	event,
-	data
-} from 'd3-selection';
+import { select, selectAll, style, text, on, attr, event, data } from 'd3-selection';
 import {
 	nodes,
 	links,
@@ -39,12 +30,7 @@ export const drawSkills = words => {
 	const renderSkills = data => {
 		const simulation = createSimulation(width, height);
 		const links = createLinks(svg, data.links);
-		const nodes = createNodes(
-			svg,
-			data.nodes,
-			width,
-			dragHandler(simulation)
-		);
+		const nodes = createNodes(svg, data.nodes, width, dragHandler(simulation));
 
 		simulation.nodes(data.nodes).on('tick', () => {
 			links
