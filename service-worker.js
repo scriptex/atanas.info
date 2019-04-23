@@ -1,4 +1,4 @@
-const CACHE_NAME = 'atanas.info-cache';
+const CACHE_NAME = `atanas.info-cache-${new Date().getTime()}`;
 const urlsToCache = [
 	'/index.php',
 	'/assets/dist/app.css',
@@ -49,9 +49,7 @@ const urlsToCache = [
 self.addEventListener('install', event => {
 	self.skipWaiting();
 
-	event.waitUntil(
-		caches.open(CACHE_NAME).then(cache => cache.addAll(urlsToCache))
-	);
+	event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(urlsToCache)));
 });
 
 self.addEventListener('fetch', event => {
@@ -64,11 +62,7 @@ self.addEventListener('fetch', event => {
 			const fetchRequest = event.request.clone();
 
 			return fetch(fetchRequest).then(response => {
-				if (
-					!response ||
-					response.status !== 200 ||
-					response.type !== 'basic'
-				) {
+				if (!response || response.status !== 200 || response.type !== 'basic') {
 					return response;
 				}
 
@@ -93,9 +87,7 @@ self.addEventListener('activate', event => {
 			.keys()
 			.then(cacheNames =>
 				Promise.all(
-					cacheNames
-						.filter(cacheName => cacheName !== CACHE_NAME)
-						.map(cacheName => caches.delete(cacheName))
+					cacheNames.filter(cacheName => cacheName !== CACHE_NAME).map(cacheName => caches.delete(cacheName))
 				)
 			)
 	);
