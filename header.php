@@ -31,14 +31,8 @@
 				</li>
 
 				<li>
-					<a href="projects/" title="My open source projects">
-						<span>Open Source</span>
-					</a>
-				</li>
-
-				<li>
-					<a href="mailto:hi@atanas.info" target="_blank" rel="noopener noreferrer" title="Send me an email">
-						<span>Hire Me</span>
+					<a href="#portfolio" class="js-internal-link" title="My portfolio">
+						<span>Portfolio</span>
 					</a>
 				</li>
 
@@ -63,6 +57,12 @@
 				<li>
 					<a href="https://material-tetris.now.sh/" title="Material Tetris. Play here!" target="_blank" rel="noopener noreferrer">
 						<span>Material Tetris</span>
+					</a>
+				</li>
+
+				<li>
+					<a href="projects/" title="My open source projects">
+						<span>Open Source</span>
 					</a>
 				</li>
 			</ul>
