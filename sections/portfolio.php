@@ -21,7 +21,7 @@
 
 			<a class="disabled" style="background-image: url(assets/images/temp/faraon-bg.png);">
 				<div>
-					<strong>Faraon</strong>
+					<strong>Faraon (Фараон)</strong>
 
 					<span><small>Technologies:</small> HTML5, CSS3, jQuery, PHP</span>
 				</div>
@@ -37,7 +37,7 @@
 
 			<a href="https://www.sod.bg/" target="_blank" rel="noopener noreferrer" style="background-image: url(assets/images/temp/sod-bg.png);">
 				<div>
-					<strong>SOD 64</strong>
+					<strong>SOD 64 (СОД 64)</strong>
 
 					<span><small>Technologies:</small> HTML5, CSS3, jQuery, PHP</span>
 				</div>
