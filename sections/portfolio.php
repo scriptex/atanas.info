@@ -4,31 +4,59 @@
 
 		<div class="c-section__body">
 			<a href="https://ateliercoolinar.bg/" target="_blank" rel="noopener noreferrer" style="background-image: url(assets/images/temp/atelier-coolinar.png);">
-				<strong>Atelier Coolinar (Ателие Кулинар)</strong>
+				<div>
+					<strong>Atelier Coolinar (Ателие Кулинар)</strong>
+
+					<span><small>Technologies:</small> HTML5, CSS3, ES2018, WordPress</span>
+				</div>
 			</a>
 
 			<a href="http://emailio.com/" target="_blank" rel="noopener noreferrer" style="background-image: url(assets/images/temp/emailio.png);">
-				<strong>Emailio Web Application</strong>
+				<div>
+					<strong>Emailio Web Application</strong>
+
+					<span><small>Technologies:</small> React, Redux, Redux Saga</span>
+				</div>
 			</a>
 
 			<a class="disabled" style="background-image: url(assets/images/temp/faraon-bg.png);">
-				<strong>Faraon</strong>
+				<div>
+					<strong>Faraon</strong>
+
+					<span><small>Technologies:</small> HTML5, CSS3, jQuery, PHP</span>
+				</div>
 			</a>
 
 			<a href="https://www.nulla.tv/" target="_blank" rel="noopener noreferrer" style="background-image: url(assets/images/temp/nulla-tv.png);">
-				<strong>Nulla TV</strong>
+				<div>
+					<strong>Nulla TV</strong>
+
+					<span><small>Technologies:</small> HTML5, CSS3, ES2018, WordPress</span>
+				</div>
 			</a>
 
 			<a href="https://www.sod.bg/" target="_blank" rel="noopener noreferrer" style="background-image: url(assets/images/temp/sod-bg.png);">
-				<strong>SOD 64</strong>
+				<div>
+					<strong>SOD 64</strong>
+
+					<span><small>Technologies:</small> HTML5, CSS3, jQuery, PHP</span>
+				</div>
 			</a>
 
 			<a href="https://three-11.com/" target="_blank" rel="noopener noreferrer" style="background-image: url(assets/images/temp/three-11.png);">
-				<strong>Three 11</strong>
+				<div>
+					<strong>Three 11</strong>
+
+					<span><small>Technologies:</small> HTML5, CSS3, SVG, ES2018, D3</span>
+				</div>
 			</a>
 
 			<a href="https://www.x-form.net/" target="_blank" rel="noopener noreferrer" style="background-image: url(assets/images/temp/x-form.png);">
-				<strong>X Form</strong>
+				<div>
+					<strong>X Form</strong>
+
+					<span><small>Technologies:</small> HTML5, CSS3, ES2018, WordPress</span>
+				</div>
 			</a>
 		</div><!-- /.c-section__body -->
 
