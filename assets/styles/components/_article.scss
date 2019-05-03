@@ -1,7 +1,8 @@
 // Article
+// scss-lint:disable ImportantRule
 
 .c-article {
-	@include flex-row(wrap, flex-start, space-between);
+	@include flex-row(wrap, flex-start, flex-start);
 
 	&__actions {
 		text-align: center;
@@ -16,12 +17,11 @@
 
 		&:nth-of-type(1) {
 			flex: 0 0 55%;
-			margin-right: 8rem;
+			margin-right: 3rem;
 		}
 
 		&:nth-of-type(2) {
-			margin-top: 8rem;
-			margin-left: 18rem;
+			margin: 8rem 3rem 2rem 18rem;
 		}
 
 		&:nth-of-type(3) {
@@ -29,63 +29,20 @@
 		}
 
 		&:nth-of-type(4) {
-			margin-top: 4rem;
-			margin-left: 19rem;
+			margin: 4rem 3rem 2rem 18rem;
 		}
 
 		&:nth-of-type(5) {
 			margin-top: 2rem;
-			left: -4rem;
 		}
 
 		&:nth-of-type(6) {
 			flex: 0 0 60%;
 			margin-top: 2rem;
-			margin-left: 25rem;
-		}
-
-		&:nth-of-type(7) {
-			flex: 0 0 50%;
-			margin-top: 3rem;
 			margin-left: 18rem;
 		}
 
 		@include tablet-landscape {
-			&:nth-of-type(1) {
-				flex: 0 0 50vw;
-				margin: 0 10vw 3vw 0;
-			}
-
-			&:nth-of-type(2) {
-				flex: 0 0 50vw;
-				margin: 0 0 4vw 45vw;
-			}
-
-			&:nth-of-type(3) {
-				flex: 0 0 40vw;
-				margin: 0 0 4vw 27vw;
-			}
-
-			&:nth-of-type(4) {
-				flex: 0 0 45vw;
-				margin: 0 0 3vw 50vw;
-			}
-
-			&:nth-of-type(5) {
-				flex: 0 0 65vw;
-				left: auto;
-				margin: 0 0 3vw 27vw;
-			}
-
-			&:nth-of-type(6) {
-				flex: 0 0 50vw;
-				margin: 0 5vw 5vw 40vw;
-			}
-
-			&:nth-of-type(7) {
-				flex: 0 0 50vw;
-				margin: 0 0 0 29vw;
-			}
 		}
 	}
 
@@ -114,40 +71,16 @@
 		}
 
 		&__block {
+			flex: 0 0 100% !important;
+			margin: 0 0 3rem !important;
+
 			&:nth-of-type(1) {
-				flex: 0 0 55vw;
-				margin: 0 0 3vw;
-			}
-
-			&:nth-of-type(2) {
-				flex: 0 0 80vw;
-				margin: 0 0 4vw 5vw;
-			}
-
-			&:nth-of-type(3) {
-				flex: 0 0 75vw;
-				margin: 0 0 4vw;
-			}
-
-			&:nth-of-type(4) {
-				flex: 0 0 75vw;
-				margin: 0 0 3vw 15vw;
-			}
-
-			&:nth-of-type(5) {
-				flex: 0 0 65vw;
-				left: auto;
-				margin: 0 0 3vw 3vw;
+				flex: 0 0 55vw !important;
+				margin-left: 3vw !important;
 			}
 
 			&:nth-of-type(6) {
-				flex: 0 0 70vw;
-				margin: 0 5vw 5vw 20vw;
-			}
-
-			&:nth-of-type(7) {
-				flex: 0 0 50vw;
-				margin: 0 0 0 23vw;
+				margin-bottom: 0 !important;
 			}
 		}
 	}
@@ -155,9 +88,17 @@
 	@include mobile {
 		display: block;
 
+		h2,
+		h3 {
+			text-align: center;
+		}
+
 		&__block {
-			// scss-lint:disable ImportantRule
 			margin: 0 auto 2rem !important;
+
+			&:nth-of-type(1) {
+				margin: 0 auto 2rem !important;
+			}
 		}
 	}
 }
