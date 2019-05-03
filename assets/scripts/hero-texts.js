@@ -1,12 +1,11 @@
 export const texts = [
 	'a senior web developer',
-	'a CSS experimenter',
-	'an UX advocate',
 	'a JavaScript master',
-	'a father',
+	'a CSS wizard',
+	'a TypeScript engineer',
 	'a NodeJS enthusiast',
-	'a frontend lead',
-	'a TypeScript lover',
-	'an UI polisher',
+	'a front-end lead',
+	'a UI builder',
+	'a father',
 	'a husband'
 ];
