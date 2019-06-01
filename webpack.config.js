@@ -1,9 +1,9 @@
 const fs = require('fs');
 const url = require('url');
 const path = require('path');
-const glob = require('glob');
 const { argv } = require('yargs');
 
+const MinifyPlugin = require('babel-minify-webpack-plugin');
 const magicImporter = require('node-sass-magic-importer');
 const { ProvidePlugin } = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -11,8 +11,12 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const WebpackShellPlugin = require('webpack-shell-plugin');
 
+const DEV_URL = argv.URL;
+const isModern = argv.IS_MODERN;
+const isProduction = argv.NODE_ENV === 'production';
+
 const sourceMap = {
-	sourceMap: argv.env.NODE_ENV === 'development'
+	sourceMap: !isProduction
 };
 
 const svgoConfig = {
@@ -49,13 +53,27 @@ const postcssConfig = {
 	...sourceMap
 };
 
-const babelConfig = [
+const babelConfig = isModern => [
 	{
 		loader: 'babel-loader',
 		options: {
 			cacheDirectory: true,
 			comments: false,
-			presets: ['@babel/env'],
+			presets: [
+				[
+					'@babel/env',
+					{
+						corejs: 3,
+						modules: false,
+						useBuiltIns: 'entry',
+						targets: {
+							browsers: isModern
+								? ['Chrome >= 60', 'Safari >= 10.1', 'iOS >= 10.3', 'Firefox >= 54', 'Edge >= 15']
+								: ['> 1%', 'last 2 versions', 'Firefox ESR']
+						}
+					}
+				]
+			],
 			plugins: [
 				// Stage 2
 				['@babel/plugin-proposal-decorators', { legacy: true }],
@@ -115,9 +133,6 @@ if (svgs.length) {
 }
 
 module.exports = env => {
-	const isDevelopment = env.NODE_ENV === 'development';
-	const isProduction = env.NODE_ENV === 'production';
-
 	if (isProduction) {
 		postcssConfig.plugins.push(
 			require('postcss-merge-rules'),
@@ -129,7 +144,7 @@ module.exports = env => {
 		);
 	}
 
-	if (isDevelopment) {
+	if (!isProduction) {
 		postcssConfig.plugins.push(
 			require('postcss-watch-folder')({
 				folder: './assets/styles',
@@ -139,11 +154,11 @@ module.exports = env => {
 	}
 
 	const config = {
-		mode: env.NODE_ENV,
+		mode: argv.NODE_ENV,
 		entry: ['./assets/styles/main.scss', './assets/scripts/main.js'],
 		output: {
 			path: path.resolve(__dirname, './assets'),
-			filename: 'dist/app.js'
+			filename: isModern ? 'dist/app.m.js' : 'dist/app.js'
 		},
 		resolve: {
 			modules: ['node_modules', './assets/scripts', './assets/images/sprite']
@@ -176,7 +191,7 @@ module.exports = env => {
 				{
 					test: /\.js$/,
 					exclude: /node_modules/,
-					use: babelConfig
+					use: babelConfig(isModern)
 				},
 				{
 					test: /\.(jpe?g|gif|png|svg|woff2?|ttf|eot|wav|mp3|mp4)(\?.*$|$)/,
@@ -201,21 +216,33 @@ module.exports = env => {
 				'window.jQuery': 'jquery'
 			}),
 			new ExtractTextPlugin(extractTextConfig),
-			new WebpackShellPlugin({
-				onBuildStart: shellScripts
-			}),
-			new CleanWebpackPlugin(['./assets/dist/*'], cleanConfig)
+			...(!isModern
+				? [
+						new WebpackShellPlugin({
+							onBuildStart: shellScripts
+						}),
+						new CleanWebpackPlugin(['./assets/dist/*'], cleanConfig)
+				  ]
+				: [
+						new MinifyPlugin(
+							{},
+							{
+								test: /\.m\.js($|\?)/i,
+								comments: false
+							}
+						)
+				  ])
 		],
 		cache: true,
 		bail: false,
-		devtool: isDevelopment ? 'source-map' : false,
+		devtool: !isProduction ? 'source-map' : false,
 		stats: 'errors-only'
 	};
 
-	if (isDevelopment) {
-		if (env.url) {
-			browserSyncConfig.host = url.parse(env.url).hostname;
-			browserSyncConfig.proxy = env.url;
+	if (!isProduction) {
+		if (DEV_URL) {
+			browserSyncConfig.host = url.parse(DEV_URL).hostname;
+			browserSyncConfig.proxy = DEV_URL;
 		}
 
 		config.plugins.push(

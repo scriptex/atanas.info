@@ -4,13 +4,14 @@
 	"description": "Atanas Atanasov's Personal Website",
 	"scripts": {
 		"localga": "localga --id UA-83446952-1 --folder ./assets/scripts",
-		"build": "yarn localga && webpack --env.NODE_ENV=production",
-		"start": "yarn localga && webpack --watch --env.NODE_ENV=development",
+		"build:modern": "yarn localga && webpack --NODE_ENV=production --IS_MODERN",
+		"build:legacy": "yarn localga && webpack --NODE_ENV=production",
+		"start": "yarn localga && webpack --watch --NODE_ENV=development",
 		"optisize": "optisize --src=\"./assets/images\"",
 		"html": "php index.php > index.html",
 		"rm-html": "rm index.html",
 		"critical": "critical index.html -w 1280 -h 800 --ignore @font-face > assets/dist/critical.css",
-		"prod": "yarn build && yarn html && yarn critical && yarn rm-html"
+		"prod": "yarn build:legacy && yarn build:modern && yarn html && yarn critical && yarn rm-html"
 	},
 	"keywords": [
 		"MPA",
@@ -45,9 +46,11 @@
 		"@three11/optisize": "1.0.0",
 		"autoprefixer": "9.5.1",
 		"babel-loader": "8.0.6",
+		"babel-minify-webpack-plugin": "0.3.1",
 		"browser-sync": "2.26.5",
 		"browser-sync-webpack-plugin": "2.2.2",
 		"clean-webpack-plugin": "1.0.1",
+		"core-js": "3",
 		"critical": "1.3.4",
 		"css-loader": "2.1.1",
 		"cssnano": "4.1.10",
