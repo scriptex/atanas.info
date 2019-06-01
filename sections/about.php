@@ -6,7 +6,7 @@
 			<img src="assets/images/temp/atanas.jpg" alt="Atanas Atanasov" class="c-article__block">
 
 			<div class="c-article__block">
-				<p>My name is Atanas and I am a Senior JavaScript/TypeScript Developer.</p>
+				<p>My name is Atanas and I am a senior JavaScript/TypeScript developer.</p>
 
 				<p>I am currently located in Varna, Bulgaria. That's on the south-east side of Europe, on the Black Sea.</p>
 
@@ -34,7 +34,7 @@
 			<div class="c-article__block">
 				<h3>Progress</h3>
 
-				<p>Since the beginning of 2018 and until early 2019 I worked as a Senior JavaScript developer in a small startup located in Varna and operating internationally.</p>
+				<p>Since the beginning of 2018 and until early 2019 I worked as a JavaScript developer in a small startup located in Varna and operating internationally.</p>
 
 				<p>In Three 11 we were focused on providing the best possible quality while using bleeding edge technologies. We worked on several in-house projects along with some interesting client websites and applications.</p>
 			</div><!-- /.c-article__block -->
