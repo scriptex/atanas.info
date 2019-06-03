@@ -46,6 +46,8 @@ function autoversion($url) {
 
 	<link rel="stylesheet" href="<?php autoversion('assets/dist/app.css'); ?>" />
 
-	<script src="<?php autoversion('assets/dist/app.js'); ?>" async defer></script>
+	<script type="module" src="<?php autoversion('assets/dist/app.m.js'); ?>" async defer></script>
+
+	<script type="nomodule" src="<?php autoversion('assets/dist/app.js'); ?>" async defer></script>
 </body>
 </html>
