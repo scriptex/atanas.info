@@ -2,21 +2,8 @@ language: node_js
 sudo: false
 node_js:
     - '8.15.1'
-# http://docs.travis-ci.com/user/customizing-the-build/#Git-Submodules
 git:
     submodules: false
-
-before_install:
-    # https://gist.github.com/iedemam/9830045
-    # - sed -i 's/git@github.com:/git:\/\/github.com\//' .gitmodules
-    #
-    # https://git-scm.com/docs/git-submodule#_options:
-    # --remote
-    # Instead of using the superproject’s recorded SHA-1 to update the submodule,
-    # use the status of the submodule’s remote-tracking (branch.<name>.remote) branch (submodule.<name>.branch).
-    # --recursive
-    # https://github.com/travis-ci/travis-ci/issues/4099
-    - git submodule update --init --remote --recursive
 install:
     - yarn
 script:
