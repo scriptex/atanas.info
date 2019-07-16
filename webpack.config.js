@@ -129,7 +129,7 @@ const svgs = fs.readdirSync('./assets/images/svg').filter(svg => svg[0] !== '.')
 
 if (svgs.length) {
 	shellScripts.push('svgo -f assets/images/svg --config=' + JSON.stringify(svgoConfig));
-	shellScripts.push('spritesh -q -i assets/images/svg -o ./assets/dist/sprite.svg -p svg-');
+	shellScripts.push('spritesh -q -i assets/images/svg -o assets/dist/sprite.svg -p svg-');
 }
 
 module.exports = env => {
