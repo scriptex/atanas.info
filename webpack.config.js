@@ -180,7 +180,9 @@ module.exports = env => {
 							{
 								loader: 'sass-loader',
 								options: {
-									importer: magicImporter(),
+									sassOptions: {
+										importer: magicImporter()
+									},
 									...sourceMap
 								}
 							}
