@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:lts
-      - image: circleci/php:7.1-node-browsers
+      - image: circleci/php:7.2
     steps:
       - checkout
       - run:
