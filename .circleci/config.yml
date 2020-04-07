@@ -13,7 +13,7 @@ jobs:
           command: yarn localga
       - run:
           name: build:legacy
-          command: build:legacy
+          command: yarn build:legacy
       - run:
           name: build:modern
           command: yarn build:modern
