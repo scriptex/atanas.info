@@ -4,7 +4,7 @@ orbs:
 jobs:
   build-and-test:
     executor:
-      name: node/default
+      name: node/lts
     steps:
       - checkout
       - node/with-cache:
