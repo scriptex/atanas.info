@@ -3,12 +3,20 @@ jobs:
   build:
     docker:
       - image: circleci/node:lts
-      - image: circleci/php:7.2
     steps:
       - checkout
       - run:
           name: install
           command: yarn install
       - run:
-          name: prod
-          command: yarn prod
+          name: localga
+          command: yarn localga
+      - run:
+          name: build:legacy
+          command: build:legacy
+      - run:
+          name: build:modern
+          command: yarn build:modern
+      - run:
+          name: optisize
+          command: yarn optisize
