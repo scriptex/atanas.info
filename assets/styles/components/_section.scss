@@ -135,6 +135,42 @@
 		}
 	}
 
+	&--stats {
+		line-height: 1.2;
+		color: $color-black;
+		text-align: center;
+		position: relative;
+		z-index: 2;
+		padding: 4rem 0;
+		background-color: darken($color-white, 10%);
+
+		h1,
+		h2 {
+			margin: 0 0 3.5rem;
+		}
+
+		ul {
+			list-style: none outside none;
+			padding: 0 0 3rem;
+			margin: 0;
+
+			@include tablet-portrait {
+				padding-bottom: 4.5rem;
+			}
+		}
+
+		li {
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 1rem 1rem 0;
+		}
+
+		codersrank-widget {
+			display: block;
+			margin-bottom: 2.5rem;
+		}
+	}
+
 	&--portfolio {
 		color: $color-white;
 		text-align: center;
@@ -226,6 +262,14 @@
 					small {
 						font-size: 100%;
 						font-family: $font-sans-serif;
+					}
+
+					&.adjusted {
+						background-size: 125% auto;
+
+						@include hover {
+							background-size: 150% auto;
+						}
 					}
 				}
 

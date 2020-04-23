@@ -49,5 +49,7 @@ function autoversion($url) {
 	<script type="module" src="<?php autoversion('assets/dist/app.m.js'); ?>" async defer></script>
 
 	<script type="nomodule" src="<?php autoversion('assets/dist/app.js'); ?>" async defer></script>
+
+	<script src="https://profile.codersrank.io/widget/widget.js"></script>
 </body>
 </html>
