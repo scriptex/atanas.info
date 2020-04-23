@@ -34,6 +34,11 @@
 		'icon'  => 'codepen',
 		'title' => 'See my work on Codepen',
 	],
+	[
+		'url'	=> 'https://profile.codersrank.io/user/scriptex',
+		'icon'	=> 'codersrank',
+		'title'	=> 'See my profile on Codersrank'
+	]
 ]; ?>
 
 <footer class="c-footer">
@@ -51,6 +56,12 @@
 						</a>
 					</li>
 				<?php endforeach ?>
+
+				<li>
+					<a href="https://sourcerer.io/scriptex" target="_blank" rel="noopener noreferrer nofollow" title="See my profile on Sourcerer">
+						<img src="https://sourcerer.io/icons/logo-sharing.svg" width="32" alt="Sourcerer brand image" />
+					</a>
+				</li>
 			</ul>
 		</nav><!-- /.c-socials -->
 	</div><!-- /.o-shell o-shell-/-flex -->

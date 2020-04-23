@@ -2,7 +2,7 @@
 
 .c-socials {
 	ul {
-		@include flex-row(wrap, center, space-between);
+		@include flex-row(nowrap, center, space-between);
 		margin: 0 -0.5rem;
 	}
 
