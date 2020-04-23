@@ -3,6 +3,22 @@
 		<h1>Portfolio</h1>
 
 		<div class="c-section__body">
+			<a href="https://app.home.eon.com/" target="_blank" rel="noopener noreferrer" style="background-image: url(assets/images/temp/eon-home.png);" class="adjusted">
+				<div>
+					<strong>E.ON Home</strong>
+
+					<span><small>Technologies:</small> TypeScript, React, Redux, SCSS, MS Azure, NodeJS</span>
+				</div>
+			</a>
+
+			<a href="https://hems-admin-portal.eon.ooo/" target="_blank" rel="noopener noreferrer" style="background-image: url(assets/images/temp/eon-hems.png);" class="adjusted">
+				<div>
+					<strong>E.ON H.E.M.S.</strong>
+
+					<span><small>Technologies:</small> TypeScript, Angular, Redux, SCSS, MS Azure, NodeJS</span>
+				</div>
+			</a>
+
 			<a href="https://ateliercoolinar.bg/" target="_blank" rel="noopener noreferrer" style="background-image: url(assets/images/temp/atelier-coolinar.png);">
 				<div>
 					<strong>Atelier Coolinar (Ателие Кулинар)</strong>
