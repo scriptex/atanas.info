@@ -20,25 +20,13 @@ jobs:
               run: |
                   php index.php > index.html
 
-            - name: List site structure
-              working-directory: ${{ github.workspace }}
-              run: ls -la
-
-            - name: Install submodule dependencies
-              working-directory: atanas.info-projects
+            - name: Build latest projects
               run: |
+                  cd atanas.info-projects
                   git pull
                   git checkout master
                   yarn
-
-            - name: Fetch latest projects
-              working-directory: atanas.info-projects
-              run: |
                   yarn fetch
-
-            - name: Build latest projects
-              working-directory: atanas.info-projects
-              run: |
                   yarn build
 
             - name: Push to master
