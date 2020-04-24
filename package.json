@@ -7,7 +7,6 @@
 		"build:modern": "webpack --NODE_ENV=production --IS_MODERN",
 		"build:legacy": "webpack --NODE_ENV=production",
 		"build": "yarn localga && yarn build:legacy && yarn build:modern",
-		"build-projects": "cd atanas.info-projects && npm i && npm run fetch && npm run build",
 		"start": "yarn localga && webpack --watch --NODE_ENV=development",
 		"optisize": "optisize --src=\"./assets/images\"",
 		"html": "php index.php > index.html",
