@@ -77,9 +77,7 @@
 		</div><!-- /.c-section__body -->
 
 		<div class="c-section__actions">
-			<a href="mailto:hi@atanas.info" target="_blank" rel="noopener noreferrer" title="Hire Me" class="c-btn">
-				<span>Hire Me</span>
-			</a>
+			<?php include('hire-me.php'); ?>
 		</div><!-- /.c-section__actions -->
 	</div><!-- /.o-shell -->
 </section><!-- /#portfolio.c-section c-section-/-portfolio -->

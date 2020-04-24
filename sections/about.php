@@ -56,9 +56,7 @@
 			</div><!-- /.c-article__block -->
 
 			<div class="c-article__actions">
-				<a href="mailto:hi@atanas.info" target="_blank" rel="noopener noreferrer" title="Hire Me" class="c-btn">
-					<span>Hire Me</span>
-				</a>
+				<?php include('hire-me.php'); ?>
 			</div><!-- /.c-article__actions -->
 		</article><!-- /.c-article -->
 	</div><!-- /.o-shell -->

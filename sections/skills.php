@@ -1,15 +1,3 @@
-<section class="c-section c-section--skills" id="skills">
-	<h2>Skills <br><small>(Drag the bubbles to play)</small></h2>
-
-	<div id="skills-graph"></div><!-- /#skills-graph -->
-
-	<div class="c-section__actions">
-		<a href="mailto:hi@atanas.info" target="_blank" rel="noopener noreferrer" title="Hire Me" class="c-btn">
-			<span>Hire Me</span>
-		</a>
-	</div><!-- /.c-section__actions -->
-</section><!-- /#skills.c-section c-section-/-skills -->
-
 <?php $badges = [
 	'https://img.shields.io/badge/JavaScript-1112%20commits-yellow.svg',
 	'https://img.shields.io/badge/CSS-658%20commits-blue.svg',
@@ -23,6 +11,16 @@
 	'https://img.shields.io/badge/Objective–C-5%20commits-lightgrey.svg',
 	'https://img.shields.io/badge/Shell-1%20commits-darkred.svg',
 ]; ?>
+
+<section class="c-section c-section--skills" id="skills">
+	<h2>Skills <br><small>(Drag the bubbles to play)</small></h2>
+
+	<div id="skills-graph"></div><!-- /#skills-graph -->
+
+	<div class="c-section__actions">
+		<?php include('hire-me.php'); ?>
+	</div><!-- /.c-section__actions -->
+</section><!-- /#skills.c-section c-section-/-skills -->
 
 <section class="c-section c-section--stats" id="stats">
 	<div class="o-shell">
@@ -51,9 +49,7 @@
 		</div>
 
 		<div class="c-section__actions">
-			<a href="mailto:hi@atanas.info" target="_blank" rel="noopener noreferrer" title="Hire Me" class="c-btn">
-				<span>Hire Me</span>
-			</a>
+			<?php include('hire-me.php'); ?>
 		</div><!-- /.c-section__actions -->
 	</div>
 </section>
