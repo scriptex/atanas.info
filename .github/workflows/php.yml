@@ -9,6 +9,9 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
+        defaults:
+            run:
+                shell: bash
 
         steps:
             - uses: actions/checkout@v2
@@ -19,6 +22,7 @@ jobs:
             - name: Build "projects" submodule
               run: |
                   cd atanas.info-projects
+                  ls
                   git pull
                   git checkout master
                   yarn fetch
