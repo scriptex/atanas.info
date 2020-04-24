@@ -20,16 +20,15 @@ jobs:
               run: php index.php > index.html
 
             - name: Build "projects" submodule
-              working-directory: atanas.info-projects
               run: |
                   git pull
                   git checkout master
                   yarn fetch
                   yarn build
+              working-directory: ./atanas.info-projects
 
             - name: Push to master
               run: |
-
                   git config --global user.email "scriptex.bg@gmail.com"
                   git config --global user.name "Atanas Atanasov"
                   git add -A && git commit -m "[Automated] Build html file from php files"
