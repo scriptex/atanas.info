@@ -1,0 +1,26 @@
+name: Build with PHP
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build index.html from index.php
+      run: php index.php > index.html
+    
+    - name: Push to master
+      run: |
+        
+        git config --global user.email "scriptex.bg@gmail.com"
+        git config --global user.name "Atanas Atanasov"
+        git add -A && git commit -m "[Automated] Build html file from php files"
+        git push --force -u origin master
