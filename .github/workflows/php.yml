@@ -17,15 +17,17 @@ jobs:
             - uses: actions/checkout@v2
 
             - name: Build index.html from index.php
-              run: php index.php > index.html
+              run: |
+                  php index.php > index.html
+                  ls
 
             - name: Build "projects" submodule
+              working-directory: ./atanas.info-projects
               run: |
                   git pull
                   git checkout master
                   yarn fetch
                   yarn build
-              working-directory: ./atanas.info-projects
 
             - name: Push to master
               run: |
