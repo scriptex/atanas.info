@@ -14,9 +14,11 @@ jobs:
             - uses: actions/checkout@v2
 
             - name: Build index.html from index.php
+              run: php index.php > index.html
+
+            - name: Build projects submodule
               run: |
 
-                  php index.php > index.html
                   cd atanas.info-projects
                   git pull
                   git checkout master
