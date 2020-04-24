@@ -16,21 +16,13 @@ jobs:
             - name: Build index.html from index.php
               run: php index.php > index.html
 
-            - name: Access "projects" submodule
+            - name: Build "projects" submodule
               run: |
                   cd atanas.info-projects
-                  ls
-
-            - name: Build projects submodule
-              run: |
-
                   git pull
                   git checkout master
                   yarn fetch
                   yarn build
-
-            - name: Access root folder
-              run: cd ..
 
             - name: Push to master
               run: |
