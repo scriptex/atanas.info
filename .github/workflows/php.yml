@@ -18,7 +18,8 @@ jobs:
 
             - name: Build projects submodule
               run: |
-
+                  
+                  ls
                   cd atanas.info-projects
                   git pull
                   git checkout master
