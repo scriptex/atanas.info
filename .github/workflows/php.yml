@@ -20,9 +20,8 @@ jobs:
               run: php index.php > index.html
 
             - name: Build "projects" submodule
+              working-directory: atanas.info-projects
               run: |
-                  cd atanas.info-projects
-                  ls
                   git pull
                   git checkout master
                   yarn fetch
