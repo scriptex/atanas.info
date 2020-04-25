@@ -20,7 +20,9 @@ jobs:
               run: php index.php > index.html
 
             - name: Build latest projects
-              run: yarn build
+              run: |
+                  yarn
+                  yarn prod
 
             - name: Push to master
               run: |
