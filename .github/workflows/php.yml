@@ -22,7 +22,7 @@ jobs:
             - name: Build latest projects
               run: |
                   yarn
-                  yarn prod
+                  yarn deploy
 
             - name: Push to master
               run: |
