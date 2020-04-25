@@ -1,22 +1,22 @@
 version: 2.1
 jobs:
-  build:
-    docker:
-      - image: circleci/node:lts
-    steps:
-      - checkout
-      - run:
-          name: install
-          command: yarn install
-      - run:
-          name: localga
-          command: yarn localga
-      - run:
-          name: build:legacy
-          command: yarn build:legacy
-      - run:
-          name: build:modern
-          command: yarn build:modern
-      - run:
-          name: optisize
-          command: yarn optisize
+    build:
+        docker:
+            - image: circleci/node:lts
+        steps:
+            - checkout
+            - run:
+                  name: install
+                  command: yarn install
+            - run:
+                  name: localga
+                  command: yarn localga
+            - run:
+                  name: build:legacy
+                  command: yarn build:legacy
+            - run:
+                  name: build:modern
+                  command: yarn build:modern
+            - run:
+                  name: optisize
+                  command: yarn optisize
