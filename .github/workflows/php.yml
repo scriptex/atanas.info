@@ -30,5 +30,5 @@ jobs:
               run: |
                   git config --global user.email "scriptex.bg@gmail.com"
                   git config --global user.name "Atanas Atanasov"
-                  git add -A && git commit -m "[Automated] Build html file from php files"
+                  git add -A && git commit -m "[skip ci] Automated build and deploy"
                   git push --force -u origin master
