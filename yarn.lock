@@ -4765,6 +4765,11 @@ escodegen@^1.6.1:
   optionalDependencies:
     source-map "~0.6.1"
 
+eslint-plugin-react-hooks@^1.5.1:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-1.7.0.tgz#6210b6d5a37205f0b92858f895a4e827020a7d04"
+  integrity sha512-iXTCFcOmlWvw4+TOE8CLWj6yX1GwzT0Y6cUfHHZqWnSk144VmVIRcVGtUAzrLES7C798lmvnt02C7rxaOX1HNA==
+
 eslint-scope@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-4.0.3.tgz#ca03833310f6889a3264781aa82e63eb9cfe7848"
@@ -5437,6 +5442,11 @@ fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
   integrity sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
+
+fscreen@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/fscreen/-/fscreen-1.0.2.tgz#c4c51d96d819d75a19d728e0df445f9be9bb984f"
+  integrity sha1-xMUdltgZ11oZ1yjg30Rfm+m7mE8=
 
 fsevents@^1.2.2, fsevents@^1.2.7:
   version "1.2.12"
@@ -12203,6 +12213,14 @@ wcwidth@^1.0.1:
   integrity sha1-8LDc+RW8X/FSivrbLA4XtTLaL+g=
   dependencies:
     defaults "^1.0.3"
+
+webamp@1.4.1-beta01:
+  version "1.4.1-beta01"
+  resolved "https://registry.yarnpkg.com/webamp/-/webamp-1.4.1-beta01.tgz#9aa386a6d96bc0e63e3513d7946f57bb90d2aa70"
+  integrity sha512-FxkCwq0pGRJgIkf7g89SbB0I7ZL3TwOstP5J/v3xUa6sdSKrcoPSNS3KelkcSwA2mf1esccpNIIdIfPimlXbPQ==
+  dependencies:
+    eslint-plugin-react-hooks "^1.5.1"
+    fscreen "^1.0.2"
 
 webidl-conversions@^2.0.0:
   version "2.0.1"

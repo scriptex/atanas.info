@@ -49,7 +49,13 @@
 				</li>
 
 				<li>
-					<a href="projects/" title="My open source projects">
+					<a href="music/" title="My music" target="_blank" rel="noopener noreferrer">
+						Music
+					</a>
+				</li>
+
+				<li>
+					<a href="projects/" title="My open source projects" target="_blank" rel="noopener noreferrer">
 						Open Source
 					</a>
 				</li>

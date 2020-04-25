@@ -15,7 +15,8 @@
 		"html": "php index.php > index.html",
 		"rm-html": "rm index.html",
 		"critical": "critical index.html -w 1280 -h 800 --ignore @font-face > assets/dist/critical.css",
-		"deploy": "yarn build && yarn critical && yarn html"
+		"deploy": "yarn build && yarn critical && yarn html",
+		"local-build": "yarn localga && yarn build:legacy && yarn build:modern && yarn critical && yarn html"
 	},
 	"keywords": [
 		"MPA",
@@ -34,7 +35,8 @@
 		"@three11/animate-top-offset": "0.7.0",
 		"d3": "5.16.0",
 		"normalize.css": "8.0.1",
-		"vuepress": "1.4.1"
+		"vuepress": "1.4.1",
+		"webamp": "1.4.1-beta01"
 	},
 	"devDependencies": {
 		"@babel/core": "7.9.0",
