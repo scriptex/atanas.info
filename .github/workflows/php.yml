@@ -1,4 +1,4 @@
-name: Build with PHP
+name: Build
 
 on:
     push:
@@ -16,10 +16,7 @@ jobs:
         steps:
             - uses: actions/checkout@v2
 
-            - name: Build index.html from index.php
-              run: php index.php > index.html
-
-            - name: Build latest projects
+            - name: Build
               run: |
                   yarn
                   yarn deploy
