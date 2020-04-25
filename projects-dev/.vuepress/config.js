@@ -1,0 +1,310 @@
+const projects = require('../../package.json').projects.sort((a, b) => {
+	if (a.name < b.name) {
+		return -1;
+	}
+
+	if (a.name > b.name) {
+		return 1;
+	}
+
+	return 0;
+});
+
+const nav = projects.map(({ name }) => ({
+	text: name,
+	link: './' + name + '.md'
+}));
+
+const sidebar = projects.map(({ name }) => {
+	return ['./' + name + '.md', name];
+});
+
+module.exports = {
+	base: '/projects/',
+	title: 'Projects',
+	description: "Atanas Atanasov's Projects",
+	head: [
+		[
+			'meta',
+			{
+				name: 'description',
+				content:
+					'Atanas Atanasov - Senior Web Developer -== Custom WordPress themes, Single Page Applications -- Vue.js & React, Laravel, State of the art Web Development ==-'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'keywords',
+				content:
+					'Web Development, WordPress Development, HTML Development, Website Development, JavaScript Development, WordPress, Laravel, WP, JS, JavaScript, Vue, Vue.js, VueJS, Nuxt, Single Page Apps, Single Page Application, CSS, CSS3, ES5, ES6, ES7, Website, Development'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'copyright',
+				content: 'Atanas Atanasov'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'language',
+				content: 'EN'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'robots',
+				content: 'index,follow'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'author',
+				content: 'Atanas Atanasov, hi@atanas.info'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'designer',
+				content: 'Atanas Atanasov'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'coverage',
+				content: 'Worldwide'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'distribution',
+				content: 'Worldwide'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'rating',
+				content: 'General'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'revisit-after',
+				content: '7 days'
+			}
+		],
+		[
+			'meta',
+			{
+				'http-equiv': 'Expires',
+				content: '0'
+			}
+		],
+		[
+			'meta',
+			{
+				'http-equiv': 'Pragma',
+				content: 'no-cache'
+			}
+		],
+		[
+			'meta',
+			{
+				'http-equiv': 'Cache-Control',
+				content: 'no-cache'
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'apple-touch-icon',
+				sizes: '57x57',
+				href: '../assets/images/favicon/apple-touch-icon-57x57.png'
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'apple-touch-icon',
+				sizes: '114x114',
+				href: '../assets/images/favicon/apple-touch-icon-114x114.png'
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'apple-touch-icon',
+				sizes: '72x72',
+				href: '../assets/images/favicon/apple-touch-icon-72x72.png'
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'apple-touch-icon',
+				sizes: '144x144',
+				href: '../assets/images/favicon/apple-touch-icon-144x144.png'
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'apple-touch-icon',
+				sizes: '60x60',
+				href: '../assets/images/favicon/apple-touch-icon-60x60.png'
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'apple-touch-icon',
+				sizes: '120x120',
+				href: '../assets/images/favicon/apple-touch-icon-120x120.png'
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'apple-touch-icon',
+				sizes: '76x76',
+				href: '../assets/images/favicon/apple-touch-icon-76x76.png'
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'apple-touch-icon',
+				sizes: '152x152',
+				href: '../assets/images/favicon/apple-touch-icon-152x152.png'
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'icon',
+				sizes: '196x196',
+				type: 'image/png',
+				href: '../assets/images/favicon/favicon-196x196.png'
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'icon',
+				sizes: '96x96',
+				type: 'image/png',
+				href: '../assets/images/favicon/favicon-96x96.png'
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'icon',
+				sizes: '32x32',
+				type: 'image/png',
+				href: '../assets/images/favicon/favicon-32x32.png'
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'icon',
+				sizes: '16x16',
+				type: 'image/png',
+				href: '../assets/images/favicon/favicon-16x16.png'
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'icon',
+				sizes: '128x128',
+				type: 'image/png',
+				href: '../assets/images/favicon/favicon-128x128.png'
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'shortcut icon',
+				type: 'image/x-icon',
+				href: '../assets/images/favicon/favicon.ico'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'application-name',
+				content: 'Atanas Atanasov'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'msapplication-TileColor',
+				content: '#ef4c23'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'msapplication-TileImage',
+				content: '../assets/images/favicon/mstile-144x144.png'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'msapplication-square70x70logo',
+				content: '../assets/images/favicon/mstile-70x70.png'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'msapplication-square150x150logo',
+				content: '../assets/images/favicon/mstile-150x150.png'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'msapplication-wide310x150logo',
+				content: '../assets/images/favicon/mstile-310x150.png'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'msapplication-square310x310logo',
+				content: '../assets/images/favicon/mstile-310x310.png'
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'theme-color',
+				content: '#ef4c23'
+			}
+		]
+	],
+	dest: '../projects',
+	ga: 'UA-83446952-1',
+	serviceWorker: true,
+	themeConfig: {
+		sidebar,
+		repo: 'https://atanas.info',
+		repoLabel: 'Back to atanas.info',
+		editLinks: false
+	}
+};
