@@ -19,8 +19,8 @@ jobs:
             - name: Build index.html from index.php
               run: php index.php > index.html
 
-            # - name: Build latest projects
-            #  run: npm run build-projects
+            - name: Build latest projects
+              run: yarn build
 
             - name: Push to master
               run: |
