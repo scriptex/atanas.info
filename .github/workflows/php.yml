@@ -8,7 +8,6 @@ on:
 
 jobs:
     build:
-        if: "!contains(github.event.commits[0].message, 'skip ci')"
         runs-on: ubuntu-latest
         defaults:
             run:
@@ -17,12 +16,17 @@ jobs:
         steps:
             - uses: actions/checkout@v2
 
+            - id: log
+              run: echo "::set-output name=message::$(git log --no-merges -1 --oneline)"
+
             - name: Build
+              if: "!contains(steps.log.outputs.message, 'skip ci')"
               run: |
                   yarn
                   yarn deploy
 
             - name: Push to master
+              if: "!contains(steps.log.outputs.message, 'skip ci')"
               run: |
                   git config --global user.email "scriptex.bg@gmail.com"
                   git config --global user.name "Atanas Atanasov"
