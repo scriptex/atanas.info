@@ -20,13 +20,13 @@ jobs:
               run: echo "::set-output name=message::$(git log --no-merges -1 --oneline)"
 
             - name: Build
-              if: "!contains(steps.log.outputs.message, 'skip ci')"
+              if: "!contains(steps.log.outputs.message, '[skip ci]')"
               run: |
                   yarn
                   yarn deploy
 
             - name: Push to master
-              if: "!contains(steps.log.outputs.message, 'skip ci')"
+              if: "!contains(steps.log.outputs.message, '[skip ci]')"
               run: |
                   git config --global user.email "scriptex.bg@gmail.com"
                   git config --global user.name "Atanas Atanasov"
