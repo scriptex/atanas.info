@@ -8,6 +8,7 @@
 	height: 100%;
 	top: 0;
 	right: 0;
+	pointer-events: none;
 
 	ul,
 	&::before {
@@ -19,7 +20,6 @@
 	&::before {
 		@include centered;
 		content: '';
-
 		z-index: 1;
 		background-color: rgba($color-black, 0.9);
 	}
