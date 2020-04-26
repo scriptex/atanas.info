@@ -1,23 +1,6 @@
-const projects = require('../../package.json').projects.sort((a, b) => {
-	if (a.name < b.name) {
-		return -1;
-	}
-
-	if (a.name > b.name) {
-		return 1;
-	}
-
-	return 0;
-});
-
-const nav = projects.map(({ name }) => ({
-	text: name,
-	link: './' + name + '.md'
-}));
-
-const sidebar = projects.map(({ name }) => {
-	return ['./' + name + '.md', name];
-});
+const projects = require('../../package.json').projects.sort((a, b) =>
+	a.name < b.name ? -1 : a.name > b.name ? 1 : 0
+);
 
 module.exports = {
 	base: '/projects/',
@@ -302,7 +285,7 @@ module.exports = {
 	ga: 'UA-83446952-1',
 	serviceWorker: true,
 	themeConfig: {
-		sidebar,
+		sidebar: projects.map(({ name }) => ['./' + name + '.md', name]),
 		repo: 'https://atanas.info',
 		repoLabel: 'Back to atanas.info',
 		editLinks: false

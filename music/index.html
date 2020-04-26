@@ -54,34 +54,41 @@
 
 		<style type="text/css">
 			html,
-			body {
+			body,
+			#app,
+			.unsupported {
 				height: 100%;
 			}
 
 			body {
 				margin: 0;
+				background-color: #000;
+			}
+
+			.unsupported {
+				display: flex;
+				flex-flow: row nowrap;
+				align-items: center;
+				align-content: center;
+				justify-content: center;
 			}
 		</style>
 	</head>
 	<body>
 		<div id="app" style="height: 100%"></div>
 
-		<script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>
+		<script type="module">
+			import 'https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js';
+			import initialTracks from './tracks.js';
 
-		<script>
-			new window.Webamp({
-				initialTracks: [
-					{
-						metaData: {
-							artist: 'DJ Mike Llama',
-							title: "Llama Whippin' Intro"
-						},
-						url:
-							'https://cdn.jsdelivr.net/gh/captbaritone/webamp@43434d82cfe0e37286dbbe0666072dc3190a83bc/mp3/llama-2.91.mp3',
-						duration: 5.322286
-					}
-				]
-			}).renderWhenReady(document.getElementById('app'));
+			const app = document.getElementById('app');
+			const Webamp = window.Webamp;
+
+			if (!Webamp.browserIsSupported()) {
+				app.innerHTML = '<div class="unsupported">Unfortunately your browser is not supported.</div>';
+			} else {
+				new Webamp({ initialTracks }).renderWhenReady(app);
+			}
 		</script>
 	</body>
 </html>

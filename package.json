@@ -6,6 +6,7 @@
 		"start-projects": "cd projects-dev && vuepress dev",
 		"build-projects": "cd projects-dev && vuepress build",
 		"fetch-projects": "node ./projects-dev/.vuepress/fetch-projects.js",
+		"fetch-music": "node ./music/index.js",
 		"localga": "localga --id UA-83446952-1 --folder ./assets/scripts",
 		"build:modern": "webpack --NODE_ENV=production --IS_MODERN",
 		"build:legacy": "webpack --NODE_ENV=production",
@@ -274,6 +275,33 @@
 		{
 			"name": "itcss-emmet-snippets",
 			"url": "scriptex/itcss-emmet-snippets"
+		}
+	],
+	"tracks": [
+		{
+			"name": "La Playa",
+			"artist": "Scriptex",
+			"url": "https://www.dropbox.com/s/fh1igvfnzzucnmh/Scriptex_-_01_-_La_Playa%28Invader__2004%29.mp3?dl=0"
+		},
+		{
+			"name": "Clash",
+			"artist": "Scriptex",
+			"url": "https://www.dropbox.com/s/p8o4hpat99va06b/Scriptex_-_02_-_Clash%28Invader__2004%29.mp3?dl=0"
+		},
+		{
+			"name": "Joe Cocker - U Can Leave Your Hat On",
+			"artist": "Scriptex",
+			"url": "https://www.dropbox.com/s/knvvlxhezgpiium/Scriptex_-_03_-_Joe_Cocker_-_U_Can_Leave_Your_Hat_On%28Invader__2004%29.mp3?dl=0"
+		},
+		{
+			"name": "Energy",
+			"artist": "Scriptex",
+			"url": "https://www.dropbox.com/s/ez9cj1v1vd6fs4m/Scriptex_-_04_-_Energy%28Invader__2004%29.mp3?dl=0"
+		},
+		{
+			"name": "Dance Anthem (Energy part II)",
+			"artist": "Scriptex",
+			"url": "https://www.dropbox.com/s/yzvcbrusy60j44g/Scriptex_-_05_-_Dance_Anthem%28Energy_part_II%29%28Invader__2004%29.mp3?dl=0"
 		}
 	]
 }
