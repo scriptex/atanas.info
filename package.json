@@ -10,7 +10,7 @@
 		"localga": "localga --id UA-83446952-1 --folder ./assets/scripts",
 		"build:modern": "webpack --NODE_ENV=production --IS_MODERN",
 		"build:legacy": "webpack --NODE_ENV=production",
-		"build": "yarn fetch-projects && yarn build-projects && yarn localga && yarn build:legacy && yarn build:modern",
+		"build": "yarn fetch-music && yarn fetch-projects && yarn build-projects && yarn localga && yarn build:legacy && yarn build:modern",
 		"start": "yarn localga && webpack --watch --NODE_ENV=development",
 		"optisize": "optisize --src=\"./assets/images\"",
 		"html": "php index.php > index.html",

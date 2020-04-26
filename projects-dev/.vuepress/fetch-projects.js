@@ -27,11 +27,11 @@ if (!projects.length) {
 
 				writeFileSync(name, data);
 
-				console.log('atanas.info-projects: Saved ' + name);
+				console.log('atanas.info: Saved project ' + name);
 			})
 			.catch(err => {
 				// prettier-ignore
-				console.log('atanas.info-projects: Failed to fetch' + project.url + '. Error is: ' + err)
+				console.log('atanas.info: Failed to fetch project ' + project.url + '. Error is: ' + err)
 			});
 	});
 }
