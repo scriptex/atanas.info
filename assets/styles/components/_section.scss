@@ -300,6 +300,10 @@
 							transform: none;
 						}
 
+						strong {
+							flex: 0 0 100%;
+						}
+
 						&:hover {
 							box-shadow: none;
 							background-size: 100% auto;

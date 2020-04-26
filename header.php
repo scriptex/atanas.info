@@ -20,49 +20,61 @@
 			<ul>
 				<li>
 					<a href="#about" class="js-internal-link" title="About me">
-						<span>About</span>
+						About
 					</a>
 				</li>
 
 				<li>
 					<a href="#skills" class="js-internal-link" title="My skills">
-						<span>Skills</span>
+						Skills
+					</a>
+				</li>
+
+				<li>
+					<a href="#stats" class="js-internal-link" title="My stats">
+						Stats
 					</a>
 				</li>
 
 				<li>
 					<a href="#portfolio" class="js-internal-link" title="My portfolio">
-						<span>Portfolio</span>
+						Portfolio
 					</a>
 				</li>
 
 				<li>
 					<a href="#slides" class="js-internal-link" title="My presentation">
-						<span>Slides</span>
-					</a>
-				</li>
-
-				<li>
-					<a href="https://at-the-wall.now.sh/" title="At the Wall - A Game of Thrones scene" target="_blank" rel="noopener noreferrer">
-						<span>At the Wall</span>
-					</a>
-				</li>
-
-				<li>
-					<a href="https://scriptex.js.org/2048/" title="Join the numbers and get to the 2048 tile!" target="_blank" rel="noopener noreferrer">
-						<span>2048</span>
-					</a>
-				</li>
-
-				<li>
-					<a href="https://material-tetris.now.sh/" title="Material Tetris. Play here!" target="_blank" rel="noopener noreferrer">
-						<span>Material Tetris</span>
+						Slides
 					</a>
 				</li>
 
 				<li>
 					<a href="projects/" title="My open source projects">
-						<span>Open Source</span>
+						Open Source
+					</a>
+				</li>
+
+				<li>
+					<a href="https://at-the-wall.now.sh/" title="At the Wall - A Game of Thrones scene" target="_blank" rel="noopener noreferrer">
+						At the Wall
+					</a>
+				</li>
+
+				<li>
+					<a href="https://scriptex.js.org/2048/" title="Join the numbers and get to the 2048 tile!" target="_blank" rel="noopener noreferrer">
+						2048
+					</a>
+				</li>
+
+				<li>
+					<a href="https://material-tetris.now.sh/" title="Material Tetris. Play here!" target="_blank" rel="noopener noreferrer">
+						Material Tetris
+					</a>
+				</li>
+
+				<li>
+					<a href="https://material-snake.now.sh/" title="Material Snake. Play here!" target="_blank" rel="noopener noreferrer">
+						Material Snake
 					</a>
 				</li>
 			</ul>

@@ -1,0 +1,32 @@
+name: Build
+
+on:
+    push:
+        branches: [master]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                shell: bash
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - id: log
+              run: echo "::set-output name=message::$(git log --no-merges -1 --oneline)"
+
+            - name: Build
+              if: "!contains(steps.log.outputs.message, '[skip ci]')"
+              run: |
+                  yarn
+                  yarn deploy
+
+            - name: Push to master
+              if: "!contains(steps.log.outputs.message, '[skip ci]')"
+              run: |
+                  git config --global user.email "scriptex.bg@gmail.com"
+                  git config --global user.name "Atanas Atanasov"
+                  git add -A && git commit -m "[skip ci] Automated build and deploy"
+                  git push --force -u origin master
