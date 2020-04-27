@@ -29,6 +29,7 @@ jobs:
                   git add -A && git commit -m "[skip ci] Automated build and deploy"
                   git push --force -u origin master
 
-            - uses: amondnet/now-deployment@v2
+            - name: Deploy to Vercel
+              uses: amondnet/now-deployment@v2
                   with:
                     zeit-token: ${{ secrets.ZEIT_TOKEN }}
