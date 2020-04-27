@@ -1,10 +1,15 @@
 name: Build
 
-on: [push, pull_request]
+on:
+    push:
+        branches: [master]
 
 jobs:
     build:
         runs-on: ubuntu-latest
+        defaults:
+            run:
+                shell: bash
 
         steps:
             - uses: actions/checkout@v2
@@ -19,7 +24,7 @@ jobs:
                   yarn deploy
 
             - name: Push to master
-              if: "!contains(steps.log.outputs.message, '[skip ci]') && github.ref == 'master'"
+              if: "!contains(steps.log.outputs.message, '[skip ci]')"
               run: |
                   git config --global user.email "scriptex.bg@gmail.com"
                   git config --global user.name "Atanas Atanasov"
