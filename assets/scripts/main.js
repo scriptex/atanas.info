@@ -72,6 +72,7 @@ if (!Webamp.browserIsSupported()) {
 		music.classList.remove('is--active');
 		document.querySelector('[href="#music"]').addEventListener('click', () => webamp.reopen());
 	});
+
 	webamp.renderWhenReady(music);
 }
 
