@@ -33,3 +33,4 @@ jobs:
               uses: amondnet/now-deployment@v2
               with:
                   zeit-token: ${{ secrets.ZEIT_TOKEN }}
+                  now-args: '--confirm'
