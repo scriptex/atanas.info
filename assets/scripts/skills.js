@@ -44,11 +44,13 @@ export const drawSkills = words => {
 
 			nodes.each(function(d, i) {
 				const group = this.parentNode;
-				const text = select(group.querySelector('text'));
+				const name = select(group.querySelector('.skill-name'));
 				const image = select(group.querySelector('image'));
+				const duration = select(group.querySelector('.skill-duration'));
 
+				name.attr('x', d => d.x).attr('y', d => d.y);
 				image.attr('x', d => d.x).attr('y', d => d.y);
-				text.attr('x', d => d.x).attr('y', d => d.y);
+				duration.attr('x', d => d.x).attr('y', d => d.y);
 			});
 		});
 
@@ -158,9 +160,18 @@ export const createNodes = (svg, data, winWidth, callable) => {
 
 		group
 			.append('text')
-			.text(d => `${d.text}:${d.duration}`)
+			.text(d => `${d.text}`)
+			.attr('class', 'skill-name')
 			.attr('text-anchor', 'middle')
-			.attr('dy', '0.35rem');
+			.attr('dy', '-0.25rem');
+
+		group
+			.append('text')
+			.attr('class', 'skill-duration')
+			.text(d => `${d.duration}`)
+			.attr('text-anchor', 'middle')
+			.attr('font-weight', 'bold')
+			.attr('dy', '1rem');
 	});
 
 	return nodes;
