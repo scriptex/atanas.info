@@ -12,22 +12,10 @@ jobs:
         steps:
             - uses: actions/checkout@v2
 
-            - id: log
-              run: echo "::set-output name=message::$(git log --no-merges -1 --oneline)"
-
             - name: Build
-              if: "!contains(steps.log.outputs.message, '[skip ci]')"
               run: |
                   yarn
                   yarn deploy
-
-            - name: Push to master
-              if: "!contains(steps.log.outputs.message, '[skip ci]') && github.ref == 'refs/heads/master'"
-              run: |
-                  git config --global user.email "scriptex.bg@gmail.com"
-                  git config --global user.name "Atanas Atanasov"
-                  git add -A && git commit -m "[skip ci] Automated build and deploy"
-                  git push --force -u origin master
 
             - name: Deploy to Vercel
               uses: amondnet/now-deployment@v2
