@@ -17,7 +17,7 @@ function autoversion($url) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<?php include_once('head.php'); ?>
+	<?php include_once('sections/head.php'); ?>
 
 	<?php critical_css(); ?>
 
@@ -27,7 +27,7 @@ function autoversion($url) {
 	<?php include_once('assets/dist/sprite.svg'); ?>
 
 	<div class="o-wrapper">
-		<?php include_once('header.php'); ?>
+		<?php include_once('sections/header.php'); ?>
 
 		<div class="o-main">
 			<?php include_once('sections/hello.php'); ?>
@@ -41,7 +41,7 @@ function autoversion($url) {
 			<?php include_once('sections/slides.php'); ?>
 		</div><!-- /.o-main -->
 
-		<?php include_once('footer.php'); ?>
+		<?php include_once('sections/footer.php'); ?>
 	</div><!-- /.o-wrapper -->
 
 	<div id="music"></div>
