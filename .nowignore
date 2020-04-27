@@ -1,8 +1,12 @@
 .circleci
 .github
 
+!assets/dist
+assets/scripts
+assets/styles
+
+!projects
 projects-dev
-!projects-dev/*.md
 
 node_modules
 
@@ -18,6 +22,8 @@ package.json
 renovate.json
 webpack.config.js
 yarn.lock
+
+!index.html
 
 LICENSE
 README.md
