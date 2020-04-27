@@ -31,5 +31,5 @@ jobs:
 
             - name: Deploy to Vercel
               uses: amondnet/now-deployment@v2
-                  with:
-                    zeit-token: ${{ secrets.ZEIT_TOKEN }}
+              with:
+                  zeit-token: ${{ secrets.ZEIT_TOKEN }}
