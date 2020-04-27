@@ -1,4 +1,8 @@
+// @ts-nocheck
 import animateTopOffset from '@three11/animate-top-offset';
+
+import Webamp from 'webamp';
+import initialTracks from './tracks.js';
 
 import { texts } from './hero-texts';
 import { skills } from './skills-list';
@@ -8,6 +12,7 @@ import { initCanvas, createDots } from './canvas';
 
 const doc = document;
 const win = window;
+const music = document.getElementById('music');
 const canvas = initCanvas('canvas');
 const header = doc.querySelector('.c-header');
 const navToggler = doc.getElementById('nav_toggle');
@@ -27,6 +32,10 @@ internalLinks.forEach(link => {
 
 		const href = link.getAttribute('href');
 		const offset = doc.querySelector(href).offsetTop;
+
+		if (href.includes('music')) {
+			doc.querySelector(href).classList.add('is--active');
+		}
 
 		animateTopOffset(offset - header.clientHeight);
 		navToggler.checked = false;
@@ -53,6 +62,18 @@ tabToggles.forEach(toggle => {
 		tab.classList.add('current');
 	});
 });
+
+if (!Webamp.browserIsSupported()) {
+	music.innerHTML = '<div class="unsupported">Unfortunately your browser is not supported.</div>';
+} else {
+	const webamp = new Webamp({ initialTracks });
+
+	webamp.onClose(() => {
+		music.classList.remove('is--active');
+		document.querySelector('[href="#music"]').addEventListener('click', () => webamp.reopen());
+	});
+	webamp.renderWhenReady(music);
+}
 
 win.addEventListener('load', event => {
 	toggleHeaderState(win.pageYOffset);

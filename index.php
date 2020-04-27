@@ -44,6 +44,8 @@ function autoversion($url) {
 		<?php include_once('footer.php'); ?>
 	</div><!-- /.o-wrapper -->
 
+	<div id="music"></div>
+
 	<link rel="stylesheet" href="<?php autoversion('assets/dist/app.css'); ?>" />
 
 	<script type="module" src="<?php autoversion('assets/dist/app.m.js'); ?>" async defer></script>

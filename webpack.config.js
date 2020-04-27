@@ -11,7 +11,8 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const WebpackShellPlugin = require('webpack-shell-plugin');
 
-const DEV_URL = argv.URL;
+const devURL = argv.URL;
+const isServer = argv.SERVER;
 const isModern = argv.IS_MODERN;
 const isProduction = argv.NODE_ENV === 'production';
 
@@ -43,6 +44,7 @@ const svgoConfig = {
 const postcssConfig = {
 	plugins: [
 		require('postcss-easy-import'),
+		// @ts-ignore
 		require('postcss-url')({
 			url: 'rebase'
 		}),
@@ -242,9 +244,17 @@ module.exports = env => {
 	};
 
 	if (!isProduction) {
-		if (DEV_URL) {
-			browserSyncConfig.host = url.parse(DEV_URL).hostname;
-			browserSyncConfig.proxy = DEV_URL;
+		if (devURL) {
+			// @ts-ignore
+			browserSyncConfig.host = url.parse(devURL).hostname;
+			browserSyncConfig.proxy = devURL;
+		}
+
+		if (isServer) {
+			delete browserSyncConfig.host;
+			delete browserSyncConfig.proxy;
+
+			browserSyncConfig.server = true;
 		}
 
 		config.plugins.push(
