@@ -1,8 +1,6 @@
 name: Build
 
-on:
-    push:
-        branches: [master]
+on: [push, pull_request]
 
 jobs:
     build:
@@ -24,9 +22,13 @@ jobs:
                   yarn deploy
 
             - name: Push to master
-              if: "!contains(steps.log.outputs.message, '[skip ci]')"
+              if: "!contains(steps.log.outputs.message, '[skip ci]') && github.ref == 'refs/heads/master'"
               run: |
                   git config --global user.email "scriptex.bg@gmail.com"
                   git config --global user.name "Atanas Atanasov"
                   git add -A && git commit -m "[skip ci] Automated build and deploy"
                   git push --force -u origin master
+
+            - uses: amondnet/now-deployment@v2
+                  with:
+                    zeit-token: ${{ secrets.ZEIT_TOKEN }}

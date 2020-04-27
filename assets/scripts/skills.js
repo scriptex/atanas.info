@@ -158,7 +158,7 @@ export const createNodes = (svg, data, winWidth, callable) => {
 
 		group
 			.append('text')
-			.text(d => `${d.text}`)
+			.text(d => `${d.text}:${d.duration}`)
 			.attr('text-anchor', 'middle')
 			.attr('dy', '0.35rem');
 	});
