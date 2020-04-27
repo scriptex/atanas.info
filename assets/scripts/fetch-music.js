@@ -1,11 +1,11 @@
 const { writeFileSync, unlinkSync, existsSync } = require('fs');
 
-const { tracks } = require('../package.json');
+const { tracks } = require('../../package.json');
 
 if (!tracks.length) {
 	console.log('atanas.info: No tracks specified in package.json');
 } else {
-	const file = `music/tracks.js`;
+	const file = `assets/scripts/tracks.js`;
 	const data = tracks.map(track => {
 		const url = track.url.replace('www', 'dl');
 

@@ -49,7 +49,7 @@
 				</li>
 
 				<li>
-					<a href="music/" title="My music" target="_blank" rel="noopener noreferrer">
+					<a href="#music" class="js-internal-link" title="My music">
 						Music
 					</a>
 				</li>

@@ -8,6 +8,10 @@ yarn-error.log*
 # Dependency directory
 node_modules/
 
+projects
+projects-dev/*.md
+!projects-dev/README.md
+
 # Misc
 .DS_Store
 .DS_Store?

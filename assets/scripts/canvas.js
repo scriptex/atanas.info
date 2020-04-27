@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { hsl } from 'd3-color';
 import { range } from 'd3-array';
 import { dispatch } from 'd3-dispatch';

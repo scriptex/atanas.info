@@ -6,7 +6,7 @@
 		"start-projects": "cd projects-dev && vuepress dev",
 		"build-projects": "cd projects-dev && vuepress build",
 		"fetch-projects": "node ./projects-dev/.vuepress/fetch-projects.js",
-		"fetch-music": "node ./music/index.js",
+		"fetch-music": "node ./assets/scripts/fetch-music.js",
 		"localga": "localga --id UA-83446952-1 --folder ./assets/scripts",
 		"build:modern": "webpack --NODE_ENV=production --IS_MODERN",
 		"build:legacy": "webpack --NODE_ENV=production",

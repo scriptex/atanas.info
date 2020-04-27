@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { drag } from 'd3-drag';
 import { range } from 'd3-array';
 import { randomUniform } from 'd3-random';
@@ -98,7 +99,10 @@ export const dragHandler = simulation => {
 
 export const createSimulation = (width, height) => {
 	return forceSimulation()
-		.force('link', forceLink().id(d => d.index))
+		.force(
+			'link',
+			forceLink().id(d => d.index)
+		)
 		.force('collide', forceCollide(d => d.r * 1.75).iterations(20))
 		.force('charge', forceManyBody())
 		.force('center', forceCenter(width / 2, height / 2))
