@@ -1,615 +1,619 @@
 {
-	"name": "atanas.info",
-	"version": "1.1.0",
-	"description": "Atanas Atanasov's Personal Website",
-	"scripts": {
-		"start-projects": "cd projects-dev && vuepress dev",
-		"build-projects": "cd projects-dev && vuepress build",
-		"fetch-projects": "node ./projects-dev/.vuepress/fetch-projects.js",
-		"fetch-music": "node ./assets/scripts/fetch-music.js",
-		"localga": "localga --id UA-83446952-1 --folder ./assets/scripts",
-		"build:modern": "webpack --NODE_ENV=production --IS_MODERN",
-		"build:legacy": "webpack --NODE_ENV=production",
-		"build": "yarn fetch-music && yarn fetch-projects && yarn build-projects && yarn localga && yarn build:legacy && yarn build:modern",
-		"start": "yarn localga && webpack --watch --NODE_ENV=development",
-		"optisize": "optisize --src=\"./assets/images\"",
-		"html-temp": "php index.php > index.temp.html",
-		"html-min": "htmlmin -o index.html index.temp.html",
-		"rm-html": "rm index.temp.html",
-		"html": "yarn html-temp && yarn html-min && yarn rm-html",
-		"critical": "yarn html-temp && critical index.temp.html -w 1280 -h 800 --ignore @font-face > assets/dist/critical.css",
-		"deploy": "yarn build && yarn critical && yarn html",
-		"local-build": "yarn localga && yarn build:legacy && yarn build:modern && yarn critical && yarn html"
-	},
-	"keywords": [
-		"MPA",
-		"webpack",
-		"setup",
-		"multi-page"
-	],
-	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
-	"repository": "https://github.com/scriptex/webpack-mpa",
-	"bugs": {
-		"url": "https://github.com/scriptex/webpack-mpa/issues",
-		"email": "scriptex.bg@gmail.com"
-	},
-	"license": "MIT",
-	"dependencies": {
-		"@three11/animate-top-offset": "0.7.0",
-		"d3": "5.16.0",
-		"normalize.css": "8.0.1",
-		"vuepress": "1.4.1",
-		"webamp": "1.4.1-beta01"
-	},
-	"devDependencies": {
-		"@babel/core": "7.9.6",
-		"@babel/plugin-proposal-class-properties": "7.8.3",
-		"@babel/plugin-proposal-decorators": "7.8.3",
-		"@babel/plugin-proposal-export-namespace-from": "7.8.3",
-		"@babel/plugin-proposal-function-sent": "7.8.3",
-		"@babel/plugin-proposal-json-strings": "7.8.3",
-		"@babel/plugin-proposal-numeric-separator": "7.8.3",
-		"@babel/plugin-proposal-throw-expressions": "7.8.3",
-		"@babel/plugin-syntax-dynamic-import": "7.8.3",
-		"@babel/plugin-syntax-import-meta": "7.8.3",
-		"@babel/preset-env": "7.9.6",
-		"@three11/optisize": "1.0.0",
-		"autoprefixer": "9.7.6",
-		"babel-loader": "8.1.0",
-		"babel-minify-webpack-plugin": "0.3.1",
-		"browser-sync": "2.26.7",
-		"browser-sync-webpack-plugin": "2.2.2",
-		"clean-webpack-plugin": "1.0.1",
-		"core-js": "3.6.5",
-		"critical": "1.3.9",
-		"css-loader": "3.5.3",
-		"cssnano": "4.1.10",
-		"extract-text-webpack-plugin": "4.0.0-beta.0",
-		"file-loader": "6.0.0",
-		"html-minifier-cli": "0.1.0",
-		"localga": "2.0.0",
-		"node-sass": "4.14.0",
-		"node-sass-magic-importer": "5.3.2",
-		"postcss-easy-import": "3.0.0",
-		"postcss-flexbugs-fixes": "4.2.1",
-		"postcss-loader": "3.0.0",
-		"postcss-merge-rules": "4.0.3",
-		"postcss-url": "8.0.0",
-		"postcss-utilities": "0.8.4",
-		"postcss-watch-folder": "1.0.0",
-		"request": "2.88.2",
-		"request-promise-native": "1.0.8",
-		"sass-loader": "8.0.2",
-		"spritesh": "1.2.1",
-		"style-loader": "1.2.1",
-		"webpack": "4.43.0",
-		"webpack-cli": "3.3.11",
-		"webpack-shell-plugin": "0.5.0",
-		"webpack-spritesmith": "1.1.0",
-		"yargs": "15.3.1"
-	},
-	"browserslist": [
-		"> 1%",
-		"last 2 versions"
-	],
-	"main": "assets/scripts/main.js",
-	"private": true,
-	"projects": [
-		{
-			"name": "webpack-mpa",
-			"url": "scriptex/webpack-mpa"
-		},
-		{
-			"name": "webpack-mpa-next",
-			"url": "scriptex/webpack-mpa-next"
-		},
-		{
-			"name": "webpack-mpa-ts",
-			"url": "scriptex/webpack-mpa-ts"
-		},
-		{
-			"name": "animate-me",
-			"url": "scriptex/AnimateMe"
-		},
-		{
-			"name": "intro-scroll",
-			"url": "scriptex/IntroScroll"
-		},
-		{
-			"name": "html5-form-validator",
-			"url": "scriptex/html5-form-validator"
-		},
-		{
-			"name": "dator",
-			"url": "scriptex/dator"
-		},
-		{
-			"name": "pass-score",
-			"url": "scriptex/pass-score"
-		},
-		{
-			"name": "random-splice",
-			"url": "scriptex/random-splice"
-		},
-		{
-			"name": "sublime-snippets",
-			"url": "scriptex/sublime-snippets"
-		},
-		{
-			"name": "postcss-watch-folder",
-			"url": "scriptex/postcss-watch-folder"
-		},
-		{
-			"name": "postcss-tools",
-			"url": "scriptex/postcss-tools"
-		},
-		{
-			"name": "notabene",
-			"url": "scriptex/Notabene"
-		},
-		{
-			"name": "evolution",
-			"url": "scriptex/Evolution"
-		},
-		{
-			"name": "react-template",
-			"url": "three11/react-template"
-		},
-		{
-			"name": "react-template-ts",
-			"url": "three11/react-template-ts"
-		},
-		{
-			"name": "optisize",
-			"url": "three11/optisize"
-		},
-		{
-			"name": "debounce",
-			"url": "three11/debounce"
-		},
-		{
-			"name": "dom-helpers",
-			"url": "three11/dom-helpers"
-		},
-		{
-			"name": "infinite-scroll",
-			"url": "three11/infinite-scroll"
-		},
-		{
-			"name": "animate-top-offset",
-			"url": "three11/animate-top-offset"
-		},
-		{
-			"name": "accordion",
-			"url": "three11/accordion"
-		},
-		{
-			"name": "istouch",
-			"url": "three11/istouch"
-		},
-		{
-			"name": "extract-query-arg",
-			"url": "three11/extract-query-arg"
-		},
-		{
-			"name": "scrollspy",
-			"url": "three11/scrollspy"
-		},
-		{
-			"name": "create-pwa",
-			"url": "scriptex/create-pwa"
-		},
-		{
-			"name": "localga",
-			"url": "scriptex/localga"
-		},
-		{
-			"name": "github-pages-vuepress",
-			"url": "scriptex/github-pages-vuepress"
-		},
-		{
-			"name": "touchsweep",
-			"url": "scriptex/touchsweep"
-		},
-		{
-			"name": "svg64",
-			"url": "scriptex/svg64"
-		},
-		{
-			"name": "itcss",
-			"url": "scriptex/itcss"
-		},
-		{
-			"name": "itscss",
-			"url": "scriptex/itscss"
-		},
-		{
-			"name": "at-the-wall",
-			"url": "scriptex/at-the-wall"
-		},
-		{
-			"name": "react-accordion-ts",
-			"url": "scriptex/react-accordion-ts"
-		},
-		{
-			"name": "no-html",
-			"url": "scriptex/no-html"
-		},
-		{
-			"name": "react-svg-donuts",
-			"url": "scriptex/react-svg-donuts"
-		},
-		{
-			"name": "hilarious-css",
-			"url": "scriptex/hilarious-css"
-		},
-		{
-			"name": "scss-goodies",
-			"url": "scriptex/scss-goodies"
-		},
-		{
-			"name": "awesome-useless-websites",
-			"url": "scriptex/awesome-useless-websites"
-		},
-		{
-			"name": "typed-usa-states",
-			"url": "scriptex/typed-usa-states"
-		},
-		{
-			"name": "css-diagnostics",
-			"url": "scriptex/css-diagnostics"
-		},
-		{
-			"name": "vuejs-template",
-			"url": "three11/vuejs-template"
-		},
-		{
-			"name": "react-dropper",
-			"url": "scriptex/react-dropper"
-		},
-		{
-			"name": "calendar-widget",
-			"url": "scriptex/calendar-widget"
-		},
-		{
-			"name": "async-array-prototype",
-			"url": "scriptex/async-array-prototype"
-		},
-		{
-			"name": "itcss-emmet-snippets",
-			"url": "scriptex/itcss-emmet-snippets"
-		}
-	],
-	"tracks": [
-		{
-			"name": "La Playa",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/fh1igvfnzzucnmh/Scriptex_-_01_-_La_Playa%28Invader__2004%29.mp3?dl=0"
-		},
-		{
-			"name": "Clash",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/p8o4hpat99va06b/Scriptex_-_02_-_Clash%28Invader__2004%29.mp3?dl=0"
-		},
-		{
-			"name": "Joe Cocker - U Can Leave Your Hat On",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/knvvlxhezgpiium/Scriptex_-_03_-_Joe_Cocker_-_U_Can_Leave_Your_Hat_On%28Invader__2004%29.mp3?dl=0"
-		},
-		{
-			"name": "Energy",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/ez9cj1v1vd6fs4m/Scriptex_-_04_-_Energy%28Invader__2004%29.mp3?dl=0"
-		},
-		{
-			"name": "Dance Anthem (Energy part II)",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/yzvcbrusy60j44g/Scriptex_-_05_-_Dance_Anthem%28Energy_part_II%29%28Invader__2004%29.mp3?dl=0"
-		},
-		{
-			"name": "Invader",
-			"artist": "Scriptex with Serum",
-			"url": "https://www.dropbox.com/s/uwf47rwdagnhu7n/Scriptex_-_06_-_Invader%28with_Serum%29%28Invader__2004%29.mp3?dl=0"
-		},
-		{
-			"name": "Some Somtin",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/pni6act68s5du8l/Scriptex_-_07_-_Some_Somtin_%28Invader__2004%29.mp3?dl=0"
-		},
-		{
-			"name": "Snap - The Power (Energy mix)",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/agv3gkf885p6llf/Scriptex_-_08_-_Snap%21_-_The_Power%28Energy_mix%29%28Invader__2004%29.mp3?dl=0"
-		},
-		{
-			"name": "Lights",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/9qzi27kzuvs31km/Scriptex_-_09_-_Lights%28Invader__2004%29.mp3?dl=0"
-		},
-		{
-			"name": "Attack",
-			"artist": "Scriptex with Serum",
-			"url": "https://www.dropbox.com/s/ape1sivb3nplb4j/Scriptex_-_10_-_Attack%28with_Serum%29%28Invader__2004%29.mp3?dl=0"
-		},
-		{
-			"name": "Check Yoself",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/udqrmqdd2tc58d8/Scriptex_-_11_-_Check_Yoself%28Invader__2004%29.mp3?dl=0"
-		},
-		{
-			"name": "Spheric Triangle",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/trgmwdictt5e52q/Scriptex_-_12_-_Spheric_Triangle%28Invader__2004%29.mp3?dl=0"
-		},
-		{
-			"name": "Cycle Round",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/0fij938hmssv8rc/Scriptex_-_13_-_Cycle_Round%28Invader__2004%29.mp3?dl=0"
-		},
-		{
-			"name": "Get This!",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/5ik33i4uvtdiuj0/Scriptex_-_14_-_Get_This%21%28Invader__2004%29.mp3?dl=0"
-		},
-		{
-			"name": "Gabber Myth",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/l36265mpso0xcjr/Scriptex_-_15_-_Gabber_Myth%28Invader__2004%29.mp3?dl=0"
-		},
-		{
-			"name": "Energy",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/lg993y6522ph2qk/Scriptex_-_01_-_Energy%28Chemistry_EP__2005%29.mp3?dl=0"
-		},
-		{
-			"name": "Schwefelsaure",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/cjuvrx9h20koi2c/Scriptex_-_02_-_Schwefelsaure%28Invader__2005%29.mp3?dl=0"
-		},
-		{
-			"name": "Cycle Round",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/lm41zk5xu5jwn3t/Scriptex_-_03_-_Cycle_Round%28Invader__2005%29.mp3?dl=0"
-		},
-		{
-			"name": "Black Soul",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/n4vwf6504l89hif/Scriptex_-_01_-_Black_Soul%28Dark__2006%29.mp3?dl=0"
-		},
-		{
-			"name": "Gravity",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/j69piqwo2f1a152/Scriptex_-_02_-_Gravity%28Dark__2006%29.mp3?dl=0"
-		},
-		{
-			"name": "Winter Dance",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/r9vsfqya8mmx03k/Scriptex_-_03_-_Winter_Dance%28Dark__2006%29.mp3?dl=0"
-		},
-		{
-			"name": "The Heart (edit)",
-			"artist": "Scriptex with Linderman",
-			"url": "https://www.dropbox.com/s/q68qqq3xwcjxn1k/Scriptex_-_04_-_The_Heart%28edit%29%28with_Linderman%29%28Dark__2006%29.mp3?dl=0"
-		},
-		{
-			"name": "U Got Me",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/tesdok7ses376ao/Scriptex_-_05_-_U_Got_Me%28Dark__2006%29.mp3?dl=0"
-		},
-		{
-			"name": "April Joke",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/4ow68ywkysuqjrh/Scriptex_-_06_-_April_Joke%28Dark__2006%29.mp3?dl=0"
-		},
-		{
-			"name": "Miracle",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/dgljwawe10a0z42/Scriptex_-_07_-_Miracle%28Dark__2006%29.mp3?dl=0"
-		},
-		{
-			"name": "Spring or Summer",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/9w1n4jyv92o8y4s/Scriptex_-_08_-_Spring_Or_Summer%28Dark__2006%29.mp3?dl=0"
-		},
-		{
-			"name": "Last Night Preparation",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/ho49bfqya7dazbb/Scriptex_-_09_-_Last_Night_Preparation%28Dark__2006%29.mp3?dl=0"
-		},
-		{
-			"name": "U Got Me (remix)",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/tvxs2hn8qeecj3k/Scriptex_-_10_-_U_Got_Me%28remix%29%28Dark__2006%29.mp3?dl=0"
-		},
-		{
-			"name": "Tribute to Jay-Z",
-			"artist": "Scriptex with Serum",
-			"url": "https://www.dropbox.com/s/02gnsu65idsoi4b/Scriptex_-_11_-_Tribute_To_Jay-Z%28with_Serum%29%28Dark__2006%29.mp3?dl=0"
-		},
-		{
-			"name": "Accidently",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/79axqq2wt5yjows/Scriptex_-_12_-_Accidently%28Dark__2006%29.mp3?dl=0"
-		},
-		{
-			"name": "The Driller",
-			"artist": "Scriptex & Serum",
-			"url": "https://www.dropbox.com/s/7zyeaqcedomaqo4/Scriptex___Serum_-_01_-_The_Driller%28Collection_Diamonds__2007%29.mp3?dl=0"
-		},
-		{
-			"name": "The Blasters",
-			"artist": "Scriptex & Serum",
-			"url": "https://www.dropbox.com/s/lb12ikdua1lymd9/Scriptex___Serum_-_02_-_The_Blasters%28Collection_Diamonds__2007%29.mp3?dl=0"
-		},
-		{
-			"name": "The Demag",
-			"artist": "Scriptex & Serum",
-			"url": "https://www.dropbox.com/s/wk2l5n5rlcaaff6/Scriptex___Serum_-_03_-_The_Demag%28Collection_Diamonds__2007%29.mp3?dl=0"
-		},
-		{
-			"name": "The Cat",
-			"artist": "Scriptex & Serum",
-			"url": "https://www.dropbox.com/s/ddttkfq93ulgkkg/Scriptex___Serum_-_04_-_The_Cat%28Collection_Diamonds__2007%29.mp3?dl=0"
-		},
-		{
-			"name": "The Process Plant",
-			"artist": "Scriptex & Serum",
-			"url": "https://www.dropbox.com/s/n1zu81og2ng0czn/Scriptex___Serum_-_05_-_The_Process_Plant%28Collection_Diamonds__2007%29.mp3?dl=0"
-		},
-		{
-			"name": "Tamper Trouble",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/1gui4oia31srxl3/Scriptex_-_Tamper_Trouble_EP%282007%29.mp3?dl=0"
-		},
-		{
-			"name": "Sadness Tale",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/lzs7lkw2p37uor0/Scriptex_-_A1_-_Sadness__Tale%28Sadness_is_Allright_EP__2008%29.mp3?dl=0"
-		},
-		{
-			"name": "Alright",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/n5asr7nn1pnfybh/Scriptex_-_B1_-_Allright%28Sadness_is_Allright_EP__2008%29.mp3?dl=0"
-		},
-		{
-			"name": "Alone",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/qxdgioakm3dlct7/Scriptex%20-%2001%20-%20Alone.mp3?dl=0"
-		},
-		{
-			"name": "Movement",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/7lbaxr9nwrdhwq8/Scriptex%20-%2002%20-%20Movement.mp3?dl=0"
-		},
-		{
-			"name": "Drum Expo",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/s13g4im31ffe38i/Scriptex%20-%2003%20-%20Drum%20Expo.mp3?dl=0"
-		},
-		{
-			"name": "One Night",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/o2jmnrv18n3fw1m/Scriptex%20-%2004%20-%20One%20Night.mp3?dl=0"
-		},
-		{
-			"name": "The Winner",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/u1kp8quzcfx7fca/Scriptex%20-%2005%20-%20The%20Winner.mp3?dl=0"
-		},
-		{
-			"name": "Brick's Thoughts",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/g9v9f5299lkzln8/Scriptex%20-%2006%20-%20Brick_s%20Thoughts.mp3?dl=0"
-		},
-		{
-			"name": "Acceleration",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/r0du3qwlgbed5mh/Scriptex%20-%2007%20-%20Acceleration.mp3?dl=0"
-		},
-		{
-			"name": "Joy",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/4wmovo3qatd5tk9/Scriptex%20-%2008%20-%20Joy.mp3?dl=0"
-		},
-		{
-			"name": "Extraordinary",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/jj2ccdke6nln7kw/Scriptex%20-%2009%20-%20Extraordinary.mp3?dl=0"
-		},
-		{
-			"name": "Party Session part 1",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/fy14rpmgrhv7qk7/Scriptex%20-%20Party%20Session%20part%201.mp3?dl=0"
-		},
-		{
-			"name": "Party Session part 2",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/bxxp8xu6d45smsp/Scriptex%20-%20Party%20Session%20part%202.mp3?dl=0"
-		},
-		{
-			"name": "Party Session part 3",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/50ftjrrvbfv4muo/Scriptex%20-%20Party%20Session%20part%203.mp3?dl=0"
-		},
-		{
-			"name": "Party Session part 4",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/g0k385f5ud6et74/Scriptex%20-%20Party%20Session%20part%204.mp3?dl=0"
-		},
-		{
-			"name": "T.B.C.",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/1w1yurfxv9r4zox/Scriptex%20-%2001%20-%20T.B.C..mp3?dl=0"
-		},
-		{
-			"name": "Space",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/pk8njjdlrfylxtg/Scriptex%20-%2002%20-%20Space.mp3?dl=0"
-		},
-		{
-			"name": "Dixi",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/pq1ux8rbzulyirm/Scriptex%20-%2003%20-%20Dixi.mp3?dl=0"
-		},
-		{
-			"name": "Andaverse",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/d8ywpnnwmta2110/Scriptex%20-%2004%20-%20Andaverse.mp3?dl=0"
-		},
-		{
-			"name": "Military Situation",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/nz33i5z5ixuel4h/Scriptex%20-%2005%20-%20Military%20Situation.mp3?dl=0"
-		},
-		{
-			"name": "Trip Hop is Dead",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/hfvjj04yv0v0avp/Scriptex%2001%20Trip-hop%20Is%20Dead.mp3?dl=0"
-		},
-		{
-			"name": "Bull Fight",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/fc825b0hen6h1y2/Scriptex%2002%20Bull%20Fight.mp3?dl=0"
-		},
-		{
-			"name": "Curse",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/8tbc554e6ehdhkg/Scriptex%2003%20Curse.mp3?dl=0"
-		},
-		{
-			"name": "Reload",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/21rz84t9jcjkesc/Scriptex%2004%20Reload.mp3?dl=0"
-		},
-		{
-			"name": "Alien Attack",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/xrr53iinlkrdb7r/Scriptex%2005%20Alien%20Attack.mp3?dl=0"
-		},
-		{
-			"name": "The Professionalist",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/d0peqokyccskarx/Scriptex%2006%20The%20Professionalist%28question%20%E2%84%9613%29.mp3?dl=0"
-		},
-		{
-			"name": "Mesmerizing",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/l80146rff18q7a2/Scriptex%2007%20Mesmerizing.mp3?dl=0"
-		},
-		{
-			"name": "Robotica",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/oxb5kcvgymz7lm1/Scriptex%2008%20Robotica.mp3?dl=0"
-		},
-		{
-			"name": "Boom x3 (Question No. 14)",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/n6m3ip4a9isk2rp/Scriptex%2009%20Boom%20x%203%28Question%20%E2%84%9614%29.mp3?dl=0"
-		},
-		{
-			"name": "Alien Attack (Full version)",
-			"artist": "Scriptex",
-			"url": "https://www.dropbox.com/s/oebgh2r7p55yp2a/Scriptex%2010%20Alien%20Attack%28Full%20Version%29.mp3?dl=0"
-		}
-	]
+  "name": "atanas.info",
+  "version": "1.1.0",
+  "description": "Atanas Atanasov's Personal Website",
+  "scripts": {
+    "start-projects": "cd projects-dev && vuepress dev",
+    "build-projects": "cd projects-dev && vuepress build",
+    "fetch-projects": "node ./projects-dev/.vuepress/fetch-projects.js",
+    "fetch-music": "node ./assets/scripts/fetch-music.js",
+    "localga": "localga --id UA-83446952-1 --folder ./assets/scripts",
+    "build:modern": "webpack --NODE_ENV=production --IS_MODERN",
+    "build:legacy": "webpack --NODE_ENV=production",
+    "build": "yarn fetch-music && yarn fetch-projects && yarn build-projects && yarn localga && yarn build:legacy && yarn build:modern",
+    "start": "yarn localga && webpack --watch --NODE_ENV=development",
+    "optisize": "optisize --src=\"./assets/images\"",
+    "html-temp": "php index.php > index.temp.html",
+    "html-min": "htmlmin -o index.html index.temp.html",
+    "rm-html": "rm index.temp.html",
+    "html": "yarn html-temp && yarn html-min && yarn rm-html",
+    "critical": "yarn html-temp && critical index.temp.html -w 1280 -h 800 --ignore @font-face > assets/dist/critical.css",
+    "deploy": "yarn build && yarn critical && yarn html",
+    "local-build": "yarn localga && yarn build:legacy && yarn build:modern && yarn critical && yarn html",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
+  },
+  "keywords": [
+    "MPA",
+    "webpack",
+    "setup",
+    "multi-page"
+  ],
+  "author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
+  "repository": "https://github.com/scriptex/webpack-mpa",
+  "bugs": {
+    "url": "https://github.com/scriptex/webpack-mpa/issues",
+    "email": "scriptex.bg@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@three11/animate-top-offset": "0.7.0",
+    "d3": "5.16.0",
+    "normalize.css": "8.0.1",
+    "vuepress": "1.4.1",
+    "webamp": "1.4.1-beta01",
+    "snyk": "^1.316.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.9.6",
+    "@babel/plugin-proposal-class-properties": "7.8.3",
+    "@babel/plugin-proposal-decorators": "7.8.3",
+    "@babel/plugin-proposal-export-namespace-from": "7.8.3",
+    "@babel/plugin-proposal-function-sent": "7.8.3",
+    "@babel/plugin-proposal-json-strings": "7.8.3",
+    "@babel/plugin-proposal-numeric-separator": "7.8.3",
+    "@babel/plugin-proposal-throw-expressions": "7.8.3",
+    "@babel/plugin-syntax-dynamic-import": "7.8.3",
+    "@babel/plugin-syntax-import-meta": "7.8.3",
+    "@babel/preset-env": "7.9.6",
+    "@three11/optisize": "1.0.0",
+    "autoprefixer": "9.7.6",
+    "babel-loader": "8.1.0",
+    "babel-minify-webpack-plugin": "0.3.1",
+    "browser-sync": "2.26.7",
+    "browser-sync-webpack-plugin": "2.2.2",
+    "clean-webpack-plugin": "1.0.1",
+    "core-js": "3.6.5",
+    "critical": "1.3.9",
+    "css-loader": "3.5.3",
+    "cssnano": "4.1.10",
+    "extract-text-webpack-plugin": "4.0.0-beta.0",
+    "file-loader": "6.0.0",
+    "html-minifier-cli": "0.1.0",
+    "localga": "2.0.0",
+    "node-sass": "4.14.0",
+    "node-sass-magic-importer": "5.3.2",
+    "postcss-easy-import": "3.0.0",
+    "postcss-flexbugs-fixes": "4.2.1",
+    "postcss-loader": "3.0.0",
+    "postcss-merge-rules": "4.0.3",
+    "postcss-url": "8.0.0",
+    "postcss-utilities": "0.8.4",
+    "postcss-watch-folder": "1.0.0",
+    "request": "2.88.2",
+    "request-promise-native": "1.0.8",
+    "sass-loader": "8.0.2",
+    "spritesh": "1.2.1",
+    "style-loader": "1.2.1",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.11",
+    "webpack-shell-plugin": "0.5.0",
+    "webpack-spritesmith": "1.1.0",
+    "yargs": "15.3.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "main": "assets/scripts/main.js",
+  "private": true,
+  "projects": [
+    {
+      "name": "webpack-mpa",
+      "url": "scriptex/webpack-mpa"
+    },
+    {
+      "name": "webpack-mpa-next",
+      "url": "scriptex/webpack-mpa-next"
+    },
+    {
+      "name": "webpack-mpa-ts",
+      "url": "scriptex/webpack-mpa-ts"
+    },
+    {
+      "name": "animate-me",
+      "url": "scriptex/AnimateMe"
+    },
+    {
+      "name": "intro-scroll",
+      "url": "scriptex/IntroScroll"
+    },
+    {
+      "name": "html5-form-validator",
+      "url": "scriptex/html5-form-validator"
+    },
+    {
+      "name": "dator",
+      "url": "scriptex/dator"
+    },
+    {
+      "name": "pass-score",
+      "url": "scriptex/pass-score"
+    },
+    {
+      "name": "random-splice",
+      "url": "scriptex/random-splice"
+    },
+    {
+      "name": "sublime-snippets",
+      "url": "scriptex/sublime-snippets"
+    },
+    {
+      "name": "postcss-watch-folder",
+      "url": "scriptex/postcss-watch-folder"
+    },
+    {
+      "name": "postcss-tools",
+      "url": "scriptex/postcss-tools"
+    },
+    {
+      "name": "notabene",
+      "url": "scriptex/Notabene"
+    },
+    {
+      "name": "evolution",
+      "url": "scriptex/Evolution"
+    },
+    {
+      "name": "react-template",
+      "url": "three11/react-template"
+    },
+    {
+      "name": "react-template-ts",
+      "url": "three11/react-template-ts"
+    },
+    {
+      "name": "optisize",
+      "url": "three11/optisize"
+    },
+    {
+      "name": "debounce",
+      "url": "three11/debounce"
+    },
+    {
+      "name": "dom-helpers",
+      "url": "three11/dom-helpers"
+    },
+    {
+      "name": "infinite-scroll",
+      "url": "three11/infinite-scroll"
+    },
+    {
+      "name": "animate-top-offset",
+      "url": "three11/animate-top-offset"
+    },
+    {
+      "name": "accordion",
+      "url": "three11/accordion"
+    },
+    {
+      "name": "istouch",
+      "url": "three11/istouch"
+    },
+    {
+      "name": "extract-query-arg",
+      "url": "three11/extract-query-arg"
+    },
+    {
+      "name": "scrollspy",
+      "url": "three11/scrollspy"
+    },
+    {
+      "name": "create-pwa",
+      "url": "scriptex/create-pwa"
+    },
+    {
+      "name": "localga",
+      "url": "scriptex/localga"
+    },
+    {
+      "name": "github-pages-vuepress",
+      "url": "scriptex/github-pages-vuepress"
+    },
+    {
+      "name": "touchsweep",
+      "url": "scriptex/touchsweep"
+    },
+    {
+      "name": "svg64",
+      "url": "scriptex/svg64"
+    },
+    {
+      "name": "itcss",
+      "url": "scriptex/itcss"
+    },
+    {
+      "name": "itscss",
+      "url": "scriptex/itscss"
+    },
+    {
+      "name": "at-the-wall",
+      "url": "scriptex/at-the-wall"
+    },
+    {
+      "name": "react-accordion-ts",
+      "url": "scriptex/react-accordion-ts"
+    },
+    {
+      "name": "no-html",
+      "url": "scriptex/no-html"
+    },
+    {
+      "name": "react-svg-donuts",
+      "url": "scriptex/react-svg-donuts"
+    },
+    {
+      "name": "hilarious-css",
+      "url": "scriptex/hilarious-css"
+    },
+    {
+      "name": "scss-goodies",
+      "url": "scriptex/scss-goodies"
+    },
+    {
+      "name": "awesome-useless-websites",
+      "url": "scriptex/awesome-useless-websites"
+    },
+    {
+      "name": "typed-usa-states",
+      "url": "scriptex/typed-usa-states"
+    },
+    {
+      "name": "css-diagnostics",
+      "url": "scriptex/css-diagnostics"
+    },
+    {
+      "name": "vuejs-template",
+      "url": "three11/vuejs-template"
+    },
+    {
+      "name": "react-dropper",
+      "url": "scriptex/react-dropper"
+    },
+    {
+      "name": "calendar-widget",
+      "url": "scriptex/calendar-widget"
+    },
+    {
+      "name": "async-array-prototype",
+      "url": "scriptex/async-array-prototype"
+    },
+    {
+      "name": "itcss-emmet-snippets",
+      "url": "scriptex/itcss-emmet-snippets"
+    }
+  ],
+  "tracks": [
+    {
+      "name": "La Playa",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/fh1igvfnzzucnmh/Scriptex_-_01_-_La_Playa%28Invader__2004%29.mp3?dl=0"
+    },
+    {
+      "name": "Clash",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/p8o4hpat99va06b/Scriptex_-_02_-_Clash%28Invader__2004%29.mp3?dl=0"
+    },
+    {
+      "name": "Joe Cocker - U Can Leave Your Hat On",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/knvvlxhezgpiium/Scriptex_-_03_-_Joe_Cocker_-_U_Can_Leave_Your_Hat_On%28Invader__2004%29.mp3?dl=0"
+    },
+    {
+      "name": "Energy",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/ez9cj1v1vd6fs4m/Scriptex_-_04_-_Energy%28Invader__2004%29.mp3?dl=0"
+    },
+    {
+      "name": "Dance Anthem (Energy part II)",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/yzvcbrusy60j44g/Scriptex_-_05_-_Dance_Anthem%28Energy_part_II%29%28Invader__2004%29.mp3?dl=0"
+    },
+    {
+      "name": "Invader",
+      "artist": "Scriptex with Serum",
+      "url": "https://www.dropbox.com/s/uwf47rwdagnhu7n/Scriptex_-_06_-_Invader%28with_Serum%29%28Invader__2004%29.mp3?dl=0"
+    },
+    {
+      "name": "Some Somtin",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/pni6act68s5du8l/Scriptex_-_07_-_Some_Somtin_%28Invader__2004%29.mp3?dl=0"
+    },
+    {
+      "name": "Snap - The Power (Energy mix)",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/agv3gkf885p6llf/Scriptex_-_08_-_Snap%21_-_The_Power%28Energy_mix%29%28Invader__2004%29.mp3?dl=0"
+    },
+    {
+      "name": "Lights",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/9qzi27kzuvs31km/Scriptex_-_09_-_Lights%28Invader__2004%29.mp3?dl=0"
+    },
+    {
+      "name": "Attack",
+      "artist": "Scriptex with Serum",
+      "url": "https://www.dropbox.com/s/ape1sivb3nplb4j/Scriptex_-_10_-_Attack%28with_Serum%29%28Invader__2004%29.mp3?dl=0"
+    },
+    {
+      "name": "Check Yoself",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/udqrmqdd2tc58d8/Scriptex_-_11_-_Check_Yoself%28Invader__2004%29.mp3?dl=0"
+    },
+    {
+      "name": "Spheric Triangle",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/trgmwdictt5e52q/Scriptex_-_12_-_Spheric_Triangle%28Invader__2004%29.mp3?dl=0"
+    },
+    {
+      "name": "Cycle Round",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/0fij938hmssv8rc/Scriptex_-_13_-_Cycle_Round%28Invader__2004%29.mp3?dl=0"
+    },
+    {
+      "name": "Get This!",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/5ik33i4uvtdiuj0/Scriptex_-_14_-_Get_This%21%28Invader__2004%29.mp3?dl=0"
+    },
+    {
+      "name": "Gabber Myth",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/l36265mpso0xcjr/Scriptex_-_15_-_Gabber_Myth%28Invader__2004%29.mp3?dl=0"
+    },
+    {
+      "name": "Energy",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/lg993y6522ph2qk/Scriptex_-_01_-_Energy%28Chemistry_EP__2005%29.mp3?dl=0"
+    },
+    {
+      "name": "Schwefelsaure",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/cjuvrx9h20koi2c/Scriptex_-_02_-_Schwefelsaure%28Invader__2005%29.mp3?dl=0"
+    },
+    {
+      "name": "Cycle Round",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/lm41zk5xu5jwn3t/Scriptex_-_03_-_Cycle_Round%28Invader__2005%29.mp3?dl=0"
+    },
+    {
+      "name": "Black Soul",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/n4vwf6504l89hif/Scriptex_-_01_-_Black_Soul%28Dark__2006%29.mp3?dl=0"
+    },
+    {
+      "name": "Gravity",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/j69piqwo2f1a152/Scriptex_-_02_-_Gravity%28Dark__2006%29.mp3?dl=0"
+    },
+    {
+      "name": "Winter Dance",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/r9vsfqya8mmx03k/Scriptex_-_03_-_Winter_Dance%28Dark__2006%29.mp3?dl=0"
+    },
+    {
+      "name": "The Heart (edit)",
+      "artist": "Scriptex with Linderman",
+      "url": "https://www.dropbox.com/s/q68qqq3xwcjxn1k/Scriptex_-_04_-_The_Heart%28edit%29%28with_Linderman%29%28Dark__2006%29.mp3?dl=0"
+    },
+    {
+      "name": "U Got Me",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/tesdok7ses376ao/Scriptex_-_05_-_U_Got_Me%28Dark__2006%29.mp3?dl=0"
+    },
+    {
+      "name": "April Joke",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/4ow68ywkysuqjrh/Scriptex_-_06_-_April_Joke%28Dark__2006%29.mp3?dl=0"
+    },
+    {
+      "name": "Miracle",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/dgljwawe10a0z42/Scriptex_-_07_-_Miracle%28Dark__2006%29.mp3?dl=0"
+    },
+    {
+      "name": "Spring or Summer",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/9w1n4jyv92o8y4s/Scriptex_-_08_-_Spring_Or_Summer%28Dark__2006%29.mp3?dl=0"
+    },
+    {
+      "name": "Last Night Preparation",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/ho49bfqya7dazbb/Scriptex_-_09_-_Last_Night_Preparation%28Dark__2006%29.mp3?dl=0"
+    },
+    {
+      "name": "U Got Me (remix)",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/tvxs2hn8qeecj3k/Scriptex_-_10_-_U_Got_Me%28remix%29%28Dark__2006%29.mp3?dl=0"
+    },
+    {
+      "name": "Tribute to Jay-Z",
+      "artist": "Scriptex with Serum",
+      "url": "https://www.dropbox.com/s/02gnsu65idsoi4b/Scriptex_-_11_-_Tribute_To_Jay-Z%28with_Serum%29%28Dark__2006%29.mp3?dl=0"
+    },
+    {
+      "name": "Accidently",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/79axqq2wt5yjows/Scriptex_-_12_-_Accidently%28Dark__2006%29.mp3?dl=0"
+    },
+    {
+      "name": "The Driller",
+      "artist": "Scriptex & Serum",
+      "url": "https://www.dropbox.com/s/7zyeaqcedomaqo4/Scriptex___Serum_-_01_-_The_Driller%28Collection_Diamonds__2007%29.mp3?dl=0"
+    },
+    {
+      "name": "The Blasters",
+      "artist": "Scriptex & Serum",
+      "url": "https://www.dropbox.com/s/lb12ikdua1lymd9/Scriptex___Serum_-_02_-_The_Blasters%28Collection_Diamonds__2007%29.mp3?dl=0"
+    },
+    {
+      "name": "The Demag",
+      "artist": "Scriptex & Serum",
+      "url": "https://www.dropbox.com/s/wk2l5n5rlcaaff6/Scriptex___Serum_-_03_-_The_Demag%28Collection_Diamonds__2007%29.mp3?dl=0"
+    },
+    {
+      "name": "The Cat",
+      "artist": "Scriptex & Serum",
+      "url": "https://www.dropbox.com/s/ddttkfq93ulgkkg/Scriptex___Serum_-_04_-_The_Cat%28Collection_Diamonds__2007%29.mp3?dl=0"
+    },
+    {
+      "name": "The Process Plant",
+      "artist": "Scriptex & Serum",
+      "url": "https://www.dropbox.com/s/n1zu81og2ng0czn/Scriptex___Serum_-_05_-_The_Process_Plant%28Collection_Diamonds__2007%29.mp3?dl=0"
+    },
+    {
+      "name": "Tamper Trouble",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/1gui4oia31srxl3/Scriptex_-_Tamper_Trouble_EP%282007%29.mp3?dl=0"
+    },
+    {
+      "name": "Sadness Tale",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/lzs7lkw2p37uor0/Scriptex_-_A1_-_Sadness__Tale%28Sadness_is_Allright_EP__2008%29.mp3?dl=0"
+    },
+    {
+      "name": "Alright",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/n5asr7nn1pnfybh/Scriptex_-_B1_-_Allright%28Sadness_is_Allright_EP__2008%29.mp3?dl=0"
+    },
+    {
+      "name": "Alone",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/qxdgioakm3dlct7/Scriptex%20-%2001%20-%20Alone.mp3?dl=0"
+    },
+    {
+      "name": "Movement",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/7lbaxr9nwrdhwq8/Scriptex%20-%2002%20-%20Movement.mp3?dl=0"
+    },
+    {
+      "name": "Drum Expo",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/s13g4im31ffe38i/Scriptex%20-%2003%20-%20Drum%20Expo.mp3?dl=0"
+    },
+    {
+      "name": "One Night",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/o2jmnrv18n3fw1m/Scriptex%20-%2004%20-%20One%20Night.mp3?dl=0"
+    },
+    {
+      "name": "The Winner",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/u1kp8quzcfx7fca/Scriptex%20-%2005%20-%20The%20Winner.mp3?dl=0"
+    },
+    {
+      "name": "Brick's Thoughts",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/g9v9f5299lkzln8/Scriptex%20-%2006%20-%20Brick_s%20Thoughts.mp3?dl=0"
+    },
+    {
+      "name": "Acceleration",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/r0du3qwlgbed5mh/Scriptex%20-%2007%20-%20Acceleration.mp3?dl=0"
+    },
+    {
+      "name": "Joy",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/4wmovo3qatd5tk9/Scriptex%20-%2008%20-%20Joy.mp3?dl=0"
+    },
+    {
+      "name": "Extraordinary",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/jj2ccdke6nln7kw/Scriptex%20-%2009%20-%20Extraordinary.mp3?dl=0"
+    },
+    {
+      "name": "Party Session part 1",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/fy14rpmgrhv7qk7/Scriptex%20-%20Party%20Session%20part%201.mp3?dl=0"
+    },
+    {
+      "name": "Party Session part 2",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/bxxp8xu6d45smsp/Scriptex%20-%20Party%20Session%20part%202.mp3?dl=0"
+    },
+    {
+      "name": "Party Session part 3",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/50ftjrrvbfv4muo/Scriptex%20-%20Party%20Session%20part%203.mp3?dl=0"
+    },
+    {
+      "name": "Party Session part 4",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/g0k385f5ud6et74/Scriptex%20-%20Party%20Session%20part%204.mp3?dl=0"
+    },
+    {
+      "name": "T.B.C.",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/1w1yurfxv9r4zox/Scriptex%20-%2001%20-%20T.B.C..mp3?dl=0"
+    },
+    {
+      "name": "Space",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/pk8njjdlrfylxtg/Scriptex%20-%2002%20-%20Space.mp3?dl=0"
+    },
+    {
+      "name": "Dixi",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/pq1ux8rbzulyirm/Scriptex%20-%2003%20-%20Dixi.mp3?dl=0"
+    },
+    {
+      "name": "Andaverse",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/d8ywpnnwmta2110/Scriptex%20-%2004%20-%20Andaverse.mp3?dl=0"
+    },
+    {
+      "name": "Military Situation",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/nz33i5z5ixuel4h/Scriptex%20-%2005%20-%20Military%20Situation.mp3?dl=0"
+    },
+    {
+      "name": "Trip Hop is Dead",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/hfvjj04yv0v0avp/Scriptex%2001%20Trip-hop%20Is%20Dead.mp3?dl=0"
+    },
+    {
+      "name": "Bull Fight",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/fc825b0hen6h1y2/Scriptex%2002%20Bull%20Fight.mp3?dl=0"
+    },
+    {
+      "name": "Curse",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/8tbc554e6ehdhkg/Scriptex%2003%20Curse.mp3?dl=0"
+    },
+    {
+      "name": "Reload",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/21rz84t9jcjkesc/Scriptex%2004%20Reload.mp3?dl=0"
+    },
+    {
+      "name": "Alien Attack",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/xrr53iinlkrdb7r/Scriptex%2005%20Alien%20Attack.mp3?dl=0"
+    },
+    {
+      "name": "The Professionalist",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/d0peqokyccskarx/Scriptex%2006%20The%20Professionalist%28question%20%E2%84%9613%29.mp3?dl=0"
+    },
+    {
+      "name": "Mesmerizing",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/l80146rff18q7a2/Scriptex%2007%20Mesmerizing.mp3?dl=0"
+    },
+    {
+      "name": "Robotica",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/oxb5kcvgymz7lm1/Scriptex%2008%20Robotica.mp3?dl=0"
+    },
+    {
+      "name": "Boom x3 (Question No. 14)",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/n6m3ip4a9isk2rp/Scriptex%2009%20Boom%20x%203%28Question%20%E2%84%9614%29.mp3?dl=0"
+    },
+    {
+      "name": "Alien Attack (Full version)",
+      "artist": "Scriptex",
+      "url": "https://www.dropbox.com/s/oebgh2r7p55yp2a/Scriptex%2010%20Alien%20Attack%28Full%20Version%29.mp3?dl=0"
+    }
+  ],
+  "snyk": true
 }
