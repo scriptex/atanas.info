@@ -1,3 +1,4 @@
+// @ts-nocheck
 const fs = require('fs');
 const url = require('url');
 const path = require('path');
@@ -8,8 +9,8 @@ const magicImporter = require('node-sass-magic-importer');
 const { ProvidePlugin } = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const WebpackShellPlugin = require('webpack-shell-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const devURL = argv.URL;
 const isServer = argv.SERVER;
@@ -44,7 +45,6 @@ const svgoConfig = {
 const postcssConfig = {
 	plugins: [
 		require('postcss-easy-import'),
-		// @ts-ignore
 		require('postcss-url')({
 			url: 'rebase'
 		}),
@@ -122,8 +122,7 @@ const extractTextConfig = {
 };
 
 const cleanConfig = {
-	verbose: false,
-	exclude: ['sprite.svg']
+	cleanOnceBeforeBuildPatterns: ['dist/*', '!dist/sprite.svg']
 };
 
 const shellScripts = [];
@@ -225,7 +224,7 @@ module.exports = env => {
 						new WebpackShellPlugin({
 							onBuildStart: shellScripts
 						}),
-						new CleanWebpackPlugin(['./assets/dist/*'], cleanConfig)
+						new CleanWebpackPlugin(cleanConfig)
 				  ]
 				: [
 						new MinifyPlugin(
@@ -245,7 +244,6 @@ module.exports = env => {
 
 	if (!isProduction) {
 		if (devURL) {
-			// @ts-ignore
 			browserSyncConfig.host = url.parse(devURL).hostname;
 			browserSyncConfig.proxy = devURL;
 		}
