@@ -1,8 +1,6 @@
 // Wrapper
 
 .o-wrapper {
-	min-height: 100%;
-	overflow: hidden;
 	@include flex-column(nowrap, stretch, flex-start);
 	background-color: rgba($color-black, 0.7);
 }

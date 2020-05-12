@@ -49,6 +49,12 @@
 				</li>
 
 				<li>
+					<a href="resume.pdf" title="My CV" target="_blank" rel="noopener noreferrer">
+						Resume (pdf)
+					</a>
+				</li>
+
+				<li>
 					<a href="#music" class="js-internal-link" title="My music">
 						Music
 					</a>
