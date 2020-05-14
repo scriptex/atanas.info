@@ -67,7 +67,7 @@
 				</li>
 
 				<li>
-					<a href="https://at-the-wall.now.sh/" title="At the Wall - A Game of Thrones scene" target="_blank" rel="noopener noreferrer">
+					<a href="https://at-the-wall.atanas.info/" title="At the Wall - A Game of Thrones scene" target="_blank" rel="noopener noreferrer">
 						At the Wall
 					</a>
 				</li>
@@ -79,13 +79,13 @@
 				</li>
 
 				<li>
-					<a href="https://material-tetris.now.sh/" title="Material Tetris. Play here!" target="_blank" rel="noopener noreferrer">
+					<a href="https://material-tetris.atanas.info/" title="Material Tetris. Play here!" target="_blank" rel="noopener noreferrer">
 						Material Tetris
 					</a>
 				</li>
 
 				<li>
-					<a href="https://material-snake.now.sh/" title="Material Snake. Play here!" target="_blank" rel="noopener noreferrer">
+					<a href="https://material-snake.atanas.info/" title="Material Snake. Play here!" target="_blank" rel="noopener noreferrer">
 						Material Snake
 					</a>
 				</li>
