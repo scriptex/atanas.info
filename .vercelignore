@@ -1,11 +1,12 @@
 .circleci
 .github
 
+node_modules
+
 !projects
 projects-dev
 
-node_modules
-
+.codebeatignore
 .editorconfig
 .gitattrubutes
 .gitignore
@@ -14,10 +15,13 @@ node_modules
 .travis.yml
 .whitesource
 icons.sketch
+index.php
+!index.html
+LICENSE
 package.json
+README.md
 renovate.json
 webpack.config.js
 yarn.lock
 
-LICENSE
-README.md
+
