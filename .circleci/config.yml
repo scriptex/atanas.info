@@ -17,6 +17,3 @@ jobs:
             - run:
                   name: build:modern
                   command: yarn build:modern
-            - run:
-                  name: optisize
-                  command: yarn optisize
