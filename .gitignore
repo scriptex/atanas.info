@@ -21,6 +21,19 @@ Thumbs.db
 .now
 
 # Open source projects
-projects
-projects-dev/*.md
-!projects-dev/README.md
+/projects/*.md
+!/projects/README.md
+
+# Parcel
+.cache
+
+# Vercel
+.vercel
+
+# Project specific
+.env
+/dist
+/src/index.css
+/src/assets/scripts/google-analytics-local.js
+/src/assets/scripts/analytics.js
+/src/assets/scripts/projects-list.json

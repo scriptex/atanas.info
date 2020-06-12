@@ -7,13 +7,10 @@ jobs:
             - checkout
             - run:
                   name: install
-                  command: yarn install
+                  command: yarn
             - run:
-                  name: localga
-                  command: yarn localga
+                  name: lint
+                  command: yarn lint
             - run:
-                  name: build:legacy
-                  command: yarn build:legacy
-            - run:
-                  name: build:modern
-                  command: yarn build:modern
+                  name: build
+                  command: yarn build

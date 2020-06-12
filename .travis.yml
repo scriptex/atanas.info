@@ -7,4 +7,5 @@ git:
 install:
     - yarn
 script:
-    - yarn deploy
+    - yarn lint
+    - yarn build
