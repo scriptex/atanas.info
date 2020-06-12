@@ -121,7 +121,7 @@ async function createScreenshots(pages: Project[]) {
 	Promise.all(results).then(() => {
 		writeFileSync(
 			resolve(__dirname, '../src/assets/scripts/projects-list.json'),
-			JSON.stringify(newProjects, '' as any, 2)
+			JSON.stringify(newProjects, null, 2)
 		);
 
 		process.exit();
