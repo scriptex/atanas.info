@@ -4,7 +4,12 @@ import { Section, ExternalLink } from '..';
 import { bio, BioEntry } from '../../assets/scripts/bio';
 
 export const SectionAbout: React.FunctionComponent = () => (
-	<Section id="about" className=" c-article" hasButton={true}>
+	<Section
+		id="about"
+		style={{ backgroundImage: 'url(images/temp/desktop.jpg)' }}
+		className=" c-article fullsize-background"
+		hasButton={true}
+	>
 		<h2>About me</h2>
 
 		<img src="./images/temp/atanas.jpg" alt="" />

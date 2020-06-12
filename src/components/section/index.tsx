@@ -9,6 +9,7 @@ interface Props {
 	hasShell?: boolean;
 	hasButton: boolean;
 	shellClass?: string;
+	style?: React.CSSProperties;
 }
 
 export const Section: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
@@ -27,7 +28,11 @@ export const Section: React.FunctionComponent<Readonly<Props>> = (props: Readonl
 	);
 
 	return (
-		<section className={`c-section c-section--${props.id}${props.className || ''}`} id={props.id}>
+		<section
+			id={props.id}
+			className={`c-section c-section--${props.id}${props.className || ''}`}
+			style={props.style}
+		>
 			{props.hasShell ? (
 				<div className={`o-shell${props.shellClass ? ' ' + props.shellClass : ''}`}>
 					<SectionElements {...props} />
