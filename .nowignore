@@ -1,16 +1,27 @@
 .circleci
 .github
+.vscode
 
-node_modules
+/node_modules
+/test-config
 
-!/projects
+!/projects/README.md
+!/dist
+!/src/index.css
+!/src/assets/scripts/google-analytics-local.js
+!/src/assets/scripts/analytics.js
+!/src/assets/scripts/projects-list.json
 
 .codebeatignore
 .editorconfig
+.eslintrc
 .gitattrubutes
 .gitignore
+.nvmrc
 .prettierignore
 .prettierrc
+.stylelintignore
+.stylelintrc
 .travis.yml
 .whitesource
 icons.sketch
@@ -18,4 +29,4 @@ renovate.json
 yarn.lock
 
 LICENSE
-README.md
+/README.md
