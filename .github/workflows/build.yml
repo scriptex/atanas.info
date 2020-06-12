@@ -12,3 +12,7 @@ jobs:
                   yarn
                   yarn lint
                   yarn build
+              env:
+                  CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+                  CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+                  CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
