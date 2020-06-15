@@ -104,7 +104,7 @@ async function createScreenshots(pages: Project[]) {
 						if (project.title === page.title) {
 							return {
 								...project,
-								image: result.url
+								image: result.secure_url
 							};
 						}
 
