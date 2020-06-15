@@ -10,6 +10,7 @@ import {
 	SectionStats,
 	SectionSkills,
 	SectionSlides,
+	SectionVideos,
 	SectionPortfolio
 } from '..';
 
@@ -33,6 +34,8 @@ export const App: React.FunctionComponent = () => (
 			<SectionPortfolio />
 
 			<SectionSlides />
+
+			<SectionVideos />
 
 			<Footer />
 		</>

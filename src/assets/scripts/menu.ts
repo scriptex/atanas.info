@@ -33,6 +33,11 @@ export const links: Array<Readonly<Link>> = [
 		content: 'Slides'
 	},
 	{
+		href: '#videos',
+		title: 'My video presentations',
+		content: 'Videos'
+	},
+	{
 		rel: 'noopener noreferrer',
 		href: './resume.pdf',
 		title: 'My CV',

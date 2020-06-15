@@ -13,4 +13,5 @@ export { default as SectionPortfolio } from './section-portfolio';
 export { default as SectionSkills } from './section-skills';
 export { default as SectionSlides } from './section-slides';
 export { default as SectionStats } from './section-stats';
+export { default as SectionVideos } from './section-videos';
 export { default as Svg } from './svg';
