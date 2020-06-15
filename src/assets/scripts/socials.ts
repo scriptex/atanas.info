@@ -36,6 +36,16 @@ export const socials: Social[] = [
 		title: 'See my packages on NPM'
 	},
 	{
+		url: 'https://www.youtube.com/user/scriptex',
+		icon: 'youtube',
+		title: 'See my videos on YouTube'
+	},
+	{
+		url: 'https://stackoverflow.com/users/4140082/atanas-atanasov',
+		icon: 'stackoverflow',
+		title: 'See my profile on StackOverflow'
+	},
+	{
 		url: 'https://codepen.io/scriptex/',
 		icon: 'codepen',
 		title: 'See my work on Codepen'
