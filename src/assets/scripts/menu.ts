@@ -39,11 +39,11 @@ export const links: Array<Readonly<Link>> = [
 		target: '_blank',
 		content: 'Resume (pdf)'
 	},
-	{
-		href: '#music',
-		title: 'My music',
-		content: 'Music'
-	},
+	// {
+	// 	href: '#music',
+	// 	title: 'My music',
+	// 	content: 'Music'
+	// },
 	{
 		rel: 'noopener noreferrer',
 		href: 'projects/',

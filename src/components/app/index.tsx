@@ -8,7 +8,6 @@ import {
 	SectionHello,
 	SectionAbout,
 	SectionStats,
-	SectionMusic,
 	SectionSkills,
 	SectionSlides,
 	SectionPortfolio
@@ -34,8 +33,6 @@ export const App: React.FunctionComponent = () => (
 			<SectionPortfolio />
 
 			<SectionSlides />
-
-			<SectionMusic />
 
 			<Footer />
 		</>
