@@ -59,5 +59,29 @@ export const projects = [
 		image: 'images/temp/x-form.png',
 		title: 'X Form',
 		description: 'HTML5, CSS3, ES2018, WordPress'
+	},
+	{
+		url: 'https://at-the-wall.atanas.info',
+		image: 'images/temp/at-the-wall.png',
+		title: 'At the Wall',
+		description: 'CSS3'
+	},
+	{
+		url: 'https://material-snake.atanas.info',
+		image: 'images/temp/material-snake.png',
+		title: 'Material Snake',
+		description: 'TypeScript, HTML, CSS3'
+	},
+	{
+		url: 'https://material-tetris.atanas.info',
+		image: 'images/temp/material-tetris.png',
+		title: 'Material Tetris',
+		description: 'TypeScript, HTML, CSS3'
+	},
+	{
+		url: 'https://scriptex.js.org/2048',
+		image: 'images/temp/2048.png',
+		title: '2048',
+		description: 'TypeScript, HTML, CSS3'
 	}
 ];
