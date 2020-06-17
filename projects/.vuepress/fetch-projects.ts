@@ -1,10 +1,15 @@
 #!/usr/bin/env ts-node-script
 
+interface Project {
+	readonly url: string;
+	readonly name: string;
+}
+
 import fetch, { Response } from 'node-fetch';
 
 import { writeFileSync, unlinkSync, existsSync } from 'fs';
 
-import { projects } from '../../src/assets/scripts/open-source';
+const { projects }: { projects: Project[] } = require('../../src/assets/scripts/open-source');
 
 const fetchProject = async (repo: string, branch: string = 'master', file: string = 'README.md'): Promise<string> => {
 	const rootURL = 'https://raw.githubusercontent.com';
@@ -22,7 +27,7 @@ const asyncForEach = async <T>(array: T[], callback: (item: T, index: number, ar
 if (!projects.length) {
 	console.log('atanas.info: No projects specified.');
 } else {
-	asyncForEach(projects, project => {
+	asyncForEach(projects, (project: Project) => {
 		fetchProject(project.url)
 			.then((data: string) => {
 				const name = `projects/${project.name}.md`;
