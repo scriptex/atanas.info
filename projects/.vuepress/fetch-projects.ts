@@ -4,7 +4,7 @@ import fetch, { Response } from 'node-fetch';
 
 import { writeFileSync, unlinkSync, existsSync } from 'fs';
 
-import * as pckg from '../../package.json';
+import { projects } from '../../src/assets/scripts/open-source';
 
 const fetchProject = async (repo: string, branch: string = 'master', file: string = 'README.md'): Promise<string> => {
 	const rootURL = 'https://raw.githubusercontent.com';
@@ -19,10 +19,10 @@ const asyncForEach = async <T>(array: T[], callback: (item: T, index: number, ar
 	}
 };
 
-if (!pckg.projects.length) {
-	console.log('atanas.info: No projects specified in package.json');
+if (!projects.length) {
+	console.log('atanas.info: No projects specified.');
 } else {
-	asyncForEach(pckg.projects, project => {
+	asyncForEach(projects, project => {
 		fetchProject(project.url)
 			.then((data: string) => {
 				const name = `projects/${project.name}.md`;

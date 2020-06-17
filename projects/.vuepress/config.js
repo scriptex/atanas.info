@@ -281,7 +281,7 @@ module.exports = {
 	ga: 'UA-83446952-1',
 	serviceWorker: true,
 	themeConfig: {
-		sidebar: require('../../package.json')
+		sidebar: require('../../src/assets/scripts/open-source')
 			.projects.sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0))
 			.map(({ name }) => ['./' + name + '.md', name]),
 		repo: 'https://atanas.info',

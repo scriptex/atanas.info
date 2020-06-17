@@ -1,13 +1,14 @@
 #!/usr/bin/env ts-node-script
 
 import { writeFileSync, unlinkSync, existsSync } from 'fs';
-import * as pckg from '../../../package.json';
 
-if (!pckg.tracks.length) {
-	console.log('atanas.info: No tracks specified in package.json');
+import { Track, music as tracks } from '../scripts/music';
+
+if (!tracks.length) {
+	console.log('atanas.info: No tracks specified.');
 } else {
 	const file = 'src/assets/scripts/tracks.ts';
-	const data = pckg.tracks.map(track => {
+	const data = tracks.map((track: Track) => {
 		const url = track.url.replace('www', 'dl');
 
 		return {
