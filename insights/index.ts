@@ -8,7 +8,11 @@ import { load } from 'cheerio';
 import { client } from './client';
 import { asyncForEach } from './utils';
 
-const getContributions = async (url = 'https://github.com/scriptex') =>
+interface Contribution {
+	[x: string]: number;
+}
+
+const getContributions = async (url = 'https://github.com/scriptex'): Promise<Contribution[]> =>
 	await fetch(url)
 		.then(res => res.text())
 		.then((markup: string) => {

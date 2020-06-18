@@ -13,7 +13,7 @@ export const drawSkills = (words: Skill[]): void => {
 	const height = window.innerHeight;
 	const svg = createSVG('skills-graph', width, height);
 
-	const renderSkills = (data: any) => {
+	const renderSkills = (data: any): void => {
 		const simulation = createSimulation(width, height);
 		const links = createLinks(svg, data.links);
 		const nodes = createNodes(svg, data.nodes, width, dragHandler(simulation));
