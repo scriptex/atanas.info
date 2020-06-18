@@ -2,8 +2,28 @@
 
 import { writeFileSync } from 'fs';
 
+import fetch from 'node-fetch';
+import { load } from 'cheerio';
+
 import { client } from './client';
 import { asyncForEach } from './utils';
+
+const getContributions = async (url = 'https://github.com/scriptex') =>
+	await fetch(url)
+		.then(res => res.text())
+		.then((markup: string) => {
+			const $ = load(markup);
+
+			return $('rect')
+				.get()
+				.reduce(
+					(data, rect) => ({
+						...data,
+						[$(rect).data('date')]: $(rect).data('count')
+					}),
+					{}
+				);
+		});
 
 (async function (): Promise<void> {
 	console.log('Getting insights data from Github...');
@@ -11,6 +31,7 @@ import { asyncForEach } from './utils';
 	try {
 		const file = 'src/assets/scripts/insights.json';
 		const user = await client.get({ path: '/users/scriptex' });
+		const calendar = await getContributions();
 		const orgRepos = await client.get({ path: '/orgs/three11/repos?per_page=100' });
 		const userRepos = await client.get({ path: '/users/scriptex/repos?per_page=100' });
 		const repositories: any[] = [];
@@ -55,7 +76,7 @@ import { asyncForEach } from './utils';
 			updatedAt: user.updated_at
 		};
 
-		writeFileSync(file, JSON.stringify({ general, repositories }, null, 2));
+		writeFileSync(file, JSON.stringify({ general, calendar, repositories }, null, 2));
 
 		console.log(`Successfully wrote insights data from Github in ${file}`);
 	} catch (e) {

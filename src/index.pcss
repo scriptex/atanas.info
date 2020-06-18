@@ -609,8 +609,7 @@ body {
 	text-align: center;
 	position: relative;
 	z-index: 2;
-	padding: 4rem 0;
-	background-color: color-mod(var(--color-primary) tint(10%));
+	padding: 0;
 }
 
 .c-section--stats h1,
@@ -632,8 +631,114 @@ body {
 
 /* prettier-ignore */
 .c-section--stats codersrank-widget { /* stylelint-disable-line selector-type-no-unknown */
+	max-width: 40rem;
 	display: block;
-	margin-bottom: 2.5rem;
+	margin: 0 auto 2.5rem;
+}
+
+.c-section--stats .c-section__head {
+	padding: 4rem 0 1px;
+	background-color: color-mod(var(--color-primary) a(80%));
+}
+
+.c-section--stats .c-section__entry {
+	padding: 4rem 0 2rem;
+	margin-top: 4rem;
+	background-color: color-mod(var(--color-primary) a(80%));
+}
+
+.c-section--stats .c-section__entry--no-background {
+	color: var(--color-primary);
+	margin-top: 0;
+	background-color: transparent;
+}
+
+.c-section--stats .c-section__list {
+	text-align: center;
+	max-width: 62rem;
+	@mixin flex-row wrap, center, center;
+	padding: 0 0 1rem 0;
+	margin: auto;
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translate(0rem, 0rem);
+	}
+	50% {
+		transform: translate(-1rem, -1rem);
+	}
+}
+
+.c-section--stats .c-section__list li {
+	color: var(--color-secondary);
+	width: 10rem;
+	height: 10rem;
+	@mixin flex-row wrap, center, center;
+	align-content: center;
+	padding: 1rem;
+	margin: 1rem;
+	border: 0.25rem solid var(--color-primary);
+	background-color: color-mod(var(--color-primary) a(80%));
+	border-radius: 50%;
+	animation: float 10s infinite alternate;
+}
+
+.c-section--stats .c-section__list li:nth-child(even) {
+	animation-direction: alternate-reverse;
+}
+
+@for $i from 1 to 20 {
+	.c-section--stats .c-section__list li:nth-child($i) {
+		/* prettier-ignore */
+		animation-delay: $(i)s;
+	}
+}
+
+.c-section--stats .c-section__list li:first-child {
+	color: var(--color-primary);
+	width: 100%;
+	height: auto;
+	display: block;
+	padding: 0 0 2rem;
+	border: 0;
+	margin: 0;
+	background-color: transparent;
+	border-radius: 0;
+	animation: none;
+}
+
+.c-section--stats .c-section__list li span,
+.c-section--stats .c-section__list li strong {
+	width: 100%;
+	display: block;
+}
+
+.c-section--stats .c-section__list li strong {
+	font-size: 1.5rem;
+	padding-top: 0.5rem;
+}
+
+.c-section--stats .c-section__actions {
+	padding: 4rem 0;
+}
+
+.c-calendar {
+	--gap: 1px;
+	--cols: 52;
+	--rows: 7;
+	--size: 0.8125rem;
+	max-width: calc(var(--cols) * (var(--size) + var(--gap) * 2));
+	height: calc(var(--rows) * (var(--size) + var(--gap) * 2));
+	@mixin flex-column wrap, flex-start, flex-start;
+	margin: 0 auto 2rem;
+}
+
+.c-calendar__item {
+	width: var(--size);
+	height: var(--size);
+	margin: var(--gap);
 }
 
 @media (--tablet-portrait) {
