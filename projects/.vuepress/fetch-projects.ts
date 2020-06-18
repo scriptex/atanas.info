@@ -9,6 +9,7 @@ import fetch, { Response } from 'node-fetch';
 
 import { writeFileSync, unlinkSync, existsSync } from 'fs';
 
+import { asyncForEach } from '../../insights/utils';
 const { projects }: { projects: Project[] } = require('../../src/assets/scripts/open-source');
 
 const fetchProject = async (repo: string, branch: string = 'master', file: string = 'README.md'): Promise<string> => {
@@ -16,12 +17,6 @@ const fetchProject = async (repo: string, branch: string = 'master', file: strin
 	const filepath = `${rootURL}/${repo}/${branch}/${file}`;
 
 	return await fetch(filepath).then((response: Response) => response.text());
-};
-
-const asyncForEach = async <T>(array: T[], callback: (item: T, index: number, arr: T[]) => any) => {
-	for (let index = 0; index < array.length; index++) {
-		await callback(array[index], index, array);
-	}
 };
 
 if (!projects.length) {

@@ -1,46 +1,60 @@
 import * as React from 'react';
 
-import { badges } from '../../assets/scripts/stats';
-import { Section, ExternalLink } from '..';
+import { Section } from '..';
 
-export const SectionStats: React.FunctionComponent = () => (
-	<Section id="stats" hasButton={true}>
-		<h1>Stats</h1>
+export const SectionStats: React.FunctionComponent = () => {
+	const [data, setData] = React.useState(null);
+	const [error, setError] = React.useState(false);
+	const [loading, setLoading] = React.useState(true);
 
-		<div className="o-grid">
-			<div className="o-grid__item o-grid__item--1of2">
-				<h2>
-					Commits (based on data by{' '}
-					<ExternalLink href="https://sourcerer.io/scriptex">Sourcerer</ExternalLink>)
-				</h2>
+	React.useEffect(() => {
+		fetch('/api/get-user')
+			.then((res: Response) => res.json())
+			.then((data: any) => {
+				console.log(data);
 
-				<ul>
-					{badges.map((src: string, index: number) => (
-						<li key={index}>
-							<ExternalLink href="https://sourcerer.io/scriptex">
-								<img src={src} />
-							</ExternalLink>
-						</li>
-					))}
-				</ul>
+				if (data.status && data.status >= 400 && data.status <= 500) {
+					setError(true);
+				} else {
+					setData(data);
+				}
+			})
+			.catch(() => setError(true))
+			.finally(() => setLoading(false));
+	}, []);
+
+	return (
+		<Section id="stats" hasButton={true}>
+			<h1>Stats</h1>
+
+			{error && <p>Error getting data from Github.</p>}
+
+			{loading && <p>Loading data from Github...</p>}
+
+			<div className="o-grid">
+				<div className="o-grid__item o-grid__item--1of2">
+					<h2>
+						<a
+							href="https://profile.codersrank.io/user/scriptex"
+							target="_blank"
+							rel="noopener noreferrer nofollow"
+						>
+							Codersrank
+						</a>{' '}
+						Profile
+					</h2>
+
+					<codersrank-widget username="scriptex"></codersrank-widget>
+				</div>
+
+				{data && (
+					<>
+						<div className="o-grid__item o-grid__item--1of2"></div>
+					</>
+				)}
 			</div>
-
-			<div className="o-grid__item o-grid__item--1of2">
-				<h2>
-					<a
-						href="https://profile.codersrank.io/user/scriptex"
-						target="_blank"
-						rel="noopener noreferrer nofollow"
-					>
-						Codersrank
-					</a>{' '}
-					Profile
-				</h2>
-
-				<codersrank-widget username="scriptex"></codersrank-widget>
-			</div>
-		</div>
-	</Section>
-);
+		</Section>
+	);
+};
 
 export default SectionStats;

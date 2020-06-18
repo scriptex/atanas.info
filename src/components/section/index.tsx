@@ -4,7 +4,7 @@ import { ExternalLink } from '..';
 
 interface Props {
 	id: string;
-	children: (JSX.Element | JSX.Element[])[];
+	children: any;
 	className?: string;
 	hasShell?: boolean;
 	hasButton: boolean;
