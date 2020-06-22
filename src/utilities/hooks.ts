@@ -8,13 +8,13 @@ export const useInterval = (callback: (...args: unknown[]) => unknown, delay: nu
 	}, [callback]);
 
 	React.useEffect((): any => {
-		const tick = () => {
+		const tick = (): void => {
 			savedCallback.current();
 		};
 
 		if (delay !== null) {
 			const id = setInterval(tick, delay);
-			return () => clearInterval(id);
+			return (): void => clearInterval(id);
 		}
 	}, [delay]);
 };
