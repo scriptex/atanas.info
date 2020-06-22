@@ -1,8 +1,10 @@
 import * as React from 'react';
-import format from 'date-fns/format';
+import { format } from 'date-fns';
 
-import insights from '../../assets/scripts/insights.json';
+import github from '../../assets/scripts/github-insights.json';
+import gitlab from '../../assets/scripts/gitlab-insights.json';
 import { Section } from '..';
+import { renderContributions } from '../../assets/scripts/gitlab-contributions';
 
 interface GeneralInsight {
 	readonly title: string;
@@ -11,12 +13,11 @@ interface GeneralInsight {
 
 export const formatDate = (date: string): string => format(new Date(date), 'dd MMM yyyy');
 
-export const SectionStats: React.FunctionComponent = () => {
-	const { general, calendar, repositories }: any = insights;
-
+export const GithubStats: React.FunctionComponent = () => {
+	const { general, calendar, repositories }: any = github;
 	const blocks: GeneralInsight[] = [
 		{
-			title: 'Top languages',
+			title: 'Used languages',
 			value: repositories
 				.reduce((result: any[], repo: any) => Array.from(new Set([...result, repo.language as any])), [])
 				.filter(Boolean)
@@ -51,30 +52,7 @@ export const SectionStats: React.FunctionComponent = () => {
 	];
 
 	return (
-		<Section id="stats" hasShell={false} hasButton={true}>
-			<header className="c-section__head">
-				<div className="o-shell">
-					<h1>Stats</h1>
-				</div>
-			</header>
-
-			<div className="c-section__entry">
-				<div className="o-shell">
-					<h2>
-						<a
-							href="https://profile.codersrank.io/user/scriptex"
-							target="_blank"
-							rel="noopener noreferrer nofollow"
-						>
-							Codersrank
-						</a>{' '}
-						Profile
-					</h2>
-
-					<codersrank-widget username="scriptex"></codersrank-widget>
-				</div>
-			</div>
-
+		<>
 			<div className="c-section__entry c-section__entry--no-background">
 				<div className="o-shell">
 					<h2>Github profile statistics</h2>
@@ -106,6 +84,100 @@ export const SectionStats: React.FunctionComponent = () => {
 					</div>
 				</div>
 			</div>
+		</>
+	);
+};
+
+export const GitlabStats: React.FunctionComponent = () => {
+	const { general, calendar, repositories }: any = gitlab;
+	const blocks: GeneralInsight[] = [
+		{
+			title: 'Used languages',
+			value: repositories
+				.reduce(
+					(result: any[], repo: any) => Array.from(new Set([...result, ...Object.keys(repo.languages)])),
+					[]
+				)
+				.filter(Boolean)
+				.join(', ')
+		},
+
+		{ title: 'Joined date', value: formatDate(general.createdAt) },
+		{ title: 'Last active', value: formatDate(general.updatedAt) },
+		{ title: 'Total repositories', value: general.repos },
+		{ title: 'Public repositories', value: repositories.filter((r: any) => !r.private).length },
+		{ title: 'Private repositories', value: repositories.filter((r: any) => r.private).length },
+		{
+			title: 'Total stars',
+			value: repositories.reduce((result: number, repo: any) => result + repo.stargazers, 0)
+		},
+		{
+			title: 'Total issues',
+			value: repositories.reduce((result: number, repo: any) => result + repo.issues || 0, 0)
+		}
+	];
+
+	React.useEffect(() => {
+		renderContributions('#gitlab-calendar', calendar);
+	});
+
+	return (
+		<>
+			<div className="c-section__entry c-section__entry--no-background">
+				<div className="o-shell">
+					<h2>Gitlab profile statistics</h2>
+
+					<ul className="c-section__list">
+						{blocks.map((item: GeneralInsight, i: number) => (
+							<li key={i}>
+								<span>{item.title}:</span>
+								<strong>{item.value}</strong>
+							</li>
+						))}
+					</ul>
+				</div>
+			</div>
+
+			<div className="c-section__entry">
+				<div className="o-shell">
+					<h2>Gitlab contributions calendar</h2>
+
+					<div className="c-calendar" id="gitlab-calendar" />
+				</div>
+			</div>
+		</>
+	);
+};
+
+export const SectionStats: React.FunctionComponent = () => {
+	return (
+		<Section id="stats" hasShell={false} hasButton={true}>
+			<header className="c-section__head">
+				<div className="o-shell">
+					<h1>Stats</h1>
+				</div>
+			</header>
+
+			<div className="c-section__entry">
+				<div className="o-shell">
+					<h2>
+						<a
+							href="https://profile.codersrank.io/user/scriptex"
+							target="_blank"
+							rel="noopener noreferrer nofollow"
+						>
+							Codersrank
+						</a>{' '}
+						Profile
+					</h2>
+
+					<codersrank-widget username="scriptex"></codersrank-widget>
+				</div>
+			</div>
+
+			<GithubStats />
+
+			<GitlabStats />
 		</Section>
 	);
 };
