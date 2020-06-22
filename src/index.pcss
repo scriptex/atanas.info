@@ -1,4 +1,5 @@
 @import 'itcss';
+@import 'react-jinke-music-player/assets/index.css';
 
 /* variables */
 
@@ -919,34 +920,7 @@ body {
 
 /* music */
 
-#webamp {
-	position: fixed !important;
-	z-index: -1 !important;
-	opacity: 0;
-	visibility: hidden;
-	transform: translateX(-100%);
-	transition: all $timing $easing;
-}
-
-#music {
-	width: 1px;
-	height: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: -1;
-	pointer-events: none;
-}
-
-.music--active #music {
-	opacity: 1;
-	z-index: 900;
-	visibility: visible;
-}
-
-.music--active ~ #webamp {
-	opacity: 1;
-	visibility: visible;
-	z-index: 1000 !important;
-	transform: translateX(0%);
+.react-jinke-music-player-main {
+	position: relative;
+	z-index: 99;
 }
