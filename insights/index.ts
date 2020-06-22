@@ -9,7 +9,10 @@ import { client } from './client';
 import { asyncForEach } from './utils';
 
 interface Contribution {
-	[x: string]: number;
+	[x: string]: {
+		count: number;
+		color: string;
+	};
 }
 
 const getContributions = async (url = 'https://github.com/scriptex'): Promise<Contribution[]> =>
@@ -23,13 +26,16 @@ const getContributions = async (url = 'https://github.com/scriptex'): Promise<Co
 				.reduce(
 					(data, rect) => ({
 						...data,
-						[$(rect).data('date')]: $(rect).data('count')
+						[$(rect).data('date')]: {
+							count: $(rect).data('count'),
+							color: $(rect).attr('fill')
+						}
 					}),
 					{}
 				);
 		});
 
-(async function (): Promise<void> {
+const getGithubInsights = async (): Promise<void> => {
 	console.log('Getting insights data from Github...');
 
 	try {
@@ -86,6 +92,10 @@ const getContributions = async (url = 'https://github.com/scriptex'): Promise<Co
 	} catch (e) {
 		console.log('Error getting data from Github.', e);
 	}
+};
+
+(async function (): Promise<void> {
+	getGithubInsights();
 
 	process.exit();
 })();

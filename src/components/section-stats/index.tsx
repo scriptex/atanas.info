@@ -1,9 +1,8 @@
 import * as React from 'react';
 import format from 'date-fns/format';
 
-import { Section } from '..';
 import insights from '../../assets/scripts/insights.json';
-import { adjustColor } from '../../../insights/utils';
+import { Section } from '..';
 
 interface GeneralInsight {
 	readonly title: string;
@@ -100,8 +99,8 @@ export const SectionStats: React.FunctionComponent = () => {
 							<div
 								className="c-calendar__item"
 								key={i}
-								style={{ backgroundColor: adjustColor('#33b81a', calendar[key]) }}
-								title={`${formatDate(key)} : ${calendar[key]} contributions`}
+								style={{ backgroundColor: calendar[key].color }}
+								title={`${formatDate(key)} : ${calendar[key].count} contributions`}
 							/>
 						))}
 					</div>

@@ -15,11 +15,3 @@ export const asyncForEach = async <T>(
 export const sortProjects = (projects: Project[]): Project[] => {
 	return projects.sort((a: Project, b: Project) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0));
 };
-
-export const adjustColor = (color: string, amount: number): string =>
-	'#' +
-	color
-		.replace(/^#/, '')
-		.replace(/../g, color =>
-			('0' + Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).substr(-2)
-		);
