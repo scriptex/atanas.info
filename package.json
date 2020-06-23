@@ -22,6 +22,7 @@
 		"build": "yarn pre && yarn css && yarn tsc && yarn parcel-build && yarn fetch-projects && yarn build-projects",
 		"test": "jest",
 		"test:watch": "jest --watch",
+		"test:coverage": "jest --coverage",
 		"lint": "npm run lint:ts && npm run lint:css",
 		"lint:ts": "eslint 'src/**/*.{ts,tsx}'",
 		"lint:css": "stylelint './src/**/*.pcss' --config .stylelintrc",
@@ -99,7 +100,27 @@
 			"<rootDir>/node_modules/",
 			"<rootDir>/dist/",
 			"<rootDir>/test-config/"
-		]
+		],
+		"collectCoverageFrom": [
+			"<rootDir>/src/**/*.{ts,tsx}",
+			"!<rootDir>/src/**/*.{d.ts,d.tsx}",
+			"!<rootDir>/src/index.tsx",
+			"!<rootDir>/src/assets/scripts/canvas.ts",
+			"!<rootDir>/src/assets/scripts/fetch-music.ts",
+			"!<rootDir>/src/assets/scripts/music.ts",
+			"!<rootDir>/src/assets/scripts/projects.ts",
+			"!<rootDir>/src/assets/scripts/skills.ts",
+			"!<rootDir>/src/components/index.ts",
+			"!<rootDir>/src/utilities/index.ts"
+		],
+		"coverageThreshold": {
+			"global": {
+				"branches": 90,
+				"functions": 90,
+				"lines": 90,
+				"statements": 90
+			}
+		}
 	},
 	"dependencies": {
 		"d3": "5.16.0",
@@ -116,6 +137,7 @@
 		"@types/d3": "5.7.2",
 		"@types/enzyme": "3.10.5",
 		"@types/express": "4.17.6",
+		"@types/jest": "^26.0.0",
 		"@types/node": "14.0.13",
 		"@types/node-fetch": "2.5.7",
 		"@types/puppeteer": "3.0.0",

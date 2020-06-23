@@ -8,4 +8,5 @@ install:
     - yarn
 script:
     - yarn lint
+    - yarn test:coverage
     - yarn build
