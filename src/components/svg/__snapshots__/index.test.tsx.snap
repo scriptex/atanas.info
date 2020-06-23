@@ -8,3 +8,12 @@ exports[`Svg component Should render the Svg component 1`] = `
   uniquifyIDs={false}
 />
 `;
+
+exports[`Svg component Should render the Svg component without an additional className 1`] = `
+<InlineSVG
+  cacheRequests={true}
+  className="c-svg-icon "
+  src="test"
+  uniquifyIDs={false}
+/>
+`;

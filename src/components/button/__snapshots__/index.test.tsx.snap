@@ -20,3 +20,13 @@ exports[`Button component Should render the Button component with type link 1`] 
   Link
 </a>
 `;
+
+exports[`Button component Should render the Button component without an additional className 1`] = `
+<button
+  className="c-btn "
+  onClick={[MockFunction]}
+  type="submit"
+>
+  Button
+</button>
+`;

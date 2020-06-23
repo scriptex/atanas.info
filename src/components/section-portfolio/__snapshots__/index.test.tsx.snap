@@ -11,6 +11,51 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
   </h1>
   <div
     className="c-section__body"
-  />
+  >
+    <Component
+      className=""
+      href="https://www.google.com"
+      key="0"
+      style={
+        Object {
+          "backgroundImage": "url(image 1)",
+        }
+      }
+    >
+      <div>
+        <strong>
+          Project 1
+        </strong>
+        <span>
+          <small>
+            Technologies:
+          </small>
+          Description 1
+        </span>
+      </div>
+    </Component>
+    <Component
+      className="disabled"
+      href=""
+      key="1"
+      style={
+        Object {
+          "backgroundImage": "url(image 2)",
+        }
+      }
+    >
+      <div>
+        <strong>
+          Project 2
+        </strong>
+        <span>
+          <small>
+            Technologies:
+          </small>
+          Description 2
+        </span>
+      </div>
+    </Component>
+  </div>
 </Component>
 `;

@@ -9,4 +9,10 @@ describe('Svg component', () => {
 
 		expect(wrapper).toMatchSnapshot();
 	});
+
+	it('Should render the Svg component without an additional className', () => {
+		const wrapper = shallow(<Svg src="test" />);
+
+		expect(wrapper).toMatchSnapshot();
+	});
 });

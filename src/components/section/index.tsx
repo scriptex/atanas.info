@@ -12,37 +12,31 @@ interface Props {
 	style?: React.CSSProperties;
 }
 
-export const Section: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
-	const SectionElements: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => (
-		<>
-			{props.children}
+export const SectionElements: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => (
+	<>
+		{props.children}
 
-			{props.hasButton && (
-				<div className="c-section__actions">
-					<ExternalLink href="mailto:hi@atanas.info" className="c-btn">
-						Hire me
-					</ExternalLink>
-				</div>
-			)}
-		</>
-	);
+		{props.hasButton && (
+			<div className="c-section__actions">
+				<ExternalLink href="mailto:hi@atanas.info" className="c-btn">
+					Hire me
+				</ExternalLink>
+			</div>
+		)}
+	</>
+);
 
-	return (
-		<section
-			id={props.id}
-			className={`c-section c-section--${props.id}${props.className || ''}`}
-			style={props.style}
-		>
-			{props.hasShell ? (
-				<div className={`o-shell${props.shellClass ? ' ' + props.shellClass : ''}`}>
-					<SectionElements {...props} />
-				</div>
-			) : (
+export const Section: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => (
+	<section id={props.id} className={`c-section c-section--${props.id}${props.className || ''}`} style={props.style}>
+		{props.hasShell ? (
+			<div className={`o-shell${props.shellClass ? ' ' + props.shellClass : ''}`}>
 				<SectionElements {...props} />
-			)}
-		</section>
-	);
-};
+			</div>
+		) : (
+			<SectionElements {...props} />
+		)}
+	</section>
+);
 
 Section.defaultProps = {
 	hasShell: true,

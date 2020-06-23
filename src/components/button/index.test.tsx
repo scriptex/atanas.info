@@ -14,6 +14,16 @@ describe('Button component', () => {
 		expect(wrapper).toMatchSnapshot();
 	});
 
+	it('Should render the Button component without an additional className', () => {
+		const wrapper = shallow(
+			<Button type="submit" onClick={jest.fn()}>
+				Button
+			</Button>
+		);
+
+		expect(wrapper).toMatchSnapshot();
+	});
+
 	it('Should render the Button component with type link', () => {
 		const wrapper = shallow(
 			<Button type="link" className="link" href="https://google.com" rel="noopener noreferrrer" target="_blank">

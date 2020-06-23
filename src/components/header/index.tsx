@@ -25,20 +25,7 @@ export const Header: React.FunctionComponent = () => {
 					<ul>
 						{links.map(({ href, title, content, ...rest }: Link, index: number) => (
 							<li key={index}>
-								<a
-									href={href}
-									title={title}
-									{...rest}
-									onClick={() => {
-										const root = document.getElementById('root');
-
-										setOpen(!open);
-
-										if (href === '#music' && root) {
-											root.classList.add('music--active');
-										}
-									}}
-								>
+								<a href={href} title={title} {...rest} onClick={() => setOpen(!open)}>
 									{content}
 								</a>
 							</li>

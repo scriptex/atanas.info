@@ -13,3 +13,71 @@ exports[`SectionHello component Should render the SectionHello component 1`] = `
   <Component />
 </Component>
 `;
+
+exports[`Slider component Should render the Slider component 1`] = `
+<div
+  className="c-slider"
+>
+  <h1>
+    Hello! 
+    <br />
+    I am Atanas Atanasov
+  </h1>
+  <h2>
+    <span
+      className="current"
+      key="0"
+    >
+      a senior web developer
+    </span>
+    <span
+      className=""
+      key="1"
+    >
+      a JavaScript master
+    </span>
+    <span
+      className=""
+      key="2"
+    >
+      a CSS wizard
+    </span>
+    <span
+      className=""
+      key="3"
+    >
+      a TypeScript engineer
+    </span>
+    <span
+      className=""
+      key="4"
+    >
+      a NodeJS enthusiast
+    </span>
+    <span
+      className=""
+      key="5"
+    >
+      a front-end lead
+    </span>
+    <span
+      className=""
+      key="6"
+    >
+      a UI builder
+    </span>
+    <span
+      className=""
+      key="7"
+    >
+      a father
+    </span>
+    <span
+      className=""
+      key="8"
+    >
+      a husband
+    </span>
+  </h2>
+</div>
+`;
