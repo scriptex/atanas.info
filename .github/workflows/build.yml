@@ -11,8 +11,8 @@ jobs:
               run: |
                   yarn
                   yarn lint
-                  yarn test:coverage
                   yarn build
+                  yarn test:coverage
               env:
                   CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
                   CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}

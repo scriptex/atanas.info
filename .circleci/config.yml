@@ -12,8 +12,8 @@ jobs:
                   name: lint
                   command: yarn lint
             - run:
-                  name: test
-                  command: yarn test:coverage
-            - run:
                   name: build
                   command: yarn build
+            - run:
+                  name: test
+                  command: yarn test:coverage
