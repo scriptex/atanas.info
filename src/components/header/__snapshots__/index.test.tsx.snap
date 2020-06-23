@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component Should render the Header component 1`] = `
+<header
+  className="c-header"
+>
+  <div
+    className="o-shell o-shell--flex"
+  >
+    <a
+      className="c-logo"
+      href="#hello"
+      title="Back to top"
+    >
+      <Component
+        className="c-svg-logo"
+        name="svg-logo"
+      />
+    </a>
+    <button
+      className="c-nav__toggle"
+      onClick={[Function]}
+    >
+      <span />
+      <span />
+      <span />
+    </button>
+    <nav
+      className="c-nav"
+    >
+      <ul>
+        <li
+          key="0"
+        >
+          <a
+            href="#about"
+            onClick={[Function]}
+            title="About me"
+          >
+            About
+          </a>
+        </li>
+        <li
+          key="1"
+        >
+          <a
+            href="#skills"
+            onClick={[Function]}
+            title="My skills"
+          >
+            Skills
+          </a>
+        </li>
+        <li
+          key="2"
+        >
+          <a
+            href="#stats"
+            onClick={[Function]}
+            title="My stats"
+          >
+            Stats
+          </a>
+        </li>
+        <li
+          key="3"
+        >
+          <a
+            href="#portfolio"
+            onClick={[Function]}
+            title="My portfolio"
+          >
+            Portfolio
+          </a>
+        </li>
+        <li
+          key="4"
+        >
+          <a
+            href="#slides"
+            onClick={[Function]}
+            title="My presentations"
+          >
+            Slides
+          </a>
+        </li>
+        <li
+          key="5"
+        >
+          <a
+            href="#videos"
+            onClick={[Function]}
+            title="My video presentations"
+          >
+            Videos
+          </a>
+        </li>
+        <li
+          key="6"
+        >
+          <a
+            href="./resume.pdf"
+            onClick={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+            title="My CV"
+          >
+            Resume (pdf)
+          </a>
+        </li>
+        <li
+          key="7"
+        >
+          <a
+            href="projects/"
+            onClick={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+            title="My open source projects"
+          >
+            Open source
+          </a>
+        </li>
+        <li
+          key="8"
+        >
+          <a
+            href="https://at-the-wall.atanas.info/"
+            onClick={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+            title="At the Wall - A Game of Thrones scene"
+          >
+            At the Wall
+          </a>
+        </li>
+        <li
+          key="9"
+        >
+          <a
+            href="https://scriptex.js.org/2048/"
+            onClick={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Join the numbers and get to the 2048 tile!"
+          >
+            2048
+          </a>
+        </li>
+        <li
+          key="10"
+        >
+          <a
+            href="https://material-tetris.atanas.info/"
+            onClick={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Material Tetris. Play here!"
+          >
+            Material Tetris
+          </a>
+        </li>
+        <li
+          key="11"
+        >
+          <a
+            href="https://material-snake.atanas.info/"
+            onClick={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Material Snake. Play here!"
+          >
+            Material Snake
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+`;

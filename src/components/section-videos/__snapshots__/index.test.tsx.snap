@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionVideos component Should render the SectionVideos component 1`] = `
+<Component
+  className=" c-section--slides"
+  hasButton={true}
+  hasShell={true}
+  id="videos"
+>
+  <h2>
+    Videos
+  </h2>
+  <nav
+    className="c-section__nav"
+  >
+    <ul>
+      <li
+        className="current"
+        key="0"
+      >
+        <Component
+          onClick={[Function]}
+          type="button"
+        >
+          Do more with Sublime Text
+        </Component>
+      </li>
+      <li
+        className=""
+        key="1"
+      >
+        <Component
+          onClick={[Function]}
+          type="button"
+        >
+          Jarvis: Frontend project setup
+        </Component>
+      </li>
+    </ul>
+  </nav>
+  <div
+    className="c-section__body"
+  >
+    <div
+      className="c-section__frame current"
+      key="0"
+    >
+      <iframe
+        allowFullScreen={true}
+        src="https://www.youtube.com/embed/5xcqprI17FQ"
+        title="Presentation about optimizing the web development workflow using Sublime Text editor"
+      />
+    </div>
+    <div
+      className="c-section__frame"
+      key="1"
+    >
+      <iframe
+        allowFullScreen={true}
+        src="https://www.youtube.com/embed/s-klXHLIZyY"
+        title="Presentation about the new and optimized frontend projects setup"
+      />
+    </div>
+  </div>
+</Component>
+`;

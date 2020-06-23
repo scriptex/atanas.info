@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionSkills component Should render the SectionSkills component 1`] = `
+<Component
+  hasButton={true}
+  hasShell={true}
+  id="skills"
+>
+  <h2>
+    Skills 
+    <br />
+    <small>
+      (Drag the bubbles to play)
+    </small>
+  </h2>
+  <div
+    id="skills-graph"
+  />
+</Component>
+`;
