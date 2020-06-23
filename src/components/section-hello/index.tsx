@@ -1,8 +1,8 @@
 import * as React from 'react';
+import { useInterval } from 'react-use';
 
 import { titles } from '../../assets/scripts/titles';
 import { Section } from '..';
-import { useInterval } from '../../utilities';
 import { initCanvas, createDots } from '../../assets/scripts/canvas';
 
 export const Slider: React.FunctionComponent = () => {
