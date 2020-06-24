@@ -3,9 +3,6 @@ import { Helmet } from 'react-helmet';
 
 export const Head: React.FunctionComponent = () => (
 	<Helmet>
-		<meta charSet="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 		<title>Atanas Atanasov | Senior Web Developer</title>
 
 		<meta

@@ -24,6 +24,7 @@ module.exports = {
 		'!<rootDir>/src/index.tsx',
 		'!<rootDir>/src/assets/scripts/canvas.ts',
 		'!<rootDir>/src/assets/scripts/fetch-music.ts',
+		'!<rootDir>/src/assets/scripts/gitlab-contributions.ts',
 		'!<rootDir>/src/assets/scripts/music.ts',
 		'!<rootDir>/src/assets/scripts/projects.ts',
 		'!<rootDir>/src/assets/scripts/skills.ts',

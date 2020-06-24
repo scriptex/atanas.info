@@ -28,7 +28,7 @@ interface IndexedList<T> {
 
 const FOLDER = 'atanas.info';
 
-async function createScreenshot(url: string, name: string) {
+async function createScreenshot(url: string, name: string): Promise<any> {
 	console.log(`Launching new browser for ${name}...`);
 	const browser = await puppeteer.launch({
 		headless: true,
@@ -40,7 +40,7 @@ async function createScreenshot(url: string, name: string) {
 
 	console.log(`Navigating to ${url} for ${name}...`);
 	await page.goto(url, { waitUntil: 'networkidle0' });
-	await page.waitFor(2000);
+	await page.waitFor(5000);
 
 	await page.setViewport({
 		width: 1280,
@@ -68,7 +68,7 @@ async function createScreenshot(url: string, name: string) {
 	}
 }
 
-function upload(shotResult: Buffer, options: IndexedList<string>, name: string) {
+function upload(shotResult: Buffer, options: IndexedList<string>, name: string): Promise<any> {
 	return new Promise((resolve, reject) => {
 		cloudinary.uploader
 			.upload_stream(options, (error, result) => {
@@ -84,7 +84,7 @@ function upload(shotResult: Buffer, options: IndexedList<string>, name: string) 
 	});
 }
 
-async function createScreenshots(pages: Project[]) {
+async function createScreenshots(pages: Project[]): Promise<void> {
 	await cloudinary.api.delete_resources_by_prefix(`${FOLDER}/`);
 
 	const results = [];

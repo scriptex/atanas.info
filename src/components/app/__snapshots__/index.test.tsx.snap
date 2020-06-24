@@ -10,6 +10,14 @@ exports[`App component Should render the App component 1`] = `
   <Component />
   <Component />
   <Component />
+  <Component
+    data={
+      Object {
+        "github": undefined,
+        "gitlab": undefined,
+      }
+    }
+  />
   <Component />
   <Component />
   <Component />

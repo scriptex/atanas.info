@@ -19,6 +19,7 @@ exports[`SectionVideos component Should render the SectionVideos component 1`] =
         key="0"
       >
         <Component
+          aria-label="Switch to Do more with Sublime Text"
           onClick={[Function]}
           type="button"
         >
@@ -30,6 +31,7 @@ exports[`SectionVideos component Should render the SectionVideos component 1`] =
         key="1"
       >
         <Component
+          aria-label="Switch to Jarvis: Frontend project setup"
           onClick={[Function]}
           type="button"
         >
@@ -47,6 +49,7 @@ exports[`SectionVideos component Should render the SectionVideos component 1`] =
     >
       <iframe
         allowFullScreen={true}
+        loading="lazy"
         src="https://www.youtube.com/embed/5xcqprI17FQ"
         title="Presentation about optimizing the web development workflow using Sublime Text editor"
       />
@@ -57,6 +60,7 @@ exports[`SectionVideos component Should render the SectionVideos component 1`] =
     >
       <iframe
         allowFullScreen={true}
+        loading="lazy"
         src="https://www.youtube.com/embed/s-klXHLIZyY"
         title="Presentation about the new and optimized frontend projects setup"
       />
@@ -84,6 +88,7 @@ exports[`SectionVideos component Should render the SectionVideos component 2`] =
         key="0"
       >
         <Component
+          aria-label="Switch to Do more with Sublime Text"
           onClick={[Function]}
           type="button"
         >
@@ -95,6 +100,7 @@ exports[`SectionVideos component Should render the SectionVideos component 2`] =
         key="1"
       >
         <Component
+          aria-label="Switch to Jarvis: Frontend project setup"
           onClick={[Function]}
           type="button"
         >
@@ -112,6 +118,7 @@ exports[`SectionVideos component Should render the SectionVideos component 2`] =
     >
       <iframe
         allowFullScreen={true}
+        loading="lazy"
         src="https://www.youtube.com/embed/5xcqprI17FQ"
         title="Presentation about optimizing the web development workflow using Sublime Text editor"
       />
@@ -122,6 +129,7 @@ exports[`SectionVideos component Should render the SectionVideos component 2`] =
     >
       <iframe
         allowFullScreen={true}
+        loading="lazy"
         src="https://www.youtube.com/embed/s-klXHLIZyY"
         title="Presentation about the new and optimized frontend projects setup"
       />

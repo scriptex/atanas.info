@@ -18,6 +18,7 @@ exports[`SectionSlides component Should render the SectionSlides component 1`] =
         key="0"
       >
         <Component
+          aria-label="Switch to EcmaScript Features"
           onClick={[Function]}
           type="button"
         >
@@ -29,6 +30,7 @@ exports[`SectionSlides component Should render the SectionSlides component 1`] =
         key="1"
       >
         <Component
+          aria-label="Switch to Do more with Sublime Text"
           onClick={[Function]}
           type="button"
         >
@@ -46,6 +48,7 @@ exports[`SectionSlides component Should render the SectionSlides component 1`] =
     >
       <iframe
         allowFullScreen={true}
+        loading="lazy"
         src="https://docs.google.com/presentation/d/e/2PACX-1vSA8qN0_3lb0YWDYJheJ3q0AAsXWlLLpP86pnmV0KWfPo_2G-SSdSK--GVRyJbwT8_kWyJ0TZxFoaH8/embed?start=false&loop=false&delayms=3000"
         title="Presentation about the EcmaScript language history and features"
       />
@@ -56,6 +59,7 @@ exports[`SectionSlides component Should render the SectionSlides component 1`] =
     >
       <iframe
         allowFullScreen={true}
+        loading="lazy"
         src="https://docs.google.com/presentation/d/e/2PACX-1vTivcVmPyjYPdWgoJMChe_rrVyZEIw4ZgF37lCOlxUUm7DchxhMJouEV_BcrH6LDL8kiNmRSIWkiSxK/embed?start=false&loop=false&delayms=3000"
         title="Presentation about improving workflow using Sublime Text editor"
       />
@@ -82,6 +86,7 @@ exports[`SectionSlides component Should render the SectionSlides component 2`] =
         key="0"
       >
         <Component
+          aria-label="Switch to EcmaScript Features"
           onClick={[Function]}
           type="button"
         >
@@ -93,6 +98,7 @@ exports[`SectionSlides component Should render the SectionSlides component 2`] =
         key="1"
       >
         <Component
+          aria-label="Switch to Do more with Sublime Text"
           onClick={[Function]}
           type="button"
         >
@@ -110,6 +116,7 @@ exports[`SectionSlides component Should render the SectionSlides component 2`] =
     >
       <iframe
         allowFullScreen={true}
+        loading="lazy"
         src="https://docs.google.com/presentation/d/e/2PACX-1vSA8qN0_3lb0YWDYJheJ3q0AAsXWlLLpP86pnmV0KWfPo_2G-SSdSK--GVRyJbwT8_kWyJ0TZxFoaH8/embed?start=false&loop=false&delayms=3000"
         title="Presentation about the EcmaScript language history and features"
       />
@@ -120,6 +127,7 @@ exports[`SectionSlides component Should render the SectionSlides component 2`] =
     >
       <iframe
         allowFullScreen={true}
+        loading="lazy"
         src="https://docs.google.com/presentation/d/e/2PACX-1vTivcVmPyjYPdWgoJMChe_rrVyZEIw4ZgF37lCOlxUUm7DchxhMJouEV_BcrH6LDL8kiNmRSIWkiSxK/embed?start=false&loop=false&delayms=3000"
         title="Presentation about improving workflow using Sublime Text editor"
       />

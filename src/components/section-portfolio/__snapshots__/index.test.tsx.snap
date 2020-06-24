@@ -16,11 +16,6 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       className=""
       href="https://www.google.com"
       key="0"
-      style={
-        Object {
-          "backgroundImage": "url(image 1)",
-        }
-      }
     >
       <div>
         <strong>
@@ -33,16 +28,17 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           Description 1
         </span>
       </div>
+      <img
+        alt="Project 1"
+        loading="lazy"
+        src="image 1"
+        width="600"
+      />
     </Component>
     <Component
       className="disabled"
       href=""
       key="1"
-      style={
-        Object {
-          "backgroundImage": "url(image 2)",
-        }
-      }
     >
       <div>
         <strong>
@@ -55,6 +51,12 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           Description 2
         </span>
       </div>
+      <img
+        alt="Project 2"
+        loading="lazy"
+        src="image 2"
+        width="600"
+      />
     </Component>
   </div>
 </Component>

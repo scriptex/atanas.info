@@ -13,7 +13,12 @@ export const Header: React.FunctionComponent = () => {
 					<Icon name="svg-logo" className="c-svg-logo" />
 				</a>
 
-				<button onClick={() => setOpen(!open)} className="c-nav__toggle">
+				<button
+					name="menu-toggle"
+					onClick={(): void => setOpen(!open)}
+					className="c-nav__toggle"
+					aria-label="Toggle menu"
+				>
 					<span></span>
 
 					<span></span>

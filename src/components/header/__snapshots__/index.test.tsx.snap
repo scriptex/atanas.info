@@ -27,7 +27,9 @@ exports[`Header component Should render the Header component 1`] = `
         </Component>
       </a>
       <button
+        aria-label="Toggle menu"
         className="c-nav__toggle"
+        name="menu-toggle"
         onClick={[Function]}
       >
         <span />
@@ -216,7 +218,9 @@ exports[`Header component Should render the Header component 2`] = `
         </Component>
       </a>
       <button
+        aria-label="Toggle menu"
         className="c-nav__toggle"
+        name="menu-toggle"
         onClick={[Function]}
       >
         <span />
@@ -405,7 +409,9 @@ exports[`Header component Should render the Header component 3`] = `
         </Component>
       </a>
       <button
+        aria-label="Toggle menu"
         className="c-nav__toggle"
+        name="menu-toggle"
         onClick={[Function]}
       >
         <span />
