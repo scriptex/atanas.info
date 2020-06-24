@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { Section, ExternalLink } from '..';
-import { Project } from '../../assets/scripts/projects';
 import projects from '../../assets/scripts/projects-list.json';
+import { Project } from '../../assets/scripts/projects';
+import { Section, ExternalLink } from '..';
 
 export const SectionPortfolio: React.FunctionComponent = () => (
 	<Section id="portfolio" hasButton={true}>
@@ -10,12 +10,7 @@ export const SectionPortfolio: React.FunctionComponent = () => (
 
 		<div className="c-section__body">
 			{((projects as unknown) as Project[]).map((project: Project, index: number) => (
-				<ExternalLink
-					key={index}
-					href={project.url}
-					style={{ backgroundImage: `url(${project.image})` }}
-					className={project.url ? '' : 'disabled'}
-				>
+				<ExternalLink key={index} href={project.url} className={project.url ? '' : 'disabled'}>
 					<div>
 						<strong>{project.title}</strong>
 
@@ -24,6 +19,8 @@ export const SectionPortfolio: React.FunctionComponent = () => (
 							{project.description}
 						</span>
 					</div>
+
+					<img src={project.image} alt={project.title} width="600" loading="lazy" />
 				</ExternalLink>
 			))}
 		</div>

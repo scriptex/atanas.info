@@ -13,7 +13,7 @@ export const Header: React.FunctionComponent = () => {
 					<Icon name="svg-logo" className="c-svg-logo" />
 				</a>
 
-				<button onClick={() => setOpen(!open)} className="c-nav__toggle">
+				<button onClick={(): void => setOpen(!open)} className="c-nav__toggle">
 					<span></span>
 
 					<span></span>
@@ -29,7 +29,7 @@ export const Header: React.FunctionComponent = () => {
 									href={href}
 									title={title}
 									{...rest}
-									onClick={() => {
+									onClick={(): void => {
 										const root = document.getElementById('root');
 
 										setOpen(!open);

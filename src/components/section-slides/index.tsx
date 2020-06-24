@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { Section, Button } from '..';
 import { Slide, slides } from '../../assets/scripts/slides';
+import { Section, Button } from '..';
 
 export const SectionSlides: React.FunctionComponent = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);
@@ -28,6 +28,9 @@ export const SectionSlides: React.FunctionComponent = () => {
 						<iframe
 							src={`${slide.url}/embed?start=false&loop=false&delayms=3000`}
 							title={slide.description}
+							/* eslint-disable-next-line @typescript-eslint/ban-ts-comment*/
+							// @ts-ignore
+							loading="lazy"
 							allowFullScreen={true}
 						/>
 					</div>

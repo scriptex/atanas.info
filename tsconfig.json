@@ -41,6 +41,6 @@
 		"resolveJsonModule": true
 	},
 	"compileOnSave": false,
-	"include": ["src/**/*", "screenshots/**/*", "server/**/*"],
+	"include": ["insights/**/*", "screenshots/**/*", "server/**/*", "src/**/*"],
 	"exclude": ["node_modules"]
 }
