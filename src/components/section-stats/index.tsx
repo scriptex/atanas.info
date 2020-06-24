@@ -72,15 +72,17 @@ export const GithubStats: React.FunctionComponent = () => {
 				<div className="o-shell">
 					<h2>Github contributions calendar</h2>
 
-					<div className="c-calendar">
-						{Object.keys(calendar).map((key: string, i: number) => (
-							<div
-								className="c-calendar__item"
-								key={i}
-								style={{ backgroundColor: calendar[key].color }}
-								title={`${formatDate(key)} : ${calendar[key].count} contributions`}
-							/>
-						))}
+					<div className="c-calendar__outer">
+						<div className="c-calendar">
+							{Object.keys(calendar).map((key: string, i: number) => (
+								<div
+									className="c-calendar__item"
+									key={i}
+									style={{ backgroundColor: calendar[key].color }}
+									title={`${formatDate(key)} : ${calendar[key].count} contributions`}
+								/>
+							))}
+						</div>
 					</div>
 				</div>
 			</div>
@@ -142,7 +144,9 @@ export const GitlabStats: React.FunctionComponent = () => {
 				<div className="o-shell">
 					<h2>Gitlab contributions calendar</h2>
 
-					<div className="c-calendar" id="gitlab-calendar" />
+					<div className="c-calendar__outer">
+						<div className="c-calendar" id="gitlab-calendar" />
+					</div>
 				</div>
 			</div>
 		</>

@@ -735,6 +735,13 @@ body {
 	margin: 0 auto 2rem;
 }
 
+.c-calendar__outer {
+	width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+}
+
 .c-calendar__item {
 	width: var(--size);
 	height: var(--size);
@@ -744,6 +751,14 @@ body {
 @media (--tablet-portrait) {
 	.c-section--stats ul {
 		padding-bottom: 4.5rem;
+	}
+}
+
+@media (--mobile) {
+	.c-section--stats .c-section__list li {
+		width: 9rem;
+		height: 9rem;
+		margin: 0.5rem;
 	}
 }
 
@@ -782,9 +797,15 @@ body {
 	position: relative;
 	padding-bottom: 37.5%;
 	margin-bottom: 2rem;
-	background-repeat: no-repeat;
-	background-position: 50% 0%;
-	background-size: 100% auto;
+	overflow: hidden;
+}
+
+.c-section--portfolio .c-section__body a img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	transform: translate(-50%, -50%);
 	transition: all var(--timing) var(--easing);
 }
 
@@ -796,6 +817,7 @@ body {
 	content: '';
 	@mixin centered;
 	opacity: 0;
+	z-index: 2;
 	background-color: color-mod(var(--color-secondary) a(80%));
 	transition: opacity var(--timing) var(--easing);
 }
@@ -807,6 +829,7 @@ body {
 	top: 50%;
 	right: 0;
 	left: 0;
+	z-index: 3;
 	padding: 1rem;
 	transform: translateY(0%);
 	transition: all var(--timing) var(--easing);
@@ -847,6 +870,10 @@ body {
 		transform: translateY(-50%);
 	}
 
+	.c-section--portfolio .c-section__body a:hover img {
+		transform: translate(-50%, -50%) scale(1.1);
+	}
+
 	.c-section--portfolio .c-section__body a .adjusted:hover {
 		background-size: 150% auto;
 	}
@@ -868,18 +895,22 @@ body {
 		content: none;
 	}
 
+	.c-section--portfolio .c-section__body a div,
+	.c-section--portfolio .c-section__body a img {
+		position: static;
+		top: auto;
+		right: auto;
+		left: auto;
+		transform: none !important;
+	}
+
 	.c-section--portfolio .c-section__body a div {
 		min-height: 92px;
 		@mixin flex-row wrap, center, center;
 		align-content: center;
 		opacity: 1;
-		position: static;
-		top: auto;
-		right: auto;
-		left: auto;
 		padding: 0.5rem;
 		background-color: var(--color-secondary);
-		transform: none;
 	}
 
 	.c-section--portfolio .c-section__body a strong {
@@ -981,6 +1012,7 @@ body {
 	position: relative;
 	z-index: 25;
 	padding: 2rem 0;
+	margin-top: 4rem;
 	background-color: var(--color-secondary);
 }
 

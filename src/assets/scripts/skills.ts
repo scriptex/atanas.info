@@ -9,8 +9,8 @@ interface Node extends Skill {
 
 export const drawSkills = (words: Skill[]): void => {
 	const all = words.length;
-	const width = window.innerWidth;
-	const height = window.innerHeight;
+	const width = document.body.clientWidth;
+	const height = document.body.clientHeight;
 	const svg = createSVG('skills-graph', width, height);
 
 	const renderSkills = (data: any): void => {

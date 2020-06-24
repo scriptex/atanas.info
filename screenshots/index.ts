@@ -40,7 +40,7 @@ async function createScreenshot(url: string, name: string): Promise<any> {
 
 	console.log(`Navigating to ${url} for ${name}...`);
 	await page.goto(url, { waitUntil: 'networkidle0' });
-	await page.waitFor(2000);
+	await page.waitFor(5000);
 
 	await page.setViewport({
 		width: 1280,

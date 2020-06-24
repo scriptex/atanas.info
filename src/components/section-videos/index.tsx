@@ -25,7 +25,14 @@ export const SectionVideos: React.FunctionComponent = () => {
 			<div className="c-section__body">
 				{presentations.map((presentation: Presentation, index: number) => (
 					<div key={index} className={`c-section__frame${activeIndex === index ? ' current' : ''}`}>
-						<iframe src={`${presentation.url}`} title={presentation.description} allowFullScreen={true} />
+						<iframe
+							src={`${presentation.url}`}
+							title={presentation.description}
+							/* eslint-disable-next-line @typescript-eslint/ban-ts-comment*/
+							// @ts-ignore
+							loading="lazy"
+							allowFullScreen={true}
+						/>
 					</div>
 				))}
 			</div>

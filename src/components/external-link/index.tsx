@@ -2,7 +2,7 @@ import * as React from 'react';
 
 interface Props {
 	href: string;
-	children: React.ReactChild | React.ReactText;
+	children: React.ReactChild | React.ReactText | React.ReactChild[] | React.ReactText[];
 	[x: string]: any;
 }
 

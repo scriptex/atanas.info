@@ -5,6 +5,9 @@ import { getGitlabInsights } from './gitlab';
 
 (async (): Promise<void> => {
 	await getGithubInsights();
+
+	console.log('-----');
+
 	await getGitlabInsights();
 
 	process.exit();
