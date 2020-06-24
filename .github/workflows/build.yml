@@ -13,6 +13,8 @@ jobs:
                   yarn lint
                   yarn build
               env:
+                  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+                  GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
                   CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
                   CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
                   CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}

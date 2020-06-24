@@ -25,8 +25,9 @@ export const Footer: React.FunctionComponent = () => (
 						<ExternalLink href="https://sourcerer.io/scriptex" title="See my profile on Sourcerer">
 							<img
 								src="https://sourcerer.io/icons/logo-sharing.svg"
-								width="32"
 								alt="Sourcerer brand image"
+								width="32"
+								loading="lazy"
 							/>
 						</ExternalLink>
 					</li>
