@@ -6,6 +6,7 @@ import { shallow } from 'enzyme';
 import { Button } from '..';
 import { SectionNav } from '.';
 
+// codebeat:disable[ABC,LOC]
 describe('SectionNav component', () => {
 	it('Should render the SectionNav component', () => {
 		const wrapper = shallow(
@@ -36,3 +37,4 @@ describe('SectionNav component', () => {
 		expect(wrapper).toMatchSnapshot();
 	});
 });
+// codebeat:enable[ABC,LOC]
