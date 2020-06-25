@@ -12,6 +12,7 @@ describe('Header component', () => {
 
 		expect(wrapper).toMatchSnapshot();
 
+		// codebeat:disable[ABC]
 		act(() => {
 			// @ts-ignore
 			wrapper.find('.c-nav a').at(0).props().onClick();
@@ -23,5 +24,6 @@ describe('Header component', () => {
 
 			expect(wrapper).toMatchSnapshot();
 		});
+		// codebeat:enable[ABC]
 	});
 });

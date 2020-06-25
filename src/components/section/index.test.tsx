@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 
 import { Section, SectionElements } from '.';
 
+// codebeat:disable[LOC]
 describe('Section component', () => {
 	it('Should render the Section component', () => {
 		const wrapper = shallow(
@@ -94,3 +95,4 @@ describe('SectionElement component', () => {
 		expect(wrapper).toMatchSnapshot();
 	});
 });
+// codebeat:enable[LOC]
