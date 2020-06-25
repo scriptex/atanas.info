@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { ExternalLink } from '..';
 
-interface Props {
+export interface Props {
 	id: string;
 	children: any;
 	className?: string;

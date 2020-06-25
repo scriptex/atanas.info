@@ -1,98 +1,80 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 
-import { Section, SectionElements } from '.';
+import { Props, Section, SectionElements } from '.';
+
+interface Component {
+	name: string;
+	component: React.FunctionComponent<Readonly<Props>>;
+}
+
+interface Components {
+	main: Component;
+	elements: Component;
+}
+
+const components: Components = {
+	main: {
+		name: 'Section',
+		component: Section
+	},
+	elements: {
+		name: 'SectionElements',
+		component: SectionElements
+	}
+};
+
+const test = (title: string, Component: React.ComponentType<any>, props: any): void => {
+	const Children: React.FunctionComponent = () => (
+		<>
+			<p>Test</p>
+			<p>Test</p>
+		</>
+	);
+
+	it(title, () => {
+		const wrapper = shallow(
+			<Component {...props}>
+				<Children />
+			</Component>
+		);
+
+		expect(wrapper).toMatchSnapshot();
+	});
+};
 
 // codebeat:disable[LOC]
-describe('Section component', () => {
-	it('Should render the Section component', () => {
-		const wrapper = shallow(
-			<Section id="section" className=" test" hasButton={true} hasShell={true}>
-				<p>Test</p>
-				<p>Test</p>
-			</Section>
-		);
+const suite = (Component: React.ComponentType<any>, name: string): void => {
+	describe(`${name} component`, () => {
+		test(`Should render the ${name} component`, Component, {
+			id: 'section',
+			className: ' test',
+			hasButton: true,
+			hasShell: true
+		});
 
-		expect(wrapper).toMatchSnapshot();
+		test(`Should render the ${name} component without a button`, Component, {
+			id: 'section',
+			hasButton: false,
+			hasShell: true,
+			shellClass: 'o-shell--flex'
+		});
+
+		test(`Should render the ${name} component without a shell`, Component, {
+			id: 'section',
+			className: ' test',
+			hasButton: true,
+			hasShell: false
+		});
+
+		test(`Should render the ${name} component without a button and a shell`, Component, {
+			id: 'section',
+			className: ' test',
+			hasButton: false,
+			hasShell: false
+		});
 	});
-
-	it('Should render the Section component without a button', () => {
-		const wrapper = shallow(
-			<Section id="section" hasButton={false} hasShell={true} shellClass="o-shell--flex">
-				<p>Test</p>
-				<p>Test</p>
-			</Section>
-		);
-
-		expect(wrapper).toMatchSnapshot();
-	});
-
-	it('Should render the Section component without a shell', () => {
-		const wrapper = shallow(
-			<Section id="section" className=" test" hasButton={true} hasShell={false}>
-				<p>Test</p>
-				<p>Test</p>
-			</Section>
-		);
-
-		expect(wrapper).toMatchSnapshot();
-	});
-
-	it('Should render the Section component without a button and a shell', () => {
-		const wrapper = shallow(
-			<Section id="section" className=" test" hasButton={false} hasShell={false}>
-				<p>Test</p>
-				<p>Test</p>
-			</Section>
-		);
-
-		expect(wrapper).toMatchSnapshot();
-	});
-});
-
-describe('SectionElement component', () => {
-	it('Should render the SectionElements component', () => {
-		const wrapper = shallow(
-			<SectionElements id="section" className=" test" hasButton={true} hasShell={true}>
-				<p>Test</p>
-				<p>Test</p>
-			</SectionElements>
-		);
-
-		expect(wrapper).toMatchSnapshot();
-	});
-
-	it('Should render the SectionElements component without a button', () => {
-		const wrapper = shallow(
-			<SectionElements id="section" hasButton={false} hasShell={true} shellClass="o-shell--flex">
-				<p>Test</p>
-				<p>Test</p>
-			</SectionElements>
-		);
-
-		expect(wrapper).toMatchSnapshot();
-	});
-
-	it('Should render the SectionElements component without a shell', () => {
-		const wrapper = shallow(
-			<SectionElements id="section" className=" test" hasButton={true} hasShell={false}>
-				<p>Test</p>
-				<p>Test</p>
-			</SectionElements>
-		);
-
-		expect(wrapper).toMatchSnapshot();
-	});
-
-	it('Should render the SectionElements component without a button and a shell', () => {
-		const wrapper = shallow(
-			<Section id="section" className=" test" hasButton={false} hasShell={false}>
-				<p>Test</p>
-				<p>Test</p>
-			</Section>
-		);
-
-		expect(wrapper).toMatchSnapshot();
-	});
-});
+};
 // codebeat:enable[LOC]
+
+Object.values(components).forEach((value: Component) => suite(value.component, value.name));

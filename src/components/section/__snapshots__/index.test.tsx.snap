@@ -14,12 +14,7 @@ exports[`Section component Should render the Section component 1`] = `
       hasShell={true}
       id="section"
     >
-      <p>
-        Test
-      </p>
-      <p>
-        Test
-      </p>
+      <Children />
     </Component>
   </div>
 </section>
@@ -39,12 +34,7 @@ exports[`Section component Should render the Section component without a button 
       id="section"
       shellClass="o-shell--flex"
     >
-      <p>
-        Test
-      </p>
-      <p>
-        Test
-      </p>
+      <Children />
     </Component>
   </div>
 </section>
@@ -61,12 +51,7 @@ exports[`Section component Should render the Section component without a button 
     hasShell={false}
     id="section"
   >
-    <p>
-      Test
-    </p>
-    <p>
-      Test
-    </p>
+    <Children />
   </Component>
 </section>
 `;
@@ -82,24 +67,14 @@ exports[`Section component Should render the Section component without a shell 1
     hasShell={false}
     id="section"
   >
-    <p>
-      Test
-    </p>
-    <p>
-      Test
-    </p>
+    <Children />
   </Component>
 </section>
 `;
 
-exports[`SectionElement component Should render the SectionElements component 1`] = `
+exports[`SectionElements component Should render the SectionElements component 1`] = `
 <Fragment>
-  <p>
-    Test
-  </p>
-  <p>
-    Test
-  </p>
+  <Children />
   <div
     className="c-section__actions"
   >
@@ -113,46 +88,21 @@ exports[`SectionElement component Should render the SectionElements component 1`
 </Fragment>
 `;
 
-exports[`SectionElement component Should render the SectionElements component without a button 1`] = `
+exports[`SectionElements component Should render the SectionElements component without a button 1`] = `
 <Fragment>
-  <p>
-    Test
-  </p>
-  <p>
-    Test
-  </p>
+  <Children />
 </Fragment>
 `;
 
-exports[`SectionElement component Should render the SectionElements component without a button and a shell 1`] = `
-<section
-  className="c-section c-section--section test"
-  id="section"
->
-  <Component
-    className=" test"
-    hasButton={false}
-    hasShell={false}
-    id="section"
-  >
-    <p>
-      Test
-    </p>
-    <p>
-      Test
-    </p>
-  </Component>
-</section>
+exports[`SectionElements component Should render the SectionElements component without a button and a shell 1`] = `
+<Fragment>
+  <Children />
+</Fragment>
 `;
 
-exports[`SectionElement component Should render the SectionElements component without a shell 1`] = `
+exports[`SectionElements component Should render the SectionElements component without a shell 1`] = `
 <Fragment>
-  <p>
-    Test
-  </p>
-  <p>
-    Test
-  </p>
+  <Children />
   <div
     className="c-section__actions"
   >
