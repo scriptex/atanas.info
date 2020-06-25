@@ -9,7 +9,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v2
-          - name: Deploy to Vercel
-              uses: amondnet/now-deployment@v2
-                  with:
-                    zeit-token: ${{ secrets.ZEIT_TOKEN }}
+          - uses: amondnet/now-deployment@v2
+            with:
+              zeit-token: ${{ secrets.ZEIT_TOKEN }} # Required
