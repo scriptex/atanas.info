@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionNav component Should render the SectionNav component 1`] = `
+<nav
+  className="c-section__nav"
+>
+  <ul>
+    <li
+      className="current"
+      key="0"
+    >
+      <Component
+        aria-label="Switch to Title 1"
+        onClick={[Function]}
+        type="button"
+      >
+        Title 1
+      </Component>
+    </li>
+    <li
+      className=""
+      key="1"
+    >
+      <Component
+        aria-label="Switch to Title 2"
+        onClick={[Function]}
+        type="button"
+      >
+        Title 2
+      </Component>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`SectionNav component Should render the SectionNav component 2`] = `
+<nav
+  className="c-section__nav"
+>
+  <ul>
+    <li
+      className="current"
+      key="0"
+    >
+      <Component
+        aria-label="Switch to Title 1"
+        onClick={[Function]}
+        type="button"
+      >
+        Title 1
+      </Component>
+    </li>
+    <li
+      className=""
+      key="1"
+    >
+      <Component
+        aria-label="Switch to Title 2"
+        onClick={[Function]}
+        type="button"
+      >
+        Title 2
+      </Component>
+    </li>
+  </ul>
+</nav>
+`;

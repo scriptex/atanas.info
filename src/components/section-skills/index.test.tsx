@@ -2,19 +2,10 @@ import * as React from 'react';
 import { shallow } from 'enzyme';
 
 import { SectionSkills } from '.';
+import { mockUseEffect } from '../../assets/shared';
 
 describe('SectionSkills component', () => {
-	let useEffect: any;
-
-	const mockUseEffect = () => {
-		useEffect.mockImplementationOnce((f: () => any) => f());
-	};
-
-	beforeEach(() => {
-		useEffect = jest.spyOn(React, 'useEffect');
-
-		mockUseEffect();
-	});
+	mockUseEffect();
 
 	it('Should render the SectionSkills component', () => {
 		const wrapper = shallow(<SectionSkills />);

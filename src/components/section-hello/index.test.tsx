@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 
+import { mockUseEffect } from '../../assets/shared';
 import { Slider, SectionHello } from '.';
 
 describe('Slider component', () => {
@@ -12,17 +13,7 @@ describe('Slider component', () => {
 });
 
 describe('SectionHello component', () => {
-	let useEffect: any;
-
-	const mockUseEffect = () => {
-		useEffect.mockImplementationOnce((f: () => any) => f());
-	};
-
-	beforeEach(() => {
-		useEffect = jest.spyOn(React, 'useEffect');
-
-		mockUseEffect();
-	});
+	mockUseEffect();
 
 	it('Should render the SectionHello component', () => {
 		const wrapper = shallow(<SectionHello />);

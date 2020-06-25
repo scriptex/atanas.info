@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 
+import { mockUseEffect } from '../../assets/shared';
 import { SectionStats, GithubStats, GitlabStats } from '.';
 
 const github = {
@@ -120,17 +121,7 @@ describe('GithubStats component', () => {
 });
 
 describe('GitlabStats component', () => {
-	let useEffect: any;
-
-	const mockUseEffect = () => {
-		useEffect.mockImplementationOnce((f: () => any) => f());
-	};
-
-	beforeEach(() => {
-		useEffect = jest.spyOn(React, 'useEffect');
-
-		mockUseEffect();
-	});
+	mockUseEffect();
 
 	it('Should render the GitlabStats component', () => {
 		const wrapper = shallow(<GitlabStats data={gitlab} />);
