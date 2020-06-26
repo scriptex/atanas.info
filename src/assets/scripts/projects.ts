@@ -61,10 +61,16 @@ export const projects = [
 		description: 'HTML5, CSS3, JavaScript, WordPress'
 	},
 	{
-		url: 'https://kinetikautomotive.com/',
+		url: 'https://kinetikautomotive.com/custom-interface',
 		image: 'images/temp/kinetik-automotive.png',
 		title: 'Kinetik Automotive',
 		description: 'HTML5, CSS3, JavaScript, Vue, Nuxt, WordPress'
+	},
+	{
+		url: 'https://xpndnow.com/',
+		image: 'images/temp/xpnd.png',
+		title: 'XPND',
+		description: 'TypeScript, SCSS, React, Redux, NodeJS'
 	},
 	{
 		url: 'https://at-the-wall.atanas.info',
