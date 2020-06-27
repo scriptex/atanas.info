@@ -14,6 +14,3 @@ jobs:
             - run:
                   name: build
                   command: yarn build
-            - run:
-                  name: test
-                  command: yarn test:coverage
