@@ -5,10 +5,14 @@
 ![Build](https://github.com/scriptex/atanas.info/workflows/Build/badge.svg)
 [![CodeFactor](https://www.codefactor.io/repository/github/scriptex/atanas.info/badge)](https://www.codefactor.io/repository/github/scriptex/atanas.info)
 [![codebeat badge](https://codebeat.co/badges/807a5061-9e43-4fec-9819-1c47c37c2e9f)](https://codebeat.co/projects/github-com-scriptex-atanas-info-master)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/74727aa736934f8197bea1d817c5c7bb)](https://www.codacy.com/manual/scriptex/atanas.info?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=scriptex/atanas.info&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/74727aa736934f8197bea1d817c5c7bb)](https://www.codacy.com/manual/scriptex/atanas.info)
 [![DeepScan grade](https://deepscan.io/api/teams/3574/projects/5291/branches/40827/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=3574&pid=5291&bid=40827)
 
-My personal website
+> My personal website
+
+Built with TypeScript, PostCSS, React, D3, Vuepress, NodeJS, Parcel, Vercel, Puppeteer, Cloudinary and more.
+
+Installable as a Progressive Web App and (partially for now) accessible offline.
 
 ## LICENSE
 

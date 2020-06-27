@@ -13,7 +13,12 @@ export const Header: React.FunctionComponent = () => {
 					<Icon name="svg-logo" className="c-svg-logo" />
 				</a>
 
-				<button onClick={(): void => setOpen(!open)} className="c-nav__toggle">
+				<button
+					name="menu-toggle"
+					onClick={(): void => setOpen(!open)}
+					className="c-nav__toggle"
+					aria-label="Toggle menu"
+				>
 					<span></span>
 
 					<span></span>
@@ -25,20 +30,7 @@ export const Header: React.FunctionComponent = () => {
 					<ul>
 						{links.map(({ href, title, content, ...rest }: Link, index: number) => (
 							<li key={index}>
-								<a
-									href={href}
-									title={title}
-									{...rest}
-									onClick={(): void => {
-										const root = document.getElementById('root');
-
-										setOpen(!open);
-
-										if (href === '#music' && root) {
-											root.classList.add('music--active');
-										}
-									}}
-								>
+								<a href={href} title={title} {...rest} onClick={() => setOpen(!open)}>
 									{content}
 								</a>
 							</li>

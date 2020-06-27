@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Section, Button } from '..';
+import { Section, SectionNav } from '..';
 import { presentations, Presentation } from '../../assets/scripts/presentations';
 
 export const SectionVideos: React.FunctionComponent = () => {
@@ -10,17 +10,7 @@ export const SectionVideos: React.FunctionComponent = () => {
 		<Section id="videos" hasButton={true} className=" c-section--slides">
 			<h2>Videos</h2>
 
-			<nav className="c-section__nav">
-				<ul>
-					{presentations.map((presentation: Presentation, index: number) => (
-						<li key={index} className={activeIndex === index ? 'current' : ''}>
-							<Button type="button" onClick={() => setActiveIndex(index)}>
-								{presentation.title}
-							</Button>
-						</li>
-					))}
-				</ul>
-			</nav>
+			<SectionNav name="title" data={presentations} active={activeIndex} onClick={setActiveIndex} />
 
 			<div className="c-section__body">
 				{presentations.map((presentation: Presentation, index: number) => (

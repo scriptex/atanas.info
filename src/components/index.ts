@@ -9,6 +9,7 @@ export { default as Section } from './section';
 export { default as SectionAbout } from './section-about';
 export { default as SectionHello } from './section-hello';
 export { default as SectionMusic } from './section-music';
+export { default as SectionNav } from './section-nav';
 export { default as SectionPortfolio } from './section-portfolio';
 export { default as SectionSkills } from './section-skills';
 export { default as SectionSlides } from './section-slides';

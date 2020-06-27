@@ -10,7 +10,8 @@
 		"localga": "localga --id UA-83446952-1 --folder ./src/assets/scripts",
 		"svgo": "svgo -f static/images/svg --config=svgo.yml",
 		"svg-sprite": "spritesh -q -i static/images/svg -o static/sprite.svg -p svg-",
-		"svg": "yarn svgo && yarn svg-sprite",
+		"svg-minify": "html-minifier static/sprite.svg --collapse-whitespace -o static/sprite.svg",
+		"svg": "yarn svgo && yarn svg-sprite && yarn svg-minify",
 		"tsc": "tsc --noEmit",
 		"tsc:watch": "tsc --noEmit --watch",
 		"css": "postcss ./src/index.pcss -o ./src/index.css",
@@ -22,6 +23,7 @@
 		"build": "yarn pre && yarn css && yarn tsc && yarn parcel-build && yarn fetch-projects && yarn build-projects",
 		"test": "jest",
 		"test:watch": "jest --watch",
+		"test:coverage": "jest --coverage",
 		"lint": "npm run lint:ts && npm run lint:css",
 		"lint:ts": "eslint 'src/**/*.{ts,tsx}'",
 		"lint:css": "stylelint './src/**/*.pcss' --config .stylelintrc",
@@ -59,49 +61,6 @@
 			"dist/": "/"
 		}
 	},
-	"jest": {
-		"preset": "ts-jest",
-		"moduleDirectories": [
-			"node_modules",
-			"src"
-		],
-		"moduleFileExtensions": [
-			"ts",
-			"tsx",
-			"js",
-			"jsx",
-			"json",
-			"node"
-		],
-		"moduleNameMapper": {
-			"^@src/(.*)$": "<rootDir>/src/$1",
-			"^@root/(.*)$": "<rootDir>/$1",
-			"^@assets/(.*)$": "<rootDir>/src/assets/$1",
-			"^@utilities": "<rootDir>/src/utilities",
-			"^@components": "<rootDir>/src/components",
-			"\\.(css|less|sass|scss)$": "<rootDir>/test-config/style-mock.js",
-			"\\.(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test-config/file-mock.js"
-		},
-		"setupFiles": [
-			"<rootDir>/test-config/index.js",
-			"<rootDir>/test-config/local-storage-mock.js"
-		],
-		"snapshotSerializers": [
-			"enzyme-to-json/serializer"
-		],
-		"transform": {
-			"^.+\\.tsx?$": "ts-jest",
-			"\\.(css|less|sass|scss)$": "<rootDir>/test-config/style-mock.js",
-			"\\.(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test-config/file-mock.js"
-		},
-		"verbose": false,
-		"testRegex": ".*\\.(test|spec)\\.(j|tsx?)$",
-		"testPathIgnorePatterns": [
-			"<rootDir>/node_modules/",
-			"<rootDir>/dist/",
-			"<rootDir>/test-config/"
-		]
-	},
 	"dependencies": {
 		"d3": "5.16.0",
 		"date-fns": "2.14.0",
@@ -111,6 +70,7 @@
 		"react-helmet": "6.1.0",
 		"react-inlinesvg": "2.0.0",
 		"react-jinke-music-player": "4.15.3",
+		"react-use": "15.3.0",
 		"universal-github-client": "1.0.3"
 	},
 	"devDependencies": {
@@ -119,6 +79,7 @@
 		"@types/d3": "5.7.2",
 		"@types/enzyme": "3.10.5",
 		"@types/express": "4.17.6",
+		"@types/jest": "26.0.3",
 		"@types/node": "14.0.14",
 		"@types/node-fetch": "2.5.7",
 		"@types/puppeteer": "3.0.0",
@@ -144,6 +105,7 @@
 		"eslint-plugin-jest": "23.17.1",
 		"eslint-plugin-react": "7.20.0",
 		"express": "4.17.1",
+		"html-minifier": "4.0.0",
 		"jest": "26.1.0",
 		"localga": "2.0.0",
 		"node-fetch": "2.6.0",

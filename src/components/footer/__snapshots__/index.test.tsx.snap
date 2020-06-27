@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component Should render the Footer component 1`] = `
+<footer
+  className="c-footer"
+>
+  <div
+    className="o-shell o-shell--flex"
+  >
+    <p>
+      © 
+      2020
+       Atanas Atanasov. 
+      <br
+        className="visible-xs-block"
+      />
+      All rights reserved.
+    </p>
+    <nav
+      className="c-socials"
+    >
+      <ul>
+        <li
+          key="0"
+        >
+          <Component
+            href="mailto:hi@atanas.info"
+            title="Send me an email"
+          >
+            <Component
+              className="c-svg-email"
+              name="svg-email"
+            />
+          </Component>
+        </li>
+        <li
+          key="1"
+        >
+          <Component
+            href="https://www.linkedin.com/in/scriptex/"
+            title="Find me on LinkedIn"
+          >
+            <Component
+              className="c-svg-linkedin"
+              name="svg-linkedin"
+            />
+          </Component>
+        </li>
+        <li
+          key="2"
+        >
+          <Component
+            href="https://github.com/scriptex"
+            title="See my projects on Github"
+          >
+            <Component
+              className="c-svg-github"
+              name="svg-github"
+            />
+          </Component>
+        </li>
+        <li
+          key="3"
+        >
+          <Component
+            href="https://gitlab.com/scriptex"
+            title="See my projects on Gitlab"
+          >
+            <Component
+              className="c-svg-gitlab"
+              name="svg-gitlab"
+            />
+          </Component>
+        </li>
+        <li
+          key="4"
+        >
+          <Component
+            href="https://twitter.com/scriptexbg"
+            title="Follow me on Twitter"
+          >
+            <Component
+              className="c-svg-twitter"
+              name="svg-twitter"
+            />
+          </Component>
+        </li>
+        <li
+          key="5"
+        >
+          <Component
+            href="https://www.npmjs.com/~scriptex"
+            title="See my packages on NPM"
+          >
+            <Component
+              className="c-svg-npm"
+              name="svg-npm"
+            />
+          </Component>
+        </li>
+        <li
+          key="6"
+        >
+          <Component
+            href="https://www.youtube.com/user/scriptex"
+            title="See my videos on YouTube"
+          >
+            <Component
+              className="c-svg-youtube"
+              name="svg-youtube"
+            />
+          </Component>
+        </li>
+        <li
+          key="7"
+        >
+          <Component
+            href="https://stackoverflow.com/users/4140082/atanas-atanasov"
+            title="See my profile on StackOverflow"
+          >
+            <Component
+              className="c-svg-stackoverflow"
+              name="svg-stackoverflow"
+            />
+          </Component>
+        </li>
+        <li
+          key="8"
+        >
+          <Component
+            href="https://codepen.io/scriptex/"
+            title="See my work on Codepen"
+          >
+            <Component
+              className="c-svg-codepen"
+              name="svg-codepen"
+            />
+          </Component>
+        </li>
+        <li
+          key="9"
+        >
+          <Component
+            href="https://profile.codersrank.io/user/scriptex"
+            title="See my profile on Codersrank"
+          >
+            <Component
+              className="c-svg-codersrank"
+              name="svg-codersrank"
+            />
+          </Component>
+        </li>
+        <li>
+          <Component
+            href="https://sourcerer.io/scriptex"
+            title="See my profile on Sourcerer"
+          >
+            <img
+              alt="Sourcerer brand image"
+              loading="lazy"
+              src="https://sourcerer.io/icons/logo-sharing.svg"
+              width="32"
+            />
+          </Component>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+`;

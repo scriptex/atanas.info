@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Svg component Should render the Svg component 1`] = `
+<InlineSVG
+  cacheRequests={true}
+  className="c-svg-icon test"
+  src="test"
+  uniquifyIDs={false}
+/>
+`;
+
+exports[`Svg component Should render the Svg component without an additional className 1`] = `
+<InlineSVG
+  cacheRequests={true}
+  className="c-svg-icon "
+  src="test"
+  uniquifyIDs={false}
+/>
+`;

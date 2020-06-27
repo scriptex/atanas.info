@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionSlides component Should render the SectionSlides component 1`] = `
+<Component
+  hasButton={true}
+  hasShell={true}
+  id="slides"
+>
+  <h2>
+    Slides
+  </h2>
+  <Component
+    active={0}
+    data={
+      Array [
+        Object {
+          "description": "Presentation about the EcmaScript language history and features",
+          "title": "EcmaScript Features",
+          "url": "https://docs.google.com/presentation/d/e/2PACX-1vSA8qN0_3lb0YWDYJheJ3q0AAsXWlLLpP86pnmV0KWfPo_2G-SSdSK--GVRyJbwT8_kWyJ0TZxFoaH8",
+        },
+        Object {
+          "description": "Presentation about improving workflow using Sublime Text editor",
+          "title": "Do more with Sublime Text",
+          "url": "https://docs.google.com/presentation/d/e/2PACX-1vTivcVmPyjYPdWgoJMChe_rrVyZEIw4ZgF37lCOlxUUm7DchxhMJouEV_BcrH6LDL8kiNmRSIWkiSxK",
+        },
+      ]
+    }
+    name="title"
+    onClick={[Function]}
+  />
+  <div
+    className="c-section__body"
+  >
+    <div
+      className="c-section__frame current"
+      key="0"
+    >
+      <iframe
+        allowFullScreen={true}
+        loading="lazy"
+        src="https://docs.google.com/presentation/d/e/2PACX-1vSA8qN0_3lb0YWDYJheJ3q0AAsXWlLLpP86pnmV0KWfPo_2G-SSdSK--GVRyJbwT8_kWyJ0TZxFoaH8/embed?start=false&loop=false&delayms=3000"
+        title="Presentation about the EcmaScript language history and features"
+      />
+    </div>
+    <div
+      className="c-section__frame"
+      key="1"
+    >
+      <iframe
+        allowFullScreen={true}
+        loading="lazy"
+        src="https://docs.google.com/presentation/d/e/2PACX-1vTivcVmPyjYPdWgoJMChe_rrVyZEIw4ZgF37lCOlxUUm7DchxhMJouEV_BcrH6LDL8kiNmRSIWkiSxK/embed?start=false&loop=false&delayms=3000"
+        title="Presentation about improving workflow using Sublime Text editor"
+      />
+    </div>
+  </div>
+</Component>
+`;

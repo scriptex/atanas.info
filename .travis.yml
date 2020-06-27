@@ -2,10 +2,9 @@ language: node_js
 sudo: false
 node_js:
     - 'lts/*'
-git:
-    submodules: false
 install:
     - yarn
 script:
     - yarn lint
     - yarn build
+    - yarn test:coverage

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Slide, slides } from '../../assets/scripts/slides';
-import { Section, Button } from '..';
+import { Section, SectionNav } from '..';
 
 export const SectionSlides: React.FunctionComponent = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);
@@ -10,17 +10,7 @@ export const SectionSlides: React.FunctionComponent = () => {
 		<Section id="slides" hasButton={true}>
 			<h2>Slides</h2>
 
-			<nav className="c-section__nav">
-				<ul>
-					{slides.map((slide: Slide, index: number) => (
-						<li key={index} className={activeIndex === index ? 'current' : ''}>
-							<Button type="button" onClick={() => setActiveIndex(index)}>
-								{slide.title}
-							</Button>
-						</li>
-					))}
-				</ul>
-			</nav>
+			<SectionNav name="title" data={slides} active={activeIndex} onClick={setActiveIndex} />
 
 			<div className="c-section__body">
 				{slides.map((slide: Slide, index: number) => (

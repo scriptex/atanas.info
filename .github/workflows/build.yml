@@ -12,6 +12,7 @@ jobs:
                   yarn
                   yarn lint
                   yarn build
+                  yarn test:coverage
               env:
                   GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
                   GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}

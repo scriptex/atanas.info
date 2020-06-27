@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import github from '../../assets/scripts/github-insights.json';
+import gitlab from '../../assets/scripts/gitlab-insights.json';
 import {
 	Svg,
 	Head,
@@ -30,7 +32,7 @@ export const App: React.FunctionComponent = () => (
 
 			<SectionSkills />
 
-			<SectionStats />
+			<SectionStats data={{ github, gitlab }} />
 
 			<SectionPortfolio />
 

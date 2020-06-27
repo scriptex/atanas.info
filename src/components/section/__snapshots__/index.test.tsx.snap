@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Section component Should render the Section component 1`] = `
+<section
+  className="c-section c-section--section test"
+  id="section"
+>
+  <div
+    className="o-shell"
+  >
+    <Component
+      className=" test"
+      hasButton={true}
+      hasShell={true}
+      id="section"
+    >
+      <Children />
+    </Component>
+  </div>
+</section>
+`;
+
+exports[`Section component Should render the Section component without a button 1`] = `
+<section
+  className="c-section c-section--section"
+  id="section"
+>
+  <div
+    className="o-shell o-shell--flex"
+  >
+    <Component
+      hasButton={false}
+      hasShell={true}
+      id="section"
+      shellClass="o-shell--flex"
+    >
+      <Children />
+    </Component>
+  </div>
+</section>
+`;
+
+exports[`Section component Should render the Section component without a button and a shell 1`] = `
+<section
+  className="c-section c-section--section test"
+  id="section"
+>
+  <Component
+    className=" test"
+    hasButton={false}
+    hasShell={false}
+    id="section"
+  >
+    <Children />
+  </Component>
+</section>
+`;
+
+exports[`Section component Should render the Section component without a shell 1`] = `
+<section
+  className="c-section c-section--section test"
+  id="section"
+>
+  <Component
+    className=" test"
+    hasButton={true}
+    hasShell={false}
+    id="section"
+  >
+    <Children />
+  </Component>
+</section>
+`;
+
+exports[`SectionElements component Should render the SectionElements component 1`] = `
+<Fragment>
+  <Children />
+  <div
+    className="c-section__actions"
+  >
+    <Component
+      className="c-btn"
+      href="mailto:hi@atanas.info"
+    >
+      Hire me
+    </Component>
+  </div>
+</Fragment>
+`;
+
+exports[`SectionElements component Should render the SectionElements component without a button 1`] = `
+<Fragment>
+  <Children />
+</Fragment>
+`;
+
+exports[`SectionElements component Should render the SectionElements component without a button and a shell 1`] = `
+<Fragment>
+  <Children />
+</Fragment>
+`;
+
+exports[`SectionElements component Should render the SectionElements component without a shell 1`] = `
+<Fragment>
+  <Children />
+  <div
+    className="c-section__actions"
+  >
+    <Component
+      className="c-btn"
+      href="mailto:hi@atanas.info"
+    >
+      Hire me
+    </Component>
+  </div>
+</Fragment>
+`;

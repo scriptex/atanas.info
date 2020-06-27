@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { format } from 'date-fns';
 
-import github from '../../assets/scripts/github-insights.json';
-import gitlab from '../../assets/scripts/gitlab-insights.json';
 import { Section } from '..';
 import { renderContributions } from '../../assets/scripts/gitlab-contributions';
 
@@ -11,10 +9,14 @@ interface GeneralInsight {
 	readonly value: any;
 }
 
+interface Props {
+	data: any;
+}
+
 export const formatDate = (date: string): string => format(new Date(date), 'dd MMM yyyy');
 
-export const GithubStats: React.FunctionComponent = () => {
-	const { general, calendar, repositories }: any = github;
+export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
+	const { general, calendar, repositories } = props.data;
 	const blocks: GeneralInsight[] = [
 		{
 			title: 'Used languages',
@@ -90,8 +92,8 @@ export const GithubStats: React.FunctionComponent = () => {
 	);
 };
 
-export const GitlabStats: React.FunctionComponent = () => {
-	const { general, calendar, repositories }: any = gitlab;
+export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
+	const { general, calendar, repositories } = props.data;
 	const blocks: GeneralInsight[] = [
 		{
 			title: 'Used languages',
@@ -153,37 +155,35 @@ export const GitlabStats: React.FunctionComponent = () => {
 	);
 };
 
-export const SectionStats: React.FunctionComponent = () => {
-	return (
-		<Section id="stats" hasShell={false} hasButton={true}>
-			<header className="c-section__head">
-				<div className="o-shell">
-					<h1>Stats</h1>
-				</div>
-			</header>
-
-			<div className="c-section__entry">
-				<div className="o-shell">
-					<h2>
-						<a
-							href="https://profile.codersrank.io/user/scriptex"
-							target="_blank"
-							rel="noopener noreferrer nofollow"
-						>
-							Codersrank
-						</a>{' '}
-						Profile
-					</h2>
-
-					<codersrank-widget username="scriptex"></codersrank-widget>
-				</div>
+export const SectionStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => (
+	<Section id="stats" hasShell={false} hasButton={true}>
+		<header className="c-section__head">
+			<div className="o-shell">
+				<h1>Stats</h1>
 			</div>
+		</header>
 
-			<GithubStats />
+		<div className="c-section__entry">
+			<div className="o-shell">
+				<h2>
+					<a
+						href="https://profile.codersrank.io/user/scriptex"
+						target="_blank"
+						rel="noopener noreferrer nofollow"
+					>
+						Codersrank
+					</a>{' '}
+					Profile
+				</h2>
 
-			<GitlabStats />
-		</Section>
-	);
-};
+				<codersrank-widget username="scriptex"></codersrank-widget>
+			</div>
+		</div>
+
+		<GithubStats data={props.data.github} />
+
+		<GitlabStats data={props.data.gitlab} />
+	</Section>
+);
 
 export default SectionStats;

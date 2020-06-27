@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionPortfolio component Should render the SectionPortfolio component 1`] = `
+<Component
+  hasButton={true}
+  hasShell={true}
+  id="portfolio"
+>
+  <h1>
+    Portfolio
+  </h1>
+  <div
+    className="c-section__body"
+  >
+    <Component
+      className=""
+      href="https://www.google.com"
+      key="0"
+    >
+      <div>
+        <strong>
+          Project 1
+        </strong>
+        <span>
+          <small>
+            Technologies:
+          </small>
+          Description 1
+        </span>
+      </div>
+      <img
+        alt="Project 1"
+        loading="lazy"
+        src="image 1"
+        width="600"
+      />
+    </Component>
+    <Component
+      className="disabled"
+      href=""
+      key="1"
+    >
+      <div>
+        <strong>
+          Project 2
+        </strong>
+        <span>
+          <small>
+            Technologies:
+          </small>
+          Description 2
+        </span>
+      </div>
+      <img
+        alt="Project 2"
+        loading="lazy"
+        src="image 2"
+        width="600"
+      />
+    </Component>
+  </div>
+</Component>
+`;
