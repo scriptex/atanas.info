@@ -1,0 +1,25 @@
+name: coverage
+
+on: ['push']
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Test
+              run: |
+                  yarn
+                  yarn test:coverage
+
+    coverage:
+        needs: test
+        runs-on: ubuntu-latest
+        name: codacy-coverage-reporter
+        steps:
+            - uses: actions/checkout@master
+            - name: Run codacy-coverage-reporter
+              uses: codacy/codacy-coverage-reporter-action@master
+              with:
+                  project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+                  coverage-reports: coverage/lcov.info
