@@ -19,3 +19,14 @@ jobs:
                   CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
                   CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
                   CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+    coverage:
+        needs: build
+        runs-on: ubuntu-latest
+        name: codacy-coverage-reporter
+        steps:
+            - uses: actions/checkout@master
+            - name: Run codacy-coverage-reporter
+              uses: codacy/codacy-coverage-reporter-action@master
+              with:
+                  project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+                  coverage-reports: coverage/lcov.info
