@@ -28,6 +28,9 @@ export const Head: React.FunctionComponent = () => (
 		<meta httpEquiv="Pragma" content="no-cache" />
 		<meta httpEquiv="Cache-Control" content="no-cache" />
 
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-capable" content="yes" />
+
 		<meta name="application-name" content="Atanas Atanasov" />
 		<meta name="msapplication-config" content="config.xml" />
 		<meta name="msapplication-TileColor" content="#ef4c23" />

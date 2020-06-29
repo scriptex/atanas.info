@@ -16,8 +16,8 @@
 		"tsc:watch": "tsc --noEmit --watch",
 		"css": "postcss ./src/index.pcss -o ./src/index.css",
 		"css:watch": "postcss ./src/index.pcss -o ./src/index.css -w",
-		"parcel-start": "parcel ./src/index.html",
-		"parcel-build": "rm -rf dist && parcel build ./src/index.html --public-url '/'",
+		"parcel-start": "parcel ./src/index.html --open",
+		"parcel-build": "rm -rf dist && parcel build ./src/index.html --public-url '/' --no-source-maps",
 		"pre": "yarn deduplicate && yarn screenshots && yarn insights && yarn fetch-music && yarn localga && yarn svg",
 		"start": "concurrently -r \"yarn css:watch\" \"yarn tsc:watch\" \"yarn parcel-start\"",
 		"build": "yarn pre && yarn css && yarn tsc && yarn parcel-build && yarn fetch-projects && yarn build-projects",
@@ -53,9 +53,7 @@
 			"dist/resume.pdf",
 			"dist/sprite.svg",
 			"dist/**/*.css",
-			"dist/**/*.css.map",
-			"dist/**/*.js",
-			"dist/**/*.js.map"
+			"dist/**/*.js"
 		],
 		"stripPrefixMulti": {
 			"dist/": "/"

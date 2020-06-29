@@ -65,6 +65,14 @@ exports[`Head component Should render the Head component 1`] = `
     httpEquiv="Cache-Control"
   />
   <meta
+    content="yes"
+    name="apple-mobile-web-app-capable"
+  />
+  <meta
+    content="yes"
+    name="mobile-web-app-capable"
+  />
+  <meta
     content="Atanas Atanasov"
     name="application-name"
   />
