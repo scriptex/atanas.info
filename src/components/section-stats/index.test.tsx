@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 
-import { mockUseEffect } from '../../assets/shared';
+import { mockUseEffect } from '../../scripts/shared';
 import { SectionStats, GithubStats, GitlabStats } from '.';
 
 const github = {

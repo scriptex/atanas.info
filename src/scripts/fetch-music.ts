@@ -7,7 +7,7 @@ import { Track, music as tracks } from '../scripts/music';
 if (!tracks.length) {
 	console.log('atanas.info: No tracks specified.');
 } else {
-	const file = 'src/assets/scripts/tracks.ts';
+	const file = 'src/scripts/tracks.ts';
 	const data = tracks.map((track: Track) => {
 		const url = track.url.replace('www', 'dl');
 

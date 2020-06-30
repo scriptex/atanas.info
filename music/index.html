@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Atanas Atanasov | Music</title>
+		<link rel="stylesheet" href="./index.scss" />
+	</head>
+	<body>
+		<div id="homepage">
+			<h1>
+				<span>Canvas Audio Visualizer</span><br /><a target="_blank" href="https://www.facebook.com/nto.music/"
+					>N'to - Alter Ego</a
+				>
+			</h1>
+			<h2>
+				<span id="start">Start</span
+				><audio
+					id="audio"
+					hidden
+					controls
+					crossorigin="anonymous"
+					src="https://rocheclement.fr/nto-alter-ego.mp3"
+				></audio>
+			</h2>
+		</div>
+		<div id="content">
+			<div id="overlay">
+				<div class="time pause">
+					<div class="btn pause">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+							<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" class="shape" />
+							<path d="M0 0h24v24H0z" fill="none" />
+						</svg>
+					</div>
+					<div class="btn play">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+							<path d="M8 5v14l11-7z" class="shape" />
+							<path d="M0 0h24v24H0z" fill="none" />
+						</svg>
+					</div>
+				</div>
+			</div>
+
+			<canvas id="canvas"></canvas>
+		</div>
+		<script src="./index.ts"></script>
+	</body>
+</html>

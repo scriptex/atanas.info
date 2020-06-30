@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Slide, slides } from '../../assets/scripts/slides';
+import { Slide, slides } from '../../scripts/slides';
 import { Section, SectionNav } from '..';
 
 export const SectionSlides: React.FunctionComponent = () => {

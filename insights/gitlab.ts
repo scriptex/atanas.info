@@ -9,7 +9,7 @@ export const getGitlabInsights = async (): Promise<void> => {
 	console.log('Getting insights data from Gitlab...');
 
 	try {
-		const file = 'src/assets/scripts/gitlab-insights.json';
+		const file = 'src/scripts/gitlab-insights.json';
 
 		console.log('Getting data for user Scriptex from Gitlab...');
 		const user = await gitlab('users/1896847');

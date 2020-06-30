@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Section, ExternalLink } from '..';
-import { bio, BioEntry } from '../../assets/scripts/bio';
+import { bio, BioEntry } from '../../scripts/bio';
 
 export const SectionAbout: React.FunctionComponent = () => (
 	<Section

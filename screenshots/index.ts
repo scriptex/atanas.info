@@ -7,7 +7,7 @@ import * as puppeteer from 'puppeteer';
 import { v2 as cloudinary } from 'cloudinary';
 import { config as dotenvConfig } from 'dotenv';
 
-import { Project, projects } from '../src/assets/scripts/projects';
+import { Project, projects } from '../src/scripts/projects';
 
 if (!projects || !projects.length) {
 	console.log('No projects found.');
@@ -120,10 +120,7 @@ async function createScreenshots(pages: Project[]): Promise<void> {
 	}
 
 	Promise.all(results).then(() => {
-		writeFileSync(
-			resolve(__dirname, '../src/assets/scripts/projects-list.json'),
-			JSON.stringify(newProjects, null, 2)
-		);
+		writeFileSync(resolve(__dirname, '../src/scripts/projects-list.json'), JSON.stringify(newProjects, null, 2));
 
 		process.exit();
 	});

@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { Slide } from '../../assets/scripts/slides';
+import { Slide } from '../../scripts/slides';
 import { Button } from '..';
-import { Presentation } from '../../assets/scripts/presentations';
+import { Presentation } from '../../scripts/presentations';
 
 interface Props {
 	name: string;

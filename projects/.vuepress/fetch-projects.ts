@@ -14,7 +14,7 @@ const fetchProject = async (repo: string, branch: string = 'master', file: strin
 };
 
 (async () => {
-	const { projects }: { projects: Project[] } = await import('../../src/assets/scripts/open-source' as any);
+	const { projects }: { projects: Project[] } = await import('../../src/scripts/open-source' as any);
 
 	if (!projects.length) {
 		console.log('atanas.info: No projects specified.');

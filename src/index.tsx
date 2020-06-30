@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { render } from 'react-dom';
 
-import './assets/scripts/google-analytics-local';
+import './scripts/google-analytics-local';
 
 import { App } from './components';
 

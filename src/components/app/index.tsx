@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import github from '../../assets/scripts/github-insights.json';
-import gitlab from '../../assets/scripts/gitlab-insights.json';
+import github from '../../scripts/github-insights.json';
+import gitlab from '../../scripts/gitlab-insights.json';
 import {
 	Svg,
 	Head,

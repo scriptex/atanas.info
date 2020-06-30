@@ -2,7 +2,7 @@ import * as React from 'react';
 import { format } from 'date-fns';
 
 import { Section } from '..';
-import { renderContributions } from '../../assets/scripts/gitlab-contributions';
+import { renderContributions } from '../../scripts/gitlab-contributions';
 
 interface GeneralInsight {
 	readonly title: string;

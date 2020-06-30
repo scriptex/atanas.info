@@ -7,7 +7,7 @@ export const getGithubInsights = async (): Promise<void> => {
 	console.log('Getting insights data from Github...');
 
 	try {
-		const file = 'src/assets/scripts/github-insights.json';
+		const file = 'src/scripts/github-insights.json';
 		const user = await github.get({ path: '/users/scriptex' });
 		const calendar = await getContributions();
 		const orgRepos = await github.get({ path: '/orgs/three11/repos?per_page=100' });
