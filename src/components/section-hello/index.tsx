@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { useInterval } from 'react-use';
 
-import { titles } from '../../assets/scripts/titles';
+import { titles } from '../../scripts/titles';
 import { Section } from '..';
-import { initCanvas, createDots } from '../../assets/scripts/canvas';
+import { initCanvas, createDots } from '../../scripts/canvas';
 
 export const Slider: React.FunctionComponent = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);

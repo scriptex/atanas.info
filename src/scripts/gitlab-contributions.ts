@@ -3,7 +3,7 @@ import { IndexedList } from 'universal-github-client';
 
 import { sub, startOfDay } from 'date-fns';
 
-import { formatDate } from '../../components/section-stats';
+import { formatDate } from '../components/section-stats';
 
 export const getColor = (count: number, max: number, colors: string[]): string => {
 	if (count > 0 && count <= max * 0.1) {

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Section, SectionNav } from '..';
-import { presentations, Presentation } from '../../assets/scripts/presentations';
+import { presentations, Presentation } from '../../scripts/presentations';
 
 export const SectionVideos: React.FunctionComponent = () => {
 	const [activeIndex, setActiveIndex] = React.useState(-1);

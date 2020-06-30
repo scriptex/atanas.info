@@ -1,13 +1,7 @@
 {
 	"compilerOptions": {
 		"baseUrl": "./",
-		"paths": {
-			"@src/*": ["src/*"],
-			"@root/*": ["/*"],
-			"@assets/*": ["src/assets/*"],
-			"@utilities": ["src/utilities"],
-			"@components": ["src/components"]
-		},
+		"paths": {},
 		"alwaysStrict": true,
 		"allowSyntheticDefaultImports": true,
 		"allowJs": false,

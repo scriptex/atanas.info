@@ -3,11 +3,11 @@
 	"version": "1.1.0",
 	"description": "Atanas Atanasov's Personal Website",
 	"scripts": {
-		"fetch-music": "ts-node ./src/assets/scripts/fetch-music.ts",
+		"fetch-music": "ts-node ./src/scripts/fetch-music.ts",
 		"fetch-projects": "ts-node ./projects/.vuepress/fetch-projects.ts",
 		"start-projects": "cd projects && vuepress dev",
 		"build-projects": "cd projects && vuepress build",
-		"localga": "localga --id UA-83446952-1 --folder ./src/assets/scripts",
+		"localga": "localga --id UA-83446952-1 --folder ./src/scripts",
 		"svgo": "svgo -f static/images/svg --config=svgo.yml",
 		"svg-sprite": "spritesh -q -i static/images/svg -o static/sprite.svg -p svg-",
 		"svg-minify": "html-minifier static/sprite.svg --collapse-whitespace -o static/sprite.svg",

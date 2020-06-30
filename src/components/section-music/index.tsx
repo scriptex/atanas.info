@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Player from 'react-jinke-music-player';
 
-import { tracks } from '../../assets/scripts/tracks';
+import { tracks } from '../../scripts/tracks';
 
 export const SectionMusic: React.FunctionComponent = () => (
 	<Player

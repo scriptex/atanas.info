@@ -2,7 +2,7 @@ import * as React from 'react';
 import { shallow } from 'enzyme';
 
 import { SectionSkills } from '.';
-import { mockUseEffect } from '../../assets/shared';
+import { mockUseEffect } from '../../scripts/shared';
 
 describe('SectionSkills component', () => {
 	mockUseEffect();

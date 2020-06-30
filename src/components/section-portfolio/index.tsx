@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import projects from '../../assets/scripts/projects-list.json';
-import { Project } from '../../assets/scripts/projects';
+import projects from '../../scripts/projects-list.json';
+import { Project } from '../../scripts/projects';
 import { Section, ExternalLink } from '..';
 
 export const SectionPortfolio: React.FunctionComponent = () => (

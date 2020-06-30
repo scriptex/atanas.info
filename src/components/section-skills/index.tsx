@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { skills } from '../../assets/scripts/skills-list';
+import { skills } from '../../scripts/skills-list';
 import { Section } from '..';
-import { drawSkills } from '../../assets/scripts/skills';
+import { drawSkills } from '../../scripts/skills';
 
 export const SectionSkills: React.FunctionComponent = () => {
 	React.useEffect(() => {

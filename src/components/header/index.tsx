@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Icon } from '..';
-import { Link, links } from '../../assets/scripts/menu';
+import { Link, links } from '../../scripts/menu';
 
 export const Header: React.FunctionComponent = () => {
 	const [open, setOpen] = React.useState(false);

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { socials, Social } from '../../assets/scripts/socials';
+import { socials, Social } from '../../scripts/socials';
 import { ExternalLink, Icon } from '..';
 
 export const Footer: React.FunctionComponent = () => (
