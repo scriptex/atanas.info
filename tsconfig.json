@@ -41,6 +41,6 @@
 		"resolveJsonModule": true
 	},
 	"compileOnSave": false,
-	"include": ["insights/**/*", "screenshots/**/*", "server/**/*", "src/**/*"],
+	"include": ["insights/**/*", "music/**/*.ts", "screenshots/**/*", "server/**/*", "src/**/*"],
 	"exclude": ["node_modules"]
 }

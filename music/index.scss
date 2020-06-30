@@ -1,0 +1,207 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	background: #000;
+
+	&:not(.safari) #start {
+		color: #000;
+		position: relative;
+		padding: 4px 8px;
+		border: 2px #000 solid;
+		background: #fff;
+
+		&:hover {
+			color: #fff;
+			top: 4px;
+			left: 4px;
+			border: 2px #000 solid;
+			background: #000;
+			transition: 0.25s;
+		}
+
+		&::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 4px;
+			left: 4px;
+			z-index: -1;
+			border: 2px #fff solid;
+		}
+
+		&:hover::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			z-index: -1;
+			border: 2px #fff solid;
+		}
+	}
+}
+
+audio {
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+
+svg {
+	width: 100%;
+	height: 100%;
+}
+
+#homepage {
+	font-family: sans-serif;
+	color: #fff;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 101;
+	background: #000;
+
+	h1 {
+		span {
+			opacity: 0;
+			cursor: default;
+			animation: fadeIn 2s;
+			animation-fill-mode: forwards;
+		}
+
+		a {
+			color: #fff;
+			opacity: 0;
+			animation: fadeIn 2s;
+			animation-delay: 1s;
+			animation-fill-mode: forwards;
+		}
+	}
+
+	h2 {
+		opacity: 0;
+		animation: fadeIn 2s;
+		animation-delay: 2s;
+		animation-fill-mode: forwards;
+
+		span {
+			cursor: pointer;
+		}
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+#content {
+	height: 100%;
+}
+
+#credit {
+	font-family: monospace;
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	z-index: 100;
+	padding: 25px;
+
+	a {
+		color: #fff;
+	}
+}
+
+#canvas {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+#overlay {
+	display: flex;
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	z-index: 100;
+
+	> div {
+		margin-right: 15px;
+		cursor: pointer;
+
+		.btn {
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	.time.pause .pause {
+		display: none;
+	}
+
+	.time:not(.pause) .play {
+		display: none;
+	}
+
+	.btn {
+		position: relative;
+		border: #000 solid 2px;
+		background: #fff;
+
+		svg .shape {
+			fill: #000;
+		}
+
+		&:hover {
+			top: 4px;
+			left: 4px;
+			background: #000;
+			transition: 0.25s;
+
+			svg .shape {
+				fill: #fff;
+				transition: 0.25s;
+			}
+
+			&::after {
+				top: 0px;
+				left: 0px;
+			}
+		}
+
+		&::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 4px;
+			left: 4px;
+			z-index: -1;
+			border: #fff solid 2px;
+		}
+	}
+}
