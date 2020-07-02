@@ -28,12 +28,17 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           Description 1
         </span>
       </div>
-      <img
-        alt="Project 1"
-        loading="lazy"
-        src="image 1"
+      <object
+        data="image 1"
+        title="Project 1"
+        type="image/png"
         width="600"
-      />
+      >
+        <img
+          loading="lazy"
+          width="600"
+        />
+      </object>
     </Component>
     <Component
       className="disabled"
@@ -51,12 +56,17 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           Description 2
         </span>
       </div>
-      <img
-        alt="Project 2"
-        loading="lazy"
-        src="image 2"
+      <object
+        data="image 2"
+        title="Project 2"
+        type="image/png"
         width="600"
-      />
+      >
+        <img
+          loading="lazy"
+          width="600"
+        />
+      </object>
     </Component>
   </div>
 </Component>
