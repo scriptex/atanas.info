@@ -4,9 +4,10 @@ import { resolve } from 'path';
 import { writeFileSync } from 'fs';
 
 import * as puppeteer from 'puppeteer';
-import { v2 as cloudinary } from 'cloudinary';
 import { config as dotenvConfig } from 'dotenv';
+import { v2 as cloudinary, UploadApiOptions, UploadApiResponse } from 'cloudinary';
 
+import * as pckg from '../package.json';
 import { Project, projects } from '../src/scripts/projects';
 
 if (!projects || !projects.length) {
@@ -22,13 +23,14 @@ cloudinary.config({
 	api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
-interface IndexedList<T> {
-	readonly [x: string]: T;
-}
+const FOLDER: string = pckg.name;
 
-const FOLDER = 'atanas.info';
+const uploadOptions = (name: string): UploadApiOptions => ({
+	public_id: `${FOLDER}/${name}`,
+	invalidate: true
+});
 
-async function createScreenshot(url: string, name: string): Promise<any> {
+async function createScreenshot(url: string, name: string): Promise<UploadApiResponse | null> {
 	console.log(`Launching new browser for ${name}...`);
 	const browser = await puppeteer.launch({
 		headless: true,
@@ -62,13 +64,13 @@ async function createScreenshot(url: string, name: string): Promise<any> {
 	if (shotResult) {
 		console.log(`Uploading screenshot for ${name}...`);
 
-		return upload(shotResult as Buffer, { public_id: `${FOLDER}/${name}` }, name);
+		return upload(shotResult as Buffer, uploadOptions(name), name);
 	} else {
 		return null;
 	}
 }
 
-function upload(shotResult: Buffer, options: IndexedList<string>, name: string): Promise<any> {
+function upload(shotResult: Buffer, options: UploadApiOptions, name: string): Promise<UploadApiResponse> {
 	return new Promise((resolve, reject) => {
 		cloudinary.uploader
 			.upload_stream(options, (error, result) => {
@@ -87,7 +89,7 @@ function upload(shotResult: Buffer, options: IndexedList<string>, name: string):
 async function createScreenshots(pages: Project[]): Promise<void> {
 	await cloudinary.api.delete_resources_by_prefix(`${FOLDER}/`);
 
-	const results = [];
+	const results: any[] = [];
 
 	let newProjects = [...projects];
 
@@ -97,14 +99,14 @@ async function createScreenshots(pages: Project[]): Promise<void> {
 			console.log(`${page.title} does not have a valid URL.`);
 		} else {
 			try {
-				const result: any = await createScreenshot(page.url, page.title);
+				const result = await createScreenshot(page.url, page.title);
 
 				if (result) {
 					newProjects = newProjects.map((project: Project) => {
 						if (project.title === page.title) {
 							return {
 								...project,
-								image: result.secure_url
+								image: result.secure_url.replace(/^(.*)(\/v\d*)(.*)$/, '$1$3')
 							};
 						}
 
@@ -121,6 +123,7 @@ async function createScreenshots(pages: Project[]): Promise<void> {
 
 	Promise.all(results).then(() => {
 		writeFileSync(resolve(__dirname, '../src/scripts/projects-list.json'), JSON.stringify(newProjects, null, 2));
+		writeFileSync(resolve(__dirname, '../src/scripts/cloudinary-data.json'), JSON.stringify(results, null, 2));
 
 		process.exit();
 	});

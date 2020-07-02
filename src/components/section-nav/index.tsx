@@ -17,7 +17,7 @@ export const SectionNav: React.FunctionComponent<Readonly<Props>> = (props: Read
 	return (
 		<nav className="c-section__nav">
 			<ul>
-				{data.map((item: Presentation, index: number) => (
+				{data.map((item: Presentation | Slide, index: number) => (
 					<li key={index} className={active === index ? 'current' : ''}>
 						<Button
 							type="button"
