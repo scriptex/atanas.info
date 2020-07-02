@@ -71,7 +71,7 @@
 		"react-dom": "16.13.1",
 		"react-helmet": "6.1.0",
 		"react-inlinesvg": "2.0.0",
-		"react-jinke-music-player": "4.15.4",
+		"react-jinke-music-player": "4.15.5",
 		"react-use": "15.3.2",
 		"simplex-noise": "2.4.0",
 		"universal-github-client": "1.0.3"
@@ -106,9 +106,10 @@
 		"eslint": "7.3.1",
 		"eslint-config-prettier": "6.11.0",
 		"eslint-plugin-jest": "23.17.1",
-		"eslint-plugin-react": "7.20.2",
+		"eslint-plugin-react": "7.20.3",
 		"express": "4.17.1",
 		"html-minifier": "4.0.0",
+		"husky": "4.2.5",
 		"jest": "26.1.0",
 		"localga": "2.0.0",
 		"node-fetch": "2.6.0",
@@ -148,5 +149,10 @@
 	"private": true,
 	"resolutions": {
 		"@types/react": "16.9.41"
+	},
+	"husky": {
+		"hooks": {
+			"pre-push": "yarn lint && yarn test"
+		}
 	}
 }

@@ -15,10 +15,5 @@ module.exports = {
 		'postcss-flexbugs-fixes': true,
 		'postcss-merge-rules': true,
 		'postcss-custom-media': true
-		// cssnano: {
-		// 	discardComments: {
-		// 		removeAll: true
-		// 	}
-		// }
 	}
 };
