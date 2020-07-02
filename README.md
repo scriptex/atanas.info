@@ -9,6 +9,7 @@
 [![codebeat badge](https://codebeat.co/badges/807a5061-9e43-4fec-9819-1c47c37c2e9f)](https://codebeat.co/projects/github-com-scriptex-atanas-info-master)
 [![CodeFactor](https://www.codefactor.io/repository/github/scriptex/atanas.info/badge)](https://www.codefactor.io/repository/github/scriptex/atanas.info)
 [![DeepScan grade](https://deepscan.io/api/teams/3574/projects/5291/branches/40827/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=3574&pid=5291&bid=40827)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fscriptex%2Fatanas.info.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fscriptex%2Fatanas.info?ref=badge_shield)
 
 > My personal website
 
@@ -19,3 +20,6 @@ Installable as a Progressive Web App and (partially for now) accessible offline.
 ## LICENSE
 
 MIT
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fscriptex%2Fatanas.info.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fscriptex%2Fatanas.info?ref=badge_large)
