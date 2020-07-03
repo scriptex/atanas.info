@@ -19,7 +19,7 @@
 		"parcel-start": "parcel ./src/index.html --open",
 		"parcel-build-src": "rm -rf dist && parcel build ./src/index.html --public-url '/' --no-source-maps",
 		"parcel-start-music": "parcel ./music/index.html --open --out-dir='dist/music'",
-		"parcel-build-music": "parcel build ./music/index.html --public-url '/' --no-source-maps --out-dir='dist/music'",
+		"parcel-build-music": "parcel build ./music/index.html --public-url '/music' --no-source-maps --out-dir='dist/music'",
 		"parcel-build": "yarn parcel-build-src && yarn parcel-build-music",
 		"pre": "yarn deduplicate && yarn screenshots && yarn insights && yarn fetch-music && yarn localga && yarn svg",
 		"start": "concurrently -r \"yarn css:watch\" \"yarn tsc:watch\" \"yarn parcel-start\"",
