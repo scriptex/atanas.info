@@ -34,7 +34,8 @@
 		"screenshots": "ts-node ./screenshots/index.ts",
 		"insights": "ts-node ./insights/index.ts",
 		"ssr": "ts-node ./server/index.ts",
-		"pwa": "create-pwa --icon static/images/icons/icon.png --launch static/images/icons/splash.png"
+		"pwa": "create-pwa --icon static/images/icons/icon.png --launch static/images/icons/splash.png",
+		"type-coverage": "type-coverage --ignore-catch --detail"
 	},
 	"keywords": [],
 	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
@@ -137,6 +138,7 @@
 		"ts-jest": "26.1.1",
 		"ts-node": "8.10.2",
 		"tslib": "2.0.0",
+		"type-coverage": "2.8.4",
 		"typescript": "3.9.6",
 		"vuepress": "1.5.2",
 		"yarn-deduplicate": "2.0.0"
@@ -154,5 +156,8 @@
 		"hooks": {
 			"pre-push": "yarn lint && yarn test"
 		}
+	},
+	"typeCoverage": {
+		"atLeast": 90
 	}
 }
