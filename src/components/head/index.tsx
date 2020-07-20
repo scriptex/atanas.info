@@ -3,51 +3,14 @@ import { Helmet } from 'react-helmet';
 
 export const Head: React.FunctionComponent = () => (
 	<Helmet>
-		<title>Atanas Atanasov | Senior Frontend Web Developer</title>
-
-		<meta
-			name="description"
-			content="Atanas Atanasov - Senior Frontend Web Developer: Single Page Applications, Vue, React, Angular, NodeJS"
-		/>
-
-		<meta
-			name="keywords"
-			content="React Development, NodeJS Devrlopment, TypeScript Development, Web Development, WordPress Development, HTML Development, Website Development, JavaScript Development, WordPress, WP, JS, JavaScript, Vue, Vue.js, VueJS, Nuxt, React, ReactJS, React JS, Node, NodeJS, Single Page Apps, Single Page Application, CSS, CSS3, ES5, ES6, ES7, Website, Development"
-		/>
-
-		<meta name="copyright" content="Atanas Atanasov" />
-		<meta name="language" content="EN" />
-		<meta name="robots" content="index,follow" />
-		<meta name="author" content="Atanas Atanasov, hi@atanas.info" />
-		<meta name="designer" content="Atanas Atanasov" />
-		<meta name="coverage" content="Worldwide" />
-		<meta name="distribution" content="Worldwide" />
-		<meta name="rating" content="General" />
-		<meta name="revisit-after" content="7 days" />
-		<meta httpEquiv="Expires" content="0" />
-		<meta httpEquiv="Pragma" content="no-cache" />
-		<meta httpEquiv="Cache-Control" content="no-cache" />
-
-		<meta property="og:url" content="https://atanas.info" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Atanas Atanasov | Senior Frontend Web Developer" />
-		<meta property="og:image" content="https://atanas.info/images/temp/atanas.jpg" />
-		<meta
-			property="og:description"
-			content="Single Page Applications: Vue, React, Angular, NodeJS, PHP. Frontend master: HTML, SVG, CSS, SCSS, PostCSS, JavaScript, TypeScript, etc."
-		/>
-
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="mobile-web-app-capable" content="yes" />
-
 		<meta name="application-name" content="Atanas Atanasov" />
 		<meta name="msapplication-config" content="config.xml" />
 		<meta name="msapplication-TileColor" content="#ef4c23" />
-		<meta name="msapplication-TileImage" content="favicons/ms-tile-144x144.png" />
-		<meta name="msapplication-square70x70logo" content="favicons/ms-tile-70x70.png" />
-		<meta name="msapplication-square150x150logo" content="favicons/ms-tile-150x150.png" />
-		<meta name="msapplication-wide310x150logo" content="favicons/ms-tile-310x150.png" />
-		<meta name="msapplication-square310x310logo" content="favicons/ms-tile-310x310.png" />
+		<meta name="msapplication-TileImage" content="images/favicon/ms-tile-144x144.png" />
+		<meta name="msapplication-square70x70logo" content="images/favicon/ms-tile-70x70.png" />
+		<meta name="msapplication-square150x150logo" content="images/favicon/ms-tile-150x150.png" />
+		<meta name="msapplication-wide310x150logo" content="images/favicon/ms-tile-310x150.png" />
+		<meta name="msapplication-square310x310logo" content="images/favicon/ms-tile-310x310.png" />
 
 		<meta name="theme-color" content="#ef4c23" />
 
@@ -65,6 +28,7 @@ export const Head: React.FunctionComponent = () => (
 		<link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32" />
 		<link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16" />
 		<link rel="icon" type="image/png" href="images/favicon/favicon-128x128.png" sizes="128x128" />
+
 		<link rel="shortcut icon" type="image/x-icon" href="images/favicon/favicon.ico" />
 
 		<link rel="manifest" href="manifest.webmanifest" />
