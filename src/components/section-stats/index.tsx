@@ -2,7 +2,7 @@ import * as React from 'react';
 import { format } from 'date-fns';
 
 import { Section } from '..';
-import { renderContributions } from '../../scripts/gitlab-contributions';
+import { getColor, renderContributions } from '../../scripts/gitlab-contributions';
 
 interface GeneralInsight {
 	readonly title: string;
@@ -53,6 +53,8 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 		}
 	];
 
+	const maxContributions = Math.max(...Object.values(calendar).map((value: any) => value.count));
+
 	return (
 		<>
 			<div className="c-section__entry c-section__entry--no-background">
@@ -80,8 +82,10 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 								<div
 									className="c-calendar__item"
 									key={i}
-									style={{ backgroundColor: calendar[key].color }}
-									title={`${formatDate(key)} : ${calendar[key].count} contributions`}
+									style={{
+										backgroundColor: getColor(calendar[key].count, maxContributions)
+									}}
+									title={`${formatDate(key)}: ${calendar[key].count} contributions`}
 								/>
 							))}
 						</div>
