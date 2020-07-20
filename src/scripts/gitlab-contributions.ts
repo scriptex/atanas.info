@@ -5,7 +5,9 @@ import { sub, startOfDay } from 'date-fns';
 
 import { formatDate } from '../components/section-stats';
 
-export const getColor = (count: number, max: number, colors: string[]): string => {
+export const calendarColors = ['#eee', '#c6e48b', '#7bc96f', '#239a3b', '#196127'];
+
+export const getColor = (count: number, max: number, colors: string[] = calendarColors): string => {
 	if (count > 0 && count <= max * 0.1) {
 		return colors[1];
 	} else if (count > max * 0.1 && count <= max * 0.3) {
@@ -39,7 +41,6 @@ export const renderContributions = (selector: string, data: IndexedList<number>)
 	const svg = d3.select(selector).append('svg').attr('width', 795).attr('height', 105);
 	const range = d3.timeDay.range(yearAgo, new Date());
 	const days = svg.selectAll('rect').data(range);
-	const colors = ['#eee', '#c6e48b', '#7bc96f', '#239a3b', '#196127'];
 
 	days.enter()
 		.append('rect')
@@ -48,11 +49,7 @@ export const renderContributions = (selector: string, data: IndexedList<number>)
 		.attr('fill', d => {
 			const key = getKey(data, d);
 
-			if (key) {
-				return getColor(data[key], max, colors);
-			}
-
-			return colors[0];
+			return key ? getColor(data[key], max) : calendarColors[0];
 		})
 		.attr('x', (_, i: number): number => {
 			if (i === 0) {

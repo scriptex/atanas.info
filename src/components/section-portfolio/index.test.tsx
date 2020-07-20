@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import { SectionPortfolio } from '.';
 
-jest.mock('../../scripts/projects-list.json', () => ({
+jest.mock<any>('../../scripts/projects-list.json', () => ({
 	default: [
 		{
 			url: 'https://www.google.com',

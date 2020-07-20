@@ -6,10 +6,10 @@ exports[`Head component Should render the Head component 1`] = `
   encodeSpecialCharacters={true}
 >
   <title>
-    Atanas Atanasov | Senior Web Developer
+    Atanas Atanasov | Senior Frontend Web Developer
   </title>
   <meta
-    content="Atanas Atanasov - Senior Web Developer -== Custom WordPress themes, Single Page Applications -- Vue.js, React, NodeJS, State of the art Web Development ==-"
+    content="Atanas Atanasov - Senior Frontend Web Developer: Single Page Applications, Vue, React, Angular, NodeJS"
     name="description"
   />
   <meta
@@ -63,6 +63,26 @@ exports[`Head component Should render the Head component 1`] = `
   <meta
     content="no-cache"
     httpEquiv="Cache-Control"
+  />
+  <meta
+    content="https://atanas.info"
+    property="og:url"
+  />
+  <meta
+    content="website"
+    property="og:type"
+  />
+  <meta
+    content="Atanas Atanasov | Senior Frontend Web Developer"
+    property="og:title"
+  />
+  <meta
+    content="https://atanas.info/images/temp/atanas.jpg"
+    property="og:image"
+  />
+  <meta
+    content="Single Page Applications: Vue, React, Angular, NodeJS, PHP. Frontend master: HTML, SVG, CSS, SCSS, PostCSS, JavaScript, TypeScript, etc."
+    property="og:description"
   />
   <meta
     content="yes"
