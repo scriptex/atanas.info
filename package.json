@@ -35,7 +35,8 @@
 		"insights": "ts-node ./insights/index.ts",
 		"ssr": "ts-node ./server/index.ts",
 		"pwa": "create-pwa --icon static/images/icons/icon.png --launch static/images/icons/splash.png",
-		"type-coverage": "type-coverage --ignore-catch --detail"
+		"type-coverage": "type-coverage --ignore-catch --detail",
+		"please": "rm -rf .cache dist coverage node_modules yarn.lock"
 	},
 	"keywords": [],
 	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
@@ -83,7 +84,7 @@
 		"@types/d3": "5.7.2",
 		"@types/enzyme": "3.10.5",
 		"@types/express": "4.17.7",
-		"@types/jest": "26.0.4",
+		"@types/jest": "26.0.5",
 		"@types/node": "14.0.23",
 		"@types/node-fetch": "2.5.7",
 		"@types/puppeteer": "3.0.1",
