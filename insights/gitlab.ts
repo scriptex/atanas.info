@@ -5,6 +5,8 @@ import { writeFileSync } from 'fs';
 import { gitlab } from './client';
 import { asyncForEach } from './utils';
 
+const setOwner = (repo: any, owner: string): any => ({ ...repo, owner });
+
 export const getGitlabInsights = async (): Promise<void> => {
 	console.log('Getting insights data from Gitlab...');
 
@@ -24,11 +26,16 @@ export const getGitlabInsights = async (): Promise<void> => {
 		const groupProjects = await gitlab(`groups/${group.id}/projects?per_page=100&statistics=true`);
 
 		const calendar = await fetch('https://gitlab.com/users/scriptex/calendar.json').then((res: any) => res.json());
-		const projects = [...userProjects, ...groupProjects];
+		const projects = [
+			...userProjects.map((project: any) => setOwner(project, 'scriptex')),
+			...groupProjects.map((project: any) => setOwner(project, 'three11'))
+		];
 		const repositories: any[] = [];
 
 		console.log('Getting projects data from Gitlab...');
 		await asyncForEach(projects, async (project: any) => {
+			console.log('-----');
+			console.log(`Getting data for project ${project.name}`);
 			repositories.push({
 				name: project.name,
 				private: project.visibility === 'private',
@@ -39,7 +46,8 @@ export const getGitlabInsights = async (): Promise<void> => {
 				stargazers: project.star_count,
 				languages: await gitlab(`projects/${project.id}/languages`),
 				issues: project.open_issues_count,
-				contributions: project.commit_count
+				contributions: project.commit_count,
+				owner: project.owner
 			});
 		});
 
