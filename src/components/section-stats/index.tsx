@@ -29,18 +29,30 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 		{ title: 'Following', value: general.following },
 		{ title: 'Joined date', value: formatDate(general.createdAt) },
 		{ title: 'Last active', value: formatDate(general.updatedAt) },
-		{ title: 'Total repositories', value: general.privateRepos + general.publicRepos },
+		{ title: 'Total repositories', value: repositories.length },
 		{ title: 'Private repositories', value: general.privateRepos },
 		{ title: 'Public repositories', value: general.publicRepos },
+		{
+			title: 'Organizations repositories',
+			value: repositories.length - general.publicRepos - general.privateRepos
+		},
 		{ title: 'Total gists', value: general.privateGists + general.publicGists },
 		{ title: 'Private gists', value: general.privateGists },
 		{ title: 'Public gists', value: general.publicGists },
 		{
 			title: 'Total contributions',
 			value: repositories.reduce((result: number, repo: any) => {
-				const contributor = repo.contributions.find((contributor: any) => contributor.user === 'scriptex');
+				const contributor = repo.contributions.find(({ user }: { user: string }) => {
+					user = user.toLowerCase();
 
-				return result + contributor?.count || 0;
+					return user === 'scriptex' || user.includes('bot');
+				});
+
+				if (!contributor) {
+					return result;
+				}
+
+				return result + contributor.count;
 			}, 0)
 		},
 		{
@@ -112,9 +124,15 @@ export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 
 		{ title: 'Joined date', value: formatDate(general.createdAt) },
 		{ title: 'Last active', value: formatDate(general.updatedAt) },
-		{ title: 'Total repositories', value: general.repos },
+		{
+			title: 'Last year contributions',
+			value: Object.values<number>(calendar).reduce((total: number, value: number) => total + value, 0)
+		},
+		{ title: 'Total repositories', value: repositories.length },
 		{ title: 'Public repositories', value: repositories.filter((r: any) => !r.private).length },
 		{ title: 'Private repositories', value: repositories.filter((r: any) => r.private).length },
+		{ title: 'Personal repositories', value: repositories.filter((r: any) => r.owner === 'scriptex').length },
+		{ title: 'Organizations repositories', value: repositories.filter((r: any) => r.owner !== 'scriptex').length },
 		{
 			title: 'Total stars',
 			value: repositories.reduce((result: number, repo: any) => result + repo.stargazers, 0)

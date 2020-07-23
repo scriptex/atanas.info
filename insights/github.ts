@@ -9,13 +9,12 @@ export const getGithubInsights = async (): Promise<void> => {
 	try {
 		const file = 'src/scripts/github-insights.json';
 		const user = await github.get({ path: '/users/scriptex' });
+		const repos = await github.get({ path: '/user/repos?per_page=1000' });
 		const calendar = await getContributions();
-		const orgRepos = await github.get({ path: '/orgs/three11/repos?per_page=100' });
-		const userRepos = await github.get({ path: '/users/scriptex/repos?per_page=100' });
 		const repositories: any[] = [];
 
 		await asyncForEach(
-			[...orgRepos, ...userRepos],
+			repos,
 			async ({ full_name }: { full_name: string }): Promise<void> => {
 				console.log('-----');
 				console.log(`Getting insights data for ${full_name}...`);

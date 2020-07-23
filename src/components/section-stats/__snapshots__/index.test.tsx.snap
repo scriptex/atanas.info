@@ -77,7 +77,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
             :
           </span>
           <strong>
-            52
+            2
           </strong>
         </li>
         <li
@@ -106,6 +106,17 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
           key="8"
         >
           <span>
+            Organizations repositories
+            :
+          </span>
+          <strong>
+            -50
+          </strong>
+        </li>
+        <li
+          key="9"
+        >
+          <span>
             Total gists
             :
           </span>
@@ -114,7 +125,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
           </strong>
         </li>
         <li
-          key="9"
+          key="10"
         >
           <span>
             Private gists
@@ -125,7 +136,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
           </strong>
         </li>
         <li
-          key="10"
+          key="11"
         >
           <span>
             Public gists
@@ -136,18 +147,18 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
           </strong>
         </li>
         <li
-          key="11"
+          key="12"
         >
           <span>
             Total contributions
             :
           </span>
           <strong>
-            0
+            301
           </strong>
         </li>
         <li
-          key="12"
+          key="13"
         >
           <span>
             Total stars
@@ -158,7 +169,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
           </strong>
         </li>
         <li
-          key="13"
+          key="14"
         >
           <span>
             Total issues
@@ -264,15 +275,26 @@ exports[`GitlabStats component Should render the GitlabStats component 1`] = `
           key="3"
         >
           <span>
-            Total repositories
+            Last year contributions
             :
           </span>
           <strong>
-            101
+            105
           </strong>
         </li>
         <li
           key="4"
+        >
+          <span>
+            Total repositories
+            :
+          </span>
+          <strong>
+            1
+          </strong>
+        </li>
+        <li
+          key="5"
         >
           <span>
             Public repositories
@@ -283,7 +305,7 @@ exports[`GitlabStats component Should render the GitlabStats component 1`] = `
           </strong>
         </li>
         <li
-          key="5"
+          key="6"
         >
           <span>
             Private repositories
@@ -294,7 +316,29 @@ exports[`GitlabStats component Should render the GitlabStats component 1`] = `
           </strong>
         </li>
         <li
-          key="6"
+          key="7"
+        >
+          <span>
+            Personal repositories
+            :
+          </span>
+          <strong>
+            0
+          </strong>
+        </li>
+        <li
+          key="8"
+        >
+          <span>
+            Organizations repositories
+            :
+          </span>
+          <strong>
+            1
+          </strong>
+        </li>
+        <li
+          key="9"
         >
           <span>
             Total stars
@@ -305,7 +349,7 @@ exports[`GitlabStats component Should render the GitlabStats component 1`] = `
           </strong>
         </li>
         <li
-          key="7"
+          key="10"
         >
           <span>
             Total issues
