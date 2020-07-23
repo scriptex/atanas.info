@@ -278,6 +278,14 @@ module.exports = {
 		]
 	],
 	dest: '../dist/projects',
+	plugins: [
+		[
+			'@vuepress/google-analytics',
+			{
+				ga: 'UA-83446952-1'
+			}
+		]
+	],
 	ga: 'UA-83446952-1',
 	serviceWorker: true,
 	themeConfig: {
