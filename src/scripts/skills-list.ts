@@ -271,5 +271,37 @@ export const skills = [
 		height: 30,
 		fill: '#007ACC',
 		duration: '3 years'
+	},
+	{
+		text: 'Amazon Web Services',
+		icon: 'aws',
+		width: 30,
+		height: 30,
+		fill: '#fff',
+		duration: '1 year'
+	},
+	{
+		text: 'Microsoft Azure',
+		icon: 'azure',
+		width: 30,
+		height: 30,
+		fill: '#353134',
+		duration: '2 years'
+	},
+	{
+		text: 'Sublime Text',
+		icon: 'sublime-text',
+		width: 30,
+		height: 30,
+		fill: '#4d4d4e',
+		duration: '10 years'
+	},
+	{
+		text: 'Visual Studio Code',
+		icon: 'vscode',
+		width: 30,
+		height: 30,
+		fill: '#fff',
+		duration: '3 years'
 	}
 ];
