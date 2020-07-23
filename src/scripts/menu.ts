@@ -44,11 +44,13 @@ export const links: Array<Readonly<Link>> = [
 		target: '_blank',
 		content: 'Resume (pdf)'
 	},
-	// {
-	// 	href: '#music',
-	// 	title: 'My music',
-	// 	content: 'Music'
-	// },
+	{
+		rel: 'noopener noreferrer',
+		href: 'https://interactive-resume.atanas.info/',
+		title: 'My interactive resume',
+		target: '_blank',
+		content: 'Interactive resume'
+	},
 	{
 		rel: 'noopener noreferrer',
 		href: 'projects/',
@@ -58,30 +60,9 @@ export const links: Array<Readonly<Link>> = [
 	},
 	{
 		rel: 'noopener noreferrer',
-		href: 'https://at-the-wall.atanas.info/',
-		title: 'At the Wall - A Game of Thrones scene',
+		href: 'music/',
+		title: 'My music',
 		target: '_blank',
-		content: 'At the Wall'
-	},
-	{
-		rel: 'noopener noreferrer',
-		href: 'https://scriptex.js.org/2048/',
-		title: 'Join the numbers and get to the 2048 tile!',
-		target: '_blank',
-		content: '2048'
-	},
-	{
-		rel: 'noopener noreferrer',
-		href: 'https://material-tetris.atanas.info/',
-		title: 'Material Tetris. Play here!',
-		target: '_blank',
-		content: 'Material Tetris'
-	},
-	{
-		rel: 'noopener noreferrer',
-		href: 'https://material-snake.atanas.info/',
-		title: 'Material Snake. Play here!',
-		target: '_blank',
-		content: 'Material Snake'
+		content: 'Music'
 	}
 ];

@@ -3,9 +3,10 @@ export interface Project {
 	readonly image: string;
 	readonly title: string;
 	readonly description: string;
+	readonly timeout?: number;
 }
 
-export const projects = [
+export const projects: Project[] = [
 	{
 		url: 'https://app.home.eon.com/',
 		image: 'images/temp/eon-home.png',
@@ -16,7 +17,8 @@ export const projects = [
 		url: 'https://hems-admin-portal.eon.ooo/',
 		image: 'images/temp/eon-hems.png',
 		title: 'E.ON H.E.M.S (Home Energy Management System)',
-		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, NodeJS'
+		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, NodeJS',
+		timeout: 5000
 	},
 	{
 		url: '',
@@ -73,19 +75,31 @@ export const projects = [
 		description: 'TypeScript, SCSS, React, Redux, NodeJS'
 	},
 	{
+		url: 'https://xpndnow.com/ebook',
+		image: 'images/temp/xpnd.png',
+		title: 'XPND Ebook',
+		description: 'TypeScript, SCSS, React, Redux, NodeJS'
+	},
+	{
+		url: 'https://demo.xpndnow.com/',
+		image: 'images/temp/xpnd.png',
+		title: 'XPND demo application',
+		description: 'TypeScript, SCSS, React, Redux, NodeJS'
+	},
+	{
 		url: 'https://at-the-wall.atanas.info',
 		image: 'images/temp/at-the-wall.png',
 		title: 'At the Wall',
 		description: 'CSS3, PHP'
 	},
 	{
-		url: 'https://material-snake.atanas.info',
+		url: 'https://snake.atanas.info',
 		image: 'images/temp/material-snake.png',
 		title: 'Material Snake',
 		description: 'TypeScript, HTML, CSS3'
 	},
 	{
-		url: 'https://material-tetris.atanas.info',
+		url: 'https://tetris.atanas.info',
 		image: 'images/temp/material-tetris.png',
 		title: 'Material Tetris',
 		description: 'TypeScript, HTML, CSS3'
@@ -95,5 +109,35 @@ export const projects = [
 		image: 'images/temp/2048.png',
 		title: '2048',
 		description: 'TypeScript, HTML, CSS3'
+	},
+	{
+		url: 'https://retirement-calc.now.sh/',
+		image: 'images/temp/retirement-calculator.png',
+		title: 'Retirement calculator',
+		description: 'JavaScript, SCSS, Vue, Vuex, Chart JS'
+	},
+	{
+		url: 'https://paternalism-tool.now.sh/',
+		image: 'images/temp/paternalism-tool.png',
+		title: 'Paternalism tool',
+		description: 'JavaScript, SCSS, React, Redux, Redux Saga'
+	},
+	{
+		url: 'https://fertility-tool.now.sh/',
+		image: 'images/temp/fertility-tool.png',
+		title: 'Fertility tool',
+		description: 'TypeScript, SCSS, React, Redux, Redux Saga'
+	},
+	{
+		url: 'https://imgn.now.sh/',
+		image: 'images/temp/imgn.png',
+		title: 'IMGN',
+		description: 'TypeScript, SCSS, React, Redux, Redux Saga'
+	},
+	{
+		url: 'https://financial-shocks.now.sh/',
+		image: 'images/temp/financial-shocks.png',
+		title: 'Financial shocks',
+		description: 'TypeScript, SCSS, React, Redux, Redux Saga, Laravel'
 	}
 ];

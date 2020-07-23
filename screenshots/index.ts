@@ -30,7 +30,7 @@ const uploadOptions = (name: string): UploadApiOptions => ({
 	invalidate: true
 });
 
-async function createScreenshot(url: string, name: string): Promise<UploadApiResponse | null> {
+async function createScreenshot(url: string, name: string, timeout = 2000): Promise<UploadApiResponse | null> {
 	console.log(`Launching new browser for ${name}...`);
 	const browser = await puppeteer.launch({
 		headless: true,
@@ -42,7 +42,7 @@ async function createScreenshot(url: string, name: string): Promise<UploadApiRes
 
 	console.log(`Navigating to ${url} for ${name}...`);
 	await page.goto(url, { waitUntil: 'networkidle0' });
-	await page.waitFor(5000);
+	await page.waitFor(timeout);
 
 	await page.setViewport({
 		width: 1280,
@@ -99,7 +99,7 @@ async function createScreenshots(pages: Project[]): Promise<void> {
 			console.log(`${page.title} does not have a valid URL.`);
 		} else {
 			try {
-				const result = await createScreenshot(page.url, page.title);
+				const result = await createScreenshot(page.url, page.title, page.timeout);
 
 				if (result) {
 					newProjects = newProjects.map((project: Project) => {
