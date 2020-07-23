@@ -17,21 +17,17 @@ node_modules/
 ehthumbs.db
 Thumbs.db
 
-# Vercel Now
-.now
-
-# Open source projects
-/projects/*.md
-!/projects/README.md
-
 # Parcel
 .cache
 
 # Vercel
+.now
 .vercel
 
 # Project specific
 .env
+.codacy-coverage
+.type-coverage
 /coverage
 /dist
 /src/index.css
@@ -41,3 +37,7 @@ Thumbs.db
 /src/scripts/github-insights.json
 /src/scripts/gitlab-insights.json
 /src/scripts/projects-list.json
+
+# Open source projects
+/projects/*.md
+!/projects/README.md
