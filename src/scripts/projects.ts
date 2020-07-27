@@ -21,10 +21,22 @@ export const projects: Project[] = [
 		timeout: 5000
 	},
 	{
-		url: '',
-		image: 'images/temp/atelier-coolinar.png',
-		title: 'Atelier Coolinar (Ателие Кулинар)',
-		description: 'HTML5, CSS3, JavaScript, WordPress'
+		url: 'https://xpndnow.com/',
+		image: 'images/temp/xpnd.png',
+		title: 'XPND',
+		description: 'TypeScript, SCSS, React, Redux, NodeJS'
+	},
+	{
+		url: 'https://xpndnow.com/ebook',
+		image: 'images/temp/xpnd-ebook.png',
+		title: 'XPND Ebook',
+		description: 'TypeScript, SCSS, React, Redux, NodeJS'
+	},
+	{
+		url: 'https://demo.xpndnow.com/',
+		image: 'images/temp/xpnd-demo.png',
+		title: 'XPND demo application',
+		description: 'TypeScript, SCSS, React, Redux, NodeJS'
 	},
 	{
 		url: 'http://emailio.com/',
@@ -33,33 +45,9 @@ export const projects: Project[] = [
 		description: 'SCSS, JavaScript, React, Redux, Redux Saga'
 	},
 	{
-		url: '',
-		image: 'images/temp/faraon-bg.png',
-		title: 'Faraon (Фараон)',
-		description: 'HTML5, CSS3, JavaScript, jQuery, PHP'
-	},
-	{
 		url: 'https://www.nulla.tv/',
 		image: 'images/temp/nulla-tv.png',
 		title: 'Nulla TV',
-		description: 'HTML5, CSS3, JavaScript, WordPress'
-	},
-	{
-		url: 'https://www.sod.bg/',
-		image: 'images/temp/sod-bg.png',
-		title: 'SOD 64 (СОД 64)',
-		description: 'HTML5, CSS3, JavaScript, jQuery, PHP'
-	},
-	{
-		url: 'https://three-11.com/',
-		image: 'images/temp/three-11.png',
-		title: 'Three 11',
-		description: 'HTML5, CSS3, SVG, JavaScript, D3'
-	},
-	{
-		url: '',
-		image: 'images/temp/x-form.png',
-		title: 'X Form',
 		description: 'HTML5, CSS3, JavaScript, WordPress'
 	},
 	{
@@ -69,22 +57,16 @@ export const projects: Project[] = [
 		description: 'HTML5, CSS3, JavaScript, Vue, Nuxt, WordPress'
 	},
 	{
-		url: 'https://xpndnow.com/',
-		image: 'images/temp/xpnd.png',
-		title: 'XPND',
-		description: 'TypeScript, SCSS, React, Redux, NodeJS'
+		url: 'https://three-11.com/',
+		image: 'images/temp/three-11.png',
+		title: 'Three 11',
+		description: 'HTML5, CSS3, SVG, JavaScript, D3'
 	},
 	{
-		url: 'https://xpndnow.com/ebook',
-		image: 'images/temp/xpnd.png',
-		title: 'XPND Ebook',
-		description: 'TypeScript, SCSS, React, Redux, NodeJS'
-	},
-	{
-		url: 'https://demo.xpndnow.com/',
-		image: 'images/temp/xpnd.png',
-		title: 'XPND demo application',
-		description: 'TypeScript, SCSS, React, Redux, NodeJS'
+		url: 'https://www.sod.bg/',
+		image: 'images/temp/sod-bg.png',
+		title: 'SOD 64 (СОД 64)',
+		description: 'HTML5, CSS3, JavaScript, jQuery, PHP'
 	},
 	{
 		url: 'https://at-the-wall.atanas.info',
@@ -139,5 +121,29 @@ export const projects: Project[] = [
 		image: 'images/temp/financial-shocks.png',
 		title: 'Financial shocks',
 		description: 'TypeScript, SCSS, React, Redux, Redux Saga, Laravel'
+	},
+	{
+		url: '',
+		image: 'images/temp/atelier-coolinar.png',
+		title: 'Atelier Coolinar (Ателие Кулинар)',
+		description: 'HTML5, CSS3, JavaScript, WordPress'
+	},
+	{
+		url: '',
+		image: 'images/temp/x-form.png',
+		title: 'X Form',
+		description: 'HTML5, CSS3, JavaScript, WordPress'
+	},
+	{
+		url: 'http://web.archive.org/web/20120614075704/http://www.faraon-bg.com/',
+		image: 'images/temp/faraon-bg.png',
+		title: 'Faraon (Фараон) *offline*',
+		description: 'HTML5, CSS3, JavaScript, jQuery, PHP'
+	},
+	{
+		url: 'http://web.archive.org/web/20140211052243/http://www.siriusbg.ru/',
+		image: 'images/temp/sirius-real-estate.png',
+		title: 'Sirius Real Estate *offline*',
+		description: 'HTML5, CSS3, JavaScript, jQuery, PHP, WordPress'
 	}
 ];
