@@ -137,13 +137,13 @@ export const projects: Project[] = [
 	{
 		url: 'http://web.archive.org/web/20120614075704/http://www.faraon-bg.com/',
 		image: 'images/temp/faraon-bg.png',
-		title: 'Faraon (Фараон) *offline*',
+		title: 'Faraon (Фараон)',
 		description: 'HTML5, CSS3, JavaScript, jQuery, PHP'
 	},
 	{
 		url: 'http://web.archive.org/web/20140211052243/http://www.siriusbg.ru/',
 		image: 'images/temp/sirius-real-estate.png',
-		title: 'Sirius Real Estate *offline*',
+		title: 'Sirius Real Estate',
 		description: 'HTML5, CSS3, JavaScript, jQuery, PHP, WordPress'
 	}
 ];
