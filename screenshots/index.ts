@@ -87,7 +87,7 @@ function upload(shotResult: Buffer, options: UploadApiOptions, name: string): Pr
 }
 
 async function createScreenshots(pages: Project[]): Promise<void> {
-	await cloudinary.api.delete_resources_by_prefix(`${FOLDER}/`);
+	// await cloudinary.api.delete_resources_by_prefix(`${FOLDER}/`);
 
 	const results: any[] = [];
 
