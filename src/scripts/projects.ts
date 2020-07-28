@@ -51,7 +51,7 @@ export const projects: Project[] = [
 		description: 'HTML5, CSS3, JavaScript, WordPress'
 	},
 	{
-		url: 'https://kinetikautomotive.com/custom-interface',
+		url: 'https://kinetikautomotive.com/kinetik-07',
 		image: 'images/temp/kinetik-automotive.png',
 		title: 'Kinetik Automotive',
 		description: 'HTML5, CSS3, JavaScript, Vue, Nuxt, WordPress'
