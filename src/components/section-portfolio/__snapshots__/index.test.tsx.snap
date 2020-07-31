@@ -9,6 +9,209 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
   <h1>
     Portfolio
   </h1>
+  <h2>
+    Mobile applications
+  </h2>
+  <div
+    className="c-section__sliders"
+  >
+    <div
+      className="c-section__slider"
+      key="0"
+    >
+      <Component
+        href="https://apps.apple.com/gb/app/e-on-home-solar-and-heating/id1468486784"
+      >
+        <h3>
+          E.ON Home for iPhone
+        </h3>
+        <p>
+          Smart energy management application for iOS
+        </p>
+        <code>
+          TypeScript, SCSS, React Native, Redux, MS Azure, NodeJS
+        </code>
+      </Component>
+      <Slider
+        autoplaySpeed={5000}
+        dots={false}
+        infinite={true}
+        slidesToScroll={1}
+        slidesToShow={2}
+        speed={500}
+      >
+        <div
+          key="0"
+        >
+          <img
+            alt="E.ON Home for iPhone screenshot 1"
+            src="images/temp/eon-home-iphone-dark1.png"
+          />
+        </div>
+        <div
+          key="1"
+        >
+          <img
+            alt="E.ON Home for iPhone screenshot 2"
+            src="images/temp/eon-home-iphone-dark2.png"
+          />
+        </div>
+        <div
+          key="2"
+        >
+          <img
+            alt="E.ON Home for iPhone screenshot 3"
+            src="images/temp/eon-home-iphone-dark3.png"
+          />
+        </div>
+        <div
+          key="3"
+        >
+          <img
+            alt="E.ON Home for iPhone screenshot 4"
+            src="images/temp/eon-home-iphone-dark4.png"
+          />
+        </div>
+        <div
+          key="4"
+        >
+          <img
+            alt="E.ON Home for iPhone screenshot 5"
+            src="images/temp/eon-home-iphone-light1.png"
+          />
+        </div>
+        <div
+          key="5"
+        >
+          <img
+            alt="E.ON Home for iPhone screenshot 6"
+            src="images/temp/eon-home-iphone-light2.png"
+          />
+        </div>
+        <div
+          key="6"
+        >
+          <img
+            alt="E.ON Home for iPhone screenshot 7"
+            src="images/temp/eon-home-iphone-light3.png"
+          />
+        </div>
+        <div
+          key="7"
+        >
+          <img
+            alt="E.ON Home for iPhone screenshot 8"
+            src="images/temp/eon-home-iphone-light4.png"
+          />
+        </div>
+      </Slider>
+    </div>
+    <div
+      className="c-section__slider"
+      key="1"
+    >
+      <Component
+        href="https://play.google.com/store/apps/details?id=com.eon.home.eu&hl=en"
+      >
+        <h3>
+          E.ON Home for Android
+        </h3>
+        <p>
+          Smart energy management application for Android
+        </p>
+        <code>
+          TypeScript, SCSS, React Native, Redux, MS Azure, NodeJS
+        </code>
+      </Component>
+      <Slider
+        autoplaySpeed={5000}
+        dots={false}
+        infinite={true}
+        slidesToScroll={1}
+        slidesToShow={2}
+        speed={500}
+      >
+        <div
+          key="0"
+        >
+          <img
+            alt="E.ON Home for Android screenshot 1"
+            src="images/temp/eon-home-android1.webp"
+          />
+        </div>
+        <div
+          key="1"
+        >
+          <img
+            alt="E.ON Home for Android screenshot 2"
+            src="images/temp/eon-home-android2.webp"
+          />
+        </div>
+        <div
+          key="2"
+        >
+          <img
+            alt="E.ON Home for Android screenshot 3"
+            src="images/temp/eon-home-android3.webp"
+          />
+        </div>
+        <div
+          key="3"
+        >
+          <img
+            alt="E.ON Home for Android screenshot 4"
+            src="images/temp/eon-home-android4.webp"
+          />
+        </div>
+      </Slider>
+    </div>
+    <div
+      className="c-section__slider"
+      key="2"
+    >
+      <Component
+        href="https://apps.apple.com/gb/app/e-on-home-solar-and-heating/id1468486784#?platform=ipad"
+      >
+        <h3>
+          E.ON Home for iPad
+        </h3>
+        <p>
+          Smart energy management application for iOS
+        </p>
+        <code>
+          TypeScript, SCSS, React Native, Redux, MS Azure, NodeJS
+        </code>
+      </Component>
+      <Slider
+        autoplaySpeed={5000}
+        dots={false}
+        infinite={true}
+        slidesToScroll={1}
+        slidesToShow={2}
+        speed={500}
+      >
+        <div
+          key="0"
+        >
+          <img
+            alt="E.ON Home for iPad screenshot 1"
+            src="images/temp/eon-home-ipad-dark.jpg"
+          />
+        </div>
+        <div
+          key="1"
+        >
+          <img
+            alt="E.ON Home for iPad screenshot 2"
+            src="images/temp/eon-home-ipad-light.jpg"
+          />
+        </div>
+      </Slider>
+    </div>
+  </div>
+  <h2>
+    Web applications
+  </h2>
   <div
     className="c-section__body"
   >

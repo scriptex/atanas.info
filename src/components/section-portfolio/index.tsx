@@ -1,12 +1,46 @@
 import * as React from 'react';
+import Slider from 'react-slick';
 
 import projectsList from '../../scripts/projects-list.json';
-import { Project, projects } from '../../scripts/projects';
 import { Section, ExternalLink } from '..';
+import { Project, projects, MobileApp, mobileApps } from '../../scripts/projects';
 
 export const SectionPortfolio: React.FunctionComponent = () => (
 	<Section id="portfolio" hasButton={true}>
 		<h1>Portfolio</h1>
+
+		<h2>Mobile applications</h2>
+
+		<div className="c-section__sliders">
+			{mobileApps.map((app: MobileApp, i: number) => (
+				<div className="c-section__slider" key={i}>
+					<ExternalLink href={app.url}>
+						<h3>{app.title}</h3>
+
+						<p>{app.description}</p>
+
+						<code>{app.details}</code>
+					</ExternalLink>
+
+					<Slider
+						dots={false}
+						speed={500}
+						infinite={true}
+						autoplaySpeed={5000}
+						slidesToShow={2}
+						slidesToScroll={1}
+					>
+						{app.images.map((img: string, j: number) => (
+							<div key={j}>
+								<img src={`images/temp/${img}`} alt={`${app.title} screenshot ${j + 1}`} />
+							</div>
+						))}
+					</Slider>
+				</div>
+			))}
+		</div>
+
+		<h2>Web applications</h2>
 
 		<div className="c-section__body">
 			{((projectsList as unknown) as Project[]).map((project: Project, index: number) => {

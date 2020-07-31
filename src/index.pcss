@@ -1,4 +1,5 @@
 @import 'itcss';
+@import 'slick-carousel/slick/slick.css';
 @import 'react-jinke-music-player/assets/index.css';
 
 /* variables */
@@ -854,6 +855,83 @@ body {
 
 .c-section--portfolio .c-section__body a .adjusted {
 	background-size: 125% auto;
+}
+
+.c-section__sliders {
+	@mixin flex-row wrap, stretch, center;
+}
+
+.c-section__slider {
+	width: calc(50% - 1rem);
+	flex: 0 0 calc(50% - 1rem);
+	margin: 0 0.5rem 2rem;
+}
+
+.c-section__slider img {
+	display: block;
+	border: 1px solid var(--color-secondary);
+}
+
+.c-section__slider a {
+	color: inherit;
+	text-decoration: none;
+	display: block;
+	padding: 1rem 1rem 0.5rem;
+	background-color: var(--color-secondary);
+}
+
+.c-section__slider a h3,
+.c-section__slider a p,
+.c-section__slider a code {
+	display: block;
+	margin: 0 0 0.5rem;
+}
+
+.c-section__slider .slick-arrow {
+	font-size: 0;
+	line-height: 0;
+	text-indent: -100%;
+	width: 2.5rem;
+	height: 2.5rem;
+	display: block;
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+	border: 1px solid;
+	margin-top: -1.25rem;
+	background: var(--color-action);
+	border-radius: 50%;
+	box-shadow: none;
+}
+
+.c-section__slider .slick-arrow::before,
+.c-section__slider .slick-arrow::after {
+	content: '';
+	@mixin centered;
+}
+
+.c-section__slider .slick-arrow::before {
+	width: 50%;
+	height: 1px;
+	background-color: var(--color-primary);
+}
+
+.c-section__slider .slick-arrow::after {
+	width: 50%;
+	height: 1px;
+	@mixin chevron 0.9375rem, 0 0 1px 1px, var(--color-primary), auto, -135deg;
+}
+
+.c-section__slider .slick-prev {
+	left: 0.5rem;
+}
+
+.c-section__slider .slick-prev::after {
+	transform: rotate(45deg);
+}
+
+.c-section__slider .slick-next {
+	right: 0.5rem;
 }
 
 @media (--hover) {
