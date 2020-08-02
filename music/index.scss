@@ -34,7 +34,8 @@ canvas {
 	}
 }
 
-social-links {
+/* prettier-ignore */
+social-links { /* stylelint-disable-line selector-type-no-unknown */
 	position: absolute;
 	bottom: 0;
 	left: 0.5rem;
