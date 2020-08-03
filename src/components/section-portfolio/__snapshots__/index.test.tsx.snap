@@ -224,28 +224,270 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
   >
     <Component
       className=""
-      href="https://www.google.com"
+      href="https://app.home.eon.com/"
       key="0"
     >
       <div>
         <strong>
-          Project 1
+          E.ON Home
         </strong>
         <span>
           <small>
             Technologies:
           </small>
-          Description 1
+          TypeScript, SCSS, React, Redux, MS Azure, NodeJS
         </span>
       </div>
       <object
-        data="image 1"
-        title="Project 1"
+        data="images/temp/eon-home.png"
+        title="E.ON Home"
         type="image/png"
         width="600"
       >
         <img
+          alt="E.ON Home"
           loading="lazy"
+          src="images/temp/eon-home.png"
+          width="600"
+        />
+      </object>
+    </Component>
+    <Component
+      className=""
+      href="https://hems-admin-portal.eon.ooo/"
+      key="1"
+    >
+      <div>
+        <strong>
+          E.ON H.E.M.S (Home Energy Management System)
+        </strong>
+        <span>
+          <small>
+            Technologies:
+          </small>
+          TypeScript, SCSS, Angular, Redux, MS Azure, NodeJS
+        </span>
+      </div>
+      <object
+        data="images/temp/eon-hems.png"
+        title="E.ON H.E.M.S (Home Energy Management System)"
+        type="image/png"
+        width="600"
+      >
+        <img
+          alt="E.ON H.E.M.S (Home Energy Management System)"
+          loading="lazy"
+          src="images/temp/eon-hems.png"
+          width="600"
+        />
+      </object>
+    </Component>
+    <Component
+      className=""
+      href="https://xpndnow.com/"
+      key="2"
+    >
+      <div>
+        <strong>
+          XPND
+        </strong>
+        <span>
+          <small>
+            Technologies:
+          </small>
+          TypeScript, SCSS, React, Redux, NodeJS
+        </span>
+      </div>
+      <object
+        data="images/temp/xpnd.png"
+        title="XPND"
+        type="image/png"
+        width="600"
+      >
+        <img
+          alt="XPND"
+          loading="lazy"
+          src="images/temp/xpnd.png"
+          width="600"
+        />
+      </object>
+    </Component>
+    <Component
+      className=""
+      href="https://xpndnow.com/ebook"
+      key="3"
+    >
+      <div>
+        <strong>
+          XPND Ebook
+        </strong>
+        <span>
+          <small>
+            Technologies:
+          </small>
+          TypeScript, SCSS, React, Redux, NodeJS
+        </span>
+      </div>
+      <object
+        data="images/temp/xpnd-ebook.png"
+        title="XPND Ebook"
+        type="image/png"
+        width="600"
+      >
+        <img
+          alt="XPND Ebook"
+          loading="lazy"
+          src="images/temp/xpnd-ebook.png"
+          width="600"
+        />
+      </object>
+    </Component>
+    <Component
+      className=""
+      href="https://demo.xpndnow.com/"
+      key="4"
+    >
+      <div>
+        <strong>
+          XPND demo application
+        </strong>
+        <span>
+          <small>
+            Technologies:
+          </small>
+          TypeScript, SCSS, React, Redux, NodeJS
+        </span>
+      </div>
+      <object
+        data="images/temp/xpnd-demo.png"
+        title="XPND demo application"
+        type="image/png"
+        width="600"
+      >
+        <img
+          alt="XPND demo application"
+          loading="lazy"
+          src="images/temp/xpnd-demo.png"
+          width="600"
+        />
+      </object>
+    </Component>
+    <Component
+      className=""
+      href="http://emailio.com/"
+      key="5"
+    >
+      <div>
+        <strong>
+          Emailio Web Application
+        </strong>
+        <span>
+          <small>
+            Technologies:
+          </small>
+          SCSS, JavaScript, React, Redux, Redux Saga
+        </span>
+      </div>
+      <object
+        data="images/temp/emailio.png"
+        title="Emailio Web Application"
+        type="image/png"
+        width="600"
+      >
+        <img
+          alt="Emailio Web Application"
+          loading="lazy"
+          src="images/temp/emailio.png"
+          width="600"
+        />
+      </object>
+    </Component>
+    <Component
+      className=""
+      href="https://www.nulla.tv/"
+      key="6"
+    >
+      <div>
+        <strong>
+          Nulla TV
+        </strong>
+        <span>
+          <small>
+            Technologies:
+          </small>
+          HTML5, CSS3, JavaScript, WordPress
+        </span>
+      </div>
+      <object
+        data="images/temp/nulla-tv.png"
+        title="Nulla TV"
+        type="image/png"
+        width="600"
+      >
+        <img
+          alt="Nulla TV"
+          loading="lazy"
+          src="images/temp/nulla-tv.png"
+          width="600"
+        />
+      </object>
+    </Component>
+    <Component
+      className=""
+      href="https://kinetikautomotive.com/"
+      key="7"
+    >
+      <div>
+        <strong>
+          Kinetik Automotive
+        </strong>
+        <span>
+          <small>
+            Technologies:
+          </small>
+          HTML5, CSS3, JavaScript, Vue, Nuxt, WordPress
+        </span>
+      </div>
+      <object
+        data="images/temp/kinetik-automotive.png"
+        title="Kinetik Automotive"
+        type="image/png"
+        width="600"
+      >
+        <img
+          alt="Kinetik Automotive"
+          loading="lazy"
+          src="images/temp/kinetik-automotive.png"
+          width="600"
+        />
+      </object>
+    </Component>
+    <Component
+      className=""
+      href="https://www.sod.bg/"
+      key="8"
+    >
+      <div>
+        <strong>
+          SOD 64 (СОД 64)
+        </strong>
+        <span>
+          <small>
+            Technologies:
+          </small>
+          HTML5, CSS3, JavaScript, jQuery, PHP
+        </span>
+      </div>
+      <object
+        data="images/temp/sod-bg.png"
+        title="SOD 64 (СОД 64)"
+        type="image/png"
+        width="600"
+      >
+        <img
+          alt="SOD 64 (СОД 64)"
+          loading="lazy"
+          src="images/temp/sod-bg.png"
           width="600"
         />
       </object>
@@ -253,27 +495,29 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
     <Component
       className="disabled"
       href=""
-      key="1"
+      key="9"
     >
       <div>
         <strong>
-          Project 2
+          At the Wall
         </strong>
         <span>
           <small>
             Technologies:
           </small>
-          Description 2
+          CSS3, PHP
         </span>
       </div>
       <object
-        data="image 2"
-        title="Project 2"
+        data="images/temp/at-the-wall.png"
+        title="At the Wall"
         type="image/png"
         width="600"
       >
         <img
+          alt="At the Wall"
           loading="lazy"
+          src="images/temp/at-the-wall.png"
           width="600"
         />
       </object>
