@@ -4,6 +4,7 @@ import { ExternalLink } from '..';
 
 export interface Props {
 	id: string;
+	actions?: React.ReactNode;
 	children: any;
 	className?: string;
 	hasShell?: boolean;
@@ -21,6 +22,14 @@ export const SectionElements: React.FunctionComponent<Readonly<Props>> = (props:
 				<ExternalLink href="mailto:hi@atanas.info" className="c-btn">
 					Hire me
 				</ExternalLink>
+
+				{!!props.actions && (
+					<>
+						<br className="visible-xs-block" />
+
+						{props.actions}
+					</>
+				)}
 			</div>
 		)}
 	</>

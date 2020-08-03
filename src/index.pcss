@@ -328,6 +328,20 @@ body {
 	padding-top: 1.5rem;
 }
 
+.c-section__actions .c-btn {
+	margin: 0 1rem;
+}
+
+@media (--mobile) {
+	.c-section__actions .c-btn {
+		margin: 0;
+	}
+
+	.c-section__actions .c-btn ~ .c-btn {
+		margin-top: 2rem;
+	}
+}
+
 .c-section--hello {
 	text-align: center;
 	position: relative;
@@ -499,6 +513,7 @@ body {
 @media (--mobile) {
 	.c-article {
 		display: block;
+		padding: 2rem 0;
 	}
 
 	.c-article h2,
@@ -757,10 +772,32 @@ body {
 }
 
 @media (--mobile) {
+	.c-section--stats h1,
+	.c-section--stats h2 {
+		margin-bottom: 2rem;
+	}
+
+	.c-section--stats .c-section__head {
+		padding-top: 2rem;
+	}
+
+	.c-section--stats .c-section__entry {
+		padding: 2rem 0;
+	}
+
+	.c-section--stats .c-section__entry + .c-section__entry {
+		margin-top: 0;
+	}
+
 	.c-section--stats .c-section__list li {
 		width: 9rem;
 		height: 9rem;
 		margin: 0.5rem;
+	}
+
+	/* prettier-ignore */
+	.c-section--stats codersrank-widget { /* stylelint-disable-line selector-type-no-unknown */
+		margin-bottom: 0;
 	}
 }
 
@@ -777,9 +814,6 @@ body {
 .c-section--portfolio h2 {
 	text-align: center;
 	flex: 0 0 100%;
-}
-
-.c-section--portfolio h1 {
 	margin-bottom: 3.5rem;
 }
 
@@ -864,12 +898,17 @@ body {
 .c-section__slider {
 	width: calc(50% - 1rem);
 	flex: 0 0 calc(50% - 1rem);
-	margin: 0 0.5rem 2rem;
+	margin: 0 0.5rem 3.5rem;
+	overflow: hidden;
 }
 
 .c-section__slider img {
 	display: block;
 	border: 1px solid var(--color-secondary);
+}
+
+.c-section__slider div[style] {
+	vertical-align: top;
 }
 
 .c-section__slider a {
@@ -958,7 +997,33 @@ body {
 	}
 }
 
+@media (--tablet-portrait) {
+	.c-section__sliders {
+		display: block;
+	}
+
+	.c-section__slider {
+		max-width: 37.5rem;
+		width: 100%;
+		margin: 0 auto 3.5rem;
+	}
+}
+
 @media (--mobile) {
+	.c-section--portfolio {
+		padding: 2rem 0;
+	}
+
+	.c-section--portfolio h1,
+	.c-section--portfolio h2,
+	.c-section__slider {
+		margin-bottom: 2rem;
+	}
+
+	.c-section--portfolio object {
+		width: 100%;
+	}
+
 	.c-section--portfolio .c-section__body {
 		display: block;
 	}
@@ -1003,6 +1068,10 @@ body {
 
 	.c-section--portfolio .c-section__body a:hover div {
 		transform: none;
+	}
+
+	.c-section--portfolio .c-section__actions {
+		padding-top: 0;
 	}
 }
 
@@ -1071,6 +1140,14 @@ body {
 }
 
 @media (--mobile) {
+	.c-section--slides {
+		padding: 2rem 0;
+	}
+
+	.c-section--slides h2 {
+		margin-bottom: 2rem;
+	}
+
 	.c-section--slides li {
 		flex: 0 0 100%;
 		padding: 0;
@@ -1082,6 +1159,10 @@ body {
 
 	.c-section--slides .c-btn {
 		width: 100%;
+	}
+
+	.c-section--slides .c-section__body {
+		padding-bottom: 0;
 	}
 }
 
