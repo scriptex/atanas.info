@@ -6,6 +6,14 @@ export interface Project {
 	readonly timeout?: number;
 }
 
+export interface MobileApp {
+	readonly url: string;
+	readonly title: string;
+	readonly description: string;
+	readonly details: string;
+	readonly images: string[];
+}
+
 export const projects: Project[] = [
 	{
 		url: 'https://app.home.eon.com/',
@@ -55,12 +63,6 @@ export const projects: Project[] = [
 		image: 'images/temp/kinetik-automotive.png',
 		title: 'Kinetik Automotive',
 		description: 'HTML5, CSS3, JavaScript, Vue, Nuxt, WordPress'
-	},
-	{
-		url: 'https://three-11.com/',
-		image: 'images/temp/three-11.png',
-		title: 'Three 11',
-		description: 'HTML5, CSS3, SVG, JavaScript, D3'
 	},
 	{
 		url: 'https://www.sod.bg/',
@@ -123,6 +125,12 @@ export const projects: Project[] = [
 		description: 'TypeScript, SCSS, React, Redux, Redux Saga, Laravel'
 	},
 	{
+		url: 'https://three-11.com/',
+		image: 'images/temp/three-11.png',
+		title: 'Three 11',
+		description: 'HTML5, CSS3, SVG, JavaScript, D3'
+	},
+	{
 		url: '',
 		image: 'images/temp/atelier-coolinar.png',
 		title: 'Atelier Coolinar (Ателие Кулинар)',
@@ -135,15 +143,48 @@ export const projects: Project[] = [
 		description: 'HTML5, CSS3, JavaScript, WordPress'
 	},
 	{
-		url: 'http://web.archive.org/web/20120614075704/http://www.faraon-bg.com/',
+		url: '',
 		image: 'images/temp/faraon-bg.png',
 		title: 'Faraon (Фараон)',
 		description: 'HTML5, CSS3, JavaScript, jQuery, PHP'
 	},
 	{
-		url: 'http://web.archive.org/web/20140211052243/http://www.siriusbg.ru/',
+		url: '',
 		image: 'images/temp/sirius-real-estate.png',
 		title: 'Sirius Real Estate',
 		description: 'HTML5, CSS3, JavaScript, jQuery, PHP, WordPress'
+	}
+];
+
+export const mobileApps: MobileApp[] = [
+	{
+		url: 'https://apps.apple.com/gb/app/e-on-home-solar-and-heating/id1468486784',
+		title: 'E.ON Home for iPhone',
+		description: 'Smart energy management application for iOS',
+		details: 'TypeScript, SCSS, React Native, Redux, MS Azure, NodeJS',
+		images: [
+			'eon-home-iphone-dark1.png',
+			'eon-home-iphone-dark2.png',
+			'eon-home-iphone-dark3.png',
+			'eon-home-iphone-dark4.png',
+			'eon-home-iphone-light1.png',
+			'eon-home-iphone-light2.png',
+			'eon-home-iphone-light3.png',
+			'eon-home-iphone-light4.png'
+		]
+	},
+	{
+		url: 'https://play.google.com/store/apps/details?id=com.eon.home.eu&hl=en',
+		title: 'E.ON Home for Android',
+		description: 'Smart energy management application for Android',
+		details: 'TypeScript, SCSS, React Native, Redux, MS Azure, NodeJS',
+		images: ['eon-home-android1.webp', 'eon-home-android2.webp', 'eon-home-android3.webp', 'eon-home-android4.webp']
+	},
+	{
+		url: 'https://apps.apple.com/gb/app/e-on-home-solar-and-heating/id1468486784#?platform=ipad',
+		title: 'E.ON Home for iPad',
+		description: 'Smart energy management application for iOS',
+		details: 'TypeScript, SCSS, React Native, Redux, MS Azure, NodeJS',
+		images: ['eon-home-ipad-dark.jpg', 'eon-home-ipad-light.jpg']
 	}
 ];

@@ -1,4 +1,5 @@
 @import 'itcss';
+@import 'slick-carousel/slick/slick.css';
 @import 'react-jinke-music-player/assets/index.css';
 
 /* variables */
@@ -327,6 +328,20 @@ body {
 	padding-top: 1.5rem;
 }
 
+.c-section__actions .c-btn {
+	margin: 0 1rem;
+}
+
+@media (--mobile) {
+	.c-section__actions .c-btn {
+		margin: 0;
+	}
+
+	.c-section__actions .c-btn ~ .c-btn {
+		margin-top: 2rem;
+	}
+}
+
 .c-section--hello {
 	text-align: center;
 	position: relative;
@@ -498,6 +513,7 @@ body {
 @media (--mobile) {
 	.c-article {
 		display: block;
+		padding: 2rem 0;
 	}
 
 	.c-article h2,
@@ -756,10 +772,32 @@ body {
 }
 
 @media (--mobile) {
+	.c-section--stats h1,
+	.c-section--stats h2 {
+		margin-bottom: 2rem;
+	}
+
+	.c-section--stats .c-section__head {
+		padding-top: 2rem;
+	}
+
+	.c-section--stats .c-section__entry {
+		padding: 2rem 0;
+	}
+
+	.c-section--stats .c-section__entry + .c-section__entry {
+		margin-top: 0;
+	}
+
 	.c-section--stats .c-section__list li {
 		width: 9rem;
 		height: 9rem;
 		margin: 0.5rem;
+	}
+
+	/* prettier-ignore */
+	.c-section--stats codersrank-widget { /* stylelint-disable-line selector-type-no-unknown */
+		margin-bottom: 0;
 	}
 }
 
@@ -776,9 +814,6 @@ body {
 .c-section--portfolio h2 {
 	text-align: center;
 	flex: 0 0 100%;
-}
-
-.c-section--portfolio h1 {
 	margin-bottom: 3.5rem;
 }
 
@@ -856,6 +891,88 @@ body {
 	background-size: 125% auto;
 }
 
+.c-section__sliders {
+	@mixin flex-row wrap, stretch, center;
+}
+
+.c-section__slider {
+	width: calc(50% - 1rem);
+	flex: 0 0 calc(50% - 1rem);
+	margin: 0 0.5rem 3.5rem;
+	overflow: hidden;
+}
+
+.c-section__slider img {
+	display: block;
+	border: 1px solid var(--color-secondary);
+}
+
+.c-section__slider div[style] {
+	vertical-align: top;
+}
+
+.c-section__slider a {
+	color: inherit;
+	text-decoration: none;
+	display: block;
+	padding: 1rem 1rem 0.5rem;
+	background-color: var(--color-secondary);
+}
+
+.c-section__slider a h3,
+.c-section__slider a p,
+.c-section__slider a code {
+	display: block;
+	margin: 0 0 0.5rem;
+}
+
+.c-section__slider .slick-arrow {
+	font-size: 0;
+	line-height: 0;
+	text-indent: -100%;
+	width: 2.5rem;
+	height: 2.5rem;
+	display: block;
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+	border: 1px solid;
+	margin-top: -1.25rem;
+	background: var(--color-action);
+	border-radius: 50%;
+	box-shadow: none;
+}
+
+.c-section__slider .slick-arrow::before,
+.c-section__slider .slick-arrow::after {
+	content: '';
+	@mixin centered;
+}
+
+.c-section__slider .slick-arrow::before {
+	width: 50%;
+	height: 1px;
+	background-color: var(--color-primary);
+}
+
+.c-section__slider .slick-arrow::after {
+	width: 50%;
+	height: 1px;
+	@mixin chevron 0.9375rem, 0 0 1px 1px, var(--color-primary), auto, -135deg;
+}
+
+.c-section__slider .slick-prev {
+	left: 0.5rem;
+}
+
+.c-section__slider .slick-prev::after {
+	transform: rotate(45deg);
+}
+
+.c-section__slider .slick-next {
+	right: 0.5rem;
+}
+
 @media (--hover) {
 	.c-section--portfolio .c-section__body a:hover {
 		box-shadow: 0 0 4.75rem color-mod(var(--color-primary) a(40%));
@@ -880,7 +997,33 @@ body {
 	}
 }
 
+@media (--tablet-portrait) {
+	.c-section__sliders {
+		display: block;
+	}
+
+	.c-section__slider {
+		max-width: 37.5rem;
+		width: 100%;
+		margin: 0 auto 3.5rem;
+	}
+}
+
 @media (--mobile) {
+	.c-section--portfolio {
+		padding: 2rem 0;
+	}
+
+	.c-section--portfolio h1,
+	.c-section--portfolio h2,
+	.c-section__slider {
+		margin-bottom: 2rem;
+	}
+
+	.c-section--portfolio object {
+		width: 100%;
+	}
+
 	.c-section--portfolio .c-section__body {
 		display: block;
 	}
@@ -925,6 +1068,10 @@ body {
 
 	.c-section--portfolio .c-section__body a:hover div {
 		transform: none;
+	}
+
+	.c-section--portfolio .c-section__actions {
+		padding-top: 0;
 	}
 }
 
@@ -993,6 +1140,14 @@ body {
 }
 
 @media (--mobile) {
+	.c-section--slides {
+		padding: 2rem 0;
+	}
+
+	.c-section--slides h2 {
+		margin-bottom: 2rem;
+	}
+
 	.c-section--slides li {
 		flex: 0 0 100%;
 		padding: 0;
@@ -1004,6 +1159,10 @@ body {
 
 	.c-section--slides .c-btn {
 		width: 100%;
+	}
+
+	.c-section--slides .c-section__body {
+		padding-bottom: 0;
 	}
 }
 
