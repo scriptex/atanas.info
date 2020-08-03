@@ -28,6 +28,7 @@ module.exports = {
 		'!<rootDir>/src/scripts/music.ts',
 		'!<rootDir>/src/scripts/projects.ts',
 		'!<rootDir>/src/scripts/skills.ts',
+		'!<rootDir>/src/scripts/socials.ts',
 		'!<rootDir>/src/scripts/tracks.ts',
 		'!<rootDir>/src/components/index.ts',
 		'!<rootDir>/src/utilities/index.ts'
