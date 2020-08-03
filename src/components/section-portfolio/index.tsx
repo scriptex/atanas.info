@@ -9,7 +9,11 @@ export const SectionPortfolio: React.FunctionComponent = () => {
 	const [showAll, setShowAll] = React.useState(false);
 
 	return (
-		<Section id="portfolio" actions={<Button onClick={() => setShowAll(true)}>Show all</Button>} hasButton={true}>
+		<Section
+			id="portfolio"
+			actions={showAll ? null : <Button onClick={() => setShowAll(true)}>Show all</Button>}
+			hasButton={true}
+		>
 			<h1>Portfolio</h1>
 
 			<h2>Mobile applications</h2>
