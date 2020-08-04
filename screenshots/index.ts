@@ -40,14 +40,14 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 	console.log(`Opening new browser page for ${name}...`);
 	const page = await browser.newPage();
 
-	console.log(`Navigating to ${url} for ${name}...`);
-	await page.goto(url, { waitUntil: 'networkidle0' });
-	await page.waitFor(timeout);
-
 	await page.setViewport({
 		width: 1280,
 		height: 1000
 	});
+
+	console.log(`Navigating to ${url} for ${name}...`);
+	await page.goto(url, { waitUntil: 'networkidle0' });
+	await page.waitFor(timeout);
 
 	console.log(`Taking screenshot for ${name}...`);
 	const shotResult = await page
