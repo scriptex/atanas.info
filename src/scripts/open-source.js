@@ -191,6 +191,30 @@ module.exports = {
 		{
 			name: 'github-insights',
 			url: 'scriptex/github-insights'
+		},
+		{
+			name: 'expo-typescript-template',
+			url: 'scriptex/expo-typescript-template'
+		},
+		{
+			name: 'material-tetris',
+			url: 'scriptex/material-tetris'
+		},
+		{
+			name: 'material-snake',
+			url: 'scriptex/material-snake'
+		},
+		{
+			name: '2048',
+			url: 'scriptex/2048'
+		},
+		{
+			name: 'socials',
+			url: 'scriptex/socials'
+		},
+		{
+			name: 'scriptex.github.io',
+			url: 'scriptex/scriptex.github.io'
 		}
 	]
 };
