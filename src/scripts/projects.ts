@@ -119,12 +119,6 @@ export const projects: Project[] = [
 		description: 'TypeScript, SCSS, React, Redux, Redux Saga'
 	},
 	{
-		url: 'https://financial-shocks.now.sh/',
-		image: 'images/temp/financial-shocks.png',
-		title: 'Financial shocks',
-		description: 'TypeScript, SCSS, React, Redux, Redux Saga, Laravel'
-	},
-	{
 		url: 'https://three-11.com/',
 		image: 'images/temp/three-11.png',
 		title: 'Three 11',
