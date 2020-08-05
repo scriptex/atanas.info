@@ -33,7 +33,7 @@ export const bio: BioEntry[] = [
 		title: '2018',
 		content: [
 			'Since the beginning of 2018 I am working as a JavaScript/TypeScript engineer in a small startup located in Varna and operating internationally.',
-			'In Three 11 we are focused on providing the best possible quality while using bleeding edge technologies. We are working on several in-house projects along with some interesting client websites and applications.',
+			'At Three 11 we are focused on providing the best possible quality while using bleeding edge technologies. We are working on several in-house projects along with some interesting client websites and applications.',
 			'We prefer JavaScript and TypeScript and utilize their power when building applications using React, Angular, Vue, React Native and even static web sites or WordPress powered CMS websites and blogs.'
 		]
 	},
