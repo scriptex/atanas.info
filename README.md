@@ -12,6 +12,19 @@
 
 > My personal website
 
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=scriptex_atanas.info&metric=bugs)](https://sonarcloud.io/dashboard?id=scriptex_atanas.info)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=scriptex_atanas.info&metric=code_smells)](https://sonarcloud.io/dashboard?id=scriptex_atanas.info)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=scriptex_atanas.info&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=scriptex_atanas.info)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=scriptex_atanas.info&metric=ncloc)](https://sonarcloud.io/dashboard?id=scriptex_atanas.info)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=scriptex_atanas.info&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=scriptex_atanas.info)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=scriptex_atanas.info&metric=alert_status)](https://sonarcloud.io/dashboard?id=scriptex_atanas.info)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=scriptex_atanas.info&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=scriptex_atanas.info)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=scriptex_atanas.info&metric=security_rating)](https://sonarcloud.io/dashboard?id=scriptex_atanas.info)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=scriptex_atanas.info&metric=sqale_index)](https://sonarcloud.io/dashboard?id=scriptex_atanas.info)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=scriptex_atanas.info&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=scriptex_atanas.info)
+
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=scriptex_atanas.info)](https://sonarcloud.io/dashboard?id=scriptex_atanas.info)
+
 Built with TypeScript, PostCSS, React, D3, Vuepress, NodeJS, Parcel, Vercel, Puppeteer, Cloudinary and more.
 
 Installable as a Progressive Web App and (partially for now) accessible offline.
