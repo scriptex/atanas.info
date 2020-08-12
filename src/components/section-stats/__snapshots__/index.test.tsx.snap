@@ -407,20 +407,43 @@ exports[`SectionStats component Should render the SectionStats component 1`] = `
     <div
       className="o-shell"
     >
-      <h2>
-        <a
-          href="https://profile.codersrank.io/user/scriptex"
-          rel="noopener noreferrer nofollow"
-          target="_blank"
+      <div
+        className="o-grid"
+      >
+        <div
+          className="o-grid__item o-grid__item--1of2"
         >
-          Codersrank
-        </a>
-         
-        Profile
-      </h2>
-      <codersrank-widget
-        username="scriptex"
-      />
+          <h2>
+            Codersrank Profile
+          </h2>
+          <codersrank-widget
+            username="scriptex"
+          />
+        </div>
+        <div
+          className="o-grid__item o-grid__item--1of2"
+        >
+          <h2>
+            LinkedIn Profile
+          </h2>
+          <div
+            className="LI-profile-badge"
+            data-locale="en_US"
+            data-size="large"
+            data-theme="light"
+            data-type="horizontal"
+            data-vanity="scriptex"
+            data-version="v1"
+          >
+            <Component
+              className="LI-simple-link"
+              href="https://bg.linkedin.com/in/scriptex?trk=profile-badge"
+            >
+              Atanas Atanasov
+            </Component>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <Component

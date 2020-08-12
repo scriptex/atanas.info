@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { format } from 'date-fns';
 
-import { Section } from '..';
+import { Section, ExternalLink } from '..';
 import { getColor, renderContributions } from '../../scripts/gitlab-contributions';
 
 interface GeneralInsight {
@@ -187,18 +187,34 @@ export const SectionStats: React.FunctionComponent<Readonly<Props>> = (props: Re
 
 		<div className="c-section__entry">
 			<div className="o-shell">
-				<h2>
-					<a
-						href="https://profile.codersrank.io/user/scriptex"
-						target="_blank"
-						rel="noopener noreferrer nofollow"
-					>
-						Codersrank
-					</a>{' '}
-					Profile
-				</h2>
+				<div className="o-grid">
+					<div className="o-grid__item o-grid__item--1of2">
+						<h2>Codersrank Profile</h2>
 
-				<codersrank-widget username="scriptex"></codersrank-widget>
+						<codersrank-widget username="scriptex"></codersrank-widget>
+					</div>
+
+					<div className="o-grid__item o-grid__item--1of2">
+						<h2>LinkedIn Profile</h2>
+
+						<div
+							className="LI-profile-badge"
+							data-size="large"
+							data-type="horizontal"
+							data-theme="light"
+							data-locale="en_US"
+							data-vanity="scriptex"
+							data-version="v1"
+						>
+							<ExternalLink
+								href="https://bg.linkedin.com/in/scriptex?trk=profile-badge"
+								className="LI-simple-link"
+							>
+								Atanas Atanasov
+							</ExternalLink>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
