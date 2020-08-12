@@ -12,6 +12,16 @@
 	--color-action: #ef4c23;
 }
 
+@keyframes float {
+	0%,
+	100% {
+		transform: translate(0rem, 0rem);
+	}
+	50% {
+		transform: translate(-1rem, -1rem);
+	}
+}
+
 /* global styles */
 
 html,
@@ -251,6 +261,8 @@ body {
 	}
 }
 
+/* Nav toggle */
+
 .c-nav__toggle {
 	color: var(--color-primary);
 	width: 3.13rem;
@@ -288,6 +300,8 @@ body {
 	transform: rotate(0deg);
 	transition: all var(--timing) var(--easing);
 }
+
+/* Nav open state */
 
 .c-header--open .c-nav {
 	pointer-events: all;
@@ -341,6 +355,8 @@ body {
 		margin-top: 2rem;
 	}
 }
+
+/* Section Hello */
 
 .c-section--hello {
 	text-align: center;
@@ -408,6 +424,8 @@ body {
 	z-index: 2;
 	background-attachment: fixed;
 }
+
+/* Section About */
 
 .c-section--about::before {
 	content: '';
@@ -522,6 +540,8 @@ body {
 	}
 }
 
+/* Section Skills */
+
 .c-section--skills {
 	color: var(--color-primary);
 	text-align: center;
@@ -620,6 +640,8 @@ body {
 	}
 }
 
+/* Section Stats */
+
 .c-section--stats {
 	line-height: 1.2;
 	color: var(--color-secondary);
@@ -646,13 +668,6 @@ body {
 	margin: 0 1rem 1rem 0;
 }
 
-/* prettier-ignore */
-.c-section--stats codersrank-widget { /* stylelint-disable-line selector-type-no-unknown */
-	max-width: 40rem;
-	display: block;
-	margin: 0 auto 2.5rem;
-}
-
 .c-section--stats .c-section__head {
 	padding: 4rem 0 1px;
 	background-color: color-mod(var(--color-primary) a(80%));
@@ -676,53 +691,6 @@ body {
 	@mixin flex-row wrap, center, center;
 	padding: 0 0 1rem 0;
 	margin: auto;
-}
-
-.c-section--stats .o-grid {
-	margin: 0 -0.5rem;
-}
-
-.c-section--stats .o-grid__item {
-	padding: 0 0.5rem;
-}
-
-.c-section--stats .o-grid .LI-badge-container {
-	text-align: left;
-	width: 100% !important;
-	max-width: 40rem;
-	margin: auto;
-	background-color: var(--color-primary);
-}
-
-.c-section--stats .o-grid .LI-badge-container.light li {
-	margin: 0 0.5rem 0.5rem 0 !important;
-}
-
-.c-section--stats .o-grid .LI-badge-container.light .LI-name-container {
-	align-items: center;
-	margin: 0.5rem;
-}
-
-.c-section--stats .o-grid .LI-badge-container.light .LI-profile-pic-container {
-	padding: 0;
-}
-
-.c-section--stats .o-grid .LI-badge-container.light .LI-more-info {
-	padding: 0 0.5rem;
-}
-
-.c-section--stats .o-grid .LI-badge-container.light .LI-footer {
-	margin: 0.25rem 0.5rem 0.5rem;
-}
-
-@keyframes float {
-	0%,
-	100% {
-		transform: translate(0rem, 0rem);
-	}
-	50% {
-		transform: translate(-1rem, -1rem);
-	}
 }
 
 .c-section--stats .c-section__list li {
@@ -831,20 +799,131 @@ body {
 		height: 9rem;
 		margin: 0.5rem;
 	}
+}
+
+/* Section Social */
+
+.c-section--social {
+	line-height: 1.2;
+	color: var(--color-secondary);
+	text-align: center;
+	position: relative;
+	z-index: 2;
+	padding: 4rem 0;
+}
+
+.c-section--social h2 {
+	color: var(--color-primary);
+}
+
+.c-section--social h1,
+.c-section--social h2 {
+	margin: 0 0 3.5rem;
+}
+
+.c-section--social .c-section__head {
+	padding: 4rem 0 1px;
+	margin-bottom: 4rem;
+	background-color: color-mod(var(--color-primary) a(80%));
+}
+
+.c-section--social .c-section__actions {
+	padding-top: 3.25rem;
+}
+
+/* prettier-ignore */
+.c-section--social codersrank-widget { /* stylelint-disable-line selector-type-no-unknown */
+	max-width: 40rem;
+	display: block;
+	margin: 0 auto 2.5rem;
+}
+
+.c-section--social .o-grid {
+	margin: 0 -0.5rem;
+}
+
+.c-section--social .o-grid__item {
+	padding: 0 0.5rem 1rem;
+}
+
+.c-section--social .o-grid .LI-badge-container {
+	text-align: left;
+	width: 100% !important;
+	max-width: 40rem;
+	margin: auto;
+	background-color: var(--color-primary);
+}
+
+.c-section--social .o-grid .LI-badge-container.light li {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 0.5rem 0.5rem 0 !important;
+}
+
+.c-section--social .o-grid .LI-badge-container.light .LI-name-container {
+	align-items: center;
+	margin: 0.5rem;
+}
+
+.c-section--social .o-grid .LI-badge-container.light .LI-profile-pic-container {
+	padding: 0;
+}
+
+.c-section--social .o-grid .LI-badge-container.light .LI-more-info {
+	padding: 0 0.5rem;
+}
+
+.c-section--social .o-grid .LI-badge-container.light .LI-footer {
+	margin: 0.25rem 0.5rem 0.5rem;
+}
+
+.c-section--social .twitter-timeline-wrapper {
+	height: 25rem;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.c-section--social .youtube-wrapper {
+	width: 100%;
+	display: block;
+	border: 1px solid var(--color-primary);
+}
+
+@media (--mobile) {
+	.c-section--social {
+		padding: 2rem 0;
+	}
+
+	.c-section--social h1,
+	.c-section--social h2 {
+		margin-bottom: 2rem;
+	}
+
+	.c-section--social .c-section__head {
+		padding-top: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.c-section--social .c-section__actions {
+		padding-top: 1.25rem;
+	}
 
 	/* prettier-ignore */
-	.c-section--stats codersrank-widget { /* stylelint-disable-line selector-type-no-unknown */
+	.c-section--social codersrank-widget { /* stylelint-disable-line selector-type-no-unknown */
 		margin-bottom: 0;
 	}
 
-	.c-section--stats .o-grid {
+	.c-section--social .o-grid {
 		display: block;
 	}
 
-	.c-section--stats .o-grid__item + .o-grid__item {
-		padding-top: 2rem;
+	.c-section--social .o-grid__item + .o-grid__item {
+		padding-top: 1rem;
 	}
 }
+
+/* Section Portfolio */
 
 .c-section--portfolio {
 	color: var(--color-primary);
@@ -1119,6 +1198,8 @@ body {
 		padding-top: 0;
 	}
 }
+
+/* Section Slides */
 
 .c-section--slides {
 	color: var(--color-secondary);
