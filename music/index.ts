@@ -2,6 +2,7 @@ import 'scriptex-socials';
 import SimplexNoise from 'simplex-noise';
 import { Power4, TweenMax } from 'gsap';
 
+import { random } from '../src/scripts/shared';
 import { tracks } from '../src/scripts/tracks';
 
 const list = document.querySelector('#tracks') as HTMLDivElement;
@@ -176,8 +177,8 @@ class Circle {
 	constructor(index: number) {
 		this.index = index;
 
-		this.xR = Math.random();
-		this.yR = Math.random();
+		this.xR = random();
+		this.yR = random();
 
 		this.i = 0;
 		this.value = 0;

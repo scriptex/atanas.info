@@ -21,7 +21,7 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 		{
 			title: 'Used languages',
 			value: repositories
-				.reduce((result: any[], repo: any) => Array.from(new Set([...result, repo.language as any])), [])
+				.reduce((result: any[], repo: any) => Array.from(new Set([...result, repo.language])), [])
 				.filter(Boolean)
 				.join(', ')
 		},

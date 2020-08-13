@@ -8,6 +8,7 @@ const constantDate = new Date('2017-12-31T23:59:59');
  */
 global.Date = class extends Date {
 	constructor() {
+		super();
 		return constantDate;
 	}
 };

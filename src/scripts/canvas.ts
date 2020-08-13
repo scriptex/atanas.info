@@ -1,5 +1,7 @@
 import * as d3 from 'd3';
 
+import { random } from '../scripts/shared';
+
 export type Canvas = d3.Selection<SVGSVGElement, unknown, HTMLElement, any>;
 
 interface Data {
@@ -12,7 +14,7 @@ interface Data {
 
 let circleIndex = 0;
 
-const rand = (modifier: number): number => Math.random() * modifier;
+const rand = (modifier: number): number => random() * modifier;
 const eventType: string = 'ontouchstart' in document ? 'touchmove' : 'mousemove';
 const dispatcher: d3.Dispatch<EventTarget> = d3.dispatch('remove-circle');
 const { innerWidth, innerHeight } = window;
@@ -20,9 +22,9 @@ const { innerWidth, innerHeight } = window;
 dispatcher.on('remove-circle', (canvas: Canvas) => {
 	const newCircle = canvas.append('circle');
 	const newCircleData = generateCircleData(1);
+	const node = newCircle.node() as SVGCircleElement;
 
-	// eslint-disable-next-line
-	setCircleData(canvas, newCircle!.node()!, newCircleData[0]);
+	setCircleData(canvas, node, newCircleData[0]);
 });
 
 export const createSVG = (id: string, width: number, height: number): Canvas =>

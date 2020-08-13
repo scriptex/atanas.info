@@ -34,4 +34,5 @@ interface Window {
 	dataLayer: {
 		push: (...args: any[]) => void;
 	};
+	msCrypto: any;
 }

@@ -36,8 +36,7 @@ export const renderContributions = (selector: string, data: IndexedList<number>)
 		})
 	);
 
-	const max = Math.max(...(Object.values(data) as number[]));
-
+	const max = Math.max(...Object.values(data));
 	const svg = d3.select(selector).append('svg').attr('width', 795).attr('height', 105);
 	const range = d3.timeDay.range(yearAgo, new Date());
 	const days = svg.selectAll('rect').data(range);

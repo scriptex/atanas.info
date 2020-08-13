@@ -55,7 +55,7 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 		.then(res => res)
 		.catch(e => {
 			console.error(`Error capturing screenshot for ${name}`, e);
-			return false;
+			return null;
 		});
 
 	console.log(`Closing browser for ${name}...`);
@@ -64,23 +64,23 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 	if (shotResult) {
 		console.log(`Uploading screenshot for ${name}...`);
 
-		return upload(shotResult as Buffer, uploadOptions(name), name);
+		return upload(shotResult, uploadOptions(name), name);
 	} else {
 		return null;
 	}
 }
 
 function upload(shotResult: Buffer, options: UploadApiOptions, name: string): Promise<UploadApiResponse> {
-	return new Promise((resolve, reject) => {
+	return new Promise((success, fail) => {
 		cloudinary.uploader
 			.upload_stream(options, (error, result) => {
 				if (error) {
 					console.error('Upload to cloudinary failed: ', error);
-					reject(error);
+					fail(error);
 				}
 
 				console.log(`Uploaded screenshot for ${name}...`);
-				resolve(result);
+				success(result);
 			})
 			.end(shotResult);
 	});
