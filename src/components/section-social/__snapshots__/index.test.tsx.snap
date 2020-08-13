@@ -70,7 +70,7 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
           >
             <a
               className="twitter-timeline"
-              href="https://twitter.com/scriptexbg?ref_src=twsrc%5Etfw"
+              href="//twitter.com/scriptexbg?ref_src=twsrc%5Etfw"
             />
           </div>
         </div>
@@ -83,7 +83,8 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
           <iframe
             className="youtube-wrapper"
             height="400"
-            src="http://www.youtube.com/embed/?listType=user_uploads&list=scriptex"
+            loading="lazy"
+            src="//www.youtube.com/embed/?listType=user_uploads&list=scriptex"
           />
         </div>
       </div>

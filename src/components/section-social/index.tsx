@@ -44,10 +44,7 @@ export const SectionSocial: React.FunctionComponent = () => (
 						<h2>Twitter Profile</h2>
 
 						<div className="twitter-timeline-wrapper">
-							<a
-								href="https://twitter.com/scriptexbg?ref_src=twsrc%5Etfw"
-								className="twitter-timeline"
-							></a>
+							<a href="//twitter.com/scriptexbg?ref_src=twsrc%5Etfw" className="twitter-timeline"></a>
 						</div>
 					</div>
 
@@ -55,8 +52,9 @@ export const SectionSocial: React.FunctionComponent = () => (
 						<h2>YouTube Channel</h2>
 
 						<iframe
-							src="http://www.youtube.com/embed/?listType=user_uploads&list=scriptex"
+							src="//www.youtube.com/embed/?listType=user_uploads&list=scriptex"
 							height="400"
+							loading="lazy"
 							className="youtube-wrapper"
 						></iframe>
 					</div>
