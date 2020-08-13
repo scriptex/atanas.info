@@ -125,6 +125,12 @@ export const projects: Project[] = [
 		description: 'HTML5, CSS3, SVG, JavaScript, D3'
 	},
 	{
+		url: 'https://flows.now.sh/',
+		image: 'images/temp/flows.png',
+		title: 'Three 11 Company Flows',
+		description: 'JavaScript, Stylus, VuePress, NodeJS'
+	},
+	{
 		url: '',
 		image: 'images/temp/atelier-coolinar.png',
 		title: 'Atelier Coolinar (Ателие Кулинар)',

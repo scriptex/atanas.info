@@ -12,6 +12,7 @@ import {
 	SectionStats,
 	SectionMusic,
 	SectionSkills,
+	SectionSocial,
 	SectionSlides,
 	SectionVideos,
 	SectionPortfolio
@@ -35,6 +36,8 @@ export const App: React.FunctionComponent = () => (
 			<SectionStats data={{ github, gitlab }} />
 
 			<SectionPortfolio />
+
+			<SectionSocial />
 
 			<SectionSlides />
 

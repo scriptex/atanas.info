@@ -1,5 +1,6 @@
 // @ts-nocheck
 const Enzyme = require('enzyme');
+const crypto = require('crypto');
 const Adapter = require('enzyme-adapter-react-16');
 
 Enzyme.configure({
@@ -12,3 +13,7 @@ window.matchMedia = window.matchMedia || (() => ({
 	addListener: () => {},
 	removeListener: () => {}
 }));
+
+window.crypto = {
+	getRandomValues: buffer => crypto.randomFillSync(buffer)
+};

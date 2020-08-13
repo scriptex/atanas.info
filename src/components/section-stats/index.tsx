@@ -21,7 +21,7 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 		{
 			title: 'Used languages',
 			value: repositories
-				.reduce((result: any[], repo: any) => Array.from(new Set([...result, repo.language as any])), [])
+				.reduce((result: any[], repo: any) => Array.from(new Set([...result, repo.language])), [])
 				.filter(Boolean)
 				.join(', ')
 		},
@@ -184,23 +184,6 @@ export const SectionStats: React.FunctionComponent<Readonly<Props>> = (props: Re
 				<h1>Stats</h1>
 			</div>
 		</header>
-
-		<div className="c-section__entry">
-			<div className="o-shell">
-				<h2>
-					<a
-						href="https://profile.codersrank.io/user/scriptex"
-						target="_blank"
-						rel="noopener noreferrer nofollow"
-					>
-						Codersrank
-					</a>{' '}
-					Profile
-				</h2>
-
-				<codersrank-widget username="scriptex"></codersrank-widget>
-			</div>
-		</div>
 
 		<GithubStats data={props.data.github} />
 

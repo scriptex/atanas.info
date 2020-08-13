@@ -3,13 +3,20 @@ import * as React from 'react';
 export const mockUseEffect = (): void => {
 	let useEffect: any;
 
-	const mockUseEffect = () => {
+	const mockedUseEffect = () => {
 		useEffect.mockImplementationOnce((f: () => any) => f());
 	};
 
 	beforeEach(() => {
 		useEffect = jest.spyOn(React, 'useEffect');
 
-		mockUseEffect();
+		mockedUseEffect();
 	});
+};
+
+export const random = (): number => {
+	const crypto = window.crypto || window.msCrypto;
+	const array = new Uint32Array(1);
+
+	return crypto.getRandomValues(array)[0] / (Math.pow(2, 32) - 1);
 };
