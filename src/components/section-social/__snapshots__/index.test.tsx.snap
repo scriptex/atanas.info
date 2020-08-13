@@ -65,14 +65,16 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
           <h2>
             Twitter Profile
           </h2>
-          <div
-            className="twitter-timeline-wrapper"
-          >
-            <a
-              className="twitter-timeline"
-              href="//twitter.com/scriptexbg?ref_src=twsrc%5Etfw"
-            />
-          </div>
+          <TwitterTimelineEmbed
+            options={
+              Object {
+                "height": "25rem",
+              }
+            }
+            screenName="scriptexbg"
+            sourceType="profile"
+            theme="dark"
+          />
         </div>
         <div
           className="o-grid__item o-grid__item--1of2"

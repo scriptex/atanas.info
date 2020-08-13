@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 import { Section, ExternalLink } from '..';
 
@@ -43,9 +44,12 @@ export const SectionSocial: React.FunctionComponent = () => (
 					<div className="o-grid__item o-grid__item--1of2">
 						<h2>Twitter Profile</h2>
 
-						<div className="twitter-timeline-wrapper">
-							<a href="//twitter.com/scriptexbg?ref_src=twsrc%5Etfw" className="twitter-timeline"></a>
-						</div>
+						<TwitterTimelineEmbed
+							theme="dark"
+							options={{ height: '25rem' }}
+							sourceType="profile"
+							screenName="scriptexbg"
+						/>
 					</div>
 
 					<div className="o-grid__item o-grid__item--1of2">

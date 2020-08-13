@@ -30,6 +30,10 @@ declare namespace JSX {
 	}
 }
 
+declare module 'react-twitter-embed' {
+	export const TwitterTimelineEmbed: any;
+}
+
 interface Window {
 	dataLayer: {
 		push: (...args: any[]) => void;
