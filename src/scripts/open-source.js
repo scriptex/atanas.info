@@ -215,6 +215,10 @@ module.exports = {
 		{
 			name: 'scriptex.github.io',
 			url: 'scriptex/scriptex.github.io'
+		},
+                {
+			name: 'html-head-component',
+			url: 'scriptex/html-head-component'
 		}
 	]
 };
