@@ -7860,7 +7860,7 @@ is-installed-globally@^0.3.1:
     global-dirs "^2.0.1"
     is-path-inside "^3.0.1"
 
-is-mobile@^2.2.1:
+is-mobile@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/is-mobile/-/is-mobile-2.2.2.tgz#f6c9c5d50ee01254ce05e739bdd835f1ed4e9954"
   integrity sha512-wW/SXnYJkTjs++tVK5b6kVITZpAZPtUrt9SF80vvxGiF/Oywal+COk1jlRkiVq15RFNEQKQY31TkV24/1T5cVg==
@@ -11631,7 +11631,7 @@ prop-types-exact@^1.2.0:
     object.assign "^4.1.0"
     reflect.ownkeys "^0.2.0"
 
-prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -11879,7 +11879,7 @@ rc-motion@^1.0.0:
     raf "^3.4.1"
     rc-util "^5.0.6"
 
-rc-slider@^9.2.4:
+rc-slider@^9.3.1:
   version "9.3.1"
   resolved "https://registry.yarnpkg.com/rc-slider/-/rc-slider-9.3.1.tgz#444012f3b4847d592b167a9cee6a1a46779a6ef4"
   integrity sha512-c52PWPyrfJWh28K6dixAm0906L3/4MUIxqrNQA4TLnC/Z+cBNycWJUZoJerpwSOE1HdM3XDwixCsmtFc/7aWlQ==
@@ -11890,14 +11890,14 @@ rc-slider@^9.2.4:
     rc-util "^5.0.0"
     shallowequal "^1.1.0"
 
-rc-switch@^1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/rc-switch/-/rc-switch-1.9.0.tgz#ab2b878f2713c681358a453391976c9b95b290f7"
-  integrity sha512-Isas+egaK6qSk64jaEw4GgPStY4umYDbT7ZY93bZF1Af+b/JEsKsJdNOU2qG3WI0Z6tXo2DDq0kJCv8Yhu0zww==
+rc-switch@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/rc-switch/-/rc-switch-3.2.0.tgz#aa36bb417409ff4cc7d542ec4381cb5d87cfedc1"
+  integrity sha512-WQZnRrWZ+KGh4Cd98FpP1ZgvMmebctoHzKAO2n1Xsry1FQBSGgIw4rQJRxET31VS/dR1LIKb5md/k0UzcXXc0g==
   dependencies:
+    "@babel/runtime" "^7.10.1"
     classnames "^2.2.1"
-    prop-types "^15.5.6"
-    react-lifecycles-compat "^3.0.4"
+    rc-util "^5.0.1"
 
 rc-tooltip@^4.0.0:
   version "4.2.1"
@@ -11946,14 +11946,14 @@ react-dom@16.13.1:
     prop-types "^15.6.2"
     scheduler "^0.19.1"
 
-react-drag-listview@^0.1.6:
+react-drag-listview@^0.1.7:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/react-drag-listview/-/react-drag-listview-0.1.7.tgz#ab9384a08c4bfc2863d950d326f24e62ad2ffdda"
   integrity sha512-mnnAj0liaHcONEi7CtiGnLJl6EHy5huHiAfZmhjl3Z0cg9XrQnF5eFK0WqHkX1G80ys9D6rtxr4M75lrnbQs1A==
   dependencies:
     prop-types "^15.5.8"
 
-react-draggable@^4.4.2:
+react-draggable@^4.4.3:
   version "4.4.3"
   resolved "https://registry.yarnpkg.com/react-draggable/-/react-draggable-4.4.3.tgz#0727f2cae5813e36b0e4962bf11b2f9ef2b406f3"
   integrity sha512-jV4TE59MBuWm7gb6Ns3Q1mxX8Azffb7oTtDtBgFkxRvhDp38YAARmRplrj0+XGkhOJB5XziArX+4HUUABtyZ0w==
@@ -12017,25 +12017,20 @@ react-is@^16.12.0, react-is@^16.13.1, react-is@^16.6.0, react-is@^16.7.0, react-
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-jinke-music-player@4.16.5:
-  version "4.16.5"
-  resolved "https://registry.yarnpkg.com/react-jinke-music-player/-/react-jinke-music-player-4.16.5.tgz#1a27670ad9c99f1fa0a816f0b4b2187c62a778fc"
-  integrity sha512-h5Kldm38E14bQMw3TCMPZWKFQi7b9DNagb+kXypFeTEYrUp6MSkNzRW48V8XRUcd1M/amsXh5oGyxFS43M+0GA==
+react-jinke-music-player@4.17.0:
+  version "4.17.0"
+  resolved "https://registry.yarnpkg.com/react-jinke-music-player/-/react-jinke-music-player-4.17.0.tgz#1c8de38cf4bf60946d24bb9b94fa4d4d6f8ab0f5"
+  integrity sha512-M8yY3A8IkTOnvPLCOkIJN3YYz+vE4Y5qbCVr90bhv1OOwWPaMla7dUqikeHvdvwTWkz6JFpF+vM3NRGCgl2HBA==
   dependencies:
     classnames "^2.2.6"
     downloadjs "^1.4.7"
-    is-mobile "^2.2.1"
+    is-mobile "^2.2.2"
     prop-types "^15.7.2"
-    rc-slider "^9.2.4"
-    rc-switch "^1.9.0"
-    react-drag-listview "^0.1.6"
-    react-draggable "^4.4.2"
+    rc-slider "^9.3.1"
+    rc-switch "^3.2.0"
+    react-drag-listview "^0.1.7"
+    react-draggable "^4.4.3"
     react-icons "^2.2.5"
-
-react-lifecycles-compat@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
-  integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
 react-proptype-conditional-require@^1.0.4:
   version "1.0.4"
