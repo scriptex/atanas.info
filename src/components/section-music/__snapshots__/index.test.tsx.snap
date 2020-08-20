@@ -417,6 +417,29 @@ exports[`SectionMusic component Should render the SectionMusic component 1`] = `
   drag={true}
   getContainer={[Function]}
   glassBg={false}
+  icon={
+    Object {
+      "close": <MdClose />,
+      "delete": <FaTrashO />,
+      "destroy": <MdClose />,
+      "download": <FaCloudDownload />,
+      "loading": <FaSpinner />,
+      "loop": <MdRepeatOne />,
+      "lyric": <FaBook />,
+      "mute": <MdVolumeOff />,
+      "next": <MdSkipNext />,
+      "order": <MdViewHeadline />,
+      "orderLoop": <MdRepeat />,
+      "pause": <AnimatePauseIcon />,
+      "play": <AnimatePlayIcon />,
+      "playLists": <MdQueueMusic />,
+      "prev": <MdSkipPrevious />,
+      "reload": <FaRefresh />,
+      "shuffle": <TiArrowShuffle />,
+      "toggle": <FaMinusSquareO />,
+      "volume": <MdVolumeUp />,
+    }
+  }
   loadAudioErrorPlayNext={true}
   locale="en_US"
   mode="mini"
