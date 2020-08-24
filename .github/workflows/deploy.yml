@@ -12,6 +12,6 @@ jobs:
             - uses: amondnet/vercel-action@v19
               with:
                   vercel-token: ${{ secrets.ZEIT_TOKEN }}
-                  vercel-org-id: ${{ secrets.VERCEL_ORG_ID}} 
+                  vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
                   vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
                   vercel-args: '--confirm --prod'
