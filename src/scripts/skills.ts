@@ -1,4 +1,17 @@
-import * as d3 from 'd3';
+import { drag } from 'd3-drag';
+import { range } from 'd3-array';
+import { randomUniform } from 'd3-random';
+import { select, event, Selection } from 'd3-selection';
+import {
+	forceX,
+	forceY,
+	forceLink,
+	Simulation,
+	forceCenter,
+	forceCollide,
+	forceManyBody,
+	forceSimulation
+} from 'd3-force';
 
 import { Skill } from './skills-list';
 import { Canvas, createSVG } from './canvas';
@@ -9,12 +22,12 @@ interface Node extends Skill {
 
 export const drawSkills = (words: Skill[]): void => {
 	const all = words.length;
-	const width = document.body.clientWidth;
-	const height = document.body.clientHeight;
+	const width = window.innerWidth;
+	const height = window.innerHeight;
 	const svg = createSVG('skills-graph', width, height);
 
 	const renderSkills = (data: any): void => {
-		const simulation = createSimulation(width, height);
+		const simulation: any = createSimulation(width, height);
 		const links = createLinks(svg, data.links);
 		const nodes = createNodes(svg, data.nodes, width, dragHandler(simulation));
 
@@ -29,9 +42,9 @@ export const drawSkills = (words: Skill[]): void => {
 
 			nodes.each(function () {
 				const group: any = this.parentNode;
-				const name = d3.select(group.querySelector('.skill-name'));
-				const image = d3.select(group.querySelector('image'));
-				const duration = d3.select(group.querySelector('.skill-duration'));
+				const name = select(group.querySelector('.skill-name'));
+				const image = select(group.querySelector('image'));
+				const duration = select(group.querySelector('.skill-duration'));
 
 				name.attr('x', (d: any) => d.x).attr('y', (d: any) => d.y);
 				image.attr('x', (d: any) => d.x).attr('y', (d: any) => d.y);
@@ -39,7 +52,7 @@ export const drawSkills = (words: Skill[]): void => {
 			});
 		});
 
-		(simulation as any).force('link').links(data.links);
+		simulation.force('link').links(data.links);
 	};
 
 	renderSkills({
@@ -59,44 +72,42 @@ export const drawSkills = (words: Skill[]): void => {
 				...word
 			};
 		}),
-		links: d3.range(0, all).map(() => ({
-			source: ~~d3.randomUniform(all)(),
-			target: ~~d3.randomUniform(all)()
+		links: range(0, all).map(() => ({
+			source: ~~randomUniform(all)(),
+			target: ~~randomUniform(all)()
 		}))
 	});
 };
 
-export const dragHandler = (simulation: d3.Simulation<any, any>): any => {
-	return d3
-		.drag()
+export const dragHandler = (simulation: Simulation<any, any>): any => {
+	return drag()
 		.on('start', (d: any) => {
-			if (!(event as any).active) simulation.alphaTarget(0.3).restart();
+			if (!event.active) simulation.alphaTarget(0.3).restart();
 			d.fx = d.x;
 			d.fy = d.y;
 		})
 		.on('drag', (d: any) => {
-			d.fx = (event as any).x;
-			d.fy = (event as any).y;
+			d.fx = event.x;
+			d.fy = event.y;
 		})
 		.on('end', (d: any) => {
-			if (!(event as any).active) simulation.alphaTarget(0);
+			if (!event.active) simulation.alphaTarget(0);
 			d.fx = null;
 			d.fy = null;
 		});
 };
 
-export const createSimulation = (width: number, height: number): d3.Simulation<any, any> => {
-	return d3
-		.forceSimulation()
+export const createSimulation = (width: number, height: number): Simulation<any, any> => {
+	return forceSimulation()
 		.force(
 			'link',
-			d3.forceLink().id((d: any) => d.index)
+			forceLink().id((d: any) => d.index)
 		)
-		.force('collide', d3.forceCollide((d: any) => d.r * 1.75).iterations(20))
-		.force('charge', d3.forceManyBody())
-		.force('center', d3.forceCenter(width / 2, height / 2))
-		.force('y', d3.forceY(0))
-		.force('x', d3.forceX(0));
+		.force('collide', forceCollide((d: any) => d.r * 1.75).iterations(20))
+		.force('charge', forceManyBody())
+		.force('center', forceCenter(width / 2, height / 2))
+		.force('y', forceY(0))
+		.force('x', forceX(0));
 };
 
 export const createLinks = (svg: Canvas, data: Node[]): any => {
@@ -108,7 +119,7 @@ export const createNodes = (
 	data: Node[],
 	winWidth: number,
 	callable: () => void
-): d3.Selection<SVGCircleElement, Node, SVGElement, unknown> => {
+): Selection<SVGCircleElement, Node, SVGElement, unknown> => {
 	const nodes = svg
 		.append('g')
 		.selectAll('circle')
@@ -116,13 +127,15 @@ export const createNodes = (
 		.enter()
 		.append('g')
 		.append('circle')
-		.attr('r', d => d.r)
-		.attr('fill', d => d.fill)
-		.attr('stroke', d => d.fill)
+		.attr('r', (d: any) => d.r)
+		.attr('fill', (d: any) => d.fill)
+		.attr('stroke', (d: any) => d.fill)
 		.call(callable);
 
-	nodes.each(function (d) {
-		const group = d3.select(this.parentNode as any);
+	nodes.each(function (d: any) {
+		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+		// @ts-ignore
+		const group = select(this.parentNode);
 		const { width } = d;
 
 		let mod = 1.75;
