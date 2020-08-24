@@ -2,7 +2,7 @@ name: 'Deploy'
 
 on:
     schedule:
-        - cron: '0 12 * * *' # At noon every day
+        - cron: '0 */4 * * *'
 
 jobs:
     deploy:
