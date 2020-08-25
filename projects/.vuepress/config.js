@@ -291,10 +291,10 @@ module.exports = {
 	themeConfig: {
 		sidebar: require('../../src/scripts/open-source')
 			.projects.sort()
-			.map((item) => {
+			.map(item => {
 				const name = item.split('/').pop();
 
-				return ['./' + name + '.md', name]
+				return ['./' + name + '.md', name];
 			}),
 		repo: 'https://atanas.info',
 		repoLabel: 'Back to atanas.info',
