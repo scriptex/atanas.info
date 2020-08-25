@@ -99,7 +99,7 @@ async function createScreenshots(pages: Project[]): Promise<void> {
 			console.log(`${page.title} does not have a valid URL.`);
 		} else {
 			try {
-				const result = await createScreenshot(page.url, page.title, page.timeout);
+				const result = await createScreenshot(page.url, page.title.replace(/\s/g, '-'), page.timeout);
 
 				if (result) {
 					newProjects = newProjects.map((project: Project) => {

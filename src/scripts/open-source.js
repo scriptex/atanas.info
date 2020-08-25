@@ -1,224 +1,59 @@
 module.exports = {
 	projects: [
-		{
-			name: 'webpack-mpa',
-			url: 'scriptex/webpack-mpa'
-		},
-		{
-			name: 'webpack-mpa-next',
-			url: 'scriptex/webpack-mpa-next'
-		},
-		{
-			name: 'webpack-mpa-ts',
-			url: 'scriptex/webpack-mpa-ts'
-		},
-		{
-			name: 'animate-me',
-			url: 'scriptex/AnimateMe'
-		},
-		{
-			name: 'intro-scroll',
-			url: 'scriptex/IntroScroll'
-		},
-		{
-			name: 'html5-form-validator',
-			url: 'scriptex/html5-form-validator'
-		},
-		{
-			name: 'dator',
-			url: 'scriptex/dator'
-		},
-		{
-			name: 'pass-score',
-			url: 'scriptex/pass-score'
-		},
-		{
-			name: 'random-splice',
-			url: 'scriptex/random-splice'
-		},
-		{
-			name: 'sublime-snippets',
-			url: 'scriptex/sublime-snippets'
-		},
-		{
-			name: 'postcss-watch-folder',
-			url: 'scriptex/postcss-watch-folder'
-		},
-		{
-			name: 'postcss-tools',
-			url: 'scriptex/postcss-tools'
-		},
-		{
-			name: 'notabene',
-			url: 'scriptex/Notabene'
-		},
-		{
-			name: 'evolution',
-			url: 'scriptex/Evolution'
-		},
-		{
-			name: 'react-template',
-			url: 'three11/react-template'
-		},
-		{
-			name: 'react-template-ts',
-			url: 'three11/react-template-ts'
-		},
-		{
-			name: 'optisize',
-			url: 'three11/optisize'
-		},
-		{
-			name: 'debounce',
-			url: 'three11/debounce'
-		},
-		{
-			name: 'dom-helpers',
-			url: 'three11/dom-helpers'
-		},
-		{
-			name: 'infinite-scroll',
-			url: 'three11/infinite-scroll'
-		},
-		{
-			name: 'animate-top-offset',
-			url: 'three11/animate-top-offset'
-		},
-		{
-			name: 'accordion',
-			url: 'three11/accordion'
-		},
-		{
-			name: 'istouch',
-			url: 'three11/istouch'
-		},
-		{
-			name: 'extract-query-arg',
-			url: 'three11/extract-query-arg'
-		},
-		{
-			name: 'scrollspy',
-			url: 'three11/scrollspy'
-		},
-		{
-			name: 'create-pwa',
-			url: 'scriptex/create-pwa'
-		},
-		{
-			name: 'localga',
-			url: 'scriptex/localga'
-		},
-		{
-			name: 'github-pages-vuepress',
-			url: 'scriptex/github-pages-vuepress'
-		},
-		{
-			name: 'touchsweep',
-			url: 'scriptex/touchsweep'
-		},
-		{
-			name: 'svg64',
-			url: 'scriptex/svg64'
-		},
-		{
-			name: 'itcss',
-			url: 'scriptex/itcss'
-		},
-		{
-			name: 'itscss',
-			url: 'scriptex/itscss'
-		},
-		{
-			name: 'at-the-wall',
-			url: 'scriptex/at-the-wall'
-		},
-		{
-			name: 'react-accordion-ts',
-			url: 'scriptex/react-accordion-ts'
-		},
-		{
-			name: 'no-html',
-			url: 'scriptex/no-html'
-		},
-		{
-			name: 'react-svg-donuts',
-			url: 'scriptex/react-svg-donuts'
-		},
-		{
-			name: 'hilarious-css',
-			url: 'scriptex/hilarious-css'
-		},
-		{
-			name: 'scss-goodies',
-			url: 'scriptex/scss-goodies'
-		},
-		{
-			name: 'awesome-useless-websites',
-			url: 'scriptex/awesome-useless-websites'
-		},
-		{
-			name: 'typed-usa-states',
-			url: 'scriptex/typed-usa-states'
-		},
-		{
-			name: 'css-diagnostics',
-			url: 'scriptex/css-diagnostics'
-		},
-		{
-			name: 'vuejs-template',
-			url: 'three11/vuejs-template'
-		},
-		{
-			name: 'react-dropper',
-			url: 'scriptex/react-dropper'
-		},
-		{
-			name: 'calendar-widget',
-			url: 'scriptex/calendar-widget'
-		},
-		{
-			name: 'async-array-prototype',
-			url: 'scriptex/async-array-prototype'
-		},
-		{
-			name: 'itcss-emmet-snippets',
-			url: 'scriptex/itcss-emmet-snippets'
-		},
-		{
-			name: 'universal-github-client',
-			url: 'scriptex/universal-github-client'
-		},
-		{
-			name: 'github-insights',
-			url: 'scriptex/github-insights'
-		},
-		{
-			name: 'expo-typescript-template',
-			url: 'scriptex/expo-typescript-template'
-		},
-		{
-			name: 'material-tetris',
-			url: 'scriptex/material-tetris'
-		},
-		{
-			name: 'material-snake',
-			url: 'scriptex/material-snake'
-		},
-		{
-			name: '2048',
-			url: 'scriptex/2048'
-		},
-		{
-			name: 'socials',
-			url: 'scriptex/socials'
-		},
-		{
-			name: 'scriptex.github.io',
-			url: 'scriptex/scriptex.github.io'
-		},
-                {
-			name: 'html-head-component',
-			url: 'scriptex/html-head-component'
-		}
+		"scriptex/2048",
+		"scriptex/AnimateMe",
+		"scriptex/Evolution",
+		"scriptex/IntroScroll",
+		"scriptex/Notabene",
+		"scriptex/async-array-prototype",
+		"scriptex/at-the-wall",
+		"scriptex/awesome-useless-websites",
+		"scriptex/calendar-widget",
+		"scriptex/create-pwa",
+		"scriptex/css-diagnostics",
+		"scriptex/dator",
+		"scriptex/expo-typescript-template",
+		"scriptex/github-insights",
+		"scriptex/github-pages-vuepress",
+		"scriptex/hilarious-css",
+		"scriptex/html-head-component",
+		"scriptex/html5-form-validator",
+		"scriptex/itcss",
+		"scriptex/itcss-emmet-snippets",
+		"scriptex/itscss",
+		"scriptex/localga",
+		"scriptex/material-snake",
+		"scriptex/material-tetris",
+		"scriptex/no-html",
+		"scriptex/pass-score",
+		"scriptex/postcss-tools",
+		"scriptex/postcss-watch-folder",
+		"scriptex/random-splice",
+		"scriptex/react-accordion-ts",
+		"scriptex/react-dropper",
+		"scriptex/react-svg-donuts",
+		"scriptex/scriptex.github.io",
+		"scriptex/scss-goodies",
+		"scriptex/socials",
+		"scriptex/sublime-snippets",
+		"scriptex/svg64",
+		"scriptex/touchsweep",
+		"scriptex/typed-usa-states",
+		"scriptex/universal-github-client",
+		"scriptex/webpack-mpa",
+		"scriptex/webpack-mpa-next",
+		"scriptex/webpack-mpa-ts",
+		"three11/accordion",
+		"three11/animate-top-offset",
+		"three11/debounce",
+		"three11/dom-helpers",
+		"three11/extract-query-arg",
+		"three11/infinite-scroll",
+		"three11/istouch",
+		"three11/optisize",
+		"three11/react-template",
+		"three11/react-template-ts",
+		"three11/scrollspy",
+		"three11/vuejs-template"
 	]
 };

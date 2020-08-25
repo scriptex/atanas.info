@@ -13,6 +13,6 @@ global.Date = class extends Date {
 	}
 };
 
-const time = new Date().getTime();
+export const dateMock = new Date().getTime();
 
-export default time;
+export default dateMock;

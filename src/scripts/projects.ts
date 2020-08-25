@@ -47,13 +47,13 @@ export const projects: Project[] = [
 		description: 'TypeScript, SCSS, React, Redux, NodeJS'
 	},
 	{
-		url: 'http://emailio.com/',
+		url: 'https://emailio.com/',
 		image: 'images/temp/emailio.png',
 		title: 'Emailio Landing',
 		description: 'CSS, JavaScript, HTML'
 	},
 	{
-		url: 'http://emailio.now.sh/',
+		url: 'https://emailio.now.sh/',
 		image: 'images/temp/emailio-web-app.png',
 		title: 'Emailio Web Application',
 		description: 'SCSS, JavaScript, React, Redux, Redux Saga'

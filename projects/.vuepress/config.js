@@ -290,8 +290,12 @@ module.exports = {
 	serviceWorker: true,
 	themeConfig: {
 		sidebar: require('../../src/scripts/open-source')
-			.projects.sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0))
-			.map(({ name }) => ['./' + name + '.md', name]),
+			.projects.sort()
+			.map((item) => {
+				const name = item.split('/').pop();
+
+				return ['./' + name + '.md', name]
+			}),
 		repo: 'https://atanas.info',
 		repoLabel: 'Back to atanas.info',
 		editLinks: false
