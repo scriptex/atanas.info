@@ -15,7 +15,8 @@ import {
 	SectionSocial,
 	SectionSlides,
 	SectionVideos,
-	SectionPortfolio
+	SectionPortfolio,
+	SectionCertificates
 } from '..';
 
 export const App: React.FunctionComponent = () => (
@@ -44,6 +45,8 @@ export const App: React.FunctionComponent = () => (
 			<SectionVideos />
 
 			<SectionMusic />
+
+			<SectionCertificates />
 
 			<Footer />
 		</>

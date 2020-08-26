@@ -10,6 +10,7 @@ jobs:
             - name: Build
               run: |
                   yarn
+                  yarn prettier
                   yarn lint
                   yarn build
                   yarn test:coverage

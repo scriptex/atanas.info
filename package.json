@@ -30,6 +30,11 @@
 		"lint": "npm run lint:ts && npm run lint:css",
 		"lint:ts": "eslint 'src/**/*.{ts,tsx}'",
 		"lint:css": "stylelint './src/**/*.pcss' --config .stylelintrc",
+		"prettier:js": "prettier --write --list-different \"**/*.js\"",
+		"prettier:ts": "prettier --write --list-different \"**/*.tsx\" \"**/*.ts\"",
+		"prettier:scss": "prettier --write --list-different \"**/*.pcss\" \"**/*.scss\" \"**/*.styl\"",
+		"prettier:config": "prettier --write --list-different \"**/*.yml\" \"**/*.json\"",
+		"prettier": "yarn prettier:js && yarn prettier:ts && yarn prettier:scss && yarn prettier:config",
 		"deduplicate": "yarn-deduplicate --packages @types/react yarn.lock",
 		"screenshots": "ts-node ./screenshots/index.ts",
 		"insights": "ts-node ./insights/index.ts",
@@ -162,7 +167,7 @@
 	"private": true,
 	"husky": {
 		"hooks": {
-			"pre-push": "yarn lint && yarn test"
+			"pre-push": "yarn lint && yarn prettier && yarn test"
 		}
 	},
 	"typeCoverage": {

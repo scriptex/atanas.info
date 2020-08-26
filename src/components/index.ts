@@ -7,6 +7,7 @@ export { default as Header } from './header';
 export { default as Icon } from './icon';
 export { default as Section } from './section';
 export { default as SectionAbout } from './section-about';
+export { default as SectionCertificates } from './section-certificates';
 export { default as SectionHello } from './section-hello';
 export { default as SectionMusic } from './section-music';
 export { default as SectionNav } from './section-nav';

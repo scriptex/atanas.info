@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionCertificates component Should render the SectionCertificates component 1`] = `
+<Component
+  hasButton={false}
+  hasShell={true}
+  id="certificates"
+>
+  <h1>
+    Certificates
+  </h1>
+  <div
+    className="o-grid c-section__body"
+  >
+    <div
+      className="o-grid__item o-grid__item--1of2"
+      key="0"
+    >
+      <Component
+        className="c-certificate"
+        href="certificates/html.pdf"
+      >
+        <img
+          alt="HTML"
+          loading="lazy"
+          src="certificates/html.jpg"
+          width="600"
+        />
+      </Component>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of2"
+      key="1"
+    >
+      <Component
+        className="c-certificate"
+        href="certificates/javascript.pdf"
+      >
+        <img
+          alt="JavaScript"
+          loading="lazy"
+          src="certificates/javascript.jpg"
+          width="600"
+        />
+      </Component>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of2"
+      key="2"
+    >
+      <Component
+        className="c-certificate"
+        href="certificates/python.pdf"
+      >
+        <img
+          alt="Python"
+          loading="lazy"
+          src="certificates/python.jpg"
+          width="600"
+        />
+      </Component>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of2"
+      key="3"
+    >
+      <Component
+        className="c-certificate"
+        href="certificates/react.pdf"
+      >
+        <img
+          alt="React Development"
+          loading="lazy"
+          src="certificates/react.jpg"
+          width="600"
+        />
+      </Component>
+    </div>
+  </div>
+</Component>
+`;

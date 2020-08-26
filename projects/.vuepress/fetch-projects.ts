@@ -22,7 +22,7 @@ const fetchProject = async (repo: string, branch: string = 'master', file: strin
 		asyncForEach(projects, (project: string) => {
 			fetchProject(project)
 				.then((data: string) => {
-					const name = project.split('/').pop()
+					const name = project.split('/').pop();
 					const path = `projects/${name}.md`;
 
 					data = data.replace(/\(http:\/\//gi, '(https://');
