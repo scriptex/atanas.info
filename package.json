@@ -21,7 +21,7 @@
 		"parcel-start-music": "parcel ./music/index.html --open --out-dir='dist/music'",
 		"parcel-build-music": "parcel build ./music/index.html --public-url '/music' --no-source-maps --out-dir='dist/music'",
 		"parcel-build": "yarn parcel-build-src && yarn parcel-build-music",
-		"pre": "yarn screenshots && yarn insights && yarn fetch-music && yarn localga && yarn svg",
+		"pre": "yarn deduplicate && yarn screenshots && yarn insights && yarn fetch-music && yarn localga && yarn svg",
 		"start": "concurrently -r \"yarn css:watch\" \"yarn tsc:watch\" \"yarn parcel-start\"",
 		"build": "yarn pre && yarn css && yarn tsc && yarn parcel-build && yarn fetch-projects && yarn build-projects",
 		"test": "jest",
