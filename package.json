@@ -165,6 +165,9 @@
 	],
 	"main": "src/index.tsx",
 	"private": true,
+  "resolutions": {	
+		"@types/react": "16.9.47"	
+	},
 	"husky": {
 		"hooks": {
 			"pre-push": "yarn lint && yarn prettier && yarn test"
