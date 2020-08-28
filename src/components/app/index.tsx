@@ -7,6 +7,7 @@ import {
 	Head,
 	Header,
 	Footer,
+	Contact,
 	SectionHello,
 	SectionAbout,
 	SectionStats,
@@ -19,38 +20,50 @@ import {
 	SectionCertificates
 } from '..';
 
-export const App: React.FunctionComponent = () => (
-	<>
-		<Head />
+export const AppContext = React.createContext({
+	contactVisible: false,
+	setContactVisible: (state: boolean) => state
+});
 
-		<Svg src="./sprite.svg" />
+export const App: React.FunctionComponent = () => {
+	const [contactVisible, setContactVisible] = React.useState(false);
+	const value: any = { contactVisible, setContactVisible };
 
-		<>
-			<Header />
+	return (
+		<AppContext.Provider value={value}>
+			<Head />
 
-			<SectionHello />
+			<Svg src="./sprite.svg" />
 
-			<SectionAbout />
+			<>
+				<Header />
 
-			<SectionSkills />
+				<Contact />
 
-			<SectionStats data={{ github, gitlab }} />
+				<SectionHello />
 
-			<SectionPortfolio />
+				<SectionAbout />
 
-			<SectionSocial />
+				<SectionSkills />
 
-			<SectionSlides />
+				<SectionStats data={{ github, gitlab }} />
 
-			<SectionVideos />
+				<SectionPortfolio />
 
-			<SectionMusic />
+				<SectionSocial />
 
-			<SectionCertificates />
+				<SectionSlides />
 
-			<Footer />
-		</>
-	</>
-);
+				<SectionVideos />
+
+				<SectionMusic />
+
+				<SectionCertificates />
+
+				<Footer />
+			</>
+		</AppContext.Provider>
+	);
+};
 
 export default App;

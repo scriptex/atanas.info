@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-import { ExternalLink } from '..';
+import { Button } from '..';
+import { AppContext } from '../app';
 
 export interface Props {
 	id: string;
@@ -13,27 +14,31 @@ export interface Props {
 	style?: React.CSSProperties;
 }
 
-export const SectionElements: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => (
-	<>
-		{props.children}
+export const SectionElements: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
+	const { setContactVisible } = React.useContext(AppContext);
 
-		{props.hasButton && (
-			<div className="c-section__actions">
-				<ExternalLink href="mailto:hi@atanas.info" className="c-btn">
-					Hire me
-				</ExternalLink>
+	return (
+		<>
+			{props.children}
 
-				{!!props.actions && (
-					<>
-						<br className="visible-xs-block" />
+			{props.hasButton && (
+				<div className="c-section__actions">
+					<Button type="button" onClick={() => setContactVisible(true)}>
+						Hire me
+					</Button>
 
-						{props.actions}
-					</>
-				)}
-			</div>
-		)}
-	</>
-);
+					{!!props.actions && (
+						<>
+							<br className="visible-xs-block" />
+
+							{props.actions}
+						</>
+					)}
+				</div>
+			)}
+		</>
+	);
+};
 
 export const Section: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => (
 	<section id={props.id} className={`c-section c-section--${props.id}${props.className || ''}`} style={props.style}>
