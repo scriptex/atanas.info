@@ -81,19 +81,19 @@ export const drawSkills = (words: Skill[]): void => {
 
 export const dragHandler = (simulation: Simulation<any, any>): any => {
 	return drag()
-		.on('start', (d: any) => {
+		.on('start', (event: any, d: any) => {
 			if (!event.active) {
 				simulation.alphaTarget(0.3).restart();
 			}
 
-			d.fx = d.x;
-			d.fy = d.y;
-		})
-		.on('drag', (d: any) => {
 			d.fx = event.x;
 			d.fy = event.y;
 		})
-		.on('end', (d: any) => {
+		.on('drag', (event: any, d: any) => {
+			d.fx = event.x;
+			d.fy = event.y;
+		})
+		.on('end', (event: any, d: any) => {
 			if (!event.active) {
 				simulation.alphaTarget(0);
 			}

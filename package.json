@@ -70,7 +70,7 @@
 		}
 	},
 	"dependencies": {
-		"d3": "5.16.0",
+		"d3": "6.0.0",
 		"date-fns": "2.16.0",
 		"gsap": "3.5.1",
 		"itcss": "1.5.1",
@@ -165,8 +165,8 @@
 	],
 	"main": "src/index.tsx",
 	"private": true,
-  "resolutions": {	
-		"@types/react": "16.9.48"	
+	"resolutions": {
+		"@types/react": "16.9.48"
 	},
 	"husky": {
 		"hooks": {
