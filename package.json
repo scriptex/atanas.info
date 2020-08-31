@@ -32,9 +32,9 @@
 		"lint:css": "stylelint './src/**/*.pcss' --config .stylelintrc",
 		"prettier:js": "prettier --write --list-different \"**/*.js\"",
 		"prettier:ts": "prettier --write --list-different \"**/*.tsx\" \"**/*.ts\"",
-		"prettier:scss": "prettier --write --list-different \"**/*.pcss\" \"**/*.scss\" \"**/*.styl\"",
+		"prettier:css": "prettier --write --list-different \"**/*.pcss\" \"**/*.scss\"",
 		"prettier:config": "prettier --write --list-different \"**/*.yml\" \"**/*.json\"",
-		"prettier": "yarn prettier:js && yarn prettier:ts && yarn prettier:scss && yarn prettier:config",
+		"prettier": "yarn prettier:js && yarn prettier:ts && yarn prettier:css && yarn prettier:config",
 		"deduplicate": "yarn-deduplicate --packages @types/react yarn.lock",
 		"screenshots": "ts-node ./screenshots/index.ts",
 		"insights": "ts-node ./insights/index.ts",
@@ -114,7 +114,7 @@
 		"cssnano": "4.1.10",
 		"dotenv": "8.2.0",
 		"enzyme": "3.11.0",
-		"enzyme-adapter-react-16": "1.15.3",
+		"enzyme-adapter-react-16": "1.15.4",
 		"enzyme-to-json": "3.5.0",
 		"eslint": "7.7.0",
 		"eslint-config-prettier": "6.11.0",
@@ -174,6 +174,6 @@
 		}
 	},
 	"typeCoverage": {
-		"atLeast": 90
+		"atLeast": 75
 	}
 }

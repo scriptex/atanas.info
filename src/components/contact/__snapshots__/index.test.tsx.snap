@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact component Should render the Contact component 1`] = `
+<form
+  action="https://formspree.io/meqrwbvd"
+  className="c-contact"
+  method="POST"
+  onSubmit={[Function]}
+>
+  <button
+    className="c-contact__close"
+    onClick={[Function]}
+    type="button"
+  >
+    Close
+  </button>
+  <div
+    className="c-contact__body"
+  >
+    <Component />
+    <div
+      className="c-contact__actions"
+    >
+      <Component
+        type="submit"
+      >
+        Send message
+      </Component>
+    </div>
+  </div>
+</form>
+`;

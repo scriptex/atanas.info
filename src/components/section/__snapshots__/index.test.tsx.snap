@@ -79,8 +79,8 @@ exports[`SectionElements component Should render the SectionElements component 1
     className="c-section__actions"
   >
     <Component
-      className="c-btn"
-      href="mailto:hi@atanas.info"
+      onClick={[Function]}
+      type="button"
     >
       Hire me
     </Component>
@@ -107,8 +107,8 @@ exports[`SectionElements component Should render the SectionElements component w
     className="c-section__actions"
   >
     <Component
-      className="c-btn"
-      href="mailto:hi@atanas.info"
+      onClick={[Function]}
+      type="button"
     >
       Hire me
     </Component>

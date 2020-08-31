@@ -101,17 +101,16 @@ exports[`SectionSlides component Should render the SectionSlides component 1`] =
             className="c-section__actions"
           >
             <Component
-              className="c-btn"
-              href="mailto:hi@atanas.info"
+              onClick={[Function]}
+              type="button"
             >
-              <a
-                className="c-btn"
-                href="mailto:hi@atanas.info"
-                rel="noopener noreferrer"
-                target="_blank"
+              <button
+                className="c-btn "
+                onClick={[Function]}
+                type="button"
               >
                 Hire me
-              </a>
+              </button>
             </Component>
           </div>
         </Component>
@@ -222,17 +221,16 @@ exports[`SectionSlides component Should render the SectionSlides component 2`] =
             className="c-section__actions"
           >
             <Component
-              className="c-btn"
-              href="mailto:hi@atanas.info"
+              onClick={[Function]}
+              type="button"
             >
-              <a
-                className="c-btn"
-                href="mailto:hi@atanas.info"
-                rel="noopener noreferrer"
-                target="_blank"
+              <button
+                className="c-btn "
+                onClick={[Function]}
+                type="button"
               >
                 Hire me
-              </a>
+              </button>
             </Component>
           </div>
         </Component>

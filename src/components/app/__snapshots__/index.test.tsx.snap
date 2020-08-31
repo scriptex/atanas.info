@@ -1,11 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component Should render the App component 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "contactVisible": false,
+      "setContactVisible": [Function],
+    }
+  }
+>
   <Component />
   <Component
     src="./sprite.svg"
   />
+  <Component />
   <Component />
   <Component />
   <Component />
@@ -25,5 +33,5 @@ exports[`App component Should render the App component 1`] = `
   <Component />
   <Component />
   <Component />
-</Fragment>
+</ContextProvider>
 `;

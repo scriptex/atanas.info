@@ -1,7 +1,7 @@
 import { drag } from 'd3-drag';
 import { range } from 'd3-array';
 import { randomUniform } from 'd3-random';
-import { select, event, Selection } from 'd3-selection';
+import { select, Selection } from 'd3-selection';
 import {
 	forceX,
 	forceY,
