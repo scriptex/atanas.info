@@ -47,13 +47,25 @@ export const Contact: React.FunctionComponent = () => {
 					});
 			}}
 		>
-			<button type="button" onClick={() => setContactVisible(false)} className="c-contact__close">
+			<button
+				type="button"
+				onClick={() => {
+					setStatus(Status.DEFAULT);
+					setContactVisible(false);
+					setErrorMessage('');
+				}}
+				className="c-contact__close"
+			>
 				Close
 			</button>
 
 			<div className="c-contact__body">
 				{status === Status.SUCCESS ? null : (
 					<>
+						<h4>I am currently not available for hire but you can still</h4>
+
+						<h2>Send me your message</h2>
+
 						<div className="c-contact__field">
 							<label htmlFor="email">Email:</label>
 
@@ -62,6 +74,7 @@ export const Contact: React.FunctionComponent = () => {
 
 						<div className="c-contact__field">
 							<label htmlFor="message">Message:</label>
+
 							<textarea name="message" id="message" cols={30} rows={10} required={true}></textarea>
 						</div>
 					</>
