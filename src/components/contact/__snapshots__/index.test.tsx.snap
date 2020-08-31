@@ -17,43 +17,7 @@ exports[`Contact component Should render the Contact component 1`] = `
   <div
     className="c-contact__body"
   >
-    <h4>
-      I am currently not available for hire but you can still
-    </h4>
-    <h2>
-      Send me your message
-    </h2>
-    <div
-      className="c-contact__field"
-    >
-      <label
-        htmlFor="email"
-      >
-        Email:
-      </label>
-      <input
-        id="email"
-        name="email"
-        required={true}
-        type="email"
-      />
-    </div>
-    <div
-      className="c-contact__field"
-    >
-      <label
-        htmlFor="message"
-      >
-        Message:
-      </label>
-      <textarea
-        cols={30}
-        id="message"
-        name="message"
-        required={true}
-        rows={10}
-      />
-    </div>
+    <Component />
     <div
       className="c-contact__actions"
     >
