@@ -29,6 +29,7 @@ export const ContactSuccessContent: React.FunctionComponent = () => (
 	</>
 );
 
+// codebeat:disable[LOC]
 export const onSubmit = (
 	e: React.FormEvent<HTMLFormElement>,
 	setStatus: (status: Status) => void,
@@ -103,5 +104,6 @@ export const Contact: React.FunctionComponent = () => {
 		</form>
 	);
 };
+// codebeat:enable[LOC]
 
 export default Contact;

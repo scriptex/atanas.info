@@ -25,6 +25,7 @@ export const AppContext = React.createContext({
 	setContactVisible: (state: boolean) => state
 });
 
+// codebeat:disable[LOC]
 export const App: React.FunctionComponent = () => {
 	const [contactVisible, setContactVisible] = React.useState(false);
 	const value: any = { contactVisible, setContactVisible };
@@ -65,5 +66,6 @@ export const App: React.FunctionComponent = () => {
 		</AppContext.Provider>
 	);
 };
+// codebeat:enable[LOC]
 
 export default App;
