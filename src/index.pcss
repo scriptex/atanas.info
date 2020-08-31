@@ -2,6 +2,22 @@
 @import 'slick-carousel/slick/slick.css';
 @import 'react-jinke-music-player/assets/index.css';
 
+@define-mixin slanted {
+	color: var(--color-primary);
+	display: inline-block;
+	padding: 0.5rem 2rem 0.5rem 0.5rem;
+	background: paint(slanted-background);
+	--slanted-background-color: var(--color-action);
+	--slanted-background-opacity: 0.35;
+}
+
+@define-mixin polygon $sides {
+	border-radius: 0;
+	mask-image: paint(avatar-polygon);
+	--avatar-sides: $sides;
+	--avatar-angle: 0deg;
+}
+
 /* variables */
 
 :root {
@@ -459,6 +475,10 @@ body {
 	z-index: 2;
 }
 
+.c-article h3 {
+	@mixin slanted;
+}
+
 .c-article .o-shell {
 	@mixin flex-row wrap, flex-start, flex-start;
 }
@@ -516,6 +536,12 @@ body {
 	left: 0;
 	margin-top: -2rem;
 	border-radius: 50%;
+}
+
+@supports (background: paint(avatar-polygon)) {
+	.c-article img {
+		@mixin polygon 12;
+	}
 }
 
 @media (--tablet-landscape) {
@@ -582,6 +608,7 @@ body {
 
 .c-section--skills h2 small {
 	font-size: 1rem;
+	@mixin slanted;
 }
 
 .c-section--skills svg {
@@ -688,6 +715,10 @@ body {
 	margin: 0 0 3.5rem;
 }
 
+.c-section--stats h2 {
+	@mixin slanted;
+}
+
 .c-section--stats ul {
 	list-style: none outside none;
 	padding: 0 0 3rem;
@@ -737,6 +768,14 @@ body {
 	background-color: color-mod(var(--color-primary) a(80%));
 	border-radius: 50%;
 	animation: float 10s infinite alternate;
+}
+
+@supports (background: paint(avatar-polygon)) {
+	.c-section--stats .c-section__list li:not(:first-child) {
+		@mixin polygon 10;
+		border-width: 0.5rem;
+		border-radius: 50%;
+	}
 }
 
 .c-section--stats .c-section__list li:nth-child(even) {
@@ -846,6 +885,7 @@ body {
 
 .c-section--social h2 {
 	color: var(--color-primary);
+	@mixin slanted;
 }
 
 .c-section--social h1,
@@ -948,6 +988,10 @@ body {
 	text-align: center;
 	flex: 0 0 100%;
 	margin-bottom: 3.5rem;
+}
+
+.c-section--portfolio h2 {
+	@mixin slanted;
 }
 
 .c-section--portfolio .c-section__body {
@@ -1212,6 +1256,7 @@ body {
 
 .c-section--slides {
 	color: var(--color-secondary);
+	text-align: center;
 	position: relative;
 	z-index: 2;
 	padding: 4rem 0;
@@ -1225,6 +1270,7 @@ body {
 .c-section--slides h2 {
 	text-align: center;
 	margin-bottom: 4rem;
+	@mixin slanted;
 }
 
 .c-section--slides ul {
@@ -1305,6 +1351,7 @@ body {
 
 .c-section--certificates {
 	color: var(--color-primary);
+	text-align: center;
 	position: relative;
 	z-index: 2;
 	padding: 4rem 0 1rem;
@@ -1313,6 +1360,7 @@ body {
 .c-section--certificates h1 {
 	text-align: center;
 	margin-bottom: 4rem;
+	@mixin slanted;
 }
 
 .c-certificate {
