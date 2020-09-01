@@ -13,6 +13,13 @@ export const getGithubInsights = async (): Promise<void> => {
 		const calendar = await getContributions();
 		const repositories: any[] = [];
 
+		const reposSSHUrls = repos
+			.filter(({ full_name }: { full_name: string }) => full_name.includes('scriptex/'))
+			.map(({ ssh_url }: { ssh_url: string }) => ssh_url)
+			.join('\n');
+
+		writeFileSync('bin/github.list', reposSSHUrls);
+
 		await asyncForEach(
 			repos,
 			async ({ full_name }: { full_name: string }): Promise<void> => {
