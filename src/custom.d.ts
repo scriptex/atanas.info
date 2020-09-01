@@ -40,3 +40,5 @@ interface Window {
 	};
 	msCrypto: any;
 }
+
+declare const registerPaint: <T>(name: string, constructor: T) => void;
