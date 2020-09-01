@@ -11,8 +11,6 @@ enum Status {
 
 export const ContactSuccessContent: React.FunctionComponent = () => (
 	<>
-		<h4>I am currently not available for hire but you can still</h4>
-
 		<h2>Send me your message</h2>
 
 		<div className="c-contact__field">
