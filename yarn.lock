@@ -2030,11 +2030,6 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.6.4.tgz#a145cc0bb14ef9c4777361b7bbafa5cf8e3acb5a"
   integrity sha512-Wk7nG1JSaMfMpoMJDKUsWYugliB2Vy55pdjLpmLixeyMi7HizW2I/9QoxsPCkXl3dO+ZOVqPumKaDUv5zJu2uQ==
 
-"@types/node@^10.12.18":
-  version "10.17.29"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.29.tgz#263b7013f9f4afa53585b199f9a4255d9613b178"
-  integrity sha512-zLo9rjUeQ5+QVhOufDwrb3XKyso31fJBJnk9wUUQIBDExF/O4LryvpOfozfUaxgqifTnlt7FyqsAPXUq5yFZSA==
-
 "@types/node@^13.7.2":
   version "13.13.16"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.16.tgz#66f2177047b61131eaac18c47eb25d6f1317070a"
@@ -14385,10 +14380,10 @@ type-coverage-core@^2.10.0:
     tslib "1 || 2"
     tsutils "3"
 
-type-coverage@2.10.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/type-coverage/-/type-coverage-2.10.0.tgz#5bd21852161ffa324b2f083015fb93d367b46edf"
-  integrity sha512-ZOoG3A3ye2HERgjOS23lU4MLPMybJEf2UHvTjJkVmHAqVR4bCfcBXIXBLO3d1x+4S5OqvG+CGrykvjZW4ik13Q==
+type-coverage@2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/type-coverage/-/type-coverage-2.11.0.tgz#bdf50199324e7e65752106577ef87e08f7c713af"
+  integrity sha512-f+zKf6iYGlYI170spPHWFe9msPH4JDGUreExsvmflm+hPlclUqwuDp8tYSVtPlHwqoOQZhdzuSc/C5dtlbhdGw==
   dependencies:
     minimist "1"
     type-coverage-core "^2.10.0"
