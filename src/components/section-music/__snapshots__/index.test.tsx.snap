@@ -420,24 +420,46 @@ exports[`SectionMusic component Should render the SectionMusic component 1`] = `
   icon={
     Object {
       "close": <MdClose />,
-      "delete": <FaTrashO />,
+      "delete": <RiDeleteBinLine
+        size={24}
+      />,
       "destroy": <MdClose />,
-      "download": <FaCloudDownload />,
+      "download": <TiDownload
+        size={26}
+      />,
+      "empty": <MdLibraryMusic />,
       "loading": <FaSpinner />,
-      "loop": <MdRepeatOne />,
+      "loop": <MdRepeatOne
+        size={26}
+      />,
       "lyric": <FaBook />,
-      "mute": <MdVolumeOff />,
+      "mute": <GoMute
+        size={26}
+      />,
       "next": <MdSkipNext />,
-      "order": <MdViewHeadline />,
-      "orderLoop": <MdRepeat />,
+      "order": <MdViewHeadline
+        size={26}
+      />,
+      "orderLoop": <MdRepeat
+        size={26}
+      />,
+      "packUpPanelMobile": <FiChevronsDown
+        size={26}
+      />,
       "pause": <AnimatePauseIcon />,
       "play": <AnimatePlayIcon />,
-      "playLists": <MdQueueMusic />,
+      "playLists": <RiPlayList2Fill />,
       "prev": <MdSkipPrevious />,
-      "reload": <FaRefresh />,
-      "shuffle": <TiArrowShuffle />,
-      "toggle": <FaMinusSquareO />,
-      "volume": <MdVolumeUp />,
+      "reload": <FaSyncAlt
+        size={22}
+      />,
+      "shuffle": <TiArrowShuffle
+        size={26}
+      />,
+      "toggle": <FaRegMinusSquare />,
+      "volume": <GoUnmute
+        size={26}
+      />,
     }
   }
   loadAudioErrorPlayNext={true}
@@ -448,6 +470,7 @@ exports[`SectionMusic component Should render the SectionMusic component 1`] = `
   playModeShowTime={600}
   playModeTipVisible={false}
   preload={false}
+  quietUpdate={false}
   remember={false}
   remove={false}
   responsive={true}
