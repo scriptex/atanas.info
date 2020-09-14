@@ -25,6 +25,8 @@
 
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=scriptex_atanas.info)](https://sonarcloud.io/dashboard?id=scriptex_atanas.info)
 
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fscriptex%2Fatanas.info.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fscriptex%2Fatanas.info?ref=badge_large)
+
 Built with TypeScript, PostCSS, React, D3, Vuepress, NodeJS, Parcel, Vercel, Puppeteer, Cloudinary and more.
 
 Installable as a Progressive Web App and (partially for now) accessible offline.
