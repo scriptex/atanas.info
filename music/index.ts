@@ -1,4 +1,5 @@
 import 'scriptex-socials';
+import 'html-head-component';
 import SimplexNoise from 'simplex-noise';
 import { Power4, TweenMax } from 'gsap';
 

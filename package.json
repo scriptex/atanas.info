@@ -81,7 +81,10 @@
 		"d3": "6.1.1",
 		"date-fns": "2.16.1",
 		"gsap": "3.5.1",
+		"html-head-component": "1.1.0",
 		"itcss": "1.6.0",
+		"jquery": "3.5.1",
+		"prop-types": "15.7.2",
 		"react": "16.13.1",
 		"react-dom": "16.13.1",
 		"react-helmet": "6.1.0",
@@ -163,10 +166,6 @@
 		"typescript": "3.9.7",
 		"vuepress": "1.5.4",
 		"yarn-deduplicate": "3.0.0"
-	},
-	"peerDependencies": {
-		"jquery": "@>=1.8.0",
-		"prop-types": "@^15.5.4"
 	},
 	"browserslist": [
 		"> 1%",
