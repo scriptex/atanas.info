@@ -89,7 +89,7 @@
 		"react-dom": "16.13.1",
 		"react-helmet": "6.1.0",
 		"react-inlinesvg": "2.1.0",
-		"react-jinke-music-player": "4.18.0",
+		"react-jinke-music-player": "4.18.1",
 		"react-slick": "0.27.11",
 		"react-twitter-embed": "3.0.3",
 		"react-use": "15.3.4",
@@ -130,7 +130,7 @@
 		"enzyme-to-json": "3.5.0",
 		"eslint": "7.9.0",
 		"eslint-config-prettier": "6.11.0",
-		"eslint-plugin-jest": "24.0.1",
+		"eslint-plugin-jest": "24.0.2",
 		"eslint-plugin-react": "7.20.6",
 		"express": "4.17.1",
 		"html-minifier": "4.0.0",
@@ -169,7 +169,8 @@
 	},
 	"browserslist": [
 		"> 1%",
-		"last 2 versions"
+		"last 2 versions",
+		"not op_mob > 1"
 	],
 	"main": "src/index.tsx",
 	"private": true,
