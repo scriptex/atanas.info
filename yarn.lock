@@ -2011,11 +2011,6 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.11.1.tgz#56af902ad157e763f9ba63d671c39cda3193c835"
   integrity sha512-oTQgnd0hblfLsJ6BvJzzSL+Inogp3lq9fGgqRkMB/ziKMgEUaFl801OncOzUmalfzt14N0oPHMK47ipl+wbTIw==
 
-"@types/node@^10.12.18":
-  version "10.17.35"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.35.tgz#58058f29b870e6ae57b20e4f6e928f02b7129f56"
-  integrity sha512-gXx7jAWpMddu0f7a+L+txMplp3FnHl53OhQIF9puXKq3hDGY/GjH+MF04oWnV/adPSCrbtHumDCFwzq2VhltWA==
-
 "@types/node@^13.7.2":
   version "13.13.21"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.21.tgz#e48d3c2e266253405cf404c8654d1bcf0d333e5c"
@@ -5357,14 +5352,6 @@ diffie-hellman@^5.0.0:
     miller-rabin "^4.0.0"
     randombytes "^2.0.0"
 
-dir-glob@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/dir-glob/-/dir-glob-2.0.0.tgz#0b205d2b6aef98238ca286598a8204d29d0a0034"
-  integrity sha512-37qirFDz8cA5fimp9feo43fSuRo2gHwaIn6dXL8Ber1dGwUosDrGZeCCXq57WnIqE4aQ+u3eQZzsk1yOzhdwag==
-  dependencies:
-    arrify "^1.0.1"
-    path-type "^3.0.0"
-
 dir-glob@^2.0.0, dir-glob@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/dir-glob/-/dir-glob-2.2.2.tgz#fa09f0694153c8918b18ba0deafae94769fc50c4"
@@ -6292,7 +6279,7 @@ fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
 
-fast-glob@^2.0.2, fast-glob@^2.2.2, fast-glob@^2.2.6:
+fast-glob@^2.2.2, fast-glob@^2.2.6:
   version "2.2.7"
   resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-2.2.7.tgz#6953857c3afa475fff92ee6015d52da70a4cd39d"
   integrity sha512-g1KuQwHOZAmOZMuBtHdxDtju+T2RT8jgCC9aANsbpdiDDTSnjgfuVsIBNKbUeJI3oKMRExcfNDtJl4OhbffMsw==
@@ -6891,19 +6878,6 @@ globby@^7.1.1:
   dependencies:
     array-union "^1.0.1"
     dir-glob "^2.0.0"
-    glob "^7.1.2"
-    ignore "^3.3.5"
-    pify "^3.0.0"
-    slash "^1.0.0"
-
-globby@^8.0.1:
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/globby/-/globby-8.0.2.tgz#5697619ccd95c5275dbb2d6faa42087c1a941d8d"
-  integrity sha512-yTzMmKygLp8RUpG1Ymu2VXPSJQZjNAZPD4ywgYEaG7e4tBJeUQBO8OpXrf1RCNcEs5alsoJYPAMiIHP0cmeC7w==
-  dependencies:
-    array-union "^1.0.1"
-    dir-glob "2.0.0"
-    fast-glob "^2.0.2"
     glob "^7.1.2"
     ignore "^3.3.5"
     pify "^3.0.0"
@@ -8941,6 +8915,14 @@ levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+line-column@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/line-column/-/line-column-1.0.2.tgz#d25af2936b6f4849172b312e4792d1d987bc34a2"
+  integrity sha1-0lryk2tvSEkXKzEuR5LR2Ye8NKI=
+  dependencies:
+    isarray "^1.0.0"
+    isobject "^2.0.0"
+
 lines-and-columns@^1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
@@ -9705,6 +9687,11 @@ nano-css@^5.2.1:
     sourcemap-codec "^1.4.1"
     stacktrace-js "^2.0.0"
     stylis "3.5.0"
+
+nanoid@^3.1.12:
+  version "3.1.12"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.12.tgz#6f7736c62e8d39421601e4a0c77623a97ea69654"
+  integrity sha512-1qstj9z5+x491jfiC4Nelk+f8XBad7LN20PmyWINJEMRSf3wcAjAWysw1qaA8z6NSKe2sjq1hRSDpBH5paCb6A==
 
 nanomatch@^1.2.9:
   version "1.2.13"
@@ -10959,13 +10946,13 @@ postcss-initial@^3.0.0:
     lodash.template "^4.5.0"
     postcss "^7.0.2"
 
-postcss-js@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/postcss-js/-/postcss-js-2.0.3.tgz#a96f0f23ff3d08cec7dc5b11bf11c5f8077cdab9"
-  integrity sha512-zS59pAk3deu6dVHyrGqmC3oDXBdNdajk4k1RyxeVXCrcEDBUBHoIhE4QTsmhxgzXxsaqFDAkUZfmMa5f/N/79w==
+postcss-js@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-js/-/postcss-js-3.0.0.tgz#84f410b4cf45dd30a3c0a6da1726a2898d955479"
+  integrity sha512-1WsYJF27Qib1Jvu826qp43xxDB4h6XWuYa8rvXIqLY3WiAfDImvvw2LLu6fxw0UTJBpnuDMdpBkYt+R0Rvtrbg==
   dependencies:
     camelcase-css "^2.0.1"
-    postcss "^7.0.18"
+    postcss "^8.0.2"
 
 postcss-lab-function@^2.0.1:
   version "2.0.1"
@@ -11082,16 +11069,15 @@ postcss-minify-selectors@^4.0.2:
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
 
-postcss-mixins@6.2.3:
-  version "6.2.3"
-  resolved "https://registry.yarnpkg.com/postcss-mixins/-/postcss-mixins-6.2.3.tgz#021893ba455d04b5baa052bf196297ddd70e4af1"
-  integrity sha512-gfH5d09YilzDn/CLGFA9Lwv7GTezuyHgnAyXC8AfvhUMpl67ZTewhcpNuOgawClCOD+76XePE2IHO1xMgsOlvA==
+postcss-mixins@7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-mixins/-/postcss-mixins-7.0.0.tgz#708c75da81326f1a00c24cf776f726eba9f605b9"
+  integrity sha512-g9+gL7MN6OuHwi0pz8rSA0pvusvMiWf6kvm64BoCSqnuU6n+Jlu8tL8iA1sJyMabgccHlfOK7u9AKjfnF6PIKQ==
   dependencies:
-    globby "^8.0.1"
-    postcss "^7.0.21"
-    postcss-js "^2.0.3"
-    postcss-simple-vars "^5.0.2"
-    sugarss "^2.0.0"
+    globby "^11.0.1"
+    postcss-js "^3.0.0"
+    postcss-simple-vars "^6.0.0"
+    sugarss "^3.0.0"
 
 postcss-modules-extract-imports@1.1.0:
   version "1.1.0"
@@ -11440,12 +11426,10 @@ postcss-simple-vars@^2.0.0:
   dependencies:
     postcss "^5.0.21"
 
-postcss-simple-vars@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/postcss-simple-vars/-/postcss-simple-vars-5.0.2.tgz#e2f81b3d0847ddd4169816b6d141b91d51e6e22e"
-  integrity sha512-xWIufxBoINJv6JiLb7jl5oElgp+6puJwvT5zZHliUSydoLz4DADRB3NDDsYgfKVwojn4TDLiseoC65MuS8oGGg==
-  dependencies:
-    postcss "^7.0.14"
+postcss-simple-vars@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-simple-vars/-/postcss-simple-vars-6.0.0.tgz#7f9c556151753f7b3c0caca2e892b740089e62e8"
+  integrity sha512-zpgSAJfxCXCFkbf0VUJTSFtoOiSor+a/dp+a+hg5q/jbf2vyOGeb69QYzxD1G/HHuFWoBgjiwYg3tzkJFVDuAA==
 
 postcss-svgo@^4.0.2:
   version "4.0.2"
@@ -11527,7 +11511,7 @@ postcss@^6.0.1:
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.11, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.18, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.26, postcss@^7.0.27, postcss@^7.0.32, postcss@^7.0.5, postcss@^7.0.6, postcss@^7.0.7:
+postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.11, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.26, postcss@^7.0.27, postcss@^7.0.32, postcss@^7.0.5, postcss@^7.0.6, postcss@^7.0.7:
   version "7.0.34"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.34.tgz#f2baf57c36010df7de4009940f21532c16d65c20"
   integrity sha512-H/7V2VeNScX9KE83GDrDZNiGT1m2H+UTnlinIzhjlLX9hfMUn1mHNnGeX81a1c8JSBdBvqk7c2ZOG6ZPn5itGw==
@@ -11535,6 +11519,16 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.11, postcss@^7.0.14, postcss@^7.0.1
     chalk "^2.4.2"
     source-map "^0.6.1"
     supports-color "^6.1.0"
+
+postcss@^8.0.2:
+  version "8.0.5"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.0.5.tgz#8210e2363f85c35a88a188ce7a0828e93b1088d4"
+  integrity sha512-3rDm6KR0jHstte3aL3ugrCyFA1UXY90SWNwRZ2WTmRf/QpOqM35mm0FrRR+HHZQ5fY9+nXFat1nl2ekYJf0P4w==
+  dependencies:
+    colorette "^1.2.1"
+    line-column "^1.0.2"
+    nanoid "^3.1.12"
+    source-map "^0.6.1"
 
 posthtml-parser@^0.4.0, posthtml-parser@^0.4.1:
   version "0.4.2"
@@ -13846,6 +13840,13 @@ sugarss@^2.0.0:
   integrity sha512-WfxjozUk0UVA4jm+U1d736AUpzSrNsQcIbyOkoE364GrtWmIrFdk5lksEupgWMD4VaT/0kVx1dobpiDumSgmJQ==
   dependencies:
     postcss "^7.0.2"
+
+sugarss@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/sugarss/-/sugarss-3.0.0.tgz#fb490f9d6f5f60e0a14209a7c8e611d2ddbde489"
+  integrity sha512-9FkDUV3kQp7GHv56WHdPR11/OWTS6nf8OWnHrlkxPG9qQaOBlacB/Wb+zK3uBApUGwbwf7CFHQGlmCu3ljF1fQ==
+  dependencies:
+    postcss "^8.0.2"
 
 supports-color@^2.0.0:
   version "2.0.0"
