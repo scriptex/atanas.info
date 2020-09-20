@@ -10,6 +10,12 @@ import { v2 as cloudinary, UploadApiOptions, UploadApiResponse } from 'cloudinar
 import * as pckg from '../package.json';
 import { Project, projects } from '../src/scripts/projects';
 
+declare module 'puppeteer' {
+	export interface Page {
+		waitForTimeout(duration: number): Promise<void>;
+	}
+}
+
 if (!projects || !projects.length) {
 	console.log('No projects found.');
 	process.exit();
@@ -47,7 +53,7 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 
 	console.log(`Navigating to ${url} for ${name}...`);
 	await page.goto(url, { waitUntil: 'networkidle0' });
-	await page.waitFor(timeout);
+	await page.waitForTimeout(timeout);
 
 	console.log(`Taking screenshot for ${name}...`);
 	const shotResult = await page
@@ -80,7 +86,8 @@ function upload(shotResult: Buffer, options: UploadApiOptions, name: string): Pr
 				}
 
 				console.log(`Uploaded screenshot for ${name}...`);
-				success(result);
+				// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+				success(result!);
 			})
 			.end(shotResult);
 	});

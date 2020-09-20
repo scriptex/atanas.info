@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { render } from 'react-dom';
+import 'html-head-component';
 
 import './scripts/google-analytics-local';
 

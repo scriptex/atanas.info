@@ -81,12 +81,15 @@
 		"d3": "6.1.1",
 		"date-fns": "2.16.1",
 		"gsap": "3.5.1",
+		"html-head-component": "1.1.0",
 		"itcss": "1.6.0",
+		"jquery": "3.5.1",
+		"prop-types": "15.7.2",
 		"react": "16.13.1",
 		"react-dom": "16.13.1",
 		"react-helmet": "6.1.0",
 		"react-inlinesvg": "2.1.0",
-		"react-jinke-music-player": "4.18.0",
+		"react-jinke-music-player": "4.18.1",
 		"react-slick": "0.27.11",
 		"react-twitter-embed": "3.0.3",
 		"react-use": "15.3.4",
@@ -127,7 +130,7 @@
 		"enzyme-to-json": "3.5.0",
 		"eslint": "7.9.0",
 		"eslint-config-prettier": "6.11.0",
-		"eslint-plugin-jest": "24.0.1",
+		"eslint-plugin-jest": "24.0.2",
 		"eslint-plugin-react": "7.20.6",
 		"express": "4.17.1",
 		"html-minifier": "4.0.0",
@@ -164,13 +167,10 @@
 		"vuepress": "1.5.4",
 		"yarn-deduplicate": "3.0.0"
 	},
-	"peerDependencies": {
-		"jquery": "@>=1.8.0",
-		"prop-types": "@^15.5.4"
-	},
 	"browserslist": [
 		"> 1%",
-		"last 2 versions"
+		"last 2 versions",
+		"not op_mob > 1"
 	],
 	"main": "src/index.tsx",
 	"private": true,
