@@ -170,7 +170,8 @@
 	},
 	"browserslist": [
 		"> 1%",
-		"last 2 versions"
+		"last 2 versions",
+                "not op_mob > 1"
 	],
 	"main": "src/index.tsx",
 	"private": true,
