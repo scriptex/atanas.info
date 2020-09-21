@@ -176,8 +176,10 @@
 	"main": "src/index.tsx",
 	"private": true,
 	"resolutions": {
-		"@types/react": "16.9.49"
-	},
+		"@types/react": "16.9.49",
+                "browserslist": "4.14.2",
+                "caniuse-lite": "1.0.30001129"
+        },
 	"husky": {
 		"hooks": {
 			"pre-push": "yarn lint && yarn prettier && yarn test"
