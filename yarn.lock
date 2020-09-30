@@ -2011,11 +2011,6 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.11.2.tgz#2de1ed6670439387da1c9f549a2ade2b0a799256"
   integrity sha512-jiE3QIxJ8JLNcb1Ps6rDbysDhN4xa8DJJvuC9prr6w+1tIh+QAbYyNF3tyiZNLDBIuBCf4KEcV2UvQm/V60xfA==
 
-"@types/node@^10.12.18":
-  version "10.17.35"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.35.tgz#58058f29b870e6ae57b20e4f6e928f02b7129f56"
-  integrity sha512-gXx7jAWpMddu0f7a+L+txMplp3FnHl53OhQIF9puXKq3hDGY/GjH+MF04oWnV/adPSCrbtHumDCFwzq2VhltWA==
-
 "@types/node@^13.7.2":
   version "13.13.21"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.21.tgz#e48d3c2e266253405cf404c8654d1bcf0d333e5c"
@@ -12035,7 +12030,7 @@ rc-motion@^2.0.0:
     classnames "^2.2.1"
     rc-util "^5.2.1"
 
-rc-slider@^9.3.1, rc-slider@^9.5.1:
+rc-slider@^9.5.1:
   version "9.5.1"
   resolved "https://registry.yarnpkg.com/rc-slider/-/rc-slider-9.5.1.tgz#30db11f7887ab618e43d8b560d7376e69b28749c"
   integrity sha512-MbGH2f2/Kv7jUeBHQp8rcXLUrNdFR3YLyuMR77WcjQrEIMly/zoBuie/VZaWoPXWHlsB3H91ETktF88EfS/PkQ==
@@ -12137,7 +12132,7 @@ react-helmet@6.1.0:
     react-fast-compare "^3.1.1"
     react-side-effect "^2.1.0"
 
-react-icons@^3.11:
+react-icons@^3.11.0:
   version "3.11.0"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.11.0.tgz#2ca2903dfab8268ca18ebd8cc2e879921ec3b254"
   integrity sha512-JRgiI/vdF6uyBgyZhVyYJUZAop95Sy4XDe/jmT3R/bKliFWpO/uZBwvSjWEdxwzec7SYbEPNPck0Kff2tUGM2Q==
@@ -12168,20 +12163,20 @@ react-is@^16.12.0, react-is@^16.13.1, react-is@^16.6.0, react-is@^16.7.0, react-
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-jinke-music-player@4.18.0:
-  version "4.18.0"
-  resolved "https://registry.yarnpkg.com/react-jinke-music-player/-/react-jinke-music-player-4.18.0.tgz#8d43151be2b28be17b73fa6fbcdc6392002cab7a"
-  integrity sha512-pmlhBQWosMylW44GwOyau1azfQOjYJpz2omTu2f59K4XqsZss9yW+HWNxVKVcfsH+i5sgumIwUJoWcDf1j6XXQ==
+react-jinke-music-player@4.18.3:
+  version "4.18.3"
+  resolved "https://registry.yarnpkg.com/react-jinke-music-player/-/react-jinke-music-player-4.18.3.tgz#f7ebe618b36c6af65b3bbf77b229e29b9009c3eb"
+  integrity sha512-8ljgaNp3YO2ac8svFUVDJIvSLx4m49f1cmQboLibua0IXGlKIF38/iPC+whrSv6e413gyDUJwuZ+eaBTJkP94g==
   dependencies:
     classnames "^2.2.6"
     downloadjs "^1.4.7"
     is-mobile "^2.2.2"
     prop-types "^15.7.2"
-    rc-slider "^9.3.1"
+    rc-slider "^9.5.1"
     rc-switch "^3.2.1"
     react-drag-listview "^0.1.7"
     react-draggable "^4.4.3"
-    react-icons "^3.11"
+    react-icons "^3.11.0"
 
 react-proptype-conditional-require@^1.0.4:
   version "1.0.4"
@@ -14377,10 +14372,10 @@ ts-easing@^0.2.0:
   resolved "https://registry.yarnpkg.com/ts-easing/-/ts-easing-0.2.0.tgz#c8a8a35025105566588d87dbda05dd7fbfa5a4ec"
   integrity sha512-Z86EW+fFFh/IFB1fqQ3/+7Zpf9t2ebOAxNI/V6Wo7r5gqiqtxmgTlQ1qbqQcjLKYeSHPTsEmvlJUDg/EuL0uHQ==
 
-ts-jest@26.4.0:
-  version "26.4.0"
-  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-26.4.0.tgz#903c7827f3d3bc33efc2f91be294b164400c32e3"
-  integrity sha512-ofBzoCqf6Nv/PoWb/ByV3VNKy2KJSikamOBxvR3E6eVdIw10GwAXoyvMWXXjZJK2s6S27ZE8fI+JBTnGaovl6Q==
+ts-jest@26.4.1:
+  version "26.4.1"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-26.4.1.tgz#08ec0d3fc2c3a39e4a46eae5610b69fafa6babd0"
+  integrity sha512-F4aFq01aS6mnAAa0DljNmKr/Kk9y4HVZ1m6/rtJ0ED56cuxINGq3Q9eVAh+z5vcYKe5qnTMvv90vE8vUMFxomg==
   dependencies:
     "@types/jest" "26.x"
     bs-logger "0.x"
