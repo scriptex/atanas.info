@@ -10,7 +10,6 @@
 [![codebeat badge](https://codebeat.co/badges/807a5061-9e43-4fec-9819-1c47c37c2e9f)](https://codebeat.co/projects/github-com-scriptex-atanas-info-master)
 [![CodeFactor](https://www.codefactor.io/repository/github/scriptex/atanas.info/badge)](https://www.codefactor.io/repository/github/scriptex/atanas.info)
 [![DeepScan grade](https://deepscan.io/api/teams/3574/projects/5291/branches/40827/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=3574&pid=5291&bid=40827)
-![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/scriptex/atanas.info?style=plastic)
 
 > My personal website
 
@@ -46,6 +45,7 @@ Installable as a Progressive Web App and (partially for now) accessible offline.
 
 ## Code stats
 
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/scriptex/atanas.info)
 ![GitHub repo size](https://img.shields.io/github/repo-size/scriptex/atanas.info?style=plastic)
 ![GitHub language count](https://img.shields.io/github/languages/count/scriptex/atanas.info?style=plastic)
 ![GitHub top language](https://img.shields.io/github/languages/top/scriptex/atanas.info?style=plastic)
