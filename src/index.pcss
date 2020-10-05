@@ -5,7 +5,7 @@
 @define-mixin slanted {
 	color: var(--color-primary);
 	display: inline-block;
-	padding: 0.5rem 2rem 0.5rem 0.5rem;
+	padding: 0.5rem 2rem 0.5rem 1rem;
 	background: paint(slanted-background);
 	--slanted-background-color: var(--color-action);
 	--slanted-background-opacity: 0.35;
@@ -870,6 +870,10 @@ body {
 		height: 9rem;
 		margin: 0.5rem;
 	}
+
+	.c-calendar {
+		margin-bottom: 0;
+	}
 }
 
 /* Section Social */
@@ -1310,6 +1314,10 @@ body {
 	padding-bottom: 3rem;
 }
 
+.c-section--slides .c-section__body.o-grid {
+	padding-bottom: 1.5rem;
+}
+
 .c-section--slides .c-section__actions {
 	text-align: center;
 }
@@ -1323,6 +1331,54 @@ body {
 
 .c-section--slides .c-section__frame.current {
 	display: block;
+}
+
+.c-article-link {
+	color: var(--color-primary);
+	text-align: center;
+	text-decoration: none;
+	height: 0;
+	display: block;
+	position: relative;
+	padding-bottom: 65%;
+	overflow: hidden;
+	background-size: auto 100%;
+	transition: background-size var(--timing) var(--easing);
+}
+
+.c-article-link strong {
+	opacity: 1;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	left: 0;
+	z-index: 2;
+	transform: translateY(-50%);
+	transition: all var(--timing) var(--easing);
+}
+
+.c-article-link::before {
+	content: '';
+	opacity: 0.5;
+	@mixin centered;
+	z-index: 1;
+	background-color: var(--color-secondary);
+	transition: opacity var(--timing) var(--easing);
+}
+
+@media (--hover) {
+	.c-article-link:hover {
+		background-size: auto 110%;
+	}
+
+	.c-article-link:hover::before {
+		opacity: 0;
+	}
+
+	.c-article-link:hover strong {
+		opacity: 0;
+		transform: translateY(100%);
+	}
 }
 
 @media (--mobile) {
@@ -1347,8 +1403,13 @@ body {
 		width: 100%;
 	}
 
-	.c-section--slides .c-section__body {
+	.c-section--slides .c-section__body,
+	.c-section--slides .c-section__body.o-grid {
 		padding-bottom: 0;
+	}
+
+	.c-section--slides .c-section__body.o-grid {
+		margin-bottom: -0.25rem;
 	}
 }
 
@@ -1368,6 +1429,10 @@ body {
 	@mixin slanted;
 }
 
+.c-section--certificates .c-section__body {
+	padding-bottom: 2.5rem;
+}
+
 .c-certificate {
 	display: block;
 }
@@ -1385,6 +1450,10 @@ body {
 
 	.c-section--certificates h1 {
 		margin-bottom: 2rem;
+	}
+
+	.c-section--certificates .c-section__body {
+		padding-bottom: 0;
 	}
 }
 

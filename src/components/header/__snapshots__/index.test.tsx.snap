@@ -44,6 +44,17 @@ exports[`Header component Should render the Header component 1`] = `
             key="0"
           >
             <a
+              href="#hello"
+              onClick={[Function]}
+              title="Back to top"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            key="1"
+          >
+            <a
               href="#about"
               onClick={[Function]}
               title="About me"
@@ -52,7 +63,7 @@ exports[`Header component Should render the Header component 1`] = `
             </a>
           </li>
           <li
-            key="1"
+            key="2"
           >
             <a
               href="#skills"
@@ -63,29 +74,7 @@ exports[`Header component Should render the Header component 1`] = `
             </a>
           </li>
           <li
-            key="2"
-          >
-            <a
-              href="#social"
-              onClick={[Function]}
-              title="Social widgets"
-            >
-              Social
-            </a>
-          </li>
-          <li
             key="3"
-          >
-            <a
-              href="#stats"
-              onClick={[Function]}
-              title="My stats"
-            >
-              Stats
-            </a>
-          </li>
-          <li
-            key="4"
           >
             <a
               href="#portfolio"
@@ -93,6 +82,17 @@ exports[`Header component Should render the Header component 1`] = `
               title="My portfolio"
             >
               Portfolio
+            </a>
+          </li>
+          <li
+            key="4"
+          >
+            <a
+              href="#stats"
+              onClick={[Function]}
+              title="My stats"
+            >
+              Stats
             </a>
           </li>
           <li
@@ -121,6 +121,17 @@ exports[`Header component Should render the Header component 1`] = `
             key="7"
           >
             <a
+              href="#articles"
+              onClick={[Function]}
+              title="My published articles"
+            >
+              Articles
+            </a>
+          </li>
+          <li
+            key="8"
+          >
+            <a
               href="#certificates"
               onClick={[Function]}
               title="My certificates"
@@ -129,7 +140,18 @@ exports[`Header component Should render the Header component 1`] = `
             </a>
           </li>
           <li
-            key="8"
+            key="9"
+          >
+            <a
+              href="#social"
+              onClick={[Function]}
+              title="Social widgets"
+            >
+              Social
+            </a>
+          </li>
+          <li
+            key="10"
           >
             <a
               href="./resume.pdf"
@@ -142,7 +164,7 @@ exports[`Header component Should render the Header component 1`] = `
             </a>
           </li>
           <li
-            key="9"
+            key="11"
           >
             <a
               href="https://interactive-resume.atanas.info/"
@@ -155,7 +177,7 @@ exports[`Header component Should render the Header component 1`] = `
             </a>
           </li>
           <li
-            key="10"
+            key="12"
           >
             <a
               href="projects/"
@@ -168,7 +190,7 @@ exports[`Header component Should render the Header component 1`] = `
             </a>
           </li>
           <li
-            key="11"
+            key="13"
           >
             <a
               href="music/"
@@ -231,6 +253,17 @@ exports[`Header component Should render the Header component 2`] = `
             key="0"
           >
             <a
+              href="#hello"
+              onClick={[Function]}
+              title="Back to top"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            key="1"
+          >
+            <a
               href="#about"
               onClick={[Function]}
               title="About me"
@@ -239,7 +272,7 @@ exports[`Header component Should render the Header component 2`] = `
             </a>
           </li>
           <li
-            key="1"
+            key="2"
           >
             <a
               href="#skills"
@@ -250,29 +283,7 @@ exports[`Header component Should render the Header component 2`] = `
             </a>
           </li>
           <li
-            key="2"
-          >
-            <a
-              href="#social"
-              onClick={[Function]}
-              title="Social widgets"
-            >
-              Social
-            </a>
-          </li>
-          <li
             key="3"
-          >
-            <a
-              href="#stats"
-              onClick={[Function]}
-              title="My stats"
-            >
-              Stats
-            </a>
-          </li>
-          <li
-            key="4"
           >
             <a
               href="#portfolio"
@@ -280,6 +291,17 @@ exports[`Header component Should render the Header component 2`] = `
               title="My portfolio"
             >
               Portfolio
+            </a>
+          </li>
+          <li
+            key="4"
+          >
+            <a
+              href="#stats"
+              onClick={[Function]}
+              title="My stats"
+            >
+              Stats
             </a>
           </li>
           <li
@@ -308,6 +330,17 @@ exports[`Header component Should render the Header component 2`] = `
             key="7"
           >
             <a
+              href="#articles"
+              onClick={[Function]}
+              title="My published articles"
+            >
+              Articles
+            </a>
+          </li>
+          <li
+            key="8"
+          >
+            <a
               href="#certificates"
               onClick={[Function]}
               title="My certificates"
@@ -316,7 +349,18 @@ exports[`Header component Should render the Header component 2`] = `
             </a>
           </li>
           <li
-            key="8"
+            key="9"
+          >
+            <a
+              href="#social"
+              onClick={[Function]}
+              title="Social widgets"
+            >
+              Social
+            </a>
+          </li>
+          <li
+            key="10"
           >
             <a
               href="./resume.pdf"
@@ -329,7 +373,7 @@ exports[`Header component Should render the Header component 2`] = `
             </a>
           </li>
           <li
-            key="9"
+            key="11"
           >
             <a
               href="https://interactive-resume.atanas.info/"
@@ -342,7 +386,7 @@ exports[`Header component Should render the Header component 2`] = `
             </a>
           </li>
           <li
-            key="10"
+            key="12"
           >
             <a
               href="projects/"
@@ -355,7 +399,7 @@ exports[`Header component Should render the Header component 2`] = `
             </a>
           </li>
           <li
-            key="11"
+            key="13"
           >
             <a
               href="music/"
@@ -418,6 +462,17 @@ exports[`Header component Should render the Header component 3`] = `
             key="0"
           >
             <a
+              href="#hello"
+              onClick={[Function]}
+              title="Back to top"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            key="1"
+          >
+            <a
               href="#about"
               onClick={[Function]}
               title="About me"
@@ -426,7 +481,7 @@ exports[`Header component Should render the Header component 3`] = `
             </a>
           </li>
           <li
-            key="1"
+            key="2"
           >
             <a
               href="#skills"
@@ -437,29 +492,7 @@ exports[`Header component Should render the Header component 3`] = `
             </a>
           </li>
           <li
-            key="2"
-          >
-            <a
-              href="#social"
-              onClick={[Function]}
-              title="Social widgets"
-            >
-              Social
-            </a>
-          </li>
-          <li
             key="3"
-          >
-            <a
-              href="#stats"
-              onClick={[Function]}
-              title="My stats"
-            >
-              Stats
-            </a>
-          </li>
-          <li
-            key="4"
           >
             <a
               href="#portfolio"
@@ -467,6 +500,17 @@ exports[`Header component Should render the Header component 3`] = `
               title="My portfolio"
             >
               Portfolio
+            </a>
+          </li>
+          <li
+            key="4"
+          >
+            <a
+              href="#stats"
+              onClick={[Function]}
+              title="My stats"
+            >
+              Stats
             </a>
           </li>
           <li
@@ -495,6 +539,17 @@ exports[`Header component Should render the Header component 3`] = `
             key="7"
           >
             <a
+              href="#articles"
+              onClick={[Function]}
+              title="My published articles"
+            >
+              Articles
+            </a>
+          </li>
+          <li
+            key="8"
+          >
+            <a
               href="#certificates"
               onClick={[Function]}
               title="My certificates"
@@ -503,7 +558,18 @@ exports[`Header component Should render the Header component 3`] = `
             </a>
           </li>
           <li
-            key="8"
+            key="9"
+          >
+            <a
+              href="#social"
+              onClick={[Function]}
+              title="Social widgets"
+            >
+              Social
+            </a>
+          </li>
+          <li
+            key="10"
           >
             <a
               href="./resume.pdf"
@@ -516,7 +582,7 @@ exports[`Header component Should render the Header component 3`] = `
             </a>
           </li>
           <li
-            key="9"
+            key="11"
           >
             <a
               href="https://interactive-resume.atanas.info/"
@@ -529,7 +595,7 @@ exports[`Header component Should render the Header component 3`] = `
             </a>
           </li>
           <li
-            key="10"
+            key="12"
           >
             <a
               href="projects/"
@@ -542,7 +608,7 @@ exports[`Header component Should render the Header component 3`] = `
             </a>
           </li>
           <li
-            key="11"
+            key="13"
           >
             <a
               href="music/"
