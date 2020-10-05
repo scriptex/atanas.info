@@ -13,6 +13,19 @@
 
 > My personal website
 
+Built with TypeScript, PostCSS, React, D3, Vuepress, NodeJS, Parcel, Vercel, Puppeteer, Cloudinary and more.
+
+Installable as a Progressive Web App and (partially for now) accessible offline.
+
+## Visitor stats
+
+![GitHub stars](https://img.shields.io/github/stars/scriptex/atanas.info?style=social)
+![GitHub forks](https://img.shields.io/github/forks/scriptex/atanas.info?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/scriptex/atanas.info?style=social)
+![GitHub followers](https://img.shields.io/github/followers/scriptex?style=social)
+
+## Sonarcloud results
+
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=scriptex_atanas.info&metric=bugs)](https://sonarcloud.io/dashboard?id=scriptex_atanas.info)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=scriptex_atanas.info&metric=code_smells)](https://sonarcloud.io/dashboard?id=scriptex_atanas.info)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=scriptex_atanas.info&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=scriptex_atanas.info)
@@ -26,17 +39,24 @@
 
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=scriptex_atanas.info)](https://sonarcloud.io/dashboard?id=scriptex_atanas.info)
 
+## FOSSA status
+
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fscriptex%2Fatanas.info.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fscriptex%2Fatanas.info?ref=badge_large)
 
-Built with TypeScript, PostCSS, React, D3, Vuepress, NodeJS, Parcel, Vercel, Puppeteer, Cloudinary and more.
+## Code stats
 
-Installable as a Progressive Web App and (partially for now) accessible offline.
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/scriptex/atanas.info)
+![GitHub repo size](https://img.shields.io/github/repo-size/scriptex/atanas.info?style=plastic)
+![GitHub language count](https://img.shields.io/github/languages/count/scriptex/atanas.info?style=plastic)
+![GitHub top language](https://img.shields.io/github/languages/top/scriptex/atanas.info?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/scriptex/atanas.info?style=plastic)
 
 ## Support this project
 
 [![Tweet](https://img.shields.io/badge/Tweet-Share_this_repository-blue.svg?style=flat-square&logo=twitter&color=38A1F3)](https://twitter.com/intent/tweet?text=Checkout%20this%20awesome%20software%20project%3A&url=https%3A%2F%2Fgithub.com%2Fscriptex%2Fatanas.info&via=scriptexbg&hashtags=software%2Cgithub%2Ccode%2Cawesome)
 [![Donate](https://img.shields.io/badge/Donate-Support_me_on_PayPal-blue.svg?style=flat-square&logo=paypal&color=222d65)](https://www.paypal.me/scriptex)
 [![Become a Patron](https://img.shields.io/badge/Become_Patron-Support_me_on_Patreon-blue.svg?style=flat-square&logo=patreon&color=e64413)](https://www.patreon.com/atanas)
+<a href="https://ko-fi.com/scriptex" title="Donate to this project using Buy Me A Coffee"><img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-Donate-yellow.svg" alt="Buy Me A Coffee donate button" /></a>
 
 ## LICENSE
 
