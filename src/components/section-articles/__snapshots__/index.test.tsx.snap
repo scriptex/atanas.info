@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionArticles component Should render the SectionArticles component 1`] = `
+<Component
+  className=" c-section--articles"
+  hasButton={true}
+  hasShell={true}
+  id="articles"
+>
+  <h2>
+    Articles
+  </h2>
+  <div
+    className="c-section__body o-grid"
+  >
+    <div
+      className="o-grid__item o-grid__item--1of2"
+      key="0"
+    >
+      <Component
+        className="c-article-link fullsize-background"
+        href="https://htmlburger.com/blog/jarvis-task-runner/"
+        style={
+          Object {
+            "backgroundImage": "url(https://htmlburger.com/blog/wp-content/uploads/2017/11/jarvis-Recovered-2-826x464.jpg)",
+          }
+        }
+      >
+        <strong>
+          Jarvis: The Intelligent Front-End Task Runner
+        </strong>
+      </Component>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of2"
+      key="1"
+    >
+      <Component
+        className="c-article-link fullsize-background"
+        href="https://htmlboutique.com/blog/2015/11/13/ionic-development-by-htmlboutique/"
+        style={
+          Object {
+            "backgroundImage": "url(https://htmlboutique.com/blog/wp-content/uploads/2015/11/ionicnew3.jpg)",
+          }
+        }
+      >
+        <strong>
+          Ionic Development by htmlBoutique
+        </strong>
+      </Component>
+    </div>
+  </div>
+</Component>
+`;

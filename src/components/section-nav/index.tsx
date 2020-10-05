@@ -2,11 +2,12 @@ import * as React from 'react';
 
 import { Slide } from '../../scripts/slides';
 import { Button } from '..';
+import { Article } from '../../scripts/articles';
 import { Presentation } from '../../scripts/presentations';
 
 interface Props {
 	name: string;
-	data: Presentation[] | Slide[];
+	data: Array<Presentation | Slide | Article>;
 	active: number;
 	onClick: (index: number) => void;
 }
@@ -17,7 +18,7 @@ export const SectionNav: React.FunctionComponent<Readonly<Props>> = (props: Read
 	return (
 		<nav className="c-section__nav">
 			<ul>
-				{data.map((item: Presentation | Slide, index: number) => (
+				{data.map((item: Presentation | Slide | Article, index: number) => (
 					<li key={index} className={active === index ? 'current' : ''}>
 						<Button
 							type="button"

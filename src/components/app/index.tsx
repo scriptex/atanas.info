@@ -15,6 +15,7 @@ import {
 	SectionSocial,
 	SectionSlides,
 	SectionVideos,
+	SectionArticles,
 	SectionPortfolio,
 	SectionCertificates
 } from '..';
@@ -53,6 +54,8 @@ export const App: React.FunctionComponent = () => {
 				<SectionSlides />
 
 				<SectionVideos />
+
+				<SectionArticles />
 
 				<SectionCertificates />
 
