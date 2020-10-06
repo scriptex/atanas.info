@@ -4,17 +4,17 @@ export interface Skill {
 	readonly width: number;
 	readonly height: number;
 	readonly fill: string;
-	readonly duration: string;
+	readonly since: number;
 }
 
-export const skills = [
+export const skills: Skill[] = [
 	{
 		text: 'JavaScript',
 		icon: 'javascript',
 		width: 30,
 		height: 30,
 		fill: '#f0db4f',
-		duration: '10 years'
+		since: 2011
 	},
 	{
 		text: 'React',
@@ -22,7 +22,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#fff',
-		duration: '4 years'
+		since: 2016
 	},
 	{
 		text: 'Angular',
@@ -30,7 +30,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#fff',
-		duration: '3 years'
+		since: 2017
 	},
 	{
 		text: 'Vue',
@@ -38,7 +38,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#4a5c71',
-		duration: '3 years'
+		since: 2016
 	},
 	{
 		text: 'BackboneJS',
@@ -46,7 +46,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#bdc9ec',
-		duration: '8 years'
+		since: 2013
 	},
 	{
 		text: 'D3',
@@ -54,7 +54,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#5a4126',
-		duration: '8 years'
+		since: 2012
 	},
 	{
 		text: 'jQuery',
@@ -62,7 +62,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#7bdffd',
-		duration: '10 years'
+		since: 2011
 	},
 	{
 		text: 'nodejs',
@@ -70,7 +70,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#1d4002',
-		duration: '4 years'
+		since: 2016
 	},
 	{
 		text: 'Gulp',
@@ -78,7 +78,7 @@ export const skills = [
 		width: 40,
 		height: 40,
 		fill: '#07267b',
-		duration: '7 years'
+		since: 2013
 	},
 	{
 		text: 'Grunt',
@@ -86,7 +86,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#f39341',
-		duration: '8 years'
+		since: 2013
 	},
 	{
 		text: 'Webpack',
@@ -94,7 +94,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#0d2748',
-		duration: '5 years'
+		since: 2015
 	},
 	{
 		text: 'CSS3',
@@ -102,7 +102,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#122858',
-		duration: '10 years'
+		since: 2010
 	},
 	{
 		text: 'LESS',
@@ -110,7 +110,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#b6ecec',
-		duration: '8 years'
+		since: 2012
 	},
 	{
 		text: 'SASS',
@@ -118,7 +118,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#faf4cf',
-		duration: '8 years'
+		since: 2012
 	},
 	{
 		text: 'PostCSS',
@@ -126,7 +126,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#b0f1dc',
-		duration: '7 years'
+		since: 2014
 	},
 	{
 		text: 'HTML5',
@@ -134,7 +134,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#52260c',
-		duration: '10 years'
+		since: 2010
 	},
 	{
 		text: 'SVG',
@@ -142,7 +142,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#ffb13b',
-		duration: '9 years'
+		since: 2011
 	},
 	{
 		text: 'Ionic',
@@ -150,7 +150,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#fff',
-		duration: '6 years'
+		since: 2014
 	},
 	{
 		text: 'Bootstrap',
@@ -158,7 +158,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#ccc',
-		duration: '8 years'
+		since: 2012
 	},
 	{
 		text: 'Foundation',
@@ -166,7 +166,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#141e1f',
-		duration: '7 years'
+		since: 2103
 	},
 	{
 		text: 'SVN',
@@ -174,7 +174,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#2b1306',
-		duration: '10 years'
+		since: 2010
 	},
 	{
 		text: 'GIT',
@@ -182,7 +182,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#f9d7d7',
-		duration: '10 years'
+		since: 2011
 	},
 	{
 		text: 'PHP',
@@ -190,7 +190,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#f6c9fb',
-		duration: '7 years'
+		since: 2013
 	},
 	{
 		text: 'WordPress',
@@ -198,7 +198,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#111',
-		duration: '7 years'
+		since: 2013
 	},
 	{
 		text: 'Photoshop',
@@ -206,7 +206,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#333',
-		duration: '10 years'
+		since: 2010
 	},
 	{
 		text: 'Sketch',
@@ -214,7 +214,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#291212',
-		duration: '3 years'
+		since: 2017
 	},
 	{
 		text: 'Bash',
@@ -222,7 +222,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#48992a',
-		duration: '5 years'
+		since: 2015
 	},
 	{
 		text: 'Cordova',
@@ -230,7 +230,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#97daa8',
-		duration: '6 years'
+		since: 2014
 	},
 	{
 		text: 'Redux',
@@ -238,7 +238,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#222',
-		duration: '4 years'
+		since: 2016
 	},
 	{
 		text: 'Redux Saga',
@@ -246,7 +246,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#9c3b2d',
-		duration: '2 years'
+		since: 2018
 	},
 	{
 		text: 'BabylonJS',
@@ -254,7 +254,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#fff',
-		duration: '2 years'
+		since: 2018
 	},
 	{
 		text: 'Jest',
@@ -262,7 +262,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#fff',
-		duration: '2 years'
+		since: 2017
 	},
 	{
 		text: 'Typescript',
@@ -270,7 +270,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#007ACC',
-		duration: '3 years'
+		since: 2017
 	},
 	{
 		text: 'Amazon Web Services',
@@ -278,7 +278,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#fff',
-		duration: '1 year'
+		since: 2019
 	},
 	{
 		text: 'Microsoft Azure',
@@ -286,7 +286,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#353134',
-		duration: '2 years'
+		since: 2019
 	},
 	{
 		text: 'Sublime Text',
@@ -294,7 +294,7 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#4d4d4e',
-		duration: '10 years'
+		since: 2010
 	},
 	{
 		text: 'Visual Studio Code',
@@ -302,6 +302,6 @@ export const skills = [
 		width: 30,
 		height: 30,
 		fill: '#fff',
-		duration: '3 years'
+		since: 2017
 	}
 ];
