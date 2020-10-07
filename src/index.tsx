@@ -6,6 +6,11 @@ import './scripts/google-analytics-local';
 
 import { App } from './components';
 
+interface IWorker {
+	name: string;
+	action?: (registration: ServiceWorkerRegistration) => void;
+}
+
 const node: HTMLElement | null = document.getElementById('root') || document.createElement('div');
 const renderRoot = (app: JSX.Element): void => render(app, node);
 const router = (Application: React.ComponentType): JSX.Element => <Application />;
@@ -22,35 +27,44 @@ gtag('js', new Date());
 gtag('config', 'UA-83446952-1');
 
 if ('serviceWorker' in navigator) {
-	const sw = `service-worker.js`;
-	const ow = `offline-worker.js`;
+	const workers: IWorker[] = [
+		{
+			name: `service-worker.js`,
+			action: (registration: ServiceWorkerRegistration): void => {
+				registration.onupdatefound = (): void => {
+					const installingWorker = registration.installing;
 
-	window.addEventListener('load', () => {
-		navigator.serviceWorker.register(sw);
-	});
+					if (installingWorker === null) {
+						return;
+					}
 
-	navigator.serviceWorker
-		.register(ow)
-		.then((registration: ServiceWorkerRegistration) => {
-			registration.onupdatefound = () => {
-				const installingWorker = registration.installing;
+					installingWorker.onstatechange = () => {
+						if (installingWorker.state !== 'installed') {
+							return;
+						}
 
-				if (installingWorker === null) {
-					return;
-				}
-
-				installingWorker.onstatechange = () => {
-					if (installingWorker.state === 'installed') {
 						console.info(
 							navigator.serviceWorker.controller
 								? 'New content is available and will be used when all tabs for this page are closed.'
 								: 'Content is cached for offline use.'
 						);
-					}
+					};
 				};
-			};
-		})
-		.catch(error => {
-			console.error('Error during service worker registration: ', error);
+			}
+		},
+		{
+			name: `offline-worker.js`
+		}
+	];
+
+	window.addEventListener('load', () => {
+		workers.forEach((worker: IWorker) => {
+			navigator.serviceWorker
+				.register(worker.name)
+				.then(worker.action || null)
+				.catch(error => {
+					console.error('Error during service worker registration: ', error);
+				});
 		});
+	});
 }
