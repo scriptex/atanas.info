@@ -174,7 +174,7 @@ export const createNodes = (
 		group
 			.append('text')
 			.attr('class', 'skill-duration')
-			.text((d: any) => `${d.duration}`)
+			.text((d: any) => `Since ${d.since}`)
 			.attr('text-anchor', 'middle')
 			.attr('font-weight', 'bold')
 			.attr('dy', '1rem');

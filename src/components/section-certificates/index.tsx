@@ -5,7 +5,7 @@ import { Section } from '..';
 import ExternalLink from '../external-link';
 
 export const SectionCertificates: React.FunctionComponent = () => (
-	<Section id="certificates" hasButton={false}>
+	<Section id="certificates" hasButton={true}>
 		<h1>Certificates</h1>
 
 		<div className="o-grid c-section__body">

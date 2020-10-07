@@ -8,6 +8,11 @@ export interface Link {
 
 export const links: Array<Readonly<Link>> = [
 	{
+		href: '#hello',
+		title: 'Back to top',
+		content: 'Home'
+	},
+	{
 		href: '#about',
 		title: 'About me',
 		content: 'About'
@@ -18,19 +23,14 @@ export const links: Array<Readonly<Link>> = [
 		content: 'Skills'
 	},
 	{
-		href: '#social',
-		title: 'Social widgets',
-		content: 'Social'
+		href: '#portfolio',
+		title: 'My portfolio',
+		content: 'Portfolio'
 	},
 	{
 		href: '#stats',
 		title: 'My stats',
 		content: 'Stats'
-	},
-	{
-		href: '#portfolio',
-		title: 'My portfolio',
-		content: 'Portfolio'
 	},
 	{
 		href: '#slides',
@@ -43,9 +43,19 @@ export const links: Array<Readonly<Link>> = [
 		content: 'Videos'
 	},
 	{
+		href: '#articles',
+		title: 'My published articles',
+		content: 'Articles'
+	},
+	{
 		href: '#certificates',
 		title: 'My certificates',
 		content: 'Certificates'
+	},
+	{
+		href: '#social',
+		title: 'Social widgets',
+		content: 'Social'
 	},
 	{
 		rel: 'noopener noreferrer',
