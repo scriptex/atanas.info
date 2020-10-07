@@ -28,6 +28,7 @@
 		"start-music": "concurrently -r \"yarn houdini:watch\" \"yarn parcel-start-music\"",
 		"build": "yarn pre && yarn css && yarn tsc && yarn houdini && yarn parcel-build && yarn fetch-projects && yarn build-projects",
 		"build-music": "concurrently -r \"yarn houdini\" \"yarn parcel-build-music\"",
+		"postbuild": "workbox generateSW",
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage",
@@ -168,6 +169,7 @@
 		"type-coverage": "2.13.0",
 		"typescript": "3.9.7",
 		"vuepress": "1.6.0",
+		"workbox-cli": "5.1.4",
 		"yarn-deduplicate": "3.0.0"
 	},
 	"resolutions": {
