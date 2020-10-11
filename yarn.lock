@@ -12497,10 +12497,10 @@ rc-motion@^2.0.0:
     classnames "^2.2.1"
     rc-util "^5.2.1"
 
-rc-slider@^9.5.1:
-  version "9.5.2"
-  resolved "https://registry.yarnpkg.com/rc-slider/-/rc-slider-9.5.2.tgz#eb9ac4a09cd982c3ff9d7a3bc1cd46e70513a8be"
-  integrity sha512-HJ09Hq4thAq8ZSEEAJP6322t/ZIRstmB8YYZcuCuKwyTVXYfKrcR5DoY+Jqif2ewo2ixJUA2Mpi0B29lb8zS5w==
+rc-slider@^9.5.3:
+  version "9.5.3"
+  resolved "https://registry.yarnpkg.com/rc-slider/-/rc-slider-9.5.3.tgz#af118add1414df68dd353746004036cc2b839241"
+  integrity sha512-ADatCsY9LUiPzm2v165/ZACmHrvhmDsmh8TpJtaAYB+xuRjLhlbFASZ11ZeuWPn8oMXT6L08OzNce4F3by/Ivw==
   dependencies:
     "@babel/runtime" "^7.10.1"
     classnames "^2.2.5"
@@ -12630,16 +12630,16 @@ react-is@^16.12.0, react-is@^16.13.1, react-is@^16.6.0, react-is@^16.7.0, react-
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-jinke-music-player@4.18.3:
-  version "4.18.3"
-  resolved "https://registry.yarnpkg.com/react-jinke-music-player/-/react-jinke-music-player-4.18.3.tgz#f7ebe618b36c6af65b3bbf77b229e29b9009c3eb"
-  integrity sha512-8ljgaNp3YO2ac8svFUVDJIvSLx4m49f1cmQboLibua0IXGlKIF38/iPC+whrSv6e413gyDUJwuZ+eaBTJkP94g==
+react-jinke-music-player@4.19.0:
+  version "4.19.0"
+  resolved "https://registry.yarnpkg.com/react-jinke-music-player/-/react-jinke-music-player-4.19.0.tgz#009230bf68e49c2152b6120112a110ef8635322e"
+  integrity sha512-EPVuVTiOHdPkNp3lajMp7k+/RZ+hU8As5fJuxHG10zx4WWBIWnTCPYkun7TERHUiHsearie8Xy4Nd5b5D3gGjg==
   dependencies:
     classnames "^2.2.6"
     downloadjs "^1.4.7"
     is-mobile "^2.2.2"
     prop-types "^15.7.2"
-    rc-slider "^9.5.1"
+    rc-slider "^9.5.3"
     rc-switch "^3.2.1"
     react-drag-listview "^0.1.7"
     react-draggable "^4.4.3"
