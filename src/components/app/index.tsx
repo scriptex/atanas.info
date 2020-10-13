@@ -34,7 +34,7 @@ export const App: React.FunctionComponent = () => {
 		<AppContext.Provider value={value}>
 			<Head />
 
-			<Svg src="./sprite.svg" />
+			<Svg src="/sprite.svg" />
 
 			<>
 				<Header />

@@ -13,11 +13,10 @@ export const SectionAbout: React.FunctionComponent = () => (
 		<h2>About me</h2>
 
 		<img
-			src="./images/temp/atanas.jpg"
+			src="images/temp/atanas.jpg"
 			alt="Atanas Atanasov smiling dressed in a green t-shirt"
 			width="240"
 			height="240"
-			loading="lazy"
 		/>
 
 		{bio.map((item: BioEntry, i: number) => (
