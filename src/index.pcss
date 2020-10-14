@@ -219,10 +219,6 @@ body {
 	display: block;
 }
 
-.c-header .o-shell {
-	position: relative;
-}
-
 /* nav */
 
 .c-nav {
@@ -353,6 +349,9 @@ body {
 }
 
 .c-header--open .c-nav__toggle {
+	position: absolute;
+	top: 1rem;
+	right: 1.125rem;
 	transform: rotate(90deg) translate(-1rem, -1.125rem);
 
 	& span:nth-child(2) {
