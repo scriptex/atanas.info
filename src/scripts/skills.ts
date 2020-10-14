@@ -109,7 +109,7 @@ export const createSimulation = (width: number, height: number): Simulation<any,
 			'link',
 			forceLink().id((d: any) => d.index)
 		)
-		.force('collide', forceCollide((d: any) => d.r * 1.75).iterations(20))
+		.force('collide', forceCollide((d: any) => d.r * 2).iterations(10))
 		.force('charge', forceManyBody())
 		.force('center', forceCenter(width / 2, height / 2))
 		.force('y', forceY(0))
@@ -144,10 +144,10 @@ export const createNodes = (
 		const group = select(this.parentNode);
 		const { width } = d;
 
-		let mod = 1.75;
+		let mod = 1.5;
 
 		if (winWidth < 1024) {
-			mod = 1.35;
+			mod = 1.25;
 		}
 
 		if (winWidth < 768) {
