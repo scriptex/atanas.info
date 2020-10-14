@@ -9,6 +9,10 @@
 	background: paint(slanted-background);
 	--slanted-background-color: var(--color-action);
 	--slanted-background-opacity: 0.35;
+
+	@media (prefers-color-scheme: light) {
+		color: var(--color-secondary);
+	}
 }
 
 @define-mixin polygon $sides {
@@ -1664,18 +1668,42 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 	}
 }
 
-/* @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
 	:root {
 		--color-primary: #000;
 		--color-secondary: #fff;
 	}
 
-	.c-header {
+	.c-header,
+	.c-section--portfolio .c-section__body a::before {
 		background-color: color-mod(#fff a(85%));
 	}
 
-	.c-section--stats,
+	.c-section--portfolio {
+		margin-bottom: 0;
+	}
+
+	.c-btn,
+	.c-section--stats {
+		color: var(--color-secondary);
+	}
+
+	.c-section--slides,
+	.c-section--stats .c-section__head,
+	.c-section--social .c-section__head {
+		background-color: color-mod(#000 a(85%));
+	}
+
+	.c-section--stats .c-section__entry {
+		padding-bottom: 0;
+		margin-top: 0;
+	}
+
 	.c-section--stats .c-section__list li {
 		color: var(--color-primary);
 	}
-} */
+
+	.c-section--social .o-grid .LI-badge-container {
+		background-color: var(--color-secondary);
+	}
+}
