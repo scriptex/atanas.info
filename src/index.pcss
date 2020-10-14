@@ -9,6 +9,10 @@
 	background: paint(slanted-background);
 	--slanted-background-color: var(--color-action);
 	--slanted-background-opacity: 0.35;
+
+	@media (prefers-color-scheme: light) {
+		color: var(--color-secondary);
+	}
 }
 
 @define-mixin polygon $sides {
@@ -1679,6 +1683,7 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 		margin-bottom: 0;
 	}
 
+	.c-btn,
 	.c-section--stats {
 		color: var(--color-secondary);
 	}
@@ -1696,5 +1701,9 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 
 	.c-section--stats .c-section__list li {
 		color: var(--color-primary);
+	}
+
+	.c-section--social .o-grid .LI-badge-container {
+		background-color: var(--color-secondary);
 	}
 }
