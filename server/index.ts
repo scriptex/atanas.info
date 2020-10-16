@@ -1,3 +1,5 @@
+#!/usr/bin/env ts-node-script
+
 import * as puppeteer from 'puppeteer';
 
 import { resolve } from 'path';
@@ -10,7 +12,11 @@ const { unlink, readFile, writeFile } = require('fs').promises;
 	const dist = resolve(__dirname, '..', 'dist');
 
 	try {
-		const browser = await puppeteer.launch({ headless: true });
+		const browser = await puppeteer.launch({
+			headless: true,
+			args: ['--no-sandbox']
+		});
+
 		const page = await browser.newPage();
 		const tmp = await readFile(resolve(dist, index), {
 			encoding: 'utf-8'
