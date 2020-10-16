@@ -45,7 +45,7 @@
 		"screenshots": "ts-node ./screenshots/index.ts",
 		"insights": "ts-node ./insights/index.ts",
 		"ssr": "ts-node ./server/index.ts",
-		"prerender": "ts-node ./server/prerender.ts",
+		"prerender": "ts-node ./server/index.ts",
 		"pwa": "create-pwa --icon static/images/icons/icon.png --launch static/images/icons/splash.png",
 		"type-coverage": "type-coverage --ignore-catch --detail",
 		"please": "rm -rf .cache dist coverage node_modules yarn.lock"
