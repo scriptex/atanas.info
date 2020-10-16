@@ -1,30 +1,43 @@
 #!/usr/bin/env ts-node-script
 
-import path from 'path';
+import * as puppeteer from 'puppeteer';
 
-import express from 'express';
-import rateLimit from 'express-rate-limit';
-import compression from 'compression';
+import { resolve } from 'path';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { unlink, readFile, writeFile } = require('fs').promises;
 
-import favicon from '../static/images/favicon/favicon.ico';
-import middleware from './middleware';
+(async () => {
+	const temp = 'index-temp.html';
+	const index = 'index.html';
+	const dist = resolve(__dirname, '..', 'dist');
 
-const app = express();
-const port = process.env.PORT || 1234;
-const faviconFileName = favicon.slice(favicon.lastIndexOf('/') + 1);
+	try {
+		const browser = await puppeteer.launch({
+			headless: true,
+			args: ['--no-sandbox']
+		});
 
-const limiter = rateLimit({
-	windowMs: 1 * 60 * 1000,
-	max: 5
-});
+		const page = await browser.newPage();
+		const tmp = await readFile(resolve(dist, index), {
+			encoding: 'utf-8'
+		});
 
-app.use(limiter);
-app.use(compression());
-app.use('/favicon.ico', (_, res) => res.sendFile(path.join(__dirname, `../src/${faviconFileName}`)));
-app.use('/dist', express.static(`${__dirname}/../dist`));
+		const content = tmp.replace(/\/src\./g, './src.');
 
-app.get('/*', middleware);
+		await writeFile(resolve(dist, temp), content);
+		await page.goto('file:///' + resolve(dist, temp), {
+			waitUntil: 'networkidle2'
+		});
 
-app.listen(port, () => {
-	console.log(`Listening on port ${port}...`);
-});
+		const render = await page.content();
+		const html = render.replace(/\.\/src\./g, '/src.');
+
+		await unlink(resolve(dist, index));
+		await writeFile(resolve(dist, index), html);
+		await unlink(resolve(dist, temp));
+	} catch (e) {
+		console.error(e);
+	}
+
+	process.exit();
+})();
