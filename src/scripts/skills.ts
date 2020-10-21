@@ -109,7 +109,7 @@ export const createSimulation = (width: number, height: number): Simulation<any,
 			'link',
 			forceLink().id((d: any) => d.index)
 		)
-		.force('collide', forceCollide((d: any) => d.r * 2).iterations(10))
+		.force('collide', forceCollide((d: any) => d.r * (width < 1024 ? 1.75 : 2)).iterations(10))
 		.force('charge', forceManyBody())
 		.force('center', forceCenter(width / 2, height / 2))
 		.force('y', forceY(0))
