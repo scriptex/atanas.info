@@ -2,6 +2,14 @@
 
 exports[`SectionSkills component Should render the SectionSkills component 1`] = `
 <Component
+  actions={
+    <Unknown
+      onClick={[Function]}
+    >
+      Static
+       mode
+    </Unknown>
+  }
   hasButton={true}
   hasShell={true}
   id="skills"
@@ -9,12 +17,1419 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
   <h2>
     Skills 
     <br />
-    <small>
+    <small
+      hidden={false}
+    >
       (Drag the bubbles to play)
     </small>
   </h2>
   <div
+    className=""
     id="skills-graph"
   />
+  <div
+    className="o-grid is--hidden"
+  >
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="0"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Angular icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/angular.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Angular
+          </strong>
+          Since 
+          2017
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="1"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Angular JS icon"
+            height={32}
+            loading="lazy"
+            src="/images/svg/angularjs.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Angular JS
+          </strong>
+          Since 
+          2014
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="2"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Amazon Web Services icon"
+            height={18}
+            loading="lazy"
+            src="/images/svg/aws.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Amazon Web Services
+          </strong>
+          Since 
+          2019
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="3"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Babel icon"
+            height={12}
+            loading="lazy"
+            src="/images/svg/babel.svg"
+            width={31}
+          />
+        </figure>
+        <p>
+          <strong>
+            Babel
+          </strong>
+          Since 
+          2015
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="4"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="BabylonJS icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/babylonjs.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            BabylonJS
+          </strong>
+          Since 
+          2018
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="5"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="BackboneJS icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/backbone.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            BackboneJS
+          </strong>
+          Since 
+          2013
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="6"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Bash icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/bash.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Bash
+          </strong>
+          Since 
+          2015
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="7"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="BEM icon"
+            height={24}
+            loading="lazy"
+            src="/images/svg/bem.svg"
+            width={29}
+          />
+        </figure>
+        <p>
+          <strong>
+            BEM
+          </strong>
+          Since 
+          2013
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="8"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Bootstrap icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/bootstrap.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Bootstrap
+          </strong>
+          Since 
+          2012
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="9"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="CSS3 icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/css.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            CSS3
+          </strong>
+          Since 
+          2010
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="10"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Chart JS icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/chartjs.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Chart JS
+          </strong>
+          Since 
+          2014
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="11"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Circle CI icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/circleci.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Circle CI
+          </strong>
+          Since 
+          2019
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="12"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Cordova icon"
+            height={29}
+            loading="lazy"
+            src="/images/svg/cordova.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Cordova
+          </strong>
+          Since 
+          2014
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="13"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="D3 icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/d3.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            D3
+          </strong>
+          Since 
+          2012
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="14"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="ESLint icon"
+            height={27}
+            loading="lazy"
+            src="/images/svg/eslint.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            ESLint
+          </strong>
+          Since 
+          2016
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="15"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Express JS icon"
+            height={25}
+            loading="lazy"
+            src="/images/svg/expressjs.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Express JS
+          </strong>
+          Since 
+          2017
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="16"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Firebase icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/firebase.svg"
+            width={25}
+          />
+        </figure>
+        <p>
+          <strong>
+            Firebase
+          </strong>
+          Since 
+          2018
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="17"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Foundation icon"
+            height={32}
+            loading="lazy"
+            src="/images/svg/foundation.svg"
+            width={22}
+          />
+        </figure>
+        <p>
+          <strong>
+            Foundation
+          </strong>
+          Since 
+          2103
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="18"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Gatsby icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/gatsby.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Gatsby
+          </strong>
+          Since 
+          2019
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="19"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="GIT icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/git.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            GIT
+          </strong>
+          Since 
+          2011
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="20"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Github Actions icon"
+            height={29}
+            loading="lazy"
+            src="/images/svg/github.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Github Actions
+          </strong>
+          Since 
+          2020
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="21"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Gitlab CI/CD icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/gitlab-logo.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Gitlab CI/CD
+          </strong>
+          Since 
+          2017
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="22"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Grunt icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/grunt.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Grunt
+          </strong>
+          Since 
+          2013
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="23"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Gulp icon"
+            height={40}
+            loading="lazy"
+            src="/images/svg/gulp.svg"
+            width={40}
+          />
+        </figure>
+        <p>
+          <strong>
+            Gulp
+          </strong>
+          Since 
+          2013
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="24"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="HTML5 icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/html.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            HTML5
+          </strong>
+          Since 
+          2010
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="25"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Highcharts icon"
+            height={29}
+            loading="lazy"
+            src="/images/svg/highcharts.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Highcharts
+          </strong>
+          Since 
+          2016
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="26"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Ionic icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/ionic.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Ionic
+          </strong>
+          Since 
+          2014
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="27"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="JavaScript icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/javascript.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            JavaScript
+          </strong>
+          Since 
+          2011
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="28"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Jest icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/jest.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Jest
+          </strong>
+          Since 
+          2017
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="29"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="JSON icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/json.svg"
+            width={28}
+          />
+        </figure>
+        <p>
+          <strong>
+            JSON
+          </strong>
+          Since 
+          2013
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="30"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="jQuery icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/jquery.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            jQuery
+          </strong>
+          Since 
+          2011
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="31"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="LESS icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/less.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            LESS
+          </strong>
+          Since 
+          2012
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="32"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Markdown icon"
+            height={20}
+            loading="lazy"
+            src="/images/svg/markdown.svg"
+            width={32}
+          />
+        </figure>
+        <p>
+          <strong>
+            Markdown
+          </strong>
+          Since 
+          2014
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="33"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="MJML icon"
+            height={26}
+            loading="lazy"
+            src="/images/svg/mjml.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            MJML
+          </strong>
+          Since 
+          2019
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="34"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Microsoft Azure icon"
+            height={24}
+            loading="lazy"
+            src="/images/svg/azure.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Microsoft Azure
+          </strong>
+          Since 
+          2019
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="35"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Node JS icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/nodejs.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Node JS
+          </strong>
+          Since 
+          2016
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="36"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Parcel Bundler icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/parcel.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Parcel Bundler
+          </strong>
+          Since 
+          2019
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="37"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="PHP icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/php.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            PHP
+          </strong>
+          Since 
+          2013
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="38"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Photoshop icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/photoshop.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Photoshop
+          </strong>
+          Since 
+          2010
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="39"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="PostCSS icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/postcss.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            PostCSS
+          </strong>
+          Since 
+          2014
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="40"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="React icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/react.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            React
+          </strong>
+          Since 
+          2016
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="41"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Redux icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/redux.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Redux
+          </strong>
+          Since 
+          2016
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="42"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Redux Saga icon"
+            height={19}
+            loading="lazy"
+            src="/images/svg/redux-saga.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Redux Saga
+          </strong>
+          Since 
+          2018
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="43"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Rollup icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/rollup.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Rollup
+          </strong>
+          Since 
+          2018
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="44"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="SASS icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/sass.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            SASS
+          </strong>
+          Since 
+          2012
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="45"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="SVG icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/svg.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            SVG
+          </strong>
+          Since 
+          2011
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="46"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="SVN icon"
+            height={22}
+            loading="lazy"
+            src="/images/svg/svn.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            SVN
+          </strong>
+          Since 
+          2010
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="47"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Sketch icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/sketch.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Sketch
+          </strong>
+          Since 
+          2017
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="48"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Sublime Text icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/sublime-text.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Sublime Text
+          </strong>
+          Since 
+          2010
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="49"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Travis CI icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/travisci.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Travis CI
+          </strong>
+          Since 
+          2017
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="50"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Typescript icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/typescript.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Typescript
+          </strong>
+          Since 
+          2017
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="51"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Vercel icon"
+            height={26}
+            loading="lazy"
+            src="/images/svg/vercel.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Vercel
+          </strong>
+          Since 
+          2019
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="52"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Visual Studio Code icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/vscode.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Visual Studio Code
+          </strong>
+          Since 
+          2017
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="53"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Vue icon"
+            height={26}
+            loading="lazy"
+            src="/images/svg/vue.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Vue
+          </strong>
+          Since 
+          2016
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="54"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="Webpack icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/webpack.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Webpack
+          </strong>
+          Since 
+          2015
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item o-grid__item--1of4"
+      key="55"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure>
+          <img
+            alt="WordPress icon"
+            height={30}
+            loading="lazy"
+            src="/images/svg/wordpress.svg"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            WordPress
+          </strong>
+          Since 
+          2013
+        </p>
+      </div>
+    </div>
+  </div>
 </Component>
 `;
