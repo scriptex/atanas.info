@@ -671,13 +671,77 @@ body {
 #skills-graph {
 	height: 100vh;
 	position: relative;
+	transition: height var(--timing) var(--easing);
 }
 
 #skills-graph svg {
+	opacity: 1;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	transition: opacity var(--timing) var(--easing);
+}
+
+#skills-graph.is--hidden {
+	height: 0vh;
+	pointer-events: none;
+}
+
+#skills-graph.is--hidden svg {
+	opacity: 0;
+}
+
+.c-section--skills .o-grid {
+	max-height: 93.75rem;
+	justify-content: flex-start;
+	overflow: hidden;
+	transition: max-height var(--timing) var(--easing);
+}
+
+.c-section--skills .o-grid.is--hidden {
+	max-height: 0;
+}
+
+.c-skill {
+	color: var(--color-secondary);
+	text-align: left;
+	min-height: 100%;
+	@mixin flex-row nowrap, center, flex-start;
+	padding: 1rem;
+	margin: 0;
+	list-style: none outside none;
+	background-color: color-mod(var(--color-primary) a(80%));
+	border-radius: 1rem;
+}
+
+.c-skill img,
+.c-skill strong {
+	display: block;
+}
+
+.c-skill strong {
+	padding-bottom: 0.5rem;
+}
+
+.c-skill figure {
+	width: 3.5rem;
+	height: 3.5rem;
+	@mixin flex-row nowrap, center, center;
+	padding: 1rem;
+	margin-right: 1rem;
+	background-color: color-mod(var(--color-secondary) a(20%));
+	border-radius: 50%;
+}
+
+@media (--tablet-landscape) {
+	.c-section--skills .o-grid {
+		max-height: 125rem;
+	}
+
+	.c-section--skills .o-grid__item {
+		flex: 0 0 calc(100% / 3);
+	}
 }
 
 @media (--tablet-portrait) {
@@ -699,6 +763,29 @@ body {
 
 	.c-section--skills h2 small {
 		font-size: 50%;
+	}
+
+	.c-section--skills .o-grid {
+		max-height: 281.25rem;
+	}
+
+	.c-section--skills .o-grid__item + .o-grid__item {
+		padding-top: 0;
+	}
+
+	.c-skill {
+		padding: 0.5rem;
+	}
+
+	.c-skill figure {
+		width: 3rem;
+		height: 3rem;
+		padding: 0.25rem;
+		margin-right: 0.5rem;
+	}
+
+	.c-skill strong {
+		padding: 0;
 	}
 }
 

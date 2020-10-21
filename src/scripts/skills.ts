@@ -109,7 +109,7 @@ export const createSimulation = (width: number, height: number): Simulation<any,
 			'link',
 			forceLink().id((d: any) => d.index)
 		)
-		.force('collide', forceCollide((d: any) => d.r * (width < 1024 ? 1.75 : 2)).iterations(10))
+		.force('collide', forceCollide((d: any) => d.r * 1.75).iterations(10))
 		.force('charge', forceManyBody())
 		.force('center', forceCenter(width / 2, height / 2))
 		.force('y', forceY(0))
@@ -139,10 +139,8 @@ export const createNodes = (
 		.call(callable);
 
 	nodes.each(function (d: any) {
-		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-		// @ts-ignore
-		const group = select(this.parentNode);
-		const { width } = d;
+		const group = select((this as any).parentNode);
+		const { width, height } = d;
 
 		let mod = 1.5;
 
@@ -155,7 +153,7 @@ export const createNodes = (
 		}
 
 		const imgWidth = width * mod;
-		const imgHeight = width * mod;
+		const imgHeight = height * mod;
 
 		group
 			.append('image')
