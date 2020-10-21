@@ -1,241 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionSlides component Should render the SectionSlides component 1`] = `
-<Component>
+<Component
+  hasButton={true}
+  hasShell={true}
+  id="slides"
+>
+  <h2>
+    Slides
+  </h2>
   <Component
-    hasButton={true}
-    hasShell={true}
-    id="slides"
+    active={-1}
+    data={
+      Array [
+        Object {
+          "description": "Presentation about the EcmaScript language history and features",
+          "title": "EcmaScript Features",
+          "url": "https://docs.google.com/presentation/d/e/2PACX-1vSA8qN0_3lb0YWDYJheJ3q0AAsXWlLLpP86pnmV0KWfPo_2G-SSdSK--GVRyJbwT8_kWyJ0TZxFoaH8",
+        },
+        Object {
+          "description": "Presentation about improving workflow using Sublime Text editor",
+          "title": "Do more with Sublime Text",
+          "url": "https://docs.google.com/presentation/d/e/2PACX-1vTivcVmPyjYPdWgoJMChe_rrVyZEIw4ZgF37lCOlxUUm7DchxhMJouEV_BcrH6LDL8kiNmRSIWkiSxK",
+        },
+      ]
+    }
+    name="title"
+    onClick={[Function]}
+  />
+  <div
+    className="c-section__body"
   >
-    <section
-      className="c-section c-section--slides"
-      id="slides"
+    <div
+      className="text-center"
     >
-      <div
-        className="o-shell"
-      >
-        <Component
-          hasButton={true}
-          hasShell={true}
-          id="slides"
-        >
-          <h2>
-            Slides
-          </h2>
-          <Component
-            active={-1}
-            data={
-              Array [
-                Object {
-                  "description": "Presentation about the EcmaScript language history and features",
-                  "title": "EcmaScript Features",
-                  "url": "https://docs.google.com/presentation/d/e/2PACX-1vSA8qN0_3lb0YWDYJheJ3q0AAsXWlLLpP86pnmV0KWfPo_2G-SSdSK--GVRyJbwT8_kWyJ0TZxFoaH8",
-                },
-                Object {
-                  "description": "Presentation about improving workflow using Sublime Text editor",
-                  "title": "Do more with Sublime Text",
-                  "url": "https://docs.google.com/presentation/d/e/2PACX-1vTivcVmPyjYPdWgoJMChe_rrVyZEIw4ZgF37lCOlxUUm7DchxhMJouEV_BcrH6LDL8kiNmRSIWkiSxK",
-                },
-              ]
-            }
-            name="title"
-            onClick={[Function]}
-          >
-            <nav
-              className="c-section__nav"
-            >
-              <ul>
-                <li
-                  className=""
-                  key="0"
-                >
-                  <Component
-                    aria-label="Switch to EcmaScript Features"
-                    onClick={[Function]}
-                    type="button"
-                  >
-                    <button
-                      aria-label="Switch to EcmaScript Features"
-                      className="c-btn "
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      EcmaScript Features
-                    </button>
-                  </Component>
-                </li>
-                <li
-                  className=""
-                  key="1"
-                >
-                  <Component
-                    aria-label="Switch to Do more with Sublime Text"
-                    onClick={[Function]}
-                    type="button"
-                  >
-                    <button
-                      aria-label="Switch to Do more with Sublime Text"
-                      className="c-btn "
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      Do more with Sublime Text
-                    </button>
-                  </Component>
-                </li>
-              </ul>
-            </nav>
-          </Component>
-          <div
-            className="c-section__body"
-          >
-            <div
-              className="text-center"
-            >
-              <em>
-                Select a slide to view
-              </em>
-            </div>
-          </div>
-          <div
-            className="c-section__actions"
-          >
-            <Component
-              onClick={[Function]}
-              type="button"
-            >
-              <button
-                className="c-btn "
-                onClick={[Function]}
-                type="button"
-              >
-                Hire me
-              </button>
-            </Component>
-          </div>
-        </Component>
-      </div>
-    </section>
-  </Component>
-</Component>
-`;
-
-exports[`SectionSlides component Should render the SectionSlides component 2`] = `
-<Component>
-  <Component
-    hasButton={true}
-    hasShell={true}
-    id="slides"
-  >
-    <section
-      className="c-section c-section--slides"
-      id="slides"
-    >
-      <div
-        className="o-shell"
-      >
-        <Component
-          hasButton={true}
-          hasShell={true}
-          id="slides"
-        >
-          <h2>
-            Slides
-          </h2>
-          <Component
-            active={-1}
-            data={
-              Array [
-                Object {
-                  "description": "Presentation about the EcmaScript language history and features",
-                  "title": "EcmaScript Features",
-                  "url": "https://docs.google.com/presentation/d/e/2PACX-1vSA8qN0_3lb0YWDYJheJ3q0AAsXWlLLpP86pnmV0KWfPo_2G-SSdSK--GVRyJbwT8_kWyJ0TZxFoaH8",
-                },
-                Object {
-                  "description": "Presentation about improving workflow using Sublime Text editor",
-                  "title": "Do more with Sublime Text",
-                  "url": "https://docs.google.com/presentation/d/e/2PACX-1vTivcVmPyjYPdWgoJMChe_rrVyZEIw4ZgF37lCOlxUUm7DchxhMJouEV_BcrH6LDL8kiNmRSIWkiSxK",
-                },
-              ]
-            }
-            name="title"
-            onClick={[Function]}
-          >
-            <nav
-              className="c-section__nav"
-            >
-              <ul>
-                <li
-                  className=""
-                  key="0"
-                >
-                  <Component
-                    aria-label="Switch to EcmaScript Features"
-                    onClick={[Function]}
-                    type="button"
-                  >
-                    <button
-                      aria-label="Switch to EcmaScript Features"
-                      className="c-btn "
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      EcmaScript Features
-                    </button>
-                  </Component>
-                </li>
-                <li
-                  className=""
-                  key="1"
-                >
-                  <Component
-                    aria-label="Switch to Do more with Sublime Text"
-                    onClick={[Function]}
-                    type="button"
-                  >
-                    <button
-                      aria-label="Switch to Do more with Sublime Text"
-                      className="c-btn "
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      Do more with Sublime Text
-                    </button>
-                  </Component>
-                </li>
-              </ul>
-            </nav>
-          </Component>
-          <div
-            className="c-section__body"
-          >
-            <div
-              className="text-center"
-            >
-              <em>
-                Select a slide to view
-              </em>
-            </div>
-          </div>
-          <div
-            className="c-section__actions"
-          >
-            <Component
-              onClick={[Function]}
-              type="button"
-            >
-              <button
-                className="c-btn "
-                onClick={[Function]}
-                type="button"
-              >
-                Hire me
-              </button>
-            </Component>
-          </div>
-        </Component>
-      </div>
-    </section>
-  </Component>
+      <em>
+        Select a slide to view
+      </em>
+    </div>
+  </div>
 </Component>
 `;

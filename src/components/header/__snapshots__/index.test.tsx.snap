@@ -1,628 +1,200 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header component Should render the Header component 1`] = `
-<Component>
-  <header
-    className="c-header"
+<header
+  className="c-header"
+>
+  <div
+    className="o-shell o-shell--flex"
   >
-    <div
-      className="o-shell o-shell--flex"
+    <a
+      className="c-logo"
+      href="#hello"
+      title="Back to top"
     >
-      <a
-        className="c-logo"
-        href="#hello"
-        title="Back to top"
-      >
-        <Component
-          className="c-svg-logo"
-          name="svg-logo"
-        >
-          <svg
-            className="c-svg-logo"
-          >
-            <use
-              xlinkHref="#svg-logo"
-            />
-          </svg>
-        </Component>
-      </a>
-      <button
-        aria-label="Toggle menu"
-        className="c-nav__toggle"
-        name="menu-toggle"
-        onClick={[Function]}
-      >
-        <span />
-        <span />
-        <span />
-      </button>
-      <nav
-        className="c-nav"
-      >
-        <ul>
-          <li
-            key="0"
-          >
-            <a
-              href="#hello"
-              onClick={[Function]}
-              title="Back to top"
-            >
-              Home
-            </a>
-          </li>
-          <li
-            key="1"
-          >
-            <a
-              href="#about"
-              onClick={[Function]}
-              title="About me"
-            >
-              About
-            </a>
-          </li>
-          <li
-            key="2"
-          >
-            <a
-              href="#skills"
-              onClick={[Function]}
-              title="My skills"
-            >
-              Skills
-            </a>
-          </li>
-          <li
-            key="3"
-          >
-            <a
-              href="#portfolio"
-              onClick={[Function]}
-              title="My portfolio"
-            >
-              Portfolio
-            </a>
-          </li>
-          <li
-            key="4"
-          >
-            <a
-              href="#stats"
-              onClick={[Function]}
-              title="My stats"
-            >
-              Stats
-            </a>
-          </li>
-          <li
-            key="5"
-          >
-            <a
-              href="#slides"
-              onClick={[Function]}
-              title="My presentations"
-            >
-              Slides
-            </a>
-          </li>
-          <li
-            key="6"
-          >
-            <a
-              href="#videos"
-              onClick={[Function]}
-              title="My video presentations"
-            >
-              Videos
-            </a>
-          </li>
-          <li
-            key="7"
-          >
-            <a
-              href="#articles"
-              onClick={[Function]}
-              title="My published articles"
-            >
-              Articles
-            </a>
-          </li>
-          <li
-            key="8"
-          >
-            <a
-              href="#certificates"
-              onClick={[Function]}
-              title="My certificates"
-            >
-              Certificates
-            </a>
-          </li>
-          <li
-            key="9"
-          >
-            <a
-              href="#social"
-              onClick={[Function]}
-              title="Social widgets"
-            >
-              Social
-            </a>
-          </li>
-          <li
-            key="10"
-          >
-            <a
-              href="./resume.pdf"
-              onClick={[Function]}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="My CV"
-            >
-              Resume (pdf)
-            </a>
-          </li>
-          <li
-            key="11"
-          >
-            <a
-              href="https://interactive-resume.atanas.info/"
-              onClick={[Function]}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="My interactive resume"
-            >
-              Interactive resume
-            </a>
-          </li>
-          <li
-            key="12"
-          >
-            <a
-              href="projects/"
-              onClick={[Function]}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="My open source projects"
-            >
-              Open source
-            </a>
-          </li>
-          <li
-            key="13"
-          >
-            <a
-              href="music/"
-              onClick={[Function]}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="My music"
-            >
-              Music
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-</Component>
-`;
-
-exports[`Header component Should render the Header component 2`] = `
-<Component>
-  <header
-    className="c-header"
-  >
-    <div
-      className="o-shell o-shell--flex"
+      <Component
+        className="c-svg-logo"
+        name="svg-logo"
+      />
+    </a>
+    <button
+      aria-label="Toggle menu"
+      className="c-nav__toggle"
+      name="menu-toggle"
+      onClick={[Function]}
     >
-      <a
-        className="c-logo"
-        href="#hello"
-        title="Back to top"
-      >
-        <Component
-          className="c-svg-logo"
-          name="svg-logo"
-        >
-          <svg
-            className="c-svg-logo"
-          >
-            <use
-              xlinkHref="#svg-logo"
-            />
-          </svg>
-        </Component>
-      </a>
-      <button
-        aria-label="Toggle menu"
-        className="c-nav__toggle"
-        name="menu-toggle"
-        onClick={[Function]}
-      >
-        <span />
-        <span />
-        <span />
-      </button>
-      <nav
-        className="c-nav"
-      >
-        <ul>
-          <li
-            key="0"
-          >
-            <a
-              href="#hello"
-              onClick={[Function]}
-              title="Back to top"
-            >
-              Home
-            </a>
-          </li>
-          <li
-            key="1"
-          >
-            <a
-              href="#about"
-              onClick={[Function]}
-              title="About me"
-            >
-              About
-            </a>
-          </li>
-          <li
-            key="2"
-          >
-            <a
-              href="#skills"
-              onClick={[Function]}
-              title="My skills"
-            >
-              Skills
-            </a>
-          </li>
-          <li
-            key="3"
-          >
-            <a
-              href="#portfolio"
-              onClick={[Function]}
-              title="My portfolio"
-            >
-              Portfolio
-            </a>
-          </li>
-          <li
-            key="4"
-          >
-            <a
-              href="#stats"
-              onClick={[Function]}
-              title="My stats"
-            >
-              Stats
-            </a>
-          </li>
-          <li
-            key="5"
-          >
-            <a
-              href="#slides"
-              onClick={[Function]}
-              title="My presentations"
-            >
-              Slides
-            </a>
-          </li>
-          <li
-            key="6"
-          >
-            <a
-              href="#videos"
-              onClick={[Function]}
-              title="My video presentations"
-            >
-              Videos
-            </a>
-          </li>
-          <li
-            key="7"
-          >
-            <a
-              href="#articles"
-              onClick={[Function]}
-              title="My published articles"
-            >
-              Articles
-            </a>
-          </li>
-          <li
-            key="8"
-          >
-            <a
-              href="#certificates"
-              onClick={[Function]}
-              title="My certificates"
-            >
-              Certificates
-            </a>
-          </li>
-          <li
-            key="9"
-          >
-            <a
-              href="#social"
-              onClick={[Function]}
-              title="Social widgets"
-            >
-              Social
-            </a>
-          </li>
-          <li
-            key="10"
-          >
-            <a
-              href="./resume.pdf"
-              onClick={[Function]}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="My CV"
-            >
-              Resume (pdf)
-            </a>
-          </li>
-          <li
-            key="11"
-          >
-            <a
-              href="https://interactive-resume.atanas.info/"
-              onClick={[Function]}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="My interactive resume"
-            >
-              Interactive resume
-            </a>
-          </li>
-          <li
-            key="12"
-          >
-            <a
-              href="projects/"
-              onClick={[Function]}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="My open source projects"
-            >
-              Open source
-            </a>
-          </li>
-          <li
-            key="13"
-          >
-            <a
-              href="music/"
-              onClick={[Function]}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="My music"
-            >
-              Music
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-</Component>
-`;
-
-exports[`Header component Should render the Header component 3`] = `
-<Component>
-  <header
-    className="c-header"
-  >
-    <div
-      className="o-shell o-shell--flex"
+      <span />
+      <span />
+      <span />
+    </button>
+    <nav
+      className="c-nav"
     >
-      <a
-        className="c-logo"
-        href="#hello"
-        title="Back to top"
-      >
-        <Component
-          className="c-svg-logo"
-          name="svg-logo"
+      <ul>
+        <li
+          key="0"
         >
-          <svg
-            className="c-svg-logo"
+          <a
+            href="#hello"
+            onClick={[Function]}
+            title="Back to top"
           >
-            <use
-              xlinkHref="#svg-logo"
-            />
-          </svg>
-        </Component>
-      </a>
-      <button
-        aria-label="Toggle menu"
-        className="c-nav__toggle"
-        name="menu-toggle"
-        onClick={[Function]}
-      >
-        <span />
-        <span />
-        <span />
-      </button>
-      <nav
-        className="c-nav"
-      >
-        <ul>
-          <li
-            key="0"
+            Home
+          </a>
+        </li>
+        <li
+          key="1"
+        >
+          <a
+            href="#about"
+            onClick={[Function]}
+            title="About me"
           >
-            <a
-              href="#hello"
-              onClick={[Function]}
-              title="Back to top"
-            >
-              Home
-            </a>
-          </li>
-          <li
-            key="1"
+            About
+          </a>
+        </li>
+        <li
+          key="2"
+        >
+          <a
+            href="#skills"
+            onClick={[Function]}
+            title="My skills"
           >
-            <a
-              href="#about"
-              onClick={[Function]}
-              title="About me"
-            >
-              About
-            </a>
-          </li>
-          <li
-            key="2"
+            Skills
+          </a>
+        </li>
+        <li
+          key="3"
+        >
+          <a
+            href="#portfolio"
+            onClick={[Function]}
+            title="My portfolio"
           >
-            <a
-              href="#skills"
-              onClick={[Function]}
-              title="My skills"
-            >
-              Skills
-            </a>
-          </li>
-          <li
-            key="3"
+            Portfolio
+          </a>
+        </li>
+        <li
+          key="4"
+        >
+          <a
+            href="#stats"
+            onClick={[Function]}
+            title="My stats"
           >
-            <a
-              href="#portfolio"
-              onClick={[Function]}
-              title="My portfolio"
-            >
-              Portfolio
-            </a>
-          </li>
-          <li
-            key="4"
+            Stats
+          </a>
+        </li>
+        <li
+          key="5"
+        >
+          <a
+            href="#slides"
+            onClick={[Function]}
+            title="My presentations"
           >
-            <a
-              href="#stats"
-              onClick={[Function]}
-              title="My stats"
-            >
-              Stats
-            </a>
-          </li>
-          <li
-            key="5"
+            Slides
+          </a>
+        </li>
+        <li
+          key="6"
+        >
+          <a
+            href="#videos"
+            onClick={[Function]}
+            title="My video presentations"
           >
-            <a
-              href="#slides"
-              onClick={[Function]}
-              title="My presentations"
-            >
-              Slides
-            </a>
-          </li>
-          <li
-            key="6"
+            Videos
+          </a>
+        </li>
+        <li
+          key="7"
+        >
+          <a
+            href="#articles"
+            onClick={[Function]}
+            title="My published articles"
           >
-            <a
-              href="#videos"
-              onClick={[Function]}
-              title="My video presentations"
-            >
-              Videos
-            </a>
-          </li>
-          <li
-            key="7"
+            Articles
+          </a>
+        </li>
+        <li
+          key="8"
+        >
+          <a
+            href="#certificates"
+            onClick={[Function]}
+            title="My certificates"
           >
-            <a
-              href="#articles"
-              onClick={[Function]}
-              title="My published articles"
-            >
-              Articles
-            </a>
-          </li>
-          <li
-            key="8"
+            Certificates
+          </a>
+        </li>
+        <li
+          key="9"
+        >
+          <a
+            href="#social"
+            onClick={[Function]}
+            title="Social widgets"
           >
-            <a
-              href="#certificates"
-              onClick={[Function]}
-              title="My certificates"
-            >
-              Certificates
-            </a>
-          </li>
-          <li
-            key="9"
+            Social
+          </a>
+        </li>
+        <li
+          key="10"
+        >
+          <a
+            href="./resume.pdf"
+            onClick={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+            title="My CV"
           >
-            <a
-              href="#social"
-              onClick={[Function]}
-              title="Social widgets"
-            >
-              Social
-            </a>
-          </li>
-          <li
-            key="10"
+            Resume (pdf)
+          </a>
+        </li>
+        <li
+          key="11"
+        >
+          <a
+            href="https://interactive-resume.atanas.info/"
+            onClick={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+            title="My interactive resume"
           >
-            <a
-              href="./resume.pdf"
-              onClick={[Function]}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="My CV"
-            >
-              Resume (pdf)
-            </a>
-          </li>
-          <li
-            key="11"
+            Interactive resume
+          </a>
+        </li>
+        <li
+          key="12"
+        >
+          <a
+            href="projects/"
+            onClick={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+            title="My open source projects"
           >
-            <a
-              href="https://interactive-resume.atanas.info/"
-              onClick={[Function]}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="My interactive resume"
-            >
-              Interactive resume
-            </a>
-          </li>
-          <li
-            key="12"
+            Open source
+          </a>
+        </li>
+        <li
+          key="13"
+        >
+          <a
+            href="music/"
+            onClick={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+            title="My music"
           >
-            <a
-              href="projects/"
-              onClick={[Function]}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="My open source projects"
-            >
-              Open source
-            </a>
-          </li>
-          <li
-            key="13"
-          >
-            <a
-              href="music/"
-              onClick={[Function]}
-              rel="noopener noreferrer"
-              target="_blank"
-              title="My music"
-            >
-              Music
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-</Component>
+            Music
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
 `;

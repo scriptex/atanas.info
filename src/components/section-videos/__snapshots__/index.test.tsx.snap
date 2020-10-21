@@ -1,245 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionVideos component Should render the SectionVideos component 1`] = `
-<Component>
+<Component
+  className=" c-section--slides"
+  hasButton={true}
+  hasShell={true}
+  id="videos"
+>
+  <h2>
+    Videos
+  </h2>
   <Component
-    className=" c-section--slides"
-    hasButton={true}
-    hasShell={true}
-    id="videos"
+    active={-1}
+    data={
+      Array [
+        Object {
+          "description": "Presentation about optimizing the web development workflow using Sublime Text editor",
+          "title": "Do more with Sublime Text",
+          "url": "https://www.youtube.com/embed/5xcqprI17FQ",
+        },
+        Object {
+          "description": "Presentation about the new and optimized frontend projects setup",
+          "title": "Jarvis: Frontend project setup",
+          "url": "https://www.youtube.com/embed/s-klXHLIZyY",
+        },
+      ]
+    }
+    name="title"
+    onClick={[Function]}
+  />
+  <div
+    className="c-section__body"
   >
-    <section
-      className="c-section c-section--videos c-section--slides"
-      id="videos"
+    <div
+      className="text-center"
     >
-      <div
-        className="o-shell"
-      >
-        <Component
-          className=" c-section--slides"
-          hasButton={true}
-          hasShell={true}
-          id="videos"
-        >
-          <h2>
-            Videos
-          </h2>
-          <Component
-            active={-1}
-            data={
-              Array [
-                Object {
-                  "description": "Presentation about optimizing the web development workflow using Sublime Text editor",
-                  "title": "Do more with Sublime Text",
-                  "url": "https://www.youtube.com/embed/5xcqprI17FQ",
-                },
-                Object {
-                  "description": "Presentation about the new and optimized frontend projects setup",
-                  "title": "Jarvis: Frontend project setup",
-                  "url": "https://www.youtube.com/embed/s-klXHLIZyY",
-                },
-              ]
-            }
-            name="title"
-            onClick={[Function]}
-          >
-            <nav
-              className="c-section__nav"
-            >
-              <ul>
-                <li
-                  className=""
-                  key="0"
-                >
-                  <Component
-                    aria-label="Switch to Do more with Sublime Text"
-                    onClick={[Function]}
-                    type="button"
-                  >
-                    <button
-                      aria-label="Switch to Do more with Sublime Text"
-                      className="c-btn "
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      Do more with Sublime Text
-                    </button>
-                  </Component>
-                </li>
-                <li
-                  className=""
-                  key="1"
-                >
-                  <Component
-                    aria-label="Switch to Jarvis: Frontend project setup"
-                    onClick={[Function]}
-                    type="button"
-                  >
-                    <button
-                      aria-label="Switch to Jarvis: Frontend project setup"
-                      className="c-btn "
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      Jarvis: Frontend project setup
-                    </button>
-                  </Component>
-                </li>
-              </ul>
-            </nav>
-          </Component>
-          <div
-            className="c-section__body"
-          >
-            <div
-              className="text-center"
-            >
-              <em>
-                Select a video to view
-              </em>
-            </div>
-          </div>
-          <div
-            className="c-section__actions"
-          >
-            <Component
-              onClick={[Function]}
-              type="button"
-            >
-              <button
-                className="c-btn "
-                onClick={[Function]}
-                type="button"
-              >
-                Hire me
-              </button>
-            </Component>
-          </div>
-        </Component>
-      </div>
-    </section>
-  </Component>
-</Component>
-`;
-
-exports[`SectionVideos component Should render the SectionVideos component 2`] = `
-<Component>
-  <Component
-    className=" c-section--slides"
-    hasButton={true}
-    hasShell={true}
-    id="videos"
-  >
-    <section
-      className="c-section c-section--videos c-section--slides"
-      id="videos"
-    >
-      <div
-        className="o-shell"
-      >
-        <Component
-          className=" c-section--slides"
-          hasButton={true}
-          hasShell={true}
-          id="videos"
-        >
-          <h2>
-            Videos
-          </h2>
-          <Component
-            active={-1}
-            data={
-              Array [
-                Object {
-                  "description": "Presentation about optimizing the web development workflow using Sublime Text editor",
-                  "title": "Do more with Sublime Text",
-                  "url": "https://www.youtube.com/embed/5xcqprI17FQ",
-                },
-                Object {
-                  "description": "Presentation about the new and optimized frontend projects setup",
-                  "title": "Jarvis: Frontend project setup",
-                  "url": "https://www.youtube.com/embed/s-klXHLIZyY",
-                },
-              ]
-            }
-            name="title"
-            onClick={[Function]}
-          >
-            <nav
-              className="c-section__nav"
-            >
-              <ul>
-                <li
-                  className=""
-                  key="0"
-                >
-                  <Component
-                    aria-label="Switch to Do more with Sublime Text"
-                    onClick={[Function]}
-                    type="button"
-                  >
-                    <button
-                      aria-label="Switch to Do more with Sublime Text"
-                      className="c-btn "
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      Do more with Sublime Text
-                    </button>
-                  </Component>
-                </li>
-                <li
-                  className=""
-                  key="1"
-                >
-                  <Component
-                    aria-label="Switch to Jarvis: Frontend project setup"
-                    onClick={[Function]}
-                    type="button"
-                  >
-                    <button
-                      aria-label="Switch to Jarvis: Frontend project setup"
-                      className="c-btn "
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      Jarvis: Frontend project setup
-                    </button>
-                  </Component>
-                </li>
-              </ul>
-            </nav>
-          </Component>
-          <div
-            className="c-section__body"
-          >
-            <div
-              className="text-center"
-            >
-              <em>
-                Select a video to view
-              </em>
-            </div>
-          </div>
-          <div
-            className="c-section__actions"
-          >
-            <Component
-              onClick={[Function]}
-              type="button"
-            >
-              <button
-                className="c-btn "
-                onClick={[Function]}
-                type="button"
-              >
-                Hire me
-              </button>
-            </Component>
-          </div>
-        </Component>
-      </div>
-    </section>
-  </Component>
+      <em>
+        Select a video to view
+      </em>
+    </div>
+  </div>
 </Component>
 `;
