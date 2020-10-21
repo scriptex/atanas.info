@@ -24,7 +24,7 @@ export const SectionSkills: React.FunctionComponent = () => {
 				<small hidden={showTable}>(Drag the bubbles to play)</small>
 			</h2>
 
-			<div id="skills-graph" className={showTable ? 'is--hidden' : undefined}></div>
+			<div id="skills-graph" className={showTable ? 'is--hidden' : ''}></div>
 
 			<div className={`o-grid${showTable ? '' : ' is--hidden'}`}>
 				{skills.map((skill: Skill, index: number) => (
