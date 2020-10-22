@@ -30,7 +30,7 @@ export const SectionSkills: React.FunctionComponent = () => {
 				{skills.map((skill: Skill, index: number) => (
 					<div key={index} className="o-grid__item o-grid__item--1of4">
 						<div className="c-skill">
-							<figure>
+							<figure style={{ backgroundColor: skill.fill }}>
 								<img
 									src={`/images/svg/${skill.icon}.svg`}
 									alt={`${skill.text} icon`}
