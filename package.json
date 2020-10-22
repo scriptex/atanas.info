@@ -3,6 +3,7 @@
 	"version": "1.1.0",
 	"description": "Atanas Atanasov's Personal Website",
 	"scripts": {
+		"fetch-stats": "ts-node ./server/fetch-stats.ts",
 		"fetch-music": "ts-node ./src/scripts/fetch-music.ts",
 		"fetch-projects": "ts-node ./projects/.vuepress/fetch-projects.ts",
 		"start-projects": "cd projects && vuepress dev",
