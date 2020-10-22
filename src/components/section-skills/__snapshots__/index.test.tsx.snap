@@ -44,11 +44,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Angular icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/angular.svg"
+            name="svg-angular"
             width={30}
           />
         </figure>
@@ -75,11 +74,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Angular JS icon"
+          <Component
+            className="c-skill__icon"
             height={32}
-            loading="lazy"
-            src="/images/svg/angularjs.svg"
+            name="svg-angularjs"
             width={30}
           />
         </figure>
@@ -106,11 +104,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Amazon Web Services icon"
+          <Component
+            className="c-skill__icon"
             height={18}
-            loading="lazy"
-            src="/images/svg/aws.svg"
+            name="svg-aws"
             width={30}
           />
         </figure>
@@ -137,11 +134,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Babel icon"
+          <Component
+            className="c-skill__icon"
             height={12}
-            loading="lazy"
-            src="/images/svg/babel.svg"
+            name="svg-babel"
             width={31}
           />
         </figure>
@@ -168,11 +164,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="BabylonJS icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/babylonjs.svg"
+            name="svg-babylonjs"
             width={30}
           />
         </figure>
@@ -199,11 +194,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="BackboneJS icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/backbone.svg"
+            name="svg-backbone"
             width={30}
           />
         </figure>
@@ -230,11 +224,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Bash icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/bash.svg"
+            name="svg-bash"
             width={30}
           />
         </figure>
@@ -261,11 +254,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="BEM icon"
+          <Component
+            className="c-skill__icon"
             height={24}
-            loading="lazy"
-            src="/images/svg/bem.svg"
+            name="svg-bem"
             width={29}
           />
         </figure>
@@ -292,11 +284,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Bootstrap icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/bootstrap.svg"
+            name="svg-bootstrap"
             width={30}
           />
         </figure>
@@ -323,11 +314,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="CSS3 icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/css.svg"
+            name="svg-css"
             width={30}
           />
         </figure>
@@ -354,11 +344,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Chart JS icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/chartjs.svg"
+            name="svg-chartjs"
             width={30}
           />
         </figure>
@@ -385,11 +374,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Circle CI icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/circleci.svg"
+            name="svg-circleci"
             width={30}
           />
         </figure>
@@ -416,11 +404,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Cordova icon"
+          <Component
+            className="c-skill__icon"
             height={29}
-            loading="lazy"
-            src="/images/svg/cordova.svg"
+            name="svg-cordova"
             width={30}
           />
         </figure>
@@ -447,11 +434,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="D3 icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/d3.svg"
+            name="svg-d3"
             width={30}
           />
         </figure>
@@ -478,11 +464,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="ESLint icon"
+          <Component
+            className="c-skill__icon"
             height={27}
-            loading="lazy"
-            src="/images/svg/eslint.svg"
+            name="svg-eslint"
             width={30}
           />
         </figure>
@@ -509,11 +494,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Express JS icon"
+          <Component
+            className="c-skill__icon"
             height={25}
-            loading="lazy"
-            src="/images/svg/expressjs.svg"
+            name="svg-expressjs"
             width={30}
           />
         </figure>
@@ -540,11 +524,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Firebase icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/firebase.svg"
+            name="svg-firebase"
             width={25}
           />
         </figure>
@@ -571,11 +554,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Foundation icon"
+          <Component
+            className="c-skill__icon"
             height={32}
-            loading="lazy"
-            src="/images/svg/foundation.svg"
+            name="svg-foundation"
             width={22}
           />
         </figure>
@@ -602,11 +584,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Gatsby icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/gatsby.svg"
+            name="svg-gatsby"
             width={30}
           />
         </figure>
@@ -633,11 +614,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="GIT icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/git.svg"
+            name="svg-git"
             width={30}
           />
         </figure>
@@ -664,11 +644,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Github Actions icon"
+          <Component
+            className="c-skill__icon"
             height={29}
-            loading="lazy"
-            src="/images/svg/github.svg"
+            name="svg-github"
             width={30}
           />
         </figure>
@@ -695,11 +674,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Gitlab CI/CD icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/gitlab-logo.svg"
+            name="svg-gitlab-logo"
             width={30}
           />
         </figure>
@@ -726,11 +704,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Grunt icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/grunt.svg"
+            name="svg-grunt"
             width={30}
           />
         </figure>
@@ -757,11 +734,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Gulp icon"
+          <Component
+            className="c-skill__icon"
             height={40}
-            loading="lazy"
-            src="/images/svg/gulp.svg"
+            name="svg-gulp"
             width={40}
           />
         </figure>
@@ -788,11 +764,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="HTML5 icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/html.svg"
+            name="svg-html"
             width={30}
           />
         </figure>
@@ -819,11 +794,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Highcharts icon"
+          <Component
+            className="c-skill__icon"
             height={29}
-            loading="lazy"
-            src="/images/svg/highcharts.svg"
+            name="svg-highcharts"
             width={30}
           />
         </figure>
@@ -850,11 +824,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Ionic icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/ionic.svg"
+            name="svg-ionic"
             width={30}
           />
         </figure>
@@ -881,11 +854,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="JavaScript icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/javascript.svg"
+            name="svg-javascript"
             width={30}
           />
         </figure>
@@ -912,11 +884,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Jest icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/jest.svg"
+            name="svg-jest"
             width={30}
           />
         </figure>
@@ -943,11 +914,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="JSON icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/json.svg"
+            name="svg-json"
             width={28}
           />
         </figure>
@@ -974,11 +944,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="jQuery icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/jquery.svg"
+            name="svg-jquery"
             width={30}
           />
         </figure>
@@ -1005,11 +974,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="LESS icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/less.svg"
+            name="svg-less"
             width={30}
           />
         </figure>
@@ -1036,11 +1004,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Markdown icon"
+          <Component
+            className="c-skill__icon"
             height={20}
-            loading="lazy"
-            src="/images/svg/markdown.svg"
+            name="svg-markdown"
             width={32}
           />
         </figure>
@@ -1067,11 +1034,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="MJML icon"
+          <Component
+            className="c-skill__icon"
             height={26}
-            loading="lazy"
-            src="/images/svg/mjml.svg"
+            name="svg-mjml"
             width={30}
           />
         </figure>
@@ -1098,11 +1064,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Microsoft Azure icon"
+          <Component
+            className="c-skill__icon"
             height={24}
-            loading="lazy"
-            src="/images/svg/azure.svg"
+            name="svg-azure"
             width={30}
           />
         </figure>
@@ -1129,11 +1094,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Node JS icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/nodejs.svg"
+            name="svg-nodejs"
             width={30}
           />
         </figure>
@@ -1160,11 +1124,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Parcel Bundler icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/parcel.svg"
+            name="svg-parcel"
             width={30}
           />
         </figure>
@@ -1191,11 +1154,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="PHP icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/php.svg"
+            name="svg-php"
             width={30}
           />
         </figure>
@@ -1222,11 +1184,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Photoshop icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/photoshop.svg"
+            name="svg-photoshop"
             width={30}
           />
         </figure>
@@ -1253,11 +1214,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="PostCSS icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/postcss.svg"
+            name="svg-postcss"
             width={30}
           />
         </figure>
@@ -1284,11 +1244,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="React icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/react.svg"
+            name="svg-react"
             width={30}
           />
         </figure>
@@ -1315,11 +1274,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Redux icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/redux.svg"
+            name="svg-redux"
             width={30}
           />
         </figure>
@@ -1346,11 +1304,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Redux Saga icon"
+          <Component
+            className="c-skill__icon"
             height={19}
-            loading="lazy"
-            src="/images/svg/redux-saga.svg"
+            name="svg-redux-saga"
             width={30}
           />
         </figure>
@@ -1377,11 +1334,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Rollup icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/rollup.svg"
+            name="svg-rollup"
             width={30}
           />
         </figure>
@@ -1408,11 +1364,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="SASS icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/sass.svg"
+            name="svg-sass"
             width={30}
           />
         </figure>
@@ -1439,11 +1394,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="SVG icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/svg.svg"
+            name="svg-svg"
             width={30}
           />
         </figure>
@@ -1470,11 +1424,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="SVN icon"
+          <Component
+            className="c-skill__icon"
             height={22}
-            loading="lazy"
-            src="/images/svg/svn.svg"
+            name="svg-svn"
             width={30}
           />
         </figure>
@@ -1501,11 +1454,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Sketch icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/sketch.svg"
+            name="svg-sketch"
             width={30}
           />
         </figure>
@@ -1532,11 +1484,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Sublime Text icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/sublime-text.svg"
+            name="svg-sublime-text"
             width={30}
           />
         </figure>
@@ -1563,11 +1514,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Travis CI icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/travisci.svg"
+            name="svg-travisci"
             width={30}
           />
         </figure>
@@ -1594,11 +1544,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Typescript icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/typescript.svg"
+            name="svg-typescript"
             width={30}
           />
         </figure>
@@ -1625,11 +1574,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Vercel icon"
+          <Component
+            className="c-skill__icon"
             height={26}
-            loading="lazy"
-            src="/images/svg/vercel.svg"
+            name="svg-vercel"
             width={30}
           />
         </figure>
@@ -1656,11 +1604,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Visual Studio Code icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/vscode.svg"
+            name="svg-vscode"
             width={30}
           />
         </figure>
@@ -1687,11 +1634,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Vue icon"
+          <Component
+            className="c-skill__icon"
             height={26}
-            loading="lazy"
-            src="/images/svg/vue.svg"
+            name="svg-vue"
             width={30}
           />
         </figure>
@@ -1718,11 +1664,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="Webpack icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/webpack.svg"
+            name="svg-webpack"
             width={30}
           />
         </figure>
@@ -1749,11 +1694,10 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             }
           }
         >
-          <img
-            alt="WordPress icon"
+          <Component
+            className="c-skill__icon"
             height={30}
-            loading="lazy"
-            src="/images/svg/wordpress.svg"
+            name="svg-wordpress"
             width={30}
           />
         </figure>

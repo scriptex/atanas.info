@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { drawSkills } from '../../scripts/skills';
 import { Skill, skills } from '../../scripts/skills-list';
-import { Button, Section } from '..';
+import { Icon, Button, Section } from '..';
 
 export const SectionSkills: React.FunctionComponent = () => {
 	const [showTable, setShowTable] = React.useState(false);
@@ -31,12 +31,11 @@ export const SectionSkills: React.FunctionComponent = () => {
 					<div key={index} className="o-grid__item o-grid__item--1of4">
 						<div className="c-skill">
 							<figure style={{ backgroundColor: skill.fill }}>
-								<img
-									src={`/images/svg/${skill.icon}.svg`}
-									alt={`${skill.text} icon`}
+								<Icon
+									name={`svg-${skill.icon}`}
 									width={skill.width}
 									height={skill.height}
-									loading="lazy"
+									className="c-skill__icon"
 								/>
 							</figure>
 
