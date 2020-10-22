@@ -12,6 +12,7 @@
 	},
 	"plugins": ["@typescript-eslint", "jest"],
 	"ignorePatterns": [
+		"bin/*.js",
 		"jest.config.js",
 		"test-config/**/*",
 		"postcss.config.js",
