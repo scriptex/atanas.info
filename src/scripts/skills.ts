@@ -43,7 +43,7 @@ export const drawSkills = (words: Skill[]): void => {
 			nodes.each(function () {
 				const group: any = this.parentNode;
 				const name = select(group.querySelector('.skill-name'));
-				const image = select(group.querySelector('image'));
+				const image = select(group.querySelector('use'));
 				const duration = select(group.querySelector('.skill-duration'));
 
 				name.attr('x', (d: any) => d.x).attr('y', (d: any) => d.y);
@@ -156,11 +156,11 @@ export const createNodes = (
 		const imgHeight = height * mod;
 
 		group
-			.append('image')
+			.append('use')
 			.attr('width', imgWidth)
 			.attr('height', imgHeight)
 			.attr('transform', `translate(-${imgWidth / 2},-${imgHeight / 2})`)
-			.attr('xlink:xlink:href', `images/svg/${d.icon}.svg`);
+			.attr('xlink:xlink:href', `#svg-${d.icon}`);
 
 		group
 			.append('text')
