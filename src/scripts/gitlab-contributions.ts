@@ -39,10 +39,19 @@ export const renderContributions = (selector: string, data: IndexedList<number>)
 	const max = Math.max(...Object.values(data));
 	const svg = d3.select(selector).append('svg').attr('width', 795).attr('height', 105);
 	const range = d3.timeDay.range(yearAgo, new Date());
-	const days = svg.selectAll('rect').data(range);
+	const days = svg.selectAll('rect').data(range).enter().append('g');
 
-	days.enter()
-		.append('rect')
+	days.append('title').text(d => {
+		const key = getKey(data, d);
+
+		if (key) {
+			return `${data[key]} contributions on ${formatDate(d.toISOString())}`;
+		}
+
+		return null;
+	});
+
+	days.append('rect')
 		.attr('width', 14)
 		.attr('height', 14)
 		.attr('fill', d => {
