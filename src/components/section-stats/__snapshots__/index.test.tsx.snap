@@ -62,7 +62,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
           key="4"
         >
           <span>
-            Last active
+            Updated at
             :
           </span>
           <strong>
@@ -73,6 +73,17 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
           key="5"
         >
           <span>
+            Last active
+            :
+          </span>
+          <strong>
+            24 Jun 2019
+          </strong>
+        </li>
+        <li
+          key="6"
+        >
+          <span>
             Total repositories
             :
           </span>
@@ -81,7 +92,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
           </strong>
         </li>
         <li
-          key="6"
+          key="7"
         >
           <span>
             Private repositories
@@ -92,7 +103,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
           </strong>
         </li>
         <li
-          key="7"
+          key="8"
         >
           <span>
             Public repositories
@@ -103,7 +114,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
           </strong>
         </li>
         <li
-          key="8"
+          key="9"
         >
           <span>
             Organizations repositories
@@ -114,7 +125,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
           </strong>
         </li>
         <li
-          key="9"
+          key="10"
         >
           <span>
             Total gists
@@ -125,7 +136,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
           </strong>
         </li>
         <li
-          key="10"
+          key="11"
         >
           <span>
             Private gists
@@ -136,7 +147,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
           </strong>
         </li>
         <li
-          key="11"
+          key="12"
         >
           <span>
             Public gists
@@ -147,7 +158,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
           </strong>
         </li>
         <li
-          key="12"
+          key="13"
         >
           <span>
             Total contributions
@@ -158,7 +169,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
           </strong>
         </li>
         <li
-          key="13"
+          key="14"
         >
           <span>
             Total stars
@@ -169,7 +180,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
           </strong>
         </li>
         <li
-          key="14"
+          key="15"
         >
           <span>
             Total issues
@@ -205,7 +216,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
                 "backgroundColor": "#196127",
               }
             }
-            title="23 Jun 2019: 10 contributions"
+            title="10 contributions on 23 Jun 2019"
           />
           <div
             className="c-calendar__item"
@@ -215,7 +226,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
                 "backgroundColor": "#196127",
               }
             }
-            title="24 Jun 2019: 9 contributions"
+            title="9 contributions on 24 Jun 2019"
           />
         </div>
       </div>

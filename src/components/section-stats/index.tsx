@@ -28,7 +28,8 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 		{ title: 'Followers', value: general.followers },
 		{ title: 'Following', value: general.following },
 		{ title: 'Joined date', value: formatDate(general.createdAt) },
-		{ title: 'Last active', value: formatDate(general.updatedAt) },
+		{ title: 'Updated at', value: formatDate(general.updatedAt) },
+		{ title: 'Last active', value: formatDate(Object.keys(calendar).reverse()[0]) },
 		{ title: 'Total repositories', value: repositories.length },
 		{ title: 'Private repositories', value: general.privateRepos },
 		{ title: 'Public repositories', value: general.publicRepos },
@@ -97,7 +98,7 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 									style={{
 										backgroundColor: getColor(calendar[key].count, maxContributions)
 									}}
-									title={`${formatDate(key)}: ${calendar[key].count} contributions`}
+									title={`${calendar[key].count} contributions on ${formatDate(key)}`}
 								/>
 							))}
 						</div>

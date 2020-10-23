@@ -26,7 +26,11 @@ export const SectionPortfolio: React.FunctionComponent = () => {
 
 							<p>{app.description}</p>
 
-							<code>{app.details}</code>
+							<code>
+								Technologies used:
+								<br />
+								{app.details}
+							</code>
 						</ExternalLink>
 
 						<Slider
@@ -63,7 +67,8 @@ export const SectionPortfolio: React.FunctionComponent = () => {
 								<strong>{project.title}</strong>
 
 								<span>
-									<small>Technologies:</small>
+									<small>Technologies used:</small>
+									<br />
 									{project.description}
 								</span>
 							</div>
