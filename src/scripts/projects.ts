@@ -19,13 +19,13 @@ export const projects: Project[] = [
 		url: 'https://app.home.eon.com/',
 		image: 'images/temp/eon-home.png',
 		title: 'E.ON Home',
-		description: 'TypeScript, SCSS, React, Redux, MS Azure, NodeJS'
+		description: 'TypeScript, SCSS, React, Redux, MS Azure, AWS, NodeJS'
 	},
 	{
 		url: 'https://hems-admin-portal.eon.ooo/',
 		image: 'images/temp/eon-hems.png',
 		title: 'E.ON H.E.M.S (Home Energy Management System)',
-		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, NodeJS',
+		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS',
 		timeout: 5000
 	},
 	{
@@ -164,10 +164,10 @@ export const projects: Project[] = [
 
 export const mobileApps: MobileApp[] = [
 	{
-		url: 'https://apps.apple.com/gb/app/e-on-home-solar-and-heating/id1468486784',
+		url: 'https://apps.apple.com/gb/app/e-on-home-solar-and-heating/id1468486784#?platform=iphone',
 		title: 'E.ON Home for iPhone',
 		description: 'Smart energy management application for iOS',
-		details: 'TypeScript, SCSS, React Native, Redux, MS Azure, NodeJS',
+		details: 'TypeScript, SCSS, React Native, Redux, MS Azure, AWS, NodeJS',
 		images: [
 			'eon-home-iphone-dark1.png',
 			'eon-home-iphone-dark2.png',
@@ -183,14 +183,14 @@ export const mobileApps: MobileApp[] = [
 		url: 'https://play.google.com/store/apps/details?id=com.eon.home.eu&hl=en',
 		title: 'E.ON Home for Android',
 		description: 'Smart energy management application for Android',
-		details: 'TypeScript, SCSS, React Native, Redux, MS Azure, NodeJS',
+		details: 'TypeScript, SCSS, React Native, Redux, MS Azure, AWS, NodeJS',
 		images: ['eon-home-android1.webp', 'eon-home-android2.webp', 'eon-home-android3.webp', 'eon-home-android4.webp']
 	},
 	{
 		url: 'https://apps.apple.com/gb/app/e-on-home-solar-and-heating/id1468486784#?platform=ipad',
 		title: 'E.ON Home for iPad',
 		description: 'Smart energy management application for iOS',
-		details: 'TypeScript, SCSS, React Native, Redux, MS Azure, NodeJS',
+		details: 'TypeScript, SCSS, React Native, Redux, MS Azure, AWS, NodeJS',
 		images: ['eon-home-ipad-dark.jpg', 'eon-home-ipad-light.jpg']
 	}
 ];
