@@ -438,6 +438,11 @@ body {
 	z-index: 2;
 	transform: translate(-50%, -50%);
 
+	& h2 {
+		perspective: 50rem;
+		perspective-origin: 50% 10rem;
+	}
+
 	& span {
 		text-align: center;
 		position: absolute;
@@ -446,9 +451,15 @@ body {
 		left: 0;
 		opacity: 0;
 		transition: all var(--timing) var(--easing);
+		transform: rotateY(-90deg) translateZ(9rem);
+
+		&:nth-child(odd) {
+			transform: rotateY(90deg) translateZ(9rem);
+		}
 
 		&.current {
 			opacity: 1;
+			transform: rotateY(0deg) translateZ(0);
 		}
 	}
 }
