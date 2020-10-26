@@ -15,7 +15,7 @@ export const Slider: React.FunctionComponent = () => {
 	return (
 		<div className="c-slider">
 			<h1>
-				Hello! <br />I am Atanas Atanasov
+				👋 Hello! <br />I am Atanas Atanasov
 			</h1>
 
 			<h2>

@@ -18,5 +18,29 @@ exports[`Footer component Should render the Footer component 1`] = `
     </p>
     <social-links />
   </div>
+  <div
+    className="o-shell text-center"
+  >
+    <small>
+      Designed and developed by Atanas Atanasov.
+    </small>
+    <small>
+      All code is licensed under
+       
+      <Component
+        href="https://github.com/scriptex/atanas.info/blob/master/LICENSE"
+      >
+        MIT license
+      </Component>
+       
+      and available 
+      <Component
+        href="https://github.com/scriptex/atanas.info/"
+      >
+        on Github
+      </Component>
+      .
+    </small>
+  </div>
 </footer>
 `;
