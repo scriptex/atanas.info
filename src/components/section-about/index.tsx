@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { Section, ExternalLink } from '..';
 import { bio, BioEntry } from '../../scripts/bio';
+import { Section, ExternalLink } from '..';
 
 export const SectionAbout: React.FunctionComponent = () => (
 	<Section
@@ -29,6 +29,36 @@ export const SectionAbout: React.FunctionComponent = () => (
 		))}
 
 		<div className="c-article__block">
+			<h3>Current occupation</h3>
+
+			<ul>
+				<li>
+					A Lead front-end developer at E.ON working on the{' '}
+					<strong>
+						<ExternalLink href="https://www.red-dot.org/project/eon-home-49256">award winning</ExternalLink>
+					</strong>{' '}
+					web and mobile smart energy managemet application E.ON Home.
+				</li>
+
+				<li>
+					A Senior software developer at{' '}
+					<strong>
+						<ExternalLink href="https://www.toptal.com/resume/atanas-atanasov">Toptal</ExternalLink>
+					</strong>
+				</li>
+
+				<li>
+					A Founding member and Senior JavaScript/TypeScript enginner at{' '}
+					<strong>
+						<ExternalLink href="https://app.usebraintrust.com/talent/782/">Braintrust</ExternalLink>
+					</strong>
+				</li>
+			</ul>
+
+			<br />
+
+			<br />
+
 			<h3>Connect with me</h3>
 
 			<p>

@@ -140,6 +140,48 @@ exports[`SectionAbout component Should render the SectionAbout component 1`] = `
     className="c-article__block"
   >
     <h3>
+      Current occupation
+    </h3>
+    <ul>
+      <li>
+        A Lead front-end developer at E.ON working on the
+         
+        <strong>
+          <Component
+            href="https://www.red-dot.org/project/eon-home-49256"
+          >
+            award winning
+          </Component>
+        </strong>
+         
+        web and mobile smart energy managemet application E.ON Home.
+      </li>
+      <li>
+        A Senior software developer at
+         
+        <strong>
+          <Component
+            href="https://www.toptal.com/resume/atanas-atanasov"
+          >
+            Toptal
+          </Component>
+        </strong>
+      </li>
+      <li>
+        A Founding member and Senior JavaScript/TypeScript enginner at
+         
+        <strong>
+          <Component
+            href="https://app.usebraintrust.com/talent/782/"
+          >
+            Braintrust
+          </Component>
+        </strong>
+      </li>
+    </ul>
+    <br />
+    <br />
+    <h3>
       Connect with me
     </h3>
     <p>
