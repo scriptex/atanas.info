@@ -1,6 +1,6 @@
 #!/bin/sh
 
-node bin/svg.js
+svgo-viewbox -i static/images/svg -f svgo.yml
 
 spritesh -q -i static/images/svg -o static/sprite.svg -p svg-
 
