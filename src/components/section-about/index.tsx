@@ -8,10 +8,15 @@ export const LastAbout: React.FunctionComponent = () => (
 		<h3>Current occupation</h3>
 
 		<ul>
-                        <li>
-Senior JavaScript/TypeScript developer and mentor at <strong><ExternalLink href="https://github.com/three11">Three 11</ExternalLink></strong>
+			<li>
+				A Senior JavaScript/TypeScript engineer and front-end mentor at{' '}
+				<strong>
+					<ExternalLink href="https://github.com/three11">Three 11</ExternalLink>
+				</strong>
+				working on various boutique web applications including XPND, Kinetik Automotive and many more.
 			</li>
-<li>
+
+			<li>
 				A Lead front-end developer at E.ON working on the{' '}
 				<strong>
 					<ExternalLink href="https://www.red-dot.org/project/eon-home-49256">award winning</ExternalLink>
@@ -33,8 +38,6 @@ Senior JavaScript/TypeScript developer and mentor at <strong><ExternalLink href=
 				</strong>
 			</li>
 		</ul>
-
-		<br />
 
 		<br />
 
