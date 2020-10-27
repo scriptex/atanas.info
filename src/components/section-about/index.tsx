@@ -8,7 +8,10 @@ export const LastAbout: React.FunctionComponent = () => (
 		<h3>Current occupation</h3>
 
 		<ul>
-			<li>
+                        <li>
+Senior JavaScript/TypeScript developer and mentor at <strong><ExternalLink href="https://github.com/three11">Three 11</ExternalLink></strong>
+			</li>
+<li>
 				A Lead front-end developer at E.ON working on the{' '}
 				<strong>
 					<ExternalLink href="https://www.red-dot.org/project/eon-home-49256">award winning</ExternalLink>
