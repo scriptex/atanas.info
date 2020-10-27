@@ -119,7 +119,7 @@ export const SectionTimeline: React.FunctionComponent = () => (
 			</VerticalTimelineElement>
 
 			<VerticalTimelineElement date="June 2018" icon={<WorkIcon />}>
-				<h3 className="vertical-timeline-element-title">🧑‍🔬 I joined Toptal as a freelancer!</h3>
+				<h3 className="vertical-timeline-element-title">🔝 I joined Toptal as a freelancer!</h3>
 				<h4 className="vertical-timeline-element-subtitle">📍 remote</h4>
 				<p>I was accepted amongst the top 3% of the developers in the world!</p>
 			</VerticalTimelineElement>
@@ -142,7 +142,7 @@ export const SectionTimeline: React.FunctionComponent = () => (
 				<h3 className="vertical-timeline-element-title">👼 Simeon was born! 🍼</h3>
 				<h4 className="vertical-timeline-element-subtitle">📍 Varna, Bulgaria</h4>
 				<p>
-					Just when I thought it couldn&apos;t get any better, my second son was borned! Simeon came and
+					Just when I thought it couldn&apos;t get any better, my second son was born! Simeon came and
 					enlightened our days once more.
 				</p>
 			</VerticalTimelineElement>
