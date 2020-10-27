@@ -1,5 +1,6 @@
 @import 'itcss';
 @import 'slick-carousel/slick/slick.css';
+@import 'react-vertical-timeline-component/style.min.css';
 
 @define-mixin slanted {
 	color: var(--color-primary);
@@ -1607,6 +1608,74 @@ body {
 
 		& .c-section__body {
 			padding-bottom: 0;
+		}
+	}
+}
+
+/* section timeline */
+
+.c-section--timeline {
+	text-align: center;
+	position: relative;
+	z-index: 2;
+	padding: 4rem 0;
+	border-bottom: 8rem solid color-mod(var(--color-primary) a(85%));
+	overflow: hidden;
+
+	& h2 {
+		margin-bottom: 4rem;
+		@mixin slanted;
+	}
+
+	& .vertical-timeline {
+		color: var(--color-secondary);
+		text-align: left;
+		margin-bottom: 2.5rem;
+
+		&::before {
+			background-color: var(--color-action);
+		}
+	}
+
+	& .vertical-timeline-element-icon {
+		background-color: var(--color-primary);
+		box-shadow: 0 0 0 0.25rem var(--color-action), inset 0 0.125rem 0 rgba(0, 0, 0, 0.08),
+			0 0.125rem 0 0.25rem rgba(0, 0, 0, 0.05);
+	}
+
+	& .vertical-timeline-element-subtitle {
+		padding-bottom: 1.25rem;
+		border-bottom: 0.25rem solid var(--color-action);
+	}
+
+	& .vertical-timeline-element-content {
+		padding: 1rem;
+		box-shadow: 0 0 0 0.25rem var(--color-action);
+	}
+
+	& .vertical-timeline-element-content-arrow {
+		top: 16px !important;
+		border-width: 1rem;
+		border-right-color: var(--color-action);
+	}
+}
+
+@media (--mobile) {
+	.c-section--timeline {
+		padding: 2rem 0;
+		border-bottom-width: 4rem;
+
+		& h2 {
+			margin-bottom: 2rem;
+		}
+
+		& .vertical-timeline {
+			margin-bottom: 0.5rem;
+		}
+
+		& .vertical-timeline-element-content-arrow {
+			top: 0.625rem !important;
+			border-width: 0.75rem;
 		}
 	}
 }

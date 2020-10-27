@@ -16,6 +16,7 @@ import {
 	SectionSlides,
 	SectionVideos,
 	SectionArticles,
+	SectionTimeline,
 	SectionPortfolio,
 	SectionCertificates
 } from '..';
@@ -44,6 +45,8 @@ export const App: React.FunctionComponent = () => {
 				<SectionHello />
 
 				<SectionAbout />
+
+				<SectionTimeline />
 
 				<SectionSkills />
 
