@@ -9,6 +9,14 @@ export const LastAbout: React.FunctionComponent = () => (
 
 		<ul>
 			<li>
+				A Senior JavaScript/TypeScript engineer and front-end mentor at{' '}
+				<strong>
+					<ExternalLink href="https://github.com/three11">Three 11</ExternalLink>
+				</strong>
+				working on various boutique web applications including XPND, Kinetik Automotive and many more.
+			</li>
+
+			<li>
 				A Lead front-end developer at E.ON working on the{' '}
 				<strong>
 					<ExternalLink href="https://www.red-dot.org/project/eon-home-49256">award winning</ExternalLink>
@@ -30,8 +38,6 @@ export const LastAbout: React.FunctionComponent = () => (
 				</strong>
 			</li>
 		</ul>
-
-		<br />
 
 		<br />
 
