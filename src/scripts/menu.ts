@@ -18,6 +18,11 @@ export const links: Array<Readonly<Link>> = [
 		content: 'About'
 	},
 	{
+		href: '#timeline',
+		title: 'Life events',
+		content: 'Timeline'
+	},
+	{
 		href: '#skills',
 		title: 'My skills',
 		content: 'Skills'
