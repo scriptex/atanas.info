@@ -1660,6 +1660,15 @@ body {
 	}
 }
 
+@media (--tablet-landscape) {
+	.c-section--timeline {
+		& .vertical-timeline-element-content-arrow {
+			top: 0.625rem !important;
+			border-width: 0.75rem;
+		}
+	}
+}
+
 @media (--mobile) {
 	.c-section--timeline {
 		padding: 2rem 0;
@@ -1671,11 +1680,6 @@ body {
 
 		& .vertical-timeline {
 			margin-bottom: 0.5rem;
-		}
-
-		& .vertical-timeline-element-content-arrow {
-			top: 0.625rem !important;
-			border-width: 0.75rem;
 		}
 	}
 }
