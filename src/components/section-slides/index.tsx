@@ -4,7 +4,7 @@ import { Slide, slides } from '../../scripts/slides';
 import { Section, SectionNav } from '..';
 
 export const SectionSlides: React.FunctionComponent = () => {
-	const [activeIndex, setActiveIndex] = React.useState(-1);
+	const [activeIndex, setActiveIndex] = React.useState(0);
 
 	return (
 		<Section id="slides" hasButton={true}>
@@ -13,24 +13,18 @@ export const SectionSlides: React.FunctionComponent = () => {
 			<SectionNav name="title" data={slides} active={activeIndex} onClick={setActiveIndex} />
 
 			<div className="c-section__body">
-				{activeIndex === -1 ? (
-					<div className="text-center">
-						<em>Select a slide to view</em>
+				{slides.map((slide: Slide, index: number) => (
+					<div key={index} className={`c-section__frame${activeIndex === index ? ' current' : ''}`}>
+						<iframe
+							src={`${slide.url}/embed?start=false&loop=false&delayms=3000`}
+							title={slide.description}
+							/* eslint-disable-next-line @typescript-eslint/ban-ts-comment*/
+							// @ts-ignore
+							loading="lazy"
+							allowFullScreen={true}
+						/>
 					</div>
-				) : (
-					slides.map((slide: Slide, index: number) => (
-						<div key={index} className={`c-section__frame${activeIndex === index ? ' current' : ''}`}>
-							<iframe
-								src={`${slide.url}/embed?start=false&loop=false&delayms=3000`}
-								title={slide.description}
-								/* eslint-disable-next-line @typescript-eslint/ban-ts-comment*/
-								// @ts-ignore
-								loading="lazy"
-								allowFullScreen={true}
-							/>
-						</div>
-					))
-				)}
+				))}
 			</div>
 		</Section>
 	);

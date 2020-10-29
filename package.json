@@ -3,7 +3,7 @@
 	"version": "1.1.0",
 	"description": "Atanas Atanasov's Personal Website",
 	"scripts": {
-		"fetch-stats": "ts-node ./server/fetch-stats.ts",
+		"fetch-stats": "ts-node ./src/scripts/fetch-stats.ts",
 		"fetch-music": "ts-node ./src/scripts/fetch-music.ts",
 		"fetch-projects": "ts-node ./projects/.vuepress/fetch-projects.ts",
 		"start-projects": "cd projects && vuepress dev",
@@ -100,7 +100,7 @@
 		"@types/node": "14.14.6",
 		"@types/node-fetch": "2.5.7",
 		"@types/puppeteer": "3.0.2",
-		"@types/react": "16.9.54",
+		"@types/react": "16.9.55",
 		"@types/react-dom": "16.9.9",
 		"@types/react-helmet": "6.1.0",
 		"@types/react-slick": "0.23.4",
@@ -144,7 +144,7 @@
 		"postcss-preset-env": "6.7.0",
 		"prettier": "2.1.2",
 		"puppeteer": "5.4.1",
-		"sass": "1.27.0",
+		"sass": "1.27.1",
 		"spritesh": "1.2.1",
 		"stylelint": "13.7.2",
 		"stylelint-config-recommended": "3.0.0",
@@ -160,7 +160,7 @@
 		"yarn-deduplicate": "3.1.0"
 	},
 	"resolutions": {
-		"@types/react": "16.9.54"
+		"@types/react": "16.9.55"
 	},
 	"browserslist": [
 		"> 1%",

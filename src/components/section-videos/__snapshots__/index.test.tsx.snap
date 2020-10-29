@@ -11,7 +11,7 @@ exports[`SectionVideos component Should render the SectionVideos component 1`] =
     Videos
   </h2>
   <Component
-    active={-1}
+    active={0}
     data={
       Array [
         Object {
@@ -33,11 +33,26 @@ exports[`SectionVideos component Should render the SectionVideos component 1`] =
     className="c-section__body"
   >
     <div
-      className="text-center"
+      className="c-section__frame current"
+      key="0"
     >
-      <em>
-        Select a video to view
-      </em>
+      <iframe
+        allowFullScreen={true}
+        loading="lazy"
+        src="https://www.youtube.com/embed/5xcqprI17FQ"
+        title="Presentation about optimizing the web development workflow using Sublime Text editor"
+      />
+    </div>
+    <div
+      className="c-section__frame"
+      key="1"
+    >
+      <iframe
+        allowFullScreen={true}
+        loading="lazy"
+        src="https://www.youtube.com/embed/s-klXHLIZyY"
+        title="Presentation about the new and optimized frontend projects setup"
+      />
     </div>
   </div>
 </Component>
