@@ -64,5 +64,6 @@ module.exports = {
 		'three11/react-template-ts',
 		'three11/scrollspy',
 		'three11/vuejs-template'
-	]
+	],
+	main: ['three11/email-template']
 };

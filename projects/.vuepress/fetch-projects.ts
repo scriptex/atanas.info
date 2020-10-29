@@ -6,6 +6,11 @@ import { writeFileSync, unlinkSync, existsSync } from 'fs';
 
 import { asyncForEach } from '../../insights/utils';
 
+type OpenSource = {
+	main: string[];
+	projects: string[];
+};
+
 const fetchProject = async (repo: string, branch: string = 'master', file: string = 'README.md'): Promise<string> => {
 	const rootURL = 'https://raw.githubusercontent.com';
 	const filepath = `${rootURL}/${repo}/${branch}/${file}`;
@@ -14,13 +19,13 @@ const fetchProject = async (repo: string, branch: string = 'master', file: strin
 };
 
 (async () => {
-	const { projects }: { projects: string[] } = await import('../../src/scripts/open-source' as any);
+	const { main, projects }: OpenSource = await import('../../src/scripts/open-source' as any);
 
 	if (!projects.length) {
 		console.log('atanas.info: No projects specified.');
 	} else {
 		asyncForEach(projects, (project: string) => {
-			fetchProject(project)
+			fetchProject(project, main.includes(project) ? 'main' : 'master')
 				.then((data: string) => {
 					const name = project.split('/').pop();
 					const path = `projects/${name}.md`;
