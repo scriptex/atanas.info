@@ -1,23 +1,53 @@
 #!/usr/bin/env ts-node-script
 
 import { writeFileSync } from 'fs';
-import fetch from 'node-fetch';
+
+import fetch, { Response, RequestInit } from 'node-fetch';
+
+interface EndpointConfig {
+	readonly url: string;
+	readonly file: string;
+	readonly init: RequestInit;
+}
+
+const ENDPOINTS: Record<string, EndpointConfig> = {
+	npm: {
+		url: 'https://api.npms.io/v2/search?q=maintainer:scriptex&size=100&from=0',
+		init: {},
+		file: './src/scripts/npm.json'
+	},
+	sourcerer: {
+		url: 'https://sourcerer.io/api/face/user/profile/scriptex',
+		init: {
+			headers: {
+				'Content-Type': 'application/octet-stream',
+				External: 'yes'
+			}
+		},
+		file: './src/scripts/sourcerer.txt'
+	},
+	codersrank: {
+		url: 'https://api.codersrank.io/app/candidate/GetScore',
+		init: {
+			headers: {
+				'content-type': 'application/json'
+			},
+			body: '{"username":"scriptex"}',
+			method: 'POST'
+		},
+		file: './src/scripts/codersrank.json'
+	}
+};
+
+const getData = async (endpoint: EndpointConfig, method = 'json'): Promise<any> => {
+	return await fetch(endpoint.url, endpoint.init).then((r: Response) => (method === 'json' ? r.json() : r.text()));
+};
 
 (async () => {
-	const codersrank = await fetch('https://api.codersrank.io/app/candidate/GetScore', {
-		headers: {
-			'content-type': 'application/json'
-		},
-		body: '{"username":"scriptex"}',
-		method: 'POST'
-	}).then(r => r.json());
-
-	const sourcerer = await fetch('https://sourcerer.io/api/face/user/profile/scriptex', {
-		headers: {
-			'Content-Type': 'application/octet-stream',
-			External: 'yes'
-		}
-	}).then(r => r.arrayBuffer());
+	const { npm, sourcerer, codersrank } = ENDPOINTS;
+	const npmData = await getData(npm);
+	const sourcererData = await getData(sourcerer, 'text');
+	const codersrankData = await getData(codersrank);
 
 	// loadProfileData: function(e) {
 	// 	var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -26,6 +56,7 @@ import fetch from 'node-fetch';
 	// 	}).then(m.a.from)
 	// },
 
-	writeFileSync('./src/scripts/sourcerer.json', JSON.stringify(new Uint8Array(sourcerer), null, 2));
-	writeFileSync('./src/scripts/codersrank.json', JSON.stringify(codersrank, null, 2));
+	writeFileSync(npm.file, JSON.stringify(npmData, null, 2));
+	writeFileSync(sourcerer.file, sourcererData);
+	writeFileSync(codersrank.file, JSON.stringify(codersrankData, null, 2));
 })();
