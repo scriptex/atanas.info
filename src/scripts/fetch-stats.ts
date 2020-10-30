@@ -2,7 +2,14 @@
 
 import { writeFileSync } from 'fs';
 
+import * as puppeteer from 'puppeteer';
 import fetch, { Response, RequestInit } from 'node-fetch';
+
+declare module 'puppeteer' {
+	export interface Page {
+		waitForTimeout(duration: number): Promise<void>;
+	}
+}
 
 interface EndpointConfig {
 	readonly url: string;
@@ -17,14 +24,9 @@ const ENDPOINTS: Record<string, EndpointConfig> = {
 		file: './src/scripts/npm.json'
 	},
 	sourcerer: {
-		url: 'https://sourcerer.io/api/face/user/profile/scriptex',
-		init: {
-			headers: {
-				'Content-Type': 'application/octet-stream',
-				External: 'yes'
-			}
-		},
-		file: './src/scripts/sourcerer.txt'
+		url: 'https://sourcerer.io/scriptex',
+		init: {},
+		file: './src/scripts/sourcerer.json'
 	},
 	codersrank: {
 		url: 'https://api.codersrank.io/app/candidate/GetScore',
@@ -43,20 +45,41 @@ const getData = async (endpoint: EndpointConfig, method = 'json'): Promise<any> 
 	return await fetch(endpoint.url, endpoint.init).then((r: Response) => (method === 'json' ? r.json() : r.text()));
 };
 
+const getDataFromWebsite = async (url: EndpointConfig['url']): Promise<Record<string, any>> => {
+	const browser = await puppeteer.launch({
+		headless: true,
+		args: ['--no-sandbox']
+	});
+
+	const page = await browser.newPage();
+
+	await page.goto(url, { waitUntil: 'networkidle2' });
+	await page.waitForTimeout(5000);
+
+	const element = await page.$('#__nuxt');
+
+	let result = {};
+
+	if (element) {
+		try {
+			result = await page.evaluate(element => element.__vue__.$store.state, element);
+		} catch (e) {
+			console.error('Element or property not found.');
+		}
+	}
+
+	await browser.close();
+
+	return result;
+};
+
 (async () => {
 	const { npm, sourcerer, codersrank } = ENDPOINTS;
 	const npmData = await getData(npm);
-	const sourcererData = await getData(sourcerer, 'text');
+	const sourcererData = await getDataFromWebsite(sourcerer.url);
 	const codersrankData = await getData(codersrank);
 
-	// loadProfileData: function(e) {
-	// 	var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-	// 	return n.a.$b.face.get("/user/profile/" + e, t).then(function(e) {
-	// 		return d.a.parse(e.data).to("ProfileResult")
-	// 	}).then(m.a.from)
-	// },
-
 	writeFileSync(npm.file, JSON.stringify(npmData, null, 2));
-	writeFileSync(sourcerer.file, sourcererData);
+	writeFileSync(sourcerer.file, JSON.stringify(sourcererData, null, 2));
 	writeFileSync(codersrank.file, JSON.stringify(codersrankData, null, 2));
 })();
