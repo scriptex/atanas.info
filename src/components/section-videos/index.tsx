@@ -1,4 +1,5 @@
 import * as React from 'react';
+import 'lite-youtube-embed';
 
 import { Section, SectionNav } from '..';
 import { presentations, Presentation } from '../../scripts/presentations';
@@ -15,13 +16,11 @@ export const SectionVideos: React.FunctionComponent = () => {
 			<div className="c-section__body">
 				{presentations.map((presentation: Presentation, index: number) => (
 					<div key={index} className={`c-section__frame${activeIndex === index ? ' current' : ''}`}>
-						<iframe
-							src={`${presentation.url}`}
+						<lite-youtube
 							title={presentation.description}
-							/* eslint-disable-next-line @typescript-eslint/ban-ts-comment*/
-							// @ts-ignore
-							loading="lazy"
-							allowFullScreen={true}
+							params="autoplay=0"
+							videoid={`${presentation.id}`}
+							playlabel={presentation.title}
 						/>
 					</div>
 				))}

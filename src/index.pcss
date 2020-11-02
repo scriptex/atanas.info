@@ -1,5 +1,6 @@
 @import 'itcss';
 @import 'slick-carousel/slick/slick.css';
+@import 'lite-youtube-embed/src/lite-yt-embed.css';
 @import 'react-vertical-timeline-component/style.min.css';
 
 @define-mixin slanted {
@@ -1444,7 +1445,10 @@ body {
 		}
 	}
 
-	& iframe {
+	/* prettier-ignore */
+	& iframe,
+	& lite-youtube { /* stylelint-disable-line selector-type-no-unknown */
+		max-width: none;
 		width: 100%;
 		height: 100%;
 		display: block;
@@ -1459,6 +1463,7 @@ body {
 	}
 
 	& .c-section__body {
+		position: relative;
 		padding-bottom: 3rem;
 
 		&.o-grid {
@@ -1472,12 +1477,19 @@ body {
 
 	& .c-section__frame {
 		height: 0;
-		display: none;
-		position: relative;
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
 		padding-bottom: 62.5%;
+		transition: all var(--timing) var(--easing);
 
 		&.current {
-			display: block;
+			position: relative;
+			opacity: 1;
+			visibility: visible;
 		}
 	}
 }
