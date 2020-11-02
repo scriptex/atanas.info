@@ -26,6 +26,7 @@ declare module '*.json' {
 declare namespace JSX {
 	interface IntrinsicElements {
 		'social-links': any;
+		'lite-youtube': any;
 		'codersrank-widget': any;
 	}
 }

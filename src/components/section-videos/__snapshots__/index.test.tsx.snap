@@ -16,11 +16,13 @@ exports[`SectionVideos component Should render the SectionVideos component 1`] =
       Array [
         Object {
           "description": "Presentation about optimizing the web development workflow using Sublime Text editor",
+          "id": "5xcqprI17FQ",
           "title": "Do more with Sublime Text",
           "url": "https://www.youtube.com/embed/5xcqprI17FQ",
         },
         Object {
           "description": "Presentation about the new and optimized frontend projects setup",
+          "id": "s-klXHLIZyY",
           "title": "Jarvis: Frontend project setup",
           "url": "https://www.youtube.com/embed/s-klXHLIZyY",
         },
@@ -36,22 +38,22 @@ exports[`SectionVideos component Should render the SectionVideos component 1`] =
       className="c-section__frame current"
       key="0"
     >
-      <iframe
-        allowFullScreen={true}
-        loading="lazy"
-        src="https://www.youtube.com/embed/5xcqprI17FQ"
+      <lite-youtube
+        params="autoplay=0"
+        playlabel="Do more with Sublime Text"
         title="Presentation about optimizing the web development workflow using Sublime Text editor"
+        videoid="5xcqprI17FQ"
       />
     </div>
     <div
       className="c-section__frame"
       key="1"
     >
-      <iframe
-        allowFullScreen={true}
-        loading="lazy"
-        src="https://www.youtube.com/embed/s-klXHLIZyY"
+      <lite-youtube
+        params="autoplay=0"
+        playlabel="Jarvis: Frontend project setup"
         title="Presentation about the new and optimized frontend projects setup"
+        videoid="s-klXHLIZyY"
       />
     </div>
   </div>
