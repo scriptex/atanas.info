@@ -24,6 +24,21 @@ const fetchProject = async (repo: string, branch: string = 'master', file: strin
 	if (!projects.length) {
 		console.log('atanas.info: No projects specified.');
 	} else {
+		fetchProject('scriptex/scriptex', 'master').then((data: string) => {
+			const path = `projects/README.md`;
+
+			data = data.replace(/\(http:\/\//gi, '(https://');
+			data = data.replace(/```sh/gi, '```bash');
+
+			if (existsSync(path)) {
+				unlinkSync(path);
+			}
+
+			writeFileSync(path, data);
+
+			console.log('atanas.info: Saved projects README');
+		});
+
 		asyncForEach(projects, (project: string) => {
 			fetchProject(project, main.includes(project) ? 'main' : 'master')
 				.then((data: string) => {
