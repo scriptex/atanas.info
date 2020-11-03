@@ -191,14 +191,14 @@ export const mobileApps: MobileApp[] = [
 		description: 'Smart energy management application for iOS',
 		details: 'TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS',
 		images: [
-			'foton-home-iphone-dark1.png',
-			'foton-home-iphone-dark2.png',
-			'foton-home-iphone-dark3.png',
-			'foton-home-iphone-dark4.png',
 			'foton-home-iphone-light1.png',
 			'foton-home-iphone-light2.png',
 			'foton-home-iphone-light3.png',
-			'foton-home-iphone-light4.png'
+			'foton-home-iphone-light4.png',
+			'foton-home-iphone-dark1.png',
+			'foton-home-iphone-dark2.png',
+			'foton-home-iphone-dark3.png',
+			'foton-home-iphone-dark4.png'
 		]
 	},
 	{
@@ -223,14 +223,14 @@ export const mobileApps: MobileApp[] = [
 		description: 'Smart energy management application for Android',
 		details: 'TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS',
 		images: [
-			'foton-home-android1.webp',
-			'foton-home-android2.webp',
-			'foton-home-android3.webp',
-			'foton-home-android4.webp',
 			'foton-home-android5.webp',
 			'foton-home-android6.webp',
 			'foton-home-android7.webp',
-			'foton-home-android8.webp'
+			'foton-home-android8.webp',
+			'foton-home-android1.webp',
+			'foton-home-android2.webp',
+			'foton-home-android3.webp',
+			'foton-home-android4.webp'
 		]
 	},
 	{
@@ -245,6 +245,6 @@ export const mobileApps: MobileApp[] = [
 		title: 'Foton Home for iPad',
 		description: 'Smart energy management application for iPad',
 		details: 'TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS',
-		images: ['foton-home-ipad-dark.jpg', 'foton-home-ipad-light.jpg']
+		images: ['foton-home-ipad-light.png', 'foton-home-ipad-dark.png']
 	}
 ];
