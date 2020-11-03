@@ -120,7 +120,100 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       key="1"
     >
       <Component
-        href="https://play.google.com/store/apps/details?id=com.eon.home.eu&hl=en"
+        href="https://apps.apple.com/us/app/foton-home/id1525688620#?platform=iphone"
+      >
+        <h3>
+          Foton Home for iPhone
+        </h3>
+        <p>
+          Smart energy management application for iOS
+        </p>
+        <code>
+          Technologies used:
+          <br />
+          TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS
+        </code>
+      </Component>
+      <Slider
+        autoplaySpeed={5000}
+        dots={false}
+        infinite={true}
+        slidesToScroll={1}
+        slidesToShow={2}
+        speed={500}
+      >
+        <div
+          key="0"
+        >
+          <img
+            alt="Foton Home for iPhone screenshot 1"
+            src="images/temp/foton-home-iphone-dark1.png"
+          />
+        </div>
+        <div
+          key="1"
+        >
+          <img
+            alt="Foton Home for iPhone screenshot 2"
+            src="images/temp/foton-home-iphone-dark2.png"
+          />
+        </div>
+        <div
+          key="2"
+        >
+          <img
+            alt="Foton Home for iPhone screenshot 3"
+            src="images/temp/foton-home-iphone-dark3.png"
+          />
+        </div>
+        <div
+          key="3"
+        >
+          <img
+            alt="Foton Home for iPhone screenshot 4"
+            src="images/temp/foton-home-iphone-dark4.png"
+          />
+        </div>
+        <div
+          key="4"
+        >
+          <img
+            alt="Foton Home for iPhone screenshot 5"
+            src="images/temp/foton-home-iphone-light1.png"
+          />
+        </div>
+        <div
+          key="5"
+        >
+          <img
+            alt="Foton Home for iPhone screenshot 6"
+            src="images/temp/foton-home-iphone-light2.png"
+          />
+        </div>
+        <div
+          key="6"
+        >
+          <img
+            alt="Foton Home for iPhone screenshot 7"
+            src="images/temp/foton-home-iphone-light3.png"
+          />
+        </div>
+        <div
+          key="7"
+        >
+          <img
+            alt="Foton Home for iPhone screenshot 8"
+            src="images/temp/foton-home-iphone-light4.png"
+          />
+        </div>
+      </Slider>
+    </div>
+    <div
+      className="c-section__slider"
+      key="2"
+    >
+      <Component
+        href="https://play.google.com/store/apps/details?id=com.eon.home.eu"
       >
         <h3>
           E.ON Home for Android
@@ -174,11 +267,136 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
             src="images/temp/eon-home-android4.webp"
           />
         </div>
+        <div
+          key="4"
+        >
+          <img
+            alt="E.ON Home for Android screenshot 5"
+            src="images/temp/eon-home-android5.webp"
+          />
+        </div>
+        <div
+          key="5"
+        >
+          <img
+            alt="E.ON Home for Android screenshot 6"
+            src="images/temp/eon-home-android6.webp"
+          />
+        </div>
+        <div
+          key="6"
+        >
+          <img
+            alt="E.ON Home for Android screenshot 7"
+            src="images/temp/eon-home-android7.webp"
+          />
+        </div>
+        <div
+          key="7"
+        >
+          <img
+            alt="E.ON Home for Android screenshot 8"
+            src="images/temp/eon-home-android8.webp"
+          />
+        </div>
       </Slider>
     </div>
     <div
       className="c-section__slider"
-      key="2"
+      key="3"
+    >
+      <Component
+        href="https://play.google.com/store/apps/details?id=com.foton.home.eu"
+      >
+        <h3>
+          Foton Home for Android
+        </h3>
+        <p>
+          Smart energy management application for Android
+        </p>
+        <code>
+          Technologies used:
+          <br />
+          TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS
+        </code>
+      </Component>
+      <Slider
+        autoplaySpeed={5000}
+        dots={false}
+        infinite={true}
+        slidesToScroll={1}
+        slidesToShow={2}
+        speed={500}
+      >
+        <div
+          key="0"
+        >
+          <img
+            alt="Foton Home for Android screenshot 1"
+            src="images/temp/foton-home-android1.webp"
+          />
+        </div>
+        <div
+          key="1"
+        >
+          <img
+            alt="Foton Home for Android screenshot 2"
+            src="images/temp/foton-home-android2.webp"
+          />
+        </div>
+        <div
+          key="2"
+        >
+          <img
+            alt="Foton Home for Android screenshot 3"
+            src="images/temp/foton-home-android3.webp"
+          />
+        </div>
+        <div
+          key="3"
+        >
+          <img
+            alt="Foton Home for Android screenshot 4"
+            src="images/temp/foton-home-android4.webp"
+          />
+        </div>
+        <div
+          key="4"
+        >
+          <img
+            alt="Foton Home for Android screenshot 5"
+            src="images/temp/foton-home-android5.webp"
+          />
+        </div>
+        <div
+          key="5"
+        >
+          <img
+            alt="Foton Home for Android screenshot 6"
+            src="images/temp/foton-home-android6.webp"
+          />
+        </div>
+        <div
+          key="6"
+        >
+          <img
+            alt="Foton Home for Android screenshot 7"
+            src="images/temp/foton-home-android7.webp"
+          />
+        </div>
+        <div
+          key="7"
+        >
+          <img
+            alt="Foton Home for Android screenshot 8"
+            src="images/temp/foton-home-android8.webp"
+          />
+        </div>
+      </Slider>
+    </div>
+    <div
+      className="c-section__slider"
+      key="4"
     >
       <Component
         href="https://apps.apple.com/gb/app/e-on-home-solar-and-heating/id1468486784#?platform=ipad"
@@ -217,6 +435,51 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           <img
             alt="E.ON Home for iPad screenshot 2"
             src="images/temp/eon-home-ipad-light.jpg"
+          />
+        </div>
+      </Slider>
+    </div>
+    <div
+      className="c-section__slider"
+      key="5"
+    >
+      <Component
+        href="https://apps.apple.com/us/app/foton-home/id1525688620#?platform=ipad"
+      >
+        <h3>
+          Foton Home for iPad
+        </h3>
+        <p>
+          Smart energy management application for iPad
+        </p>
+        <code>
+          Technologies used:
+          <br />
+          TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS
+        </code>
+      </Component>
+      <Slider
+        autoplaySpeed={5000}
+        dots={false}
+        infinite={true}
+        slidesToScroll={1}
+        slidesToShow={2}
+        speed={500}
+      >
+        <div
+          key="0"
+        >
+          <img
+            alt="Foton Home for iPad screenshot 1"
+            src="images/temp/foton-home-ipad-dark.jpg"
+          />
+        </div>
+        <div
+          key="1"
+        >
+          <img
+            alt="Foton Home for iPad screenshot 2"
+            src="images/temp/foton-home-ipad-light.jpg"
           />
         </div>
       </Slider>
