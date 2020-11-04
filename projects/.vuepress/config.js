@@ -1,6 +1,6 @@
 module.exports = {
 	base: '/projects/',
-	title: 'Atanas Atanasov | Senior Frontend Web Developer | Open Source Projects',
+	title: 'Atanas Atanasov',
 	description: "Atanas Atanasov's open source projects",
 	head: [
 		[
