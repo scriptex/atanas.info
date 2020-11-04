@@ -37,7 +37,6 @@ module.exports = {
 		'scriptex/react-accordion-ts',
 		'scriptex/react-dropper',
 		'scriptex/react-svg-donuts',
-		'scriptex/scriptex',
 		'scriptex/scriptex.github.io',
 		'scriptex/scss-goodies',
 		'scriptex/socials',

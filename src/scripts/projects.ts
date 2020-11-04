@@ -29,6 +29,12 @@ export const projects: Project[] = [
 		timeout: 5000
 	},
 	{
+		url: 'https://app.home.fotontechnik.pl/',
+		image: 'images/temp/foton-home.png',
+		title: 'Foton Home',
+		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS'
+	},
+	{
 		url: 'https://xpndnow.com/',
 		image: 'images/temp/xpnd.png',
 		title: 'XPND',
@@ -180,11 +186,52 @@ export const mobileApps: MobileApp[] = [
 		]
 	},
 	{
-		url: 'https://play.google.com/store/apps/details?id=com.eon.home.eu&hl=en',
+		url: 'https://apps.apple.com/us/app/foton-home/id1525688620#?platform=iphone',
+		title: 'Foton Home for iPhone',
+		description: 'Smart energy management application for iOS',
+		details: 'TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS',
+		images: [
+			'foton-home-iphone-light1.png',
+			'foton-home-iphone-light2.png',
+			'foton-home-iphone-light3.png',
+			'foton-home-iphone-light4.png',
+			'foton-home-iphone-dark1.png',
+			'foton-home-iphone-dark2.png',
+			'foton-home-iphone-dark3.png',
+			'foton-home-iphone-dark4.png'
+		]
+	},
+	{
+		url: 'https://play.google.com/store/apps/details?id=com.eon.home.eu',
 		title: 'E.ON Home for Android',
 		description: 'An award winning smart energy management application for Android',
 		details: 'TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS',
-		images: ['eon-home-android1.webp', 'eon-home-android2.webp', 'eon-home-android3.webp', 'eon-home-android4.webp']
+		images: [
+			'eon-home-android1.webp',
+			'eon-home-android2.webp',
+			'eon-home-android3.webp',
+			'eon-home-android4.webp',
+			'eon-home-android5.webp',
+			'eon-home-android6.webp',
+			'eon-home-android7.webp',
+			'eon-home-android8.webp'
+		]
+	},
+	{
+		url: 'https://play.google.com/store/apps/details?id=com.foton.home.eu',
+		title: 'Foton Home for Android',
+		description: 'Smart energy management application for Android',
+		details: 'TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS',
+		images: [
+			'foton-home-android5.webp',
+			'foton-home-android6.webp',
+			'foton-home-android7.webp',
+			'foton-home-android8.webp',
+			'foton-home-android1.webp',
+			'foton-home-android2.webp',
+			'foton-home-android3.webp',
+			'foton-home-android4.webp'
+		]
 	},
 	{
 		url: 'https://apps.apple.com/gb/app/e-on-home-solar-and-heating/id1468486784#?platform=ipad',
@@ -192,5 +239,12 @@ export const mobileApps: MobileApp[] = [
 		description: 'An award winning smart energy management application for iPad',
 		details: 'TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS',
 		images: ['eon-home-ipad-dark.jpg', 'eon-home-ipad-light.jpg']
+	},
+	{
+		url: 'https://apps.apple.com/us/app/foton-home/id1525688620#?platform=ipad',
+		title: 'Foton Home for iPad',
+		description: 'Smart energy management application for iPad',
+		details: 'TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS',
+		images: ['foton-home-ipad-light.png', 'foton-home-ipad-dark.png']
 	}
 ];

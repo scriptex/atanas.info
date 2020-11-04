@@ -1,7 +1,7 @@
 module.exports = {
 	base: '/projects/',
-	title: 'Projects',
-	description: "Atanas Atanasov's Projects",
+	title: 'Atanas Atanasov',
+	description: "Atanas Atanasov's open source projects",
 	head: [
 		[
 			'meta',
