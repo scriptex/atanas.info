@@ -14,6 +14,23 @@ interface Props {
 
 export const formatDate = (date: string): string => format(new Date(date), 'dd MMM yyyy');
 
+export const addTitles = (selector: string, getTitle: (rect: SVGRectElement) => string): void => {
+	const rects: SVGRectElement[] = Array.from(document.querySelectorAll(`${selector} rect`));
+
+	rects.forEach((rect: SVGRectElement) => {
+		const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+		const titleElement = document.createElementNS('http://www.w3.org/2000/svg', 'title');
+		const titleString = getTitle(rect);
+
+		rect?.parentNode?.insertBefore(group, rect);
+
+		titleElement.innerHTML = titleString.replace('<br />', ' on ');
+
+		group.appendChild(titleElement);
+		group.appendChild(rect);
+	});
+};
+
 export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
 	const { general, calendar, repositories } = props.data;
 	const blocks: GeneralInsight[] = [
@@ -64,6 +81,19 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 			value: repositories.reduce((result: number, repo: any) => result + repo.issues, 0)
 		}
 	];
+
+	React.useEffect(() => {
+		window.addEventListener('load', () => {
+			addTitles(
+				'.c-calendar--github',
+				(rect: SVGRectElement) =>
+					`${rect.dataset.count} contributions on ${format(
+						new Date(rect.dataset.date as string),
+						'EEEE MMM d, yyyy'
+					)}`
+			);
+		});
+	}, []);
 
 	return (
 		<>
@@ -146,6 +176,12 @@ export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 			value: repositories.reduce((result: number, repo: any) => result + repo.issues || 0, 0)
 		}
 	];
+
+	React.useEffect(() => {
+		window.addEventListener('load', () => {
+			addTitles('.c-calendar--gitlab', (rect: SVGRectElement) => rect.getAttribute('title') || '');
+		});
+	}, []);
 
 	return (
 		<>
