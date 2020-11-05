@@ -11,7 +11,9 @@ export const getGithubInsights = async (): Promise<void> => {
 
 		const file = 'src/scripts/github-insights.json';
 		const user = await github.get({ path: '/users/scriptex' });
-		const repos = await github.get({ path: '/user/repos?per_page=1000' });
+		const repos1 = await github.get({ path: '/user/repos?per_page=100' });
+		const repos2 = await github.get({ path: '/user/repos?page=2&per_page=100' });
+		const repos = [...repos1, ...repos2];
 		const calendar = await getContributions();
 		const repositories: any[] = [];
 
