@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { format } from 'date-fns';
 
-import { Section } from '..';
-import { getColor, renderContributions } from '../../scripts/gitlab-contributions';
+import { Svg, Section } from '..';
 
 interface GeneralInsight {
 	readonly title: string;
@@ -66,8 +65,6 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 		}
 	];
 
-	const maxContributions = Math.max(...Object.values(calendar).map((value: any) => value.count));
-
 	return (
 		<>
 			<div className="c-section__entry c-section__entry--no-background">
@@ -90,17 +87,23 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 					<h2>Github contributions calendar</h2>
 
 					<div className="c-calendar__outer">
-						<div className="c-calendar">
-							{Object.keys(calendar).map((key: string, i: number) => (
-								<div
-									className="c-calendar__item"
-									key={i}
-									style={{
-										backgroundColor: getColor(calendar[key].count, maxContributions)
-									}}
-									title={`${calendar[key].count} contributions on ${formatDate(key)}`}
-								/>
-							))}
+						<div className="c-calendar c-calendar--github">
+							<Svg src="/github-calendar.svg" />
+
+							<div
+								className="c-calendar__legend"
+								title="A summary of pull requests, issues opened, and commits to the default and gh-pages branches."
+							>
+								Less
+								<ul>
+									<li style={{ backgroundColor: 'var(--color-calendar-graph-day-bg)' }}></li>
+									<li style={{ backgroundColor: 'var(--color-calendar-graph-day-L1-bg)' }}></li>
+									<li style={{ backgroundColor: 'var(--color-calendar-graph-day-L2-bg)' }}></li>
+									<li style={{ backgroundColor: 'var(--color-calendar-graph-day-L3-bg)' }}></li>
+									<li style={{ backgroundColor: 'var(--color-calendar-graph-day-L4-bg)' }}></li>
+								</ul>
+								More
+							</div>
 						</div>
 					</div>
 				</div>
@@ -144,10 +147,6 @@ export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 		}
 	];
 
-	React.useEffect(() => {
-		renderContributions('#gitlab-calendar', calendar);
-	});
-
 	return (
 		<>
 			<div className="c-section__entry c-section__entry--no-background">
@@ -170,7 +169,11 @@ export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 					<h2>Gitlab contributions calendar</h2>
 
 					<div className="c-calendar__outer">
-						<div className="c-calendar" id="gitlab-calendar" />
+						<div className="c-calendar c-calendar--gitlab">
+							<Svg src="/gitlab-calendar.svg" />
+
+							<div className="c-calendar__hint">Issues, merge requests, pushes, and comments.</div>
+						</div>
 					</div>
 				</div>
 			</div>
