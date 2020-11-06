@@ -10,12 +10,6 @@ import { v2 as cloudinary, UploadApiOptions, UploadApiResponse } from 'cloudinar
 import * as pckg from '../package.json';
 import { Project, projects } from '../src/scripts/projects';
 
-declare module 'puppeteer' {
-	export interface Page {
-		waitForTimeout(duration: number): Promise<void>;
-	}
-}
-
 if (!projects || !projects.length) {
 	console.log('No projects found.');
 	process.exit();

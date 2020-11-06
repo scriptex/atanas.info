@@ -2,12 +2,6 @@ import fetch from 'node-fetch';
 import { load } from 'cheerio';
 import * as puppeteer from 'puppeteer';
 
-declare module 'puppeteer' {
-	export interface Page {
-		waitForTimeout(duration: number): Promise<void>;
-	}
-}
-
 export interface Project {
 	readonly url: string;
 	readonly name: string;
