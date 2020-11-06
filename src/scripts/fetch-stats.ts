@@ -22,7 +22,7 @@ const ENDPOINTS: Record<string, EndpointConfig> = {
 		init: {},
 		file: './src/scripts/sourcerer.json'
 	},
-	codersrank: {
+	codersrankWorkExperience: {
 		url: 'https://api.codersrank.io/app/candidate/GetScore',
 		init: {
 			headers: {
@@ -31,7 +31,25 @@ const ENDPOINTS: Record<string, EndpointConfig> = {
 			body: '{"username":"scriptex"}',
 			method: 'POST'
 		},
-		file: './src/scripts/codersrank.json'
+		file: './src/scripts/codersrank-work-experience.json'
+	},
+	codersrankChartWidget: {
+		url: 'https://grpcgateway.codersrank.io/candidate/scriptex/GetScoreProgress',
+		init: {
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		},
+		file: './src/scripts/codersrank-chart-widget.json'
+	},
+	codersrankActivityWidget: {
+		url: 'https://grpcgateway.codersrank.io/candidate/activity/scriptex',
+		init: {
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		},
+		file: './src/scripts/codersrank-activity-widget.json'
 	}
 };
 
@@ -68,12 +86,17 @@ const getDataFromWebsite = async (url: EndpointConfig['url']): Promise<Record<st
 };
 
 (async () => {
-	const { npm, sourcerer, codersrank } = ENDPOINTS;
+	const { npm, sourcerer, codersrankChartWidget, codersrankActivityWidget, codersrankWorkExperience } = ENDPOINTS;
+
 	const npmData = await getData(npm);
 	const sourcererData = await getDataFromWebsite(sourcerer.url);
-	const codersrankData = await getData(codersrank);
+	const codersrankChartWidgetData = await getData(codersrankChartWidget);
+	const codersrankActivityWidgetData = await getData(codersrankActivityWidget);
+	const codersrankWorkExperienceData = await getData(codersrankWorkExperience);
 
 	writeFileSync(npm.file, JSON.stringify(npmData, null, 2));
 	writeFileSync(sourcerer.file, JSON.stringify(sourcererData, null, 2));
-	writeFileSync(codersrank.file, JSON.stringify(codersrankData, null, 2));
+	writeFileSync(codersrankChartWidget.file, JSON.stringify(codersrankChartWidgetData, null, 2));
+	writeFileSync(codersrankActivityWidget.file, JSON.stringify(codersrankActivityWidgetData, null, 2));
+	writeFileSync(codersrankWorkExperience.file, JSON.stringify(codersrankWorkExperienceData, null, 2));
 })();
