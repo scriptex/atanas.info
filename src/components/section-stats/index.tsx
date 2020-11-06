@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { format } from 'date-fns';
 
-import { Section } from '..';
-import { getColor, renderContributions } from '../../scripts/gitlab-contributions';
+import { Svg, Section } from '..';
 
 interface GeneralInsight {
 	readonly title: string;
@@ -14,6 +13,23 @@ interface Props {
 }
 
 export const formatDate = (date: string): string => format(new Date(date), 'dd MMM yyyy');
+
+export const addTitles = (selector: string, getTitle: (rect: SVGRectElement) => string): void => {
+	const rects: SVGRectElement[] = Array.from(document.querySelectorAll(`${selector} rect`));
+
+	rects.forEach((rect: SVGRectElement) => {
+		const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+		const titleElement = document.createElementNS('http://www.w3.org/2000/svg', 'title');
+		const titleString = getTitle(rect);
+
+		rect?.parentNode?.insertBefore(group, rect);
+
+		titleElement.innerHTML = titleString.replace('<br />', ' on ');
+
+		group.appendChild(titleElement);
+		group.appendChild(rect);
+	});
+};
 
 export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
 	const { general, calendar, repositories } = props.data;
@@ -66,8 +82,6 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 		}
 	];
 
-	const maxContributions = Math.max(...Object.values(calendar).map((value: any) => value.count));
-
 	return (
 		<>
 			<div className="c-section__entry c-section__entry--no-background">
@@ -90,17 +104,23 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 					<h2>Github contributions calendar</h2>
 
 					<div className="c-calendar__outer">
-						<div className="c-calendar">
-							{Object.keys(calendar).map((key: string, i: number) => (
-								<div
-									className="c-calendar__item"
-									key={i}
-									style={{
-										backgroundColor: getColor(calendar[key].count, maxContributions)
-									}}
-									title={`${calendar[key].count} contributions on ${formatDate(key)}`}
-								/>
-							))}
+						<div className="c-calendar c-calendar--github">
+							<Svg src="/github-calendar.svg" />
+
+							<div
+								className="c-calendar__legend"
+								title="A summary of pull requests, issues opened, and commits to the default and gh-pages branches."
+							>
+								Less
+								<ul>
+									<li style={{ backgroundColor: 'var(--color-calendar-graph-day-bg)' }}></li>
+									<li style={{ backgroundColor: 'var(--color-calendar-graph-day-L1-bg)' }}></li>
+									<li style={{ backgroundColor: 'var(--color-calendar-graph-day-L2-bg)' }}></li>
+									<li style={{ backgroundColor: 'var(--color-calendar-graph-day-L3-bg)' }}></li>
+									<li style={{ backgroundColor: 'var(--color-calendar-graph-day-L4-bg)' }}></li>
+								</ul>
+								More
+							</div>
 						</div>
 					</div>
 				</div>
@@ -144,10 +164,6 @@ export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 		}
 	];
 
-	React.useEffect(() => {
-		renderContributions('#gitlab-calendar', calendar);
-	});
-
 	return (
 		<>
 			<div className="c-section__entry c-section__entry--no-background">
@@ -170,7 +186,11 @@ export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 					<h2>Gitlab contributions calendar</h2>
 
 					<div className="c-calendar__outer">
-						<div className="c-calendar" id="gitlab-calendar" />
+						<div className="c-calendar c-calendar--gitlab">
+							<Svg src="/gitlab-calendar.svg" />
+
+							<div className="c-calendar__hint">Issues, merge requests, pushes, and comments.</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -178,18 +198,41 @@ export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 	);
 };
 
-export const SectionStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => (
-	<Section id="stats" hasShell={false} hasButton={true}>
-		<header className="c-section__head">
-			<div className="o-shell">
-				<h1>Stats</h1>
-			</div>
-		</header>
+export const SectionStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
+	React.useEffect(() => {
+		const onLoad = () => {
+			addTitles('.c-calendar--gitlab', (rect: SVGRectElement) => rect.getAttribute('title') || '');
 
-		<GithubStats data={props.data.github} />
+			addTitles(
+				'.c-calendar--github',
+				(rect: SVGRectElement) =>
+					`${rect.dataset.count} contributions on ${format(
+						new Date(rect.dataset.date as string),
+						'EEEE MMM d, yyyy'
+					)}`
+			);
+		};
 
-		<GitlabStats data={props.data.gitlab} />
-	</Section>
-);
+		window.addEventListener('load', onLoad);
+
+		return () => {
+			window.removeEventListener('load', onLoad);
+		};
+	}, []);
+
+	return (
+		<Section id="stats" hasShell={false} hasButton={true}>
+			<header className="c-section__head">
+				<div className="o-shell">
+					<h1>Stats</h1>
+				</div>
+			</header>
+
+			<GithubStats data={props.data.github} />
+
+			<GitlabStats data={props.data.gitlab} />
+		</Section>
+	);
+};
 
 export default SectionStats;

@@ -206,28 +206,55 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
         className="c-calendar__outer"
       >
         <div
-          className="c-calendar"
+          className="c-calendar c-calendar--github"
         >
-          <div
-            className="c-calendar__item"
-            key="0"
-            style={
-              Object {
-                "backgroundColor": "#196127",
-              }
-            }
-            title="10 contributions on 23 Jun 2019"
+          <Component
+            src="/github-calendar.svg"
           />
           <div
-            className="c-calendar__item"
-            key="1"
-            style={
-              Object {
-                "backgroundColor": "#196127",
-              }
-            }
-            title="9 contributions on 24 Jun 2019"
-          />
+            className="c-calendar__legend"
+            title="A summary of pull requests, issues opened, and commits to the default and gh-pages branches."
+          >
+            Less
+            <ul>
+              <li
+                style={
+                  Object {
+                    "backgroundColor": "var(--color-calendar-graph-day-bg)",
+                  }
+                }
+              />
+              <li
+                style={
+                  Object {
+                    "backgroundColor": "var(--color-calendar-graph-day-L1-bg)",
+                  }
+                }
+              />
+              <li
+                style={
+                  Object {
+                    "backgroundColor": "var(--color-calendar-graph-day-L2-bg)",
+                  }
+                }
+              />
+              <li
+                style={
+                  Object {
+                    "backgroundColor": "var(--color-calendar-graph-day-L3-bg)",
+                  }
+                }
+              />
+              <li
+                style={
+                  Object {
+                    "backgroundColor": "var(--color-calendar-graph-day-L4-bg)",
+                  }
+                }
+              />
+            </ul>
+            More
+          </div>
         </div>
       </div>
     </div>
@@ -386,9 +413,17 @@ exports[`GitlabStats component Should render the GitlabStats component 1`] = `
         className="c-calendar__outer"
       >
         <div
-          className="c-calendar"
-          id="gitlab-calendar"
-        />
+          className="c-calendar c-calendar--gitlab"
+        >
+          <Component
+            src="/gitlab-calendar.svg"
+          />
+          <div
+            className="c-calendar__hint"
+          >
+            Issues, merge requests, pushes, and comments.
+          </div>
+        </div>
       </div>
     </div>
   </div>

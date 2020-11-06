@@ -1,15 +1,19 @@
 import { writeFileSync } from 'fs';
 
 import { github } from './client';
-import { asyncForEach, getContributions } from './utils';
+import { getCalendar, asyncForEach, getContributions } from './utils';
 
 export const getGithubInsights = async (): Promise<void> => {
 	console.log('Getting insights data from Github...');
 
 	try {
+		writeFileSync('static/github-calendar.svg', (await getCalendar()) || '');
+
 		const file = 'src/scripts/github-insights.json';
 		const user = await github.get({ path: '/users/scriptex' });
-		const repos = await github.get({ path: '/user/repos?per_page=1000' });
+		const repos1 = await github.get({ path: '/user/repos?per_page=100' });
+		const repos2 = await github.get({ path: '/user/repos?page=2&per_page=100' });
+		const repos = [...repos1, ...repos2];
 		const calendar = await getContributions();
 		const repositories: any[] = [];
 

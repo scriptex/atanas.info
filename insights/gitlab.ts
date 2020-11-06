@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 import { writeFileSync } from 'fs';
 
 import { gitlab } from './client';
-import { asyncForEach } from './utils';
+import { asyncForEach, getCalendarWithBrowser } from './utils';
 
 const setOwner = (repo: any, owner: string): any => ({ ...repo, owner });
 
@@ -11,6 +11,11 @@ export const getGitlabInsights = async (): Promise<void> => {
 	console.log('Getting insights data from Gitlab...');
 
 	try {
+		writeFileSync(
+			'static/gitlab-calendar.svg',
+			(await getCalendarWithBrowser('https://gitlab.com/scriptex', '.js-contrib-calendar', 5000)) || ''
+		);
+
 		const file = 'src/scripts/gitlab-insights.json';
 
 		console.log('Getting data for user Scriptex from Gitlab...');

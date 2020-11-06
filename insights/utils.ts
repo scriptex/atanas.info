@@ -1,5 +1,6 @@
 import fetch from 'node-fetch';
 import { load } from 'cheerio';
+import * as puppeteer from 'puppeteer';
 
 export interface Project {
 	readonly url: string;
@@ -45,3 +46,30 @@ export const getContributions = async (url = 'https://github.com/scriptex'): Pro
 					{}
 				);
 		});
+
+export const getCalendar = async (
+	url = 'https://github.com/scriptex',
+	selector = '.js-calendar-graph'
+): Promise<string | null> =>
+	await fetch(url)
+		.then(res => res.text())
+		.then((markup: string) => load(markup)(selector).html());
+
+export const getCalendarWithBrowser = async (url: string, selector: string, timeout: number): Promise<string> => {
+	const browser = await puppeteer.launch({
+		headless: true,
+		args: ['--no-sandbox']
+	});
+
+	const page = await browser.newPage();
+
+	await page.setViewport({
+		width: 1440,
+		height: 1000
+	});
+
+	await page.goto(url, { waitUntil: 'networkidle2' });
+	await page.waitForTimeout(timeout);
+
+	return await page.$eval(selector, (element: Element) => element.innerHTML);
+};

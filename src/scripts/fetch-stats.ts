@@ -5,12 +5,6 @@ import { writeFileSync } from 'fs';
 import * as puppeteer from 'puppeteer';
 import fetch, { Response, RequestInit } from 'node-fetch';
 
-declare module 'puppeteer' {
-	export interface Page {
-		waitForTimeout(duration: number): Promise<void>;
-	}
-}
-
 interface EndpointConfig {
 	readonly url: string;
 	readonly file: string;
