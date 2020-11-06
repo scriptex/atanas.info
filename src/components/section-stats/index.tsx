@@ -82,19 +82,6 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 		}
 	];
 
-	React.useEffect(() => {
-		window.addEventListener('load', () => {
-			addTitles(
-				'.c-calendar--github',
-				(rect: SVGRectElement) =>
-					`${rect.dataset.count} contributions on ${format(
-						new Date(rect.dataset.date as string),
-						'EEEE MMM d, yyyy'
-					)}`
-			);
-		});
-	}, []);
-
 	return (
 		<>
 			<div className="c-section__entry c-section__entry--no-background">
@@ -177,12 +164,6 @@ export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 		}
 	];
 
-	React.useEffect(() => {
-		window.addEventListener('load', () => {
-			addTitles('.c-calendar--gitlab', (rect: SVGRectElement) => rect.getAttribute('title') || '');
-		});
-	}, []);
-
 	return (
 		<>
 			<div className="c-section__entry c-section__entry--no-background">
@@ -217,18 +198,41 @@ export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 	);
 };
 
-export const SectionStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => (
-	<Section id="stats" hasShell={false} hasButton={true}>
-		<header className="c-section__head">
-			<div className="o-shell">
-				<h1>Stats</h1>
-			</div>
-		</header>
+export const SectionStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
+	React.useEffect(() => {
+		const onLoad = () => {
+			addTitles('.c-calendar--gitlab', (rect: SVGRectElement) => rect.getAttribute('title') || '');
 
-		<GithubStats data={props.data.github} />
+			addTitles(
+				'.c-calendar--github',
+				(rect: SVGRectElement) =>
+					`${rect.dataset.count} contributions on ${format(
+						new Date(rect.dataset.date as string),
+						'EEEE MMM d, yyyy'
+					)}`
+			);
+		};
 
-		<GitlabStats data={props.data.gitlab} />
-	</Section>
-);
+		window.addEventListener('load', onLoad);
+
+		return () => {
+			window.removeEventListener('load', onLoad);
+		};
+	}, []);
+
+	return (
+		<Section id="stats" hasShell={false} hasButton={true}>
+			<header className="c-section__head">
+				<div className="o-shell">
+					<h1>Stats</h1>
+				</div>
+			</header>
+
+			<GithubStats data={props.data.github} />
+
+			<GitlabStats data={props.data.gitlab} />
+		</Section>
+	);
+};
 
 export default SectionStats;
