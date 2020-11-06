@@ -40,6 +40,18 @@ export const SectionPortfolio: React.FunctionComponent = () => {
 							autoplaySpeed={5000}
 							slidesToShow={2}
 							slidesToScroll={1}
+							responsive={
+								!app.adjustable
+									? []
+									: [
+											{
+												breakpoint: 768,
+												settings: {
+													slidesToShow: 1
+												}
+											}
+									  ]
+							}
 						>
 							{app.images.map((img: string, j: number) => (
 								<div key={j}>

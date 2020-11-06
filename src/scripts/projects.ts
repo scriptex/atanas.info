@@ -12,6 +12,7 @@ export interface MobileApp {
 	readonly description: string;
 	readonly details: string;
 	readonly images: string[];
+	readonly adjustable?: boolean;
 }
 
 export const projects: Project[] = [
@@ -244,13 +245,15 @@ export const mobileApps: MobileApp[] = [
 		title: 'E.ON Home for iPad',
 		description: 'An award winning smart energy management application for iPad',
 		details: 'TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS',
-		images: ['eon-home-ipad-dark.jpg', 'eon-home-ipad-light.jpg']
+		images: ['eon-home-ipad-dark.jpg', 'eon-home-ipad-light.jpg'],
+		adjustable: true
 	},
 	{
 		url: 'https://apps.apple.com/us/app/foton-home/id1525688620#?platform=ipad',
 		title: 'Foton Home for iPad',
 		description: 'Smart energy management application for iPad',
 		details: 'TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS',
-		images: ['foton-home-ipad-light.png', 'foton-home-ipad-dark.png']
+		images: ['foton-home-ipad-light.png', 'foton-home-ipad-dark.png'],
+		adjustable: true
 	}
 ];

@@ -45,6 +45,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
         autoplaySpeed={5000}
         dots={false}
         infinite={true}
+        responsive={Array []}
         slidesToScroll={1}
         slidesToShow={2}
         speed={500}
@@ -138,6 +139,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
         autoplaySpeed={5000}
         dots={false}
         infinite={true}
+        responsive={Array []}
         slidesToScroll={1}
         slidesToShow={2}
         speed={500}
@@ -231,6 +233,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
         autoplaySpeed={5000}
         dots={false}
         infinite={true}
+        responsive={Array []}
         slidesToScroll={1}
         slidesToShow={2}
         speed={500}
@@ -324,6 +327,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
         autoplaySpeed={5000}
         dots={false}
         infinite={true}
+        responsive={Array []}
         slidesToScroll={1}
         slidesToShow={2}
         speed={500}
@@ -417,6 +421,16 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
         autoplaySpeed={5000}
         dots={false}
         infinite={true}
+        responsive={
+          Array [
+            Object {
+              "breakpoint": 768,
+              "settings": Object {
+                "slidesToShow": 1,
+              },
+            },
+          ]
+        }
         slidesToScroll={1}
         slidesToShow={2}
         speed={500}
@@ -462,6 +476,16 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
         autoplaySpeed={5000}
         dots={false}
         infinite={true}
+        responsive={
+          Array [
+            Object {
+              "breakpoint": 768,
+              "settings": Object {
+                "slidesToShow": 1,
+              },
+            },
+          ]
+        }
         slidesToScroll={1}
         slidesToShow={2}
         speed={500}
