@@ -143,6 +143,12 @@ export const projects: Project[] = [
 		description: 'JavaScript, Stylus, VuePress, NodeJS'
 	},
 	{
+		url: 'https://html-lab.com/',
+		image: 'images/temp/html-lab.png',
+		title: 'HTML Lab',
+		description: 'HTML5, CSS3, JavaScript'
+	},
+	{
 		url: '',
 		image: 'images/temp/atelier-coolinar.png',
 		title: 'Atelier Coolinar (Ателие Кулинар)',
