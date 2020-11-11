@@ -76,6 +76,22 @@ exports[`SectionCertificates component Should render the SectionCertificates com
         />
       </Component>
     </div>
+    <div
+      className="o-grid__item o-grid__item--1of2"
+      key="4"
+    >
+      <Component
+        className="c-certificate"
+        href="certificates/css.pdf"
+      >
+        <img
+          alt="CSS"
+          loading="lazy"
+          src="certificates/css.jpg"
+          width="600"
+        />
+      </Component>
+    </div>
   </div>
 </Component>
 `;
