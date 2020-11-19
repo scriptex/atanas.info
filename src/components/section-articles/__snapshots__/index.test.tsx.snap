@@ -14,7 +14,7 @@ exports[`SectionArticles component Should render the SectionArticles component 1
     className="c-section__body o-grid"
   >
     <div
-      className="o-grid__item o-grid__item--1of2"
+      className="o-grid__item xs-12 sm-6"
       key="0"
     >
       <Component
@@ -32,7 +32,7 @@ exports[`SectionArticles component Should render the SectionArticles component 1
       </Component>
     </div>
     <div
-      className="o-grid__item o-grid__item--1of2"
+      className="o-grid__item xs-12 sm-6"
       key="1"
     >
       <Component

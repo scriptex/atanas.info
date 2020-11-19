@@ -14,13 +14,13 @@ export const SectionSocial: React.FunctionComponent = () => (
 		<div className="c-section__entry">
 			<div className="o-shell">
 				<div className="o-grid">
-					<div className="o-grid__item o-grid__item--1of2">
+					<div className="o-grid__item xs-12 sm-6">
 						<h2>Codersrank Profile</h2>
 
 						<codersrank-widget username="scriptex"></codersrank-widget>
 					</div>
 
-					<div className="o-grid__item o-grid__item--1of2">
+					<div className="o-grid__item xs-12 sm-6">
 						<h2>LinkedIn Profile</h2>
 
 						<div
@@ -41,7 +41,7 @@ export const SectionSocial: React.FunctionComponent = () => (
 						</div>
 					</div>
 
-					<div className="o-grid__item o-grid__item--1of2">
+					<div className="o-grid__item xs-12 sm-6">
 						<h2>Twitter Profile</h2>
 
 						<TwitterTimelineEmbed
@@ -52,7 +52,7 @@ export const SectionSocial: React.FunctionComponent = () => (
 						/>
 					</div>
 
-					<div className="o-grid__item o-grid__item--1of2">
+					<div className="o-grid__item xs-12 sm-6">
 						<h2>YouTube Channel</h2>
 
 						<iframe

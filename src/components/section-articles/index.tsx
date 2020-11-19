@@ -9,7 +9,7 @@ export const SectionArticles: React.FunctionComponent = () => (
 
 		<div className="c-section__body o-grid">
 			{articles.map((article: Article, index: number) => (
-				<div key={index} className="o-grid__item o-grid__item--1of2">
+				<div key={index} className="o-grid__item xs-12 sm-6">
 					<ExternalLink
 						href={article.url}
 						style={{ backgroundImage: `url(${article.image})` }}

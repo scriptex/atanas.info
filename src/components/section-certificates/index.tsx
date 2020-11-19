@@ -10,7 +10,7 @@ export const SectionCertificates: React.FunctionComponent = () => (
 
 		<div className="o-grid c-section__body">
 			{certificates.map((certificate: Certificate, index: number) => (
-				<div className="o-grid__item o-grid__item--1of2" key={index}>
+				<div className="o-grid__item xs-12 sm-6" key={index}>
 					<ExternalLink href={`certificates/${certificate.type}.pdf`} className="c-certificate">
 						<img
 							width="600"

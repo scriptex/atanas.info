@@ -28,7 +28,7 @@ export const SectionSkills: React.FunctionComponent = () => {
 
 			<div className={`o-grid${showTable ? '' : ' is--hidden'}`}>
 				{skills.map((skill: Skill, index: number) => (
-					<div key={index} className="o-grid__item o-grid__item--1of4">
+					<div key={index} className="o-grid__item xs-12 sm-6 md-4 lg-3">
 						<div className="c-skill">
 							<figure style={{ backgroundColor: skill.fill }}>
 								<Icon
