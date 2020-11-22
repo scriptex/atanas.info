@@ -71,10 +71,10 @@ export const links: Array<Readonly<Link>> = [
 	},
 	{
 		rel: 'noopener noreferrer',
-		href: 'https://interactive-resume.atanas.info/',
-		title: 'My interactive resume',
+		href: 'https://scriptexbg.wordpress.com',
+		title: 'My blog',
 		target: '_blank',
-		content: 'Interactive resume'
+		content: 'Blog'
 	},
 	{
 		rel: 'noopener noreferrer',
