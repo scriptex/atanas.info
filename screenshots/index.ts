@@ -88,12 +88,14 @@ function upload(shotResult: Buffer, options: UploadApiOptions, name: string): Pr
 	});
 }
 
-async function createScreenshots(pages: Project[]): Promise<void> {
+async function createScreenshots(allPages: Project[]): Promise<void> {
 	// await cloudinary.api.delete_resources_by_prefix(`${FOLDER}/`);
 
 	const results: any[] = [];
 
-	let newProjects = [...projects];
+	let newProjects: Project[] = [...projects];
+
+	const pages: Project[] = allPages.filter((page: Project) => !page.skip);
 
 	for (const page of pages) {
 		console.log('-----');

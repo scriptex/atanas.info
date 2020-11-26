@@ -12,7 +12,7 @@ interface Props {
 	data: any;
 }
 
-export const formatDate = (date: string): string => format(new Date(date), 'dd MMM yyyy');
+export const formatDate = (date: string, formatter = 'dd MMM yyyy'): string => format(new Date(date), formatter);
 
 export const addTitles = (selector: string, getTitle: (rect: SVGRectElement) => string): void => {
 	const rects: SVGRectElement[] = Array.from(document.querySelectorAll(`${selector} rect`));
@@ -32,7 +32,7 @@ export const addTitles = (selector: string, getTitle: (rect: SVGRectElement) => 
 };
 
 export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
-	const { general, calendar, repositories } = props.data;
+	const { general, calendar, updated, repositories } = props.data;
 	const blocks: GeneralInsight[] = [
 		{
 			title: 'Used languages',
@@ -100,6 +100,8 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 			</div>
 
 			<div className="c-section__entry">
+				<small className="c-section__stamp">Last updated: {formatDate(updated, 'dd MMM yyyy HH:mm:ss')}</small>
+
 				<div className="o-shell">
 					<h2>Github contributions calendar</h2>
 
@@ -130,7 +132,7 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 };
 
 export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
-	const { general, calendar, repositories } = props.data;
+	const { general, calendar, updated, repositories } = props.data;
 	const blocks: GeneralInsight[] = [
 		{
 			title: 'Used languages',
@@ -182,6 +184,8 @@ export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 			</div>
 
 			<div className="c-section__entry">
+				<small className="c-section__stamp">Last updated: {formatDate(updated, 'dd MMM yyyy HH:mm:ss')}</small>
+
 				<div className="o-shell">
 					<h2>Gitlab contributions calendar</h2>
 

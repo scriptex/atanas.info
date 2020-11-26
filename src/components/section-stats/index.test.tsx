@@ -62,7 +62,8 @@ const github = {
 				}
 			]
 		}
-	]
+	],
+	updated: '2020-11-26T14:14:22.858Z'
 };
 
 const gitlab = {
@@ -94,7 +95,8 @@ const gitlab = {
 			},
 			issues: 0
 		}
-	]
+	],
+	updated: '2020-11-26T14:14:22.858Z'
 };
 
 describe('SectionStats component', () => {

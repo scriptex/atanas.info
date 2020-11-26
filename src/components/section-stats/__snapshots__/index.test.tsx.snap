@@ -196,6 +196,12 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
   <div
     className="c-section__entry"
   >
+    <small
+      className="c-section__stamp"
+    >
+      Last updated: 
+      26 Nov 2020 16:14:22
+    </small>
     <div
       className="o-shell"
     >
@@ -403,6 +409,12 @@ exports[`GitlabStats component Should render the GitlabStats component 1`] = `
   <div
     className="c-section__entry"
   >
+    <small
+      className="c-section__stamp"
+    >
+      Last updated: 
+      26 Nov 2020 16:14:22
+    </small>
     <div
       className="o-shell"
     >
@@ -508,6 +520,7 @@ exports[`SectionStats component Should render the SectionStats component 1`] = `
             "watchers": 0,
           },
         ],
+        "updated": "2020-11-26T14:14:22.858Z",
       }
     }
   />
@@ -543,6 +556,7 @@ exports[`SectionStats component Should render the SectionStats component 1`] = `
             "updated_at": "2019-08-14T06:13:34.958Z",
           },
         ],
+        "updated": "2020-11-26T14:14:22.858Z",
       }
     }
   />
