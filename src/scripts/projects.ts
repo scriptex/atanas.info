@@ -20,26 +20,26 @@ export const projects: Project[] = [
 		url: 'https://app.home.eon.com/',
 		image: 'images/temp/eon-home.png',
 		title: 'E.ON Home',
-		description: 'TypeScript, SCSS, React, Redux, MS Azure, AWS, NodeJS'
+		description: 'TypeScript, SCSS, React, Redux, MS Azure, AWS, NodeJS, Jest, Enzyme'
 	},
 	{
 		url: 'https://hems-admin-portal.eon.ooo/',
 		image: 'images/temp/eon-hems.png',
 		title: 'E.ON H.E.M.S (Home Energy Management System)',
-		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS',
+		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS, Cypress',
 		timeout: 5000
 	},
 	{
 		url: 'https://app.home.fotontechnik.pl/',
 		image: 'images/temp/foton-home.png',
 		title: 'Foton Home',
-		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS'
+		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS, Jest, Enzyme'
 	},
 	{
 		url: 'https://xpndnow.com/',
 		image: 'images/temp/xpnd.png',
 		title: 'XPND',
-		description: 'TypeScript, SCSS, React, Redux, NodeJS'
+		description: 'TypeScript, SCSS, React, Redux, NodeJS, Jest, Enzyme'
 	},
 	{
 		url: 'https://xpndnow.com/ebook',
@@ -63,19 +63,19 @@ export const projects: Project[] = [
 		url: 'https://emailio.now.sh/',
 		image: 'images/temp/emailio-web-app.png',
 		title: 'Emailio Web Application',
-		description: 'SCSS, JavaScript, React, Redux, Redux Saga'
+		description: 'SCSS, JavaScript, React, Redux, Redux Saga, Jest, Enzyme'
 	},
 	{
 		url: 'https://www.nulla.tv/',
 		image: 'images/temp/nulla-tv.png',
 		title: 'Nulla TV',
-		description: 'HTML5, CSS3, JavaScript, WordPress'
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress'
 	},
 	{
 		url: 'https://kinetikautomotive.com/',
 		image: 'images/temp/kinetik-automotive.png',
 		title: 'Kinetik Automotive',
-		description: 'HTML5, CSS3, JavaScript, Vue, Nuxt, WordPress'
+		description: 'HTML5, CSS3, JavaScript, Fullpage JS, Vue, Nuxt, PHP, WordPress'
 	},
 	{
 		url: 'https://www.sod.bg/',
@@ -150,16 +150,70 @@ export const projects: Project[] = [
 		description: 'HTML5, CSS3, JavaScript'
 	},
 	{
+		url: 'https://malaikapictures.com/',
+		image: 'images/temp/malaika-pictures.png',
+		title: 'Malaika Pictures',
+		description: 'HTML5, CSS3, JavaScript, Fullpage JS, Shuffle JS, PHP, WordPress'
+	},
+	{
+		url: 'https://pascoe.cn/',
+		image: 'images/temp/pascoe.png',
+		title: 'Pascoe',
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress'
+	},
+	{
+		url: 'https://varnafoodtours.com/',
+		image: 'images/temp/varnafoodtours.png',
+		title: 'Varna Food Tours',
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress'
+	},
+	{
+		url: 'https://ftypeforsale.com/',
+		image: 'images/temp/ftypeforsale.png',
+		title: 'F Type For Sale',
+		description: 'HTML5, CSS3, JavaScript'
+	},
+	{
+		url: 'https://www.zeevan.com/',
+		image: 'images/temp/zeevan.png',
+		title: 'Zeevan',
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress'
+	},
+	{
+		url: 'https://www.mariopricken.com/',
+		image: 'images/temp/mario-pricken.png',
+		title: 'Mario Pricken',
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress'
+	},
+	{
+		url: 'https://www.ovulsezer.com/',
+		image: 'images/temp/ovul-sezer.png',
+		title: 'Ovul Sezer',
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress'
+	},
+	{
+		url: 'https://sqillinehealth.com/',
+		image: 'images/temp/sqillinehealth.png',
+		title: 'Sqillinehealth',
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress'
+	},
+	{
+		url: 'https://kinetik.bg/',
+		image: 'images/temp/kinetik.png',
+		title: 'Kinetik',
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress'
+	},
+	{
 		url: '',
 		image: 'images/temp/atelier-coolinar.png',
 		title: 'Atelier Coolinar (Ателие Кулинар)',
-		description: 'HTML5, CSS3, JavaScript, WordPress'
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress'
 	},
 	{
 		url: '',
 		image: 'images/temp/x-form.png',
 		title: 'X Form',
-		description: 'HTML5, CSS3, JavaScript, WordPress'
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress'
 	},
 	{
 		url: '',
