@@ -12,7 +12,8 @@ interface Props {
 	data: any;
 }
 
-export const formatDate = (date: string, formatter = 'dd MMM yyyy'): string => format(new Date(date), formatter);
+// prettier-ignore
+export const formatDate = (date: string | number, formatter = 'dd MMM yyyy'): string => format(new Date(date), formatter);
 
 export const addTitles = (selector: string, getTitle: (rect: SVGRectElement) => string): void => {
 	const rects: SVGRectElement[] = Array.from(document.querySelectorAll(`${selector} rect`));

@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { format } from 'date-fns';
 import 'scriptex-socials';
 
 import { updatedAt } from '../../scripts/updated-at';
+import { formatDate } from '../section-stats';
 import { ExternalLink } from '..';
 
 export const Footer: React.FunctionComponent = () => (
@@ -27,7 +27,7 @@ export const Footer: React.FunctionComponent = () => (
 				and available <ExternalLink href="https://github.com/scriptex/atanas.info/">on Github</ExternalLink>.
 			</small>
 
-			<small>Updated at {format(updatedAt * 1000, 'dd MMM yyyy HH:mm:ss')}</small>
+			<small>Updated at {formatDate(updatedAt * 1000, 'dd MMM yyyy HH:mm:ss')}</small>
 		</div>
 	</footer>
 );
