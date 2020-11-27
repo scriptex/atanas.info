@@ -64,7 +64,19 @@ export const getGithubInsights = async (): Promise<void> => {
 			updatedAt: user.updated_at
 		};
 
-		writeFileSync(file, JSON.stringify({ general, calendar, repositories }, null, 2));
+		writeFileSync(
+			file,
+			JSON.stringify(
+				{
+					general,
+					calendar,
+					repositories,
+					updated: new Date()
+				},
+				null,
+				2
+			)
+		);
 
 		console.log(`Successfully wrote insights data from Github in ${file}`);
 	} catch (e) {

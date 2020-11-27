@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 
+import * as stats from '.';
 import { mockUseEffect } from '../../scripts/shared';
-import { SectionStats, GithubStats, GitlabStats } from '.';
 
 const github = {
 	general: {
@@ -62,7 +62,8 @@ const github = {
 				}
 			]
 		}
-	]
+	],
+	updated: '2020-11-26T14:14:22.858Z'
 };
 
 const gitlab = {
@@ -94,13 +95,20 @@ const gitlab = {
 			},
 			issues: 0
 		}
-	]
+	],
+	updated: '2020-11-26T14:14:22.858Z'
 };
+
+jest.spyOn(stats, 'formatDate');
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+stats.formatDate.mockImplementation(() => 'Mock date');
 
 describe('SectionStats component', () => {
 	it('Should render the SectionStats component', () => {
 		const wrapper = shallow(
-			<SectionStats
+			<stats.SectionStats
 				data={{
 					github,
 					gitlab
@@ -114,7 +122,7 @@ describe('SectionStats component', () => {
 
 describe('GithubStats component', () => {
 	it('Should render the GithubStats component', () => {
-		const wrapper = shallow(<GithubStats data={github} />);
+		const wrapper = shallow(<stats.GithubStats data={github} />);
 
 		expect(wrapper).toMatchSnapshot();
 	});
@@ -124,7 +132,7 @@ describe('GitlabStats component', () => {
 	mockUseEffect();
 
 	it('Should render the GitlabStats component', () => {
-		const wrapper = shallow(<GitlabStats data={gitlab} />);
+		const wrapper = shallow(<stats.GitlabStats data={gitlab} />);
 
 		expect(wrapper).toMatchSnapshot();
 	});

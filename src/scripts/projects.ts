@@ -4,6 +4,7 @@ export interface Project {
 	readonly title: string;
 	readonly description: string;
 	readonly timeout?: number;
+	readonly skip: boolean;
 }
 
 export interface MobileApp {
@@ -20,158 +21,240 @@ export const projects: Project[] = [
 		url: 'https://app.home.eon.com/',
 		image: 'images/temp/eon-home.png',
 		title: 'E.ON Home',
-		description: 'TypeScript, SCSS, React, Redux, MS Azure, AWS, NodeJS'
+		description: 'TypeScript, SCSS, React, Redux, MS Azure, AWS, NodeJS, Jest, Enzyme',
+		skip: false
 	},
 	{
 		url: 'https://hems-admin-portal.eon.ooo/',
 		image: 'images/temp/eon-hems.png',
 		title: 'E.ON H.E.M.S (Home Energy Management System)',
-		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS',
+		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS, Cypress',
+		skip: false,
 		timeout: 5000
 	},
 	{
 		url: 'https://app.home.fotontechnik.pl/',
 		image: 'images/temp/foton-home.png',
 		title: 'Foton Home',
-		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS'
+		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS, Jest, Enzyme',
+		skip: false
 	},
 	{
 		url: 'https://xpndnow.com/',
 		image: 'images/temp/xpnd.png',
 		title: 'XPND',
-		description: 'TypeScript, SCSS, React, Redux, NodeJS'
+		description: 'TypeScript, SCSS, React, Redux, NodeJS, Jest, Enzyme',
+		skip: true
 	},
 	{
 		url: 'https://xpndnow.com/ebook',
 		image: 'images/temp/xpnd-ebook.png',
 		title: 'XPND Ebook',
-		description: 'TypeScript, SCSS, React, Redux, NodeJS'
+		description: 'TypeScript, SCSS, React, Redux, NodeJS',
+		skip: true
 	},
 	{
 		url: 'https://demo.xpndnow.com/',
 		image: 'images/temp/xpnd-demo.png',
 		title: 'XPND demo application',
-		description: 'TypeScript, SCSS, React, Redux, NodeJS'
+		description: 'TypeScript, SCSS, React, Redux, NodeJS',
+		skip: true
 	},
 	{
 		url: 'https://emailio.com/',
 		image: 'images/temp/emailio.png',
 		title: 'Emailio Landing',
-		description: 'CSS, JavaScript, HTML'
+		description: 'CSS, JavaScript, HTML',
+		skip: false
 	},
 	{
 		url: 'https://emailio.now.sh/',
 		image: 'images/temp/emailio-web-app.png',
 		title: 'Emailio Web Application',
-		description: 'SCSS, JavaScript, React, Redux, Redux Saga'
+		description: 'SCSS, JavaScript, React, Redux, Redux Saga, Jest, Enzyme',
+		skip: false
 	},
 	{
 		url: 'https://www.nulla.tv/',
 		image: 'images/temp/nulla-tv.png',
 		title: 'Nulla TV',
-		description: 'HTML5, CSS3, JavaScript, WordPress'
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
+		skip: false
 	},
 	{
 		url: 'https://kinetikautomotive.com/',
 		image: 'images/temp/kinetik-automotive.png',
 		title: 'Kinetik Automotive',
-		description: 'HTML5, CSS3, JavaScript, Vue, Nuxt, WordPress'
+		description: 'HTML5, CSS3, JavaScript, Fullpage JS, Vue, Nuxt, PHP, WordPress',
+		skip: false
 	},
 	{
 		url: 'https://www.sod.bg/',
 		image: 'images/temp/sod-bg.png',
 		title: 'SOD 64 (СОД 64)',
-		description: 'HTML5, CSS3, JavaScript, jQuery, PHP'
+		description: 'HTML5, CSS3, JavaScript, jQuery, PHP',
+		skip: false
 	},
 	{
 		url: 'https://at-the-wall.atanas.info',
 		image: 'images/temp/at-the-wall.png',
 		title: 'At the Wall',
-		description: 'CSS3, PHP'
+		description: 'CSS3, PHP',
+		skip: false
 	},
 	{
 		url: 'https://snake.atanas.info',
 		image: 'images/temp/material-snake.png',
 		title: 'Material Snake',
-		description: 'TypeScript, HTML, CSS3'
+		description: 'TypeScript, HTML, CSS3',
+		skip: false
 	},
 	{
 		url: 'https://tetris.atanas.info',
 		image: 'images/temp/material-tetris.png',
 		title: 'Material Tetris',
-		description: 'TypeScript, HTML, CSS3'
+		description: 'TypeScript, HTML, CSS3',
+		skip: false
 	},
 	{
 		url: 'https://scriptex.js.org/2048',
 		image: 'images/temp/2048.png',
 		title: '2048',
-		description: 'TypeScript, HTML, CSS3'
+		description: 'TypeScript, HTML, CSS3',
+		skip: false
 	},
 	{
 		url: 'https://retirement-calc.now.sh/',
 		image: 'images/temp/retirement-calculator.png',
 		title: 'Retirement calculator',
-		description: 'JavaScript, SCSS, Vue, Vuex, Chart JS'
+		description: 'JavaScript, SCSS, Vue, Vuex, Chart JS',
+		skip: false
 	},
 	{
 		url: 'https://paternalism-tool.now.sh/',
 		image: 'images/temp/paternalism-tool.png',
 		title: 'Paternalism tool',
-		description: 'JavaScript, SCSS, React, Redux, Redux Saga'
+		description: 'JavaScript, SCSS, React, Redux, Redux Saga',
+		skip: false
 	},
 	{
 		url: 'https://fertility-tool.now.sh/',
 		image: 'images/temp/fertility-tool.png',
 		title: 'Fertility tool',
-		description: 'TypeScript, SCSS, React, Redux, Redux Saga'
+		description: 'TypeScript, SCSS, React, Redux, Redux Saga',
+		skip: false
 	},
 	{
 		url: 'https://imgn.now.sh/',
 		image: 'images/temp/imgn.png',
 		title: 'IMGN',
-		description: 'TypeScript, SCSS, React, Redux, Redux Saga'
+		description: 'TypeScript, SCSS, React, Redux, Redux Saga',
+		skip: false
 	},
 	{
 		url: 'https://three-11.com/',
 		image: 'images/temp/three-11.png',
 		title: 'Three 11',
-		description: 'HTML5, CSS3, SVG, JavaScript, D3'
+		description: 'HTML5, CSS3, SVG, JavaScript, D3',
+		skip: false
 	},
 	{
 		url: 'https://flows.now.sh/',
 		image: 'images/temp/flows.png',
 		title: 'Three 11 Company Flows',
-		description: 'JavaScript, Stylus, VuePress, NodeJS'
+		description: 'JavaScript, Stylus, VuePress, NodeJS',
+		skip: false
 	},
 	{
 		url: 'https://html-lab.com/',
 		image: 'images/temp/html-lab.png',
 		title: 'HTML Lab',
-		description: 'HTML5, CSS3, JavaScript'
+		description: 'HTML5, CSS3, JavaScript',
+		skip: false
+	},
+	{
+		url: 'https://malaikapictures.com/',
+		image: 'images/temp/malaika-pictures.png',
+		title: 'Malaika Pictures',
+		description: 'HTML5, CSS3, JavaScript, Fullpage JS, Shuffle JS, PHP, WordPress',
+		skip: false
+	},
+	{
+		url: 'https://pascoe.cn/',
+		image: 'images/temp/pascoe.png',
+		title: 'Pascoe',
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
+		skip: false
+	},
+	{
+		url: 'https://varnafoodtours.com/',
+		image: 'images/temp/varnafoodtours.png',
+		title: 'Varna Food Tours',
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
+		skip: false
+	},
+	{
+		url: 'https://ftypeforsale.com/',
+		image: 'images/temp/ftypeforsale.png',
+		title: 'F Type For Sale',
+		description: 'HTML5, CSS3, JavaScript',
+		skip: true
+	},
+	{
+		url: 'https://www.zeevan.com/',
+		image: 'images/temp/zeevan.png',
+		title: 'Zeevan',
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
+		skip: true
+	},
+	{
+		url: 'https://www.mariopricken.com/',
+		image: 'images/temp/mario-pricken.png',
+		title: 'Mario Pricken',
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
+		skip: false
+	},
+	{
+		url: 'https://sqillinehealth.com/',
+		image: 'images/temp/sqillinehealth.png',
+		title: 'Sqillinehealth',
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
+		skip: true
+	},
+	{
+		url: 'https://kinetik.bg/',
+		image: 'images/temp/kinetik.png',
+		title: 'Kinetik',
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
+		skip: false
 	},
 	{
 		url: '',
 		image: 'images/temp/atelier-coolinar.png',
 		title: 'Atelier Coolinar (Ателие Кулинар)',
-		description: 'HTML5, CSS3, JavaScript, WordPress'
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
+		skip: true
 	},
 	{
 		url: '',
 		image: 'images/temp/x-form.png',
 		title: 'X Form',
-		description: 'HTML5, CSS3, JavaScript, WordPress'
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
+		skip: true
 	},
 	{
 		url: '',
 		image: 'images/temp/faraon-bg.png',
 		title: 'Faraon (Фараон)',
-		description: 'HTML5, CSS3, JavaScript, jQuery, PHP'
+		description: 'HTML5, CSS3, JavaScript, jQuery, PHP',
+		skip: true
 	},
 	{
 		url: '',
 		image: 'images/temp/sirius-real-estate.png',
 		title: 'Sirius Real Estate',
-		description: 'HTML5, CSS3, JavaScript, jQuery, PHP, WordPress'
+		description: 'HTML5, CSS3, JavaScript, jQuery, PHP, WordPress',
+		skip: true
 	}
 ];
 

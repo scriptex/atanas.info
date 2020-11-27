@@ -65,7 +65,19 @@ export const getGitlabInsights = async (): Promise<void> => {
 			updatedAt: new Date().toISOString()
 		};
 
-		writeFileSync(file, JSON.stringify({ general, calendar, repositories }, null, 2));
+		writeFileSync(
+			file,
+			JSON.stringify(
+				{
+					general,
+					calendar,
+					repositories,
+					updated: new Date()
+				},
+				null,
+				2
+			)
+		);
 
 		console.log(`Successfully wrote insights data from Gitlab in ${file}`);
 	} catch (e) {
