@@ -11,7 +11,6 @@ module.exports = {
 		'scriptex/css-diagnostics',
 		'scriptex/dator',
 		'scriptex/Evolution',
-		'scriptex/expo-typescript-template',
 		'scriptex/express-watch-file',
 		'scriptex/github-insights',
 		'scriptex/github-pages-vuepress',
