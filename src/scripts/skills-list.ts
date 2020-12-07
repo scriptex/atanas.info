@@ -24,6 +24,7 @@ export const skills: Skill[] = [
 	{ text: 'Circle CI', icon: 'circleci', width: 30, height: 30, fill: '#ddd', since: 2019 },
 	{ text: 'Cordova', icon: 'cordova', width: 30, height: 29, fill: '#97daa8', since: 2014 },
 	{ text: 'D3', icon: 'd3', width: 30, height: 30, fill: '#5a4126', since: 2012 },
+	{ text: 'Deno', icon: 'deno', width: 30, height: 30, fill: '#fff', since: 2020 },
 	{ text: 'ESLint', icon: 'eslint', width: 30, height: 27, fill: '#fff', since: 2016 },
 	{ text: 'Express JS', icon: 'expressjs', width: 30, height: 25, fill: '#fff', since: 2017 },
 	{ text: 'Firebase', icon: 'firebase', width: 25, height: 30, fill: '#fff', since: 2018 },
