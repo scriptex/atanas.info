@@ -58,10 +58,8 @@ module.exports = {
 		'three11/infinite-scroll',
 		'three11/istouch',
 		'three11/optisize',
-		'three11/react-template',
 		'three11/react-template-ts',
-		'three11/scrollspy',
-		'three11/vuejs-template'
+		'three11/scrollspy'
 	],
 	main: ['three11/email-template']
 };
