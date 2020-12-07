@@ -466,6 +466,36 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
         >
           <Component
             className="c-skill__icon"
+            height={30}
+            name="svg-deno"
+            width={30}
+          />
+        </figure>
+        <p>
+          <strong>
+            Deno
+          </strong>
+          Since 
+          2020
+        </p>
+      </div>
+    </div>
+    <div
+      className="o-grid__item xs-12 sm-6 md-4 lg-3"
+      key="15"
+    >
+      <div
+        className="c-skill"
+      >
+        <figure
+          style={
+            Object {
+              "backgroundColor": "#fff",
+            }
+          }
+        >
+          <Component
+            className="c-skill__icon"
             height={27}
             name="svg-eslint"
             width={30}
@@ -482,7 +512,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="15"
+      key="16"
     >
       <div
         className="c-skill"
@@ -512,7 +542,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="16"
+      key="17"
     >
       <div
         className="c-skill"
@@ -542,7 +572,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="17"
+      key="18"
     >
       <div
         className="c-skill"
@@ -572,7 +602,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="18"
+      key="19"
     >
       <div
         className="c-skill"
@@ -602,7 +632,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="19"
+      key="20"
     >
       <div
         className="c-skill"
@@ -632,7 +662,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="20"
+      key="21"
     >
       <div
         className="c-skill"
@@ -662,7 +692,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="21"
+      key="22"
     >
       <div
         className="c-skill"
@@ -692,7 +722,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="22"
+      key="23"
     >
       <div
         className="c-skill"
@@ -722,7 +752,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="23"
+      key="24"
     >
       <div
         className="c-skill"
@@ -752,7 +782,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="24"
+      key="25"
     >
       <div
         className="c-skill"
@@ -782,7 +812,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="25"
+      key="26"
     >
       <div
         className="c-skill"
@@ -812,7 +842,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="26"
+      key="27"
     >
       <div
         className="c-skill"
@@ -842,7 +872,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="27"
+      key="28"
     >
       <div
         className="c-skill"
@@ -872,7 +902,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="28"
+      key="29"
     >
       <div
         className="c-skill"
@@ -902,7 +932,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="29"
+      key="30"
     >
       <div
         className="c-skill"
@@ -932,7 +962,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="30"
+      key="31"
     >
       <div
         className="c-skill"
@@ -962,7 +992,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="31"
+      key="32"
     >
       <div
         className="c-skill"
@@ -992,7 +1022,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="32"
+      key="33"
     >
       <div
         className="c-skill"
@@ -1022,7 +1052,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="33"
+      key="34"
     >
       <div
         className="c-skill"
@@ -1052,7 +1082,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="34"
+      key="35"
     >
       <div
         className="c-skill"
@@ -1082,7 +1112,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="35"
+      key="36"
     >
       <div
         className="c-skill"
@@ -1112,7 +1142,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="36"
+      key="37"
     >
       <div
         className="c-skill"
@@ -1142,7 +1172,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="37"
+      key="38"
     >
       <div
         className="c-skill"
@@ -1172,7 +1202,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="38"
+      key="39"
     >
       <div
         className="c-skill"
@@ -1202,7 +1232,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="39"
+      key="40"
     >
       <div
         className="c-skill"
@@ -1232,7 +1262,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="40"
+      key="41"
     >
       <div
         className="c-skill"
@@ -1262,7 +1292,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="41"
+      key="42"
     >
       <div
         className="c-skill"
@@ -1292,7 +1322,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="42"
+      key="43"
     >
       <div
         className="c-skill"
@@ -1322,7 +1352,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="43"
+      key="44"
     >
       <div
         className="c-skill"
@@ -1352,7 +1382,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="44"
+      key="45"
     >
       <div
         className="c-skill"
@@ -1382,7 +1412,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="45"
+      key="46"
     >
       <div
         className="c-skill"
@@ -1412,7 +1442,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="46"
+      key="47"
     >
       <div
         className="c-skill"
@@ -1442,7 +1472,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="47"
+      key="48"
     >
       <div
         className="c-skill"
@@ -1472,7 +1502,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="48"
+      key="49"
     >
       <div
         className="c-skill"
@@ -1502,7 +1532,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="49"
+      key="50"
     >
       <div
         className="c-skill"
@@ -1532,7 +1562,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="50"
+      key="51"
     >
       <div
         className="c-skill"
@@ -1562,7 +1592,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="51"
+      key="52"
     >
       <div
         className="c-skill"
@@ -1592,7 +1622,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="52"
+      key="53"
     >
       <div
         className="c-skill"
@@ -1622,7 +1652,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="53"
+      key="54"
     >
       <div
         className="c-skill"
@@ -1652,7 +1682,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="54"
+      key="55"
     >
       <div
         className="c-skill"
@@ -1682,7 +1712,7 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
     </div>
     <div
       className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="55"
+      key="56"
     >
       <div
         className="c-skill"

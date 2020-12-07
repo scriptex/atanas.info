@@ -92,6 +92,22 @@ exports[`SectionCertificates component Should render the SectionCertificates com
         />
       </Component>
     </div>
+    <div
+      className="o-grid__item xs-12 sm-6"
+      key="5"
+    >
+      <Component
+        className="c-certificate"
+        href="certificates/deno.pdf"
+      >
+        <img
+          alt="Deno"
+          loading="lazy"
+          src="certificates/deno.jpg"
+          width="600"
+        />
+      </Component>
+    </div>
   </div>
 </Component>
 `;
