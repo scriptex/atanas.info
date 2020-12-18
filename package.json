@@ -37,6 +37,7 @@
 		"deduplicate": "yarn-deduplicate --packages @types/react yarn.lock",
 		"screenshots": "ts-node ./screenshots/index.ts",
 		"insights": "ts-node ./insights/index.ts",
+		"pages": "ts-node ./insights/pages.ts",
 		"prerender": "ts-node ./server/index.ts",
 		"pwa": "create-pwa --icon static/images/icons/icon.png --launch static/images/icons/splash.png",
 		"type-coverage": "type-coverage --ignore-catch --detail",

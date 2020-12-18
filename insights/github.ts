@@ -48,7 +48,8 @@ export const getGithubInsights = async (): Promise<void> => {
 					contributions: contributions.map((item: any) => ({
 						user: item.login,
 						count: item.contributions
-					}))
+					})),
+					has_pages: repo.has_pages
 				});
 			}
 		);
