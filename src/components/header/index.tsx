@@ -1,16 +1,17 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
-import { Icon } from '..';
-import { Link, links } from '../../scripts/menu';
+import { Routes } from '../../loadables';
+import { Nav, Icon } from '..';
 
 export const Header: React.FunctionComponent = () => {
 	const [open, setOpen] = React.useState(false);
 
 	return (
 		<header className={`c-header${open ? ' c-header--open' : ''}`}>
-			<a href="#hello" className="c-logo" title="Back to top">
+			<Link to={Routes.HOME} className="c-logo" title="Back to homepage">
 				<Icon name="svg-logo" className="c-svg-logo" />
-			</a>
+			</Link>
 
 			<button
 				name="menu-toggle"
@@ -25,17 +26,7 @@ export const Header: React.FunctionComponent = () => {
 				<span></span>
 			</button>
 
-			<nav className="c-nav">
-				<ul>
-					{links.map(({ href, title, content, ...rest }: Link, index: number) => (
-						<li key={index}>
-							<a href={href} title={title} {...rest} onClick={() => setOpen(!open)}>
-								{content}
-							</a>
-						</li>
-					))}
-				</ul>
-			</nav>
+			<Nav onClick={() => setOpen(false)} />
 		</header>
 	);
 };

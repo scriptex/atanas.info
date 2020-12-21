@@ -286,6 +286,11 @@ body {
 		justify-content: center;
 		text-decoration: none;
 		background-color: var(--color-secondary);
+
+		&.active {
+			color: var(--color-action);
+			background-color: var(--color-primary);
+		}
 	}
 }
 
@@ -300,6 +305,59 @@ body {
 	.c-nav a:hover {
 		color: var(--color-action);
 		background-color: var(--color-primary);
+	}
+}
+
+.c-nav--inline {
+	font-size: 0.875rem;
+	position: relative;
+	width: auto;
+	height: auto;
+	top: auto;
+	right: auto;
+	z-index: 24;
+	padding-top: 2rem;
+	pointer-events: auto;
+	background-color: var(--color-secondary);
+
+	&::before {
+		content: none;
+	}
+
+	& ul {
+		width: auto;
+		height: auto;
+		flex-flow: row wrap;
+		align-items: stretch;
+		justify-content: space-between;
+		opacity: 1;
+		visibility: visible;
+		margin: 0;
+		transform: none;
+		transition: none;
+	}
+
+	& li {
+		opacity: 1;
+		border: 0;
+		transform: none;
+		transition: none;
+
+		& + li {
+			border: 0;
+		}
+	}
+
+	& a {
+		white-space: nowrap;
+		padding: 0.5rem;
+	}
+}
+
+@media (--tablet-portrait) {
+	.c-nav--inline {
+		max-width: 36rem;
+		margin: auto;
 	}
 }
 
@@ -389,6 +447,26 @@ body {
 }
 
 /* sections */
+
+.c-section {
+	overflow: hidden;
+}
+
+.c-section__video {
+	width: auto;
+	height: auto;
+	min-width: 100%;
+	min-height: 100%;
+	max-width: none;
+	max-height: none;
+	opacity: 0.2;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: -1;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+}
 
 .c-section__actions {
 	text-align: center;
@@ -503,7 +581,7 @@ body {
 /* Section About */
 
 .c-section--about {
-	padding: 4rem 0;
+	padding: 8rem 0 4rem;
 	position: relative;
 	z-index: 2;
 	background-attachment: fixed;
@@ -523,9 +601,15 @@ body {
 }
 
 .c-article {
-	& h2 {
+	& header {
 		text-align: center;
 		flex: 0 0 100%;
+	}
+
+	& h2 {
+		text-align: center;
+		margin-bottom: 4rem;
+		@mixin slanted;
 	}
 
 	& h3 {
@@ -652,7 +736,7 @@ body {
 	text-align: center;
 	position: relative;
 	z-index: 2;
-	padding: 3rem 0;
+	padding: 8rem 0 4rem;
 	background-color: color-mod(var(--color-secondary) a(20%));
 
 	& h2 {
@@ -720,7 +804,7 @@ body {
 	}
 
 	& .o-grid {
-		max-height: 93.75rem;
+		max-height: 97.5rem;
 		justify-content: flex-start;
 		overflow: hidden;
 		transition: max-height var(--timing) var(--easing);
@@ -849,7 +933,7 @@ body {
 	text-align: center;
 	position: relative;
 	z-index: 2;
-	padding: 0;
+	padding: 5rem 0 0;
 
 	& h1,
 	& h2 {
@@ -1071,7 +1155,7 @@ body {
 	text-align: center;
 	position: relative;
 	z-index: 2;
-	padding: 4rem 0;
+	padding: 5rem 0 4rem;
 
 	& h2 {
 		color: var(--color-primary);
@@ -1174,7 +1258,7 @@ body {
 	text-align: center;
 	position: relative;
 	z-index: 2;
-	padding: 4rem 0 3.25rem;
+	padding: 8.25rem 0 3.25rem;
 	margin-bottom: 4rem;
 	background-color: color-mod(var(--color-primary) a(70%));
 
@@ -1457,7 +1541,7 @@ body {
 	text-align: center;
 	position: relative;
 	z-index: 2;
-	padding: 4rem 0;
+	padding: 9.25rem 0 4rem;
 	background-color: var(--color-primary);
 
 	& + .c-section--slides {
@@ -1626,7 +1710,7 @@ body {
 	text-align: center;
 	position: relative;
 	z-index: 2;
-	padding: 4rem 0 1rem;
+	padding: 8rem 0 5rem;
 
 	& h1 {
 		text-align: center;
@@ -1669,8 +1753,7 @@ body {
 	text-align: center;
 	position: relative;
 	z-index: 2;
-	padding: 4rem 0;
-	border-bottom: 8rem solid color-mod(var(--color-primary) a(85%));
+	padding: 8rem 0 4rem;
 	overflow: hidden;
 
 	& h2 {
@@ -1921,7 +2004,6 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 	pointer-events: auto;
 
 	&::before {
-		opacity: 0.8;
 		visibility: visible;
 		border-radius: 0;
 		transform: scale(1);

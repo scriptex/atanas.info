@@ -69,7 +69,9 @@ export const SectionAbout: React.FunctionComponent = () => (
 		className=" c-article fullsize-background"
 		hasButton={true}
 	>
-		<h2>About me</h2>
+		<header>
+			<h2>About me</h2>
+		</header>
 
 		<img
 			src="images/temp/atanas.jpg"

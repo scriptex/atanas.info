@@ -448,6 +448,9 @@ exports[`SectionStats component Should render the SectionStats component 1`] = `
   hasShell={false}
   id="stats"
 >
+  <Component
+    name="stats"
+  />
   <header
     className="c-section__head"
   >

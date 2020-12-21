@@ -1,10 +1,12 @@
 import * as React from 'react';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
-import { Section, ExternalLink } from '..';
+import { Video, Section, ExternalLink } from '..';
 
 export const SectionSocial: React.FunctionComponent = () => (
 	<Section id="social" hasShell={false} hasButton={true}>
+		<Video name="social" />
+
 		<header className="c-section__head">
 			<div className="o-shell">
 				<h1>Social</h1>
