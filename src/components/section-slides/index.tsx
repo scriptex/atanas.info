@@ -7,7 +7,12 @@ export const SectionSlides: React.FunctionComponent = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);
 
 	return (
-		<Section id="slides" hasButton={true}>
+		<Section
+			id="slides"
+			style={{ backgroundImage: 'url(images/temp/presentation.jpg)' }}
+			className=" fullsize-background"
+			hasButton={true}
+		>
 			<h2>Slides</h2>
 
 			<SectionNav name="title" data={slides} active={activeIndex} onClick={setActiveIndex} />

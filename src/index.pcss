@@ -23,6 +23,12 @@
 	--avatar-angle: 0deg;
 }
 
+@define-mixin overlay {
+	content: '';
+	@mixin centered;
+	z-index: 1;
+}
+
 /* variables */
 
 :root {
@@ -587,10 +593,8 @@ body {
 	background-attachment: fixed;
 
 	&::before {
-		content: '';
+		@mixin overlay;
 		opacity: 0.5;
-		@mixin centered;
-		z-index: 1;
 		background-color: var(--color-secondary);
 	}
 
@@ -1543,6 +1547,18 @@ body {
 	z-index: 2;
 	padding: 9.25rem 0 4rem;
 	background-color: var(--color-primary);
+	background-attachment: fixed;
+
+	&::before {
+		@mixin overlay;
+		opacity: 0.8;
+		background-color: var(--color-secondary);
+	}
+
+	& .o-shell {
+		position: relative;
+		z-index: 2;
+	}
 
 	& + .c-section--slides {
 		margin-top: 4rem;
@@ -1619,6 +1635,15 @@ body {
 
 /* section articles */
 
+.c-section--articles {
+	background-attachment: fixed;
+
+	&::before {
+		opacity: 0.5;
+		background-color: var(--color-primary);
+	}
+}
+
 .c-article-link {
 	color: var(--color-primary);
 	text-align: center;
@@ -1632,6 +1657,7 @@ body {
 	transition: background-size var(--timing) var(--easing);
 
 	& strong {
+		font-size: 1.25rem;
 		opacity: 1;
 		position: absolute;
 		top: 50%;
@@ -1643,10 +1669,8 @@ body {
 	}
 
 	&::before {
-		content: '';
+		@mixin overlay;
 		opacity: 0.5;
-		@mixin centered;
-		z-index: 1;
 		background-color: var(--color-secondary);
 		transition: opacity var(--timing) var(--easing);
 	}
@@ -2038,7 +2062,7 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 	}
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
 	:root {
 		--color-primary: #000;
 		--color-secondary: #fff;
@@ -2082,4 +2106,4 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 	.c-section--timeline .vertical-timeline__icon {
 		fill: var(--color-secondary);
 	}
-}
+} */

@@ -2,9 +2,15 @@
 
 exports[`SectionSlides component Should render the SectionSlides component 1`] = `
 <Component
+  className=" fullsize-background"
   hasButton={true}
   hasShell={true}
   id="slides"
+  style={
+    Object {
+      "backgroundImage": "url(images/temp/presentation.jpg)",
+    }
+  }
 >
   <h2>
     Slides
