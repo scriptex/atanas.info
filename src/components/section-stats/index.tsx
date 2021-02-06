@@ -34,6 +34,15 @@ export const addTitles = (selector: string, getTitle: (rect: SVGRectElement) => 
 
 export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
 	const { general, calendar, updated, repositories } = props.data;
+
+	const calendarDates = Object.keys(calendar).reduce((result: string[], key: string) => {
+		if (Object.keys(calendar[key]).length === 0) {
+			return result;
+		}
+
+		return [...result, key];
+	}, []);
+
 	const blocks: GeneralInsight[] = [
 		{
 			title: 'Used languages',
@@ -46,7 +55,7 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 		{ title: 'Following', value: general.following },
 		{ title: 'Joined date', value: formatDate(general.createdAt) },
 		{ title: 'Updated at', value: formatDate(general.updatedAt) },
-		{ title: 'Last active', value: formatDate(Object.keys(calendar).reverse()[0]) },
+		{ title: 'Last active', value: formatDate(calendarDates.reverse()[0]) },
 		{ title: 'Total repositories', value: repositories.length },
 		{ title: 'Private repositories', value: general.privateRepos },
 		{ title: 'Public repositories', value: general.publicRepos },
