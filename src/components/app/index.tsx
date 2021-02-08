@@ -31,7 +31,13 @@ export const App: React.FunctionComponent = () => {
 
 	return (
 		<Router>
-			<React.Suspense fallback={<div className="c-loading">Loading ...</div>}>
+			<React.Suspense
+				fallback={
+					<div className="c-loading">
+						<div className="c-loader"></div>
+					</div>
+				}
+			>
 				<AppContext.Provider value={value}>
 					<Head />
 
