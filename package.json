@@ -32,6 +32,7 @@
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage",
+		"test:coverage:watch": "jest --coverage --watch",
 		"lint": "./bin/lint.sh",
 		"prettier": "./bin/prettier.sh",
 		"deduplicate": "yarn-deduplicate --packages @types/react yarn.lock",
