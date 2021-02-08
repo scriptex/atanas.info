@@ -66,6 +66,13 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 	},
 	{
 		rel: 'noopener noreferrer',
+		href: 'https://scriptexbg.wordpress.com',
+		title: 'My blog',
+		target: '_blank',
+		content: 'Blog'
+	},
+	{
+		rel: 'noopener noreferrer',
 		href: './resume.pdf',
 		title: 'My CV',
 		target: '_blank',
@@ -73,10 +80,10 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 	},
 	{
 		rel: 'noopener noreferrer',
-		href: 'https://scriptexbg.wordpress.com',
-		title: 'My blog',
+		href: 'https://scriptex.js.org',
+		title: 'My interactive CV',
 		target: '_blank',
-		content: 'Blog'
+		content: 'Interactive Resume'
 	},
 	{
 		rel: 'noopener noreferrer',
