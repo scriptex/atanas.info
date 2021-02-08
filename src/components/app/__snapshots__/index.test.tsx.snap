@@ -7,7 +7,9 @@ exports[`App component Should render the App component 1`] = `
       <div
         className="c-loading"
       >
-        Loading ...
+        <div
+          className="c-loader"
+        />
       </div>
     }
   >
