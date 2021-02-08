@@ -55,6 +55,20 @@
 	}
 }
 
+@keyframes loading {
+	0% {
+		width: 0;
+		height: 0;
+		opacity: 1;
+	}
+
+	100% {
+		width: 4.5rem;
+		height: 4.5rem;
+		opacity: 0;
+	}
+}
+
 /* global styles */
 
 html,
@@ -329,18 +343,20 @@ body {
 	& ul {
 		width: auto;
 		height: auto;
-		flex-flow: row wrap;
-		align-items: stretch;
-		justify-content: space-between;
+		display: block;
 		opacity: 1;
 		visibility: visible;
 		margin: 0;
 		transform: none;
 		transition: none;
+		columns: 4;
+		column-gap: 1rem;
 	}
 
 	& li {
+		display: block;
 		opacity: 1;
+		padding-bottom: 0.5rem;
 		border: 0;
 		transform: none;
 		transition: none;
@@ -352,14 +368,32 @@ body {
 
 	& a {
 		white-space: nowrap;
-		padding: 0.5rem;
+		width: auto;
+		display: inline-flex;
+		padding: 0;
+
+		&.active {
+			color: inherit;
+			text-decoration: underline;
+			text-decoration-color: var(--color-action);
+			background-color: transparent;
+		}
 	}
 }
 
-@media (--tablet-portrait) {
-	.c-nav--inline {
-		max-width: 36rem;
-		margin: auto;
+@media (--hover) {
+	.c-nav--inline a:hover {
+		color: inherit;
+		text-decoration: underline;
+		text-decoration-color: var(--color-action);
+		background-color: transparent;
+	}
+}
+
+@media (--mobile) {
+	.c-nav--inline ul {
+		column-count: 2;
+		column-gap: 0;
 	}
 }
 
@@ -884,6 +918,10 @@ body {
 			font-size: 10vw;
 			margin-bottom: 4rem;
 		}
+
+		& .o-grid {
+			max-height: 190rem;
+		}
 	}
 }
 
@@ -901,7 +939,7 @@ body {
 		}
 
 		& .o-grid {
-			max-height: 281.25rem;
+			max-height: 285rem;
 		}
 
 		& .o-grid__item + .o-grid__item {
@@ -2068,6 +2106,36 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 	.c-contact__body {
 		width: auto;
 	}
+}
+
+/* Loading */
+
+.c-loader {
+	width: 5rem;
+	height: 5rem;
+	@mixin centered;
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		opacity: 1;
+		@mixin centered;
+		border: 0.125rem solid var(--color-primary);
+		border-radius: 50%;
+		animation: loading 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+	}
+
+	&::after {
+		border-color: var(--color-action);
+		animation-delay: -1s;
+	}
+}
+
+.c-loader__wrapper {
+	height: 100%;
+	position: relative;
+	background-color: var(--color-secondary);
 }
 
 @media (prefers-reduced-motion: reduce) {
