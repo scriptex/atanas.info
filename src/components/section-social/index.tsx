@@ -19,7 +19,7 @@ export const SectionSocial: React.FunctionComponent = () => (
 					<div className="o-grid__item xs-12 sm-6">
 						<h2>Codersrank Profile</h2>
 
-						<codersrank-widget username="scriptex"></codersrank-widget>
+						<codersrank-widget username="scriptex" branding={false}></codersrank-widget>
 					</div>
 
 					<div className="o-grid__item xs-12 sm-6">
@@ -62,6 +62,20 @@ export const SectionSocial: React.FunctionComponent = () => (
 							height="400"
 							loading="lazy"
 							className="youtube-wrapper"
+						></iframe>
+					</div>
+
+					<div className="o-grid__item xs-12 sm-6">
+						<h2>Spotify playlist</h2>
+
+						<iframe
+							src="https://open.spotify.com/embed/playlist/4MiRUEKhpi7Zb83GDxsV4W"
+							allow="encrypted-media"
+							width="300"
+							height="380"
+							className="spotify-player"
+							frameBorder={0}
+							allowTransparency={true}
 						></iframe>
 					</div>
 				</div>
