@@ -12,9 +12,11 @@ exports[`SectionAbout component Should render the SectionAbout component 1`] = `
     }
   }
 >
-  <h2>
-    About me
-  </h2>
+  <header>
+    <h2>
+      About me
+    </h2>
+  </header>
   <img
     alt="Atanas Atanasov smiling dressed in a green t-shirt"
     height="240"

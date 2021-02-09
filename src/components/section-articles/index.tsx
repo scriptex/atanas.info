@@ -4,7 +4,12 @@ import { articles, Article } from '../../scripts/articles';
 import { Section, ExternalLink } from '..';
 
 export const SectionArticles: React.FunctionComponent = () => (
-	<Section id="articles" hasButton={true} className=" c-section--slides">
+	<Section
+		id="articles"
+		style={{ backgroundImage: 'url(images/temp/articles.jpg)' }}
+		className=" c-section--slides fullsize-background"
+		hasButton={true}
+	>
 		<h2>Articles</h2>
 
 		<div className="c-section__body o-grid">

@@ -1,4 +1,6 @@
-export interface Link {
+import { Routes } from './routes';
+
+export interface MenuItem {
 	rel?: string;
 	href: string;
 	title: string;
@@ -6,61 +8,68 @@ export interface Link {
 	content: string;
 }
 
-export const links: Array<Readonly<Link>> = [
+export const menuItems: Array<Readonly<MenuItem>> = [
 	{
-		href: '#hello',
-		title: 'Back to top',
+		href: Routes.HOME,
+		title: 'Back to homepage',
 		content: 'Home'
 	},
 	{
-		href: '#about',
+		href: Routes.ABOUT,
 		title: 'About me',
 		content: 'About'
 	},
 	{
-		href: '#timeline',
+		href: Routes.TIMELINE,
 		title: 'Life events',
 		content: 'Timeline'
 	},
 	{
-		href: '#skills',
+		href: Routes.SKILLS,
 		title: 'My skills',
 		content: 'Skills'
 	},
 	{
-		href: '#portfolio',
+		href: Routes.PORTFOLIO,
 		title: 'My portfolio',
 		content: 'Portfolio'
 	},
 	{
-		href: '#stats',
+		href: Routes.STATS,
 		title: 'My stats',
 		content: 'Stats'
 	},
 	{
-		href: '#slides',
+		href: Routes.SLIDES,
 		title: 'My presentations',
 		content: 'Slides'
 	},
 	{
-		href: '#videos',
+		href: Routes.VIDEOS,
 		title: 'My video presentations',
 		content: 'Videos'
 	},
 	{
-		href: '#articles',
+		href: Routes.ARTICLES,
 		title: 'My published articles',
 		content: 'Articles'
 	},
 	{
-		href: '#certificates',
+		href: Routes.CERTIFICATES,
 		title: 'My certificates',
 		content: 'Certificates'
 	},
 	{
-		href: '#social',
+		href: Routes.SOCIAL,
 		title: 'Social widgets',
 		content: 'Social'
+	},
+	{
+		rel: 'noopener noreferrer',
+		href: 'https://scriptexbg.wordpress.com',
+		title: 'My blog',
+		target: '_blank',
+		content: 'Blog'
 	},
 	{
 		rel: 'noopener noreferrer',
@@ -71,10 +80,10 @@ export const links: Array<Readonly<Link>> = [
 	},
 	{
 		rel: 'noopener noreferrer',
-		href: 'https://scriptexbg.wordpress.com',
-		title: 'My blog',
+		href: 'https://scriptex.js.org',
+		title: 'My interactive CV',
 		target: '_blank',
-		content: 'Blog'
+		content: 'Interactive Resume'
 	},
 	{
 		rel: 'noopener noreferrer',

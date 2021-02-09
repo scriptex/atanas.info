@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { drawSkills } from '../../scripts/skills';
 import { Skill, skills } from '../../scripts/skills-list';
-import { Icon, Button, Section } from '..';
+import { Icon, Video, Button, Section } from '..';
 
 export const SectionSkills: React.FunctionComponent = () => {
 	const [showTable, setShowTable] = React.useState(false);
@@ -19,6 +19,8 @@ export const SectionSkills: React.FunctionComponent = () => {
 			}
 			hasButton={true}
 		>
+			<Video name="skills" />
+
 			<h2>
 				Skills <br />
 				<small hidden={showTable}>(Drag the bubbles to play)</small>

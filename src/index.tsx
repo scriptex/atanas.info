@@ -29,30 +29,6 @@ gtag('config', 'UA-83446952-1');
 if ('serviceWorker' in navigator) {
 	const workers: IWorker[] = [
 		{
-			name: `service-worker.js`,
-			action: (registration: ServiceWorkerRegistration): void => {
-				registration.onupdatefound = (): void => {
-					const installingWorker = registration.installing;
-
-					if (installingWorker === null) {
-						return;
-					}
-
-					installingWorker.onstatechange = () => {
-						if (installingWorker.state !== 'installed') {
-							return;
-						}
-
-						console.info(
-							navigator.serviceWorker.controller
-								? 'New content is available and will be used when all tabs for this page are closed.'
-								: 'Content is cached for offline use.'
-						);
-					};
-				};
-			}
-		},
-		{
 			name: `offline-worker.js`
 		}
 	];

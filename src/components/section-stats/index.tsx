@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { format } from 'date-fns';
 
-import { Svg, Section } from '..';
+import { Svg, Video, Section } from '..';
 
 interface GeneralInsight {
 	readonly title: string;
@@ -236,6 +236,8 @@ export const SectionStats: React.FunctionComponent<Readonly<Props>> = (props: Re
 
 	return (
 		<Section id="stats" hasShell={false} hasButton={true}>
+			<Video name="stats" />
+
 			<header className="c-section__head">
 				<div className="o-shell">
 					<h1>Stats</h1>

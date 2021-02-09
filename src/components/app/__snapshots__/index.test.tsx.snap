@@ -1,38 +1,186 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component Should render the App component 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "contactVisible": false,
-      "setContactVisible": [Function],
+<BrowserRouter>
+  <Component />
+  <Suspense
+    fallback={
+      <div
+        className="c-loading"
+      >
+        <div
+          className="c-loader"
+        />
+      </div>
     }
-  }
->
-  <Component />
-  <Component
-    src="/sprite.svg"
-  />
-  <Component />
-  <Component />
-  <Component />
-  <Component />
-  <Component />
-  <Component />
-  <Component />
-  <Component
-    data={
-      Object {
-        "github": undefined,
-        "gitlab": undefined,
+  >
+    <ContextProvider
+      value={
+        Object {
+          "contactVisible": false,
+          "setContactVisible": [Function],
+        }
       }
-    }
-  />
-  <Component />
-  <Component />
-  <Component />
-  <Component />
-  <Component />
-  <Component />
-</ContextProvider>
+    >
+      <Component />
+      <Component
+        src="/sprite.svg"
+      />
+      <Component />
+      <Component />
+      <Switch>
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/about"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/timeline"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/skills"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/portfolio"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/stats"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/slides"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/videos"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/articles"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/certificates"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/social"
+        />
+      </Switch>
+      <Component
+        className="c-nav--inline"
+        hasShell={true}
+      />
+      <Component />
+    </ContextProvider>
+  </Suspense>
+</BrowserRouter>
 `;

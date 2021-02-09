@@ -6,6 +6,9 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
   hasShell={false}
   id="social"
 >
+  <Component
+    name="social"
+  />
   <header
     className="c-section__head"
   >
@@ -33,6 +36,7 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
             Codersrank Profile
           </h2>
           <codersrank-widget
+            branding={false}
             username="scriptex"
           />
         </div>
@@ -87,6 +91,22 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
             height="400"
             loading="lazy"
             src="//www.youtube.com/embed/?listType=user_uploads&list=scriptex"
+          />
+        </div>
+        <div
+          className="o-grid__item xs-12 sm-6"
+        >
+          <h2>
+            Spotify playlist
+          </h2>
+          <iframe
+            allow="encrypted-media"
+            allowTransparency={true}
+            className="spotify-player"
+            frameBorder={0}
+            height="380"
+            src="https://open.spotify.com/embed/playlist/4MiRUEKhpi7Zb83GDxsV4W"
+            width="300"
           />
         </div>
       </div>

@@ -33,6 +33,13 @@ export const projects: Project[] = [
 		timeout: 5000
 	},
 	{
+		url: 'https://mama-culinar.com/',
+		image: 'images/temp/mama-culinar.png',
+		title: 'Mama Culinar',
+		description: 'PHP, JavaScript, CSS, HTML, WordPress',
+		skip: false
+	},
+	{
 		url: 'https://app.home.fotontechnik.pl/',
 		image: 'images/temp/foton-home.png',
 		title: 'Foton Home',

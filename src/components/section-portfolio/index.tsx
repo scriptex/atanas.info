@@ -2,7 +2,7 @@ import * as React from 'react';
 import Slider from 'react-slick';
 
 import projectsList from '../../scripts/projects-list.json';
-import { Button, Section, ExternalLink } from '..';
+import { Video, Button, Section, ExternalLink } from '..';
 import { Project, projects, MobileApp, mobileApps } from '../../scripts/projects';
 
 export const SectionPortfolio: React.FunctionComponent = () => {
@@ -14,6 +14,8 @@ export const SectionPortfolio: React.FunctionComponent = () => {
 			actions={showAll ? null : <Button onClick={() => setShowAll(true)}>Show all</Button>}
 			hasButton={true}
 		>
+			<Video name="portfolio" />
+
 			<h1>Portfolio</h1>
 
 			<h2>Mobile applications</h2>

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import 'lite-youtube-embed';
 
-import { Section, SectionNav } from '..';
+import { Video, Section, SectionNav } from '..';
 import { presentations, Presentation } from '../../scripts/presentations';
 
 export const SectionVideos: React.FunctionComponent = () => {
@@ -9,6 +9,8 @@ export const SectionVideos: React.FunctionComponent = () => {
 
 	return (
 		<Section id="videos" hasButton={true} className=" c-section--slides">
+			<Video name="videos" />
+
 			<h2>Videos</h2>
 
 			<SectionNav name="title" data={presentations} active={activeIndex} onClick={setActiveIndex} />

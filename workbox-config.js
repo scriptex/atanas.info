@@ -1,7 +1,8 @@
 module.exports = {
 	swDest: 'dist/offline-worker.js',
-	globDirectory: 'dist',
-	globPatterns: ['**/*.{js,css,png,svg,jpg,gif,json,woff,woff2,eot,ico,webmanifest,map}'],
+	sourcemap: false,
 	skipWaiting: true,
-	clientsClaim: true
+	globPatterns: ['**/*.{js,css,png,svg,jpg,gif,json,woff,woff2,eot,ico,webmanifest,map}'],
+	clientsClaim: true,
+	globDirectory: 'dist'
 };

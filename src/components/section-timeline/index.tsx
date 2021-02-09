@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 
-import { Icon, Section, ExternalLink } from '..';
+import { Icon, Video, Section, ExternalLink } from '..';
 
 export const WorkIcon = (): JSX.Element => <Icon name="svg-work" className="vertical-timeline__icon" />;
 export const PersonalIcon = (): JSX.Element => <Icon name="svg-personal" className="vertical-timeline__icon" />;
@@ -9,6 +9,8 @@ export const EducationIcon = (): JSX.Element => <Icon name="svg-education" class
 
 export const SectionTimeline: React.FunctionComponent = () => (
 	<Section id="timeline" hasButton={true}>
+		<Video name="timeline" />
+
 		<h2>Timeline</h2>
 
 		<VerticalTimeline>

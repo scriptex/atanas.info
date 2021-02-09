@@ -1,25 +1,23 @@
 import * as React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import github from '../../scripts/github-insights.json';
 import gitlab from '../../scripts/gitlab-insights.json';
+import { Routes } from '../../scripts/routes';
+import { Svg, Nav, Head, Header, Footer, Contact, ScrollToTop } from '..';
 import {
-	Svg,
-	Head,
-	Header,
-	Footer,
-	Contact,
-	SectionHello,
-	SectionAbout,
-	SectionStats,
-	SectionSkills,
-	SectionSocial,
-	SectionSlides,
-	SectionVideos,
-	SectionArticles,
-	SectionTimeline,
-	SectionPortfolio,
-	SectionCertificates
-} from '..';
+	Home,
+	About,
+	Skills,
+	Slides,
+	Social,
+	Stats,
+	Videos,
+	Timeline,
+	Articles,
+	Portfolio,
+	Certificates
+} from '../../loadables';
 
 export const AppContext = React.createContext({
 	contactVisible: false,
@@ -32,41 +30,59 @@ export const App: React.FunctionComponent = () => {
 	const value: any = { contactVisible, setContactVisible };
 
 	return (
-		<AppContext.Provider value={value}>
-			<Head />
+		<Router>
+			<ScrollToTop />
 
-			<Svg src="/sprite.svg" />
+			<React.Suspense
+				fallback={
+					<div className="c-loading">
+						<div className="c-loader"></div>
+					</div>
+				}
+			>
+				<AppContext.Provider value={value}>
+					<Head />
 
-			<>
-				<Header />
+					<Svg src="/sprite.svg" />
 
-				<Contact />
+					<Header />
 
-				<SectionHello />
+					<Contact />
 
-				<SectionAbout />
+					<Switch>
+						<Route exact={true} path={Routes.HOME} component={Home}></Route>
 
-				<SectionTimeline />
+						<Route exact={true} path={Routes.ABOUT} component={About}></Route>
 
-				<SectionSkills />
+						<Route exact={true} path={Routes.TIMELINE} component={Timeline}></Route>
 
-				<SectionPortfolio />
+						<Route exact={true} path={Routes.SKILLS} component={Skills}></Route>
 
-				<SectionStats data={{ github, gitlab }} />
+						<Route exact={true} path={Routes.PORTFOLIO} component={Portfolio}></Route>
 
-				<SectionSlides />
+						<Route
+							exact={true}
+							path={Routes.STATS}
+							component={() => <Stats data={{ github, gitlab }} />}
+						></Route>
 
-				<SectionVideos />
+						<Route exact={true} path={Routes.SLIDES} component={Slides}></Route>
 
-				<SectionArticles />
+						<Route exact={true} path={Routes.VIDEOS} component={Videos}></Route>
 
-				<SectionCertificates />
+						<Route exact={true} path={Routes.ARTICLES} component={Articles}></Route>
 
-				<SectionSocial />
+						<Route exact={true} path={Routes.CERTIFICATES} component={Certificates}></Route>
 
-				<Footer />
-			</>
-		</AppContext.Provider>
+						<Route exact={true} path={Routes.SOCIAL} component={Social}></Route>
+					</Switch>
+
+					<Nav hasShell={true} className="c-nav--inline" />
+
+					<Footer />
+				</AppContext.Provider>
+			</React.Suspense>
+		</Router>
 	);
 };
 // codebeat:enable[LOC]
