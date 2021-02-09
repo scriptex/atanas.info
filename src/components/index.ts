@@ -7,6 +7,7 @@ export { default as Head } from './head';
 export { default as Header } from './header';
 export { default as Icon } from './icon';
 export { default as Nav } from './nav';
+export { default as ScrollToTop } from './scroll-top';
 export { default as Section } from './section';
 export { default as SectionAbout } from './section-about';
 export { default as SectionArticles } from './section-articles';
