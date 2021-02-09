@@ -1,4 +1,4 @@
-import { Routes } from '../loadables';
+import { Routes } from './routes';
 
 export interface MenuItem {
 	rel?: string;

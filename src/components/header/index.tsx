@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Routes } from '../../loadables';
+import { Routes } from '../../scripts/routes';
 import { Nav, Icon } from '..';
 
 export const Header: React.FunctionComponent = () => {
