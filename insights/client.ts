@@ -1,4 +1,7 @@
 import fetch from 'node-fetch';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import * as LastFm from 'lastfm-node-client';
 import { GitHubClient } from 'universal-github-client';
 import { config as dotenvConfig } from 'dotenv';
 
@@ -6,8 +9,7 @@ dotenvConfig();
 
 export const github = new GitHubClient({
 	base: 'https://api.github.com',
-	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-	token: process.env.GITHUB_TOKEN!,
+	token: process.env.GITHUB_TOKEN as string,
 	fetch
 });
 
@@ -23,3 +25,5 @@ export const gitlab = (path: string, method: 'GET' | 'POST' | 'PUT' | 'DELETE' |
 		.catch((e: Error) => {
 			throw e;
 		});
+
+export const lastFm = new LastFm(process.env.LAST_FM_API_KEY);
