@@ -101,12 +101,64 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
           </h2>
           <iframe
             allow="encrypted-media"
-            allowTransparency={true}
             className="spotify-player"
             frameBorder={0}
             height="380"
             src="https://open.spotify.com/embed/playlist/4MiRUEKhpi7Zb83GDxsV4W"
             width="300"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <header
+    className="c-section__head"
+  >
+    <div
+      className="o-shell"
+    >
+      <h1>
+        Last.FM weekly statistics
+      </h1>
+    </div>
+  </header>
+  <div
+    className="c-section__entry"
+  >
+    <div
+      className="o-shell"
+    >
+      <div
+        className="o-grid"
+      >
+        <div
+          className="o-grid__item xs-12 sm-6 md-4 lg-4"
+        >
+          <h2>
+            Top albums:
+          </h2>
+          <div
+            className="c-last-fm"
+          />
+        </div>
+        <div
+          className="o-grid__item xs-12 sm-6 md-4 lg-4"
+        >
+          <h2>
+            Top artists:
+          </h2>
+          <div
+            className="c-last-fm"
+          />
+        </div>
+        <div
+          className="o-grid__item xs-12 sm-6 md-4 lg-4"
+        >
+          <h2>
+            Top tracks:
+          </h2>
+          <div
+            className="c-last-fm"
           />
         </div>
       </div>
