@@ -14,40 +14,41 @@ export const getLastFMInsights = async (): Promise<void> => {
 	console.log('Getting insights data from Last.FM...');
 
 	try {
-		const weeklyAlbumChart = await lastFm.userGetWeeklyAlbumChart({
-			user: 'scriptex'
-		});
+		const weeklyAlbumChart = await lastFm
+			.userGetWeeklyAlbumChart({
+				user: 'scriptex'
+			})
+			.then((r: any) => r.weeklyalbumchart.album.slice(0, 20));
 
-		await asyncForEach(weeklyAlbumChart.weeklyalbumchart.album, async ({ name, artist }: any, index: number) => {
-			weeklyAlbumChart.weeklyalbumchart.album[index].apiDetails = await lastFm.albumGetInfo({
+		await asyncForEach(weeklyAlbumChart, async ({ name, artist }: any, index: number) => {
+			weeklyAlbumChart[index].apiDetails = await lastFm.albumGetInfo({
 				artist: artist['#text'],
 				album: name,
 				...defaultArguments
 			});
 		});
 
-		const weeklyArtistChart = await lastFm.userGetWeeklyArtistChart({
-			user: 'scriptex'
-		});
-
-		await asyncForEach(weeklyArtistChart.weeklyartistchart.artist, async ({ name }: any, index: number) => {
-			weeklyArtistChart.weeklyartistchart.artist[index].apiDetails = await lastFm.artistGetInfo({
-				artist: name,
-				...defaultArguments
-			});
-		});
-
-		const weeklyTrackChart = await lastFm.userGetWeeklyTrackChart({
-			user: 'scriptex'
-		});
+		const topAlbums = await lastFm
+			.userGetTopAlbums({
+				user: 'scriptex',
+				period: '1month'
+			})
+			.then((r: any) => r.topalbums.album.slice(0, 20));
 
 		writeFileSync(
 			file,
 			JSON.stringify(
 				{
-					weeklyAlbumChart,
-					weeklyArtistChart,
-					weeklyTrackChart,
+					weeklyAlbumChart: weeklyAlbumChart.map((item: any) => ({
+						name: item.name,
+						images: item.apiDetails.album.image,
+						artist: item.artist['#text']
+					})),
+					topAlbums: topAlbums.map((item: any) => ({
+						name: item.name,
+						images: item.image,
+						artist: item.artist.name
+					})),
 					updated: new Date()
 				},
 				null,

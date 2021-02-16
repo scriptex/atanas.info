@@ -37,7 +37,7 @@ export const Carousel: React.FC<Props> = (props: Props) => {
 		const angle = theta * selectedIndex * -1;
 
 		return {
-			transform: `translateZ(${radius / 3}px) rotateY(${angle}deg)`
+			transform: `translateZ(${-1 * radius}px) rotateY(${angle}deg)`
 		};
 	};
 

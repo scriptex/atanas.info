@@ -3,17 +3,11 @@ import * as React from 'react';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 import lastFm from '../../scripts/last.fm-insights.json';
+import { formatDate } from '../section-stats';
 import { Video, Section, Carousel, ExternalLink } from '..';
 
 export const SectionSocial: React.FunctionComponent = () => {
-	const tracks = lastFm.weeklyTrackChart.weeklytrackchart.track.slice(0, 10);
-	const artists = lastFm.weeklyArtistChart.weeklyartistchart.artist.slice(0, 10).map(item => item.apiDetails.artist);
-	const albums = lastFm.weeklyAlbumChart.weeklyalbumchart.album
-		.filter(album => !!album.apiDetails.album.image[2]['#text'])
-		// @ts-ignore
-		.sort((a, b) => Number(a.apiDetails.album.userplaycount) > Number(b.apiDetails.album.userplaycount))
-		.slice(0, 10)
-		.map(item => item.apiDetails.album);
+	const { topAlbums, weeklyAlbumChart, updated }: any = lastFm;
 
 	return (
 		<Section id="social" hasShell={false} hasButton={true}>
@@ -96,8 +90,10 @@ export const SectionSocial: React.FunctionComponent = () => {
 			<header className="c-section__head">
 				<div className="o-shell">
 					<h1>
-						<ExternalLink href="https://www.last.fm/user/scriptex">Last.FM</ExternalLink> weekly statistics
+						<ExternalLink href="https://www.last.fm/user/scriptex">Last.FM</ExternalLink> statistics
 					</h1>
+
+					<small>Updated at {formatDate(updated, 'dd MMM yyyy HH:mm:ss')}</small>
 				</div>
 			</header>
 
@@ -105,38 +101,30 @@ export const SectionSocial: React.FunctionComponent = () => {
 				<div className="o-shell">
 					<div className="o-grid">
 						<div className="o-grid__item xs-12">
-							<h2>Top albums:</h2>
+							<h2>Top albums for last week:</h2>
 
 							<Carousel
-								items={albums.map(album => ({
-									image: album.image[2]['#text'],
-									title: album.name,
-									subtitle: album.artist
-								}))}
+								items={weeklyAlbumChart
+									.filter((album: any) => !!album.images[2]['#text'])
+									.map((album: any) => ({
+										image: album.images[2]['#text'],
+										title: album.name,
+										subtitle: album.artist
+									}))}
 							/>
 						</div>
 
 						<div className="o-grid__item xs-12">
-							<h2>Top artists:</h2>
+							<h2>Top albums for last month:</h2>
 
 							<Carousel
-								items={artists.map(artist => ({
-									image: artist.image[2]['#text'],
-									title: artist.name,
-									subtitle: ''
-								}))}
-							/>
-						</div>
-
-						<div className="o-grid__item xs-12">
-							<h2>Top tracks:</h2>
-
-							<Carousel
-								items={tracks.map(track => ({
-									image: track.image[2]['#text'],
-									title: track.name,
-									subtitle: track.artist['#text']
-								}))}
+								items={topAlbums
+									.filter((album: any) => !!album.images[2]['#text'])
+									.map((album: any) => ({
+										image: album.images[2]['#text'],
+										title: album.name,
+										subtitle: album.artist
+									}))}
 							/>
 						</div>
 					</div>

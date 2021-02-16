@@ -123,8 +123,12 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
         >
           Last.FM
         </Component>
-         weekly statistics
+         statistics
       </h1>
+      <small>
+        Updated at 
+        Mock date
+      </small>
     </div>
   </header>
   <div
@@ -140,7 +144,7 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
           className="o-grid__item xs-12"
         >
           <h2>
-            Top albums:
+            Top albums for last week:
           </h2>
           <Component
             items={Array []}
@@ -150,17 +154,7 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
           className="o-grid__item xs-12"
         >
           <h2>
-            Top artists:
-          </h2>
-          <Component
-            items={Array []}
-          />
-        </div>
-        <div
-          className="o-grid__item xs-12"
-        >
-          <h2>
-            Top tracks:
+            Top albums for last month:
           </h2>
           <Component
             items={Array []}
