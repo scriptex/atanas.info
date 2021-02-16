@@ -1,12 +1,15 @@
 import * as React from 'react';
 import { Certificate, certificates } from '../../scripts/certificates';
 
-import { Video, Section, ExternalLink } from '..';
+import { Section, ExternalLink } from '..';
 
 export const SectionCertificates: React.FunctionComponent = () => (
-	<Section id="certificates" hasButton={true}>
-		<Video name="certificates" />
-
+	<Section
+		id="certificates"
+		style={{ backgroundImage: 'url(images/temp/desktop.jpg)' }}
+		className=" fullsize-background"
+		hasButton={true}
+	>
 		<h1>Certificates</h1>
 
 		<div className="o-grid c-section__body">

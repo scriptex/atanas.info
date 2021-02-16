@@ -2,14 +2,16 @@
 
 exports[`SectionVideos component Should render the SectionVideos component 1`] = `
 <Component
-  className=" c-section--slides"
+  className=" c-section--slides fullsize-background"
   hasButton={true}
   hasShell={true}
   id="videos"
+  style={
+    Object {
+      "backgroundImage": "url(images/temp/desktop.jpg)",
+    }
+  }
 >
-  <Component
-    name="videos"
-  />
   <h2>
     Videos
   </h2>
