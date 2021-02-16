@@ -118,7 +118,12 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
       className="o-shell"
     >
       <h1>
-        Last.FM weekly statistics
+        <Component
+          href="https://www.last.fm/user/scriptex"
+        >
+          Last.FM
+        </Component>
+         weekly statistics
       </h1>
     </div>
   </header>
@@ -132,33 +137,33 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
         className="o-grid"
       >
         <div
-          className="o-grid__item xs-12 sm-6 md-4 lg-4"
+          className="o-grid__item xs-12"
         >
           <h2>
             Top albums:
           </h2>
-          <div
-            className="c-last-fm"
+          <Component
+            items={Array []}
           />
         </div>
         <div
-          className="o-grid__item xs-12 sm-6 md-4 lg-4"
+          className="o-grid__item xs-12"
         >
           <h2>
             Top artists:
           </h2>
-          <div
-            className="c-last-fm"
+          <Component
+            items={Array []}
           />
         </div>
         <div
-          className="o-grid__item xs-12 sm-6 md-4 lg-4"
+          className="o-grid__item xs-12"
         >
           <h2>
             Top tracks:
           </h2>
-          <div
-            className="c-last-fm"
+          <Component
+            items={Array []}
           />
         </div>
       </div>

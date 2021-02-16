@@ -2,8 +2,8 @@
 import * as React from 'react';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
-import { Video, Section, ExternalLink } from '..';
 import lastFm from '../../scripts/last.fm-insights.json';
+import { Video, Section, Carousel, ExternalLink } from '..';
 
 export const SectionSocial: React.FunctionComponent = () => {
 	const tracks = lastFm.weeklyTrackChart.weeklytrackchart.track.slice(0, 10);
@@ -95,54 +95,49 @@ export const SectionSocial: React.FunctionComponent = () => {
 
 			<header className="c-section__head">
 				<div className="o-shell">
-					<h1>Last.FM weekly statistics</h1>
+					<h1>
+						<ExternalLink href="https://www.last.fm/user/scriptex">Last.FM</ExternalLink> weekly statistics
+					</h1>
 				</div>
 			</header>
 
 			<div className="c-section__entry">
 				<div className="o-shell">
 					<div className="o-grid">
-						<div className="o-grid__item xs-12 sm-6 md-4 lg-4">
+						<div className="o-grid__item xs-12">
 							<h2>Top albums:</h2>
 
-							<div className="c-last-fm">
-								{albums.map((album, index) => (
-									<ExternalLink href={album.url} key={index}>
-										<img src={album.image[2]['#text']} />
-										<strong>{album.name}</strong>
-										by
-										<span>{album.artist}</span>
-									</ExternalLink>
-								))}
-							</div>
+							<Carousel
+								items={albums.map(album => ({
+									image: album.image[2]['#text'],
+									title: album.name,
+									subtitle: album.artist
+								}))}
+							/>
 						</div>
 
-						<div className="o-grid__item xs-12 sm-6 md-4 lg-4">
+						<div className="o-grid__item xs-12">
 							<h2>Top artists:</h2>
 
-							<div className="c-last-fm">
-								{artists.map((artist, index) => (
-									<ExternalLink href={artist.url} key={index}>
-										<img src={artist.image[2]['#text']} />
-										<strong>{artist.name}</strong>
-									</ExternalLink>
-								))}
-							</div>
+							<Carousel
+								items={artists.map(artist => ({
+									image: artist.image[2]['#text'],
+									title: artist.name,
+									subtitle: ''
+								}))}
+							/>
 						</div>
 
-						<div className="o-grid__item xs-12 sm-6 md-4 lg-4">
+						<div className="o-grid__item xs-12">
 							<h2>Top tracks:</h2>
 
-							<div className="c-last-fm">
-								{tracks.map((track, index) => (
-									<ExternalLink href={track.url} key={index}>
-										<img src={track.image[2]['#text']} />
-										<strong>{track.name}</strong>
-										by
-										<span>{track.artist['#text']}</span>
-									</ExternalLink>
-								))}
-							</div>
+							<Carousel
+								items={tracks.map(track => ({
+									image: track.image[2]['#text'],
+									title: track.name,
+									subtitle: track.artist['#text']
+								}))}
+							/>
 						</div>
 					</div>
 				</div>
