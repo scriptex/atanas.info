@@ -2,13 +2,16 @@
 
 exports[`SectionTimeline component Should render the SectionTimeline component 1`] = `
 <Component
+  className=" fullsize-background"
   hasButton={true}
   hasShell={true}
   id="timeline"
+  style={
+    Object {
+      "backgroundImage": "url(images/temp/desktop.jpg)",
+    }
+  }
 >
-  <Component
-    name="timeline"
-  />
   <h2>
     Timeline
   </h2>

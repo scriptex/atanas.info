@@ -777,6 +777,14 @@ body {
 	z-index: 2;
 	padding: 8rem 0 4rem;
 	background-color: color-mod(var(--color-secondary) a(20%));
+	background-attachment: fixed;
+
+	&::before {
+		@mixin overlay;
+		z-index: 1;
+		opacity: 0.8;
+		background-color: var(--color-secondary);
+	}
 
 	& h2 {
 		font-size: 4vw;
@@ -851,6 +859,11 @@ body {
 		&.is--hidden {
 			max-height: 0;
 		}
+	}
+
+	& .o-shell {
+		position: relative;
+		z-index: 2;
 	}
 }
 
@@ -977,6 +990,19 @@ body {
 	position: relative;
 	z-index: 2;
 	padding: 5rem 0 0;
+	background-attachment: fixed;
+
+	&::before {
+		@mixin overlay;
+		opacity: 0.6;
+		z-index: 1;
+		background-color: var(--color-secondary);
+	}
+
+	& > * {
+		position: relative;
+		z-index: 2;
+	}
 
 	& h1,
 	& h2 {
@@ -1148,7 +1174,7 @@ body {
 
 	& ul {
 		@mixin flex-row nowrap, center, flex-end;
-		padding: 0;
+		padding: 0 !important;
 		margin: 0 0.25rem;
 	}
 
@@ -1220,6 +1246,19 @@ body {
 	position: relative;
 	z-index: 2;
 	padding: 5rem 0 4rem;
+	background-attachment: fixed;
+
+	&::before {
+		@mixin overlay;
+		z-index: 1;
+		opacity: 0.8;
+		background-color: var(--color-secondary);
+	}
+
+	& > * {
+		position: relative;
+		z-index: 2;
+	}
 
 	& h2 {
 		color: var(--color-primary);
@@ -1347,6 +1386,19 @@ body {
 	padding: 8.25rem 0 3.25rem;
 	margin-bottom: 4rem;
 	background-color: color-mod(var(--color-primary) a(70%));
+	background-attachment: fixed;
+
+	&::before {
+		@mixin overlay;
+		opacity: 0.8;
+		z-index: 1;
+		background-color: var(--color-secondary);
+	}
+
+	& .o-shell {
+		position: relative;
+		z-index: 2;
+	}
 
 	& h1,
 	& h2 {
@@ -1443,7 +1495,7 @@ body {
 
 	& img {
 		display: block;
-		border: 1px solid var(--color-secondary);
+		border: 1px solid var(--color-primary);
 	}
 
 	& div[style] {
@@ -1455,6 +1507,7 @@ body {
 		text-decoration: none;
 		display: block;
 		padding: 1rem 1rem 0.5rem;
+		border: 1px solid var(--color-primary);
 		background-color: var(--color-secondary);
 
 		& h3,
@@ -1635,7 +1688,8 @@ body {
 
 	&::before {
 		@mixin overlay;
-		opacity: 0.8;
+		opacity: 0.5;
+		z-index: 1;
 		background-color: var(--color-secondary);
 	}
 
@@ -1833,6 +1887,7 @@ body {
 	position: relative;
 	z-index: 2;
 	padding: 8rem 0 5rem;
+	background-attachment: fixed;
 
 	& h1 {
 		text-align: center;
@@ -1885,6 +1940,7 @@ body {
 	z-index: 2;
 	padding: 8rem 0 4rem;
 	overflow: hidden;
+	background-attachment: fixed;
 
 	& h2 {
 		margin-bottom: 4rem;

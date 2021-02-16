@@ -23,4 +23,3 @@ export { default as SectionStats } from './section-stats';
 export { default as SectionTimeline } from './section-timeline';
 export { default as SectionVideos } from './section-videos';
 export { default as Svg } from './svg';
-export { default as Video } from './video';

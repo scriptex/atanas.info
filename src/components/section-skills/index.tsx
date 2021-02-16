@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { drawSkills } from '../../scripts/skills';
 import { Skill, skills } from '../../scripts/skills-list';
-import { Icon, Video, Button, Section } from '..';
+import { Icon, Button, Section } from '..';
 
 export const SectionSkills: React.FunctionComponent = () => {
 	const [showTable, setShowTable] = React.useState(false);
@@ -14,13 +14,13 @@ export const SectionSkills: React.FunctionComponent = () => {
 	return (
 		<Section
 			id="skills"
+			style={{ backgroundImage: 'url(images/temp/desktop.jpg)' }}
 			actions={
 				<Button onClick={() => setShowTable(!showTable)}>{showTable ? 'Interactive' : 'Static'} mode</Button>
 			}
 			hasButton={true}
+			className=" fullsize-background"
 		>
-			<Video name="skills" />
-
 			<h2>
 				Skills <br />
 				<small hidden={showTable}>(Drag the bubbles to play)</small>
