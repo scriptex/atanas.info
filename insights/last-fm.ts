@@ -3,6 +3,7 @@ import { writeFileSync } from 'fs';
 import { lastFm } from './client';
 import { asyncForEach } from './utils';
 
+// codebeat:disable[ABC,LOC]
 export const getLastFMInsights = async (): Promise<void> => {
 	const file = 'src/scripts/last.fm-insights.json';
 	const defaultArguments: Record<string, string | number> = {
@@ -61,3 +62,4 @@ export const getLastFMInsights = async (): Promise<void> => {
 		console.log('Error getting data from Last.FM.', e);
 	}
 };
+// codebeat:enable[ABC,LOC]

@@ -10,6 +10,7 @@ interface Props {
 	readonly items: CarouselItem[];
 }
 
+// codebeat:disable[ABC,LOC]
 export const Carousel: React.FC<Props> = (props: Props) => {
 	const cellCount = props.items.length;
 	const cellWidth = 210;
@@ -81,5 +82,6 @@ export const Carousel: React.FC<Props> = (props: Props) => {
 		</>
 	);
 };
+// codebeat:enable[ABC,LOC]
 
 export default Carousel;

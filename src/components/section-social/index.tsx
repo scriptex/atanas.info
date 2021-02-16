@@ -6,6 +6,16 @@ import lastFm from '../../scripts/last.fm-insights.json';
 import { formatDate } from '../section-stats';
 import { Video, Section, Carousel, ExternalLink } from '..';
 
+const filteredData = (data: any[]): any[] =>
+	data
+		.filter((album: any) => !!album.images[2]['#text'])
+		.map((album: any) => ({
+			image: album.images[2]['#text'],
+			title: album.name,
+			subtitle: album.artist
+		}));
+
+// codebeat:disable[ABC,LOC]
 export const SectionSocial: React.FunctionComponent = () => {
 	const { topAlbums, weeklyAlbumChart, updated }: any = lastFm;
 
@@ -103,29 +113,13 @@ export const SectionSocial: React.FunctionComponent = () => {
 						<div className="o-grid__item xs-12">
 							<h2>Top albums for last week:</h2>
 
-							<Carousel
-								items={weeklyAlbumChart
-									.filter((album: any) => !!album.images[2]['#text'])
-									.map((album: any) => ({
-										image: album.images[2]['#text'],
-										title: album.name,
-										subtitle: album.artist
-									}))}
-							/>
+							<Carousel items={filteredData(weeklyAlbumChart)} />
 						</div>
 
 						<div className="o-grid__item xs-12">
 							<h2>Top albums for last month:</h2>
 
-							<Carousel
-								items={topAlbums
-									.filter((album: any) => !!album.images[2]['#text'])
-									.map((album: any) => ({
-										image: album.images[2]['#text'],
-										title: album.name,
-										subtitle: album.artist
-									}))}
-							/>
+							<Carousel items={filteredData(topAlbums)} />
 						</div>
 					</div>
 				</div>
@@ -133,5 +127,6 @@ export const SectionSocial: React.FunctionComponent = () => {
 		</Section>
 	);
 };
+// codebeat:enable[ABC,LOC]
 
 export default SectionSocial;
