@@ -10,6 +10,7 @@ export interface Skill {
 }
 
 export const skills: Skill[] = [
+	{ text: 'Agile', icon: 'agile', width: 30, height: 30, fill: '#fff', since: 2010 },
 	{ text: 'Angular', icon: 'angular', width: 30, height: 30, fill: '#fff', since: 2017 },
 	{ text: 'Angular JS', icon: 'angularjs', width: 30, height: 32, fill: '#fff', since: 2014 },
 	{ text: 'Amazon Web Services', icon: 'aws', width: 30, height: 18, fill: '#fff', since: 2019 },
@@ -23,6 +24,7 @@ export const skills: Skill[] = [
 	{ text: 'Chart JS', icon: 'chartjs', width: 30, height: 30, fill: '#7d7d7d', since: 2014 },
 	{ text: 'Circle CI', icon: 'circleci', width: 30, height: 30, fill: '#ddd', since: 2019 },
 	{ text: 'Cordova', icon: 'cordova', width: 30, height: 29, fill: '#97daa8', since: 2014 },
+	{ text: 'Confluence', icon: 'confluence', width: 30, height: 30, fill: '#fff', since: 2017 },
 	{ text: 'D3', icon: 'd3', width: 30, height: 30, fill: '#5a4126', since: 2012 },
 	{ text: 'Deno', icon: 'deno', width: 30, height: 30, fill: '#fff', since: 2020 },
 	{ text: 'ESLint', icon: 'eslint', width: 30, height: 27, fill: '#fff', since: 2016 },
@@ -40,6 +42,7 @@ export const skills: Skill[] = [
 	{ text: 'Ionic', icon: 'ionic', width: 30, height: 30, fill: '#fff', since: 2014 },
 	{ text: 'JavaScript', icon: 'javascript', width: 30, height: 30, fill: '#f0db4f', since: 2011 },
 	{ text: 'Jest', icon: 'jest', width: 30, height: 30, fill: '#fff', since: 2017 },
+	{ text: 'Jira', icon: 'jira', width: 30, height: 30, fill: '#fff', since: 2017 },
 	{ text: 'JSON', icon: 'json', width: 28, height: 30, fill: '#ccc', since: 2013 },
 	{ text: 'jQuery', icon: 'jquery', width: 30, height: 30, fill: '#7bdffd', since: 2011 },
 	{ text: 'LESS', icon: 'less', width: 30, height: 30, fill: '#b6ecec', since: 2012 },
