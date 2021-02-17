@@ -45,6 +45,19 @@ exports[`Footer component Should render the Footer component 1`] = `
       Updated at 
       Mock date
     </small>
+    <iframe
+      frameBorder={0}
+      height="35"
+      loading="lazy"
+      src="https://github.com/sponsors/scriptex/button"
+      style={
+        Object {
+          "border": 0,
+        }
+      }
+      title="Sponsor scriptex"
+      width="116"
+    />
   </div>
 </footer>
 `;

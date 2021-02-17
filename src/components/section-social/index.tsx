@@ -64,6 +64,21 @@ export const SectionSocial: React.FunctionComponent = () => {
 						</div>
 
 						<div className="o-grid__item xs-12 sm-6">
+							<h2>Github Profile</h2>
+
+							<iframe
+								src="https://github.com/sponsors/scriptex/card"
+								title="Sponsor scriptex"
+								width="600"
+								height="225"
+								style={{ border: 0 }}
+								loading="lazy"
+								className="github-frame"
+								frameBorder={0}
+							></iframe>
+						</div>
+
+						<div className="o-grid__item xs-12 sm-6">
 							<h2>Twitter Profile</h2>
 
 							<TwitterTimelineEmbed
@@ -78,10 +93,10 @@ export const SectionSocial: React.FunctionComponent = () => {
 							<h2>YouTube Channel</h2>
 
 							<iframe
-								src="//www.youtube.com/embed/?listType=user_uploads&list=scriptex"
+								src="//www.youtube.com/embed/?listType=user_uploads&amp;list=scriptex"
 								height="400"
 								loading="lazy"
-								className="youtube-wrapper"
+								className="youtube-frame"
 							></iframe>
 						</div>
 
@@ -93,7 +108,8 @@ export const SectionSocial: React.FunctionComponent = () => {
 								allow="encrypted-media"
 								width="300"
 								height="380"
-								className="spotify-player"
+								loading="lazy"
+								className="spotify-frame"
 								frameBorder={0}
 							></iframe>
 						</div>
