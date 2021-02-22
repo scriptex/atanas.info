@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { format } from 'date-fns';
 
-import { Svg, Section } from '..';
+import { Svg, Section, GithubSkyline } from '..';
 
 interface GeneralInsight {
 	readonly title: string;
@@ -11,6 +11,8 @@ interface GeneralInsight {
 interface Props {
 	data: any;
 }
+
+const STL_FILES = ['2018.stl', '2019.stl', '2020.stl'];
 
 // prettier-ignore
 export const formatDate = (date: string | number, formatter = 'dd MMM yyyy'): string => format(new Date(date), formatter);
@@ -251,6 +253,10 @@ export const SectionStats: React.FunctionComponent<Readonly<Props>> = (props: Re
 			<GithubStats data={props.data.github} />
 
 			<GitlabStats data={props.data.gitlab} />
+
+			{STL_FILES.map((file: string, index: number) => (
+				<GithubSkyline key={index} file={file} index={index} />
+			))}
 		</Section>
 	);
 };

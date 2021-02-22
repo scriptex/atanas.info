@@ -4,6 +4,7 @@ export { default as Carousel } from './carousel';
 export { default as Contact } from './contact';
 export { default as ExternalLink } from './external-link';
 export { default as Footer } from './footer';
+export { default as GithubSkyline } from './github-skyline';
 export { default as Head } from './head';
 export { default as Header } from './header';
 export { default as Icon } from './icon';
