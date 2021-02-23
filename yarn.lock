@@ -883,14 +883,14 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@babylonjs/core@4.2.0", "@babylonjs/core@^4.2.0":
+"@babylonjs/core@4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@babylonjs/core/-/core-4.2.0.tgz#d1cfd43d7e3d2e58cde79083f04eeb607f6c8f18"
   integrity sha512-sZQigPvMDc0pcgwlKvTF5gsMzGwT8gelQIOyxELrohdFu12pHGhIr61+yVxxq9tpCdzyYD9kS8LM0w2y+5ypkg==
   dependencies:
     tslib ">=1.10.0"
 
-"@babylonjs/gui@^4.2.0":
+"@babylonjs/gui@4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@babylonjs/gui/-/gui-4.2.0.tgz#c2a35ca6724759731fe0c4ddbfe2490301847f93"
   integrity sha512-AQnqwFDmQ05FAw4B0BPVUFqWgdSKVI23qVHm/uOOMBQhMo8+WE2pTNATm6Qw/HDVLCp5qUjwIij/3JtG5s0fBw==
@@ -898,13 +898,21 @@
     "@babylonjs/core" "4.2.0"
     tslib ">=1.10.0"
 
-"@babylonjs/loaders@^4.2.0":
+"@babylonjs/loaders@4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@babylonjs/loaders/-/loaders-4.2.0.tgz#a9902dc277c16dcd22cd1907f86310e211c247cb"
   integrity sha512-feCmp4I+suBNLko3wGFNZpDg1Bqt9NxEuhKZ+epmaIWSqKEQAMhDvdehcq9vETTVKULkzRGZdDrZmEX0weG80g==
   dependencies:
     "@babylonjs/core" "4.2.0"
     babylonjs-gltf2interface "4.2.0"
+    tslib ">=1.10.0"
+
+"@babylonjs/materials@4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/materials/-/materials-4.2.0.tgz#8d889e49f6824e4fc62622b221f36ab0b8334d6e"
+  integrity sha512-YoetSvjpilw39W99RyiZLxZy2Zy3baRckDlv/om/0qFmFK7mWsXfoqp5nBecf8bItyuvPgtfJNZwBe669/j2qw==
+  dependencies:
+    "@babylonjs/core" "4.2.0"
     tslib ">=1.10.0"
 
 "@bcoe/v8-coverage@^0.2.3":
@@ -12067,7 +12075,7 @@ rc@^1.2.7, rc@^1.2.8:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-babylonjs@^3.0.10:
+react-babylonjs@3.0.10:
   version "3.0.10"
   resolved "https://registry.yarnpkg.com/react-babylonjs/-/react-babylonjs-3.0.10.tgz#bb7b39f22c0f9caf8766840b202f70d988b75262"
   integrity sha512-ooUBZjs9FK0IRQC8xwEuBEcH1HVgXnn6/Mo0FEyJPLQ7OObLfyCwdrPxeMk3HZlq2+UXCgN/bkvq4VWDlGV9/w==

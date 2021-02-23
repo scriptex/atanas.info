@@ -1,33 +1,106 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import * as React from 'react';
 import '@babylonjs/loaders';
-import { Engine, Scene, SceneEventArgs } from 'react-babylonjs';
-import { Color4, Scene as SceneType, SceneLoader, Vector3, StandardMaterial, Color3 } from '@babylonjs/core';
+import { GridMaterial } from '@babylonjs/materials';
+import { Scene, Engine, SceneEventArgs } from 'react-babylonjs';
+import {
+	Mesh,
+	Color3,
+	Color4,
+	Vector3,
+	Texture,
+	CubeTexture,
+	MeshBuilder,
+	SceneLoader,
+	StandardMaterial,
+	Scene as SceneCore
+} from '@babylonjs/core';
 
 interface Props {
 	readonly file: string;
 	readonly index: number;
 }
 
+const ROOT = './stl';
+
+export const onSceneMount = (args: SceneEventArgs, props: Props): void => {
+	SceneLoader.Append('./stl/', props.file, args.scene, (scene: SceneCore) => {
+		// TODO: highlight meshes
+		const meshes = scene.meshes;
+		console.log(meshes);
+		const cubeTexture = CubeTexture.CreateFromPrefilteredData(`${ROOT}/texture.dds`, scene);
+		const skySphere = Mesh.CreateSphere('skySphere', 8, 1000, scene);
+		const skySphereMaterial = new StandardMaterial('skySphereMaterial', scene);
+		const ground = MeshBuilder.CreateGround('ground', {
+			width: 1000,
+			height: 1000
+		});
+		const groundMaterial = new GridMaterial('groundMaterial', scene);
+
+		scene.environmentTexture = cubeTexture;
+		scene.environmentTexture.level = 2;
+		scene.clearColor = new Color4(0.01, 0.01, 0.01, 0);
+
+		skySphere.position = Vector3.Zero();
+		skySphere.position.y += 49;
+
+		skySphereMaterial.backFaceCulling = false;
+		skySphereMaterial.emissiveTexture = new Texture(`${ROOT}/bg.png`, scene);
+		skySphereMaterial.emissiveTexture.coordinatesMode = Texture.PROJECTION_MODE;
+		skySphereMaterial.emissiveTexture.updateSamplingMode(Texture.BILINEAR_SAMPLINGMODE);
+		skySphereMaterial.emissiveTexture.wrapU = Texture.MIRROR_ADDRESSMODE;
+		skySphereMaterial.emissiveTexture.wrapV = Texture.MIRROR_ADDRESSMODE;
+		skySphereMaterial.diffuseColor = Color3.Black();
+		skySphereMaterial.specularColor = Color3.Black();
+
+		skySphere.material = skySphereMaterial;
+		skySphere.material.fogEnabled = false;
+
+		ground.material = groundMaterial;
+		ground.material.backFaceCulling = false;
+		ground.position.y -= 10;
+
+		groundMaterial.gridRatio = 10;
+		groundMaterial.majorUnitFrequency = 0;
+		groundMaterial.opacity = 0.99;
+		groundMaterial.minorUnitVisibility = 2;
+		groundMaterial.lineColor = new Color3(109 / 255, 150 / 255, 219 / 255);
+
+		scene.fogMode = SceneCore.FOGMODE_LINEAR;
+		scene.fogStart = 50;
+		scene.fogEnd = 250;
+		scene.fogColor = new Color3(4 / 255, 14 / 255, 34 / 255);
+	});
+};
+
 export const GithubSkyline = (props: Props): React.ReactElement => (
-	<div className="c-canvas-3d">
-		<Engine antialias adaptToDeviceRatio canvasId={`babylonJS${props.index}`}>
-			<Scene
-				clearColor={new Color4(255, 255, 255, 1)}
-				onSceneMount={(args: SceneEventArgs) => {
-					SceneLoader.Append('./stl/', props.file, args.scene, (scene: SceneType) => {
-						const mesh = scene.meshes[0];
-						const material = new StandardMaterial('test', scene);
+	<div className="c-skyline__item">
+		<Engine antialias adaptToDeviceRatio canvasId={`c-skyline__item-${props.index}`}>
+			<Scene onSceneMount={(args: SceneEventArgs) => onSceneMount(args, props)}>
+				<arcRotateCamera
+					fov={0.8}
+					name="camera"
+					beta={1}
+					minZ={0.1}
+					maxZ={1000}
+					alpha={-2}
+					target={Vector3.Zero()}
+					radius={75}
+					wheelPrecision={1}
+					upperBetaLimit={Math.PI / 2}
+					lowerRadiusLimit={50}
+					upperRadiusLimit={100}
+					panningSensibility={0}
+					useAutoRotationBehavior={true}
+				/>
 
-						material.ambientColor = new Color3(100, 50, 20);
-						material.diffuseColor = new Color3(20, 50, 100);
+				<autoRotationBehavior
+					idleRotationSpeed={-0.1}
+					idleRotationWaitTime={1000}
+					idleRotationSpinupTime={1000}
+				/>
 
-						mesh.material = new StandardMaterial('test', scene);
-					});
-				}}
-			>
-				<arcRotateCamera name="camera" beta={1} alpha={-2} target={Vector3.Zero()} radius={200} />
-
-				<hemisphericLight name="light" intensity={0.7} direction={new Vector3(5, 15, 2)} />
+				<hemisphericLight name="light" intensity={0.5} direction={new Vector3(0, 1, -1)} />
 			</Scene>
 		</Engine>
 	</div>

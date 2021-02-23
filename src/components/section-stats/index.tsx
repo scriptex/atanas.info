@@ -8,11 +8,20 @@ interface GeneralInsight {
 	readonly value: any;
 }
 
+interface HistoryItem {
+	readonly file: string;
+	readonly year: number;
+}
+
 interface Props {
 	data: any;
 }
 
-const STL_FILES = ['2018.stl', '2019.stl', '2020.stl'];
+const githubHistory: HistoryItem[] = [
+	{ file: '2018.stl', year: 2018 },
+	{ file: '2019.stl', year: 2019 },
+	{ file: '2020.stl', year: 2020 }
+];
 
 // prettier-ignore
 export const formatDate = (date: string | number, formatter = 'dd MMM yyyy'): string => format(new Date(date), formatter);
@@ -94,6 +103,8 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 		}
 	];
 
+	const [current, setCurrent] = React.useState(-1);
+
 	return (
 		<>
 			<div className="c-section__entry c-section__entry--no-background">
@@ -136,6 +147,29 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 								More
 							</div>
 						</div>
+					</div>
+
+					<div className="c-skyline">
+						<nav className="c-skyline__nav">
+							<h3>
+								Previous years Github contributions <br />
+								<small>(requires WebGL)</small>
+							</h3>
+
+							<ul>
+								{githubHistory.map((item: HistoryItem, index: number) => (
+									<li key={index} className={current === index ? 'current' : undefined}>
+										<button onClick={() => setCurrent(index)} className="c-btn c-btn--small">
+											{item.year}
+										</button>
+									</li>
+								))}
+							</ul>
+						</nav>
+
+						{githubHistory.map((item: HistoryItem, index: number) =>
+							index === current ? <GithubSkyline key={index} file={item.file} index={index} /> : null
+						)}
 					</div>
 				</div>
 			</div>
@@ -253,10 +287,6 @@ export const SectionStats: React.FunctionComponent<Readonly<Props>> = (props: Re
 			<GithubStats data={props.data.github} />
 
 			<GitlabStats data={props.data.gitlab} />
-
-			{STL_FILES.map((file: string, index: number) => (
-				<GithubSkyline key={index} file={file} index={index} />
-			))}
 		</Section>
 	);
 };

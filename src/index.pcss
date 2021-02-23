@@ -208,6 +208,12 @@ body {
 	appearance: none;
 }
 
+.c-btn--small {
+	font-size: 0.875rem;
+	line-height: 1;
+	padding: 0.5rem 1rem;
+}
+
 @media (--hover) {
 	.c-btn:hover {
 		color: var(--color-action);
@@ -2465,10 +2471,22 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 	}
 }
 
-.c-canvas-3d {
+.c-skyline__nav {
+	& ul {
+		padding: 0;
+	}
+
+	& .current .c-btn {
+		color: var(--color-action);
+		background-color: var(--color-primary);
+		cursor: default;
+	}
+}
+
+.c-skyline__item {
 	& canvas {
-		width: 100vw;
-		height: 100vh;
+		width: 100%;
+		height: 75vh;
 		display: block;
 	}
 }
