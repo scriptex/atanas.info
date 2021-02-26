@@ -24,6 +24,7 @@ module.exports = {
 		'scriptex/itcss-emmet-snippets',
 		'scriptex/itscss',
 		'scriptex/localga',
+		'scriptex/log',
 		'scriptex/material-snake',
 		'scriptex/material-tetris',
 		'scriptex/no-html',

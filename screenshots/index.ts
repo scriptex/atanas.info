@@ -64,7 +64,7 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 	if (shotResult) {
 		console.log(`Uploading screenshot for ${name}...`);
 
-		return upload(shotResult, uploadOptions(name), name);
+		return upload(shotResult as Buffer, uploadOptions(name), name);
 	} else {
 		return null;
 	}
