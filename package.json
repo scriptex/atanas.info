@@ -181,11 +181,6 @@
 	],
 	"main": "dist/index.html",
 	"private": true,
-	"husky": {
-		"hooks": {
-			"pre-push": "yarn lint && yarn prettier && yarn test"
-		}
-	},
 	"typeCoverage": {
 		"atLeast": 25
 	}
