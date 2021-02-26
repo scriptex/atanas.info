@@ -19,14 +19,14 @@ export interface MobileApp {
 export const projects: Project[] = [
 	{
 		url: 'https://app.home.eon.com/',
-		image: 'images/temp/eon-home.png',
+		image: 'images/temp/E.ON-Home.png',
 		title: 'E.ON Home',
 		description: 'TypeScript, SCSS, React, Redux, MS Azure, AWS, NodeJS, Jest, Enzyme',
 		skip: false
 	},
 	{
 		url: 'https://hems-admin-portal.eon.ooo/',
-		image: 'images/temp/eon-hems.png',
+		image: 'images/temp/E.ON-H.E.M.S-(Home-Energy-Management-System).png',
 		title: 'E.ON H.E.M.S (Home Energy Management System)',
 		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS, Cypress',
 		skip: false,
@@ -62,21 +62,21 @@ export const projects: Project[] = [
 	},
 	{
 		url: 'https://demo.xpndnow.com/',
-		image: 'images/temp/xpnd-demo.png',
+		image: 'images/temp/XPND-demo-application.png',
 		title: 'XPND demo application',
 		description: 'TypeScript, SCSS, React, Redux, NodeJS',
 		skip: true
 	},
 	{
 		url: 'https://emailio.com/',
-		image: 'images/temp/emailio.png',
+		image: 'images/temp/Emailio-Landing.png',
 		title: 'Emailio Landing',
 		description: 'CSS, JavaScript, HTML',
 		skip: false
 	},
 	{
 		url: 'https://emailio.now.sh/',
-		image: 'images/temp/emailio-web-app.png',
+		image: 'images/temp/Emailio-Web-Application.png',
 		title: 'Emailio Web Application',
 		description: 'SCSS, JavaScript, React, Redux, Redux Saga, Jest, Enzyme',
 		skip: false
@@ -97,7 +97,7 @@ export const projects: Project[] = [
 	},
 	{
 		url: 'https://www.sod.bg/',
-		image: 'images/temp/sod-bg.png',
+		image: 'images/temp/SOD-64-(СОД-64).png',
 		title: 'SOD 64 (СОД 64)',
 		description: 'HTML5, CSS3, JavaScript, jQuery, PHP',
 		skip: false
@@ -167,7 +167,7 @@ export const projects: Project[] = [
 	},
 	{
 		url: 'https://flows.now.sh/',
-		image: 'images/temp/flows.png',
+		image: 'images/temp/Three-11-Company-Flows.png',
 		title: 'Three 11 Company Flows',
 		description: 'JavaScript, Stylus, VuePress, NodeJS',
 		skip: false
@@ -195,7 +195,7 @@ export const projects: Project[] = [
 	},
 	{
 		url: 'https://varnafoodtours.com/',
-		image: 'images/temp/varnafoodtours.png',
+		image: 'images/temp/Varna-Food-Tours.png',
 		title: 'Varna Food Tours',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
 		skip: false
