@@ -1,3 +1,9 @@
+const { resolve } = require('path');
+
+require('dotenv').config({
+	path: resolve(process.cwd(), '../.env')
+});
+
 module.exports = {
 	base: '/projects/',
 	title: 'Atanas Atanasov',
@@ -282,11 +288,11 @@ module.exports = {
 		[
 			'@vuepress/google-analytics',
 			{
-				ga: 'UA-83446952-1'
+				ga: process.env.GTM_ID
 			}
 		]
 	],
-	ga: 'UA-83446952-1',
+	ga: process.env.GTM_ID,
 	serviceWorker: true,
 	themeConfig: {
 		sidebar: require('../../src/scripts/open-source')
