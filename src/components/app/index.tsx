@@ -50,31 +50,17 @@ export const App: React.FunctionComponent = () => {
 					<Contact />
 
 					<Switch>
-						<Route exact={true} path={Routes.HOME} component={Home}></Route>
-
-						<Route exact={true} path={Routes.ABOUT} component={About}></Route>
-
-						<Route exact={true} path={Routes.TIMELINE} component={Timeline}></Route>
-
-						<Route exact={true} path={Routes.SKILLS} component={Skills}></Route>
-
-						<Route exact={true} path={Routes.PORTFOLIO} component={Portfolio}></Route>
-
-						<Route
-							exact={true}
-							path={Routes.STATS}
-							component={() => <Stats data={{ github, gitlab }} />}
-						></Route>
-
-						<Route exact={true} path={Routes.SLIDES} component={Slides}></Route>
-
-						<Route exact={true} path={Routes.VIDEOS} component={Videos}></Route>
-
-						<Route exact={true} path={Routes.ARTICLES} component={Articles}></Route>
-
-						<Route exact={true} path={Routes.CERTIFICATES} component={Certificates}></Route>
-
-						<Route exact={true} path={Routes.SOCIAL} component={Social}></Route>
+						<Route exact={true} path={Routes.HOME} component={Home} />
+						<Route exact={true} path={Routes.ABOUT} component={About} />
+						<Route exact={true} path={Routes.TIMELINE} component={Timeline} />
+						<Route exact={true} path={Routes.SKILLS} component={Skills} />
+						<Route exact={true} path={Routes.PORTFOLIO} component={Portfolio} />
+						<Route exact={true} path={Routes.STATS} component={() => <Stats data={{ github, gitlab }} />} />
+						<Route exact={true} path={Routes.SLIDES} component={Slides} />
+						<Route exact={true} path={Routes.VIDEOS} component={Videos} />
+						<Route exact={true} path={Routes.ARTICLES} component={Articles} />
+						<Route exact={true} path={Routes.CERTIFICATES} component={Certificates} />
+						<Route exact={true} path={Routes.SOCIAL} component={Social} />
 					</Switch>
 
 					<Nav hasShell={true} className="c-nav--inline" />
