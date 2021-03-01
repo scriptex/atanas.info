@@ -10950,13 +10950,12 @@ postcss-each-variables@0.3.0:
     postcss "^6.0.1"
     reduce-function-call "^1.0.2"
 
-postcss-each@0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/postcss-each/-/postcss-each-0.10.0.tgz#0877c6aea504bffd8a5d1f789d47d06a3e5feea1"
-  integrity sha1-CHfGrqUEv/2KXR94nUfQaj5f7qE=
+postcss-each@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-each/-/postcss-each-1.0.0.tgz#6cdbd63ad31fee3868fd1eb4ab01345ba3a5ba38"
+  integrity sha512-BiEZqzp6fFUG7oO9n4wzDDJKoG7SrgSidJox+bXtL+kGSaBVEY2rlaaZGktCgEkGHQMwbCdOgUCbydUJnBtSmg==
   dependencies:
-    postcss "^6.0.1"
-    postcss-simple-vars "^4.0.0"
+    postcss-simple-vars "^5.0.0"
 
 postcss-easy-import@3.0.0:
   version "3.0.0"
@@ -11588,12 +11587,12 @@ postcss-simple-vars@^2.0.0:
   dependencies:
     postcss "^5.0.21"
 
-postcss-simple-vars@^4.0.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-simple-vars/-/postcss-simple-vars-4.1.0.tgz#043248cfef8d3f51b3486a28c09f8375dbf1b2f9"
-  integrity sha512-J/TRomA8EqXhS4VjQJsPCYTFIa9FYN/dkJK/8oZ0BYeVIPx91goqM8T+ljsP57+4bwSEywFOuB7EZ8n1gjjxZw==
+postcss-simple-vars@^5.0.0:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-simple-vars/-/postcss-simple-vars-5.0.2.tgz#e2f81b3d0847ddd4169816b6d141b91d51e6e22e"
+  integrity sha512-xWIufxBoINJv6JiLb7jl5oElgp+6puJwvT5zZHliUSydoLz4DADRB3NDDsYgfKVwojn4TDLiseoC65MuS8oGGg==
   dependencies:
-    postcss "^6.0.9"
+    postcss "^7.0.14"
 
 postcss-simple-vars@^6.0.3:
   version "6.0.3"
@@ -11688,7 +11687,7 @@ postcss@^5.0.0, postcss@^5.0.21, postcss@^5.0.4:
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-postcss@^6.0.1, postcss@^6.0.11, postcss@^6.0.9:
+postcss@^6.0.1, postcss@^6.0.11:
   version "6.0.23"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
   integrity sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==
