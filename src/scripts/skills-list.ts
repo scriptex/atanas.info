@@ -30,7 +30,7 @@ export const skills: Skill[] = [
 	{ text: 'ESLint', icon: 'eslint', width: 30, height: 27, fill: '#fff', since: 2016 },
 	{ text: 'Express JS', icon: 'expressjs', width: 30, height: 25, fill: '#fff', since: 2017 },
 	{ text: 'Firebase', icon: 'firebase', width: 25, height: 30, fill: '#fff', since: 2018 },
-	{ text: 'Foundation', icon: 'foundation', width: 22, height: 32, fill: '#141e1f', since: 2103 },
+	{ text: 'Foundation', icon: 'foundation', width: 22, height: 32, fill: '#141e1f', since: 2013 },
 	{ text: 'Gatsby', icon: 'gatsby', width: 30, height: 30, fill: '#663399', since: 2019 },
 	{ text: 'GIT', icon: 'git', width: 30, height: 30, fill: '#f9d7d7', since: 2011 },
 	{ text: 'Github Actions', icon: 'github', width: 30, height: 29, fill: '#fff', since: 2020 },
