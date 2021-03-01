@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { render } from 'react-dom';
+import TagManager from 'react-gtm-module';
 import 'html-head-component';
-
-import './scripts/google-analytics-local';
 
 import { App } from './components';
 
@@ -17,14 +16,9 @@ const router = (Application: React.ComponentType): JSX.Element => <Application /
 
 renderRoot(router(App));
 
-const gtag = (...args: any[]): void => {
-	window.dataLayer.push(args);
-};
-
-window.dataLayer = window.dataLayer || [];
-
-gtag('js', new Date());
-gtag('config', 'UA-83446952-1');
+TagManager.initialize({
+	gtmId: process.env.GTM_ID as string
+});
 
 if ('serviceWorker' in navigator) {
 	const workers: IWorker[] = [

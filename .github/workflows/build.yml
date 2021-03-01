@@ -16,6 +16,7 @@ jobs:
                   yarn test:coverage
                   yarn type-coverage
               env:
+                  GTM_ID: ${{ secrets.GTM_ID }}
                   GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
                   GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
                   LAST_FM_API_KEY: ${{ secrets.LAST_FM_API_KEY }}
