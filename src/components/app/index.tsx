@@ -1,5 +1,4 @@
 import * as React from 'react';
-import TagManager from 'react-gtm-module';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import github from '../../scripts/github-insights.json';
@@ -19,17 +18,6 @@ import {
 	Portfolio,
 	Certificates
 } from '../../loadables';
-
-const sendPageView = (route: Routes, title = ''): void => {
-	TagManager.dataLayer({
-		dataLayer: {
-			send_to: process.env.GTM_ID,
-			page_title: title,
-			page_path: route,
-			page_location: route
-		}
-	});
-};
 
 export const AppContext = React.createContext({
 	contactVisible: false,
@@ -62,115 +50,17 @@ export const App: React.FunctionComponent = () => {
 					<Contact />
 
 					<Switch>
-						<Route
-							exact={true}
-							path={Routes.HOME}
-							render={() => {
-								sendPageView(Routes.HOME, 'Home page');
-
-								return <Home />;
-							}}
-						/>
-
-						<Route
-							exact={true}
-							path={Routes.ABOUT}
-							render={() => {
-								sendPageView(Routes.ABOUT, 'About page');
-
-								return <About />;
-							}}
-						/>
-
-						<Route
-							exact={true}
-							path={Routes.TIMELINE}
-							render={() => {
-								sendPageView(Routes.TIMELINE, 'Timeline page');
-
-								return <Timeline />;
-							}}
-						/>
-
-						<Route
-							exact={true}
-							path={Routes.SKILLS}
-							render={() => {
-								sendPageView(Routes.SKILLS, 'Skills page');
-
-								return <Skills />;
-							}}
-						/>
-
-						<Route
-							exact={true}
-							path={Routes.PORTFOLIO}
-							render={() => {
-								sendPageView(Routes.PORTFOLIO, 'Portfolio page');
-
-								return <Portfolio />;
-							}}
-						/>
-
-						<Route
-							exact={true}
-							path={Routes.STATS}
-							render={() => {
-								sendPageView(Routes.STATS, 'Stats page');
-
-								return <Stats data={{ github, gitlab }} />;
-							}}
-						/>
-
-						<Route
-							exact={true}
-							path={Routes.SLIDES}
-							render={() => {
-								sendPageView(Routes.SLIDES, 'Slides page');
-
-								return <Slides />;
-							}}
-						/>
-
-						<Route
-							exact={true}
-							path={Routes.VIDEOS}
-							render={() => {
-								sendPageView(Routes.VIDEOS, 'Videos page');
-
-								return <Videos />;
-							}}
-						/>
-
-						<Route
-							exact={true}
-							path={Routes.ARTICLES}
-							render={() => {
-								sendPageView(Routes.ARTICLES, 'Articles page');
-
-								return <Articles />;
-							}}
-						/>
-
-						<Route
-							exact={true}
-							path={Routes.CERTIFICATES}
-							render={() => {
-								sendPageView(Routes.CERTIFICATES, 'Certificates page');
-
-								return <Certificates />;
-							}}
-						/>
-
-						<Route
-							exact={true}
-							path={Routes.SOCIAL}
-							render={() => {
-								sendPageView(Routes.SOCIAL, 'Social page');
-
-								return <Social />;
-							}}
-						/>
+						<Route exact={true} path={Routes.HOME} component={Home} />
+						<Route exact={true} path={Routes.ABOUT} component={About} />
+						<Route exact={true} path={Routes.TIMELINE} component={Timeline} />
+						<Route exact={true} path={Routes.SKILLS} component={Skills} />
+						<Route exact={true} path={Routes.PORTFOLIO} component={Portfolio} />
+						<Route exact={true} path={Routes.STATS} component={() => <Stats data={{ github, gitlab }} />} />
+						<Route exact={true} path={Routes.SLIDES} component={Slides} />
+						<Route exact={true} path={Routes.VIDEOS} component={Videos} />
+						<Route exact={true} path={Routes.ARTICLES} component={Articles} />
+						<Route exact={true} path={Routes.CERTIFICATES} component={Certificates} />
+						<Route exact={true} path={Routes.SOCIAL} component={Social} />
 					</Switch>
 
 					<Nav hasShell={true} className="c-nav--inline" />
