@@ -2486,10 +2486,16 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 }
 
 .c-skyline__item {
+	position: relative;
+
 	& canvas {
 		width: 100%;
-		height: 75vh;
+		height: 60vh;
 		display: block;
+	}
+
+	& .c-loading {
+		@mixin centered;
 	}
 }
 

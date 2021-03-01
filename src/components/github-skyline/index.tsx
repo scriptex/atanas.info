@@ -16,24 +16,24 @@ import {
 	Scene as SceneCore
 } from '@babylonjs/core';
 
+import { Loader } from '..';
+
 interface Props {
 	readonly file: string;
 	readonly index: number;
 }
 
 const ROOT = './stl';
+const SIZE = 750;
 
-export const onSceneMount = (args: SceneEventArgs, props: Props): void => {
+export const onSceneMount = (args: SceneEventArgs, props: Props, onLoad: () => void): void => {
 	SceneLoader.Append('./stl/', props.file, args.scene, (scene: SceneCore) => {
-		// TODO: highlight meshes
-		const meshes = scene.meshes;
-		console.log(meshes);
 		const cubeTexture = CubeTexture.CreateFromPrefilteredData(`${ROOT}/texture.dds`, scene);
-		const skySphere = Mesh.CreateSphere('skySphere', 8, 1000, scene);
+		const skySphere = Mesh.CreateSphere('skySphere', 8, SIZE, scene);
 		const skySphereMaterial = new StandardMaterial('skySphereMaterial', scene);
 		const ground = MeshBuilder.CreateGround('ground', {
-			width: 1000,
-			height: 1000
+			width: SIZE,
+			height: SIZE
 		});
 		const groundMaterial = new GridMaterial('groundMaterial', scene);
 
@@ -70,40 +70,48 @@ export const onSceneMount = (args: SceneEventArgs, props: Props): void => {
 		scene.fogStart = 50;
 		scene.fogEnd = 250;
 		scene.fogColor = new Color3(4 / 255, 14 / 255, 34 / 255);
+
+		onLoad();
 	});
 };
 
-export const GithubSkyline = (props: Props): React.ReactElement => (
-	<div className="c-skyline__item">
-		<Engine antialias adaptToDeviceRatio canvasId={`c-skyline__item-${props.index}`}>
-			<Scene onSceneMount={(args: SceneEventArgs) => onSceneMount(args, props)}>
-				<arcRotateCamera
-					fov={0.8}
-					name="camera"
-					beta={1}
-					minZ={0.1}
-					maxZ={1000}
-					alpha={-2}
-					target={Vector3.Zero()}
-					radius={75}
-					wheelPrecision={1}
-					upperBetaLimit={Math.PI / 2}
-					lowerRadiusLimit={50}
-					upperRadiusLimit={100}
-					panningSensibility={0}
-					useAutoRotationBehavior={true}
-				/>
+export const GithubSkyline = (props: Props): React.ReactElement => {
+	const [loading, setLoading] = React.useState(true);
 
-				<autoRotationBehavior
-					idleRotationSpeed={-0.1}
-					idleRotationWaitTime={1000}
-					idleRotationSpinupTime={1000}
-				/>
+	return (
+		<div className="c-skyline__item">
+			{loading && <Loader />}
 
-				<hemisphericLight name="light" intensity={0.5} direction={new Vector3(0, 1, -1)} />
-			</Scene>
-		</Engine>
-	</div>
-);
+			<Engine antialias adaptToDeviceRatio canvasId={`c-skyline__item-${props.index}`}>
+				<Scene onSceneMount={(args: SceneEventArgs) => onSceneMount(args, props, () => setLoading(false))}>
+					<arcRotateCamera
+						fov={0.8}
+						name="camera"
+						beta={1}
+						minZ={0.1}
+						maxZ={SIZE}
+						alpha={-2}
+						target={Vector3.Zero()}
+						radius={75}
+						wheelPrecision={1}
+						upperBetaLimit={Math.PI / 2}
+						lowerRadiusLimit={50}
+						upperRadiusLimit={100}
+						panningSensibility={0}
+						useAutoRotationBehavior={true}
+					/>
+
+					<autoRotationBehavior
+						idleRotationSpeed={-0.1}
+						idleRotationWaitTime={SIZE}
+						idleRotationSpinupTime={SIZE}
+					/>
+
+					<hemisphericLight name="light" intensity={0.5} direction={new Vector3(0, 1, -1)} />
+				</Scene>
+			</Engine>
+		</div>
+	);
+};
 
 export default GithubSkyline;

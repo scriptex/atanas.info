@@ -8,6 +8,7 @@ export { default as GithubSkyline } from './github-skyline';
 export { default as Head } from './head';
 export { default as Header } from './header';
 export { default as Icon } from './icon';
+export { default as Loader } from './loader';
 export { default as Nav } from './nav';
 export { default as ScrollToTop } from './scroll-top';
 export { default as Section } from './section';

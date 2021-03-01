@@ -8,20 +8,11 @@ interface GeneralInsight {
 	readonly value: any;
 }
 
-interface HistoryItem {
-	readonly file: string;
-	readonly year: number;
-}
-
 interface Props {
 	data: any;
 }
 
-const githubHistory: HistoryItem[] = [
-	{ file: '2018.stl', year: 2018 },
-	{ file: '2019.stl', year: 2019 },
-	{ file: '2020.stl', year: 2020 }
-];
+const YEARS: string[] = ['2018', '2019', '2020'];
 
 // prettier-ignore
 export const formatDate = (date: string | number, formatter = 'dd MMM yyyy'): string => format(new Date(date), formatter);
@@ -157,18 +148,18 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 							</h3>
 
 							<ul>
-								{githubHistory.map((item: HistoryItem, index: number) => (
+								{YEARS.map((year: string, index: number) => (
 									<li key={index} className={current === index ? 'current' : undefined}>
 										<button onClick={() => setCurrent(index)} className="c-btn c-btn--small">
-											{item.year}
+											{year}
 										</button>
 									</li>
 								))}
 							</ul>
 						</nav>
 
-						{githubHistory.map((item: HistoryItem, index: number) =>
-							index === current ? <GithubSkyline key={index} file={item.file} index={index} /> : null
+						{YEARS.map((year: string, index: number) =>
+							index === current ? <GithubSkyline key={index} file={`${year}.stl`} index={index} /> : null
 						)}
 					</div>
 				</div>
