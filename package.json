@@ -8,7 +8,7 @@
 		"fetch-projects": "ts-node ./projects/.vuepress/fetch-projects.ts",
 		"start-projects": "cd projects && vuepress dev",
 		"build-projects": "cd projects && vuepress build",
-		"localga": "localga --id $(grep GTM_ID .env | cut -d '=' -f2) --folder ./src/scripts",
+		"localga": "ts-node ./src/scripts/local-analytics.ts",
 		"svg": "./bin/svg.sh",
 		"tsc": "tsc --noEmit --skipLibCheck",
 		"tsc:watch": "yarn tsc --watch",
