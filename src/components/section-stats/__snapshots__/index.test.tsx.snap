@@ -263,6 +263,53 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
           </div>
         </div>
       </div>
+      <div
+        className="c-skyline"
+      >
+        <nav
+          className="c-skyline__nav"
+        >
+          <h3>
+            Previous years Github contributions 
+            <br />
+            <small>
+              (requires WebGL)
+            </small>
+          </h3>
+          <ul>
+            <li
+              key="0"
+            >
+              <button
+                className="c-btn c-btn--small"
+                onClick={[Function]}
+              >
+                2018
+              </button>
+            </li>
+            <li
+              key="1"
+            >
+              <button
+                className="c-btn c-btn--small"
+                onClick={[Function]}
+              >
+                2019
+              </button>
+            </li>
+            <li
+              key="2"
+            >
+              <button
+                className="c-btn c-btn--small"
+                onClick={[Function]}
+              >
+                2020
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </div>
 </Fragment>

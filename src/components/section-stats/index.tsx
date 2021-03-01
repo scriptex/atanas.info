@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { format } from 'date-fns';
 
-import { Svg, Section } from '..';
+import { Svg, Section, GithubSkyline } from '..';
 
 interface GeneralInsight {
 	readonly title: string;
@@ -11,6 +11,8 @@ interface GeneralInsight {
 interface Props {
 	data: any;
 }
+
+const YEARS: string[] = ['2018', '2019', '2020'];
 
 // prettier-ignore
 export const formatDate = (date: string | number, formatter = 'dd MMM yyyy'): string => format(new Date(date), formatter);
@@ -92,6 +94,8 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 		}
 	];
 
+	const [current, setCurrent] = React.useState(-1);
+
 	return (
 		<>
 			<div className="c-section__entry c-section__entry--no-background">
@@ -134,6 +138,29 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 								More
 							</div>
 						</div>
+					</div>
+
+					<div className="c-skyline">
+						<nav className="c-skyline__nav">
+							<h3>
+								Previous years Github contributions <br />
+								<small>(requires WebGL)</small>
+							</h3>
+
+							<ul>
+								{YEARS.map((year: string, index: number) => (
+									<li key={index} className={current === index ? 'current' : undefined}>
+										<button onClick={() => setCurrent(index)} className="c-btn c-btn--small">
+											{year}
+										</button>
+									</li>
+								))}
+							</ul>
+						</nav>
+
+						{YEARS.map((year: string, index: number) =>
+							index === current ? <GithubSkyline key={index} file={`${year}.stl`} index={index} /> : null
+						)}
 					</div>
 				</div>
 			</div>

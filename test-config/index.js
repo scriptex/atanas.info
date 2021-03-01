@@ -17,3 +17,5 @@ window.matchMedia = window.matchMedia || (() => ({
 window.crypto = {
 	getRandomValues: buffer => crypto.randomFillSync(buffer)
 };
+
+jest.mock('../src/components/github-skyline', () => jest.fn(() => 'Github Skyline'));
