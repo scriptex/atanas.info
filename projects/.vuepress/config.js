@@ -290,7 +290,8 @@ module.exports = {
 			{
 				ga: process.env.GTM_ID
 			}
-		]
+		],
+		'@goy/svg-icons'
 	],
 	ga: process.env.GTM_ID,
 	serviceWorker: true,
