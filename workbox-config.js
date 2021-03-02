@@ -2,8 +2,14 @@ module.exports = {
 	swDest: 'dist/offline-worker.js',
 	sourcemap: false,
 	skipWaiting: true,
-	globIgnores: ['**/images/svg/*'],
-	globPatterns: ['**/*.{js,css,png,svg,jpg,gif,json,woff,woff2,eot,ico,webmanifest,map}'],
+	globIgnores: [
+		'**/images/svg/*',
+		'**/music/stl/*',
+		'**/music/images/*',
+		'**/music/houdini/*',
+		'**/music/certificates/*'
+	],
+	globPatterns: ['**/*.{js,css,png,svg,jpg,gif,json,woff,woff2,eot,ico,webmanifest,stl,dds}'],
 	clientsClaim: true,
 	globDirectory: 'dist',
 	maximumFileSizeToCacheInBytes: 8000000
