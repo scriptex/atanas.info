@@ -26,6 +26,8 @@ const saveProject = (data: string, path: string, message: string): void => {
 		unlinkSync(path);
 	}
 
+	data += '\n<funding />';
+
 	writeFileSync(path, data);
 
 	console.log(message);
