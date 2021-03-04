@@ -1,75 +1,91 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Section component Should render the Section component 1`] = `
-<section
-  className="c-section c-section--section test"
-  id="section"
+<main
+  className="o-main "
 >
-  <div
-    className="o-shell"
+  <section
+    className="c-section c-section--section test"
+    id="section"
+  >
+    <div
+      className="o-shell"
+    >
+      <Component
+        className=" test"
+        hasButton={true}
+        hasShell={true}
+        id="section"
+      >
+        <Children />
+      </Component>
+    </div>
+  </section>
+</main>
+`;
+
+exports[`Section component Should render the Section component without a button 1`] = `
+<main
+  className="o-main "
+>
+  <section
+    className="c-section c-section--section"
+    id="section"
+  >
+    <div
+      className="o-shell o-shell--flex"
+    >
+      <Component
+        hasButton={false}
+        hasShell={true}
+        id="section"
+        shellClass="o-shell--flex"
+      >
+        <Children />
+      </Component>
+    </div>
+  </section>
+</main>
+`;
+
+exports[`Section component Should render the Section component without a button and a shell 1`] = `
+<main
+  className="o-main "
+>
+  <section
+    className="c-section c-section--section test"
+    id="section"
+  >
+    <Component
+      className=" test"
+      hasButton={false}
+      hasShell={false}
+      id="section"
+    >
+      <Children />
+    </Component>
+  </section>
+</main>
+`;
+
+exports[`Section component Should render the Section component without a shell 1`] = `
+<main
+  className="o-main "
+>
+  <section
+    className="c-section c-section--section test"
+    id="section"
   >
     <Component
       className=" test"
       hasButton={true}
-      hasShell={true}
+      hasShell={false}
       id="section"
     >
       <Children />
     </Component>
-  </div>
-</section>
-`;
-
-exports[`Section component Should render the Section component without a button 1`] = `
-<section
-  className="c-section c-section--section"
-  id="section"
->
-  <div
-    className="o-shell o-shell--flex"
-  >
-    <Component
-      hasButton={false}
-      hasShell={true}
-      id="section"
-      shellClass="o-shell--flex"
-    >
-      <Children />
-    </Component>
-  </div>
-</section>
-`;
-
-exports[`Section component Should render the Section component without a button and a shell 1`] = `
-<section
-  className="c-section c-section--section test"
-  id="section"
->
-  <Component
-    className=" test"
-    hasButton={false}
-    hasShell={false}
-    id="section"
-  >
-    <Children />
-  </Component>
-</section>
-`;
-
-exports[`Section component Should render the Section component without a shell 1`] = `
-<section
-  className="c-section c-section--section test"
-  id="section"
->
-  <Component
-    className=" test"
-    hasButton={true}
-    hasShell={false}
-    id="section"
-  >
-    <Children />
-  </Component>
-</section>
+  </section>
+</main>
 `;
 
 exports[`SectionElements component Should render the SectionElements component 1`] = `
