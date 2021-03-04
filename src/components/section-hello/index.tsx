@@ -35,7 +35,7 @@ export const SectionHello: React.FunctionComponent = () => {
 	}, []);
 
 	return (
-		<Section id="hello" hasButton={false}>
+		<Section id="hello" hasButton={false} wrapperClassName="o-main--high">
 			<div className="c-canvas" id="canvas" />
 
 			<Slider />

@@ -5,13 +5,14 @@ import { AppContext } from '../app';
 
 export interface Props {
 	id: string;
+	style?: React.CSSProperties;
 	actions?: React.ReactNode;
 	children: any;
-	className?: string;
 	hasShell?: boolean;
 	hasButton: boolean;
+	className?: string;
 	shellClass?: string;
-	style?: React.CSSProperties;
+	wrapperClassName?: string;
 }
 
 export const SectionElements: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
@@ -41,15 +42,21 @@ export const SectionElements: React.FunctionComponent<Readonly<Props>> = (props:
 };
 
 export const Section: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => (
-	<section id={props.id} className={`c-section c-section--${props.id}${props.className || ''}`} style={props.style}>
-		{props.hasShell ? (
-			<div className={`o-shell${props.shellClass ? ' ' + props.shellClass : ''}`}>
+	<main className={`o-main ${props.wrapperClassName || ''}`}>
+		<section
+			id={props.id}
+			style={props.style}
+			className={`c-section c-section--${props.id}${props.className || ''}`}
+		>
+			{props.hasShell ? (
+				<div className={`o-shell${props.shellClass ? ' ' + props.shellClass : ''}`}>
+					<SectionElements {...props} />
+				</div>
+			) : (
 				<SectionElements {...props} />
-			</div>
-		) : (
-			<SectionElements {...props} />
-		)}
-	</section>
+			)}
+		</section>
+	</main>
 );
 
 Section.defaultProps = {
