@@ -1,4 +1,4 @@
-# https://atanas.info
+# https://atanas.info 
 
 [![Travis CI](https://travis-ci.com/scriptex/atanas.info.svg?branch=master)](https://travis-ci.com/scriptex/atanas.info)
 [![Circle CI](https://circleci.com/gh/scriptex/atanas.info.svg?style=svg)](https://circleci.com/gh/scriptex/atanas.info)
@@ -10,6 +10,7 @@
 [![codebeat badge](https://codebeat.co/badges/807a5061-9e43-4fec-9819-1c47c37c2e9f)](https://codebeat.co/projects/github-com-scriptex-atanas-info-master)
 [![CodeFactor](https://www.codefactor.io/repository/github/scriptex/atanas.info/badge)](https://www.codefactor.io/repository/github/scriptex/atanas.info)
 [![DeepScan grade](https://deepscan.io/api/teams/3574/projects/5291/branches/40827/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=3574&pid=5291&bid=40827)
+[![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/atanas.info/README.md)](https://github.com/scriptex/atanas.info/)
 
 > My personal website
 
