@@ -1,4 +1,7 @@
-@import 'itcss';
+@import 'itcss/main.css';
+@import 'itcss/assets/tools/_chevron.css';
+@import 'itcss/assets/tools/_flexbox.css';
+@import 'itcss/assets/tools/_mixins.css';
 @import 'slick-carousel/slick/slick.css';
 @import 'lite-youtube-embed/src/lite-yt-embed.css';
 @import 'react-vertical-timeline-component/style.min.css';
@@ -11,9 +14,9 @@
 	--slanted-background-color: var(--color-action);
 	--slanted-background-opacity: 0.35;
 
-	@media (prefers-color-scheme: light) {
+	/* @media (prefers-color-scheme: light) {
 		color: var(--color-secondary);
-	}
+	} */
 }
 
 @define-mixin polygon $sides {
@@ -43,6 +46,15 @@
 	--color-calendar-graph-day-L2-bg: #40c463;
 	--color-calendar-graph-day-L3-bg: #30a14e;
 	--color-calendar-graph-day-L4-bg: #216e39;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--color-base: #333;
+		--color-primary: #fff;
+		--color-secondary: #000;
+		--color-action: #ef4c23;
+	}
 }
 
 @keyframes float {
@@ -77,10 +89,6 @@ body,
 .o-main--high,
 .c-section--hello {
 	height: 100%;
-}
-
-html {
-	scroll-behavior: smooth;
 }
 
 body {
@@ -1590,7 +1598,7 @@ body {
 
 			& small {
 				font-size: 100%;
-				font-family: $font-sans-serif;
+				font-family: var(--font-sans-serif);
 			}
 		}
 	}
