@@ -2162,6 +2162,10 @@ body {
 			padding-top: 1rem;
 		}
 	}
+
+	& .c-btn {
+		margin-top: 1.5rem;
+	}
 }
 
 @media (--tablet-portrait) {
@@ -2563,3 +2567,74 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 		fill: var(--color-secondary);
 	}
 } */
+
+.c-funding {
+	& svg {
+		max-width: 37.5rem;
+		opacity: 0;
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 100;
+		margin: auto;
+		overflow: visible;
+		pointer-events: none;
+		transform: scale(0);
+		transition: all var(--timing) var(--easing);
+	}
+
+	& path {
+		transition: fill var(--timing) var(--easing);
+	}
+}
+
+.c-funding__item {
+	color: inherit;
+	text-decoration: none;
+
+	& path {
+		fill: var(--color-primary);
+	}
+
+	&:hover {
+		& path {
+			fill: var(--color-action);
+		}
+	}
+}
+
+.c-funding__trigger {
+	fill: var(--color-action);
+	pointer-events: auto;
+	cursor: pointer;
+}
+
+.c-funding__backdrop {
+	opacity: 0;
+	display: block;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 90;
+	background-color: var(--color-secondary);
+	transition: opacity var(--timing) var(--easing);
+	pointer-events: none;
+}
+
+.c-funding--open {
+	& svg {
+		opacity: 1;
+		transform: scale(1);
+		pointer-events: auto;
+	}
+
+	& .c-funding__backdrop {
+		opacity: 0.8;
+		pointer-events: auto;
+	}
+}
