@@ -19,3 +19,7 @@ window.crypto = {
 };
 
 jest.mock('../src/components/github-skyline', () => jest.fn(() => 'Github Skyline'));
+
+jest.mock('gsap/Draggable', () => ({
+	default: jest.fn()
+}));

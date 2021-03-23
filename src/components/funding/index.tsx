@@ -1,5 +1,9 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import * as React from 'react';
+import gsap from 'gsap';
+import Draggable from 'gsap/Draggable';
+
+gsap.registerPlugin(Draggable);
 
 interface Props {
 	url: string;
@@ -43,7 +47,12 @@ export const FundingItem: React.FC<Props> = (props: Props) => (
 );
 
 export const Funding: React.FC = () => {
+	const knob = React.useRef(null);
 	const [open, setOpen] = React.useState(false);
+
+	React.useEffect(() => {
+		Draggable.create(knob.current, { type: 'rotation' });
+	}, []);
 
 	return (
 		<div className={`c-funding${open ? ' c-funding--open' : ''}`}>
@@ -53,7 +62,7 @@ export const Funding: React.FC = () => {
 
 			<div className="c-funding__backdrop" onClick={() => setOpen(false)} />
 
-			<svg viewBox="-100 -100 700 700">
+			<svg viewBox="-100 -100 700 700" ref={knob}>
 				<g>
 					<FundingItem
 						url="https://github.com/sponsors/scriptex"
