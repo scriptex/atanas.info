@@ -1,6 +1,19 @@
 #!/usr/bin/env ts-node-script
 
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+
+import * as fkill from 'fkill';
 import * as puppeteer from 'puppeteer';
+//@ts-ignore
+import * as httpServer from 'http-server';
+
+const server = httpServer.createServer({
+	root: './dist',
+	port: 1234,
+	proxy: 'http://localhost:1234?'
+});
+
+server.listen();
 
 import { resolve } from 'path';
 import { promises as fs } from 'fs';
@@ -53,6 +66,8 @@ const { unlink, readFile, writeFile, mkdir } = fs;
 	} catch (e) {
 		console.error(e);
 	}
+
+	fkill(':1234');
 
 	process.exit();
 })();
