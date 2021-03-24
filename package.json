@@ -39,7 +39,7 @@
 		"screenshots": "ts-node ./screenshots/index.ts",
 		"insights": "ts-node ./insights/index.ts",
 		"pages": "ts-node ./insights/pages.ts",
-		"prerender": "yarn start-dist & ts-node ./server/index.ts && lsof -ti tcp:1234 | xargs kill",
+		"prerender": "yarn start-dist & ts-node ./server/index.ts && fkill :1234",
 		"pwa": "create-pwa --icon static/images/icons/icon.png --launch static/images/icons/splash.png",
 		"type-coverage": "type-coverage --ignore-catch --detail",
 		"please": "rm -rf .cache dist coverage node_modules yarn.lock"
@@ -120,7 +120,8 @@
 		"eslint": "7.22.0",
 		"eslint-config-prettier": "8.1.0",
 		"eslint-plugin-jest": "24.3.2",
-		"eslint-plugin-react": "7.22.0",
+		"eslint-plugin-react": "7.23.1",
+		"fkill-cli": "6.1.0",
 		"html-minifier": "4.0.0",
 		"http-server": "0.12.3",
 		"husky": "5.2.0",
