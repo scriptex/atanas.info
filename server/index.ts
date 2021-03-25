@@ -10,7 +10,7 @@ import * as httpServer from 'http-server';
 const server = httpServer.createServer({
 	root: './dist',
 	port: 1234,
-	proxy: 'http://localhost:1234?'
+	proxy: 'http://0.0.0.0:1234?'
 });
 
 server.listen();
@@ -41,7 +41,7 @@ const { unlink, readFile, writeFile, mkdir } = fs;
 		// const content = tmp.replace(/\/src\./g, './src.');
 
 		await writeFile(resolve(dist, temp), content);
-		await page.goto('http://localhost:1234', {
+		await page.goto('http://0.0.0.0:1234', {
 			waitUntil: 'networkidle2'
 		});
 

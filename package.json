@@ -26,7 +26,7 @@
 		"start": "yarn time && concurrently -r \"yarn css:watch\" \"yarn tsc:watch\" \"yarn houdini:watch\" \"yarn parcel-start\"",
 		"start-music": "concurrently -r \"yarn houdini:watch\" \"yarn parcel-start-music\"",
 		"start-dist": "http-server ./dist -p=1234 -P=http://localhost:1234/? -o",
-		"build": "yarn pre && yarn css && yarn tsc && yarn houdini && yarn parcel-build && yarn fetch-projects && yarn build-projects && yarn prerender",
+		"build": "yarn pre && yarn css && yarn tsc && yarn houdini && yarn parcel-build && yarn fetch-projects && yarn build-projects && yarn snap",
 		"build-music": "concurrently -r \"yarn houdini\" \"yarn parcel-build-music\"",
 		"postbuild": "workbox generateSW",
 		"test": "jest --detectOpenHandles",
@@ -42,7 +42,8 @@
 		"prerender": "ts-node ./server/index.ts",
 		"pwa": "create-pwa --icon static/images/icons/icon.png --launch static/images/icons/splash.png",
 		"type-coverage": "type-coverage --ignore-catch --detail",
-		"please": "rm -rf .cache dist coverage node_modules yarn.lock"
+		"please": "rm -rf .cache dist coverage node_modules yarn.lock",
+		"snap": "react-snap"
 	},
 	"keywords": [],
 	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
@@ -151,6 +152,7 @@
 		"postcss-utilities": "0.8.4",
 		"prettier": "2.2.1",
 		"puppeteer": "8.0.0",
+		"react-snap": "1.23.0",
 		"sass": "1.32.8",
 		"spritesh": "1.2.1",
 		"stylelint": "13.12.0",
@@ -178,5 +180,16 @@
 	"private": true,
 	"typeCoverage": {
 		"atLeast": 25
+	},
+	"reactSnap": {
+		"source": "dist",
+		"minifyHtml": {
+			"collapseWhitespace": false,
+			"removeComments": false
+		},
+		"puppeteerArgs": [
+			"--no-sandbox",
+			"--disable-setuid-sandbox"
+		]
 	}
 }

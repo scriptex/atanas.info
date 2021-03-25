@@ -4,7 +4,7 @@ export interface MenuItem {
 	rel?: string;
 	href: string;
 	title: string;
-	target?: '_blank';
+	target?: string;
 	content: string;
 }
 
@@ -64,39 +64,43 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 		title: 'Social widgets',
 		content: 'Social'
 	},
-	{
-		rel: 'noopener noreferrer',
-		href: 'https://scriptexbg.wordpress.com',
-		title: 'My blog',
-		target: '_blank',
-		content: 'Blog'
-	},
-	{
-		rel: 'noopener noreferrer',
-		href: './resume.pdf',
-		title: 'My CV',
-		target: '_blank',
-		content: 'Resume (pdf)'
-	},
-	{
-		rel: 'noopener noreferrer',
-		href: 'https://scriptex.js.org',
-		title: 'My interactive CV',
-		target: '_blank',
-		content: 'Interactive Resume'
-	},
-	{
-		rel: 'noopener noreferrer',
-		href: 'projects/',
-		title: 'My open source projects',
-		target: '_blank',
-		content: 'Open source'
-	},
-	{
-		rel: 'noopener noreferrer',
-		href: 'music/',
-		title: 'My music',
-		target: '_blank',
-		content: 'Music'
-	}
+	...(navigator.userAgent === 'ReactSnap'
+		? []
+		: [
+				{
+					rel: 'noopener noreferrer',
+					href: 'https://scriptexbg.wordpress.com',
+					title: 'My blog',
+					target: '_blank',
+					content: 'Blog'
+				},
+				{
+					rel: 'noopener noreferrer',
+					href: './resume.pdf',
+					title: 'My CV',
+					target: '_blank',
+					content: 'Resume (pdf)'
+				},
+				{
+					rel: 'noopener noreferrer',
+					href: 'https://scriptex.js.org',
+					title: 'My interactive CV',
+					target: '_blank',
+					content: 'Interactive Resume'
+				},
+				{
+					rel: 'noopener noreferrer',
+					href: 'projects/',
+					title: 'My open source projects',
+					target: '_blank',
+					content: 'Open source'
+				},
+				{
+					rel: 'noopener noreferrer',
+					href: 'music/',
+					title: 'My music',
+					target: '_blank',
+					content: 'Music'
+				}
+		  ])
 ];

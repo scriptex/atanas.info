@@ -15,6 +15,7 @@ import {
 	Videos,
 	Timeline,
 	Articles,
+	ErrorPage,
 	Portfolio,
 	Certificates
 } from '../../loadables';
@@ -55,6 +56,7 @@ export const App: React.FunctionComponent = () => {
 						<Route exact={true} path={Routes.ARTICLES} component={Articles} />
 						<Route exact={true} path={Routes.CERTIFICATES} component={Certificates} />
 						<Route exact={true} path={Routes.SOCIAL} component={Social} />
+						<Route component={ErrorPage} />
 					</Switch>
 
 					<Nav hasShell={true} className="c-nav--inline" />
