@@ -2595,6 +2595,11 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 	color: inherit;
 	text-decoration: none;
 
+	& a {
+		text-decoration: none;
+		touch-action: auto !important;
+	}
+
 	& path {
 		fill: var(--color-primary);
 	}
