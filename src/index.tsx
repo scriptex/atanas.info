@@ -20,7 +20,7 @@ TagManager.initialize({
 	gtmId: process.env.GTM_ID as string
 });
 
-if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator && navigator.userAgent !== 'ReactSnap') {
 	const workers: IWorker[] = [
 		{
 			name: `offline-worker.js`
