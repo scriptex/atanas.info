@@ -1,10 +1,26 @@
 #!/usr/bin/env ts-node-script
 
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+
+import * as fkill from 'fkill';
 import * as puppeteer from 'puppeteer';
+//@ts-ignore
+import * as httpServer from 'http-server';
+
+const server = httpServer.createServer({
+	root: './dist',
+	port: 1234,
+	proxy: 'http://localhost:1234?'
+});
+
+server.listen();
 
 import { resolve } from 'path';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { unlink, readFile, writeFile } = require('fs').promises;
+import { promises as fs } from 'fs';
+
+import { Routes } from '../src/scripts/routes';
+
+const { unlink, readFile, writeFile, mkdir } = fs;
 
 (async () => {
 	const temp = 'index-temp.html';
@@ -18,26 +34,40 @@ const { unlink, readFile, writeFile } = require('fs').promises;
 		});
 
 		const page = await browser.newPage();
-		const tmp = await readFile(resolve(dist, index), {
+		const content = await readFile(resolve(dist, index), {
 			encoding: 'utf-8'
 		});
 
-		const content = tmp.replace(/\/src\./g, './src.');
+		// const content = tmp.replace(/\/src\./g, './src.');
 
 		await writeFile(resolve(dist, temp), content);
-		await page.goto('file:///' + resolve(dist, temp), {
+		await page.goto('http://localhost:1234', {
 			waitUntil: 'networkidle2'
 		});
 
 		const render = await page.content();
 		const html = render.replace(/\.\/src\./g, '/src.');
 
+		const routes = Object.values(Routes).filter((route: string) => route !== '/');
+
 		await unlink(resolve(dist, index));
 		await writeFile(resolve(dist, index), html);
 		await unlink(resolve(dist, temp));
+
+		for (const route of routes) {
+			await page.$eval(`.c-nav a[href="${route}"]`, (el: any) => el.click());
+
+			const html = await page.content();
+			const dir = route.replace('/', '');
+
+			await mkdir(resolve(__dirname, '..', 'dist', dir));
+			await writeFile(resolve(__dirname, '..', 'dist', dir, 'index.html'), html);
+		}
 	} catch (e) {
 		console.error(e);
 	}
+
+	fkill(':1234');
 
 	process.exit();
 })();

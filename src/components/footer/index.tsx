@@ -3,7 +3,7 @@ import 'scriptex-socials';
 
 import { updatedAt } from '../../scripts/updated-at';
 import { formatDate } from '../section-stats';
-import { ExternalLink } from '..';
+import { Funding, ExternalLink } from '..';
 
 export const Footer: React.FunctionComponent = () => (
 	<footer className="c-footer">
@@ -29,15 +29,7 @@ export const Footer: React.FunctionComponent = () => (
 
 			<small>Updated at {formatDate(updatedAt * 1000, 'dd MMM yyyy HH:mm:ss')}</small>
 
-			<iframe
-				src="https://github.com/sponsors/scriptex/button"
-				title="Sponsor scriptex"
-				width="116"
-				height="35"
-				style={{ border: 0 }}
-				loading="lazy"
-				frameBorder={0}
-			></iframe>
+			<Funding />
 		</div>
 	</footer>
 );
