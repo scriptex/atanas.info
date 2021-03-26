@@ -3,8 +3,28 @@ module.exports = {
 	sourcemap: false,
 	skipWaiting: true,
 	globIgnores: ['**/images/svg/*', '**/music/**'],
-	globPatterns: ['**/*.{js,css,png,svg,jpg,gif,json,woff,woff2,eot,ico,webmanifest,stl,dds}'],
+	globPatterns: ['**/*.{html,ico}'],
 	clientsClaim: true,
 	globDirectory: 'dist',
-	maximumFileSizeToCacheInBytes: 8000000
+	maximumFileSizeToCacheInBytes: 8000000,
+	runtimeCaching: [
+		{
+			urlPattern: /\.(?:png,svg,jpg,gif,json,woff,woff2,eot,webmanifest,stl,dds)$/,
+			handler: 'CacheFirst',
+			options: {
+				cacheName: 'images',
+				expiration: {
+					maxEntries: 10,
+					maxAgeSeconds: 60 * 60 * 24 * 30 // 30 Days
+				}
+			}
+		},
+		{
+			urlPattern: /\.(?:css|js)$/,
+			handler: 'StaleWhileRevalidate',
+			options: {
+				cacheName: 'assets'
+			}
+		}
+	]
 };
