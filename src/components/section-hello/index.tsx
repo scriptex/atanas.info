@@ -3,6 +3,7 @@ import { useInterval } from 'react-use';
 
 import { titles } from '../../scripts/titles';
 import { Section } from '..';
+import { isPrerendering } from '../../scripts/shared';
 import { initCanvas, createDots } from '../../scripts/canvas';
 
 export const Slider: React.FunctionComponent = () => {
@@ -31,7 +32,7 @@ export const Slider: React.FunctionComponent = () => {
 
 export const SectionHello: React.FunctionComponent = () => {
 	React.useEffect(() => {
-		if (navigator.userAgent !== 'ReactSnap') {
+		if (!isPrerendering) {
 			createDots(initCanvas('canvas'));
 		}
 	}, []);

@@ -1,4 +1,5 @@
 import { Routes } from './routes';
+import { isPrerendering } from './shared';
 
 export interface MenuItem {
 	rel?: string;
@@ -64,7 +65,7 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 		title: 'Social widgets',
 		content: 'Social'
 	},
-	...(navigator.userAgent === 'ReactSnap'
+	...(isPrerendering
 		? []
 		: [
 				{

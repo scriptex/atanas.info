@@ -4,6 +4,7 @@ import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 import lastFm from '../../scripts/last.fm-insights.json';
 import { formatDate } from '../section-stats';
+import { isPrerendering } from '../../scripts/shared';
 import { Section, Carousel, ExternalLink } from '..';
 
 const filteredData = (data: any[]): any[] =>
@@ -39,79 +40,91 @@ export const SectionSocial: React.FunctionComponent = () => {
 						<div className="o-grid__item xs-12 sm-6">
 							<h2>Codersrank Profile</h2>
 
-							<codersrank-widget username="scriptex" branding={false}></codersrank-widget>
+							{isPrerendering ? null : (
+								<codersrank-widget username="scriptex" branding={false}></codersrank-widget>
+							)}
 						</div>
 
 						<div className="o-grid__item xs-12 sm-6">
 							<h2>LinkedIn Profile</h2>
 
-							<div
-								className="LI-profile-badge"
-								data-size="large"
-								data-type="horizontal"
-								data-theme="dark"
-								data-locale="en_US"
-								data-vanity="scriptex"
-								data-version="v1"
-							>
-								<ExternalLink
-									href="https://linkedin.com/in/scriptex?trk=profile-badge"
-									className="LI-simple-link"
+							{isPrerendering ? null : (
+								<div
+									className="LI-profile-badge"
+									data-size="large"
+									data-type="horizontal"
+									data-theme="dark"
+									data-locale="en_US"
+									data-vanity="scriptex"
+									data-version="v1"
 								>
-									👨‍💻 Atanas Atanasov
-								</ExternalLink>
-							</div>
+									<ExternalLink
+										href="https://linkedin.com/in/scriptex?trk=profile-badge"
+										className="LI-simple-link"
+									>
+										👨‍💻 Atanas Atanasov
+									</ExternalLink>
+								</div>
+							)}
 						</div>
 
 						<div className="o-grid__item xs-12 sm-6">
 							<h2>Github Profile</h2>
 
-							<iframe
-								src="https://github.com/sponsors/scriptex/card"
-								title="Sponsor scriptex"
-								width="600"
-								height="225"
-								style={{ border: 0 }}
-								loading="lazy"
-								className="github-frame"
-								frameBorder={0}
-							></iframe>
+							{isPrerendering ? null : (
+								<iframe
+									src="https://github.com/sponsors/scriptex/card"
+									title="Sponsor scriptex"
+									width="600"
+									height="225"
+									style={{ border: 0 }}
+									loading="lazy"
+									className="github-frame"
+									frameBorder={0}
+								></iframe>
+							)}
 						</div>
 
 						<div className="o-grid__item xs-12 sm-6">
 							<h2>Twitter Profile</h2>
 
-							<TwitterTimelineEmbed
-								theme="dark"
-								options={{ height: '25rem' }}
-								sourceType="profile"
-								screenName="scriptexbg"
-							/>
+							{isPrerendering ? null : (
+								<TwitterTimelineEmbed
+									theme="dark"
+									options={{ height: '25rem' }}
+									sourceType="profile"
+									screenName="scriptexbg"
+								/>
+							)}
 						</div>
 
 						<div className="o-grid__item xs-12 sm-6">
 							<h2>YouTube Channel</h2>
 
-							<iframe
-								src="//www.youtube.com/embed/?listType=user_uploads&amp;list=scriptex"
-								height="400"
-								loading="lazy"
-								className="youtube-frame"
-							></iframe>
+							{isPrerendering ? null : (
+								<iframe
+									src="//www.youtube.com/embed/?listType=user_uploads&amp;list=scriptex"
+									height="400"
+									loading="lazy"
+									className="youtube-frame"
+								></iframe>
+							)}
 						</div>
 
 						<div className="o-grid__item xs-12 sm-6">
 							<h2>Spotify playlist</h2>
 
-							<iframe
-								src="https://open.spotify.com/embed/playlist/4MiRUEKhpi7Zb83GDxsV4W"
-								allow="encrypted-media"
-								width="300"
-								height="380"
-								loading="lazy"
-								className="spotify-frame"
-								frameBorder={0}
-							></iframe>
+							{isPrerendering ? null : (
+								<iframe
+									src="https://open.spotify.com/embed/playlist/4MiRUEKhpi7Zb83GDxsV4W"
+									allow="encrypted-media"
+									width="300"
+									height="380"
+									loading="lazy"
+									className="spotify-frame"
+									frameBorder={0}
+								></iframe>
+							)}
 						</div>
 					</div>
 				</div>

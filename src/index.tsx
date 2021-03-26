@@ -4,6 +4,7 @@ import TagManager from 'react-gtm-module';
 import 'html-head-component';
 
 import { App } from './components';
+import { isPrerendering } from './scripts/shared';
 
 interface IWorker {
 	name: string;
@@ -20,7 +21,7 @@ TagManager.initialize({
 	gtmId: process.env.GTM_ID as string
 });
 
-if ('serviceWorker' in navigator && navigator.userAgent !== 'ReactSnap') {
+if ('serviceWorker' in navigator && !isPrerendering) {
 	const workers: IWorker[] = [
 		{
 			name: `offline-worker.js`

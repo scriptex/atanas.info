@@ -20,3 +20,5 @@ export const random = (): number => {
 
 	return crypto.getRandomValues(array)[0] / (Math.pow(2, 32) - 1);
 };
+
+export const isPrerendering = navigator.userAgent === 'ReactSnap';

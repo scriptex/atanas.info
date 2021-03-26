@@ -2,13 +2,14 @@ import * as React from 'react';
 
 import { drawSkills } from '../../scripts/skills';
 import { Skill, skills } from '../../scripts/skills-list';
+import { isPrerendering } from '../../scripts/shared';
 import { Icon, Button, Section } from '..';
 
 export const SectionSkills: React.FunctionComponent = () => {
 	const [showTable, setShowTable] = React.useState(false);
 
 	React.useEffect(() => {
-		if (navigator.userAgent !== 'ReactSnap') {
+		if (!isPrerendering) {
 			drawSkills(skills);
 		}
 	}, []);

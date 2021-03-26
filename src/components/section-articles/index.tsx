@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { isPrerendering } from '../../scripts/shared';
 import { articles, Article } from '../../scripts/articles';
 import { Section, ExternalLink } from '..';
 
@@ -17,7 +18,7 @@ export const SectionArticles: React.FunctionComponent = () => (
 				<div key={index} className="o-grid__item xs-12 sm-6">
 					<ExternalLink
 						href={article.url}
-						style={navigator.userAgent === 'ReactSnap' ? {} : { backgroundImage: `url(${article.image})` }}
+						style={isPrerendering ? {} : { backgroundImage: `url(${article.image})` }}
 						className="c-article-link fullsize-background"
 					>
 						<strong>{article.title}</strong>
