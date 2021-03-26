@@ -49,16 +49,16 @@ export const SectionSocial: React.FunctionComponent = () => {
 								className="LI-profile-badge"
 								data-size="large"
 								data-type="horizontal"
-								data-theme="light"
+								data-theme="dark"
 								data-locale="en_US"
 								data-vanity="scriptex"
 								data-version="v1"
 							>
 								<ExternalLink
-									href="https://bg.linkedin.com/in/scriptex?trk=profile-badge"
+									href="https://linkedin.com/in/scriptex?trk=profile-badge"
 									className="LI-simple-link"
 								>
-									Atanas Atanasov
+									👨‍💻 Atanas Atanasov
 								</ExternalLink>
 							</div>
 						</div>

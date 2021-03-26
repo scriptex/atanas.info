@@ -8,7 +8,9 @@ export const SectionSkills: React.FunctionComponent = () => {
 	const [showTable, setShowTable] = React.useState(false);
 
 	React.useEffect(() => {
-		drawSkills(skills);
+		if (navigator.userAgent !== 'ReactSnap') {
+			drawSkills(skills);
+		}
 	}, []);
 
 	return (

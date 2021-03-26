@@ -31,7 +31,9 @@ export const Slider: React.FunctionComponent = () => {
 
 export const SectionHello: React.FunctionComponent = () => {
 	React.useEffect(() => {
-		createDots(initCanvas('canvas'));
+		if (navigator.userAgent !== 'ReactSnap') {
+			createDots(initCanvas('canvas'));
+		}
 	}, []);
 
 	return (
