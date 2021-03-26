@@ -111,10 +111,14 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
             YouTube Channel
           </h2>
           <iframe
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen={true}
             className="youtube-frame"
+            frameBorder={0}
             height="400"
             loading="lazy"
-            src="//www.youtube.com/embed/?listType=user_uploads&list=scriptex"
+            src="https://www.youtube.com/embed/?list=PLgLu3XOevO8_G7n5n9Mmoe-xPwuwpGDYr"
+            title="YouTube video player"
           />
         </div>
         <div

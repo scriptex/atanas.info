@@ -103,10 +103,14 @@ export const SectionSocial: React.FunctionComponent = () => {
 
 							{isPrerendering ? null : (
 								<iframe
-									src="//www.youtube.com/embed/?listType=user_uploads&amp;list=scriptex"
+									src="https://www.youtube.com/embed/?list=PLgLu3XOevO8_G7n5n9Mmoe-xPwuwpGDYr"
+									title="YouTube video player"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 									height="400"
 									loading="lazy"
 									className="youtube-frame"
+									frameBorder={0}
+									allowFullScreen={true}
 								></iframe>
 							)}
 						</div>
