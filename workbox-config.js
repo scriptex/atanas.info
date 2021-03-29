@@ -18,14 +18,21 @@ module.exports = {
 	maximumFileSizeToCacheInBytes: 8000000,
 	runtimeCaching: [
 		{
-			urlPattern: /\.(?:html|pdf|ico|png|svg|jpg|gif|json|woff|woff2|eot|webmanifest|stl|dds|xml|txt)$/,
+			urlPattern: /\.(?:pdf|ico|png|svg|jpg|gif|json|woff|woff2|eot|webmanifest|stl|dds|xml|txt)$/,
 			handler: 'CacheFirst',
 			options: {
-				cacheName: 'assets',
+				cacheName: 'cache-assets',
 				expiration: {
 					maxEntries: 10,
 					maxAgeSeconds: 60 * 60 * 24 * 30 // 30 Days
 				}
+			}
+		},
+		{
+			urlPattern: /\.(?:html|github-calendar|gitlab-calendar)$/,
+			handler: 'NetworkFirst',
+			options: {
+				cacheName: 'network-assets'
 			}
 		},
 		{
