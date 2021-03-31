@@ -54,10 +54,6 @@
 		"email": "scriptex.bg@gmail.com"
 	},
 	"license": "MIT",
-	"engines": {
-		"node": ">= 12.16.0",
-		"npm": ">= 6.14.0"
-	},
 	"dependencies": {
 		"@babylonjs/core": "4.2.0",
 		"@babylonjs/gui": "4.2.0",
@@ -132,8 +128,8 @@
 		"lastfm-node-client": "2.2.0",
 		"localga": "2.2.0",
 		"node-fetch": "2.6.1",
-		"parcel-bundler": "1.12.5",
-		"parcel-plugin-static-files-copy": "2.6.0",
+		"parcel": "2.0.0-beta.2",
+		"parcel-reporter-static-files-copy": "1.2.2",
 		"postcss": "8.2.9",
 		"postcss-calc": "8.0.0",
 		"postcss-cli": "8.3.1",
