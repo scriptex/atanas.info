@@ -59,6 +59,17 @@ export const getLastFMInsights = async (): Promise<void> => {
 
 		console.log(`Successfully wrote insights data from Last.FM in ${file}`);
 	} catch (e) {
+		writeFileSync(
+			file,
+			JSON.stringify(
+				{
+					error: true
+				},
+				null,
+				2
+			)
+		);
+
 		console.log('Error getting data from Last.FM.', e);
 	}
 };

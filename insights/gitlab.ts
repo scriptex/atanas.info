@@ -10,13 +10,13 @@ const setOwner = (repo: any, owner: string): any => ({ ...repo, owner });
 export const getGitlabInsights = async (): Promise<void> => {
 	console.log('Getting insights data from Gitlab...');
 
+	const file = 'src/scripts/gitlab-insights.json';
+
 	try {
 		writeFileSync(
 			'static/gitlab-calendar.svg',
 			(await getCalendarWithBrowser('https://gitlab.com/scriptex', '.js-contrib-calendar', 5000)) || ''
 		);
-
-		const file = 'src/scripts/gitlab-insights.json';
 
 		console.log('Getting data for user Scriptex from Gitlab...');
 		const user = await gitlab('users/1896847');
@@ -81,6 +81,17 @@ export const getGitlabInsights = async (): Promise<void> => {
 
 		console.log(`Successfully wrote insights data from Gitlab in ${file}`);
 	} catch (e) {
+		writeFileSync(
+			file,
+			JSON.stringify(
+				{
+					error: true
+				},
+				null,
+				2
+			)
+		);
+
 		console.log('Error getting data from Gitlab.', e);
 	}
 };

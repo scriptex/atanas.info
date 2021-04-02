@@ -6,10 +6,11 @@ import { getCalendar, asyncForEach, getContributions } from './utils';
 export const getGithubInsights = async (): Promise<void> => {
 	console.log('Getting insights data from Github...');
 
+	const file = 'src/scripts/github-insights.json';
+
 	try {
 		writeFileSync('static/github-calendar.svg', (await getCalendar()) || '');
 
-		const file = 'src/scripts/github-insights.json';
 		const user = await github.get({ path: '/users/scriptex' });
 		const repos1 = await github.get({ path: '/user/repos?per_page=100' });
 		const repos2 = await github.get({ path: '/user/repos?page=2&per_page=100' });
@@ -81,6 +82,17 @@ export const getGithubInsights = async (): Promise<void> => {
 
 		console.log(`Successfully wrote insights data from Github in ${file}`);
 	} catch (e) {
+		writeFileSync(
+			file,
+			JSON.stringify(
+				{
+					error: true
+				},
+				null,
+				2
+			)
+		);
+
 		console.log('Error getting data from Github.', e);
 	}
 };
