@@ -54,6 +54,42 @@ exports[`SectionArticles component Should render the SectionArticles component 1
         </strong>
       </Component>
     </div>
+    <div
+      className="o-grid__item xs-12 sm-6"
+      key="2"
+    >
+      <Component
+        className="c-article-link fullsize-background"
+        href="https://scriptexbg.wordpress.com/2021/03/11/bulk-image-watermark-with-nodejs-and-jimp/"
+        style={
+          Object {
+            "backgroundImage": "url(https://scriptexbg.files.wordpress.com/2021/03/3phjrjs.jpg)",
+          }
+        }
+      >
+        <strong>
+          Bulk image watermark with NodeJS and Jimp
+        </strong>
+      </Component>
+    </div>
+    <div
+      className="o-grid__item xs-12 sm-6"
+      key="3"
+    >
+      <Component
+        className="c-article-link fullsize-background"
+        href="https://scriptexbg.wordpress.com/2021/02/19/running-multiple-webpack-based-applications-simultaneously/"
+        style={
+          Object {
+            "backgroundImage": "url(https://scriptexbg.files.wordpress.com/2021/02/nodejs-1.png)",
+          }
+        }
+      >
+        <strong>
+          Running multiple Webpack based applications simultaneously
+        </strong>
+      </Component>
+    </div>
   </div>
 </Component>
 `;

@@ -35,7 +35,21 @@ export const addTitles = (selector: string, getTitle: (rect: SVGRectElement) => 
 };
 
 export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
-	const { general, calendar, updated, repositories } = props.data;
+	const [current, setCurrent] = React.useState(-1);
+
+	const { error, general, calendar, updated, repositories } = props.data;
+
+	if (error) {
+		return (
+			<div className="c-section__entry c-section__entry--no-background">
+				<div className="o-shell">
+					<h2>Github profile statistics</h2>
+
+					<p>Failed fetching data from Github. Please check again in 4 hours.</p>
+				</div>
+			</div>
+		);
+	}
 
 	const calendarDates = Object.keys(calendar).reduce((result: string[], key: string) => {
 		if (Object.keys(calendar[key]).length === 0) {
@@ -93,8 +107,6 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 			value: repositories.reduce((result: number, repo: any) => result + repo.issues, 0)
 		}
 	];
-
-	const [current, setCurrent] = React.useState(-1);
 
 	return (
 		<>
@@ -169,7 +181,20 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 };
 
 export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
-	const { general, calendar, updated, repositories } = props.data;
+	const { error, general, calendar, updated, repositories } = props.data;
+
+	if (error) {
+		return (
+			<div className="c-section__entry c-section__entry--no-background">
+				<div className="o-shell">
+					<h2>Gitlab profile statistics</h2>
+
+					<p>Failed fetching data from Gitlab. Please check again in 4 hours.</p>
+				</div>
+			</div>
+		);
+	}
+
 	const blocks: GeneralInsight[] = [
 		{
 			title: 'Used languages',

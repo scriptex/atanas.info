@@ -18,7 +18,7 @@ const filteredData = (data: any[]): any[] =>
 
 // codebeat:disable[ABC,LOC]
 export const SectionSocial: React.FunctionComponent = () => {
-	const { topAlbums, weeklyAlbumChart, updated }: any = lastFm;
+	const { error, updated, topAlbums, weeklyAlbumChart }: any = lastFm;
 
 	return (
 		<Section
@@ -134,33 +134,37 @@ export const SectionSocial: React.FunctionComponent = () => {
 				</div>
 			</div>
 
-			<header className="c-section__head">
-				<div className="o-shell">
-					<h1>
-						<ExternalLink href="https://www.last.fm/user/scriptex">Last.FM</ExternalLink> statistics
-					</h1>
+			{error ? null : (
+				<>
+					<header className="c-section__head">
+						<div className="o-shell">
+							<h1>
+								<ExternalLink href="https://www.last.fm/user/scriptex">Last.FM</ExternalLink> statistics
+							</h1>
 
-					<small>Updated at {formatDate(updated, 'dd MMM yyyy HH:mm:ss')}</small>
-				</div>
-			</header>
-
-			<div className="c-section__entry">
-				<div className="o-shell">
-					<div className="o-grid">
-						<div className="o-grid__item xs-12">
-							<h2>Top albums for last week:</h2>
-
-							<Carousel items={filteredData(weeklyAlbumChart)} />
+							<small>Updated at {formatDate(updated, 'dd MMM yyyy HH:mm:ss')}</small>
 						</div>
+					</header>
 
-						<div className="o-grid__item xs-12">
-							<h2>Top albums for last month:</h2>
+					<div className="c-section__entry">
+						<div className="o-shell">
+							<div className="o-grid">
+								<div className="o-grid__item xs-12">
+									<h2>Top albums for last week:</h2>
 
-							<Carousel items={filteredData(topAlbums)} />
+									<Carousel items={filteredData(weeklyAlbumChart)} />
+								</div>
+
+								<div className="o-grid__item xs-12">
+									<h2>Top albums for last month:</h2>
+
+									<Carousel items={filteredData(topAlbums)} />
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
+				</>
+			)}
 		</Section>
 	);
 };
