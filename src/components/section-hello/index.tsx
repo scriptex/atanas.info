@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useInterval } from 'react-use';
+import useInterval from 'use-interval';
 
 import { titles } from '../../scripts/titles';
 import { Section } from '..';
