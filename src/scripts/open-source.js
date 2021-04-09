@@ -52,7 +52,6 @@ module.exports = {
 		'scriptex/ts-helpers',
 		'scriptex/typed-usa-states',
 		'scriptex/universal-github-client',
-		'scriptex/uptime',
 		'scriptex/url-shortener',
 		'scriptex/weather-app',
 		'scriptex/webpack-mpa',
