@@ -1320,41 +1320,6 @@ body {
 		display: block;
 	}
 
-	& .o-grid {
-		& .LI-badge-container {
-			text-align: left;
-			width: 100% !important;
-			max-width: 40rem;
-			margin: auto;
-			background-color: var(--color-primary);
-
-			&.light {
-				& li {
-					display: inline-block;
-					vertical-align: top;
-					margin: 0 0.5rem 0.5rem 0 !important;
-				}
-
-				& .LI-name-container {
-					align-items: center;
-					margin: 0.5rem;
-				}
-
-				& .LI-profile-pic-container {
-					padding: 0;
-				}
-
-				& .LI-more-info {
-					padding: 0 0.5rem;
-				}
-
-				& .LI-footer {
-					margin: 0.25rem 0.5rem 0.5rem;
-				}
-			}
-		}
-	}
-
 	& .o-grid__item {
 		padding-top: 2rem;
 		padding-bottom: 2rem;
@@ -1362,7 +1327,8 @@ body {
 
 	& .github-frame,
 	& .youtube-frame,
-	& .spotify-frame {
+	& .spotify-frame,
+	& .stackoverflow-frame {
 		width: 100%;
 		display: block;
 	}
@@ -1385,6 +1351,11 @@ body {
 		& h1,
 		& h2 {
 			margin-bottom: 2rem;
+		}
+
+		/* prettier-ignore */
+		& codersrank-widget { /* stylelint-disable-line selector-type-no-unknown */
+			max-width: none;
 		}
 
 		& .c-section__head {
@@ -2709,11 +2680,122 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 		color: var(--color-primary);
 	}
 
-	.c-section--social .o-grid .LI-badge-container {
-		background-color: var(--color-secondary);
-	}
-
 	.c-section--timeline .vertical-timeline__icon {
 		fill: var(--color-secondary);
 	}
 } */
+
+.page-social {
+	font-size: 100%;
+
+	& a,
+	& a:hover,
+	& a:visited {
+		font-weight: inherit;
+		color: var(--color-primary);
+	}
+
+	& p,
+	& body {
+		font-weight: inherit;
+		font-size: 1rem;
+		line-height: 1.35;
+		color: var(--color-secondary);
+	}
+
+	& p {
+		color: var(--color-primary);
+	}
+
+	& body {
+		font-family: system-ui;
+		color: var(--color-secondary);
+	}
+
+	& h1 {
+		font-size: var(--font-size-h1);
+		font-weight: bold;
+	}
+
+	& h2 {
+		font-size: var(--font-size-h2);
+		font-weight: bold;
+	}
+
+	& h3 {
+		font-size: var(--font-size-h3);
+		font-weight: bold;
+	}
+
+	& h4 {
+		font-size: var(--font-size-h4);
+		font-weight: bold;
+	}
+
+	& h5 {
+		font-size: var(--font-size-h5);
+		font-weight: bold;
+	}
+
+	& h6 {
+		font-size: var(--font-size-h6);
+		font-weight: bold;
+	}
+
+	& .profile-badge {
+		width: 100%;
+		box-shadow: 0 0 1rem color-mod(var(--color-primary) a(20%));
+	}
+
+	& .profile-badge__content-profile-name {
+		font-size: 1.25rem;
+	}
+
+	& .profile-badge__content-profile-headline,
+	& .profile-badge__content-profile-company-school-info,
+	& .profile-badge__content-profile-company-school-info-link {
+		font-size: 1rem;
+	}
+
+	& .profile-badge__cta-btn--dark {
+		font-size: 0.875rem;
+	}
+
+	& .c-section--social h1 a {
+		color: var(--color-action);
+		text-decoration: underline;
+	}
+
+	& .c-nav:not(.c-nav--inline) {
+		color: var(--color-primary);
+
+		& a.active {
+			color: var(--color-action);
+		}
+	}
+
+	& .c-footer {
+		font-size: var(--font-size-base);
+		color: var(--color-primary);
+
+		& small {
+			font-size: 80%;
+
+			& a {
+				color: var(--color-action);
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+@media (--hover) {
+	.page-social {
+		& .c-nav:not(.c-nav--inline) a:hover,
+		& .c-footer small a:hover,
+		& .c-section--social h1 a:hover {
+			color: var(--color-action);
+			text-decoration: none;
+		}
+	}
+}
