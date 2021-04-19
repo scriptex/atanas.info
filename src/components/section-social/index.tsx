@@ -4,7 +4,7 @@ import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 import lastFm from '../../scripts/last.fm-insights.json';
 import { formatDate } from '../section-stats';
-import { isPrerendering } from '../../scripts/shared';
+import { useScript, isPrerendering } from '../../scripts/shared';
 import { Section, Carousel, ExternalLink } from '..';
 
 const filteredData = (data: any[]): any[] =>
@@ -19,6 +19,19 @@ const filteredData = (data: any[]): any[] =>
 // codebeat:disable[ABC,LOC]
 export const SectionSocial: React.FunctionComponent = () => {
 	const { error, updated, topAlbums, weeklyAlbumChart }: any = lastFm;
+
+	if (!isPrerendering) {
+		useScript('https://profile.codersrank.io/widget/widget.js');
+		useScript('https://platform.linkedin.com/badges/js/profile.js', true);
+	}
+
+	React.useEffect(() => {
+		document.documentElement.classList.add('page-social');
+
+		return () => {
+			document.documentElement.classList.remove('page-social');
+		};
+	});
 
 	return (
 		<Section
@@ -40,9 +53,7 @@ export const SectionSocial: React.FunctionComponent = () => {
 						<div className="o-grid__item xs-12 sm-6">
 							<h2>Codersrank Profile</h2>
 
-							{isPrerendering ? null : (
-								<codersrank-widget username="scriptex" branding={false}></codersrank-widget>
-							)}
+							{isPrerendering ? null : <codersrank-widget username="scriptex" branding={false} />}
 						</div>
 
 						<div className="o-grid__item xs-12 sm-6">
@@ -50,21 +61,14 @@ export const SectionSocial: React.FunctionComponent = () => {
 
 							{isPrerendering ? null : (
 								<div
-									className="LI-profile-badge"
+									className="badge-base LI-profile-badge"
 									data-size="large"
-									data-type="horizontal"
+									data-type="VERTICAL"
 									data-theme="dark"
 									data-locale="en_US"
 									data-vanity="scriptex"
 									data-version="v1"
-								>
-									<ExternalLink
-										href="https://linkedin.com/in/scriptex?trk=profile-badge"
-										className="LI-simple-link"
-									>
-										👨‍💻 Atanas Atanasov
-									</ExternalLink>
-								</div>
+								/>
 							)}
 						</div>
 
@@ -81,7 +85,7 @@ export const SectionSocial: React.FunctionComponent = () => {
 									loading="lazy"
 									className="github-frame"
 									frameBorder={0}
-								></iframe>
+								/>
 							)}
 						</div>
 
@@ -111,7 +115,7 @@ export const SectionSocial: React.FunctionComponent = () => {
 									className="youtube-frame"
 									frameBorder={0}
 									allowFullScreen={true}
-								></iframe>
+								/>
 							)}
 						</div>
 
@@ -127,7 +131,25 @@ export const SectionSocial: React.FunctionComponent = () => {
 									loading="lazy"
 									className="spotify-frame"
 									frameBorder={0}
-								></iframe>
+								/>
+							)}
+						</div>
+
+						<div className="o-grid__item xs-12 sm-6">
+							<h2>Stackoverflow flair</h2>
+
+							{isPrerendering ? null : (
+								<div className="stackoverflow-frame">
+									<ExternalLink href="https://stackoverflow.com/users/4140082/atanas-atanasov">
+										<img
+											src="https://stackoverflow.com/users/flair/4140082.png"
+											alt="profile for Atanas Atanasov at Stack Overflow, Q&amp;A for professional and enthusiast programmers"
+											title="profile for Atanas Atanasov at Stack Overflow, Q&amp;A for professional and enthusiast programmers"
+											width="208"
+											height="58"
+										/>
+									</ExternalLink>
+								</div>
 							)}
 						</div>
 					</div>

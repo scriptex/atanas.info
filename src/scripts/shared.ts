@@ -1,5 +1,24 @@
 import * as React from 'react';
 
+export const useScript = (url: string, defer = false): void => {
+	React.useEffect(() => {
+		const script = document.createElement('script');
+
+		script.src = url;
+		script.async = true;
+
+		if (defer) {
+			script.defer = true;
+		}
+
+		document.body.appendChild(script);
+
+		return () => {
+			document.body.removeChild(script);
+		};
+	}, [url]);
+};
+
 export const mockUseEffect = (): void => {
 	let useEffect: any;
 
