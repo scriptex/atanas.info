@@ -50,7 +50,7 @@ export const Carousel: React.FC<Props> = (props: Props) => {
 
 	React.useEffect(() => {
 		const area = ref?.current;
-		const touchsweep = new TouchSweep(area);
+		const touchsweep = new TouchSweep(area || undefined);
 
 		area?.addEventListener('swipeleft', next);
 		area?.addEventListener('swiperight', prev);
