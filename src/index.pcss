@@ -2388,6 +2388,10 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 		height: auto;
 		display: block;
 	}
+
+	&:hover .carousel__slide-overlay {
+		opacity: 1;
+	}
 }
 
 .carousel__slide-overlay {
@@ -2451,12 +2455,6 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 .carousel__control--prev {
 	&::after {
 		transform: rotate(45deg);
-	}
-}
-
-@media (--hover) {
-	.carousel__slide:hover .carousel__slide-overlay {
-		opacity: 1;
 	}
 }
 
