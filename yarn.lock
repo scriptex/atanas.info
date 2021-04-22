@@ -3706,7 +3706,18 @@ browserify-zlib@^0.2.0:
   dependencies:
     pako "~1.0.5"
 
-browserslist@4.16.4, browserslist@^4.0.0, browserslist@^4.1.0, browserslist@^4.12.0, browserslist@^4.14.5, browserslist@^4.16.0, browserslist@^4.16.3, browserslist@^4.16.4, browserslist@^4.6.4:
+browserslist@4.16.5:
+  version "4.16.5"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.16.5.tgz#952825440bca8913c62d0021334cbe928ef062ae"
+  integrity sha512-C2HAjrM1AI/djrpAUU/tr4pml1DqLIzJKSLDBXBrNErl9ZCCTXdhwxdJjYc16953+mBWf7Lw+uUJgpgb8cN71A==
+  dependencies:
+    caniuse-lite "^1.0.30001214"
+    colorette "^1.2.2"
+    electron-to-chromium "^1.3.719"
+    escalade "^3.1.1"
+    node-releases "^1.1.71"
+
+browserslist@^4.0.0, browserslist@^4.1.0, browserslist@^4.12.0, browserslist@^4.14.5, browserslist@^4.16.0, browserslist@^4.16.3, browserslist@^4.16.4, browserslist@^4.6.4:
   version "4.16.4"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.16.4.tgz#7ebf913487f40caf4637b892b268069951c35d58"
   integrity sha512-d7rCxYV8I9kj41RH8UKYnvDYCRENUlHRgyXy/Rhr/1BaeLGfiCptEdFE8MIrvGfWbBFNjVYx76SQWvNX1j+/cQ==
@@ -3947,6 +3958,11 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, can
   version "1.0.30001212"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001212.tgz#e8e70186e2cf1cfd264b69c2831bd39c6819c788"
   integrity sha512-f0GclV7Sya6QkQW2uNHe9kq4hLG5u/zXCGIyQgvk6MB+61g2enOUJjaY5p25VZDLaQXIk8vWUenMjxGEWg06SQ==
+
+caniuse-lite@^1.0.30001214:
+  version "1.0.30001214"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001214.tgz#70f153c78223515c6d37a9fde6cd69250da9d872"
+  integrity sha512-O2/SCpuaU3eASWVaesQirZv1MSjUNOvmugaD8zNSJqw6Vv5SGwoOpA9LJs3pNPfM745nxqPvfZY3MQKY4AKHYg==
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -5879,6 +5895,11 @@ electron-to-chromium@^1.3.712:
   version "1.3.717"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.717.tgz#78d4c857070755fb58ab64bcc173db1d51cbc25f"
   integrity sha512-OfzVPIqD1MkJ7fX+yTl2nKyOE4FReeVfMCzzxQS+Kp43hZYwHwThlGP+EGIZRXJsxCM7dqo8Y65NOX/HP12iXQ==
+
+electron-to-chromium@^1.3.719:
+  version "1.3.719"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.719.tgz#87166fee347a46a2557f19aadb40a1d68241e61c"
+  integrity sha512-heM78GKSqrIzO9Oz0/y22nTBN7bqSP1Pla2SyU9DiSnQD+Ea9SyyN5RWWlgqsqeBLNDkSlE9J9EHFmdMPzxB/g==
 
 elliptic@^6.5.3:
   version "6.5.4"
