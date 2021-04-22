@@ -1,7 +1,7 @@
 #!/bin/sh
 
-svgo-viewbox -i projects/icons -f svgo.yml
-svgo-viewbox -i static/images/svg -f svgo.yml
+svgo-viewbox -i projects/icons
+svgo-viewbox -i static/images/svg
 
 spritesh -q -i static/images/svg -o static/sprite.svg -p svg-
 
