@@ -23,7 +23,7 @@
 		"parcel-build-music": "parcel build ./music/index.html --public-url '/music' --no-source-maps --out-dir='dist/music'",
 		"parcel-build": "yarn parcel-build-src && yarn parcel-build-music",
 		"pre": "yarn time && yarn deduplicate && yarn screenshots && yarn insights && yarn fetch-music && yarn localga && yarn svg",
-		"post": "yarn css && yarn tsc && yarn houdini && yarn parcel-build && yarn fetch-projects && yarn build-projects && yarn snap",
+		"post": "yarn css && yarn tsc && yarn houdini && yarn parcel-build && yarn fetch-projects && yarn build-projects && yarn snap && yarn after-snap",
 		"start": "yarn time && concurrently -r \"yarn css:watch\" \"yarn tsc:watch\" \"yarn houdini:watch\" \"yarn parcel-start\"",
 		"start-music": "concurrently -r \"yarn houdini:watch\" \"yarn parcel-start-music\"",
 		"start-dist": "http-server ./dist -p=1234 -P=http://localhost:1234/? -o",
@@ -40,7 +40,7 @@
 		"screenshots": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ts-node ./screenshots/index.ts",
 		"insights": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ts-node ./insights/index.ts",
 		"pages": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ts-node ./insights/pages.ts",
-		"prerender": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ts-node ./server/index.ts",
+		"after-snap": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ts-node ./server/index.ts",
 		"pwa": "create-pwa --icon static/images/icons/icon.png --launch static/images/icons/splash.png",
 		"type-coverage": "type-coverage --ignore-catch --detail",
 		"please": "rm -rf .cache dist coverage node_modules yarn.lock",
@@ -54,10 +54,6 @@
 		"email": "scriptex.bg@gmail.com"
 	},
 	"license": "MIT",
-	"engines": {
-		"node": ">= 12.16.0",
-		"npm": ">= 6.14.0"
-	},
 	"dependencies": {
 		"@babylonjs/core": "4.2.0",
 		"@babylonjs/gui": "4.2.0",
@@ -124,6 +120,7 @@
 		"eslint-plugin-jest": "24.3.5",
 		"eslint-plugin-react": "7.23.2",
 		"fkill": "7.1.1",
+		"globby": "11.0.3",
 		"html-minifier": "4.0.0",
 		"http-server": "0.12.3",
 		"husky": "6.0.0",
