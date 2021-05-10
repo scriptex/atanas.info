@@ -4,12 +4,22 @@ import { writeFileSync } from 'fs';
 
 import githubInsights from '../src/scripts/github-insights.json';
 
-if ((githubInsights as any).error) {
+interface Insights {
+	error?: boolean;
+	repositories?: {
+		name: string;
+		has_pages: boolean;
+	}[];
+}
+
+const insights: Insights = githubInsights;
+
+if (insights.error) {
 	process.exit();
 } else {
-	const pages = githubInsights.repositories
-		.filter(({ has_pages }) => has_pages)
-		.map(({ name }) => ({
+	const pages = insights.repositories
+		?.filter(({ has_pages }: any) => has_pages)
+		.map(({ name }: any) => ({
 			name,
 			href: `https://scriptex.github.io/${name}`
 		}));

@@ -93,11 +93,11 @@ menu.addEventListener('click', (e: MouseEvent) => {
 	list.hidden = false;
 });
 
-playBtn.addEventListener('click', async () => {
+playBtn.addEventListener('click', () => {
 	playBtn.hidden = true;
 	pauseBtn.hidden = false;
 
-	await audio.play();
+	audio.play();
 
 	context = new AudioContext();
 

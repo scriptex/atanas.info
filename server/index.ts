@@ -1,73 +1,18 @@
-#!/usr/bin/env ts-node-script
-
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-
-import * as fkill from 'fkill';
-import * as puppeteer from 'puppeteer';
-//@ts-ignore
-import * as httpServer from 'http-server';
-
-const server = httpServer.createServer({
-	root: './dist',
-	port: 1234,
-	proxy: 'http://0.0.0.0:1234?'
-});
-
-server.listen();
+import * as globby from 'globby';
 
 import { resolve } from 'path';
 import { promises as fs } from 'fs';
 
-import { Routes } from '../src/scripts/routes';
+const readFiles = async (dirname: string, onSuccess: (filename: string, content: string) => unknown) => {
+	const files = await globby(`${dirname}/**/*.html`);
 
-const { unlink, readFile, writeFile, mkdir } = fs;
+	for (const file of files) {
+		const content = await fs.readFile(resolve(dirname, file));
 
-(async () => {
-	const temp = 'index-temp.html';
-	const index = 'index.html';
-	const dist = resolve(__dirname, '..', 'dist');
-
-	try {
-		const browser = await puppeteer.launch({
-			headless: true,
-			args: ['--no-sandbox']
-		});
-
-		const page = await browser.newPage();
-		const content = await readFile(resolve(dist, index), {
-			encoding: 'utf-8'
-		});
-
-		// const content = tmp.replace(/\/src\./g, './src.');
-
-		await writeFile(resolve(dist, temp), content);
-		await page.goto('http://0.0.0.0:1234', {
-			waitUntil: 'networkidle2'
-		});
-
-		const render = await page.content();
-		const html = render.replace(/\.\/src\./g, '/src.');
-
-		const routes = Object.values(Routes).filter((route: string) => route !== '/');
-
-		await unlink(resolve(dist, index));
-		await writeFile(resolve(dist, index), html);
-		await unlink(resolve(dist, temp));
-
-		for (const route of routes) {
-			await page.$eval(`.c-nav a[href="${route}"]`, (el: any) => el.click());
-
-			const html = await page.content();
-			const dir = route.replace('/', '');
-
-			await mkdir(resolve(__dirname, '..', 'dist', dir));
-			await writeFile(resolve(__dirname, '..', 'dist', dir, 'index.html'), html);
-		}
-	} catch (e) {
-		console.error(e);
+		await onSuccess(file, content.toString());
 	}
+};
 
-	fkill(':1234');
-
-	process.exit();
-})();
+readFiles(resolve(__dirname, '..', 'dist'), async (filename: string, content: string) => {
+	await fs.writeFile(filename, content.replace(/http:\/\/localhost:45678\//gim, '/'));
+});

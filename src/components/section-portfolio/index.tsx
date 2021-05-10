@@ -68,7 +68,7 @@ export const SectionPortfolio: React.FunctionComponent = () => {
 			<h2>Web applications</h2>
 
 			<div className="c-section__body">
-				{((projectsList as unknown) as Project[]).map((project: Project, index: number) => {
+				{(projectsList as unknown as Project[]).map((project: Project, index: number) => {
 					if (!showAll && index > 9) {
 						return null;
 					}
