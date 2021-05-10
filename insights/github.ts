@@ -25,35 +25,32 @@ export const getGithubInsights = async (): Promise<void> => {
 
 		writeFileSync('bin/github.list', reposSSHUrls);
 
-		await asyncForEach(
-			repos,
-			async ({ full_name }: { full_name: string }): Promise<void> => {
-				console.log('-----');
-				console.log(`Getting insights data for ${full_name}...`);
-				const repo = await github.get({ path: `/repos/${full_name}` });
+		await asyncForEach(repos, async ({ full_name }: { full_name: string }): Promise<void> => {
+			console.log('-----');
+			console.log(`Getting insights data for ${full_name}...`);
+			const repo = await github.get({ path: `/repos/${full_name}` });
 
-				console.log(`Getting contributions data for ${full_name}...`);
-				const contributions = await github.get({ path: `/repos/${full_name}/contributors` });
+			console.log(`Getting contributions data for ${full_name}...`);
+			const contributions = await github.get({ path: `/repos/${full_name}/contributors` });
 
-				repositories.push({
-					name: repo.name,
-					private: repo.private,
-					fork: repo.fork,
-					createdAt: repo.created_at,
-					updated_at: repo.updated_at,
-					size: repo.size,
-					stargazers: repo.stargazers_count,
-					watchers: repo.watchers_count,
-					language: repo.language,
-					issues: repo.open_issues_count,
-					contributions: contributions.map((item: any) => ({
-						user: item.login,
-						count: item.contributions
-					})),
-					has_pages: repo.has_pages
-				});
-			}
-		);
+			repositories.push({
+				name: repo.name,
+				private: repo.private,
+				fork: repo.fork,
+				createdAt: repo.created_at,
+				updated_at: repo.updated_at,
+				size: repo.size,
+				stargazers: repo.stargazers_count,
+				watchers: repo.watchers_count,
+				language: repo.language,
+				issues: repo.open_issues_count,
+				contributions: contributions.map((item: any) => ({
+					user: item.login,
+					count: item.contributions
+				})),
+				has_pages: repo.has_pages
+			});
+		});
 
 		const general = {
 			publicRepos: user.public_repos,

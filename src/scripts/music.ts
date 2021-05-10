@@ -18,8 +18,7 @@ export const music: Track[] = [
 	{
 		name: 'Joe Cocker - U Can Leave Your Hat On',
 		artist: 'Scriptex',
-		url:
-			'https://www.dropbox.com/s/knvvlxhezgpiium/Scriptex_-_03_-_Joe_Cocker_-_U_Can_Leave_Your_Hat_On%28Invader__2004%29.mp3?dl=0'
+		url: 'https://www.dropbox.com/s/knvvlxhezgpiium/Scriptex_-_03_-_Joe_Cocker_-_U_Can_Leave_Your_Hat_On%28Invader__2004%29.mp3?dl=0'
 	},
 	{
 		name: 'Energy',
@@ -29,14 +28,12 @@ export const music: Track[] = [
 	{
 		name: 'Dance Anthem (Energy part II)',
 		artist: 'Scriptex',
-		url:
-			'https://www.dropbox.com/s/yzvcbrusy60j44g/Scriptex_-_05_-_Dance_Anthem%28Energy_part_II%29%28Invader__2004%29.mp3?dl=0'
+		url: 'https://www.dropbox.com/s/yzvcbrusy60j44g/Scriptex_-_05_-_Dance_Anthem%28Energy_part_II%29%28Invader__2004%29.mp3?dl=0'
 	},
 	{
 		name: 'Invader',
 		artist: 'Scriptex with Serum',
-		url:
-			'https://www.dropbox.com/s/uwf47rwdagnhu7n/Scriptex_-_06_-_Invader%28with_Serum%29%28Invader__2004%29.mp3?dl=0'
+		url: 'https://www.dropbox.com/s/uwf47rwdagnhu7n/Scriptex_-_06_-_Invader%28with_Serum%29%28Invader__2004%29.mp3?dl=0'
 	},
 	{
 		name: 'Some Somtin',
@@ -46,8 +43,7 @@ export const music: Track[] = [
 	{
 		name: 'Snap - The Power (Energy mix)',
 		artist: 'Scriptex',
-		url:
-			'https://www.dropbox.com/s/agv3gkf885p6llf/Scriptex_-_08_-_Snap%21_-_The_Power%28Energy_mix%29%28Invader__2004%29.mp3?dl=0'
+		url: 'https://www.dropbox.com/s/agv3gkf885p6llf/Scriptex_-_08_-_Snap%21_-_The_Power%28Energy_mix%29%28Invader__2004%29.mp3?dl=0'
 	},
 	{
 		name: 'Lights',
@@ -57,8 +53,7 @@ export const music: Track[] = [
 	{
 		name: 'Attack',
 		artist: 'Scriptex with Serum',
-		url:
-			'https://www.dropbox.com/s/ape1sivb3nplb4j/Scriptex_-_10_-_Attack%28with_Serum%29%28Invader__2004%29.mp3?dl=0'
+		url: 'https://www.dropbox.com/s/ape1sivb3nplb4j/Scriptex_-_10_-_Attack%28with_Serum%29%28Invader__2004%29.mp3?dl=0'
 	},
 	{
 		name: 'Check Yoself',
@@ -118,8 +113,7 @@ export const music: Track[] = [
 	{
 		name: 'The Heart (edit)',
 		artist: 'Scriptex with Linderman',
-		url:
-			'https://www.dropbox.com/s/q68qqq3xwcjxn1k/Scriptex_-_04_-_The_Heart%28edit%29%28with_Linderman%29%28Dark__2006%29.mp3?dl=0'
+		url: 'https://www.dropbox.com/s/q68qqq3xwcjxn1k/Scriptex_-_04_-_The_Heart%28edit%29%28with_Linderman%29%28Dark__2006%29.mp3?dl=0'
 	},
 	{
 		name: 'U Got Me',
@@ -154,8 +148,7 @@ export const music: Track[] = [
 	{
 		name: 'Tribute to Jay-Z',
 		artist: 'Scriptex with Serum',
-		url:
-			'https://www.dropbox.com/s/02gnsu65idsoi4b/Scriptex_-_11_-_Tribute_To_Jay-Z%28with_Serum%29%28Dark__2006%29.mp3?dl=0'
+		url: 'https://www.dropbox.com/s/02gnsu65idsoi4b/Scriptex_-_11_-_Tribute_To_Jay-Z%28with_Serum%29%28Dark__2006%29.mp3?dl=0'
 	},
 	{
 		name: 'Accidently',
@@ -165,32 +158,27 @@ export const music: Track[] = [
 	{
 		name: 'The Driller',
 		artist: 'Scriptex & Serum',
-		url:
-			'https://www.dropbox.com/s/7zyeaqcedomaqo4/Scriptex___Serum_-_01_-_The_Driller%28Collection_Diamonds__2007%29.mp3?dl=0'
+		url: 'https://www.dropbox.com/s/7zyeaqcedomaqo4/Scriptex___Serum_-_01_-_The_Driller%28Collection_Diamonds__2007%29.mp3?dl=0'
 	},
 	{
 		name: 'The Blasters',
 		artist: 'Scriptex & Serum',
-		url:
-			'https://www.dropbox.com/s/lb12ikdua1lymd9/Scriptex___Serum_-_02_-_The_Blasters%28Collection_Diamonds__2007%29.mp3?dl=0'
+		url: 'https://www.dropbox.com/s/lb12ikdua1lymd9/Scriptex___Serum_-_02_-_The_Blasters%28Collection_Diamonds__2007%29.mp3?dl=0'
 	},
 	{
 		name: 'The Demag',
 		artist: 'Scriptex & Serum',
-		url:
-			'https://www.dropbox.com/s/wk2l5n5rlcaaff6/Scriptex___Serum_-_03_-_The_Demag%28Collection_Diamonds__2007%29.mp3?dl=0'
+		url: 'https://www.dropbox.com/s/wk2l5n5rlcaaff6/Scriptex___Serum_-_03_-_The_Demag%28Collection_Diamonds__2007%29.mp3?dl=0'
 	},
 	{
 		name: 'The Cat',
 		artist: 'Scriptex & Serum',
-		url:
-			'https://www.dropbox.com/s/ddttkfq93ulgkkg/Scriptex___Serum_-_04_-_The_Cat%28Collection_Diamonds__2007%29.mp3?dl=0'
+		url: 'https://www.dropbox.com/s/ddttkfq93ulgkkg/Scriptex___Serum_-_04_-_The_Cat%28Collection_Diamonds__2007%29.mp3?dl=0'
 	},
 	{
 		name: 'The Process Plant',
 		artist: 'Scriptex & Serum',
-		url:
-			'https://www.dropbox.com/s/n1zu81og2ng0czn/Scriptex___Serum_-_05_-_The_Process_Plant%28Collection_Diamonds__2007%29.mp3?dl=0'
+		url: 'https://www.dropbox.com/s/n1zu81og2ng0czn/Scriptex___Serum_-_05_-_The_Process_Plant%28Collection_Diamonds__2007%29.mp3?dl=0'
 	},
 	{
 		name: 'Tamper Trouble',
@@ -200,14 +188,12 @@ export const music: Track[] = [
 	{
 		name: 'Sadness Tale',
 		artist: 'Scriptex',
-		url:
-			'https://www.dropbox.com/s/lzs7lkw2p37uor0/Scriptex_-_A1_-_Sadness__Tale%28Sadness_is_Allright_EP__2008%29.mp3?dl=0'
+		url: 'https://www.dropbox.com/s/lzs7lkw2p37uor0/Scriptex_-_A1_-_Sadness__Tale%28Sadness_is_Allright_EP__2008%29.mp3?dl=0'
 	},
 	{
 		name: 'Alright',
 		artist: 'Scriptex',
-		url:
-			'https://www.dropbox.com/s/n5asr7nn1pnfybh/Scriptex_-_B1_-_Allright%28Sadness_is_Allright_EP__2008%29.mp3?dl=0'
+		url: 'https://www.dropbox.com/s/n5asr7nn1pnfybh/Scriptex_-_B1_-_Allright%28Sadness_is_Allright_EP__2008%29.mp3?dl=0'
 	},
 	{
 		name: 'Alone',
@@ -327,8 +313,7 @@ export const music: Track[] = [
 	{
 		name: 'The Professionalist',
 		artist: 'Scriptex',
-		url:
-			'https://www.dropbox.com/s/d0peqokyccskarx/Scriptex%2006%20The%20Professionalist%28question%20%E2%84%9613%29.mp3?dl=0'
+		url: 'https://www.dropbox.com/s/d0peqokyccskarx/Scriptex%2006%20The%20Professionalist%28question%20%E2%84%9613%29.mp3?dl=0'
 	},
 	{
 		name: 'Mesmerizing',
@@ -343,8 +328,7 @@ export const music: Track[] = [
 	{
 		name: 'Boom x3 (Question No. 14)',
 		artist: 'Scriptex',
-		url:
-			'https://www.dropbox.com/s/n6m3ip4a9isk2rp/Scriptex%2009%20Boom%20x%203%28Question%20%E2%84%9614%29.mp3?dl=0'
+		url: 'https://www.dropbox.com/s/n6m3ip4a9isk2rp/Scriptex%2009%20Boom%20x%203%28Question%20%E2%84%9614%29.mp3?dl=0'
 	},
 	{
 		name: 'Alien Attack (Full version)',
