@@ -2,16 +2,11 @@
 
 exports[`SectionSocial component Should render the SectionSocial component 1`] = `
 <Component
-  className=" fullsize-background"
   hasButton={true}
   hasShell={false}
   id="social"
-  style={
-    Object {
-      "backgroundImage": "url(images/temp/desktop.jpg)",
-    }
-  }
 >
+  <Component />
   <header
     className="c-section__head"
   >

@@ -1,19 +1,16 @@
 import * as React from 'react';
 import 'lite-youtube-embed';
 
-import { Section, SectionNav } from '..';
+import { Lines, Section, SectionNav } from '..';
 import { presentations, Presentation } from '../../scripts/presentations';
 
 export const SectionVideos: React.FunctionComponent = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);
 
 	return (
-		<Section
-			id="videos"
-			style={{ backgroundImage: 'url(images/temp/desktop.jpg)' }}
-			hasButton={true}
-			className=" c-section--slides fullsize-background"
-		>
+		<Section id="videos" hasButton={true} className=" c-section--videos">
+			<Lines />
+
 			<h2>Videos</h2>
 
 			<SectionNav name="title" data={presentations} active={activeIndex} onClick={setActiveIndex} />

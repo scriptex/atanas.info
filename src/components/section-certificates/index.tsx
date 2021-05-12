@@ -4,12 +4,7 @@ import { Certificate, certificates } from '../../scripts/certificates';
 import { Section, ExternalLink } from '..';
 
 export const SectionCertificates: React.FunctionComponent = () => (
-	<Section
-		id="certificates"
-		style={{ backgroundImage: 'url(images/temp/desktop.jpg)' }}
-		className=" fullsize-background"
-		hasButton={true}
-	>
+	<Section id="certificates" hasButton={true}>
 		<h1>Certificates</h1>
 
 		<div className="o-grid c-section__body">
