@@ -10,16 +10,11 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
        mode
     </Unknown>
   }
-  className=" fullsize-background"
   hasButton={true}
   hasShell={true}
   id="skills"
-  style={
-    Object {
-      "backgroundImage": "url(images/temp/desktop.jpg)",
-    }
-  }
 >
+  <Component />
   <h2>
     Skills 
     <br />

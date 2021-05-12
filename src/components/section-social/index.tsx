@@ -5,7 +5,7 @@ import { TwitterTimelineEmbed } from 'react-twitter-embed';
 import lastFm from '../../scripts/last.fm-insights.json';
 import { formatDate } from '../section-stats';
 import { useScript, isPrerendering } from '../../scripts/shared';
-import { Section, Carousel, ExternalLink } from '..';
+import { Lines, Section, Carousel, ExternalLink } from '..';
 
 const filteredData = (data: any[]): any[] =>
 	data
@@ -34,13 +34,9 @@ export const SectionSocial: React.FunctionComponent = () => {
 	});
 
 	return (
-		<Section
-			id="social"
-			style={{ backgroundImage: 'url(images/temp/desktop.jpg)' }}
-			hasShell={false}
-			hasButton={true}
-			className=" fullsize-background"
-		>
+		<Section id="social" hasShell={false} hasButton={true}>
+			<Lines />
+
 			<header className="c-section__head">
 				<div className="o-shell">
 					<h1>Social</h1>

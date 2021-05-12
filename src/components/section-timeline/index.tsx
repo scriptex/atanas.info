@@ -8,12 +8,7 @@ export const PersonalIcon = (): JSX.Element => <Icon name="svg-personal" classNa
 export const EducationIcon = (): JSX.Element => <Icon name="svg-education" className="vertical-timeline__icon" />;
 
 export const SectionTimeline: React.FunctionComponent = () => (
-	<Section
-		id="timeline"
-		style={{ backgroundImage: 'url(images/temp/desktop.jpg)' }}
-		hasButton={true}
-		className=" fullsize-background"
-	>
+	<Section id="timeline" hasButton={true}>
 		<h2>Timeline</h2>
 
 		<VerticalTimeline>

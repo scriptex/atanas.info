@@ -11,10 +11,8 @@ export const SectionPortfolio: React.FunctionComponent = () => {
 	return (
 		<Section
 			id="portfolio"
-			style={{ backgroundImage: 'url(images/temp/desktop.jpg)' }}
 			actions={showAll ? null : <Button onClick={() => setShowAll(true)}>Show all</Button>}
 			hasButton={true}
-			className=" fullsize-background"
 		>
 			<h1>Portfolio</h1>
 
