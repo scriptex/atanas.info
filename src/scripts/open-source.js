@@ -41,6 +41,7 @@ module.exports = {
 		'scriptex/random-splice',
 		'scriptex/react-accordion-ts',
 		'scriptex/react-dropper',
+		'scriptex/react-round-carousel',
 		'scriptex/react-svg-donuts',
 		'scriptex/scriptex.github.io',
 		'scriptex/scss-goodies',
