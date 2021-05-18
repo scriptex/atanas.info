@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Funding component Should render the Funding component 1`] = `
+<div
+  className="c-funding"
+>
+  <button
+    className="c-btn c-btn--small"
+    onClick={[Function]}
+  >
+    Sponsor me
+  </button>
+  <div
+    className="c-funding__backdrop"
+    onClick={[Function]}
+  />
+  <svg
+    viewBox="-100 -100 700 700"
+  >
+    <g>
+      <Component
+        icon="github"
+        matrix="matrix(1,0,0,1,0,0)"
+        name="Github"
+        url="https://github.com/sponsors/scriptex"
+      />
+      <Component
+        icon="patreon"
+        matrix="matrix(0.5,-0.86602,0.86602,0.5,-91.5063509461097,341.5063509461096)"
+        name="Patreon"
+        url="https://www.patreon.com/atanas"
+      />
+      <Component
+        icon="paypal"
+        matrix="matrix(-0.49999,-0.86602,0.86602,-0.49999,158.49364905389024,591.5063509461097)"
+        name="PayPal"
+        url="https://paypal.me/scriptex"
+      />
+      <Component
+        icon="ko-fi"
+        matrix="matrix(-1,0,0,-1,500,500)"
+        name="Ko-fi"
+        url="https://ko-fi.com/scriptex"
+      />
+      <Component
+        icon="liberapay"
+        matrix="matrix(-0.5,0.86602,-0.86602,-0.5,591.5063509461097,158.49364905389052)"
+        name="Liberapay"
+        url="https://liberapay.com/scriptex"
+      />
+      <Component
+        icon="issuehunt"
+        matrix="matrix(0.5,0.86602,-0.86602,0.5,341.50635094610965,-91.50635094610965)"
+        name="Issuehunt"
+        url="https://issuehunt.io/u/scriptex"
+      />
+    </g>
+    <g
+      className="c-funding__trigger"
+      onClick={[Function]}
+      role="button"
+    >
+      <circle
+        cx="250"
+        cy="250"
+        r="30"
+      />
+      <text
+        fill="var(--color-primary)"
+        fontSize="2.5em"
+        textAnchor="middle"
+        x="250"
+        y="260"
+      >
+        +
+      </text>
+    </g>
+  </svg>
+</div>
+`;

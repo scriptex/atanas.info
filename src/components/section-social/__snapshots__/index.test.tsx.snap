@@ -185,8 +185,13 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
           <h2>
             Top albums for last week:
           </h2>
-          <Component
+          <Carousel
+            classNamePrefix="carousel"
+            itemWidth={210}
             items={Array []}
+            nextButtonContent="Next"
+            prevButtonContent="Previous"
+            showControls={true}
           />
         </div>
         <div
@@ -195,8 +200,13 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
           <h2>
             Top albums for last month:
           </h2>
-          <Component
+          <Carousel
+            classNamePrefix="carousel"
+            itemWidth={210}
             items={Array []}
+            nextButtonContent="Next"
+            prevButtonContent="Previous"
+            showControls={true}
           />
         </div>
       </div>
