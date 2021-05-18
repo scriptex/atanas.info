@@ -1,12 +1,15 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { render } from 'enzyme';
 
 import { Funding } from '.';
 
 describe('Funding component', () => {
 	it('Should render the Funding component', () => {
-		const wrapper = shallow(<Funding />);
+		act(() => {
+			const wrapper = render(<Funding />);
 
-		expect(wrapper).toMatchSnapshot();
+			expect(wrapper).toMatchSnapshot();
+		});
 	});
 });
