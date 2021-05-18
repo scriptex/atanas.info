@@ -1,11 +1,11 @@
 registerPaint(
 	'avatar-polygon',
 	class {
-		static get inputProperties(): string[] {
+		public static get inputProperties(): string[] {
 			return ['--avatar-sides', '--avatar-angle'];
 		}
 
-		paint(
+		public paint(
 			ctx: CanvasRenderingContext2D,
 			{ width, height }: Record<string, number>,
 			properties: Map<string, any>
