@@ -147,6 +147,21 @@ body {
 	}
 }
 
+/* houdini backgrounds */
+
+.bubbles,
+.circles {
+	background-attachment: initial;
+}
+
+.bubbles {
+	background-image: paint(bubbles);
+}
+
+.circles {
+	background-image: paint(circles);
+}
+
 /* svg icons */
 
 [class^='svg-'] {
@@ -824,8 +839,6 @@ body {
 	position: relative;
 	z-index: 2;
 	padding: 8rem 0 4rem;
-	background-color: color-mod(var(--color-secondary) a(20%));
-	background-attachment: fixed;
 
 	&::before {
 		@mixin overlay;
@@ -1038,7 +1051,6 @@ body {
 	position: relative;
 	z-index: 2;
 	padding: 5rem 0 0;
-	background-attachment: fixed;
 
 	&::before {
 		@mixin overlay;
@@ -1298,8 +1310,6 @@ body {
 	position: relative;
 	z-index: 2;
 	padding: 5rem 0 4rem;
-	background-attachment: fixed;
-	background-color: var(--color-secondary);
 
 	& > * {
 		position: relative;
@@ -1512,15 +1522,6 @@ body {
 	z-index: 2;
 	padding: 8.25rem 0 3.25rem;
 	margin-bottom: 4rem;
-	background-color: var(--color-secondary);
-	background-attachment: fixed;
-
-	&::before {
-		@mixin overlay;
-		opacity: 0.8;
-		z-index: 1;
-		background-color: var(--color-secondary);
-	}
 
 	& .o-shell {
 		position: relative;
@@ -1811,7 +1812,6 @@ body {
 	position: relative;
 	z-index: 2;
 	padding: 9.25rem 0 4rem;
-	background-color: var(--color-primary);
 	background-attachment: fixed;
 
 	& .o-shell {
@@ -1909,8 +1909,6 @@ body {
 /* section articles */
 
 .c-section--articles {
-	background-attachment: fixed;
-
 	&::before {
 		opacity: 0.5;
 		background-color: var(--color-primary);
@@ -2022,7 +2020,6 @@ body {
 	position: relative;
 	z-index: 2;
 	padding: 8rem 0 5rem;
-	background-attachment: fixed;
 
 	& h1 {
 		text-align: center;
@@ -2075,7 +2072,6 @@ body {
 	z-index: 2;
 	padding: 8rem 0 4rem;
 	overflow: hidden;
-	background-attachment: fixed;
 
 	& h2 {
 		margin-bottom: 4rem;
@@ -2624,7 +2620,8 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 
 	& a,
 	& a:hover,
-	& a:visited {
+	& a:visited,
+	& a:visited:hover {
 		font-weight: inherit;
 		color: var(--color-primary);
 	}
@@ -2644,6 +2641,7 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 	& body {
 		font-family: system-ui;
 		color: var(--color-secondary);
+		background: var(--color-secondary);
 	}
 
 	& h1 {

@@ -287,13 +287,7 @@ export const SectionStats: React.FunctionComponent<Readonly<Props>> = (props: Re
 	}, []);
 
 	return (
-		<Section
-			id="stats"
-			style={{ backgroundImage: 'url(images/temp/desktop.jpg)' }}
-			hasShell={false}
-			hasButton={true}
-			className=" fullsize-background"
-		>
+		<Section id="stats" hasShell={false} hasButton={true} className=" circles">
 			<header className="c-section__head">
 				<div className="o-shell">
 					<h1>Stats</h1>

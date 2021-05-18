@@ -21,6 +21,7 @@ export const SectionSkills: React.FunctionComponent = () => {
 				<Button onClick={() => setShowTable(!showTable)}>{showTable ? 'Interactive' : 'Static'} mode</Button>
 			}
 			hasButton={true}
+			className=" bubbles"
 		>
 			<Lines />
 

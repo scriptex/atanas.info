@@ -1,17 +1,17 @@
 registerPaint(
 	'slanted-background',
 	class {
-		static get inputProperties(): string[] {
+		public static get inputProperties(): string[] {
 			return ['--slanted-background-color', '--slanted-background-opacity'];
 		}
 
-		static get contextOptions(): Record<string, boolean> {
+		public static get contextOptions(): Record<string, boolean> {
 			return {
 				alpha: true
 			};
 		}
 
-		paint(
+		public paint(
 			ctx: CanvasRenderingContext2D,
 			{ width, height }: Record<string, number>,
 			properties: Map<string, any>
