@@ -1,7 +1,7 @@
 export const titles: string[] = [
-	'a lead front-end developer at E.ON',
-	'a senior software engineer at Toptal',
-	'a founding member at Braintrust',
+	'lead front-end developer at E.ON',
+	'senior software engineer at Toptal',
+	'founding member at Braintrust',
 	'a TypeScript fanatic',
 	'a CSS wizard',
 	'a JavaScript tinkerer',
