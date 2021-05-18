@@ -1,0 +1,425 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav component Should render the Nav component 1`] = `
+<nav
+  className="c-nav"
+>
+  <Component>
+    <ul>
+      <li
+        key="0"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          title="Back to homepage"
+          to="/"
+        >
+          Home
+        </NavLink>
+      </li>
+      <li
+        key="1"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          title="About me"
+          to="/about"
+        >
+          About
+        </NavLink>
+      </li>
+      <li
+        key="2"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          title="Life events"
+          to="/timeline"
+        >
+          Timeline
+        </NavLink>
+      </li>
+      <li
+        key="3"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          title="My skills"
+          to="/skills"
+        >
+          Skills
+        </NavLink>
+      </li>
+      <li
+        key="4"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          title="My portfolio"
+          to="/portfolio"
+        >
+          Portfolio
+        </NavLink>
+      </li>
+      <li
+        key="5"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          title="My stats"
+          to="/stats"
+        >
+          Stats
+        </NavLink>
+      </li>
+      <li
+        key="6"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          title="My presentations"
+          to="/slides"
+        >
+          Slides
+        </NavLink>
+      </li>
+      <li
+        key="7"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          title="My video presentations"
+          to="/videos"
+        >
+          Videos
+        </NavLink>
+      </li>
+      <li
+        key="8"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          title="My published articles"
+          to="/articles"
+        >
+          Articles
+        </NavLink>
+      </li>
+      <li
+        key="9"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          title="My certificates"
+          to="/certificates"
+        >
+          Certificates
+        </NavLink>
+      </li>
+      <li
+        key="10"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          title="Social widgets"
+          to="/social"
+        >
+          Social
+        </NavLink>
+      </li>
+      <li
+        key="11"
+      >
+        <a
+          href="https://scriptexbg.wordpress.com"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="My blog"
+        >
+          Blog
+        </a>
+      </li>
+      <li
+        key="12"
+      >
+        <a
+          href="./resume.pdf"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="My CV"
+        >
+          Resume (pdf)
+        </a>
+      </li>
+      <li
+        key="13"
+      >
+        <a
+          href="https://scriptex.js.org"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="My interactive CV"
+        >
+          Interactive Resume
+        </a>
+      </li>
+      <li
+        key="14"
+      >
+        <a
+          href="projects/"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="My open source projects"
+        >
+          Open source
+        </a>
+      </li>
+      <li
+        key="15"
+      >
+        <a
+          href="music/"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="My music"
+        >
+          Music
+        </a>
+      </li>
+    </ul>
+  </Component>
+</nav>
+`;
+
+exports[`Nav component Should render the Nav component with props 1`] = `
+<nav
+  className="c-nav c-nav--test"
+>
+  <Component
+    hasShell={true}
+  >
+    <ul>
+      <li
+        key="0"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          onClick={[MockFunction]}
+          title="Back to homepage"
+          to="/"
+        >
+          Home
+        </NavLink>
+      </li>
+      <li
+        key="1"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          onClick={[MockFunction]}
+          title="About me"
+          to="/about"
+        >
+          About
+        </NavLink>
+      </li>
+      <li
+        key="2"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          onClick={[MockFunction]}
+          title="Life events"
+          to="/timeline"
+        >
+          Timeline
+        </NavLink>
+      </li>
+      <li
+        key="3"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          onClick={[MockFunction]}
+          title="My skills"
+          to="/skills"
+        >
+          Skills
+        </NavLink>
+      </li>
+      <li
+        key="4"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          onClick={[MockFunction]}
+          title="My portfolio"
+          to="/portfolio"
+        >
+          Portfolio
+        </NavLink>
+      </li>
+      <li
+        key="5"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          onClick={[MockFunction]}
+          title="My stats"
+          to="/stats"
+        >
+          Stats
+        </NavLink>
+      </li>
+      <li
+        key="6"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          onClick={[MockFunction]}
+          title="My presentations"
+          to="/slides"
+        >
+          Slides
+        </NavLink>
+      </li>
+      <li
+        key="7"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          onClick={[MockFunction]}
+          title="My video presentations"
+          to="/videos"
+        >
+          Videos
+        </NavLink>
+      </li>
+      <li
+        key="8"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          onClick={[MockFunction]}
+          title="My published articles"
+          to="/articles"
+        >
+          Articles
+        </NavLink>
+      </li>
+      <li
+        key="9"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          onClick={[MockFunction]}
+          title="My certificates"
+          to="/certificates"
+        >
+          Certificates
+        </NavLink>
+      </li>
+      <li
+        key="10"
+      >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          onClick={[MockFunction]}
+          title="Social widgets"
+          to="/social"
+        >
+          Social
+        </NavLink>
+      </li>
+      <li
+        key="11"
+      >
+        <a
+          href="https://scriptexbg.wordpress.com"
+          onClick={[MockFunction]}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="My blog"
+        >
+          Blog
+        </a>
+      </li>
+      <li
+        key="12"
+      >
+        <a
+          href="./resume.pdf"
+          onClick={[MockFunction]}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="My CV"
+        >
+          Resume (pdf)
+        </a>
+      </li>
+      <li
+        key="13"
+      >
+        <a
+          href="https://scriptex.js.org"
+          onClick={[MockFunction]}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="My interactive CV"
+        >
+          Interactive Resume
+        </a>
+      </li>
+      <li
+        key="14"
+      >
+        <a
+          href="projects/"
+          onClick={[MockFunction]}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="My open source projects"
+        >
+          Open source
+        </a>
+      </li>
+      <li
+        key="15"
+      >
+        <a
+          href="music/"
+          onClick={[MockFunction]}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="My music"
+        >
+          Music
+        </a>
+      </li>
+    </ul>
+  </Component>
+</nav>
+`;

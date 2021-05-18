@@ -1,19 +1,26 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import * as React from 'react';
+import Carousel from 'react-round-carousel';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 import lastFm from '../../scripts/last.fm-insights.json';
 import { formatDate } from '../section-stats';
 import { useScript, isPrerendering } from '../../scripts/shared';
-import { Lines, Section, Carousel, ExternalLink } from '..';
+import { Lines, Section, ExternalLink } from '..';
 
 const filteredData = (data: any[]): any[] =>
 	data
 		.filter((album: any) => !!album.images[2]['#text'])
-		.map((album: any) => ({
+		.map(album => ({
+			alt: album.name,
 			image: album.images[2]['#text'],
-			title: album.name,
-			subtitle: album.artist
+			content: (
+				<>
+					<strong>{album.name}</strong>
+
+					<span>{album.artist}</span>
+				</>
+			)
 		}));
 
 // codebeat:disable[ABC,LOC]

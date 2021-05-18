@@ -2,12 +2,12 @@ import * as React from 'react';
 import { act } from 'react-dom/test-utils';
 import { render } from 'enzyme';
 
-import { Contact } from '.';
+import { Funding } from '.';
 
-describe('Contact component', () => {
-	it('Should render the Contact component', () => {
+describe('Funding component', () => {
+	it('Should render the Funding component', () => {
 		act(() => {
-			const wrapper = render(<Contact />);
+			const wrapper = render(<Funding />);
 
 			expect(wrapper).toMatchSnapshot();
 		});

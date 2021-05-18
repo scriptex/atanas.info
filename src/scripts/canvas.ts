@@ -2,6 +2,7 @@ import * as d3 from 'd3';
 
 import { random } from '../scripts/shared';
 
+export type Dots = d3.Selection<SVGCircleElement, any, SVGSVGElement, any>;
 export type Canvas = d3.Selection<SVGSVGElement, unknown, HTMLElement, any>;
 
 interface Data {
@@ -116,7 +117,7 @@ export const initCanvas = (id: string): Canvas => {
 	return canvas;
 };
 
-export const createDots = (canvas: Canvas): any => {
+export const createDots = (canvas: Canvas): Dots => {
 	return canvas
 		.selectAll('circle')
 		.data(generateCircleData(30))
@@ -125,4 +126,12 @@ export const createDots = (canvas: Canvas): any => {
 		.each(function (d: Data) {
 			setCircleData(canvas, this, d);
 		});
+};
+
+export const destroyDots = (canvas: Dots | null): void => {
+	if (!canvas) {
+		return;
+	}
+
+	canvas.html('');
 };

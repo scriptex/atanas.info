@@ -3,29 +3,61 @@
 exports[`Contact component Should render the Contact component 1`] = `
 <form
   action="https://formspree.io/meqrwbvd"
-  className="c-contact"
+  class="c-contact"
   method="POST"
-  onSubmit={[Function]}
 >
   <button
-    className="c-contact__close"
-    onClick={[Function]}
+    class="c-contact__close"
     type="button"
   >
     Close
   </button>
   <div
-    className="c-contact__body"
+    class="c-contact__body"
   >
-    <Component />
+    <h2>
+      Send me your message
+    </h2>
     <div
-      className="c-contact__actions"
+      class="c-contact__field"
     >
-      <Component
+      <label
+        for="email"
+      >
+        Email:
+      </label>
+      <input
+        id="email"
+        name="email"
+        required=""
+        type="email"
+      />
+    </div>
+    <div
+      class="c-contact__field"
+    >
+      <label
+        for="message"
+      >
+        Message:
+      </label>
+      <textarea
+        cols="30"
+        id="message"
+        name="message"
+        required=""
+        rows="10"
+      />
+    </div>
+    <div
+      class="c-contact__actions"
+    >
+      <button
+        class="c-btn "
         type="submit"
       >
         Send message
-      </Component>
+      </button>
     </div>
   </div>
 </form>

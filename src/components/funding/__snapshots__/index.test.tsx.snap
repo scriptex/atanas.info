@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Funding component Should render the Funding component 1`] = `
+<div
+  class="c-funding"
+>
+  <button
+    class="c-btn c-btn--small"
+  >
+    Sponsor me
+  </button>
+  <div
+    class="c-funding__backdrop"
+  />
+  <svg
+    viewBox="-100 -100 700 700"
+  >
+    <g>
+      <g
+        class="c-funding__item"
+        transform="matrix(1,0,0,1,0,0)"
+      >
+        <path
+          d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+          fill="none"
+        />
+        <a
+          href="https://github.com/sponsors/scriptex"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <text
+            fill="var(--color-secondary)"
+            font-size="1em"
+            text-anchor="middle"
+            transform="rotate(60 397.2243347167969 165)"
+            x="398"
+            y="200"
+          >
+            Github
+          </text>
+          <use
+            height="40"
+            href="#svg-github"
+            transform="rotate(60 397.2243347167969 165)"
+            width="40"
+            x="377.2243347167969"
+            y="145"
+          />
+        </a>
+      </g>
+      <g
+        class="c-funding__item"
+        transform="matrix(0.5,-0.86602,0.86602,0.5,-91.5063509461097,341.5063509461096)"
+      >
+        <path
+          d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+          fill="none"
+        />
+        <a
+          href="https://www.patreon.com/atanas"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <text
+            fill="var(--color-secondary)"
+            font-size="1em"
+            text-anchor="middle"
+            transform="rotate(60 397.2243347167969 165)"
+            x="398"
+            y="200"
+          >
+            Patreon
+          </text>
+          <use
+            height="40"
+            href="#svg-patreon"
+            transform="rotate(60 397.2243347167969 165)"
+            width="40"
+            x="377.2243347167969"
+            y="145"
+          />
+        </a>
+      </g>
+      <g
+        class="c-funding__item"
+        transform="matrix(-0.49999,-0.86602,0.86602,-0.49999,158.49364905389024,591.5063509461097)"
+      >
+        <path
+          d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+          fill="none"
+        />
+        <a
+          href="https://paypal.me/scriptex"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <text
+            fill="var(--color-secondary)"
+            font-size="1em"
+            text-anchor="middle"
+            transform="rotate(60 397.2243347167969 165)"
+            x="398"
+            y="200"
+          >
+            PayPal
+          </text>
+          <use
+            height="40"
+            href="#svg-paypal"
+            transform="rotate(60 397.2243347167969 165)"
+            width="40"
+            x="377.2243347167969"
+            y="145"
+          />
+        </a>
+      </g>
+      <g
+        class="c-funding__item"
+        transform="matrix(-1,0,0,-1,500,500)"
+      >
+        <path
+          d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+          fill="none"
+        />
+        <a
+          href="https://ko-fi.com/scriptex"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <text
+            fill="var(--color-secondary)"
+            font-size="1em"
+            text-anchor="middle"
+            transform="rotate(60 397.2243347167969 165)"
+            x="398"
+            y="200"
+          >
+            Ko-fi
+          </text>
+          <use
+            height="40"
+            href="#svg-ko-fi"
+            transform="rotate(60 397.2243347167969 165)"
+            width="40"
+            x="377.2243347167969"
+            y="145"
+          />
+        </a>
+      </g>
+      <g
+        class="c-funding__item"
+        transform="matrix(-0.5,0.86602,-0.86602,-0.5,591.5063509461097,158.49364905389052)"
+      >
+        <path
+          d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+          fill="none"
+        />
+        <a
+          href="https://liberapay.com/scriptex"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <text
+            fill="var(--color-secondary)"
+            font-size="1em"
+            text-anchor="middle"
+            transform="rotate(60 397.2243347167969 165)"
+            x="398"
+            y="200"
+          >
+            Liberapay
+          </text>
+          <use
+            height="40"
+            href="#svg-liberapay"
+            transform="rotate(60 397.2243347167969 165)"
+            width="40"
+            x="377.2243347167969"
+            y="145"
+          />
+        </a>
+      </g>
+      <g
+        class="c-funding__item"
+        transform="matrix(0.5,0.86602,-0.86602,0.5,341.50635094610965,-91.50635094610965)"
+      >
+        <path
+          d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+          fill="none"
+        />
+        <a
+          href="https://issuehunt.io/u/scriptex"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <text
+            fill="var(--color-secondary)"
+            font-size="1em"
+            text-anchor="middle"
+            transform="rotate(60 397.2243347167969 165)"
+            x="398"
+            y="200"
+          >
+            Issuehunt
+          </text>
+          <use
+            height="40"
+            href="#svg-issuehunt"
+            transform="rotate(60 397.2243347167969 165)"
+            width="40"
+            x="377.2243347167969"
+            y="145"
+          />
+        </a>
+      </g>
+    </g>
+    <g
+      class="c-funding__trigger"
+      role="button"
+    >
+      <circle
+        cx="250"
+        cy="250"
+        r="30"
+      />
+      <text
+        fill="var(--color-primary)"
+        font-size="2.5em"
+        text-anchor="middle"
+        x="250"
+        y="260"
+      >
+        +
+      </text>
+    </g>
+  </svg>
+</div>
+`;

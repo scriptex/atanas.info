@@ -1,7 +1,6 @@
 export { default as ErrorPage } from './404';
 export { default as App } from './app';
 export { default as Button } from './button';
-export { default as Carousel } from './carousel';
 export { default as Contact } from './contact';
 export { default as ExternalLink } from './external-link';
 export { default as Footer } from './footer';

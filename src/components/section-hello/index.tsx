@@ -4,7 +4,7 @@ import useInterval from 'use-interval';
 import { titles } from '../../scripts/titles';
 import { Section } from '..';
 import { isPrerendering } from '../../scripts/shared';
-import { initCanvas, createDots } from '../../scripts/canvas';
+import { initCanvas, createDots, destroyDots } from '../../scripts/canvas';
 
 export const Slider: React.FunctionComponent = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);
@@ -32,9 +32,15 @@ export const Slider: React.FunctionComponent = () => {
 
 export const SectionHello: React.FunctionComponent = () => {
 	React.useEffect(() => {
+		let el: d3.Selection<SVGCircleElement, any, SVGSVGElement, any> | null = null;
+
 		if (!isPrerendering) {
-			createDots(initCanvas('canvas'));
+			el = createDots(initCanvas('canvas'));
 		}
+
+		return () => {
+			destroyDots(el);
+		};
 	}, []);
 
 	return (
