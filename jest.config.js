@@ -44,5 +44,9 @@ module.exports = {
 			statements: 25
 		}
 	},
-	coverageReporters: ['lcov', 'html', 'cobertura']
+	coverageReporters: ['lcov', 'html', 'cobertura'],
+	globals: {
+		window: {},
+		navigator: {}
+	}
 };
