@@ -23,3 +23,14 @@ jest.mock('../src/components/github-skyline', () => jest.fn(() => 'Github Skylin
 jest.mock('gsap/Draggable', () => ({
 	default: jest.fn()
 }));
+
+jest.mock('../src/scripts/canvas', () => ({
+	createSVG: jest.fn(),
+	initCanvas: jest.fn(),
+	createDots: jest.fn(),
+	destroyDots: jest.fn()
+}));
+
+jest.mock('../src/scripts/skills.ts', () => ({
+	drawSkills: jest.fn()
+}));
