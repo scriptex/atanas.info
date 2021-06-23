@@ -233,7 +233,7 @@ export const projects: Project[] = [
 		image: 'images/temp/kinetik.png',
 		title: 'Kinetik',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
-		skip: false
+		skip: true
 	},
 	{
 		url: '',
