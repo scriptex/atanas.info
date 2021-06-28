@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { Slide, slides } from '../../scripts/slides';
+import { isPrerendering } from '../../scripts/shared';
 import { Section, SectionNav } from '..';
 
 export const SectionSlides: React.FunctionComponent = () => {
@@ -20,14 +21,14 @@ export const SectionSlides: React.FunctionComponent = () => {
 			<div className="c-section__body">
 				{slides.map((slide: Slide, index: number) => (
 					<div key={index} className={`c-section__frame${activeIndex === index ? ' current' : ''}`}>
-						<iframe
-							src={`${slide.url}/embed?start=false&loop=false&delayms=3000`}
-							title={slide.description}
-							/* eslint-disable-next-line @typescript-eslint/ban-ts-comment*/
-							// @ts-ignore
-							loading="lazy"
-							allowFullScreen={true}
-						/>
+						{isPrerendering ? null : (
+							<iframe
+								src={`${slide.url}/embed?start=false&loop=false&delayms=3000`}
+								title={slide.description}
+								loading="lazy"
+								allowFullScreen={true}
+							/>
+						)}
 					</div>
 				))}
 			</div>
