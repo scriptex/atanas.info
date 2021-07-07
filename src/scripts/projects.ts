@@ -22,15 +22,14 @@ export const projects: Project[] = [
 		image: 'images/temp/E.ON-Home.png',
 		title: 'E.ON Home',
 		description: 'TypeScript, SCSS, React, Redux, MS Azure, AWS, NodeJS, Jest, Enzyme',
-		skip: false
+		skip: true
 	},
 	{
-		url: 'https://hems-admin-portal.eon.ooo/',
+		url: 'https://admin.eonhome.eu/',
 		image: 'images/temp/E.ON-H.E.M.S-(Home-Energy-Management-System).png',
 		title: 'E.ON H.E.M.S (Home Energy Management System)',
 		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS, Cypress',
-		skip: false,
-		timeout: 5000
+		skip: true
 	},
 	{
 		url: 'https://mama-culinar.com/',
@@ -44,28 +43,28 @@ export const projects: Project[] = [
 		image: 'images/temp/foton-home.png',
 		title: 'Foton Home',
 		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS, Jest, Enzyme',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://xpndnow.com/',
 		image: 'images/temp/xpnd.png',
 		title: 'XPND',
 		description: 'TypeScript, SCSS, React, Redux, NodeJS, Jest, Enzyme',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://xpndnow.com/ebook',
 		image: 'images/temp/xpnd-ebook.png',
 		title: 'XPND Ebook',
 		description: 'TypeScript, SCSS, React, Redux, NodeJS',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://demo.xpndnow.com/',
 		image: 'images/temp/XPND-demo-application.png',
 		title: 'XPND demo application',
 		description: 'TypeScript, SCSS, React, Redux, NodeJS',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://emailio.com/',
@@ -75,11 +74,11 @@ export const projects: Project[] = [
 		skip: false
 	},
 	{
-		url: 'https://emailio.now.sh/',
+		url: 'https://emailio.vercel.app/',
 		image: 'images/temp/Emailio-Web-Application.png',
 		title: 'Emailio Web Application',
 		description: 'SCSS, JavaScript, React, Redux, Redux Saga, Jest, Enzyme',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://www.nulla.tv/',
@@ -100,84 +99,84 @@ export const projects: Project[] = [
 		image: 'images/temp/SOD-64-(СОД-64).png',
 		title: 'SOD 64 (СОД 64)',
 		description: 'HTML5, CSS3, JavaScript, jQuery, PHP',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://at-the-wall.atanas.info',
 		image: 'images/temp/at-the-wall.png',
 		title: 'At the Wall',
 		description: 'CSS3, PHP',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://snake.atanas.info',
 		image: 'images/temp/material-snake.png',
 		title: 'Material Snake',
 		description: 'TypeScript, HTML, CSS3',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://tetris.atanas.info',
 		image: 'images/temp/material-tetris.png',
 		title: 'Material Tetris',
 		description: 'TypeScript, HTML, CSS3',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://scriptex.js.org/2048',
 		image: 'images/temp/2048.png',
 		title: '2048',
 		description: 'TypeScript, HTML, CSS3',
-		skip: false
+		skip: true
 	},
 	{
-		url: 'https://retirement-calc.now.sh/',
+		url: 'https://retirement-calc.vercel.app/',
 		image: 'images/temp/retirement-calculator.png',
 		title: 'Retirement calculator',
 		description: 'JavaScript, SCSS, Vue, Vuex, Chart JS',
-		skip: false
+		skip: true
 	},
 	{
-		url: 'https://paternalism-tool.now.sh/',
+		url: 'https://paternalism-tool.vercel.app/',
 		image: 'images/temp/paternalism-tool.png',
 		title: 'Paternalism tool',
 		description: 'JavaScript, SCSS, React, Redux, Redux Saga',
-		skip: false
+		skip: true
 	},
 	{
-		url: 'https://fertility-tool.now.sh/',
+		url: 'https://fertility-tool.vercel.app/',
 		image: 'images/temp/fertility-tool.png',
 		title: 'Fertility tool',
 		description: 'TypeScript, SCSS, React, Redux, Redux Saga',
-		skip: false
+		skip: true
 	},
 	{
-		url: 'https://imgn.now.sh/',
+		url: 'https://imgn.vercel.app/',
 		image: 'images/temp/imgn.png',
 		title: 'IMGN',
 		description: 'TypeScript, SCSS, React, Redux, Redux Saga',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://three-11.com/',
 		image: 'images/temp/three-11.png',
 		title: 'Three 11',
 		description: 'HTML5, CSS3, SVG, JavaScript, D3',
-		skip: false
+		skip: true
 	},
 	{
-		url: 'https://flows.now.sh/',
+		url: 'https://flows.vercel.app/',
 		image: 'images/temp/Three-11-Company-Flows.png',
 		title: 'Three 11 Company Flows',
 		description: 'JavaScript, Stylus, VuePress, NodeJS',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://html-lab.com/',
 		image: 'images/temp/html-lab.png',
 		title: 'HTML Lab',
 		description: 'HTML5, CSS3, JavaScript',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://malaikapictures.com/',
