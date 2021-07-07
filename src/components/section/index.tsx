@@ -18,6 +18,7 @@ export interface Props {
 export const SectionElements: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
 	const [open, setOpen] = React.useState(false);
 	const { setContactVisible } = React.useContext(AppContext);
+	const onClose = () => setOpen(false);
 
 	return (
 		<>
@@ -31,7 +32,7 @@ export const SectionElements: React.FunctionComponent<Readonly<Props>> = (props:
 
 					<ul className={`c-section__actions-list${open ? ' c-section__actions-list--open' : ''}`}>
 						<li>
-							<Button type="button" onClick={() => setOpen(!open)} className="c-section__actions-close">
+							<Button type="button" onClick={onClose} className="c-section__actions-close">
 								Close
 							</Button>
 						</li>
@@ -40,12 +41,13 @@ export const SectionElements: React.FunctionComponent<Readonly<Props>> = (props:
 							<Button
 								type="button"
 								onClick={() => {
-									setOpen(false);
+									onClose();
 									setContactVisible(true);
 								}}
 							>
 								<Icon name="svg-email" className="c-section__actions-icon" />
-								Hire me directly
+								<span>Hire me</span>
+								<strong>directly</strong>
 							</Button>
 						</li>
 
@@ -53,10 +55,11 @@ export const SectionElements: React.FunctionComponent<Readonly<Props>> = (props:
 							<ExternalLink
 								href="https://app.usebraintrust.com/talent/782/"
 								className="c-btn"
-								onClick={() => setOpen(false)}
+								onClick={onClose}
 							>
 								<Icon name="svg-braintrust" className="c-section__actions-icon" />
-								Hire me on Braintrust
+								<span>Hire me on</span>
+								<strong>Braintrust</strong>
 							</ExternalLink>
 						</li>
 
@@ -64,10 +67,11 @@ export const SectionElements: React.FunctionComponent<Readonly<Props>> = (props:
 							<ExternalLink
 								href="https://www.toptal.com/resume/atanas-atanasov"
 								className="c-btn"
-								onClick={() => setOpen(false)}
+								onClick={onClose}
 							>
 								<Icon name="svg-toptal" className="c-section__actions-icon" />
-								Hire me on Toptal
+								<span>Hire me on</span>
+								<strong>Toptal</strong>
 							</ExternalLink>
 						</li>
 					</ul>

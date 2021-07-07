@@ -570,6 +570,7 @@ body {
 .c-section__actions {
 	text-align: center;
 	position: relative;
+	z-index: 2;
 	padding-top: 1.5rem;
 
 	& .c-btn {
@@ -619,21 +620,19 @@ body {
 		}
 
 		&:not(:first-child) {
-			width: 10rem;
-			height: 10rem;
-			@mixin flex-row wrap, center, center;
-			padding: 1.5rem;
-			border: 1px solid var(--color-primary);
-			background-color: color-mod(var(--color-secondary) a(80%));
-			border-radius: 50%;
-
 			& .c-btn {
 				font-size: 1rem;
-				line-height: 1.5;
-				text-transform: capitalize;
-				padding: 0;
-				border: 0;
+				line-height: 1;
+				text-transform: none;
+				width: 10rem;
+				height: 10rem;
+				@mixin flex-row wrap, center, center;
+				align-content: center;
+				padding: 1.5rem;
+				border: 1px solid var(--color-primary);
 				background: none;
+				border-radius: 50%;
+				transition: all var(--timing) var(--easing);
 			}
 		}
 	}
@@ -641,12 +640,23 @@ body {
 	& .c-btn {
 		margin: 0;
 
+		& span,
+		& strong {
+			flex: 0 0 100%;
+			display: block;
+		}
+
+		& span {
+			padding: 0.5rem 0;
+		}
+
 		& svg {
-			width: 2rem;
-			height: 2rem;
+			width: 3rem;
+			height: 3rem;
 			fill: currentColor;
 			display: block;
 			margin: auto;
+			transition: none;
 		}
 	}
 }
@@ -709,6 +719,26 @@ body {
 	}
 }
 
+@media (--hover) {
+	.c-section__actions-list {
+		& li {
+			&:not(:first-child) {
+				& .c-btn:hover {
+					color: var(--color-action);
+					border-color: var(--color-action);
+					background-color: var(--color-primary);
+				}
+			}
+		}
+	}
+}
+
+@media (--tablet-portrait) {
+	.c-section__actions-list {
+		width: 70vw;
+	}
+}
+
 @media (--mobile) {
 	.c-section__actions {
 		& .c-btn {
@@ -716,6 +746,62 @@ body {
 
 			& ~ .c-btn {
 				margin-top: 2rem;
+			}
+		}
+	}
+
+	.c-section__actions-list {
+		width: 90vw;
+		top: auto;
+		bottom: -1rem;
+
+		&::before {
+			top: -8rem;
+			right: 0;
+			bottom: -8rem;
+			left: 0;
+		}
+
+		& li {
+			&:first-child {
+				bottom: 1.75rem;
+			}
+
+			&:not(:first-child) {
+				& .c-btn {
+					font-size: 0.75rem;
+					line-height: 1;
+					width: 6rem;
+					height: 6rem;
+					padding: 0.25rem;
+				}
+			}
+		}
+
+		& .c-btn {
+			& svg {
+				width: 1rem;
+				height: 1rem;
+			}
+
+			& span {
+				padding: 0.25rem 0;
+			}
+		}
+	}
+
+	.c-section__actions-list--open {
+		& li {
+			&:nth-child(2) {
+				transform: scale(1) translate(-0, -1rem);
+			}
+
+			&:nth-child(3) {
+				transform: scale(1) translate(0, -6rem);
+			}
+
+			&:nth-child(4) {
+				transform: scale(1) translate(0, -1rem);
 			}
 		}
 	}
