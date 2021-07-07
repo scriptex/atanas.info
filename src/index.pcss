@@ -569,10 +569,143 @@ body {
 
 .c-section__actions {
 	text-align: center;
+	position: relative;
 	padding-top: 1.5rem;
 
 	& .c-btn {
 		margin: 0 1rem;
+	}
+}
+
+.c-section__actions-list {
+	@mixin flex-row wrap, center, center;
+	position: absolute;
+	top: -2rem;
+	left: 50%;
+	padding: 0;
+	margin: 0;
+	list-style: none outside none;
+	transform: translateX(-50%);
+	pointer-events: none;
+
+	&::before {
+		content: '';
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: -10rem;
+		right: -5rem;
+		bottom: -10rem;
+		left: -5rem;
+		z-index: 1;
+		background-color: color-mod(var(--color-secondary) a(80%));
+		border-radius: 50%;
+		transform: scale(0);
+		transition: all var(--timing) var(--easing);
+	}
+
+	& li {
+		z-index: 2;
+		opacity: 0;
+		visibility: hidden;
+		transform: scale(0) translate(0);
+		transition: all var(--timing) var(--easing);
+
+		&:first-child {
+			position: absolute;
+			bottom: 18%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&:not(:first-child) {
+			width: 10rem;
+			height: 10rem;
+			@mixin flex-row wrap, center, center;
+			padding: 1.5rem;
+			border: 1px solid var(--color-primary);
+			background-color: color-mod(var(--color-secondary) a(80%));
+			border-radius: 50%;
+
+			& .c-btn {
+				font-size: 1rem;
+				line-height: 1.5;
+				text-transform: capitalize;
+				padding: 0;
+				border: 0;
+				background: none;
+			}
+		}
+	}
+
+	& .c-btn {
+		margin: 0;
+
+		& svg {
+			width: 2rem;
+			height: 2rem;
+			fill: currentColor;
+			display: block;
+			margin: auto;
+		}
+	}
+}
+
+.c-section__actions-list--open {
+	pointer-events: auto;
+
+	& li,
+	&::before {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+	}
+
+	& li {
+		&:nth-child(2) {
+			transform: scale(1) translate(-2rem, -1rem);
+		}
+
+		&:nth-child(3) {
+			transform: scale(1) translate(0, -8rem);
+		}
+
+		&:nth-child(4) {
+			transform: scale(1) translate(2rem, -1rem);
+		}
+	}
+}
+
+.c-section__actions-close {
+	color: var(--color-primary);
+	font-size: 0;
+	line-height: 0;
+	width: 2rem;
+	height: 2rem;
+	display: block;
+	padding: 0;
+	border: 1px solid var(--color-action);
+	background-color: var(--color-action);
+	border-radius: 50%;
+	box-shadow: none;
+
+	&::before,
+	&::after {
+		content: '';
+		width: 0.125rem;
+		height: 1.25rem;
+		display: block;
+		@mixin centered;
+		z-index: 2;
+		background-color: currentColor;
+	}
+
+	&::before {
+		transform: rotate(45deg);
+	}
+
+	&::after {
+		transform: rotate(-45deg);
 	}
 }
 

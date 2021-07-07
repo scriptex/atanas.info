@@ -100,6 +100,57 @@ exports[`SectionElements component Should render the SectionElements component 1
     >
       Hire me
     </Component>
+    <ul
+      className="c-section__actions-list"
+    >
+      <li>
+        <Component
+          className="c-section__actions-close"
+          onClick={[Function]}
+          type="button"
+        >
+          Close
+        </Component>
+      </li>
+      <li>
+        <Component
+          onClick={[Function]}
+          type="button"
+        >
+          <Component
+            className="c-section__actions-icon"
+            name="svg-email"
+          />
+          Hire me directly
+        </Component>
+      </li>
+      <li>
+        <Component
+          className="c-btn"
+          href="https://app.usebraintrust.com/talent/782/"
+          onClick={[Function]}
+        >
+          <Component
+            className="c-section__actions-icon"
+            name="svg-braintrust"
+          />
+          Hire me on Braintrust
+        </Component>
+      </li>
+      <li>
+        <Component
+          className="c-btn"
+          href="https://www.toptal.com/resume/atanas-atanasov"
+          onClick={[Function]}
+        >
+          <Component
+            className="c-section__actions-icon"
+            name="svg-toptal"
+          />
+          Hire me on Toptal
+        </Component>
+      </li>
+    </ul>
   </div>
 </Fragment>
 `;
@@ -128,6 +179,57 @@ exports[`SectionElements component Should render the SectionElements component w
     >
       Hire me
     </Component>
+    <ul
+      className="c-section__actions-list"
+    >
+      <li>
+        <Component
+          className="c-section__actions-close"
+          onClick={[Function]}
+          type="button"
+        >
+          Close
+        </Component>
+      </li>
+      <li>
+        <Component
+          onClick={[Function]}
+          type="button"
+        >
+          <Component
+            className="c-section__actions-icon"
+            name="svg-email"
+          />
+          Hire me directly
+        </Component>
+      </li>
+      <li>
+        <Component
+          className="c-btn"
+          href="https://app.usebraintrust.com/talent/782/"
+          onClick={[Function]}
+        >
+          <Component
+            className="c-section__actions-icon"
+            name="svg-braintrust"
+          />
+          Hire me on Braintrust
+        </Component>
+      </li>
+      <li>
+        <Component
+          className="c-btn"
+          href="https://www.toptal.com/resume/atanas-atanasov"
+          onClick={[Function]}
+        >
+          <Component
+            className="c-section__actions-icon"
+            name="svg-toptal"
+          />
+          Hire me on Toptal
+        </Component>
+      </li>
+    </ul>
   </div>
 </Fragment>
 `;

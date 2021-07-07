@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { Button } from '..';
 import { AppContext } from '../app';
+import { Icon, Button, ExternalLink } from '../../components';
 
 export interface Props {
 	id: string;
@@ -16,6 +16,7 @@ export interface Props {
 }
 
 export const SectionElements: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
+	const [open, setOpen] = React.useState(false);
 	const { setContactVisible } = React.useContext(AppContext);
 
 	return (
@@ -24,9 +25,52 @@ export const SectionElements: React.FunctionComponent<Readonly<Props>> = (props:
 
 			{props.hasButton && (
 				<div className="c-section__actions">
-					<Button type="button" onClick={() => setContactVisible(true)}>
+					<Button type="button" onClick={() => setOpen(!open)}>
 						Hire me
 					</Button>
+
+					<ul className={`c-section__actions-list${open ? ' c-section__actions-list--open' : ''}`}>
+						<li>
+							<Button type="button" onClick={() => setOpen(!open)} className="c-section__actions-close">
+								Close
+							</Button>
+						</li>
+
+						<li>
+							<Button
+								type="button"
+								onClick={() => {
+									setOpen(false);
+									setContactVisible(true);
+								}}
+							>
+								<Icon name="svg-email" className="c-section__actions-icon" />
+								Hire me directly
+							</Button>
+						</li>
+
+						<li>
+							<ExternalLink
+								href="https://app.usebraintrust.com/talent/782/"
+								className="c-btn"
+								onClick={() => setOpen(false)}
+							>
+								<Icon name="svg-braintrust" className="c-section__actions-icon" />
+								Hire me on Braintrust
+							</ExternalLink>
+						</li>
+
+						<li>
+							<ExternalLink
+								href="https://www.toptal.com/resume/atanas-atanasov"
+								className="c-btn"
+								onClick={() => setOpen(false)}
+							>
+								<Icon name="svg-toptal" className="c-section__actions-icon" />
+								Hire me on Toptal
+							</ExternalLink>
+						</li>
+					</ul>
 
 					{!!props.actions && (
 						<>
