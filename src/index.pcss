@@ -2073,20 +2073,6 @@ body {
 		@mixin slanted;
 	}
 
-	& ul {
-		@mixin flex-row wrap, center, center;
-	}
-
-	& li {
-		padding: 0 1rem;
-
-		&.current .c-btn {
-			color: var(--color-action);
-			background-color: var(--color-primary);
-			cursor: default;
-		}
-	}
-
 	/* prettier-ignore */
 	& iframe,
 	& lite-youtube { /* stylelint-disable-line selector-type-no-unknown */
@@ -2101,7 +2087,21 @@ body {
 	}
 
 	& .c-section__nav {
-		padding-bottom: 2rem;
+		padding-bottom: 1rem;
+
+		& ul {
+			@mixin flex-row wrap, center, center;
+		}
+
+		& li {
+			padding: 0 1rem 1rem;
+
+			&.current .c-btn {
+				color: var(--color-action);
+				background-color: var(--color-primary);
+				cursor: default;
+			}
+		}
 	}
 
 	& .c-section__body {
@@ -2213,15 +2213,6 @@ body {
 
 		& h2 {
 			margin-bottom: 2rem;
-		}
-
-		& li {
-			flex: 0 0 100%;
-			padding: 0;
-
-			& + li {
-				margin-top: 1rem;
-			}
 		}
 
 		& .c-section__nav {
