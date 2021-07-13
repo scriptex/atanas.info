@@ -2087,7 +2087,21 @@ body {
 	}
 
 	& .c-section__nav {
-		padding-bottom: 2rem;
+		padding-bottom: 1rem;
+
+		& ul {
+			@mixin flex-row wrap, center, center;
+		}
+
+		& li {
+			padding: 0 1rem 1rem;
+
+			&.current .c-btn {
+				color: var(--color-action);
+				background-color: var(--color-primary);
+				cursor: default;
+			}
+		}
 	}
 
 	& .c-section__body {
