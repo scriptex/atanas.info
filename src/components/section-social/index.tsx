@@ -127,13 +127,14 @@ export const SectionSocial: React.FunctionComponent = () => {
 
 							{isPrerendering ? null : (
 								<iframe
-									src="https://open.spotify.com/embed/playlist/4MiRUEKhpi7Zb83GDxsV4W"
+									src="https://open.spotify.com/embed/playlist/37i9dQZF1EpzZomgLqaOnp?theme=0"
 									allow="encrypted-media"
-									width="300"
-									height="380"
+									width="100%"
+									height={380}
 									loading="lazy"
 									className="spotify-frame"
 									frameBorder={0}
+									allowTransparency
 								/>
 							)}
 						</div>
