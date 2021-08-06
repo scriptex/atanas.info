@@ -45,7 +45,7 @@ export const SectionTimeline: React.FunctionComponent = () => (
 			</VerticalTimelineElement>
 
 			<VerticalTimelineElement date="October 2010" icon={<WorkIcon />}>
-				<h3 className="vertical-timeline-element-title">💻 I started learning web develoment</h3>
+				<h3 className="vertical-timeline-element-title">💻 I started learning web development</h3>
 				<h4 className="vertical-timeline-element-subtitle">📍 Varna, Bulgaria</h4>
 				<p>
 					With enormous help from <ExternalLink href="https://marinatanasov.com/">my brother</ExternalLink> I
@@ -114,7 +114,7 @@ export const SectionTimeline: React.FunctionComponent = () => (
 				<h4 className="vertical-timeline-element-subtitle">📍 Varna, Bulgaria</h4>
 				<p>
 					I left 2create to join Three11 - a boutique web development company where we create the best user
-					interfaces utiziling the most recent web technologies.
+					interfaces utilizing the most recent web technologies.
 				</p>
 			</VerticalTimelineElement>
 
@@ -142,8 +142,8 @@ export const SectionTimeline: React.FunctionComponent = () => (
 				<h3 className="vertical-timeline-element-title">👼 Simeon was born! 🍼</h3>
 				<h4 className="vertical-timeline-element-subtitle">📍 Varna, Bulgaria</h4>
 				<p>
-					Just when I thought it couldn&apos;t get any better, my second son was born! Simeon came and
-					enlightened our days once more.
+					Just when I thought it couldn’t get any better, my second son was born! Simeon came and enlightened
+					our days once more.
 				</p>
 			</VerticalTimelineElement>
 		</VerticalTimeline>
