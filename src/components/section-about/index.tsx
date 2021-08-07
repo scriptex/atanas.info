@@ -21,7 +21,7 @@ export const LastAbout: React.FunctionComponent = () => (
 				<strong>
 					<ExternalLink href="https://www.red-dot.org/project/eon-home-49256">award winning</ExternalLink>
 				</strong>{' '}
-				web and mobile smart energy managemet application E.ON Home.
+				web and mobile smart energy management application E.ON Home.
 			</li>
 
 			<li>
@@ -32,7 +32,7 @@ export const LastAbout: React.FunctionComponent = () => (
 			</li>
 
 			<li>
-				A Founding member and Senior JavaScript/TypeScript enginner at{' '}
+				A Founding member and Senior JavaScript/TypeScript engineer at{' '}
 				<strong>
 					<ExternalLink href="https://app.usebraintrust.com/talent/782/">Braintrust</ExternalLink>
 				</strong>

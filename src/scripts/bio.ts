@@ -7,18 +7,18 @@ export const bio: BioEntry[] = [
 	{
 		title: '2010',
 		content: [
-			'My name is Atanas and I am a senior JavaScript/TypeScript developer.',
+			'My name is Atanas and I am a Senior JavaScript/TypeScript engineer.',
 			"I am currently located in Varna, Bulgaria. That's on the south-east side of Europe, on the Black Sea.",
 			'I started my web development career in 2010 as a freelance apprentice to a hardcore fullstack web developer and pretty fast learned the basics of HTML and CSS.',
-			'We had our own small web development company. In "HTML Lab" I was doing the front-end part and was mainly focused on slicing design files and turning them into static HTML pages.'
+			'We even had our own small web development company. In "HTML Lab" I was doing the front-end part and was mainly focused on slicing design files and turning them into static HTML pages.'
 		]
 	},
 	{
 		title: '2012',
 		content: [
-			'Between 2012 and 2018 I was employed in one of the larges web development companies in Varna, Bulgaria - 2create. In this company I worked for some of the biggest PSD-to-HTML brands out there - htmlBurger and htmlBoutique. I developed thousands (yes thousands) of different projects for clients from all over the globe and was focused on the front-end part of all projects.',
-			'In the last 3 years of my employement there I was a direct asistant to several project managers and I also mentored several junior and intermediate front-end developers.',
-			'During the period I participated in defining, integrating and teaching the internal coding standards in the company and co-authored the internal front-end projects starting template which was based on Webpack, Babel, PostCSS, SCSS and many more. The coding standards and Jarvis - that was the name of the front-end template - were (and are) used in tens of thousands of projects for clients from around the world.'
+			'Between 2012 and 2018 I was employed in one of the largest web development companies in Varna, Bulgaria - 2create. In this company I worked for some of the biggest PSD-to-HTML brands out there - htmlBurger and htmlBoutique. I developed thousands (yes thousands) of different projects for clients from all over the globe and was focused on the front-end part of all projects.',
+			'In the last 3 years of my employment there I was a direct assistant to several project managers and I also mentored several junior and intermediate front-end developers.',
+			'During the period I participated in defining, integrating and teaching the internal coding standards in the company and co-authored the internal front-end projects starter template which was based on Webpack, Babel, PostCSS, SCSS and many more. The coding standards and Jarvis - that was the name of the front-end template - were (and are) used in tens of thousands of projects for clients from around the world.'
 		]
 	},
 	{
@@ -40,8 +40,8 @@ export const bio: BioEntry[] = [
 	{
 		title: 'Today',
 		content: [
-			'Now I am a JavaScript and TypeScript developer with more than 10 years of professional experience. I am focused on the front-end but using a lot of back-end technologies as well. My daily tasks include coding HTML, CSS, JavaScript, TypeScript, PHP, Bash and many more.',
-			"The latest project I worked on is a large international IoT application for one of the world's largest investor-owned electric utility service providers which aims to provide users from all over Europe with the ability to control their homes' smart appliances and energy consumption."
+			'Now I am a JavaScript and TypeScript engineer with more than 10 years of professional experience. I am focused on the front-end but using a lot of back-end technologies as well. My daily tasks include coding HTML, CSS, JavaScript, TypeScript, PHP, Bash and many more.',
+			"The latest project I worked on is an award-winning, large, international IoT application for one of the world's largest investor-owned electric utility service providers which aims to provide users from all over Europe with the ability to control their homes' smart appliances and energy consumption."
 		]
 	}
 ];
