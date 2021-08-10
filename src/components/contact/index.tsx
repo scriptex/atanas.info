@@ -38,6 +38,7 @@ export const onSubmit = (
 	const form = e.target as HTMLFormElement;
 	const data = new FormData(form);
 
+	// eslint-disable-next-line compat/compat
 	fetch(form.action, {
 		method: form.method,
 		headers: {

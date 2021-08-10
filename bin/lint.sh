@@ -1,5 +1,5 @@
 #!/bin/sh
 
-eslint 'src/**/*.{ts,tsx}'
+eslint '**/*.{ts,tsx}'
 
 stylelint './src/**/*.pcss' --config .stylelintrc

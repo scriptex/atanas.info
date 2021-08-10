@@ -99,6 +99,7 @@ playBtn.addEventListener('click', () => {
 
 	audio.play();
 
+	// eslint-disable-next-line compat/compat
 	context = new AudioContext();
 
 	if (!src) {
