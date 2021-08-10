@@ -35,6 +35,7 @@ export const mockUseEffect = (): void => {
 
 export const random = (): number => {
 	const crypto = window.crypto || window.msCrypto;
+	// eslint-disable-next-line compat/compat
 	const array = new Uint32Array(1);
 
 	return crypto.getRandomValues(array)[0] / (Math.pow(2, 32) - 1);
