@@ -1760,14 +1760,6 @@
     "@rollup/pluginutils" "^3.1.0"
     magic-string "^0.25.7"
 
-"@rollup/plugin-replace@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@rollup/plugin-replace/-/plugin-replace-3.0.0.tgz#3a4c9665d4e7a4ce2c360cf021232784892f3fac"
-  integrity sha512-3c7JCbMuYXM4PbPWT4+m/4Y6U60SgsnDT/cCyAyUKwFHg7pTSfsSQzIpETha3a3ig6OdOKzZz87D9ZXIK3qsDg==
-  dependencies:
-    "@rollup/pluginutils" "^3.1.0"
-    magic-string "^0.25.7"
-
 "@rollup/pluginutils@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-3.1.0.tgz#706b4524ee6dc8b103b3c995533e5ad680c02b9b"
@@ -13680,12 +13672,11 @@ rc@^1.2.7, rc@^1.2.8:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-babylonjs@3.0.20:
-  version "3.0.20"
-  resolved "https://registry.yarnpkg.com/react-babylonjs/-/react-babylonjs-3.0.20.tgz#cffcfe26b48896ea915756463151552534c5310b"
-  integrity sha512-ihJRGd7gpdEQWa6B86FzA5OtpifXV946QFhn0K0rIoPx/V42W0cKXK2RtOQqRpmLHYcJQN7UFI02k63ImED4+A==
+react-babylonjs@3.0.22:
+  version "3.0.22"
+  resolved "https://registry.yarnpkg.com/react-babylonjs/-/react-babylonjs-3.0.22.tgz#567dad356dec570aaaf558c618065b04c040870e"
+  integrity sha512-ROnZXKX+s4+oz/9V7uv421aZZKeaBiJ9/MvhmNi3y/qDf3LYSV3xcgaHb+ZLuoB/CCkyl6ovuy1Lzxrk/Ksw8w==
   dependencies:
-    "@rollup/plugin-replace" "^3.0.0"
     react-reconciler "^0.26.1"
 
 react-dom@17.0.2:
