@@ -64,9 +64,9 @@ export const SectionSocial: React.FunctionComponent = () => {
 
 							{isPrerendering ? null : (
 								<div
-									className="badge-base LI-profile-badge"
+									className="badge-base LI-profile-badge linkedin-frame"
 									data-size="large"
-									data-type="VERTICAL"
+									data-type="HORIZONTAL"
 									data-theme="dark"
 									data-locale="en_US"
 									data-vanity="scriptex"

@@ -2908,23 +2908,8 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 		font-weight: bold;
 	}
 
-	& .profile-badge {
-		width: 100%;
-		box-shadow: 0 0 1rem color-mod(var(--color-primary) a(20%));
-	}
-
-	& .profile-badge__content-profile-name {
-		font-size: 1.25rem;
-	}
-
-	& .profile-badge__content-profile-headline,
-	& .profile-badge__content-profile-company-school-info,
-	& .profile-badge__content-profile-company-school-info-link {
-		font-size: 1rem;
-	}
-
-	& .profile-badge__cta-btn--dark {
-		font-size: 0.875rem;
+	& .linkedin-frame {
+		@mixin flex-row nowrap, center, center;
 	}
 
 	& .c-section--social h1 a {
