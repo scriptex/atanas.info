@@ -235,6 +235,27 @@ export const projects: Project[] = [
 		skip: true
 	},
 	{
+		url: 'https://danariely.com/',
+		image: 'images/temp/one-logic.png',
+		title: 'Dan Ariely',
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
+		skip: false
+	},
+	{
+		url: 'https://shortwhale.com/',
+		image: 'images/temp/shortwhale.png',
+		title: 'Shortwhale',
+		description: 'TypeScript, SCSS, React, Redux, Redux Saga, NodeJS, PostgreSQL',
+		skip: true
+	},
+	{
+		url: 'https://onelogic.de/',
+		image: 'images/temp/danariely.png',
+		title: 'One Logic',
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
+		skip: false
+	},
+	{
 		url: '',
 		image: 'images/temp/atelier-coolinar.png',
 		title: 'Atelier Coolinar (Ателие Кулинар)',
