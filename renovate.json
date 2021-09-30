@@ -1,5 +1,5 @@
 {
-	"extends": ["config:base"],
+	"extends": ["config:base", ":automergePatch", ":automergeBranch"],
 	"travis": {
 		"enabled": true
 	},
@@ -9,5 +9,9 @@
 	"vulnerabilityAlerts": {
 		"labels": ["security"],
 		"assignees": ["@scriptex"]
+	},
+	"rangeStrategy": "replace",
+	"major": {
+		"automerge": false
 	}
 }
