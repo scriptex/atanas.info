@@ -35,6 +35,6 @@
 		"resolveJsonModule": true
 	},
 	"compileOnSave": false,
-	"include": ["insights/**/*", "music/**/*.ts", "screenshots/**/*", "server/**/*", "src/**/*"],
+	"include": ["insights/**/*", "music/**/*.ts", "npm/**/*", "screenshots/**/*", "server/**/*", "src/**/*"],
 	"exclude": ["node_modules", "src/scripts/analytics.js", "src/scripts/google-analytics-local.js"]
 }

@@ -105,6 +105,28 @@ jest.spyOn(stats, 'formatDate');
 // @ts-ignore
 stats.formatDate.mockImplementation(() => 'Mock date');
 
+jest.mock('../../scripts/npm-stats.json', () => ({
+	sum: 591668,
+	package1: {
+		name: 'package1',
+		version: '1.0.0',
+		description: 'Description 1',
+		license: 'MIT',
+		homepage: 'https://example.com',
+		author: 'author',
+		downloads: 0
+	},
+	package2: {
+		name: 'package2',
+		version: '1.0.0',
+		description: 'Description 2',
+		license: 'MIT',
+		homepage: 'https://example.com',
+		author: 'author',
+		downloads: 0
+	}
+}));
+
 describe('SectionStats component', () => {
 	it('Should render the SectionStats component', () => {
 		const wrapper = shallow(
