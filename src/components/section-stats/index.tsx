@@ -266,6 +266,10 @@ export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 };
 
 export const NPMStats: React.FunctionComponent = () => {
+	if (Object.keys(npmStats).length === 0) {
+		return null;
+	}
+
 	const { sum, ...packages } = npmStats;
 
 	return (
