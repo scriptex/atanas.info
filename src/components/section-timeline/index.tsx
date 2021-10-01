@@ -146,6 +146,15 @@ export const SectionTimeline: React.FunctionComponent = () => (
 					our days once more.
 				</p>
 			</VerticalTimelineElement>
+
+			<VerticalTimelineElement date="September 2021" icon={<WorkIcon />}>
+				<h3 className="vertical-timeline-element-title">✔️ I joined Andela as a contactor!</h3>
+				<h4 className="vertical-timeline-element-subtitle">📍 remote</h4>
+				<p>
+					I became part of Andela - the talent network trusted by hundreds of the world’s top companies to
+					help them seamlessly tap into global brilliance.
+				</p>
+			</VerticalTimelineElement>
 		</VerticalTimeline>
 	</Section>
 );
