@@ -1292,6 +1292,16 @@ body {
 		@mixin slanted;
 	}
 
+	& h6 {
+		font-size: 1rem;
+		line-height: 1.2;
+		font-style: italic;
+
+		& strong {
+			color: var(--color-action);
+		}
+	}
+
 	& ul {
 		list-style: none outside none;
 		padding: 0 0 3rem;
@@ -3245,5 +3255,64 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 				animation-delay: 4s;
 			}
 		}
+	}
+}
+
+.c-packages {
+	justify-content: flex-start;
+}
+
+.c-package {
+	color: var(--color-secondary);
+	text-align: left;
+	text-decoration: none;
+	height: 100%;
+	display: block;
+	padding: 1rem;
+	border: 0.125rem solid var(--color-action);
+	background-color: var(--color-primary);
+	border-radius: 0.25rem;
+	transform: scale(1);
+	transition: transform var(--timing) var(--easing);
+	will-change: transform;
+
+	& p,
+	& ul,
+	& h3 {
+		margin: 0 0 1rem;
+	}
+
+	& h3 {
+		text-align: center;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid var(--color-action);
+	}
+
+	& p {
+		font-style: italic;
+	}
+
+	& ul {
+		display: block;
+		padding: 0;
+	}
+
+	& li {
+		display: block;
+		overflow: hidden;
+
+		&::before {
+			content: '- ';
+		}
+
+		& strong {
+			float: right;
+		}
+	}
+}
+
+@media (--hover) {
+	.c-package:hover {
+		transform: scale(1.05);
 	}
 }
