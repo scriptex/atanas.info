@@ -613,6 +613,42 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
         Just when I thought it couldn’t get any better, my second son was born! Simeon came and enlightened our days once more.
       </p>
     </VerticalTimelineElement>
+    <VerticalTimelineElement
+      className=""
+      contentArrowStyle={null}
+      contentStyle={null}
+      date="September 2021"
+      dateClassName=""
+      icon={<Unknown />}
+      iconClassName=""
+      iconOnClick={null}
+      iconStyle={null}
+      id=""
+      intersectionObserverProps={
+        Object {
+          "rootMargin": "0px 0px -40px 0px",
+        }
+      }
+      onTimelineElementClick={null}
+      position=""
+      style={null}
+      textClassName=""
+      visible={false}
+    >
+      <h3
+        className="vertical-timeline-element-title"
+      >
+        ✔️ I joined Andela as a contactor!
+      </h3>
+      <h4
+        className="vertical-timeline-element-subtitle"
+      >
+        📍 remote
+      </h4>
+      <p>
+        I became part of Andela - the talent network trusted by hundreds of the world’s top companies to help them seamlessly tap into global brilliance.
+      </p>
+    </VerticalTimelineElement>
   </VerticalTimeline>
 </Component>
 `;
