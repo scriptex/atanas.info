@@ -13,7 +13,7 @@ import * as npmtotal from 'npmtotal';
 	try {
 		console.log('Fetching data from NPM. Please wait...');
 
-		const { sum, stats } = await npmtotal('scriptex', '2017-01-01');
+		const { sum, stats } = await npmtotal('scriptex', { startDate: '2017-01-01' });
 
 		const packages = stats.sort(([a]: [string], [b]: [string]) => (a > b ? 1 : a < b ? -1 : 0));
 
