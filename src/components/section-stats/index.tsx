@@ -2,6 +2,7 @@ import * as React from 'react';
 import { format } from 'date-fns';
 
 import npmStats from '../../scripts/npm-stats.json';
+import { isPrerendering } from '../../scripts/shared';
 import { Svg, Section, GithubSkyline, ExternalLink } from '..';
 
 interface GeneralInsight {
@@ -319,24 +320,34 @@ export const NPMStats: React.FunctionComponent = () => {
 };
 
 export const SectionStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
+	const timeout: React.MutableRefObject<NodeJS.Timeout | null> = React.useRef(null);
+
 	React.useEffect(() => {
 		const onLoad = () => {
-			addTitles('.c-calendar--gitlab', (rect: SVGRectElement) => rect.getAttribute('title') || '');
+			if (isPrerendering) {
+				return;
+			}
 
-			addTitles(
-				'.c-calendar--github',
-				(rect: SVGRectElement) =>
-					`${rect.dataset.count} contributions on ${format(
-						new Date(rect.dataset.date as string),
-						'EEEE MMM d, yyyy'
-					)}`
-			);
+			timeout.current = setTimeout(() => {
+				addTitles('.c-calendar--gitlab', (rect: SVGRectElement) => rect.getAttribute('title') || '');
+
+				addTitles('.c-calendar--github', (rect: SVGRectElement) => {
+					const { date, count } = rect.dataset;
+					const formattedDate = format(new Date(date as string), 'EEEE MMM d, yyyy');
+
+					return `${count} contribution${count === '1' ? '' : 's'} on ${formattedDate}`;
+				});
+			}, 2000);
 		};
 
 		window.addEventListener('load', onLoad);
 
 		return () => {
 			window.removeEventListener('load', onLoad);
+
+			if (timeout.current !== null) {
+				clearTimeout(timeout.current);
+			}
 		};
 	}, []);
 
