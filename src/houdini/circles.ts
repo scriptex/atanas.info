@@ -27,8 +27,6 @@ registerPaint(
 				numCircles = 50
 			]: any = this.parseProps(props);
 
-			console.log(this.parseProps(props));
-
 			for (let i = 0, max = numCircles; i < max; i++) {
 				this.drawCircle(ctx, {
 					x: this.rand(0, w),
