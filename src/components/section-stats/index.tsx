@@ -2,6 +2,7 @@ import * as React from 'react';
 import { format } from 'date-fns';
 
 import npmStats from '../../scripts/npm-stats.json';
+import { isPrerendering } from '../../scripts/shared';
 import { Svg, Section, GithubSkyline, ExternalLink } from '..';
 
 interface GeneralInsight {
@@ -323,6 +324,10 @@ export const SectionStats: React.FunctionComponent<Readonly<Props>> = (props: Re
 
 	React.useEffect(() => {
 		const onLoad = () => {
+			if (isPrerendering) {
+				return;
+			}
+
 			timeout.current = setTimeout(() => {
 				addTitles('.c-calendar--gitlab', (rect: SVGRectElement) => rect.getAttribute('title') || '');
 
