@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionArticles component Should render the SectionArticles component 1`] = `
-<Component
+<Section
   className=" c-section--slides fullsize-background"
   hasButton={true}
   hasShell={true}
@@ -22,7 +22,7 @@ exports[`SectionArticles component Should render the SectionArticles component 1
       className="o-grid__item xs-12 sm-6"
       key="0"
     >
-      <Component
+      <ExternalLink
         className="c-article-link fullsize-background"
         href="https://htmlburger.com/blog/jarvis-task-runner/"
         style={
@@ -34,13 +34,13 @@ exports[`SectionArticles component Should render the SectionArticles component 1
         <strong>
           Jarvis: The Intelligent Front-End Task Runner
         </strong>
-      </Component>
+      </ExternalLink>
     </div>
     <div
       className="o-grid__item xs-12 sm-6"
       key="1"
     >
-      <Component
+      <ExternalLink
         className="c-article-link fullsize-background"
         href="https://htmlboutique.com/blog/2015/11/13/ionic-development-by-htmlboutique/"
         style={
@@ -52,13 +52,13 @@ exports[`SectionArticles component Should render the SectionArticles component 1
         <strong>
           Ionic Development by htmlBoutique
         </strong>
-      </Component>
+      </ExternalLink>
     </div>
     <div
       className="o-grid__item xs-12 sm-6"
       key="2"
     >
-      <Component
+      <ExternalLink
         className="c-article-link fullsize-background"
         href="https://scriptexbg.wordpress.com/2021/03/11/bulk-image-watermark-with-nodejs-and-jimp/"
         style={
@@ -70,13 +70,13 @@ exports[`SectionArticles component Should render the SectionArticles component 1
         <strong>
           Bulk image watermark with NodeJS and Jimp
         </strong>
-      </Component>
+      </ExternalLink>
     </div>
     <div
       className="o-grid__item xs-12 sm-6"
       key="3"
     >
-      <Component
+      <ExternalLink
         className="c-article-link fullsize-background"
         href="https://scriptexbg.wordpress.com/2021/02/19/running-multiple-webpack-based-applications-simultaneously/"
         style={
@@ -88,8 +88,8 @@ exports[`SectionArticles component Should render the SectionArticles component 1
         <strong>
           Running multiple Webpack based applications simultaneously
         </strong>
-      </Component>
+      </ExternalLink>
     </div>
   </div>
-</Component>
+</Section>
 `;

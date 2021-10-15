@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionSocial component Should render the SectionSocial component 1`] = `
-<Component
+<Section
   hasButton={true}
   hasShell={false}
   id="social"
 >
-  <Component />
+  <Lines />
   <header
     className="c-section__head"
   >
@@ -135,7 +135,7 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
           <div
             className="stackoverflow-frame"
           >
-            <Component
+            <ExternalLink
               href="https://stackoverflow.com/users/4140082/atanas-atanasov"
             >
               <img
@@ -145,7 +145,7 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
                 title="profile for Atanas Atanasov at Stack Overflow, Q&A for professional and enthusiast programmers"
                 width="208"
               />
-            </Component>
+            </ExternalLink>
           </div>
         </div>
       </div>
@@ -158,11 +158,11 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
       className="o-shell"
     >
       <h1>
-        <Component
+        <ExternalLink
           href="https://www.last.fm/user/scriptex"
         >
           Last.FM
-        </Component>
+        </ExternalLink>
          statistics
       </h1>
       <small>
@@ -213,5 +213,5 @@ exports[`SectionSocial component Should render the SectionSocial component 1`] =
       </div>
     </div>
   </div>
-</Component>
+</Section>
 `;

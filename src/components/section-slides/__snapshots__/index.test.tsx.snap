@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionSlides component Should render the SectionSlides component 1`] = `
-<Component
+<Section
   className=" fullsize-background"
   hasButton={true}
   hasShell={true}
@@ -15,7 +15,7 @@ exports[`SectionSlides component Should render the SectionSlides component 1`] =
   <h2>
     Slides
   </h2>
-  <Component
+  <SectionNav
     active={0}
     data={
       Array [
@@ -60,5 +60,5 @@ exports[`SectionSlides component Should render the SectionSlides component 1`] =
       />
     </div>
   </div>
-</Component>
+</Section>
 `;

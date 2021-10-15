@@ -27,25 +27,25 @@ exports[`Footer component Should render the Footer component 1`] = `
     <small>
       All code is licensed under
        
-      <Component
+      <ExternalLink
         href="https://github.com/scriptex/atanas.info/blob/master/LICENSE"
       >
         MIT license
-      </Component>
+      </ExternalLink>
        
       and available 
-      <Component
+      <ExternalLink
         href="https://github.com/scriptex/atanas.info/"
       >
         on Github
-      </Component>
+      </ExternalLink>
       .
     </small>
     <small>
       Updated at 
       Mock date
     </small>
-    <Component />
+    <Funding />
   </div>
 </footer>
 `;

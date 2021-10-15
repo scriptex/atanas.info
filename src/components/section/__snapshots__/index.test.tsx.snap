@@ -11,14 +11,14 @@ exports[`Section component Should render the Section component 1`] = `
     <div
       className="o-shell"
     >
-      <Component
+      <SectionElements
         className=" test"
         hasButton={true}
         hasShell={true}
         id="section"
       >
         <Children />
-      </Component>
+      </SectionElements>
     </div>
   </section>
 </main>
@@ -35,14 +35,14 @@ exports[`Section component Should render the Section component without a button 
     <div
       className="o-shell o-shell--flex"
     >
-      <Component
+      <SectionElements
         hasButton={false}
         hasShell={true}
         id="section"
         shellClass="o-shell--flex"
       >
         <Children />
-      </Component>
+      </SectionElements>
     </div>
   </section>
 </main>
@@ -56,14 +56,14 @@ exports[`Section component Should render the Section component without a button 
     className="c-section c-section--section test"
     id="section"
   >
-    <Component
+    <SectionElements
       className=" test"
       hasButton={false}
       hasShell={false}
       id="section"
     >
       <Children />
-    </Component>
+    </SectionElements>
   </section>
 </main>
 `;
@@ -76,14 +76,14 @@ exports[`Section component Should render the Section component without a shell 1
     className="c-section c-section--section test"
     id="section"
   >
-    <Component
+    <SectionElements
       className=" test"
       hasButton={true}
       hasShell={false}
       id="section"
     >
       <Children />
-    </Component>
+    </SectionElements>
   </section>
 </main>
 `;
@@ -94,30 +94,30 @@ exports[`SectionElements component Should render the SectionElements component 1
   <div
     className="c-section__actions"
   >
-    <Component
+    <Button
       onClick={[Function]}
       type="button"
     >
       Hire me
-    </Component>
+    </Button>
     <ul
       className="c-section__actions-list"
     >
       <li>
-        <Component
+        <Button
           className="c-section__actions-close"
           onClick={[Function]}
           type="button"
         >
           Close
-        </Component>
+        </Button>
       </li>
       <li>
-        <Component
+        <Button
           onClick={[Function]}
           type="button"
         >
-          <Component
+          <Icon
             className="c-section__actions-icon"
             name="svg-email"
           />
@@ -127,15 +127,15 @@ exports[`SectionElements component Should render the SectionElements component 1
           <strong>
             directly
           </strong>
-        </Component>
+        </Button>
       </li>
       <li>
-        <Component
+        <ExternalLink
           className="c-btn"
           href="https://app.usebraintrust.com/talent/782/"
           onClick={[Function]}
         >
-          <Component
+          <Icon
             className="c-section__actions-icon"
             name="svg-braintrust"
           />
@@ -145,15 +145,15 @@ exports[`SectionElements component Should render the SectionElements component 1
           <strong>
             Braintrust
           </strong>
-        </Component>
+        </ExternalLink>
       </li>
       <li>
-        <Component
+        <ExternalLink
           className="c-btn"
           href="https://www.toptal.com/resume/atanas-atanasov"
           onClick={[Function]}
         >
-          <Component
+          <Icon
             className="c-section__actions-icon"
             name="svg-toptal"
           />
@@ -163,7 +163,7 @@ exports[`SectionElements component Should render the SectionElements component 1
           <strong>
             Toptal
           </strong>
-        </Component>
+        </ExternalLink>
       </li>
     </ul>
   </div>
@@ -188,30 +188,30 @@ exports[`SectionElements component Should render the SectionElements component w
   <div
     className="c-section__actions"
   >
-    <Component
+    <Button
       onClick={[Function]}
       type="button"
     >
       Hire me
-    </Component>
+    </Button>
     <ul
       className="c-section__actions-list"
     >
       <li>
-        <Component
+        <Button
           className="c-section__actions-close"
           onClick={[Function]}
           type="button"
         >
           Close
-        </Component>
+        </Button>
       </li>
       <li>
-        <Component
+        <Button
           onClick={[Function]}
           type="button"
         >
-          <Component
+          <Icon
             className="c-section__actions-icon"
             name="svg-email"
           />
@@ -221,15 +221,15 @@ exports[`SectionElements component Should render the SectionElements component w
           <strong>
             directly
           </strong>
-        </Component>
+        </Button>
       </li>
       <li>
-        <Component
+        <ExternalLink
           className="c-btn"
           href="https://app.usebraintrust.com/talent/782/"
           onClick={[Function]}
         >
-          <Component
+          <Icon
             className="c-section__actions-icon"
             name="svg-braintrust"
           />
@@ -239,15 +239,15 @@ exports[`SectionElements component Should render the SectionElements component w
           <strong>
             Braintrust
           </strong>
-        </Component>
+        </ExternalLink>
       </li>
       <li>
-        <Component
+        <ExternalLink
           className="c-btn"
           href="https://www.toptal.com/resume/atanas-atanasov"
           onClick={[Function]}
         >
-          <Component
+          <Icon
             className="c-section__actions-icon"
             name="svg-toptal"
           />
@@ -257,7 +257,7 @@ exports[`SectionElements component Should render the SectionElements component w
           <strong>
             Toptal
           </strong>
-        </Component>
+        </ExternalLink>
       </li>
     </ul>
   </div>

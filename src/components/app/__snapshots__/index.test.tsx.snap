@@ -2,9 +2,9 @@
 
 exports[`App component Should render the App component 1`] = `
 <BrowserRouter>
-  <Component />
+  <ScrollToTop />
   <Suspense
-    fallback={<Unknown />}
+    fallback={<Loader />}
   >
     <ContextProvider
       value={
@@ -14,12 +14,12 @@ exports[`App component Should render the App component 1`] = `
         }
       }
     >
-      <Component />
-      <Component
+      <Head />
+      <Svg
         src="/sprite.svg"
       />
-      <Component />
-      <Component />
+      <Header />
+      <Contact />
       <Switch>
         <Route
           component={
@@ -179,11 +179,11 @@ exports[`App component Should render the App component 1`] = `
           }
         />
       </Switch>
-      <Component
+      <Nav
         className="c-nav--inline"
         hasShell={true}
       />
-      <Component />
+      <Footer />
     </ContextProvider>
   </Suspense>
 </BrowserRouter>

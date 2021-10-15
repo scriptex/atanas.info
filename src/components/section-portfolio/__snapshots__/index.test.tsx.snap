@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionPortfolio component Should render the SectionPortfolio component 1`] = `
-<Component
+<Section
   actions={
-    <Unknown
+    <Button
       onClick={[Function]}
     >
       Show all
-    </Unknown>
+    </Button>
   }
   hasButton={true}
   hasShell={true}
@@ -26,7 +26,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       className="c-section__slider"
       key="0"
     >
-      <Component
+      <ExternalLink
         href="https://apps.apple.com/gb/app/e-on-home-solar-and-heating/id1468486784#?platform=iphone"
       >
         <h3>
@@ -40,7 +40,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           <br />
           TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS
         </code>
-      </Component>
+      </ExternalLink>
       <Slider
         autoplaySpeed={5000}
         dots={false}
@@ -120,7 +120,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       className="c-section__slider"
       key="1"
     >
-      <Component
+      <ExternalLink
         href="https://apps.apple.com/us/app/foton-home/id1525688620#?platform=iphone"
       >
         <h3>
@@ -134,7 +134,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           <br />
           TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS
         </code>
-      </Component>
+      </ExternalLink>
       <Slider
         autoplaySpeed={5000}
         dots={false}
@@ -214,7 +214,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       className="c-section__slider"
       key="2"
     >
-      <Component
+      <ExternalLink
         href="https://play.google.com/store/apps/details?id=com.eon.home.eu"
       >
         <h3>
@@ -228,7 +228,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           <br />
           TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS
         </code>
-      </Component>
+      </ExternalLink>
       <Slider
         autoplaySpeed={5000}
         dots={false}
@@ -308,7 +308,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       className="c-section__slider"
       key="3"
     >
-      <Component
+      <ExternalLink
         href="https://play.google.com/store/apps/details?id=com.foton.home.eu"
       >
         <h3>
@@ -322,7 +322,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           <br />
           TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS
         </code>
-      </Component>
+      </ExternalLink>
       <Slider
         autoplaySpeed={5000}
         dots={false}
@@ -402,7 +402,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       className="c-section__slider"
       key="4"
     >
-      <Component
+      <ExternalLink
         href="https://apps.apple.com/gb/app/e-on-home-solar-and-heating/id1468486784#?platform=ipad"
       >
         <h3>
@@ -416,7 +416,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           <br />
           TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS
         </code>
-      </Component>
+      </ExternalLink>
       <Slider
         autoplaySpeed={5000}
         dots={false}
@@ -457,7 +457,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       className="c-section__slider"
       key="5"
     >
-      <Component
+      <ExternalLink
         href="https://apps.apple.com/us/app/foton-home/id1525688620#?platform=ipad"
       >
         <h3>
@@ -471,7 +471,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           <br />
           TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS
         </code>
-      </Component>
+      </ExternalLink>
       <Slider
         autoplaySpeed={5000}
         dots={false}
@@ -515,7 +515,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
   <div
     className="c-section__body"
   >
-    <Component
+    <ExternalLink
       className=""
       href="https://app.home.eon.com/"
       key="0"
@@ -545,8 +545,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           width="600"
         />
       </object>
-    </Component>
-    <Component
+    </ExternalLink>
+    <ExternalLink
       className=""
       href="https://hems-admin-portal.eon.ooo/"
       key="1"
@@ -576,8 +576,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           width="600"
         />
       </object>
-    </Component>
-    <Component
+    </ExternalLink>
+    <ExternalLink
       className=""
       href="https://xpndnow.com/"
       key="2"
@@ -607,8 +607,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           width="600"
         />
       </object>
-    </Component>
-    <Component
+    </ExternalLink>
+    <ExternalLink
       className=""
       href="https://xpndnow.com/ebook"
       key="3"
@@ -638,8 +638,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           width="600"
         />
       </object>
-    </Component>
-    <Component
+    </ExternalLink>
+    <ExternalLink
       className=""
       href="https://demo.xpndnow.com/"
       key="4"
@@ -669,8 +669,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           width="600"
         />
       </object>
-    </Component>
-    <Component
+    </ExternalLink>
+    <ExternalLink
       className=""
       href="http://emailio.com/"
       key="5"
@@ -700,8 +700,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           width="600"
         />
       </object>
-    </Component>
-    <Component
+    </ExternalLink>
+    <ExternalLink
       className=""
       href="https://www.nulla.tv/"
       key="6"
@@ -731,8 +731,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           width="600"
         />
       </object>
-    </Component>
-    <Component
+    </ExternalLink>
+    <ExternalLink
       className=""
       href="https://kinetikautomotive.com/"
       key="7"
@@ -762,8 +762,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           width="600"
         />
       </object>
-    </Component>
-    <Component
+    </ExternalLink>
+    <ExternalLink
       className=""
       href="https://www.sod.bg/"
       key="8"
@@ -793,8 +793,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           width="600"
         />
       </object>
-    </Component>
-    <Component
+    </ExternalLink>
+    <ExternalLink
       className="disabled"
       href=""
       key="9"
@@ -824,7 +824,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           width="600"
         />
       </object>
-    </Component>
+    </ExternalLink>
   </div>
-</Component>
+</Section>
 `;

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionAbout component Should render the SectionAbout component 1`] = `
-<Component
+<Section
   className=" c-article fullsize-background"
   hasButton={true}
   hasShell={true}
@@ -138,6 +138,6 @@ exports[`SectionAbout component Should render the SectionAbout component 1`] = `
       The latest project I worked on is an award-winning, large, international IoT application for one of the world's largest investor-owned electric utility service providers which aims to provide users from all over Europe with the ability to control their homes' smart appliances and energy consumption.
     </p>
   </div>
-  <Component />
-</Component>
+  <LastAbout />
+</Section>
 `;

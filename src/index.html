@@ -8,11 +8,11 @@
 
 		<link rel="stylesheet" href="./index.css" />
 
-		<script async>
-			CSS.paintWorklet.addModule('houdini/avatar-polygon.js');
-			CSS.paintWorklet.addModule('houdini/bubbles.js');
-			CSS.paintWorklet.addModule('houdini/circles.js');
-			CSS.paintWorklet.addModule('houdini/slanted-backgrounds.js');
+		<script async type="module">
+			CSS.paintWorklet.addModule(new URL('./houdini/avatar-polygon.ts', import.meta.url));
+			CSS.paintWorklet.addModule(new URL('./houdini/bubbles.ts', import.meta.url));
+			CSS.paintWorklet.addModule(new URL('./houdini/circles.ts', import.meta.url));
+			CSS.paintWorklet.addModule(new URL('./houdini/slanted-backgrounds.ts', import.meta.url));
 		</script>
 	</head>
 	<body>
@@ -20,6 +20,6 @@
 
 		<div id="root"></div>
 
-		<script async src="./index.tsx"></script>
+		<script async type="module" src="./index.tsx"></script>
 	</body>
 </html>

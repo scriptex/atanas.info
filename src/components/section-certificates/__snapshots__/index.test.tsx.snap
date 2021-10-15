@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionCertificates component Should render the SectionCertificates component 1`] = `
-<Component
+<Section
   hasButton={true}
   hasShell={true}
   id="certificates"
@@ -16,7 +16,7 @@ exports[`SectionCertificates component Should render the SectionCertificates com
       className="o-grid__item xs-12 sm-6"
       key="0"
     >
-      <Component
+      <ExternalLink
         className="c-certificate"
         href="cert/html.pdf"
       >
@@ -26,13 +26,13 @@ exports[`SectionCertificates component Should render the SectionCertificates com
           src="cert/html.jpg"
           width="600"
         />
-      </Component>
+      </ExternalLink>
     </div>
     <div
       className="o-grid__item xs-12 sm-6"
       key="1"
     >
-      <Component
+      <ExternalLink
         className="c-certificate"
         href="cert/javascript.pdf"
       >
@@ -42,13 +42,13 @@ exports[`SectionCertificates component Should render the SectionCertificates com
           src="cert/javascript.jpg"
           width="600"
         />
-      </Component>
+      </ExternalLink>
     </div>
     <div
       className="o-grid__item xs-12 sm-6"
       key="2"
     >
-      <Component
+      <ExternalLink
         className="c-certificate"
         href="cert/python.pdf"
       >
@@ -58,13 +58,13 @@ exports[`SectionCertificates component Should render the SectionCertificates com
           src="cert/python.jpg"
           width="600"
         />
-      </Component>
+      </ExternalLink>
     </div>
     <div
       className="o-grid__item xs-12 sm-6"
       key="3"
     >
-      <Component
+      <ExternalLink
         className="c-certificate"
         href="cert/react.pdf"
       >
@@ -74,13 +74,13 @@ exports[`SectionCertificates component Should render the SectionCertificates com
           src="cert/react.jpg"
           width="600"
         />
-      </Component>
+      </ExternalLink>
     </div>
     <div
       className="o-grid__item xs-12 sm-6"
       key="4"
     >
-      <Component
+      <ExternalLink
         className="c-certificate"
         href="cert/css.pdf"
       >
@@ -90,13 +90,13 @@ exports[`SectionCertificates component Should render the SectionCertificates com
           src="cert/css.jpg"
           width="600"
         />
-      </Component>
+      </ExternalLink>
     </div>
     <div
       className="o-grid__item xs-12 sm-6"
       key="5"
     >
-      <Component
+      <ExternalLink
         className="c-certificate"
         href="cert/deno.pdf"
       >
@@ -106,8 +106,8 @@ exports[`SectionCertificates component Should render the SectionCertificates com
           src="cert/deno.jpg"
           width="600"
         />
-      </Component>
+      </ExternalLink>
     </div>
   </div>
-</Component>
+</Section>
 `;
