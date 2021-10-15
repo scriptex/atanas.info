@@ -1,4 +1,6 @@
 {
 	"editor.formatOnSave": true,
+	"jest.autoRun": "off",
+	"jest.jestCommandLine": "yarn test",
 	"typescript.tsdk": "node_modules/typescript/lib"
 }

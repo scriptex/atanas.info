@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionTimeline component Should render the SectionTimeline component 1`] = `
-<Component
+<Section
   hasButton={true}
   hasShell={true}
   id="timeline"
@@ -20,7 +20,7 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       contentStyle={null}
       date="March 1985"
       dateClassName=""
-      icon={<Unknown />}
+      icon={<PersonalIcon />}
       iconClassName=""
       iconOnClick={null}
       iconStyle={null}
@@ -56,7 +56,7 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       contentStyle={null}
       date="August 2003"
       dateClassName=""
-      icon={<Unknown />}
+      icon={<EducationIcon />}
       iconClassName=""
       iconOnClick={null}
       iconStyle={null}
@@ -76,11 +76,11 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
         className="vertical-timeline-element-title"
       >
         🏫 I graduated 
-        <Component
+        <ExternalLink
           href="https://pgikj.com/"
         >
           high school
-        </Component>
+        </ExternalLink>
       </h3>
       <h4
         className="vertical-timeline-element-subtitle"
@@ -97,7 +97,7 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       contentStyle={null}
       date="July 2007"
       dateClassName=""
-      icon={<Unknown />}
+      icon={<EducationIcon />}
       iconClassName=""
       iconOnClick={null}
       iconStyle={null}
@@ -126,11 +126,11 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       <p>
         I graduated from the
          
-        <Component
+        <ExternalLink
           href="https://ue-varna.bg/"
         >
           University of Economics in Varna
-        </Component>
+        </ExternalLink>
       </p>
     </VerticalTimelineElement>
     <VerticalTimelineElement
@@ -139,7 +139,7 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       contentStyle={null}
       date="July 2008"
       dateClassName=""
-      icon={<Unknown />}
+      icon={<EducationIcon />}
       iconClassName=""
       iconOnClick={null}
       iconStyle={null}
@@ -168,11 +168,11 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       <p>
         I graduated from the
          
-        <Component
+        <ExternalLink
           href="https://ue-varna.bg/"
         >
           University of Economics in Varna
-        </Component>
+        </ExternalLink>
       </p>
     </VerticalTimelineElement>
     <VerticalTimelineElement
@@ -181,7 +181,7 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       contentStyle={null}
       date="October 2010"
       dateClassName=""
-      icon={<Unknown />}
+      icon={<WorkIcon />}
       iconClassName=""
       iconOnClick={null}
       iconStyle={null}
@@ -209,11 +209,11 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       </h4>
       <p>
         With enormous help from 
-        <Component
+        <ExternalLink
           href="https://marinatanasov.com/"
         >
           my brother
-        </Component>
+        </ExternalLink>
          I started the path of the Web developer. My first steps included learning the basics of HTML and CSS.
       </p>
     </VerticalTimelineElement>
@@ -223,7 +223,7 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       contentStyle={null}
       date="May 2012"
       dateClassName=""
-      icon={<Unknown />}
+      icon={<WorkIcon />}
       iconClassName=""
       iconOnClick={null}
       iconStyle={null}
@@ -259,7 +259,7 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       contentStyle={null}
       date="April 2013"
       dateClassName=""
-      icon={<Unknown />}
+      icon={<WorkIcon />}
       iconClassName=""
       iconOnClick={null}
       iconStyle={null}
@@ -295,7 +295,7 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       contentStyle={null}
       date="July 2015"
       dateClassName=""
-      icon={<Unknown />}
+      icon={<PersonalIcon />}
       iconClassName=""
       iconOnClick={null}
       iconStyle={null}
@@ -331,7 +331,7 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       contentStyle={null}
       date="October 2015"
       dateClassName=""
-      icon={<Unknown />}
+      icon={<PersonalIcon />}
       iconClassName=""
       iconOnClick={null}
       iconStyle={null}
@@ -367,7 +367,7 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       contentStyle={null}
       date="November 2015"
       dateClassName=""
-      icon={<Unknown />}
+      icon={<WorkIcon />}
       iconClassName=""
       iconOnClick={null}
       iconStyle={null}
@@ -403,7 +403,7 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       contentStyle={null}
       date="October 2017"
       dateClassName=""
-      icon={<Unknown />}
+      icon={<WorkIcon />}
       iconClassName=""
       iconOnClick={null}
       iconStyle={null}
@@ -439,7 +439,7 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       contentStyle={null}
       date="January 2018"
       dateClassName=""
-      icon={<Unknown />}
+      icon={<WorkIcon />}
       iconClassName=""
       iconOnClick={null}
       iconStyle={null}
@@ -475,7 +475,7 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       contentStyle={null}
       date="June 2018"
       dateClassName=""
-      icon={<Unknown />}
+      icon={<WorkIcon />}
       iconClassName=""
       iconOnClick={null}
       iconStyle={null}
@@ -511,7 +511,7 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       contentStyle={null}
       date="June 2018"
       dateClassName=""
-      icon={<Unknown />}
+      icon={<WorkIcon />}
       iconClassName=""
       iconOnClick={null}
       iconStyle={null}
@@ -547,7 +547,7 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       contentStyle={null}
       date="November 2019"
       dateClassName=""
-      icon={<Unknown />}
+      icon={<WorkIcon />}
       iconClassName=""
       iconOnClick={null}
       iconStyle={null}
@@ -583,7 +583,7 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       contentStyle={null}
       date="November 2019"
       dateClassName=""
-      icon={<Unknown />}
+      icon={<PersonalIcon />}
       iconClassName=""
       iconOnClick={null}
       iconStyle={null}
@@ -619,7 +619,7 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       contentStyle={null}
       date="September 2021"
       dateClassName=""
-      icon={<Unknown />}
+      icon={<WorkIcon />}
       iconClassName=""
       iconOnClick={null}
       iconStyle={null}
@@ -650,5 +650,5 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       </p>
     </VerticalTimelineElement>
   </VerticalTimeline>
-</Component>
+</Section>
 `;

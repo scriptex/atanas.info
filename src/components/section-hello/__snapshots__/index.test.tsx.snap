@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionHello component Should render the SectionHello component 1`] = `
-<Component
+<Section
   hasButton={false}
   hasShell={true}
   id="hello"
@@ -11,8 +11,8 @@ exports[`SectionHello component Should render the SectionHello component 1`] = `
     className="c-canvas"
     id="canvas"
   />
-  <Component />
-</Component>
+  <Slider />
+</Section>
 `;
 
 exports[`Slider component Should render the Slider component 1`] = `

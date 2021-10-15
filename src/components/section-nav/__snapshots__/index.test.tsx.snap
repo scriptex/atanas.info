@@ -9,25 +9,25 @@ exports[`SectionNav component Should render the SectionNav component 1`] = `
       className="current"
       key="0"
     >
-      <Component
+      <Button
         aria-label="Switch to Title 1"
         onClick={[Function]}
         type="button"
       >
         Title 1
-      </Component>
+      </Button>
     </li>
     <li
       className=""
       key="1"
     >
-      <Component
+      <Button
         aria-label="Switch to Title 2"
         onClick={[Function]}
         type="button"
       >
         Title 2
-      </Component>
+      </Button>
     </li>
   </ul>
 </nav>
@@ -42,25 +42,25 @@ exports[`SectionNav component Should render the SectionNav component 2`] = `
       className="current"
       key="0"
     >
-      <Component
+      <Button
         aria-label="Switch to Title 1"
         onClick={[Function]}
         type="button"
       >
         Title 1
-      </Component>
+      </Button>
     </li>
     <li
       className=""
       key="1"
     >
-      <Component
+      <Button
         aria-label="Switch to Title 2"
         onClick={[Function]}
         type="button"
       >
         Title 2
-      </Component>
+      </Button>
     </li>
   </ul>
 </nav>

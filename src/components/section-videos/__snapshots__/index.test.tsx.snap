@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionVideos component Should render the SectionVideos component 1`] = `
-<Component
+<Section
   className=" c-section--videos"
   hasButton={true}
   hasShell={true}
   id="videos"
 >
-  <Component />
+  <Lines />
   <h2>
     Videos
   </h2>
-  <Component
+  <SectionNav
     active={0}
     data={
       Array [
@@ -58,5 +58,5 @@ exports[`SectionVideos component Should render the SectionVideos component 1`] =
       />
     </div>
   </div>
-</Component>
+</Section>
 `;

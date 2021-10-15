@@ -9,7 +9,7 @@ exports[`Header component Should render the Header component 1`] = `
     title="Back to homepage"
     to="/"
   >
-    <Component
+    <Icon
       className="c-svg-logo"
       name="svg-logo"
     />
@@ -24,7 +24,7 @@ exports[`Header component Should render the Header component 1`] = `
     <span />
     <span />
   </button>
-  <Component
+  <Nav
     onClick={[Function]}
   />
 </header>
