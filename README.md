@@ -5,7 +5,7 @@
 [![Build](https://github.com/scriptex/atanas.info/workflows/Build/badge.svg)](https://github.com/scriptex/atanas.info/actions?query=workflow%3ABuild)
 [![Deploy](https://github.com/scriptex/atanas.info/workflows/Deploy/badge.svg)](https://github.com/scriptex/atanas.info/actions?query=workflow%3ADeploy)
 [![CodeQL](https://github.com/scriptex/atanas.info/workflows/CodeQL/badge.svg)](https://github.com/scriptex/atanas.info/actions?query=workflow%3ACodeQL)
-[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/74727aa736934f8197bea1d817c5c7bb)](https://www.codacy.com/manual/scriptex/atanas.info)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/6fa769779a30427e95c9fc7f399182d9)](https://www.codacy.com/gh/scriptex/atanas.info/dashboard)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/6fa769779a30427e95c9fc7f399182d9)](https://www.codacy.com/gh/scriptex/atanas.info/dashboard)
 [![codebeat badge](https://codebeat.co/badges/807a5061-9e43-4fec-9819-1c47c37c2e9f)](https://codebeat.co/projects/github-com-scriptex-atanas-info-master)
 [![CodeFactor](https://www.codefactor.io/repository/github/scriptex/atanas.info/badge)](https://www.codefactor.io/repository/github/scriptex/atanas.info)
