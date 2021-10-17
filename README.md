@@ -1,5 +1,6 @@
 # https://atanas.info 
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/81c26ddce0894b338c362c978d75808c)](https://app.codacy.com/gh/scriptex/atanas.info?utm_source=github.com&utm_medium=referral&utm_content=scriptex/atanas.info&utm_campaign=Badge_Grade_Settings)
 [![Travis CI](https://travis-ci.com/scriptex/atanas.info.svg?branch=master)](https://travis-ci.com/scriptex/atanas.info)
 [![Circle CI](https://circleci.com/gh/scriptex/atanas.info.svg?style=svg)](https://circleci.com/gh/scriptex/atanas.info)
 [![Build](https://github.com/scriptex/atanas.info/workflows/Build/badge.svg)](https://github.com/scriptex/atanas.info/actions?query=workflow%3ABuild)
