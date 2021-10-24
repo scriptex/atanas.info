@@ -1348,7 +1348,7 @@ body {
 		text-align: center;
 		max-width: 62rem;
 		@mixin flex-row wrap, center, center;
-		padding: 0 0 1rem 0;
+		padding: 0 0 1rem;
 		margin: auto;
 
 		& li {
@@ -3119,7 +3119,7 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 		animation: stars 100s linear infinite;
 	}
 
-	&:after {
+	&::after {
 		width: 2px;
 		height: 2px;
 		box-shadow: 1017px 1341px #fff, 951px 682px #fff, 122px 852px #fff, 213px 1926px #fff, 8px 469px #fff,
@@ -3203,7 +3203,7 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 			height: 15vh;
 			top: -50%;
 			left: 0;
-			background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+			background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 75%, #fff 100%);
 			animation-name: drop-vertical;
 		}
 
@@ -3235,7 +3235,7 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 			height: 100%;
 			top: 0;
 			left: 50%;
-			background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+			background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fff 75%, #fff 100%);
 			animation-name: drop-horizontal;
 			animation-delay: 0.5s;
 		}
