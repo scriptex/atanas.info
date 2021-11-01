@@ -2732,27 +2732,73 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 	}
 }
 
-.c-funding {
-	& svg {
-		max-width: 37.5rem;
-		opacity: 0;
-		display: block;
-		position: fixed;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		z-index: 100;
-		margin: auto;
-		overflow: visible;
-		pointer-events: none;
-		transform: scale(0);
-		transition: all var(--timing) var(--easing);
-	}
+.c-funding__knob,
+.c-funding__crypto {
+	opacity: 0;
+	display: block;
+	position: fixed;
+	pointer-events: none;
+	transition: all var(--timing) var(--easing);
+}
+
+.c-funding__knob {
+	max-width: 37.5rem;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	margin: auto;
+	overflow: visible;
 
 	& path {
 		transition: fill var(--timing) var(--easing);
 	}
+}
+
+.c-funding__crypto {
+	width: 8rem;
+	top: 50%;
+	left: 50%;
+	z-index: 101;
+	margin: 0;
+
+	& h6 {
+		font-size: 0.875rem;
+		margin: 0 0 0.5rem;
+	}
+
+	& svg {
+		width: 100%;
+		height: 100%;
+		display: block;
+		margin: 0;
+	}
+
+	& small {
+		display: block;
+	}
+
+	& button {
+		width: 3rem;
+		height: 3rem;
+		padding: 0;
+		border: 0;
+		margin: 0 0 0.5rem;
+		background: none;
+		border-radius: 0;
+		box-shadow: none;
+		appearance: none;
+		cursor: pointer;
+	}
+}
+
+.c-funding__crypto--bitcoin {
+	margin: -18rem 0 0 -18rem;
+}
+
+.c-funding__crypto--shiba-inu {
+	margin: -18rem 0 0 10rem;
 }
 
 .c-funding__item {
@@ -2796,7 +2842,8 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 }
 
 .c-funding--open {
-	& svg {
+	& .c-funding__knob,
+	& .c-funding__crypto {
 		opacity: 1;
 		transform: scale(1);
 		pointer-events: auto;
@@ -2805,6 +2852,16 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 	& .c-funding__backdrop {
 		opacity: 0.8;
 		pointer-events: auto;
+	}
+}
+
+@media (--mobile) {
+	.c-funding__crypto--bitcoin {
+		margin: -15rem 0 0 -11rem;
+	}
+
+	.c-funding__crypto--shiba-inu {
+		margin: -15rem 0 0 3rem;
 	}
 }
 
