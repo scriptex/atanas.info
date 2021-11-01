@@ -1,10 +1,10 @@
-import * as globby from 'globby';
+import { sync } from 'glob';
 
 import { resolve } from 'path';
 import { promises as fs } from 'fs';
 
 const readFiles = async (dirname: string, onSuccess: (filename: string, content: string) => unknown) => {
-	const files = await globby(`${dirname}/**/*.html`);
+	const files = sync(`${dirname}/**/*.html`);
 
 	for (const file of files) {
 		const content = await fs.readFile(resolve(dirname, file));
