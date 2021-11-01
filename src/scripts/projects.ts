@@ -50,28 +50,28 @@ export const projects: Project[] = [
 		image: 'images/temp/xpnd.png',
 		title: 'XPND',
 		description: 'TypeScript, SCSS, React, Redux, NodeJS, Jest, Enzyme',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://xpndnow.com/ebook',
 		image: 'images/temp/xpnd-ebook.png',
 		title: 'XPND Ebook',
 		description: 'TypeScript, SCSS, React, Redux, NodeJS',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://demo.xpndnow.com/',
 		image: 'images/temp/XPND-demo-application.png',
 		title: 'XPND demo application',
 		description: 'TypeScript, SCSS, React, Redux, NodeJS',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://emailio.com/',
 		image: 'images/temp/Emailio-Landing.png',
 		title: 'Emailio Landing',
 		description: 'CSS, JavaScript, HTML',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://emailio.vercel.app/',
@@ -183,21 +183,21 @@ export const projects: Project[] = [
 		image: 'images/temp/malaika-pictures.png',
 		title: 'Malaika Pictures',
 		description: 'HTML5, CSS3, JavaScript, Fullpage JS, Shuffle JS, PHP, WordPress',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://pascoe.cn/',
 		image: 'images/temp/pascoe.png',
 		title: 'Pascoe',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://varnafoodtours.com/',
 		image: 'images/temp/Varna-Food-Tours.png',
 		title: 'Varna Food Tours',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://ftypeforsale.com/',
@@ -239,7 +239,7 @@ export const projects: Project[] = [
 		image: 'images/temp/one-logic.png',
 		title: 'Dan Ariely',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://shortwhale.com/',
@@ -253,7 +253,14 @@ export const projects: Project[] = [
 		image: 'images/temp/danariely.png',
 		title: 'One Logic',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
-		skip: false
+		skip: true
+	},
+	{
+		url: 'https://social-header.tk/',
+		image: 'images/temp/social-header.png',
+		title: 'Social Header',
+		description: 'React, SCSS, Parcel',
+		skip: true
 	},
 	{
 		url: '',
