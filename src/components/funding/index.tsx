@@ -2,17 +2,20 @@
 import * as React from 'react';
 import gsap from 'gsap';
 import Draggable from 'gsap/Draggable';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+
+import { Icon } from '..';
 
 gsap.registerPlugin(Draggable);
 
-interface Props {
+interface ItemProps {
 	url: string;
 	icon: string;
 	name: string;
 	matrix: string;
 }
 
-export const FundingItem: React.FC<Props> = (props: Props) => (
+export const FundingItem: React.FC<ItemProps> = (props: ItemProps) => (
 	<g transform={props.matrix} className="c-funding__item">
 		<path fill="none" d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z" />
 
@@ -40,6 +43,36 @@ export const FundingItem: React.FC<Props> = (props: Props) => (
 	</g>
 );
 
+interface CryptoProps {
+	name: string;
+	title: string;
+	wallet: string;
+}
+
+export const FundingCrypto: React.FC<CryptoProps> = ({ name, title, wallet }: CryptoProps) => {
+	const [copied, setCopied] = React.useState(false);
+
+	return (
+		<CopyToClipboard text={wallet} onCopy={() => setCopied(true)}>
+			<div className={`c-funding__crypto c-funding__crypto--${name}`}>
+				<h6>{title}</h6>
+
+				<button title={title}>
+					<Icon name={`svg-${name}`} className="c-funding__crypto-icon" />
+				</button>
+
+				{copied ? (
+					<small>✅ Copied!</small>
+				) : (
+					<small>
+						<em>Click to copy wallet address</em>
+					</small>
+				)}
+			</div>
+		</CopyToClipboard>
+	);
+};
+
 export const Funding: React.FC = () => {
 	const knob = React.useRef(null);
 	const [open, setOpen] = React.useState(false);
@@ -56,7 +89,7 @@ export const Funding: React.FC = () => {
 
 			<div className="c-funding__backdrop" onClick={() => setOpen(false)} />
 
-			<svg viewBox="-100 -100 700 700" ref={knob}>
+			<svg viewBox="-100 -100 700 700" ref={knob} className="c-funding__knob">
 				<g>
 					<FundingItem
 						url="https://github.com/sponsors/scriptex"
@@ -109,6 +142,14 @@ export const Funding: React.FC = () => {
 					</text>
 				</g>
 			</svg>
+
+			<FundingCrypto name="bitcoin" title="Donate Bitcoin" wallet="39fTgBStghawKyJdTd83Qg8cFkq5MQprLT" />
+
+			<FundingCrypto
+				name="shiba-inu"
+				title="Donate Shiba Inu"
+				wallet="0x2c811dBd715154ead14f8E25340ec831655dCA94"
+			/>
 		</div>
 	);
 };

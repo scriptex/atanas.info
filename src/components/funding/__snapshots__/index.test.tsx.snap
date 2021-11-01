@@ -13,6 +13,7 @@ exports[`Funding component Should render the Funding component 1`] = `
     class="c-funding__backdrop"
   />
   <svg
+    class="c-funding__knob"
     viewBox="-100 -100 700 700"
   >
     <g>
@@ -235,5 +236,51 @@ exports[`Funding component Should render the Funding component 1`] = `
       </text>
     </g>
   </svg>
+  <div
+    class="c-funding__crypto c-funding__crypto--bitcoin"
+  >
+    <h6>
+      Donate Bitcoin
+    </h6>
+    <button
+      title="Donate Bitcoin"
+    >
+      <svg
+        class="c-funding__crypto-icon"
+      >
+        <use
+          href="#svg-bitcoin"
+        />
+      </svg>
+    </button>
+    <small>
+      <em>
+        Click to copy wallet address
+      </em>
+    </small>
+  </div>
+  <div
+    class="c-funding__crypto c-funding__crypto--shiba-inu"
+  >
+    <h6>
+      Donate Shiba Inu
+    </h6>
+    <button
+      title="Donate Shiba Inu"
+    >
+      <svg
+        class="c-funding__crypto-icon"
+      >
+        <use
+          href="#svg-shiba-inu"
+        />
+      </svg>
+    </button>
+    <small>
+      <em>
+        Click to copy wallet address
+      </em>
+    </small>
+  </div>
 </div>
 `;
