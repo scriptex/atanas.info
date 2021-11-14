@@ -236,7 +236,7 @@ export const projects: Project[] = [
 	},
 	{
 		url: 'https://danariely.com/',
-		image: 'images/temp/one-logic.png',
+		image: 'images/temp/danariely.png',
 		title: 'Dan Ariely',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
 		skip: true
@@ -250,7 +250,7 @@ export const projects: Project[] = [
 	},
 	{
 		url: 'https://onelogic.de/',
-		image: 'images/temp/danariely.png',
+		image: 'images/temp/one-logic.png',
 		title: 'One Logic',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
 		skip: true
