@@ -1,12 +1,7 @@
 module.exports = {
 	plugins: {
 		'postcss-preset-env': {
-			stage: 1,
-			features: {
-				'color-mod-function': {
-					importFrom: 'src/index.pcss'
-				}
-			}
+			stage: 1
 		},
 		autoprefixer: true,
 		'postcss-import': true,
@@ -14,6 +9,7 @@ module.exports = {
 		'postcss-each': true,
 		'postcss-for': true,
 		'postcss-mixins': true,
+		'postcss-color-mod-function': true,
 		'postcss-extend': true,
 		'postcss-utilities': true,
 		'postcss-flexbugs-fixes': true,
