@@ -138,7 +138,7 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 
 					<div className="c-calendar__outer">
 						<div className="c-calendar c-calendar--github">
-							<ReactGitHubCalendar tooltips userName="scriptex" />
+							{isPrerendering ? null : <ReactGitHubCalendar tooltips userName="scriptex" />}
 						</div>
 					</div>
 
@@ -172,8 +172,8 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 
 export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
 	const { error, general, calendar, updated, repositories } = props.data;
-	const calendarPlaceholder1 = React.useRef(null);
-	const calendarPlaceholder2 = React.useRef(null);
+	const calendarPlaceholder1: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
+	const calendarPlaceholder2: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
 
 	if (error) {
 		return (
@@ -221,11 +221,11 @@ export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 	];
 
 	React.useEffect(() => {
-		if (calendarPlaceholder1.current) {
+		if (calendarPlaceholder1.current && !isPrerendering) {
 			new GitlabActivityCalendar(calendarPlaceholder1.current, calendar);
 		}
 
-		if (calendarPlaceholder2.current) {
+		if (calendarPlaceholder2.current && !isPrerendering) {
 			new GitlabActivityCalendar(calendarPlaceholder2.current, gitlabCalendarData);
 		}
 	}, []);
