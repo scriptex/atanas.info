@@ -1448,10 +1448,23 @@ body {
 			fill: var(--color-calendar-graph-day-L4-bg);
 		}
 	}
+
+	& svg + div a {
+		display: none;
+	}
+
+	& .contrib-column {
+		border: 0;
+	}
 }
 
 .c-calendar--gitlab {
-	& .user-contrib-cell {
+	& text {
+		font-size: 0.75rem;
+		fill: currentColor;
+	}
+
+	& rect {
 		&[data-level='0'] {
 			fill: #ededed;
 		}
@@ -1481,30 +1494,8 @@ body {
 	-webkit-overflow-scrolling: touch;
 }
 
-.c-calendar__legend {
-	font-size: 0.75rem;
-	@mixin flex-row nowrap, center, center;
-
-	& ul {
-		@mixin flex-row nowrap, center, flex-end;
-		padding: 0 !important;
-		margin: 0 0.25rem;
-	}
-
-	& li {
-		width: 0.625rem;
-		height: 0.625rem;
-		margin: 0 0.125rem;
-		border-radius: 0.125rem;
-	}
-}
-
-.c-calendar__hint {
-	font-size: 0.75rem;
-	text-align: right;
-	position: absolute;
-	bottom: 0.325rem;
-	right: 0.25rem;
+.c-calendar__entry:not(:first-child) {
+	padding-top: 3.5rem;
 }
 
 @media (--tablet-portrait) {
@@ -1551,6 +1542,10 @@ body {
 		& ul {
 			padding: 0;
 		}
+	}
+
+	.c-calendar__entry:not(:first-child) {
+		padding-top: 2rem;
 	}
 }
 

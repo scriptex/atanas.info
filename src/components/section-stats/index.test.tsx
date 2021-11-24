@@ -127,6 +127,11 @@ jest.mock('../../scripts/npm-stats.json', () => ({
 	}
 }));
 
+jest.mock('react-ts-github-calendar', () => ({
+	__esModule: true,
+	default: 'GitHubCalendar'
+}));
+
 describe('SectionStats component', () => {
 	it('Should render the SectionStats component', () => {
 		const wrapper = shallow(
