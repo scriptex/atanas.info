@@ -39,6 +39,7 @@ exports[`SectionVideos component Should render the SectionVideos component 1`] =
       className="c-section__frame current"
       key="0"
     >
+      <Loader />
       <lite-youtube
         params="autoplay=0"
         playlabel="Do more with Sublime Text"
@@ -50,6 +51,7 @@ exports[`SectionVideos component Should render the SectionVideos component 1`] =
       className="c-section__frame"
       key="1"
     >
+      <Loader />
       <lite-youtube
         params="autoplay=0"
         playlabel="Jarvis: Frontend project setup"

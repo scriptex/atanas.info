@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 import { isPrerendering } from '../../scripts/shared';
-import { articles, Article } from '../../scripts/articles';
-import { Section, ExternalLink } from '..';
+import { articles, Article } from '../../data/articles';
+import { Loader, Section, ExternalLink } from '..';
 
 export const SectionArticles: React.FunctionComponent = () => (
 	<Section
@@ -23,6 +23,8 @@ export const SectionArticles: React.FunctionComponent = () => (
 					>
 						<strong>{article.title}</strong>
 					</ExternalLink>
+
+					<Loader />
 				</div>
 			))}
 		</div>

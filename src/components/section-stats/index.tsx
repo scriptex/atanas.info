@@ -1,9 +1,12 @@
 import * as React from 'react';
 import { format } from 'date-fns';
+import ReactGitHubCalendar from 'react-ts-github-calendar';
 
-import npmStats from '../../scripts/npm-stats.json';
+import npmStats from '../../data/npm-stats.json';
 import { isPrerendering } from '../../scripts/shared';
-import { Svg, Section, GithubSkyline, ExternalLink } from '..';
+import gitlabCalendarData from '../../data/gitlab-calendar.json';
+import GitlabActivityCalendar from '../../scripts/gitlab-calendar';
+import { Section, GithubSkyline, ExternalLink } from '..';
 
 interface GeneralInsight {
 	readonly title: string;
@@ -135,22 +138,7 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 
 					<div className="c-calendar__outer">
 						<div className="c-calendar c-calendar--github">
-							<Svg src="/github-calendar.svg" />
-
-							<div
-								className="c-calendar__legend"
-								title="A summary of pull requests, issues opened, and commits to the default and gh-pages branches."
-							>
-								Less
-								<ul>
-									<li style={{ backgroundColor: 'var(--color-calendar-graph-day-bg)' }}></li>
-									<li style={{ backgroundColor: 'var(--color-calendar-graph-day-L1-bg)' }}></li>
-									<li style={{ backgroundColor: 'var(--color-calendar-graph-day-L2-bg)' }}></li>
-									<li style={{ backgroundColor: 'var(--color-calendar-graph-day-L3-bg)' }}></li>
-									<li style={{ backgroundColor: 'var(--color-calendar-graph-day-L4-bg)' }}></li>
-								</ul>
-								More
-							</div>
+							{isPrerendering ? null : <ReactGitHubCalendar tooltips userName="scriptex" />}
 						</div>
 					</div>
 
@@ -184,6 +172,8 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 
 export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
 	const { error, general, calendar, updated, repositories } = props.data;
+	const calendarPlaceholder1: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
+	const calendarPlaceholder2: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
 
 	if (error) {
 		return (
@@ -230,6 +220,16 @@ export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 		}
 	];
 
+	React.useEffect(() => {
+		if (calendarPlaceholder1.current && !isPrerendering) {
+			new GitlabActivityCalendar(calendarPlaceholder1.current, calendar);
+		}
+
+		if (calendarPlaceholder2.current && !isPrerendering) {
+			new GitlabActivityCalendar(calendarPlaceholder2.current, gitlabCalendarData);
+		}
+	}, []);
+
 	return (
 		<>
 			<div className="c-section__entry c-section__entry--no-background">
@@ -251,13 +251,21 @@ export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 				<small className="c-section__stamp">Last updated: {formatDate(updated, 'dd MMM yyyy HH:mm:ss')}</small>
 
 				<div className="o-shell">
-					<h2>Gitlab contributions calendar</h2>
+					<h2>Gitlab contributions calendars</h2>
 
 					<div className="c-calendar__outer">
 						<div className="c-calendar c-calendar--gitlab">
-							<Svg src="/gitlab-calendar.svg" />
+							<div className="c-calendar__entry">
+								<h3>Public Gitlab profile</h3>
 
-							<div className="c-calendar__hint">Issues, merge requests, pushes, and comments.</div>
+								<div ref={calendarPlaceholder1} />
+							</div>
+
+							<div className="c-calendar__entry">
+								<h3>Private Gitlab profile</h3>
+
+								<div ref={calendarPlaceholder2} />
+							</div>
 						</div>
 					</div>
 				</div>
@@ -337,7 +345,7 @@ export const SectionStats: React.FunctionComponent<Readonly<Props>> = (props: Re
 
 					return `${count} contribution${count === '1' ? '' : 's'} on ${formattedDate}`;
 				});
-			}, 2000);
+			}, 3000);
 		};
 
 		window.addEventListener('load', onLoad);

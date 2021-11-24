@@ -5,7 +5,7 @@ import { asyncForEach } from './utils';
 
 // codebeat:disable[ABC,LOC]
 export const getLastFMInsights = async (): Promise<void> => {
-	const file = 'src/scripts/last.fm-insights.json';
+	const file = 'src/data/last.fm-insights.json';
 	const defaultArguments: Record<string, string | number> = {
 		autocorrect: 1,
 		lang: 'en',

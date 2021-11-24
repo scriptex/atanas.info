@@ -1,3 +1,3 @@
 #!/bin/sh
 
-echo "export const updatedAt = $(date '+%s');" > src/scripts/updated-at.ts
+echo "export const updatedAt = $(date '+%s');" > src/data/updated-at.ts

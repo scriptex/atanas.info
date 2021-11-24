@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { drawSkills } from '../../scripts/skills';
-import { Skill, skills } from '../../scripts/skills-list';
+import { Skill, skills } from '../../data/skills-list';
 import { isPrerendering } from '../../scripts/shared';
 import { Icon, Lines, Button, Section } from '..';
 

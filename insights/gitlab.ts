@@ -10,7 +10,7 @@ const setOwner = (repo: any, owner: string): any => ({ ...repo, owner });
 export const getGitlabInsights = async (): Promise<void> => {
 	console.log('Getting insights data from Gitlab...');
 
-	const file = 'src/scripts/gitlab-insights.json';
+	const file = 'src/data/gitlab-insights.json';
 
 	try {
 		writeFileSync(

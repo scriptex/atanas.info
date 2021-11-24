@@ -27,13 +27,7 @@ module.exports = {
 		'!<rootDir>/src/components/github-skyline/index.tsx',
 		'!<rootDir>/src/houdini/*.ts',
 		'!<rootDir>/src/scripts/canvas.ts',
-		'!<rootDir>/src/scripts/fetch-music.ts',
-		'!<rootDir>/src/scripts/fetch-stats.ts',
-		'!<rootDir>/src/scripts/local-analytics.ts',
-		'!<rootDir>/src/scripts/music.ts',
-		'!<rootDir>/src/scripts/projects.ts',
 		'!<rootDir>/src/scripts/skills.ts',
-		'!<rootDir>/src/scripts/tracks.ts',
 		'!<rootDir>/src/utilities/index.ts'
 	],
 	coverageThreshold: {

@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import { SectionSocial } from '.';
 import * as stats from '../section-stats';
 
-jest.mock('../../scripts/last.fm-insights.json', () => ({
+jest.mock('../../data/last.fm-insights.json', () => ({
 	default: {
 		weeklyAlbumChart: [],
 		topAlbums: []

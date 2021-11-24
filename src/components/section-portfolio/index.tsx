@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Slider from 'react-slick';
 
-import projectsList from '../../scripts/projects-list.json';
-import { Button, Section, ExternalLink } from '..';
-import { Project, projects, MobileApp, mobileApps } from '../../scripts/projects';
+import projectsList from '../../data/projects-list.json';
+import { Button, Loader, Section, ExternalLink } from '..';
+import { Project, projects, MobileApp, mobileApps } from '../../data/projects';
 
 export const SectionPortfolio: React.FunctionComponent = () => {
 	const [showAll, setShowAll] = React.useState(false);
@@ -21,6 +21,8 @@ export const SectionPortfolio: React.FunctionComponent = () => {
 			<div className="c-section__sliders">
 				{mobileApps.map((app: MobileApp, i: number) => (
 					<div className="c-section__slider" key={i}>
+						<Loader />
+
 						<ExternalLink href={app.url}>
 							<h3>{app.title}</h3>
 
@@ -75,7 +77,9 @@ export const SectionPortfolio: React.FunctionComponent = () => {
 
 					return (
 						<ExternalLink key={index} href={project.url} className={project.url ? '' : 'disabled'}>
-							<div>
+							<Loader />
+
+							<section>
 								<strong>{project.title}</strong>
 
 								<span>
@@ -83,7 +87,7 @@ export const SectionPortfolio: React.FunctionComponent = () => {
 									<br />
 									{project.description}
 								</span>
-							</div>
+							</section>
 
 							<object data={project.image} type="image/png" title={project.title} width="600">
 								<img width="600" loading="lazy" src={match?.image} alt={match?.title} />

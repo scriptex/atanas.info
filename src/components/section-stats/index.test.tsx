@@ -105,7 +105,7 @@ jest.spyOn(stats, 'formatDate');
 // @ts-ignore
 stats.formatDate.mockImplementation(() => 'Mock date');
 
-jest.mock('../../scripts/npm-stats.json', () => ({
+jest.mock('../../data/npm-stats.json', () => ({
 	sum: 591668,
 	package1: {
 		name: 'package1',
@@ -125,6 +125,11 @@ jest.mock('../../scripts/npm-stats.json', () => ({
 		author: 'author',
 		downloads: 0
 	}
+}));
+
+jest.mock('react-ts-github-calendar', () => ({
+	__esModule: true,
+	default: 'GitHubCalendar'
 }));
 
 describe('SectionStats component', () => {

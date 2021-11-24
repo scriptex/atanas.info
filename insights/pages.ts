@@ -2,7 +2,7 @@
 
 import { writeFileSync } from 'fs';
 
-import githubInsights from '../src/scripts/github-insights.json';
+import * as githubInsights from '../src/data/github-insights.json';
 
 interface Insights {
 	error?: boolean;
@@ -24,5 +24,5 @@ if (insights.error) {
 			href: `https://scriptex.github.io/${name}`
 		}));
 
-	writeFileSync('src/scripts/pages.json', JSON.stringify(pages, null, '\t'));
+	writeFileSync('src/data/pages.json', JSON.stringify(pages, null, '\t'));
 }

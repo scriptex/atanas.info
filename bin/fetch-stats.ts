@@ -15,12 +15,12 @@ const ENDPOINTS: Record<string, EndpointConfig> = {
 	npm: {
 		url: 'https://api.npms.io/v2/search?q=maintainer:scriptex&size=100&from=0',
 		init: {},
-		file: './src/scripts/npm.json'
+		file: './src/data/npm.json'
 	},
 	sourcerer: {
 		url: 'https://sourcerer.io/scriptex',
 		init: {},
-		file: './src/scripts/sourcerer.json'
+		file: './src/data/sourcerer.json'
 	},
 	codersrankWorkExperience: {
 		url: 'https://api.codersrank.io/app/candidate/GetScore',
@@ -31,7 +31,7 @@ const ENDPOINTS: Record<string, EndpointConfig> = {
 			body: '{"username":"scriptex"}',
 			method: 'POST'
 		},
-		file: './src/scripts/codersrank-work-experience.json'
+		file: './src/data/codersrank-work-experience.json'
 	},
 	codersrankChartWidget: {
 		url: 'https://grpcgateway.codersrank.io/candidate/scriptex/GetScoreProgress',
@@ -40,7 +40,7 @@ const ENDPOINTS: Record<string, EndpointConfig> = {
 				'Content-Type': 'application/json'
 			}
 		},
-		file: './src/scripts/codersrank-chart-widget.json'
+		file: './src/data/codersrank-chart-widget.json'
 	},
 	codersrankActivityWidget: {
 		url: 'https://grpcgateway.codersrank.io/candidate/activity/scriptex',
@@ -49,7 +49,7 @@ const ENDPOINTS: Record<string, EndpointConfig> = {
 				'Content-Type': 'application/json'
 			}
 		},
-		file: './src/scripts/codersrank-activity-widget.json'
+		file: './src/data/codersrank-activity-widget.json'
 	}
 };
 

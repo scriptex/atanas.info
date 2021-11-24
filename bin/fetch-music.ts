@@ -2,12 +2,12 @@
 
 import { writeFileSync, unlinkSync, existsSync } from 'fs';
 
-import { Track, music as tracks } from '../scripts/music';
+import { Track, music as tracks } from '../src/data/music';
 
 if (!tracks.length) {
 	console.log('atanas.info: No tracks specified.');
 } else {
-	const file = 'src/scripts/tracks.ts';
+	const file = 'src/data/tracks.ts';
 	const data = tracks.map((track: Track) => {
 		const url = track.url.replace('www', 'dl');
 

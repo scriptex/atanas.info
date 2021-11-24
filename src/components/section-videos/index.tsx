@@ -1,8 +1,8 @@
 import * as React from 'react';
 import 'lite-youtube-embed';
 
-import { Lines, Section, SectionNav } from '..';
-import { presentations, Presentation } from '../../scripts/presentations';
+import { presentations, Presentation } from '../../data/presentations';
+import { Lines, Loader, Section, SectionNav } from '..';
 
 export const SectionVideos: React.FunctionComponent = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);
@@ -18,6 +18,8 @@ export const SectionVideos: React.FunctionComponent = () => {
 			<div className="c-section__body">
 				{presentations.map((presentation: Presentation, index: number) => (
 					<div key={index} className={`c-section__frame${activeIndex === index ? ' current' : ''}`}>
+						<Loader />
+
 						<lite-youtube
 							title={presentation.description}
 							params="autoplay=0"

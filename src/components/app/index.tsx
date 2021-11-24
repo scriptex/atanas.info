@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import github from '../../scripts/github-insights.json';
-import gitlab from '../../scripts/gitlab-insights.json';
-import { Routes } from '../../scripts/routes';
+import github from '../../data/github-insights.json';
+import gitlab from '../../data/gitlab-insights.json';
+import { Routes } from '../../data/routes';
 import { Svg, Nav, Head, Header, Footer, Loader, Contact, ScrollToTop } from '..';
 import {
 	Home,

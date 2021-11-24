@@ -1,7 +1,7 @@
 import * as React from 'react';
 import useInterval from 'use-interval';
 
-import { titles } from '../../scripts/titles';
+import { titles } from '../../data/titles';
 import { Section } from '..';
 import { isPrerendering } from '../../scripts/shared';
 import { initCanvas, createDots, destroyDots } from '../../scripts/canvas';

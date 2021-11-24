@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Location } from 'history';
 import { match, NavLink } from 'react-router-dom';
 
-import { MenuItem, menuItems } from '../../scripts/menu';
+import { MenuItem, menuItems } from '../../data/menu';
 
 interface Props {
 	onClick?: () => void;
