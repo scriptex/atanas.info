@@ -41,6 +41,7 @@ exports[`SectionSlides component Should render the SectionSlides component 1`] =
       className="c-section__frame current"
       key="0"
     >
+      <Loader />
       <iframe
         allowFullScreen={true}
         loading="lazy"
@@ -52,6 +53,7 @@ exports[`SectionSlides component Should render the SectionSlides component 1`] =
       className="c-section__frame"
       key="1"
     >
+      <Loader />
       <iframe
         allowFullScreen={true}
         loading="lazy"

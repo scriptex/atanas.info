@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Slide, slides } from '../../data/slides';
 import { isPrerendering } from '../../scripts/shared';
-import { Section, SectionNav } from '..';
+import { Loader, Section, SectionNav } from '..';
 
 export const SectionSlides: React.FunctionComponent = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);
@@ -22,12 +22,16 @@ export const SectionSlides: React.FunctionComponent = () => {
 				{slides.map((slide: Slide, index: number) => (
 					<div key={index} className={`c-section__frame${activeIndex === index ? ' current' : ''}`}>
 						{isPrerendering ? null : (
-							<iframe
-								src={`${slide.url}/embed?start=false&loop=false&delayms=3000`}
-								title={slide.description}
-								loading="lazy"
-								allowFullScreen={true}
-							/>
+							<>
+								<Loader />
+
+								<iframe
+									src={`${slide.url}/embed?start=false&loop=false&delayms=3000`}
+									title={slide.description}
+									loading="lazy"
+									allowFullScreen={true}
+								/>
+							</>
 						)}
 					</div>
 				))}

@@ -26,6 +26,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       className="c-section__slider"
       key="0"
     >
+      <Loader />
       <ExternalLink
         href="https://apps.apple.com/gb/app/e-on-home-solar-and-heating/id1468486784#?platform=iphone"
       >
@@ -120,6 +121,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       className="c-section__slider"
       key="1"
     >
+      <Loader />
       <ExternalLink
         href="https://apps.apple.com/us/app/foton-home/id1525688620#?platform=iphone"
       >
@@ -214,6 +216,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       className="c-section__slider"
       key="2"
     >
+      <Loader />
       <ExternalLink
         href="https://play.google.com/store/apps/details?id=com.eon.home.eu"
       >
@@ -308,6 +311,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       className="c-section__slider"
       key="3"
     >
+      <Loader />
       <ExternalLink
         href="https://play.google.com/store/apps/details?id=com.foton.home.eu"
       >
@@ -402,6 +406,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       className="c-section__slider"
       key="4"
     >
+      <Loader />
       <ExternalLink
         href="https://apps.apple.com/gb/app/e-on-home-solar-and-heating/id1468486784#?platform=ipad"
       >
@@ -457,6 +462,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       className="c-section__slider"
       key="5"
     >
+      <Loader />
       <ExternalLink
         href="https://apps.apple.com/us/app/foton-home/id1525688620#?platform=ipad"
       >
@@ -520,7 +526,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       href="https://app.home.eon.com/"
       key="0"
     >
-      <div>
+      <Loader />
+      <section>
         <strong>
           E.ON Home
         </strong>
@@ -531,7 +538,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           <br />
           TypeScript, SCSS, React, Redux, MS Azure, NodeJS
         </span>
-      </div>
+      </section>
       <object
         data="images/temp/eon-home.png"
         title="E.ON Home"
@@ -551,7 +558,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       href="https://hems-admin-portal.eon.ooo/"
       key="1"
     >
-      <div>
+      <Loader />
+      <section>
         <strong>
           E.ON H.E.M.S (Home Energy Management System)
         </strong>
@@ -562,7 +570,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           <br />
           TypeScript, SCSS, Angular, Redux, MS Azure, NodeJS
         </span>
-      </div>
+      </section>
       <object
         data="images/temp/eon-hems.png"
         title="E.ON H.E.M.S (Home Energy Management System)"
@@ -582,7 +590,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       href="https://xpndnow.com/"
       key="2"
     >
-      <div>
+      <Loader />
+      <section>
         <strong>
           XPND
         </strong>
@@ -593,7 +602,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           <br />
           TypeScript, SCSS, React, Redux, NodeJS
         </span>
-      </div>
+      </section>
       <object
         data="images/temp/xpnd.png"
         title="XPND"
@@ -613,7 +622,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       href="https://xpndnow.com/ebook"
       key="3"
     >
-      <div>
+      <Loader />
+      <section>
         <strong>
           XPND Ebook
         </strong>
@@ -624,7 +634,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           <br />
           TypeScript, SCSS, React, Redux, NodeJS
         </span>
-      </div>
+      </section>
       <object
         data="images/temp/xpnd-ebook.png"
         title="XPND Ebook"
@@ -644,7 +654,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       href="https://demo.xpndnow.com/"
       key="4"
     >
-      <div>
+      <Loader />
+      <section>
         <strong>
           XPND demo application
         </strong>
@@ -655,7 +666,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           <br />
           TypeScript, SCSS, React, Redux, NodeJS
         </span>
-      </div>
+      </section>
       <object
         data="images/temp/xpnd-demo.png"
         title="XPND demo application"
@@ -675,7 +686,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       href="http://emailio.com/"
       key="5"
     >
-      <div>
+      <Loader />
+      <section>
         <strong>
           Emailio Web Application
         </strong>
@@ -686,7 +698,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           <br />
           SCSS, JavaScript, React, Redux, Redux Saga
         </span>
-      </div>
+      </section>
       <object
         data="images/temp/emailio.png"
         title="Emailio Web Application"
@@ -706,7 +718,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       href="https://www.nulla.tv/"
       key="6"
     >
-      <div>
+      <Loader />
+      <section>
         <strong>
           Nulla TV
         </strong>
@@ -717,7 +730,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           <br />
           HTML5, CSS3, JavaScript, WordPress
         </span>
-      </div>
+      </section>
       <object
         data="images/temp/nulla-tv.png"
         title="Nulla TV"
@@ -737,7 +750,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       href="https://kinetikautomotive.com/"
       key="7"
     >
-      <div>
+      <Loader />
+      <section>
         <strong>
           Kinetik Automotive
         </strong>
@@ -748,7 +762,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           <br />
           HTML5, CSS3, JavaScript, Vue, Nuxt, WordPress
         </span>
-      </div>
+      </section>
       <object
         data="images/temp/kinetik-automotive.png"
         title="Kinetik Automotive"
@@ -768,7 +782,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       href="https://www.sod.bg/"
       key="8"
     >
-      <div>
+      <Loader />
+      <section>
         <strong>
           SOD 64 (СОД 64)
         </strong>
@@ -779,7 +794,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           <br />
           HTML5, CSS3, JavaScript, jQuery, PHP
         </span>
-      </div>
+      </section>
       <object
         data="images/temp/sod-bg.png"
         title="SOD 64 (СОД 64)"
@@ -799,7 +814,8 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       href=""
       key="9"
     >
-      <div>
+      <Loader />
+      <section>
         <strong>
           At the Wall
         </strong>
@@ -810,7 +826,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           <br />
           CSS3, PHP
         </span>
-      </div>
+      </section>
       <object
         data="images/temp/at-the-wall.png"
         title="At the Wall"

@@ -20,6 +20,7 @@ exports[`SectionCertificates component Should render the SectionCertificates com
         className="c-certificate"
         href="cert/html.pdf"
       >
+        <Loader />
         <img
           alt="HTML"
           loading="lazy"
@@ -36,6 +37,7 @@ exports[`SectionCertificates component Should render the SectionCertificates com
         className="c-certificate"
         href="cert/javascript.pdf"
       >
+        <Loader />
         <img
           alt="JavaScript"
           loading="lazy"
@@ -52,6 +54,7 @@ exports[`SectionCertificates component Should render the SectionCertificates com
         className="c-certificate"
         href="cert/python.pdf"
       >
+        <Loader />
         <img
           alt="Python"
           loading="lazy"
@@ -68,6 +71,7 @@ exports[`SectionCertificates component Should render the SectionCertificates com
         className="c-certificate"
         href="cert/react.pdf"
       >
+        <Loader />
         <img
           alt="React Development"
           loading="lazy"
@@ -84,6 +88,7 @@ exports[`SectionCertificates component Should render the SectionCertificates com
         className="c-certificate"
         href="cert/css.pdf"
       >
+        <Loader />
         <img
           alt="CSS"
           loading="lazy"
@@ -100,6 +105,7 @@ exports[`SectionCertificates component Should render the SectionCertificates com
         className="c-certificate"
         href="cert/deno.pdf"
       >
+        <Loader />
         <img
           alt="Deno"
           loading="lazy"

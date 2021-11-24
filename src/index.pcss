@@ -34,6 +34,15 @@
 	z-index: 1;
 }
 
+@define-mixin with-loader {
+	position: relative;
+
+	& > .c-loading {
+		@mixin centered;
+		z-index: 1;
+	}
+}
+
 /* variables */
 
 :root {
@@ -1803,13 +1812,14 @@ body {
 			padding-bottom: 36%;
 			margin-bottom: 2rem;
 			overflow: hidden;
+			@mixin with-loader;
 
 			& img,
 			& object {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				z-index: 1;
+				z-index: 2;
 				transform: translate(-50%, -50%);
 				transition: all var(--timing) var(--easing);
 			}
@@ -1822,19 +1832,19 @@ body {
 				content: '';
 				@mixin centered;
 				opacity: 0;
-				z-index: 2;
+				z-index: 3;
 				background-color: color-mod(var(--color-secondary) a(80%));
 				transition: opacity var(--timing) var(--easing);
 			}
 
-			& div {
+			& section {
 				display: block;
 				opacity: 0;
 				position: absolute;
 				top: 50%;
 				right: 0;
 				left: 0;
-				z-index: 3;
+				z-index: 4;
 				padding: 1rem;
 				transform: translateY(0%);
 				transition: all var(--timing) var(--easing);
@@ -1868,6 +1878,7 @@ body {
 	flex: 0 0 calc(50% - 1rem);
 	margin: 0 0.5rem 3.5rem;
 	overflow: hidden;
+	@mixin with-loader;
 
 	& img {
 		display: block;
@@ -1882,6 +1893,8 @@ body {
 		color: inherit;
 		text-decoration: none;
 		display: block;
+		position: relative;
+		z-index: 2;
 		padding: 1rem 1rem 0.5rem;
 		border: 1px solid var(--color-primary);
 		background-color: var(--color-secondary);
@@ -1892,6 +1905,10 @@ body {
 			display: block;
 			margin: 0 0 0.5rem;
 		}
+	}
+
+	& .slick-slider {
+		z-index: 3;
 	}
 
 	& .slick-arrow {
@@ -1955,7 +1972,7 @@ body {
 					opacity: 1;
 				}
 
-				&:hover div {
+				&:hover section {
 					opacity: 1;
 					transform: translateY(-50%);
 				}
@@ -2011,9 +2028,9 @@ body {
 					content: none;
 				}
 
-				& div,
 				& img,
-				& object {
+				& object,
+				& section {
 					position: static;
 					top: auto;
 					right: auto;
@@ -2021,7 +2038,7 @@ body {
 					transform: none !important;
 				}
 
-				& div {
+				& section {
 					min-height: 92px;
 					@mixin flex-row wrap, center, center;
 					align-content: center;
@@ -2086,6 +2103,7 @@ body {
 		height: 100%;
 		display: block;
 		position: absolute;
+		z-index: 2;
 		top: 0;
 		left: 0;
 		border: 0;
@@ -2133,6 +2151,11 @@ body {
 		padding-bottom: 62.5%;
 		transition: all var(--timing) var(--easing);
 
+		& .c-loading {
+			@mixin centered;
+			z-index: 1;
+		}
+
 		&.current {
 			position: relative;
 			opacity: 1;
@@ -2161,6 +2184,10 @@ body {
 		opacity: 0.5;
 		background-color: var(--color-primary);
 	}
+
+	& .o-grid__item {
+		position: relative;
+	}
 }
 
 .c-article-link {
@@ -2170,10 +2197,16 @@ body {
 	height: 0;
 	display: block;
 	position: relative;
+	z-index: 2;
 	padding-bottom: 65%;
 	overflow: hidden;
 	background-size: auto 100%;
 	transition: background-size var(--timing) var(--easing);
+
+	& + .c-loading {
+		@mixin centered;
+		z-index: 1;
+	}
 
 	& strong {
 		font-size: 1.25rem;
@@ -2273,11 +2306,14 @@ body {
 
 .c-certificate {
 	display: block;
+	@mixin with-loader;
 
 	& img {
 		width: 100%;
 		height: auto;
 		display: block;
+		position: relative;
+		z-index: 2;
 	}
 }
 
@@ -3366,5 +3402,68 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 @media (--hover) {
 	.c-package:hover {
 		transform: scale(1.05);
+	}
+}
+
+.LI-profile-badge {
+	--font-size-h3: 1.25rem;
+	--font-size-h4: 0.875rem;
+
+	& > div {
+		width: 100%;
+	}
+
+	& h3,
+	& h4 {
+		text-align: left;
+		line-height: 1;
+		padding: 0 0 0.5rem;
+
+		& a {
+			font-size: inherit;
+			line-height: inherit;
+		}
+	}
+
+	& .profile-badge {
+		width: 100%;
+		padding-bottom: 0.5rem;
+		margin: 0;
+	}
+
+	& .profile-badge__header {
+		padding: 0.5rem 1rem;
+	}
+
+	& .profile-badge__header-logo-icon {
+		display: block;
+		margin: auto;
+	}
+
+	& .profile-badge__content {
+		position: relative;
+		padding: 0.5rem 0.5rem 0;
+	}
+
+	& .profile-badge__content-profile-image {
+		width: 3rem;
+		height: 3rem;
+		position: absolute;
+		top: 0.5rem;
+		left: 0.5rem;
+		margin: 0;
+	}
+
+	& .profile-badge__content-profile-name {
+		padding: 0.875rem 0 0.875rem 4rem;
+		margin-bottom: 0.5rem;
+	}
+
+	& .profile-badge__cta-btn {
+		font-size: 1rem;
+		line-height: 1.1;
+		height: auto;
+		padding: 0.5rem 1rem;
+		margin: 0.5rem 0 0;
 	}
 }
