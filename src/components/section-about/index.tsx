@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { bio, BioEntry } from '../../scripts/bio';
+import { bio, BioEntry } from '../../data/bio';
 import { Section, ExternalLink } from '..';
 
 export const LastAbout: React.FunctionComponent = () => (

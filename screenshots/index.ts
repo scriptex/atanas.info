@@ -8,7 +8,7 @@ import { config as dotenvConfig } from 'dotenv';
 import { v2 as cloudinary, UploadApiOptions, UploadApiResponse } from 'cloudinary';
 
 import * as pckg from '../package.json';
-import { Project, projects } from '../src/scripts/projects';
+import { Project, projects } from '../src/data/projects';
 
 if (!projects || !projects.length) {
 	console.log('No projects found.');
@@ -128,8 +128,8 @@ async function createScreenshots(allPages: Project[]): Promise<void> {
 
 	// eslint-disable-next-line compat/compat
 	Promise.all(results).then(() => {
-		writeFileSync(resolve(__dirname, '../src/scripts/projects-list.json'), JSON.stringify(newProjects, null, 2));
-		writeFileSync(resolve(__dirname, '../src/scripts/cloudinary-data.json'), JSON.stringify(results, null, 2));
+		writeFileSync(resolve(__dirname, '../src/data/projects-list.json'), JSON.stringify(newProjects, null, 2));
+		writeFileSync(resolve(__dirname, '../src/data/cloudinary-data.json'), JSON.stringify(results, null, 2));
 
 		process.exit();
 	});

@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Slider from 'react-slick';
 
-import projectsList from '../../scripts/projects-list.json';
+import projectsList from '../../data/projects-list.json';
 import { Button, Section, ExternalLink } from '..';
-import { Project, projects, MobileApp, mobileApps } from '../../scripts/projects';
+import { Project, projects, MobileApp, mobileApps } from '../../data/projects';
 
 export const SectionPortfolio: React.FunctionComponent = () => {
 	const [showAll, setShowAll] = React.useState(false);

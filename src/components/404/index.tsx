@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Routes } from '../../scripts/routes';
+import { Routes } from '../../data/routes';
 
 export const ErrorPage = (): React.ReactElement => (
 	<div className="c-error-page">

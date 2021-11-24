@@ -3,7 +3,7 @@ import * as React from 'react';
 import Carousel from 'react-round-carousel';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
-import lastFm from '../../scripts/last.fm-insights.json';
+import lastFm from '../../data/last.fm-insights.json';
 import { formatDate } from '../section-stats';
 import { useScript, isPrerendering } from '../../scripts/shared';
 import { Lines, Section, ExternalLink } from '..';

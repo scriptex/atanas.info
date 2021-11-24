@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Slide, slides } from '../../scripts/slides';
+import { Slide, slides } from '../../data/slides';
 import { isPrerendering } from '../../scripts/shared';
 import { Section, SectionNav } from '..';
 

@@ -2,7 +2,7 @@ import * as React from 'react';
 import 'lite-youtube-embed';
 
 import { Lines, Section, SectionNav } from '..';
-import { presentations, Presentation } from '../../scripts/presentations';
+import { presentations, Presentation } from '../../data/presentations';
 
 export const SectionVideos: React.FunctionComponent = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);

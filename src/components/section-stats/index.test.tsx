@@ -105,7 +105,7 @@ jest.spyOn(stats, 'formatDate');
 // @ts-ignore
 stats.formatDate.mockImplementation(() => 'Mock date');
 
-jest.mock('../../scripts/npm-stats.json', () => ({
+jest.mock('../../data/npm-stats.json', () => ({
 	sum: 591668,
 	package1: {
 		name: 'package1',

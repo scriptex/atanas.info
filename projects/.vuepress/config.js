@@ -296,7 +296,7 @@ module.exports = {
 	ga: process.env.GTM_ID,
 	serviceWorker: true,
 	themeConfig: {
-		sidebar: require('../../src/scripts/open-source')
+		sidebar: require('../../src/data/open-source')
 			.projects.sort()
 			.map(item => {
 				const name = item.split('/').pop();

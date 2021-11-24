@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Certificate, certificates } from '../../scripts/certificates';
+import { Certificate, certificates } from '../../data/certificates';
 
 import { Section, ExternalLink } from '..';
 

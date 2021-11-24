@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { isPrerendering } from '../../scripts/shared';
-import { articles, Article } from '../../scripts/articles';
+import { articles, Article } from '../../data/articles';
 import { Section, ExternalLink } from '..';
 
 export const SectionArticles: React.FunctionComponent = () => (

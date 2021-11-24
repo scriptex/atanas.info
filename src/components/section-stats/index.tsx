@@ -2,9 +2,9 @@ import * as React from 'react';
 import { format } from 'date-fns';
 import ReactGitHubCalendar from 'react-ts-github-calendar';
 
-import npmStats from '../../scripts/npm-stats.json';
+import npmStats from '../../data/npm-stats.json';
 import { isPrerendering } from '../../scripts/shared';
-import gitlabCalendarData from '../../scripts/gitlab-calendar.json';
+import gitlabCalendarData from '../../data/gitlab-calendar.json';
 import GitlabActivityCalendar from '../../scripts/gitlab-calendar';
 import { Section, GithubSkyline, ExternalLink } from '..';
 

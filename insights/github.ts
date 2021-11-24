@@ -6,7 +6,7 @@ import { getCalendar, asyncForEach, getContributions } from './utils';
 export const getGithubInsights = async (): Promise<void> => {
 	console.log('Getting insights data from Github...');
 
-	const file = 'src/scripts/github-insights.json';
+	const file = 'src/data/github-insights.json';
 
 	try {
 		writeFileSync('static/github-calendar.svg', (await getCalendar()) || '');

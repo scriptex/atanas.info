@@ -1,7 +1,7 @@
 import * as React from 'react';
 import 'scriptex-socials';
 
-import { updatedAt } from '../../scripts/updated-at';
+import { updatedAt } from '../../data/updated-at';
 import { formatDate } from '../section-stats';
 import { Funding, ExternalLink } from '..';
 

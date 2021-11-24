@@ -4,7 +4,7 @@ import SimplexNoise from 'simplex-noise';
 import { Power4, TweenMax } from 'gsap';
 
 import { random } from '../src/scripts/shared';
-import { tracks } from '../src/scripts/tracks';
+import { tracks } from '../src/data/tracks';
 
 const list = document.querySelector('#tracks') as HTMLDivElement;
 const menu = document.querySelector('#menu') as HTMLButtonElement;
