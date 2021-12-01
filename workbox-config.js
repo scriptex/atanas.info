@@ -10,7 +10,11 @@ module.exports = {
 		'**/music/*.xml',
 		'**/music/*.svg',
 		'**/music/*.pdf',
-		'**/music/*.txt'
+		'**/music/*.txt',
+		'**/static/images/favicon/**',
+		'**/static/images/icons/**',
+		'**/static/images/launch-screens/**',
+		'**/static/images/svg/**'
 	],
 	globPatterns: ['**/*'],
 	clientsClaim: true,
