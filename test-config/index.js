@@ -10,8 +10,8 @@ Enzyme.configure({
 // prettier-ignore
 window.matchMedia = window.matchMedia || (() => ({
 	matches: false,
-	addListener: () => {},
-	removeListener: () => {}
+	addListener: () => 'mocked matchMedia addListener',
+	removeListener: () => 'mocked matchMedia removeListener'
 }));
 
 window.crypto = {

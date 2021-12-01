@@ -612,6 +612,8 @@ body {
 		border-radius: 50%;
 		transform: scale(0);
 		transition: all var(--timing) var(--easing);
+		box-shadow: 0 0 1.5rem color-mod(var(--color-primary) a(30%)) inset,
+			0 0 1.5rem color-mod(var(--color-primary) a(30%));
 	}
 
 	& li {
@@ -2031,7 +2033,7 @@ body {
 				& img,
 				& object,
 				& section {
-					position: static;
+					position: relative;
 					top: auto;
 					right: auto;
 					left: auto;
@@ -2043,6 +2045,8 @@ body {
 					@mixin flex-row wrap, center, center;
 					align-content: center;
 					opacity: 1;
+					position: relative;
+					z-index: 2;
 					padding: 0.5rem;
 					background-color: var(--color-secondary);
 				}
@@ -2781,10 +2785,16 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 	z-index: 100;
 	margin: auto;
 	overflow: visible;
+	filter: drop-shadow(0 0 1.5rem color-mod(var(--color-primary) a(70%)));
 
 	& path {
 		transition: fill var(--timing) var(--easing);
 	}
+}
+
+.c-funding__knob,
+.c-funding__knob * {
+	touch-action: manipulation !important;
 }
 
 .c-funding__crypto {
@@ -2804,6 +2814,7 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 		height: 100%;
 		display: block;
 		margin: 0;
+		filter: drop-shadow(0 0 1.5rem color-mod(var(--color-primary) a(70%)));
 	}
 
 	& small {
@@ -2838,7 +2849,6 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 
 	& a {
 		text-decoration: none;
-		touch-action: auto !important;
 	}
 
 	& path {
