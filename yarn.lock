@@ -13339,15 +13339,15 @@ postcss-minify-selectors@^5.1.0:
     alphanum-sort "^1.0.2"
     postcss-selector-parser "^6.0.5"
 
-postcss-mixins@8.1.0:
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-mixins/-/postcss-mixins-8.1.0.tgz#bbb46f017ca6b0b6ec88b5814b106cdf2fea2817"
-  integrity sha512-c8zHQm0QtiGUe5fpn8jAjZauQwCg2BsKyJDynamJ6cxVakBQFFh0qpo0FPnrb0/diz7tt/emUhOq+fo48rp5Cw==
+postcss-mixins@9.0.1:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-mixins/-/postcss-mixins-9.0.1.tgz#eb00f8073b6d37881b10029e3c0ceea35f7d7576"
+  integrity sha512-4gFBr/JxMhSOlzHFfUDXV3vU0FNhDwIx/rzuvjvep/LAysJW9zcpeVxxNwBu1orM7STsTB9ZRULe44fD9lKWrA==
   dependencies:
-    globby "^11.0.3"
+    fast-glob "^3.2.7"
     postcss-js "^3.0.3"
     postcss-simple-vars "^6.0.3"
-    sugarss "^3.0.3"
+    sugarss "^4.0.1"
 
 postcss-modules-extract-imports@1.1.0:
   version "1.1.0"
@@ -16398,12 +16398,10 @@ stylus@^0.54.8:
     semver "^6.3.0"
     source-map "^0.7.3"
 
-sugarss@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/sugarss/-/sugarss-3.0.3.tgz#bb2489961b98fbd15e4e35d6b9f4f2ee5547a6cb"
-  integrity sha512-uxa2bbuc+w7ov7DyYIhF6bM0qZF3UkFT5/nE8AJgboiVnKsBDbwxs++dehEIe1JNhpMaGJc37wGQ2QrrWey2Sg==
-  dependencies:
-    postcss "^8.1.6"
+sugarss@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/sugarss/-/sugarss-4.0.1.tgz#128a783ed71ee0fc3b489ce1f7d5a89bc1e24383"
+  integrity sha512-WCjS5NfuVJjkQzK10s8WOBY+hhDxxNt/N6ZaGwxFZ+wN3/lKKFSaaKUNecULcTTvE4urLcKaZFQD8vO0mOZujw==
 
 supports-color@^2.0.0:
   version "2.0.0"
