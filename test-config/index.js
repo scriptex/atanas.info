@@ -24,6 +24,22 @@ jest.mock('gsap/Draggable', () => ({
 	default: jest.fn()
 }));
 
+[
+	'react-syntax-highlighter/dist/esm/languages/hljs/javascript',
+	'react-syntax-highlighter/dist/esm/languages/hljs/typescript',
+	'react-syntax-highlighter/dist/esm/languages/hljs/css',
+	'react-syntax-highlighter/dist/esm/languages/hljs/scss',
+	'react-syntax-highlighter/dist/esm/languages/hljs/json',
+	'react-syntax-highlighter/dist/esm/languages/hljs/shell'
+].forEach(module => {
+	jest.mock(module, () => ({
+		__esModule: true,
+		default: jest.fn(() => ({
+			name: 'mocked language'
+		}))
+	}));
+});
+
 jest.mock('react-syntax-highlighter/dist/esm/styles/prism', () =>
 	jest.fn(() => ({
 		dark: {}
