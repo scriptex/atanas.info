@@ -6,8 +6,8 @@ import { match } from 'react-router-dom';
 import { MDXProvider } from '@mdx-js/react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 
-import { Section } from '..';
 import { articles } from '../../data/articles';
+import { Lines, Section } from '..';
 
 interface Params {
 	slug: string;
@@ -27,6 +27,8 @@ export const SectionBlogPost: React.FunctionComponent<Props> = (props: Props) =>
 
 	return (
 		<Section id="blog-post" hasButton={true}>
+			<Lines />
+
 			<h1>{article?.title}</h1>
 
 			<img src={article?.image} alt="" />
