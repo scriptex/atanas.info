@@ -189,14 +189,14 @@ exports[`Nav component Should render the Nav component 1`] = `
       <li
         key="15"
       >
-        <a
-          href="music/"
-          rel="noopener noreferrer"
-          target="_blank"
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
           title="My music"
+          to="/music"
         >
           Music
-        </a>
+        </NavLink>
       </li>
     </ul>
   </NavInner>
@@ -409,15 +409,15 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       <li
         key="15"
       >
-        <a
-          href="music/"
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
           onClick={[MockFunction]}
-          rel="noopener noreferrer"
-          target="_blank"
           title="My music"
+          to="/music"
         >
           Music
-        </a>
+        </NavLink>
       </li>
     </ul>
   </NavInner>

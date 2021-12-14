@@ -93,13 +93,11 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 					title: 'My open source projects',
 					target: '_blank',
 					content: 'Open source'
-				},
-				{
-					rel: 'noopener noreferrer',
-					href: 'music/',
-					title: 'My music',
-					target: '_blank',
-					content: 'Music'
 				}
-		  ])
+		  ]),
+	{
+		href: Routes.MUSIC,
+		title: 'My music',
+		content: 'Music'
+	}
 ];

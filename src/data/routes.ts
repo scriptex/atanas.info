@@ -10,5 +10,6 @@ export enum Routes {
 	ARTICLES = '/articles',
 	CERTIFICATES = '/certificates',
 	SOCIAL = '/social',
-	BLOG = '/blog'
+	BLOG = '/blog',
+	MUSIC = '/music'
 }
