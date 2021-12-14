@@ -25,14 +25,14 @@ export const articles: Article[] = [
 	{
 		url: '/blog/bulk-image-watermark-with-nodejs-and-jimp',
 		title: 'Bulk image watermark with NodeJS and Jimp',
-		image: 'images/temp/bulk-image-watermark-with-nodejs-and-jimp.jpg',
+		image: '/images/temp/bulk-image-watermark-with-nodejs-and-jimp.jpg',
 		content: bulkImageWatermarkWithNodejsAndJimp,
 		external: false
 	},
 	{
 		url: '/blog/running-multiple-webpack-based-applications-simultaneously',
 		title: 'Running multiple Webpack based applications simultaneously',
-		image: 'images/temp/running-multiple-webpack-based-applications-simultaneously.png',
+		image: '/images/temp/running-multiple-webpack-based-applications-simultaneously.png',
 		content: runningMultipleWebpackBasedApplicationsSimultaneously,
 		external: false
 	}
