@@ -480,13 +480,15 @@ body {
 	align-items: center;
 	justify-content: center;
 	position: relative;
+	top: 0;
+	right: 0;
 	z-index: 2;
 	padding: 0;
 	border: 0;
 	background: none;
 	cursor: pointer;
 	transform: rotate(0deg);
-	transition: transform var(--timing) var(--easing);
+	transition: all var(--timing) var(--easing);
 	appearance: none;
 
 	&:focus {
@@ -534,9 +536,9 @@ body {
 
 	& .c-nav__toggle {
 		position: absolute;
-		top: 1rem;
-		right: 1.125rem;
-		transform: rotate(90deg) translate(-1rem, -1.125rem);
+		top: 2rem;
+		right: 21.125rem;
+		transform: rotate(450deg) translate(-1rem, -1.125rem);
 
 		& span:nth-child(2) {
 			opacity: 0;
