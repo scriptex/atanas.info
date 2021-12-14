@@ -75,7 +75,7 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 		: [
 				{
 					rel: 'noopener noreferrer',
-					href: './resume.pdf',
+					href: Routes.RESUME,
 					title: 'My CV',
 					target: '_blank',
 					content: 'Resume (pdf)'
@@ -89,17 +89,15 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 				},
 				{
 					rel: 'noopener noreferrer',
-					href: 'projects/',
+					href: Routes.PROJECTS,
 					title: 'My open source projects',
 					target: '_blank',
 					content: 'Open source'
-				},
-				{
-					rel: 'noopener noreferrer',
-					href: 'music/',
-					title: 'My music',
-					target: '_blank',
-					content: 'Music'
 				}
-		  ])
+		  ]),
+	{
+		href: Routes.MUSIC,
+		title: 'My music',
+		content: 'Music'
+	}
 ];

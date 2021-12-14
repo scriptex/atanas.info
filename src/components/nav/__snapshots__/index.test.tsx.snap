@@ -154,7 +154,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="12"
       >
         <a
-          href="./resume.pdf"
+          href="/resume.pdf"
           rel="noopener noreferrer"
           target="_blank"
           title="My CV"
@@ -178,7 +178,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="14"
       >
         <a
-          href="projects/"
+          href="/projects"
           rel="noopener noreferrer"
           target="_blank"
           title="My open source projects"
@@ -189,14 +189,14 @@ exports[`Nav component Should render the Nav component 1`] = `
       <li
         key="15"
       >
-        <a
-          href="music/"
-          rel="noopener noreferrer"
-          target="_blank"
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
           title="My music"
+          to="/music"
         >
           Music
-        </a>
+        </NavLink>
       </li>
     </ul>
   </NavInner>
@@ -371,7 +371,7 @@ exports[`Nav component Should render the Nav component with props 1`] = `
         key="12"
       >
         <a
-          href="./resume.pdf"
+          href="/resume.pdf"
           onClick={[MockFunction]}
           rel="noopener noreferrer"
           target="_blank"
@@ -397,7 +397,7 @@ exports[`Nav component Should render the Nav component with props 1`] = `
         key="14"
       >
         <a
-          href="projects/"
+          href="/projects"
           onClick={[MockFunction]}
           rel="noopener noreferrer"
           target="_blank"
@@ -409,15 +409,15 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       <li
         key="15"
       >
-        <a
-          href="music/"
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
           onClick={[MockFunction]}
-          rel="noopener noreferrer"
-          target="_blank"
           title="My music"
+          to="/music"
         >
           Music
-        </a>
+        </NavLink>
       </li>
     </ul>
   </NavInner>

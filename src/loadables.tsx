@@ -13,4 +13,5 @@ export const Certificates = React.lazy(() => import('../src/components/section-c
 export const Social = React.lazy(() => import('../src/components/section-social'));
 export const Blog = React.lazy(() => import('../src/components/section-blog'));
 export const BlogPost = React.lazy(() => import('../src/components/section-blog-post'));
+export const Music = React.lazy(() => import('../src/components/section-music'));
 export const ErrorPage = React.lazy(() => import('../src/components/404'));

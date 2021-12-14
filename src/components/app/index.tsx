@@ -9,6 +9,7 @@ import {
 	Home,
 	Blog,
 	About,
+	Music,
 	Stats,
 	Skills,
 	Slides,
@@ -60,6 +61,7 @@ export const App: React.FunctionComponent = () => {
 						<Route exact={true} path={Routes.SOCIAL} component={Social} />
 						<Route exact={true} path={Routes.BLOG} component={Blog} />
 						<Route exact={true} path={`${Routes.BLOG}/:slug`} component={BlogPost} />
+						<Route exact={true} path={Routes.MUSIC} component={Music} />
 						<Route component={ErrorPage} />
 					</Switch>
 
