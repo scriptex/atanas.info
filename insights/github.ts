@@ -3,6 +3,8 @@ import { writeFileSync } from 'fs';
 import { github } from './client';
 import { getCalendar, asyncForEach, getContributions } from './utils';
 
+const reposToSkip = ['three11/code-of-conduct'];
+
 export const getGithubInsights = async (): Promise<void> => {
 	console.log('Getting insights data from Github...');
 
@@ -14,7 +16,7 @@ export const getGithubInsights = async (): Promise<void> => {
 		const user = await github.get({ path: '/users/scriptex' });
 		const repos1 = await github.get({ path: '/user/repos?per_page=100' });
 		const repos2 = await github.get({ path: '/user/repos?page=2&per_page=100' });
-		const repos = [...repos1, ...repos2];
+		const repos = [...repos1, ...repos2].filter(repo => !reposToSkip.includes(repo.full_name));
 		const calendar = await getContributions();
 		const repositories: any[] = [];
 
