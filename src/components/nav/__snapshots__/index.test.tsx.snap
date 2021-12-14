@@ -141,14 +141,14 @@ exports[`Nav component Should render the Nav component 1`] = `
       <li
         key="11"
       >
-        <a
-          href="https://scriptexbg.wordpress.com"
-          rel="noopener noreferrer"
-          target="_blank"
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
           title="My blog"
+          to="/blog"
         >
           Blog
-        </a>
+        </NavLink>
       </li>
       <li
         key="12"
@@ -357,15 +357,15 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       <li
         key="11"
       >
-        <a
-          href="https://scriptexbg.wordpress.com"
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
           onClick={[MockFunction]}
-          rel="noopener noreferrer"
-          target="_blank"
           title="My blog"
+          to="/blog"
         >
           Blog
-        </a>
+        </NavLink>
       </li>
       <li
         key="12"

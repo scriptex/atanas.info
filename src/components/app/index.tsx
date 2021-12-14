@@ -7,14 +7,16 @@ import { Routes } from '../../data/routes';
 import { Svg, Nav, Head, Header, Footer, Loader, Contact, ScrollToTop } from '..';
 import {
 	Home,
+	Blog,
 	About,
+	Stats,
 	Skills,
 	Slides,
 	Social,
-	Stats,
 	Videos,
 	Timeline,
 	Articles,
+	BlogPost,
 	ErrorPage,
 	Portfolio,
 	Certificates
@@ -56,6 +58,8 @@ export const App: React.FunctionComponent = () => {
 						<Route exact={true} path={Routes.ARTICLES} component={Articles} />
 						<Route exact={true} path={Routes.CERTIFICATES} component={Certificates} />
 						<Route exact={true} path={Routes.SOCIAL} component={Social} />
+						<Route exact={true} path={Routes.BLOG} component={Blog} />
+						<Route exact={true} path={`${Routes.BLOG}/:slug`} component={BlogPost} />
 						<Route component={ErrorPage} />
 					</Switch>
 

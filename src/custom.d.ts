@@ -43,3 +43,8 @@ interface Window {
 }
 
 declare const registerPaint: <T>(name: string, constructor: T) => void;
+
+declare module '*.mdx' {
+	let MDXComponent: (props: any) => JSX.Element;
+	export default MDXComponent;
+}
