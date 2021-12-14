@@ -24,10 +24,6 @@ jest.mock('gsap/Draggable', () => ({
 	default: jest.fn()
 }));
 
-jest.mock('react-markdown', () => ({
-	default: jest.fn()
-}));
-
 jest.mock('react-syntax-highlighter/dist/esm/styles/prism', () =>
 	jest.fn(() => ({
 		dark: {}
