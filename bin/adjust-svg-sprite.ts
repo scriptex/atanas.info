@@ -6,12 +6,8 @@ const FILE = './static/sprite.svg';
 const STYLE = 'visibility: hidden; ';
 
 (async () => {
-	try {
-		const sprite = await readFile(FILE, 'utf8');
-		const adjusted = sprite.replace(STYLE, '');
+	const sprite = await readFile(FILE, 'utf8');
+	const adjusted = sprite.replace(STYLE, '');
 
-		await writeFile(FILE, adjusted, 'utf8');
-	} catch (e: any) {
-		throw e;
-	}
+	await writeFile(FILE, adjusted, 'utf8');
 })();
