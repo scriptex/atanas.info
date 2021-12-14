@@ -11,4 +11,6 @@ export const Videos = React.lazy(() => import('../src/components/section-videos'
 export const Articles = React.lazy(() => import('../src/components/section-articles'));
 export const Certificates = React.lazy(() => import('../src/components/section-certificates'));
 export const Social = React.lazy(() => import('../src/components/section-social'));
+export const Blog = React.lazy(() => import('../src/components/section-blog'));
+export const BlogPost = React.lazy(() => import('../src/components/section-blog-post'));
 export const ErrorPage = React.lazy(() => import('../src/components/404'));

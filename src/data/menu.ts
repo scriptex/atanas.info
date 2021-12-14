@@ -65,16 +65,14 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 		title: 'Social widgets',
 		content: 'Social'
 	},
+	{
+		href: Routes.BLOG,
+		title: 'My blog',
+		content: 'Blog'
+	},
 	...(isPrerendering
 		? []
 		: [
-				{
-					rel: 'noopener noreferrer',
-					href: 'https://scriptexbg.wordpress.com',
-					title: 'My blog',
-					target: '_blank',
-					content: 'Blog'
-				},
 				{
 					rel: 'noopener noreferrer',
 					href: './resume.pdf',

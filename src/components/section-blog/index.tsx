@@ -1,30 +1,31 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 import { isPrerendering } from '../../scripts/shared';
+import { Loader, Section } from '..';
 import { articles, Article } from '../../data/articles';
-import { Loader, Section, ExternalLink } from '..';
 
-export const SectionArticles: React.FunctionComponent = () => (
+export const SectionBlog: React.FunctionComponent = () => (
 	<Section
-		id="articles"
+		id="blog"
 		style={{ backgroundImage: 'url(images/temp/articles.jpg)' }}
 		className=" c-section--slides fullsize-background"
 		hasButton={true}
 	>
-		<h2>Articles</h2>
+		<h2>Blog</h2>
 
 		<div className="c-section__body o-grid">
 			{articles
-				.filter((article: Article) => article.external)
+				.filter((article: Article) => !article.external)
 				.map((article: Article, index: number) => (
 					<div key={index} className="o-grid__item xs-12 sm-6">
-						<ExternalLink
-							href={article.url}
+						<Link
+							to={article.url}
 							style={isPrerendering ? {} : { backgroundImage: `url(${article.image})` }}
 							className="c-article-link fullsize-background"
 						>
 							<strong>{article.title}</strong>
-						</ExternalLink>
+						</Link>
 
 						<Loader />
 					</div>
@@ -33,4 +34,4 @@ export const SectionArticles: React.FunctionComponent = () => (
 	</Section>
 );
 
-export default SectionArticles;
+export default SectionBlog;

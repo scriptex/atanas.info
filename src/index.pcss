@@ -7,6 +7,7 @@
 @import 'lite-youtube-embed/src/lite-yt-embed.css';
 @import 'react-vertical-timeline-component/style.min.css';
 @import 'react-round-carousel/dist/index.css';
+@import 'highlight.js/styles/dracula.css';
 
 @define-mixin slanted {
 	color: var(--color-primary);
@@ -2185,6 +2186,7 @@ body {
 
 /* section articles */
 
+.c-section--blog,
 .c-section--articles {
 	&::before {
 		opacity: 0.5;
@@ -3477,5 +3479,84 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 		height: auto;
 		padding: 0.5rem 1rem;
 		margin: 0.5rem 0 0;
+	}
+}
+
+.c-section--blog-post {
+	color: var(--color-primary);
+	position: relative;
+	z-index: 2;
+	padding: 8.25rem 0 3.25rem;
+	margin-bottom: 4rem;
+
+	& h1 {
+		text-align: center;
+		flex: 0 0 100%;
+		margin-bottom: 3.5rem;
+		@mixin slanted;
+	}
+}
+
+.c-blog-post {
+	padding: 2rem;
+	background-color: rgba(255, 255, 255, 0.1);
+
+	& table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	& th {
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+
+	& table,
+	& th,
+	& td {
+		padding: 0.3125rem;
+		border: 1px solid rgba(0, 0, 0, 0.3);
+		border-radius: 0.4em;
+	}
+
+	& tr:nth-child(even) {
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+
+	& p,
+	& ul,
+	& ol,
+	& dl,
+	& table,
+	& pre {
+		margin-bottom: 1em;
+	}
+
+	& ul {
+		margin-left: 1.25rem;
+	}
+
+	& hr {
+		border-width: 0 0 1px;
+		border-style: solid;
+		border-color: currentColor;
+		margin: 0 1em 1em;
+	}
+
+	& small {
+		font-size: 90%;
+	}
+
+	& sup {
+		font-size: 80%;
+		line-height: 1;
+		vertical-align: super;
+	}
+
+	& pre {
+		font-size: 10pt;
+	}
+
+	& pre pre {
+		margin: 0 !important;
 	}
 }

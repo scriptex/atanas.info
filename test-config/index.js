@@ -24,6 +24,16 @@ jest.mock('gsap/Draggable', () => ({
 	default: jest.fn()
 }));
 
+jest.mock('react-markdown', () => ({
+	default: jest.fn()
+}));
+
+jest.mock('react-syntax-highlighter/dist/esm/styles/prism', () =>
+	jest.fn(() => ({
+		dark: {}
+	}))
+);
+
 jest.mock('../src/scripts/canvas', () => ({
 	createSVG: jest.fn(),
 	initCanvas: jest.fn(),
