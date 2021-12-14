@@ -79,27 +79,12 @@ export const music = (container: HTMLDivElement | null) => {
 		ctx.restore();
 	};
 
-	audio.src = tracks[0].url;
-	audio.load();
-	audio.volume = 0.5;
-
-	list.innerHTML = tracks
-		.map(track => `<button data-url="${track.url}">${track.metaData.artist} - ${track.metaData.title}</button>`)
-		.join('\n');
-
-	menu.addEventListener('click', (e: MouseEvent) => {
-		e.preventDefault();
-
-		list.hidden = !list.hidden;
-	});
-
-	playBtn.addEventListener('click', () => {
+	const createVis = async () => {
+		list.hidden = true;
 		playBtn.hidden = true;
 		pauseBtn.hidden = false;
 
-		list.hidden = true;
-
-		audio.play();
+		await audio.play();
 
 		// eslint-disable-next-line compat/compat
 		context = new AudioContext();
@@ -124,6 +109,24 @@ export const music = (container: HTMLDivElement | null) => {
 		isPause = false;
 
 		update();
+	};
+
+	audio.src = tracks[0].url;
+	audio.load();
+	audio.volume = 0.5;
+
+	list.innerHTML = tracks
+		.map(track => `<button data-url="${track.url}">${track.metaData.artist} - ${track.metaData.title}</button>`)
+		.join('\n');
+
+	menu.addEventListener('click', (e: MouseEvent) => {
+		e.preventDefault();
+
+		list.hidden = !list.hidden;
+	});
+
+	playBtn.addEventListener('click', () => {
+		createVis();
 	});
 
 	pauseBtn.addEventListener('click', () => {
@@ -146,17 +149,13 @@ export const music = (container: HTMLDivElement | null) => {
 	});
 
 	Array.from(list.querySelectorAll('button')).forEach((button: HTMLButtonElement) => {
-		button.addEventListener('click', () => {
-			list.hidden = true;
-			playBtn.hidden = false;
-			pauseBtn.hidden = true;
-
-			audio.pause();
-
+		button.addEventListener('click', async () => {
 			audio.src = button.dataset.url || tracks[0].url;
-			audio.load();
 
-			isPause = true;
+			await audio.pause();
+			await audio.load();
+
+			createVis();
 		});
 	});
 

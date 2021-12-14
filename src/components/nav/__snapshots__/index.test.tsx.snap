@@ -154,7 +154,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="12"
       >
         <a
-          href="./resume.pdf"
+          href="/resume.pdf"
           rel="noopener noreferrer"
           target="_blank"
           title="My CV"
@@ -178,7 +178,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="14"
       >
         <a
-          href="projects/"
+          href="/projects"
           rel="noopener noreferrer"
           target="_blank"
           title="My open source projects"
@@ -371,7 +371,7 @@ exports[`Nav component Should render the Nav component with props 1`] = `
         key="12"
       >
         <a
-          href="./resume.pdf"
+          href="/resume.pdf"
           onClick={[MockFunction]}
           rel="noopener noreferrer"
           target="_blank"
@@ -397,7 +397,7 @@ exports[`Nav component Should render the Nav component with props 1`] = `
         key="14"
       >
         <a
-          href="projects/"
+          href="/projects"
           onClick={[MockFunction]}
           rel="noopener noreferrer"
           target="_blank"

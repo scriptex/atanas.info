@@ -11,5 +11,7 @@ export enum Routes {
 	CERTIFICATES = '/certificates',
 	SOCIAL = '/social',
 	BLOG = '/blog',
-	MUSIC = '/music'
+	MUSIC = '/music',
+	RESUME = '/resume.pdf',
+	PROJECTS = '/projects'
 }

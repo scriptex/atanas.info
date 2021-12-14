@@ -1,24 +1,16 @@
 {
-	"extends": ["stylelint-config-recommended", "stylelint-config-standard-scss"],
-	"plugins": ["stylelint-scss", "stylelint-no-unsupported-browser-features"],
+	"extends": ["stylelint-config-recommended"],
+	"plugins": ["stylelint-no-unsupported-browser-features"],
 	"rules": {
 		"indentation": null,
 		"string-quotes": "single",
 		"at-rule-no-unknown": null,
 		"length-zero-no-unit": null,
 		"alpha-value-notation": null,
-		"scss/at-mixin-pattern": null,
 		"rule-empty-line-before": null,
 		"selector-class-pattern": null,
 		"custom-property-pattern": null,
-		"scss/at-rule-no-unknown": [
-			true,
-			{
-				"ignoreAtRules": ["custom-media", "define-mixin"]
-			}
-		],
 		"color-function-notation": null,
-		"scss/no-duplicate-mixins": null,
 		"at-rule-empty-line-before": null,
 		"no-descending-specificity": null,
 		"declaration-empty-line-before": null,
