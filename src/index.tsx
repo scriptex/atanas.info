@@ -1,3 +1,4 @@
+/* eslint-disable compat/compat */
 import * as React from 'react';
 import { render } from 'react-dom';
 import TagManager from 'react-gtm-module';
@@ -13,8 +14,13 @@ interface IWorker {
 }
 
 const node: HTMLElement | null = document.getElementById('root') || document.createElement('div');
-const renderRoot = (app: JSX.Element): void => render(app, node);
 const router = (Application: React.ComponentType): JSX.Element => <Application />;
+const renderRoot = (app: JSX.Element): void => render(app, node);
+
+(CSS as any).paintWorklet.addModule(new URL('./houdini/avatar-polygon.ts', import.meta.url));
+(CSS as any).paintWorklet.addModule(new URL('./houdini/bubbles.ts', import.meta.url));
+(CSS as any).paintWorklet.addModule(new URL('./houdini/circles.ts', import.meta.url));
+(CSS as any).paintWorklet.addModule(new URL('./houdini/slanted-backgrounds.ts', import.meta.url));
 
 renderRoot(router(App));
 
@@ -22,10 +28,10 @@ TagManager.initialize({
 	gtmId: process.env.GTM_ID as string
 });
 
-if ('serviceWorker' in navigator && !isPrerendering) {
+if ('serviceWorker' in navigator && !isPrerendering && process.env.NODE_ENV !== 'development') {
 	const workers: IWorker[] = [
 		{
-			name: `offline-worker.js`
+			name: `/offline-worker.js`
 		}
 	];
 
