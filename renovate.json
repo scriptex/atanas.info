@@ -1,5 +1,5 @@
 {
-	"extends": ["config:base", ":automergePatch", ":automergeBranch"],
+	"extends": ["config:base", ":automergePatch", ":automergeBranch", ":disableDependencyDashboard"],
 	"travis": {
 		"enabled": true
 	},
