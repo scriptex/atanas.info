@@ -28,7 +28,7 @@
 		"test": "jest --config=./config/jest.config.js --rootDir=./ --env=jsdom",
 		"test:watch": "yarn test --watch",
 		"test:coverage": "yarn test --coverage",
-		"test:coverage:watch": "yarn test --coverage --watch",
+		"test:coverage:watch": "yarn test --coverage --watchAll",
 		"lint": "./bin/lint.sh",
 		"prettier": "./bin/prettier.sh",
 		"deduplicate": "yarn-deduplicate --packages @types/react yarn.lock",
@@ -136,6 +136,8 @@
 		"http-server": "14.0.0",
 		"husky": "7.0.4",
 		"jest": "27.4.5",
+		"jest-canvas-mock": "2.3.1",
+		"jest-fetch-mock": "3.0.3",
 		"js-yaml": "4.1.0",
 		"lastfm-node-client": "2.2.0",
 		"localga": "2.2.0",
@@ -190,7 +192,7 @@
 	],
 	"private": true,
 	"typeCoverage": {
-		"atLeast": 92
+		"atLeast": 93
 	},
 	"reactSnap": {
 		"source": "dist",

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 import { SectionPortfolio } from '.';
 
@@ -86,5 +86,14 @@ describe('SectionPortfolio component', () => {
 		const wrapper = shallow(<SectionPortfolio />);
 
 		expect(wrapper).toMatchSnapshot();
+	});
+
+	it('Should handle state changes in the SectionPortfolio component', () => {
+		const wrapper = mount(<SectionPortfolio />);
+
+		wrapper.find('.c-section__actions .c-btn').forEach(button => {
+			button.simulate('click');
+			expect(wrapper).toMatchSnapshot();
+		});
 	});
 });

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 import { Props, Section, SectionElements } from '.';
 
@@ -78,3 +78,17 @@ const suite = (Component: React.ComponentType<any>, name: string): void => {
 // codebeat:enable[LOC]
 
 Object.values(components).forEach((value: Component) => suite(value.component, value.name));
+
+describe('Section component state management', () => {
+	it('Should handle state management', () => {
+		const wrapper = mount(
+			<Section id="test" hasButton={true} actions>
+				Test
+			</Section>
+		);
+
+		wrapper.find('.c-btn').forEach(button => {
+			button.simulate('click');
+		});
+	});
+});

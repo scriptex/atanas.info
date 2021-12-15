@@ -59,3 +59,155 @@ exports[`SectionArticles component Should render the SectionArticles component 1
   </div>
 </Section>
 `;
+
+exports[`SectionArticles component Should render the SectionArticles component while prerendering 1`] = `
+<main
+  class="o-main "
+>
+  <section
+    class="c-section c-section--articles c-section--slides fullsize-background"
+    id="articles"
+    style="background-image:url(images/temp/articles.jpg)"
+  >
+    <div
+      class="o-shell"
+    >
+      <h2>
+        Articles
+      </h2>
+      <div
+        class="c-section__body o-grid"
+      >
+        <div
+          class="o-grid__item xs-12 sm-6"
+        >
+          <a
+            class="c-article-link fullsize-background"
+            href="https://htmlburger.com/blog/jarvis-task-runner/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <strong>
+              Jarvis: The Intelligent Front-End Task Runner
+            </strong>
+          </a>
+          <div
+            class="c-loading"
+          >
+            <div
+              class="c-loader"
+            />
+          </div>
+        </div>
+        <div
+          class="o-grid__item xs-12 sm-6"
+        >
+          <a
+            class="c-article-link fullsize-background"
+            href="https://htmlboutique.com/blog/2015/11/13/ionic-development-by-htmlboutique/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <strong>
+              Ionic Development by htmlBoutique
+            </strong>
+          </a>
+          <div
+            class="c-loading"
+          >
+            <div
+              class="c-loader"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="c-section__actions"
+      >
+        <button
+          class="c-btn "
+          type="button"
+        >
+          Hire me
+        </button>
+        <ul
+          class="c-section__actions-list"
+        >
+          <li>
+            <button
+              class="c-btn c-section__actions-close"
+              type="button"
+            >
+              Close
+            </button>
+          </li>
+          <li>
+            <button
+              class="c-btn "
+              type="button"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  href="#svg-email"
+                />
+              </svg>
+              <span>
+                Hire me
+              </span>
+              <strong>
+                directly
+              </strong>
+            </button>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://app.usebraintrust.com/talent/782/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  href="#svg-braintrust"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Braintrust
+              </strong>
+            </a>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://www.toptal.com/resume/atanas-atanasov"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  href="#svg-toptal"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Toptal
+              </strong>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+`;

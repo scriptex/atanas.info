@@ -64,3 +64,147 @@ exports[`SectionSlides component Should render the SectionSlides component 1`] =
   </div>
 </Section>
 `;
+
+exports[`SectionSlides component Should render the SectionSlides component while prerendering 1`] = `
+<main
+  class="o-main "
+>
+  <section
+    class="c-section c-section--slides fullsize-background"
+    id="slides"
+    style="background-image:url(images/temp/presentation.jpg)"
+  >
+    <div
+      class="o-shell"
+    >
+      <h2>
+        Slides
+      </h2>
+      <nav
+        class="c-section__nav"
+      >
+        <ul>
+          <li
+            class="current"
+          >
+            <button
+              aria-label="Switch to EcmaScript Features"
+              class="c-btn "
+              type="button"
+            >
+              EcmaScript Features
+            </button>
+          </li>
+          <li
+            class=""
+          >
+            <button
+              aria-label="Switch to Do more with Sublime Text"
+              class="c-btn "
+              type="button"
+            >
+              Do more with Sublime Text
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div
+        class="c-section__body"
+      >
+        <div
+          class="c-section__frame current"
+        />
+        <div
+          class="c-section__frame"
+        />
+      </div>
+      <div
+        class="c-section__actions"
+      >
+        <button
+          class="c-btn "
+          type="button"
+        >
+          Hire me
+        </button>
+        <ul
+          class="c-section__actions-list"
+        >
+          <li>
+            <button
+              class="c-btn c-section__actions-close"
+              type="button"
+            >
+              Close
+            </button>
+          </li>
+          <li>
+            <button
+              class="c-btn "
+              type="button"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  href="#svg-email"
+                />
+              </svg>
+              <span>
+                Hire me
+              </span>
+              <strong>
+                directly
+              </strong>
+            </button>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://app.usebraintrust.com/talent/782/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  href="#svg-braintrust"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Braintrust
+              </strong>
+            </a>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://www.toptal.com/resume/atanas-atanasov"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  href="#svg-toptal"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Toptal
+              </strong>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+`;

@@ -1,5 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`SectionTimeline component Should render the EducationIcon component 1`] = `
+<Icon
+  className="vertical-timeline__icon"
+  name="svg-education"
+/>
+`;
+
+exports[`SectionTimeline component Should render the PersonalIcon component 1`] = `
+<Icon
+  className="vertical-timeline__icon"
+  name="svg-personal"
+/>
+`;
+
 exports[`SectionTimeline component Should render the SectionTimeline component 1`] = `
 <Section
   hasButton={true}
@@ -669,4 +683,11 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
     </VerticalTimelineElement>
   </VerticalTimeline>
 </Section>
+`;
+
+exports[`SectionTimeline component Should render the WorkIcon component 1`] = `
+<Icon
+  className="vertical-timeline__icon"
+  name="svg-work"
+/>
 `;
