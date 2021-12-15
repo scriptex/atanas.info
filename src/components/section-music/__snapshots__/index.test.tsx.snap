@@ -1,0 +1,343 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionMusic component Should mount the SectionMusic component 1`] = `
+<SectionMusic>
+  <Section
+    hasButton={true}
+    hasShell={true}
+    id="music"
+    wrapperClassName="o-main--high"
+  >
+    <main
+      className="o-main o-main--high"
+    >
+      <section
+        className="c-section c-section--music"
+        id="music"
+      >
+        <div
+          className="o-shell"
+        >
+          <SectionElements
+            hasButton={true}
+            hasShell={true}
+            id="music"
+            wrapperClassName="o-main--high"
+          >
+            <div
+              className="c-music"
+            >
+              <canvas
+                id="canvas"
+              />
+              <button
+                className="c-music__menu"
+                id="menu"
+              >
+                Pick a track
+              </button>
+              <button
+                className="c-music__btn c-music__btn--pause"
+                hidden={true}
+                id="pause"
+              >
+                Pause
+              </button>
+              <button
+                className="c-music__btn c-music__btn--play"
+                id="play"
+              >
+                Play
+              </button>
+              <audio
+                controls={true}
+                crossOrigin="anonymous"
+                hidden={true}
+                id="audio"
+              />
+              <div
+                className="c-music__tracks"
+                hidden={true}
+                id="tracks"
+              />
+            </div>
+            <div
+              className="c-section__actions"
+            >
+              <Button
+                onClick={[Function]}
+                type="button"
+              >
+                <button
+                  className="c-btn "
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Hire me
+                </button>
+              </Button>
+              <ul
+                className="c-section__actions-list"
+              >
+                <li>
+                  <Button
+                    className="c-section__actions-close"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <button
+                      className="c-btn c-section__actions-close"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Close
+                    </button>
+                  </Button>
+                </li>
+                <li>
+                  <Button
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <button
+                      className="c-btn "
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <Icon
+                        className="c-section__actions-icon"
+                        name="svg-email"
+                      >
+                        <svg
+                          className="c-section__actions-icon"
+                        >
+                          <use
+                            xlinkHref="#svg-email"
+                          />
+                        </svg>
+                      </Icon>
+                      <span>
+                        Hire me
+                      </span>
+                      <strong>
+                        directly
+                      </strong>
+                    </button>
+                  </Button>
+                </li>
+                <li>
+                  <ExternalLink
+                    className="c-btn"
+                    href="https://app.usebraintrust.com/talent/782/"
+                    onClick={[Function]}
+                  >
+                    <a
+                      className="c-btn"
+                      href="https://app.usebraintrust.com/talent/782/"
+                      onClick={[Function]}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <Icon
+                        className="c-section__actions-icon"
+                        name="svg-braintrust"
+                      >
+                        <svg
+                          className="c-section__actions-icon"
+                        >
+                          <use
+                            xlinkHref="#svg-braintrust"
+                          />
+                        </svg>
+                      </Icon>
+                      <span>
+                        Hire me on
+                      </span>
+                      <strong>
+                        Braintrust
+                      </strong>
+                    </a>
+                  </ExternalLink>
+                </li>
+                <li>
+                  <ExternalLink
+                    className="c-btn"
+                    href="https://www.toptal.com/resume/atanas-atanasov"
+                    onClick={[Function]}
+                  >
+                    <a
+                      className="c-btn"
+                      href="https://www.toptal.com/resume/atanas-atanasov"
+                      onClick={[Function]}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <Icon
+                        className="c-section__actions-icon"
+                        name="svg-toptal"
+                      >
+                        <svg
+                          className="c-section__actions-icon"
+                        >
+                          <use
+                            xlinkHref="#svg-toptal"
+                          />
+                        </svg>
+                      </Icon>
+                      <span>
+                        Hire me on
+                      </span>
+                      <strong>
+                        Toptal
+                      </strong>
+                    </a>
+                  </ExternalLink>
+                </li>
+              </ul>
+            </div>
+          </SectionElements>
+        </div>
+      </section>
+    </main>
+  </Section>
+</SectionMusic>
+`;
+
+exports[`SectionMusic component Should render the SectionMusic component 1`] = `
+<main
+  class="o-main o-main--high"
+>
+  <section
+    class="c-section c-section--music"
+    id="music"
+  >
+    <div
+      class="o-shell"
+    >
+      <div
+        class="c-music"
+      >
+        <canvas
+          id="canvas"
+        />
+        <button
+          class="c-music__menu"
+          id="menu"
+        >
+          Pick a track
+        </button>
+        <button
+          class="c-music__btn c-music__btn--pause"
+          hidden=""
+          id="pause"
+        >
+          Pause
+        </button>
+        <button
+          class="c-music__btn c-music__btn--play"
+          id="play"
+        >
+          Play
+        </button>
+        <audio
+          controls=""
+          crossorigin="anonymous"
+          hidden=""
+          id="audio"
+        />
+        <div
+          class="c-music__tracks"
+          hidden=""
+          id="tracks"
+        />
+      </div>
+      <div
+        class="c-section__actions"
+      >
+        <button
+          class="c-btn "
+          type="button"
+        >
+          Hire me
+        </button>
+        <ul
+          class="c-section__actions-list"
+        >
+          <li>
+            <button
+              class="c-btn c-section__actions-close"
+              type="button"
+            >
+              Close
+            </button>
+          </li>
+          <li>
+            <button
+              class="c-btn "
+              type="button"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  href="#svg-email"
+                />
+              </svg>
+              <span>
+                Hire me
+              </span>
+              <strong>
+                directly
+              </strong>
+            </button>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://app.usebraintrust.com/talent/782/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  href="#svg-braintrust"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Braintrust
+              </strong>
+            </a>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://www.toptal.com/resume/atanas-atanasov"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  href="#svg-toptal"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Toptal
+              </strong>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+`;

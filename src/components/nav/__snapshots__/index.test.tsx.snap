@@ -205,174 +205,113 @@ exports[`Nav component Should render the Nav component 1`] = `
 
 exports[`Nav component Should render the Nav component with props 1`] = `
 <nav
-  className="c-nav c-nav--test"
+  class="c-nav c-nav--test"
 >
-  <NavInner
-    hasShell={true}
+  <div
+    class="o-shell"
   >
     <ul>
-      <li
-        key="0"
-      >
-        <NavLink
-          activeClassName="active"
-          isActive={[Function]}
-          onClick={[MockFunction]}
+      <li>
+        <a
+          aria-current="page"
+          class="active"
+          href="/"
           title="Back to homepage"
-          to="/"
         >
           Home
-        </NavLink>
+        </a>
       </li>
-      <li
-        key="1"
-      >
-        <NavLink
-          activeClassName="active"
-          isActive={[Function]}
-          onClick={[MockFunction]}
+      <li>
+        <a
+          href="/about"
           title="About me"
-          to="/about"
         >
           About
-        </NavLink>
+        </a>
       </li>
-      <li
-        key="2"
-      >
-        <NavLink
-          activeClassName="active"
-          isActive={[Function]}
-          onClick={[MockFunction]}
+      <li>
+        <a
+          href="/timeline"
           title="Life events"
-          to="/timeline"
         >
           Timeline
-        </NavLink>
+        </a>
       </li>
-      <li
-        key="3"
-      >
-        <NavLink
-          activeClassName="active"
-          isActive={[Function]}
-          onClick={[MockFunction]}
+      <li>
+        <a
+          href="/skills"
           title="My skills"
-          to="/skills"
         >
           Skills
-        </NavLink>
+        </a>
       </li>
-      <li
-        key="4"
-      >
-        <NavLink
-          activeClassName="active"
-          isActive={[Function]}
-          onClick={[MockFunction]}
+      <li>
+        <a
+          href="/portfolio"
           title="My portfolio"
-          to="/portfolio"
         >
           Portfolio
-        </NavLink>
+        </a>
       </li>
-      <li
-        key="5"
-      >
-        <NavLink
-          activeClassName="active"
-          isActive={[Function]}
-          onClick={[MockFunction]}
+      <li>
+        <a
+          href="/stats"
           title="My stats"
-          to="/stats"
         >
           Stats
-        </NavLink>
+        </a>
       </li>
-      <li
-        key="6"
-      >
-        <NavLink
-          activeClassName="active"
-          isActive={[Function]}
-          onClick={[MockFunction]}
+      <li>
+        <a
+          href="/slides"
           title="My presentations"
-          to="/slides"
         >
           Slides
-        </NavLink>
+        </a>
       </li>
-      <li
-        key="7"
-      >
-        <NavLink
-          activeClassName="active"
-          isActive={[Function]}
-          onClick={[MockFunction]}
+      <li>
+        <a
+          href="/videos"
           title="My video presentations"
-          to="/videos"
         >
           Videos
-        </NavLink>
+        </a>
       </li>
-      <li
-        key="8"
-      >
-        <NavLink
-          activeClassName="active"
-          isActive={[Function]}
-          onClick={[MockFunction]}
+      <li>
+        <a
+          href="/articles"
           title="My published articles"
-          to="/articles"
         >
           Articles
-        </NavLink>
+        </a>
       </li>
-      <li
-        key="9"
-      >
-        <NavLink
-          activeClassName="active"
-          isActive={[Function]}
-          onClick={[MockFunction]}
+      <li>
+        <a
+          href="/certificates"
           title="My certificates"
-          to="/certificates"
         >
           Certificates
-        </NavLink>
+        </a>
       </li>
-      <li
-        key="10"
-      >
-        <NavLink
-          activeClassName="active"
-          isActive={[Function]}
-          onClick={[MockFunction]}
+      <li>
+        <a
+          href="/social"
           title="Social widgets"
-          to="/social"
         >
           Social
-        </NavLink>
+        </a>
       </li>
-      <li
-        key="11"
-      >
-        <NavLink
-          activeClassName="active"
-          isActive={[Function]}
-          onClick={[MockFunction]}
+      <li>
+        <a
+          href="/blog"
           title="My blog"
-          to="/blog"
         >
           Blog
-        </NavLink>
+        </a>
       </li>
-      <li
-        key="12"
-      >
+      <li>
         <a
           href="/resume.pdf"
-          onClick={[MockFunction]}
           rel="noopener noreferrer"
           target="_blank"
           title="My CV"
@@ -380,12 +319,9 @@ exports[`Nav component Should render the Nav component with props 1`] = `
           Resume (pdf)
         </a>
       </li>
-      <li
-        key="13"
-      >
+      <li>
         <a
           href="https://scriptex.js.org"
-          onClick={[MockFunction]}
           rel="noopener noreferrer"
           target="_blank"
           title="My interactive CV"
@@ -393,12 +329,9 @@ exports[`Nav component Should render the Nav component with props 1`] = `
           Interactive Resume
         </a>
       </li>
-      <li
-        key="14"
-      >
+      <li>
         <a
           href="/projects"
-          onClick={[MockFunction]}
           rel="noopener noreferrer"
           target="_blank"
           title="My open source projects"
@@ -406,20 +339,15 @@ exports[`Nav component Should render the Nav component with props 1`] = `
           Open source
         </a>
       </li>
-      <li
-        key="15"
-      >
-        <NavLink
-          activeClassName="active"
-          isActive={[Function]}
-          onClick={[MockFunction]}
+      <li>
+        <a
+          href="/music"
           title="My music"
-          to="/music"
         >
           Music
-        </NavLink>
+        </a>
       </li>
     </ul>
-  </NavInner>
+  </div>
 </nav>
 `;

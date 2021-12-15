@@ -134,7 +134,6 @@ export const SectionSocial: React.FunctionComponent = () => {
 									loading="lazy"
 									className="spotify-frame"
 									frameBorder={0}
-									allowTransparency
 								/>
 							)}
 						</div>

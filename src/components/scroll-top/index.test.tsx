@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 import { ScrollToTop } from '.';
 
@@ -13,9 +13,19 @@ jest.mock('react-router-dom', () => ({
 	})
 }));
 
+beforeEach(() => {
+	window.scrollTo = jest.fn();
+});
+
 describe('ScrollToTop component', () => {
 	it('Should render the ScrollToTop component', () => {
 		const wrapper = shallow(<ScrollToTop />);
+
+		expect(wrapper).toMatchSnapshot();
+	});
+
+	it('Should run the effects', () => {
+		const wrapper = mount(<ScrollToTop />);
 
 		expect(wrapper).toMatchSnapshot();
 	});

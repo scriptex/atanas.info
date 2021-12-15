@@ -7,7 +7,7 @@ module.exports = {
 		'\\.(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
 			'<rootDir>/test-config/file-mock.js'
 	},
-	setupFiles: ['<rootDir>/test-config/index.js', '<rootDir>/test-config/local-storage-mock.js'],
+	setupFiles: ['jest-canvas-mock', '<rootDir>/test-config/index.js', '<rootDir>/test-config/local-storage-mock.js'],
 	snapshotSerializers: ['enzyme-to-json/serializer'],
 	transform: {
 		'^.+\\.tsx?$': 'ts-jest',
@@ -17,7 +17,13 @@ module.exports = {
 	},
 	verbose: false,
 	testRegex: '.*\\.(test|spec)\\.(j|tsx?)$',
-	testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/dist/', '<rootDir>/test-config/'],
+	testPathIgnorePatterns: [
+		'<rootDir>/bin/',
+		'<rootDir>/config/',
+		'<rootDir>/dist/',
+		'<rootDir>/node_modules/',
+		'<rootDir>/test-config/'
+	],
 	collectCoverageFrom: [
 		'<rootDir>/src/**/*.{ts,tsx}',
 		'!<rootDir>/src/**/*.{d.ts,d.tsx}',
@@ -25,10 +31,9 @@ module.exports = {
 		'!<rootDir>/src/loadables.tsx',
 		'!<rootDir>/src/components/index.ts',
 		'!<rootDir>/src/components/github-skyline/index.tsx',
+		'!<rootDir>/src/data/*.{js,ts}',
 		'!<rootDir>/src/houdini/*.ts',
-		'!<rootDir>/src/scripts/canvas.ts',
-		'!<rootDir>/src/scripts/skills.ts',
-		'!<rootDir>/src/utilities/index.ts'
+		'!<rootDir>/src/scripts/*.{ts,js}'
 	],
 	coverageThreshold: {
 		global: {
