@@ -1,4 +1,19 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import * as React from 'react';
+// @ts-ignore
+import '@codersrank/activity/codersrank-activity.min';
+// @ts-ignore
+import '@codersrank/education/codersrank-education.min';
+// @ts-ignore
+import '@codersrank/portfolio/codersrank-portfolio.min';
+// @ts-ignore
+import '@codersrank/skills-chart/codersrank-skills-chart.min';
+// @ts-ignore
+import '@codersrank/summary/codersrank-summary.min';
+// @ts-ignore
+import '@codersrank/work-experience/codersrank-work-experience.min';
+// @ts-ignore
+import '@codersrank/timeline/codersrank-timeline.min';
 
 import { Section } from '~/src/components';
 

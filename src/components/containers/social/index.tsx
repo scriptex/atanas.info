@@ -2,6 +2,8 @@
 import * as React from 'react';
 import Carousel from 'react-round-carousel';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
+// @ts-ignore
+import '@codersrank/summary/codersrank-summary.min';
 
 import lastFm from '~/src/data/last.fm-insights.json';
 import { formatDate } from '../stats';
