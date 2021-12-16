@@ -5,7 +5,7 @@ import TagManager from 'react-gtm-module';
 import 'html-head-component';
 import 'regenerator-runtime/runtime';
 
-import { App } from './containers';
+import { App } from './components';
 import { isPrerendering } from './scripts/shared';
 
 interface IWorker {

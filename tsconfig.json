@@ -1,7 +1,9 @@
 {
 	"compilerOptions": {
 		"baseUrl": "./",
-		"paths": {},
+		"paths": {
+			"~*": ["./*"]
+		},
 		"alwaysStrict": true,
 		"allowSyntheticDefaultImports": true,
 		"allowJs": false,

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import 'scriptex-socials';
 
-import { updatedAt } from '../../data/updated-at';
-import { formatDate } from '../../containers/stats';
+import { updatedAt } from '~/src/data/updated-at';
+import { formatDate } from '~src/components/containers/stats';
 import { Funding, ExternalLink } from '..';
 
 export const Footer: React.FC = () => (

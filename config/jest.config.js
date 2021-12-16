@@ -5,7 +5,8 @@ module.exports = {
 	moduleNameMapper: {
 		'\\.(css|less|sass|scss)$': '<rootDir>/test-config/style-mock.js',
 		'\\.(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-			'<rootDir>/test-config/file-mock.js'
+			'<rootDir>/test-config/file-mock.js',
+		'~(.*)': '<rootDir>$1'
 	},
 	setupFiles: ['jest-canvas-mock', '<rootDir>/test-config/index.js', '<rootDir>/test-config/local-storage-mock.js'],
 	snapshotSerializers: ['enzyme-to-json/serializer'],

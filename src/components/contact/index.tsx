@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Button } from '..';
-import { AppContext } from '../../containers/app';
+import { AppContext } from '~src/components/containers/app';
 
 enum Status {
 	ERROR = 'ERROR',

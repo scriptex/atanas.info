@@ -2,7 +2,7 @@ import SimplexNoise from 'simplex-noise';
 import { Power4, TweenMax } from 'gsap';
 
 import { random } from './shared';
-import { tracks } from '../data/tracks';
+import { tracks } from '~/src/data/tracks';
 
 // codebeat:disable[ABC,LOC]
 export const music = (container: HTMLDivElement | null): void => {

@@ -1,0 +1,36 @@
+import * as React from 'react';
+
+import { isPrerendering } from '~/src/scripts/shared';
+import { articles, Article } from '~/src/data/articles';
+import { Loader, Section, ExternalLink } from '~/src/components';
+
+export const SectionArticles: React.FC = () => (
+	<Section
+		id="articles"
+		style={{ backgroundImage: 'url(images/temp/articles.jpg)' }}
+		className=" c-section--slides fullsize-background"
+		hasButton={true}
+	>
+		<h2>Articles</h2>
+
+		<div className="c-section__body o-grid">
+			{articles
+				.filter((article: Article) => article.external)
+				.map((article: Article, index: number) => (
+					<div key={index} className="o-grid__item xs-12 sm-6">
+						<ExternalLink
+							href={article.url}
+							style={isPrerendering ? {} : { backgroundImage: `url(${article.image})` }}
+							className="c-article-link fullsize-background"
+						>
+							<strong>{article.title}</strong>
+						</ExternalLink>
+
+						<Loader />
+					</div>
+				))}
+		</div>
+	</Section>
+);
+
+export default SectionArticles;

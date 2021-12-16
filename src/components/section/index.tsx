@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { AppContext } from '../../containers/app';
-import { Icon, Button, ExternalLink } from '../../components';
+import { AppContext } from '~src/components/containers/app';
+import { Icon, Button, ExternalLink } from '~/src/components';
 
 export interface Props {
 	id: string;

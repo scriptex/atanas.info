@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Routes } from '../../data/routes';
+import { Routes } from '~/src/data/routes';
 import { Nav, Icon } from '..';
 
 export const Header: React.FC = () => {

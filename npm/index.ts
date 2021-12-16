@@ -2,7 +2,6 @@
 import { resolve } from 'path';
 import { writeFileSync } from 'fs';
 
-// @ts-ignore
 import * as info from 'package-info';
 // @ts-ignore
 import * as npmtotal from 'npmtotal';

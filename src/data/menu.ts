@@ -1,5 +1,5 @@
 import { Routes } from './routes';
-import { isPrerendering } from '../scripts/shared';
+import { isPrerendering } from '~/src/scripts/shared';
 
 export interface MenuItem {
 	rel?: string;

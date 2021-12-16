@@ -1,4 +1,4 @@
-export enum Routes {
+export const enum Routes {
 	HOME = '/',
 	ABOUT = '/about',
 	TIMELINE = '/timeline',
