@@ -1,8 +1,4 @@
-@import 'itcss/main.css';
-@import 'itcss/assets/tools/_chevron.css';
-@import 'itcss/assets/tools/_flexbox.css';
-@import 'itcss/assets/tools/_media-queries.css';
-@import 'itcss/assets/tools/_mixins.css';
+@import 'itcss';
 @import 'slick-carousel/slick/slick.css';
 @import 'lite-youtube-embed/src/lite-yt-embed.css';
 @import 'react-vertical-timeline-component/style.min.css';
@@ -3560,6 +3556,17 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 		position: relative;
 		z-index: 1;
 	}
+
+	& h2 {
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 4;
+		margin: 0;
+		transform: translate(-50%, -50%);
+		@mixin slanted;
+	}
 }
 
 .c-music__menu {
@@ -3607,6 +3614,10 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 
 .c-music__btn--play {
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M8 5v14l11-7z' /%3E%3C/svg%3E");
+
+	&[hidden] ~ h2 {
+		display: none;
+	}
 }
 
 .c-music__btn--pause {
@@ -3682,5 +3693,94 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 @media (min-width: 1640px) {
 	.c-music__tracks button {
 		flex: 0 0 calc(20% - 1rem);
+	}
+}
+
+.c-section--interactive-resume {
+	padding: 8rem 0 4rem;
+}
+
+.c-resume {
+	text-align: center;
+	@mixin flex-row wrap, flex-start, center;
+	padding-bottom: 2.5rem;
+
+	& h2 {
+		align-self: center;
+		@mixin slanted;
+	}
+}
+
+.c-resume__widget {
+	max-width: 100%;
+	flex: 0 0 100%;
+	padding: 2rem;
+	background-color: color-mod(var(--color-primary) a(25%));
+
+	&:not(:last-child) {
+		margin-bottom: 4rem;
+	}
+
+	& h3 {
+		@mixin slanted;
+	}
+
+	& codersrank-portfolio,
+	& codersrank-work-experience {
+		--grid-columns: 2;
+	}
+
+	& codersrank-education {
+		--grid-columns: 3;
+	}
+
+	& codersrank-summary,
+	& codersrank-activity,
+	& codersrank-education,
+	& codersrank-timeline,
+	& codersrank-portfolio,
+	& codersrank-skills-chart,
+	& codersrank-work-experience {
+		text-align: left;
+	}
+
+	& codersrank-timeline {
+		color: var(--color-base);
+	}
+}
+
+@media (--tablet-portrait) {
+	.c-resume__widget {
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+
+		& codersrank-portfolio,
+		& codersrank-work-experience {
+			--grid-columns: 1;
+		}
+
+		& codersrank-education {
+			--grid-columns: 2;
+		}
+	}
+}
+
+@media (--mobile) {
+	.c-section--interactive-resume {
+		padding: 6.125rem 0 1rem;
+	}
+
+	.c-resume {
+		padding: 0;
+		margin: 0 -1rem;
+	}
+
+	.c-resume__widget {
+		padding: 1rem;
+
+		& codersrank-education {
+			--grid-columns: 1;
+		}
 	}
 }

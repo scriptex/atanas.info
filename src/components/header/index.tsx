@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Routes } from '../../data/routes';
 import { Nav, Icon } from '..';
 
-export const Header: React.FunctionComponent = () => {
+export const Header: React.FC = () => {
 	const [open, setOpen] = React.useState(false);
 
 	return (

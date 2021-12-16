@@ -6,7 +6,7 @@ interface Props {
 	[x: string]: any;
 }
 
-export const Icon: React.FunctionComponent<Readonly<Props>> = ({ name, className, ...rest }: Readonly<Props>) => (
+export const Icon: React.FC<Readonly<Props>> = ({ name, className, ...rest }: Readonly<Props>) => (
 	<svg {...rest} className={className}>
 		<use xlinkHref={`#${name}`} />
 	</svg>

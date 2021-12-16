@@ -5,7 +5,7 @@ import { Props, Section, SectionElements } from '.';
 
 interface Component {
 	name: string;
-	component: React.FunctionComponent<Readonly<Props>>;
+	component: React.FC<Readonly<Props>>;
 }
 
 interface Components {
@@ -25,7 +25,7 @@ const components: Components = {
 };
 
 const test = (title: string, Component: React.ComponentType<any>, props: any): void => {
-	const Children: React.FunctionComponent = () => (
+	const Children: React.FC = () => (
 		<>
 			<p>Test</p>
 			<p>Test</p>

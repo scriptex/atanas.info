@@ -2,10 +2,10 @@ import * as React from 'react';
 import 'scriptex-socials';
 
 import { updatedAt } from '../../data/updated-at';
-import { formatDate } from '../section-stats';
+import { formatDate } from '../../containers/stats';
 import { Funding, ExternalLink } from '..';
 
-export const Footer: React.FunctionComponent = () => (
+export const Footer: React.FC = () => (
 	<footer className="c-footer">
 		<div className="o-shell o-shell--flex">
 			<p>

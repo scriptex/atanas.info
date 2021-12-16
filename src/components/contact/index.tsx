@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Button } from '..';
-import { AppContext } from '../app';
+import { AppContext } from '../../containers/app';
 
 enum Status {
 	ERROR = 'ERROR',
@@ -9,7 +9,7 @@ enum Status {
 	DEFAULT = 'DEFAULT'
 }
 
-export const ContactSuccessContent: React.FunctionComponent = () => (
+export const ContactSuccessContent: React.FC = () => (
 	<>
 		<h2>Send me your message</h2>
 
@@ -61,7 +61,7 @@ export const onSubmit = (
 		});
 };
 
-export const Contact: React.FunctionComponent = () => {
+export const Contact: React.FC = () => {
 	const [status, setStatus] = React.useState(Status.DEFAULT);
 	const [errorMessage, setErrorMessage] = React.useState('');
 	const { contactVisible, setContactVisible } = React.useContext(AppContext);

@@ -28,6 +28,13 @@ declare namespace JSX {
 		'social-links': any;
 		'lite-youtube': any;
 		'codersrank-widget': any;
+		'codersrank-activity': any;
+		'codersrank-education': any;
+		'codersrank-portfolio': any;
+		'codersrank-skills-chart': any;
+		'codersrank-summary': any;
+		'codersrank-work-experience': any;
+		'codersrank-timeline': any;
 	}
 }
 

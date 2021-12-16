@@ -81,10 +81,8 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 					content: 'Resume (pdf)'
 				},
 				{
-					rel: 'noopener noreferrer',
-					href: 'https://scriptex.js.org',
-					title: 'My interactive CV',
-					target: '_blank',
+					href: Routes.INTERACTIVE_RESUME,
+					title: 'My interactive Resume',
 					content: 'Interactive Resume'
 				},
 				{

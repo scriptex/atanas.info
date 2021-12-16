@@ -1,0 +1,246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component Should render the App component 1`] = `
+<BrowserRouter>
+  <ScrollToTop />
+  <Suspense
+    fallback={<Loader />}
+  >
+    <ContextProvider
+      value={
+        Object {
+          "contactVisible": false,
+          "setContactVisible": [Function],
+        }
+      }
+    >
+      <Head />
+      <Svg
+        src="/sprite.svg"
+      />
+      <Header />
+      <Contact />
+      <Switch>
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/about"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/timeline"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/skills"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/portfolio"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/stats"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/slides"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/videos"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/articles"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/certificates"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/social"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/blog"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/blog/:slug"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/music"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/interactive-resume"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+        />
+      </Switch>
+      <Nav
+        className="c-nav--inline"
+        hasShell={true}
+      />
+      <Footer />
+    </ContextProvider>
+  </Suspense>
+</BrowserRouter>
+`;
