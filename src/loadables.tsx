@@ -14,5 +14,6 @@ export const Social = React.lazy(() => import('../src/components/section-social'
 export const Blog = React.lazy(() => import('../src/components/section-blog'));
 export const BlogPost = React.lazy(() => import('../src/components/section-blog-post'));
 export const Music = React.lazy(() => import('../src/components/section-music'));
-export const ErrorPage = React.lazy(() => import('../src/components/404'));
+export const Resume = React.lazy(() => import('../src/components/section-resume'));
 export const InteractiveResume = React.lazy(() => import('../src/components/section-interactive-resume'));
+export const ErrorPage = React.lazy(() => import('../src/components/404'));

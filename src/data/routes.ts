@@ -12,7 +12,7 @@ export enum Routes {
 	SOCIAL = '/social',
 	BLOG = '/blog',
 	MUSIC = '/music',
-	RESUME = '/resume.pdf',
+	RESUME = '/resume',
 	PROJECTS = '/projects',
 	INTERACTIVE_RESUME = '/interactive-resume'
 }

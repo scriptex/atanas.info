@@ -156,23 +156,23 @@ exports[`Nav component Should render the Nav component 1`] = `
         <NavLink
           activeClassName="active"
           isActive={[Function]}
-          title="My interactive Resume"
-          to="/interactive-resume"
+          title="My resume"
+          to="/resume"
         >
-          Interactive Resume
+          Resume
         </NavLink>
       </li>
       <li
         key="13"
       >
-        <a
-          href="/resume.pdf"
-          rel="noopener noreferrer"
-          target="_blank"
-          title="My CV"
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          title="My interactive resume"
+          to="/interactive-resume"
         >
-          Resume (pdf)
-        </a>
+          Interactive resume
+        </NavLink>
       </li>
       <li
         key="14"
@@ -311,20 +311,18 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       </li>
       <li>
         <a
-          href="/interactive-resume"
-          title="My interactive Resume"
+          href="/resume"
+          title="My resume"
         >
-          Interactive Resume
+          Resume
         </a>
       </li>
       <li>
         <a
-          href="/resume.pdf"
-          rel="noopener noreferrer"
-          target="_blank"
-          title="My CV"
+          href="/interactive-resume"
+          title="My interactive resume"
         >
-          Resume (pdf)
+          Interactive resume
         </a>
       </li>
       <li>
