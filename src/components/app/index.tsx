@@ -11,6 +11,7 @@ import {
 	About,
 	Music,
 	Stats,
+	Resume,
 	Skills,
 	Slides,
 	Social,
@@ -62,8 +63,9 @@ export const App: React.FunctionComponent = () => {
 						<Route exact={true} path={Routes.SOCIAL} component={Social} />
 						<Route exact={true} path={Routes.BLOG} component={Blog} />
 						<Route exact={true} path={`${Routes.BLOG}/:slug`} component={BlogPost} />
-						<Route exact={true} path={Routes.MUSIC} component={Music} />
+						<Route exact={true} path={Routes.RESUME} component={Resume} />
 						<Route exact={true} path={Routes.INTERACTIVE_RESUME} component={InteractiveResume} />
+						<Route exact={true} path={Routes.MUSIC} component={Music} />
 						<Route component={ErrorPage} />
 					</Switch>
 

@@ -7,21 +7,23 @@ import '@codersrank/portfolio/codersrank-portfolio.min';
 import '@codersrank/skills-chart/codersrank-skills-chart.min';
 import '@codersrank/work-experience/codersrank-work-experience.min';
 
-import { Section } from '..';
+import { Lines, Section } from '..';
 
 // codebeat:disable[ABC,LOC]
 export const SectionInteractiveResume: React.FC = () => (
 	<Section id="interactive-resume" hasButton={true}>
-		<div className="c-resume">
+		<Lines />
+
+		<div className="c-interactive-resume">
 			<h2>Interactive resume</h2>
 
-			<div className="c-resume__widget">
+			<div className="c-interactive-resume__widget">
 				<h3>Activity</h3>
 
 				<codersrank-activity labels legend tooltip branding="false" username="scriptex" />
 			</div>
 
-			<div className="c-resume__widget">
+			<div className="c-interactive-resume__widget">
 				<h3>Education</h3>
 
 				<codersrank-education
@@ -33,43 +35,43 @@ export const SectionInteractiveResume: React.FC = () => (
 				/>
 			</div>
 
-			<div className="c-resume__widget">
+			<div className="c-interactive-resume__widget">
 				<h3>Portfolio</h3>
 
 				<codersrank-portfolio grid branding="false" username="scriptex" />
 			</div>
 
-			<div className="c-resume__widget">
+			<div className="c-interactive-resume__widget">
 				<h3>Skills</h3>
 
 				<codersrank-skills-chart labels legend tooltip branding="false" username="scriptex" />
 			</div>
 
-			<div className="c-resume__widget">
+			<div className="c-interactive-resume__widget">
 				<h3>Summary</h3>
 
 				<codersrank-summary username="scriptex" />
 			</div>
 
-			<div className="c-resume__widget">
+			<div className="c-interactive-resume__widget">
 				<h3>Work</h3>
 
 				<codersrank-work-experience grid logos branding="false" username="scriptex" />
 			</div>
 
-			<div className="c-resume__widget">
+			<div className="c-interactive-resume__widget">
 				<h3>Work Experience Timeline</h3>
 
 				<codersrank-timeline type="workexperience" branding="false" username="scriptex" />
 			</div>
 
-			<div className="c-resume__widget">
+			<div className="c-interactive-resume__widget">
 				<h3>Portfolio Timeline</h3>
 
 				<codersrank-timeline type="portfolio" branding="false" username="scriptex" />
 			</div>
 
-			<div className="c-resume__widget">
+			<div className="c-interactive-resume__widget">
 				<h3>Technologies Timeline</h3>
 
 				<codersrank-timeline type="technologies" branding="false" username="scriptex" />

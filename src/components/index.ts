@@ -24,6 +24,7 @@ export { default as SectionInteractiveResume } from './section-interactive-resum
 export { default as SectionMusic } from './section-music';
 export { default as SectionNav } from './section-nav';
 export { default as SectionPortfolio } from './section-portfolio';
+export { default as SectionResume } from './section-resume';
 export { default as SectionSkills } from './section-skills';
 export { default as SectionSlides } from './section-slides';
 export { default as SectionSocial } from './section-social';

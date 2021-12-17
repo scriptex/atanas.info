@@ -71,20 +71,18 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 		content: 'Blog'
 	},
 	{
+		href: Routes.RESUME,
+		title: 'My resume',
+		content: 'Resume'
+	},
+	{
 		href: Routes.INTERACTIVE_RESUME,
-		title: 'My interactive Resume',
-		content: 'Interactive Resume'
+		title: 'My interactive resume',
+		content: 'Interactive resume'
 	},
 	...(isPrerendering
 		? []
 		: [
-				{
-					rel: 'noopener noreferrer',
-					href: Routes.RESUME,
-					title: 'My CV',
-					target: '_blank',
-					content: 'Resume (pdf)'
-				},
 				{
 					rel: 'noopener noreferrer',
 					href: Routes.PROJECTS,
