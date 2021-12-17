@@ -2838,6 +2838,7 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 .c-funding__knob,
 .c-funding__crypto {
 	opacity: 0;
+	visibility: hidden;
 	display: block;
 	position: fixed;
 	pointer-events: none;
@@ -2954,6 +2955,7 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 	& .c-funding__knob,
 	& .c-funding__crypto {
 		opacity: 1;
+		visibility: visible;
 		transform: scale(1);
 		pointer-events: auto;
 	}
@@ -3093,6 +3095,7 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 		top: 0;
 		left: 0;
 		background: transparent;
+		z-index: -1;
 	}
 
 	&::before {
@@ -3770,6 +3773,8 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 .c-interactive-resume {
 	text-align: center;
 	@mixin flex-row wrap, flex-start, center;
+	position: relative;
+	z-index: 1;
 	padding-bottom: 2.5rem;
 
 	& h2 {
@@ -3864,6 +3869,8 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 
 .c-resume {
 	@mixin flex-row wrap, flex-start, space-between;
+	position: relative;
+	z-index: 1;
 	padding-bottom: 1.5rem;
 
 	& i {
@@ -4078,12 +4085,28 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 		padding: 0;
 	}
 
+	.c-nav,
+	.c-lines,
 	.c-header,
 	.c-footer,
-	.c-nav,
 	.c-resume__head,
 	.c-section__actions {
 		display: none;
+	}
+
+	.c-section--about,
+	.c-section--resume,
+	.c-section--social,
+	.c-section--videos,
+	.c-section--timeline,
+	.c-section--blog-post,
+	.c-section--portfolio,
+	.c-section--certificates,
+	.c-section--interactive-resume {
+		&::before,
+		&::after {
+			content: none;
+		}
 	}
 
 	.c-resume__title,
@@ -4118,6 +4141,7 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 
 	.c-resume__experience,
 	.c-resume__aside .c-resume__block {
+		break-inside: avoid;
 		page-break-inside: avoid;
 	}
 }
