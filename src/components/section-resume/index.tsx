@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import { Lines, Button, Section } from '..';
 
+// codebeat:disable[ABC,LOC]
 export const SectionResume: React.FC = () => (
 	<Section
 		id="resume"
@@ -337,5 +338,6 @@ export const SectionResume: React.FC = () => (
 		</div>
 	</Section>
 );
+// codebeat:enable[ABC,LOC]
 
 export default SectionResume;
