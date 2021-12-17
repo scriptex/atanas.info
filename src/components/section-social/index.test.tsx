@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { mount, render, shallow } from 'enzyme';
+import { render, shallow } from 'enzyme';
 
 import { SectionSocial } from '.';
 import * as stats from '../section-stats';
@@ -21,12 +21,6 @@ stats.formatDate.mockImplementation(() => 'Mock date');
 describe('SectionSocial component', () => {
 	it('Should render the SectionSocial component', () => {
 		const wrapper = shallow(<SectionSocial />);
-
-		expect(wrapper).toMatchSnapshot();
-	});
-
-	it('Should mount the SectionSocial component', () => {
-		const wrapper = mount(<SectionSocial />);
 
 		expect(wrapper).toMatchSnapshot();
 	});

@@ -30,6 +30,12 @@ export const SectionMusic: React.FunctionComponent = () => {
 				<audio id="audio" hidden controls crossOrigin="anonymous" />
 
 				<div id="tracks" className="c-music__tracks" hidden />
+
+				<h2>
+					Pick a track and
+					<br />
+					press the play button.
+				</h2>
 			</div>
 		</Section>
 	);

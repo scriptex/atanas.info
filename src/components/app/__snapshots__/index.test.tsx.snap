@@ -177,7 +177,6 @@ exports[`App component Should render the App component 1`] = `
               },
             }
           }
-          exact={true}
           path="/blog"
         />
         <Route
@@ -191,7 +190,6 @@ exports[`App component Should render the App component 1`] = `
               },
             }
           }
-          exact={true}
           path="/blog/:slug"
         />
         <Route
@@ -207,6 +205,20 @@ exports[`App component Should render the App component 1`] = `
           }
           exact={true}
           path="/music"
+        />
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.lazy),
+              "_init": [Function],
+              "_payload": Object {
+                "_result": [Function],
+                "_status": -1,
+              },
+            }
+          }
+          exact={true}
+          path="/interactive-resume"
         />
         <Route
           component={

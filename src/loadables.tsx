@@ -15,3 +15,4 @@ export const Blog = React.lazy(() => import('../src/components/section-blog'));
 export const BlogPost = React.lazy(() => import('../src/components/section-blog-post'));
 export const Music = React.lazy(() => import('../src/components/section-music'));
 export const ErrorPage = React.lazy(() => import('../src/components/404'));
+export const InteractiveResume = React.lazy(() => import('../src/components/section-interactive-resume'));

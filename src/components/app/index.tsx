@@ -20,7 +20,8 @@ import {
 	BlogPost,
 	ErrorPage,
 	Portfolio,
-	Certificates
+	Certificates,
+	InteractiveResume
 } from '../../loadables';
 
 export const AppContext = React.createContext({
@@ -59,9 +60,10 @@ export const App: React.FunctionComponent = () => {
 						<Route exact={true} path={Routes.ARTICLES} component={Articles} />
 						<Route exact={true} path={Routes.CERTIFICATES} component={Certificates} />
 						<Route exact={true} path={Routes.SOCIAL} component={Social} />
-						<Route exact={true} path={Routes.BLOG} component={Blog} />
-						<Route exact={true} path={`${Routes.BLOG}/:slug`} component={BlogPost} />
+						<Route path={Routes.BLOG} component={Blog} />
+						<Route path={`${Routes.BLOG}/:slug`} component={BlogPost} />
 						<Route exact={true} path={Routes.MUSIC} component={Music} />
+						<Route exact={true} path={Routes.INTERACTIVE_RESUME} component={InteractiveResume} />
 						<Route component={ErrorPage} />
 					</Switch>
 
