@@ -289,10 +289,10 @@ export const SectionResume: React.FC = () => (
 
 					<ul className="c-resume__strengths">
 						<li>
-							<h3>
+							<h4>
 								<i className="icon-share"></i>
 								Collaborative
-							</h3>
+							</h4>
 
 							<p>
 								I am always keen to share knowledge, help, discuss, teach and learn from others. I am
@@ -301,10 +301,10 @@ export const SectionResume: React.FC = () => (
 						</li>
 
 						<li>
-							<h3>
+							<h4>
 								<i className="icon-star"></i>
 								Result-oriented
-							</h3>
+							</h4>
 
 							<p>
 								Many confuse progress with moving in the right direction. I always make sure to check if
@@ -313,19 +313,19 @@ export const SectionResume: React.FC = () => (
 						</li>
 
 						<li>
-							<h3>
+							<h4>
 								<i className="icon-brush"></i>
 								Detail-oriented
-							</h3>
+							</h4>
 
 							<p>Continuously focused on how to improve my work and do it the best way I can. </p>
 						</li>
 
 						<li>
-							<h3>
+							<h4>
 								<i className="icon-clock"></i>
 								Project management and prioritization
-							</h3>
+							</h4>
 
 							<p>
 								I am always making sure that project deadlines are met and the required results are
