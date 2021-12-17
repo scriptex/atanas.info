@@ -3,6 +3,7 @@ import * as React from 'react';
 import { music } from '../../scripts/music';
 import { Section } from '..';
 
+// codebeat:disable[ABC,LOC]
 export const SectionMusic: React.FunctionComponent = () => {
 	const container: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
 
@@ -40,5 +41,6 @@ export const SectionMusic: React.FunctionComponent = () => {
 		</Section>
 	);
 };
+// codebeat:enable[ABC,LOC]
 
 export default SectionMusic;

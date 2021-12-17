@@ -177,6 +177,7 @@ exports[`App component Should render the App component 1`] = `
               },
             }
           }
+          exact={true}
           path="/blog"
         />
         <Route
@@ -190,6 +191,7 @@ exports[`App component Should render the App component 1`] = `
               },
             }
           }
+          exact={true}
           path="/blog/:slug"
         />
         <Route

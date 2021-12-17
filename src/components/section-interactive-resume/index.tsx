@@ -9,6 +9,7 @@ import '@codersrank/work-experience/codersrank-work-experience.min';
 
 import { Section } from '..';
 
+// codebeat:disable[ABC,LOC]
 export const SectionInteractiveResume: React.FC = () => (
 	<Section id="interactive-resume" hasButton={true}>
 		<div className="c-resume">
@@ -76,5 +77,6 @@ export const SectionInteractiveResume: React.FC = () => (
 		</div>
 	</Section>
 );
+// codebeat:enable[ABC,LOC]
 
 export default SectionInteractiveResume;
