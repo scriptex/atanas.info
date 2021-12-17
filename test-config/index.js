@@ -64,3 +64,18 @@ jest.mock('../src/scripts/canvas', () => ({
 jest.mock('../src/scripts/skills.ts', () => ({
 	drawSkills: jest.fn()
 }));
+
+[
+	'@codersrank/summary',
+	'@codersrank/timeline',
+	'@codersrank/activity',
+	'@codersrank/education',
+	'@codersrank/portfolio',
+	'@codersrank/skills-chart',
+	'@codersrank/work-experience'
+].forEach(module => {
+	jest.mock(module, () => ({
+		__esModule: true,
+		default: class {}
+	}));
+});

@@ -153,6 +153,18 @@ exports[`Nav component Should render the Nav component 1`] = `
       <li
         key="12"
       >
+        <NavLink
+          activeClassName="active"
+          isActive={[Function]}
+          title="My interactive Resume"
+          to="/interactive-resume"
+        >
+          Interactive Resume
+        </NavLink>
+      </li>
+      <li
+        key="13"
+      >
         <a
           href="/resume.pdf"
           rel="noopener noreferrer"
@@ -160,18 +172,6 @@ exports[`Nav component Should render the Nav component 1`] = `
           title="My CV"
         >
           Resume (pdf)
-        </a>
-      </li>
-      <li
-        key="13"
-      >
-        <a
-          href="https://scriptex.js.org"
-          rel="noopener noreferrer"
-          target="_blank"
-          title="My interactive CV"
-        >
-          Interactive Resume
         </a>
       </li>
       <li
@@ -311,22 +311,20 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       </li>
       <li>
         <a
+          href="/interactive-resume"
+          title="My interactive Resume"
+        >
+          Interactive Resume
+        </a>
+      </li>
+      <li>
+        <a
           href="/resume.pdf"
           rel="noopener noreferrer"
           target="_blank"
           title="My CV"
         >
           Resume (pdf)
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://scriptex.js.org"
-          rel="noopener noreferrer"
-          target="_blank"
-          title="My interactive CV"
-        >
-          Interactive Resume
         </a>
       </li>
       <li>

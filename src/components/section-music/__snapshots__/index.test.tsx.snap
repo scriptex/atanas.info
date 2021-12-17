@@ -60,6 +60,11 @@ exports[`SectionMusic component Should mount the SectionMusic component 1`] = `
                 hidden={true}
                 id="tracks"
               />
+              <h2>
+                Pick a track and
+                <br />
+                press the play button.
+              </h2>
             </div>
             <div
               className="c-section__actions"
@@ -250,6 +255,11 @@ exports[`SectionMusic component Should render the SectionMusic component 1`] = `
           hidden=""
           id="tracks"
         />
+        <h2>
+          Pick a track and
+          <br />
+          press the play button.
+        </h2>
       </div>
       <div
         class="c-section__actions"

@@ -28,11 +28,53 @@ declare namespace JSX {
 		'social-links': any;
 		'lite-youtube': any;
 		'codersrank-widget': any;
+		'codersrank-summary': any;
+		'codersrank-timeline': any;
+		'codersrank-activity': any;
+		'codersrank-education': any;
+		'codersrank-portfolio': any;
+		'codersrank-skills-chart': any;
+		'codersrank-work-experience': any;
 	}
 }
 
 declare module 'react-twitter-embed' {
 	export const TwitterTimelineEmbed: any;
+}
+
+declare module '@codersrank/activity/codersrank-activity.min' {
+	const content: any;
+	export default content;
+}
+
+declare module '@codersrank/education/codersrank-education.min' {
+	const content: any;
+	export default content;
+}
+
+declare module '@codersrank/portfolio/codersrank-portfolio.min' {
+	const content: any;
+	export default content;
+}
+
+declare module '@codersrank/skills-chart/codersrank-skills-chart.min' {
+	const content: any;
+	export default content;
+}
+
+declare module '@codersrank/summary/codersrank-summary.min' {
+	const content: any;
+	export default content;
+}
+
+declare module '@codersrank/work-experience/codersrank-work-experience.min' {
+	const content: any;
+	export default content;
+}
+
+declare module '@codersrank/timeline/codersrank-timeline.min' {
+	const content: any;
+	export default content;
 }
 
 interface Window {
