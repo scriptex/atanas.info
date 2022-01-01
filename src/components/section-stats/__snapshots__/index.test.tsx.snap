@@ -264,6 +264,16 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
                 2020
               </button>
             </li>
+            <li
+              key="3"
+            >
+              <button
+                className="c-btn c-btn--small"
+                onClick={[Function]}
+              >
+                2021
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
