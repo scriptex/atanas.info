@@ -17,7 +17,7 @@ interface Props {
 	data: any;
 }
 
-const YEARS: string[] = ['2018', '2019', '2020'];
+const YEARS: string[] = ['2018', '2019', '2020', '2021'];
 
 // prettier-ignore
 export const formatDate = (date: string | number, formatter = 'dd MMM yyyy'): string => format(new Date(date), formatter);
