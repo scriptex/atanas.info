@@ -1018,6 +1018,13 @@
   dependencies:
     tslib ">=1.10.0"
 
+"@babylonjs/core@4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@babylonjs/core/-/core-4.2.1.tgz#9dc57dabf41d259a2343da308ec52575b368e588"
+  integrity sha512-Z2ZVNRKPB1UvmMeqQtxCJKrQtQ/hb5FcAZi66YEEE0MKBQlLmf6oZEM9vS1RljPK7NZoV/dZSdwjJgiQlGsuhA==
+  dependencies:
+    tslib ">=1.10.0"
+
 "@babylonjs/gui@4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@babylonjs/gui/-/gui-4.2.0.tgz#c2a35ca6724759731fe0c4ddbfe2490301847f93"
@@ -1035,12 +1042,12 @@
     babylonjs-gltf2interface "4.2.0"
     tslib ">=1.10.0"
 
-"@babylonjs/materials@4.2.0":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@babylonjs/materials/-/materials-4.2.0.tgz#8d889e49f6824e4fc62622b221f36ab0b8334d6e"
-  integrity sha512-YoetSvjpilw39W99RyiZLxZy2Zy3baRckDlv/om/0qFmFK7mWsXfoqp5nBecf8bItyuvPgtfJNZwBe669/j2qw==
+"@babylonjs/materials@4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@babylonjs/materials/-/materials-4.2.1.tgz#a44ef5c8a4c3d99e16dce27895e5ce4f7d178393"
+  integrity sha512-G4mfmixt2BnATaa2/uhf7xfZv4fqD6bGHocbEWT1Iu0KOJcpU7Q0EYjN8bqx78hVFjd94e4g0/7Bey2JaGrakA==
   dependencies:
-    "@babylonjs/core" "4.2.0"
+    "@babylonjs/core" "4.2.1"
     tslib ">=1.10.0"
 
 "@bcoe/v8-coverage@^0.2.3":
