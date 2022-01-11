@@ -2,12 +2,7 @@ module.exports = {
 	swDest: 'dist/offline-worker.js',
 	sourcemap: false,
 	skipWaiting: true,
-	globIgnores: [
-		'**/static/images/favicon/**',
-		'**/static/images/icons/**',
-		'**/static/images/launch-screens/**',
-		'**/static/images/svg/**'
-	],
+	globIgnores: ['**/images/favicon/**', '**/images/icons/**', '**/images/launch-screens/**', '**/images/svg/**'],
 	globPatterns: ['**/*'],
 	clientsClaim: true,
 	globDirectory: 'dist',
