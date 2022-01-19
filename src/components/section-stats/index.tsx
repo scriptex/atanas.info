@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { format } from 'date-fns';
 import ReactGitHubCalendar from 'react-ts-github-calendar';
+import { format, intervalToDuration } from 'date-fns';
 
 import npmStats from '../../data/npm-stats.json';
 import { isPrerendering } from '../../scripts/shared';
@@ -17,7 +17,16 @@ interface Props {
 	data: any;
 }
 
-const YEARS: string[] = ['2018', '2019', '2020', '2021'];
+const START_YEAR = 2013;
+
+const { years } = intervalToDuration({
+	start: new Date(START_YEAR, 0, 0, 0, 0, 0),
+	end: new Date(new Date().getFullYear(), 0, 0, 0, 0, 0)
+});
+
+const YEARS: string[] = Array(years)
+	.fill(0)
+	.map((_, i) => `${START_YEAR + i}`);
 
 // prettier-ignore
 export const formatDate = (date: string | number, formatter = 'dd MMM yyyy'): string => format(new Date(date), formatter);
@@ -341,6 +350,11 @@ export const SectionStats: React.FunctionComponent<Readonly<Props>> = (props: Re
 
 				addTitles('.c-calendar--github', (rect: SVGRectElement) => {
 					const { date, count } = rect.dataset;
+
+					if (typeof date === 'undefined' || typeof count === 'undefined') {
+						return '';
+					}
+
 					const formattedDate = format(new Date(date as string), 'EEEE MMM d, yyyy');
 
 					return `${count} contribution${count === '1' ? '' : 's'} on ${formattedDate}`;

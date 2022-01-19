@@ -27,7 +27,7 @@ export const SectionElements: React.FunctionComponent<Readonly<Props>> = (props:
 			{props.hasButton && (
 				<div className="c-section__actions">
 					<Button type="button" onClick={() => setOpen(!open)}>
-						Hire me
+						Get in touch
 					</Button>
 
 					<ul className={`c-section__actions-list${open ? ' c-section__actions-list--open' : ''}`}>
@@ -46,7 +46,7 @@ export const SectionElements: React.FunctionComponent<Readonly<Props>> = (props:
 								}}
 							>
 								<Icon name="svg-email" className="c-section__actions-icon" />
-								<span>Hire me</span>
+								<span>Contact me</span>
 								<strong>directly</strong>
 							</Button>
 						</li>
