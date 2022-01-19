@@ -418,8 +418,7 @@ body {
 	& ul {
 		width: 20rem;
 		height: 100%;
-		display: flex;
-		flex-flow: column wrap;
+		@mixin flex-column wrap;
 		position: relative;
 		z-index: 2;
 		margin: 0 0 0 auto;
@@ -445,10 +444,7 @@ body {
 	& a {
 		color: var(--color-primary);
 		height: 100%;
-		display: flex;
-		flex-flow: row nowrap;
-		align-items: center;
-		justify-content: center;
+		@mixin flex-row nowrap, center, center;
 		text-decoration: none;
 		background-color: var(--color-secondary);
 
@@ -552,10 +548,7 @@ body {
 	color: var(--color-primary);
 	width: 3.13rem;
 	height: 3.13rem;
-	display: flex;
-	flex-flow: column wrap;
-	align-items: center;
-	justify-content: center;
+	@mixin flex-column wrap, center, center;
 	position: relative;
 	top: 0;
 	right: 0;
@@ -3699,9 +3692,7 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 	color: #fff;
 	width: 80%;
 	height: 80%;
-	flex-flow: row wrap;
-	align-items: stretch;
-	justify-content: flex-start;
+	@mixin flex-row wrap;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -3712,10 +3703,6 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 	-webkit-overflow-scrolling: touch;
 	background-color: rgba(0, 0, 0, 0.8);
 	transform: translate(-50%, -50%);
-
-	&:not([hidden]) {
-		display: flex;
-	}
 
 	& button {
 		font-size: 100%;
