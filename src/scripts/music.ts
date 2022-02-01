@@ -4,7 +4,7 @@ import { Power4, TweenMax } from 'gsap';
 import { random } from './shared';
 import { tracks } from '../data/tracks';
 
-// codebeat:disable[ABC,LOC]
+// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 export const music = (container: HTMLDivElement | null): void => {
 	if (!container) {
 		return;
@@ -226,4 +226,4 @@ export const music = (container: HTMLDivElement | null): void => {
 
 	createCircles();
 };
-// codebeat:enable[ABC,LOC]
+// codebeat:enable[ABC,LOC,BLOCK_NESTING]

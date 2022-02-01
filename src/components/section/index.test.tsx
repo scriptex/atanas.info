@@ -43,7 +43,7 @@ const test = (title: string, Component: React.ComponentType<any>, props: any): v
 	});
 };
 
-// codebeat:disable[LOC]
+// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 const suite = (Component: React.ComponentType<any>, name: string): void => {
 	describe(`${name} component`, () => {
 		test(`Should render the ${name} component`, Component, {
@@ -75,7 +75,7 @@ const suite = (Component: React.ComponentType<any>, name: string): void => {
 		});
 	});
 };
-// codebeat:enable[LOC]
+// codebeat:enable[ABC,LOC,BLOCK_NESTING]
 
 Object.values(components).forEach((value: Component) => suite(value.component, value.name));
 
