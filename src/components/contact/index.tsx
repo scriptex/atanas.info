@@ -27,7 +27,7 @@ export const ContactSuccessContent: React.FunctionComponent = () => (
 	</>
 );
 
-// codebeat:disable[LOC]
+// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 export const onSubmit = (
 	e: React.FormEvent<HTMLFormElement>,
 	setStatus: (status: Status) => void,
@@ -103,6 +103,6 @@ export const Contact: React.FunctionComponent = () => {
 		</form>
 	);
 };
-// codebeat:enable[LOC]
+// codebeat:enable[ABC,LOC,BLOCK_NESTING]
 
 export default Contact;

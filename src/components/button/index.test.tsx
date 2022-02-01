@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import { Button } from '.';
 
-// codebeat:disable[LOC]
+// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 describe('Button component', () => {
 	it('Should render the Button component with type button', () => {
 		const wrapper = shallow(
@@ -35,4 +35,4 @@ describe('Button component', () => {
 		expect(wrapper).toMatchSnapshot();
 	});
 });
-// codebeat:enable[LOC]
+// codebeat:enable[ABC,LOC,BLOCK_NESTING]

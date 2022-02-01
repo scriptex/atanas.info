@@ -3,7 +3,7 @@ import * as React from 'react';
 import { music } from '../../scripts/music';
 import { Section } from '..';
 
-// codebeat:disable[ABC,LOC]
+// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 export const SectionMusic: React.FunctionComponent = () => {
 	const container: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
 
@@ -41,6 +41,6 @@ export const SectionMusic: React.FunctionComponent = () => {
 		</Section>
 	);
 };
-// codebeat:enable[ABC,LOC]
+// codebeat:enable[ABC,LOC,BLOCK_NESTING]
 
 export default SectionMusic;

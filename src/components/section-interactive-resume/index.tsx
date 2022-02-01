@@ -9,7 +9,7 @@ import '@codersrank/work-experience/codersrank-work-experience.min';
 
 import { Lines, Section } from '..';
 
-// codebeat:disable[ABC,LOC]
+// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 export const SectionInteractiveResume: React.FC = () => (
 	<Section id="interactive-resume" hasButton={true}>
 		<Lines />
@@ -79,6 +79,6 @@ export const SectionInteractiveResume: React.FC = () => (
 		</div>
 	</Section>
 );
-// codebeat:enable[ABC,LOC]
+// codebeat:enable[ABC,LOC,BLOCK_NESTING]
 
 export default SectionInteractiveResume;

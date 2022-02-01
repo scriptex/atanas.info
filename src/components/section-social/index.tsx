@@ -23,7 +23,7 @@ const filteredData = (data: any[]): any[] =>
 			)
 		}));
 
-// codebeat:disable[ABC,LOC]
+// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 export const SectionSocial: React.FunctionComponent = () => {
 	const { error, updated, topAlbums, weeklyAlbumChart }: any = lastFm;
 
@@ -193,6 +193,6 @@ export const SectionSocial: React.FunctionComponent = () => {
 		</Section>
 	);
 };
-// codebeat:enable[ABC,LOC]
+// codebeat:enable[ABC,LOC,BLOCK_NESTING]
 
 export default SectionSocial;

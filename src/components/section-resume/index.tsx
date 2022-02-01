@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Lines, Button, Section } from '..';
 
-// codebeat:disable[ABC,LOC]
+// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 export const SectionResume: React.FC = () => (
 	<Section
 		id="resume"
@@ -338,6 +338,6 @@ export const SectionResume: React.FC = () => (
 		</div>
 	</Section>
 );
-// codebeat:enable[ABC,LOC]
+// codebeat:enable[ABC,LOC,BLOCK_NESTING]
 
 export default SectionResume;
