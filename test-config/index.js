@@ -79,3 +79,13 @@ jest.mock('../src/scripts/skills.ts', () => ({
 		default: class {}
 	}));
 });
+
+jest.mock('react-ts-github-calendar', () => ({
+	__esModule: true,
+	default: 'GitHubCalendar'
+}));
+
+jest.mock('../src/scripts/gitlab-calendar', () => ({
+	__esModule: true,
+	default: 'GitLabCalendar'
+}));

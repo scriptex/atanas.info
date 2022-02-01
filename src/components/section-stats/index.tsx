@@ -31,6 +31,7 @@ const YEARS: string[] = Array(years)
 // prettier-ignore
 export const formatDate = (date: string | number, formatter = 'dd MMM yyyy'): string => format(new Date(date), formatter);
 
+// codebeat:disable[ABC,LOC]
 export const addTitles = (selector: string, getTitle: (rect: SVGRectElement) => string): void => {
 	const rects: SVGRectElement[] = Array.from(document.querySelectorAll(`${selector} rect`));
 
@@ -389,5 +390,6 @@ export const SectionStats: React.FunctionComponent<Readonly<Props>> = (props: Re
 		</Section>
 	);
 };
+// codebeat:enable[ABC,LOC]
 
 export default SectionStats;
