@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import * as React from 'react';
-import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { match } from 'react-router-dom';
+import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 // @ts-ignore
 import { MDXProvider } from '@mdx-js/react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -53,7 +53,7 @@ export const SectionBlogPost: React.FunctionComponent<Props> = (props: Props) =>
 			<div className="c-blog-post">
 				<MDXProvider
 					components={{
-						code: ({ className, ...props }: { className: string }) => {
+						code: ({ className, ...props }: { className?: string }) => {
 							const match = /language-(\w+)/.exec(className || '');
 
 							return match ? (
