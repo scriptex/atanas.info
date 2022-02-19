@@ -16,9 +16,9 @@
 
 > My personal website
 
-Built with TypeScript, PostCSS, React, D3, Vuepress, NodeJS, Parcel, Vercel, Puppeteer, Cloudinary and more.
+Built with TypeScript, PostCSS, React, D3, BabylonJS, Vuepress, NodeJS, Parcel, Vercel, Puppeteer, Cloudinary, Houdini and more. 
 
-Installable as a Progressive Web App and (partially for now) accessible offline.
+Installable as a Progressive Web App and available offline.
 
 ## Visitor stats
 
