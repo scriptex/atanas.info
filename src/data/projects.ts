@@ -95,6 +95,13 @@ export const projects: Project[] = [
 		skip: false
 	},
 	{
+		url: 'https://kinetik-e.com/',
+		image: 'images/temp/kinetik-e.png',
+		title: 'Kinetik Electric Karting Championship',
+		description: 'HTML5, SVG, CSS3, JavaScript, React, Styled Components',
+		skip: true
+	},
+	{
 		url: 'https://www.sod.bg/',
 		image: 'images/temp/SOD-64-(СОД-64).png',
 		title: 'SOD 64 (СОД 64)',
