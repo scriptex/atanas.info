@@ -62,6 +62,7 @@ export const skills: Skill[] = [
 	{ text: 'SVG', icon: 'svg', width: 30, height: 30, fill: '#ffb13b', since: 2011 },
 	{ text: 'SVN', icon: 'svn', width: 30, height: 22, fill: '#2b1306', since: 2010 },
 	{ text: 'Sketch', icon: 'sketch', width: 30, height: 30, fill: '#291212', since: 2017 },
+	{ text: 'Styled Components', icon: 'styled-components', width: 30, height: 30, fill: '#aaa', since: 2018 },
 	{ text: 'Sublime Text', icon: 'sublime-text', width: 30, height: 30, fill: '#4d4d4e', since: 2010 },
 	{ text: 'Travis CI', icon: 'travisci', width: 30, height: 30, fill: '#dee', since: 2017 },
 	{ text: 'Typescript', icon: 'typescript', width: 30, height: 30, fill: '#007ACC', since: 2017 },
