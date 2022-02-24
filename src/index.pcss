@@ -1879,6 +1879,8 @@ body {
 			margin-bottom: 2rem;
 			overflow: hidden;
 			@mixin with-loader;
+			transform: scale(1);
+			transition: transform var(--timing) var(--easing);
 
 			& img,
 			& object {
@@ -1892,6 +1894,13 @@ body {
 
 			&.disabled {
 				cursor: default;
+			}
+
+			&.is--hidden {
+				max-height: 0;
+				padding-bottom: 0;
+				margin-bottom: 0;
+				transform: scale(0);
 			}
 
 			&::before {

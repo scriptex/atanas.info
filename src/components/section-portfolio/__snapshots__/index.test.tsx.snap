@@ -7,7 +7,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
       <Button
         onClick={[Function]}
       >
-        Show all
+        Show more
       </Button>
     }
     hasButton={true}
@@ -29,7 +29,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
               <Button
                 onClick={[Function]}
               >
-                Show all
+                Show more
               </Button>
             }
             hasButton={true}
@@ -4259,12 +4259,12 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                 </a>
               </ExternalLink>
               <ExternalLink
-                className=""
+                className="is--hidden"
                 href="https://www.sod.bg/"
                 key="8"
               >
                 <a
-                  className=""
+                  className="is--hidden"
                   href="https://www.sod.bg/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -4306,12 +4306,12 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                 </a>
               </ExternalLink>
               <ExternalLink
-                className="disabled"
+                className="disabled is--hidden"
                 href=""
                 key="9"
               >
                 <a
-                  className="disabled"
+                  className="disabled is--hidden"
                   href=""
                   rel="noopener noreferrer"
                   target="_blank"
@@ -4347,6 +4347,98 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                       alt="At the Wall"
                       loading="lazy"
                       src="images/temp/at-the-wall.png"
+                      width="600"
+                    />
+                  </object>
+                </a>
+              </ExternalLink>
+              <ExternalLink
+                className="is--hidden"
+                href="https://snake.atanas.info"
+                key="10"
+              >
+                <a
+                  className="is--hidden"
+                  href="https://snake.atanas.info"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Loader>
+                    <div
+                      className="c-loading"
+                    >
+                      <div
+                        className="c-loader"
+                      />
+                    </div>
+                  </Loader>
+                  <section>
+                    <strong>
+                      Material Snake
+                    </strong>
+                    <span>
+                      <small>
+                        Technologies used:
+                      </small>
+                      <br />
+                      TypeScript, HTML, CSS3
+                    </span>
+                  </section>
+                  <object
+                    data="images/temp/material-snake.png"
+                    title="Material Snake"
+                    type="image/png"
+                    width="600"
+                  >
+                    <img
+                      alt="Material Snake"
+                      loading="lazy"
+                      src="images/temp/material-snake.png"
+                      width="600"
+                    />
+                  </object>
+                </a>
+              </ExternalLink>
+              <ExternalLink
+                className="is--hidden"
+                href="https://www.google.com"
+                key="11"
+              >
+                <a
+                  className="is--hidden"
+                  href="https://www.google.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Loader>
+                    <div
+                      className="c-loading"
+                    >
+                      <div
+                        className="c-loader"
+                      />
+                    </div>
+                  </Loader>
+                  <section>
+                    <strong>
+                      Project 1
+                    </strong>
+                    <span>
+                      <small>
+                        Technologies used:
+                      </small>
+                      <br />
+                      Description 1
+                    </span>
+                  </section>
+                  <object
+                    data="image 1"
+                    title="Project 1"
+                    type="image/png"
+                    width="600"
+                  >
+                    <img
+                      loading="lazy"
                       width="600"
                     />
                   </object>
@@ -4496,7 +4588,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                   className="c-btn "
                   onClick={[Function]}
                 >
-                  Show all
+                  Show more
                 </button>
               </Button>
             </div>
@@ -4515,7 +4607,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
       <Button
         onClick={[Function]}
       >
-        Show all
+        Show more
       </Button>
     }
     hasButton={true}
@@ -4537,7 +4629,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
               <Button
                 onClick={[Function]}
               >
-                Show all
+                Show more
               </Button>
             }
             hasButton={true}
@@ -8767,12 +8859,12 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                 </a>
               </ExternalLink>
               <ExternalLink
-                className=""
+                className="is--hidden"
                 href="https://www.sod.bg/"
                 key="8"
               >
                 <a
-                  className=""
+                  className="is--hidden"
                   href="https://www.sod.bg/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -8814,12 +8906,12 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                 </a>
               </ExternalLink>
               <ExternalLink
-                className="disabled"
+                className="disabled is--hidden"
                 href=""
                 key="9"
               >
                 <a
-                  className="disabled"
+                  className="disabled is--hidden"
                   href=""
                   rel="noopener noreferrer"
                   target="_blank"
@@ -8855,6 +8947,98 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                       alt="At the Wall"
                       loading="lazy"
                       src="images/temp/at-the-wall.png"
+                      width="600"
+                    />
+                  </object>
+                </a>
+              </ExternalLink>
+              <ExternalLink
+                className="is--hidden"
+                href="https://snake.atanas.info"
+                key="10"
+              >
+                <a
+                  className="is--hidden"
+                  href="https://snake.atanas.info"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Loader>
+                    <div
+                      className="c-loading"
+                    >
+                      <div
+                        className="c-loader"
+                      />
+                    </div>
+                  </Loader>
+                  <section>
+                    <strong>
+                      Material Snake
+                    </strong>
+                    <span>
+                      <small>
+                        Technologies used:
+                      </small>
+                      <br />
+                      TypeScript, HTML, CSS3
+                    </span>
+                  </section>
+                  <object
+                    data="images/temp/material-snake.png"
+                    title="Material Snake"
+                    type="image/png"
+                    width="600"
+                  >
+                    <img
+                      alt="Material Snake"
+                      loading="lazy"
+                      src="images/temp/material-snake.png"
+                      width="600"
+                    />
+                  </object>
+                </a>
+              </ExternalLink>
+              <ExternalLink
+                className="is--hidden"
+                href="https://www.google.com"
+                key="11"
+              >
+                <a
+                  className="is--hidden"
+                  href="https://www.google.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Loader>
+                    <div
+                      className="c-loading"
+                    >
+                      <div
+                        className="c-loader"
+                      />
+                    </div>
+                  </Loader>
+                  <section>
+                    <strong>
+                      Project 1
+                    </strong>
+                    <span>
+                      <small>
+                        Technologies used:
+                      </small>
+                      <br />
+                      Description 1
+                    </span>
+                  </section>
+                  <object
+                    data="image 1"
+                    title="Project 1"
+                    type="image/png"
+                    width="600"
+                  >
+                    <img
+                      loading="lazy"
                       width="600"
                     />
                   </object>
@@ -9004,7 +9188,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                   className="c-btn "
                   onClick={[Function]}
                 >
-                  Show all
+                  Show more
                 </button>
               </Button>
             </div>
@@ -9023,7 +9207,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
       <Button
         onClick={[Function]}
       >
-        Show all
+        Show more
       </Button>
     }
     hasButton={true}
@@ -9045,7 +9229,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
               <Button
                 onClick={[Function]}
               >
-                Show all
+                Show more
               </Button>
             }
             hasButton={true}
@@ -13275,12 +13459,12 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                 </a>
               </ExternalLink>
               <ExternalLink
-                className=""
+                className="is--hidden"
                 href="https://www.sod.bg/"
                 key="8"
               >
                 <a
-                  className=""
+                  className="is--hidden"
                   href="https://www.sod.bg/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -13322,12 +13506,12 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                 </a>
               </ExternalLink>
               <ExternalLink
-                className="disabled"
+                className="disabled is--hidden"
                 href=""
                 key="9"
               >
                 <a
-                  className="disabled"
+                  className="disabled is--hidden"
                   href=""
                   rel="noopener noreferrer"
                   target="_blank"
@@ -13363,6 +13547,98 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                       alt="At the Wall"
                       loading="lazy"
                       src="images/temp/at-the-wall.png"
+                      width="600"
+                    />
+                  </object>
+                </a>
+              </ExternalLink>
+              <ExternalLink
+                className="is--hidden"
+                href="https://snake.atanas.info"
+                key="10"
+              >
+                <a
+                  className="is--hidden"
+                  href="https://snake.atanas.info"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Loader>
+                    <div
+                      className="c-loading"
+                    >
+                      <div
+                        className="c-loader"
+                      />
+                    </div>
+                  </Loader>
+                  <section>
+                    <strong>
+                      Material Snake
+                    </strong>
+                    <span>
+                      <small>
+                        Technologies used:
+                      </small>
+                      <br />
+                      TypeScript, HTML, CSS3
+                    </span>
+                  </section>
+                  <object
+                    data="images/temp/material-snake.png"
+                    title="Material Snake"
+                    type="image/png"
+                    width="600"
+                  >
+                    <img
+                      alt="Material Snake"
+                      loading="lazy"
+                      src="images/temp/material-snake.png"
+                      width="600"
+                    />
+                  </object>
+                </a>
+              </ExternalLink>
+              <ExternalLink
+                className="is--hidden"
+                href="https://www.google.com"
+                key="11"
+              >
+                <a
+                  className="is--hidden"
+                  href="https://www.google.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Loader>
+                    <div
+                      className="c-loading"
+                    >
+                      <div
+                        className="c-loader"
+                      />
+                    </div>
+                  </Loader>
+                  <section>
+                    <strong>
+                      Project 1
+                    </strong>
+                    <span>
+                      <small>
+                        Technologies used:
+                      </small>
+                      <br />
+                      Description 1
+                    </span>
+                  </section>
+                  <object
+                    data="image 1"
+                    title="Project 1"
+                    type="image/png"
+                    width="600"
+                  >
+                    <img
+                      loading="lazy"
                       width="600"
                     />
                   </object>
@@ -13512,7 +13788,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                   className="c-btn "
                   onClick={[Function]}
                 >
-                  Show all
+                  Show more
                 </button>
               </Button>
             </div>
@@ -13531,7 +13807,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
       <Button
         onClick={[Function]}
       >
-        Show all
+        Show more
       </Button>
     }
     hasButton={true}
@@ -13553,7 +13829,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
               <Button
                 onClick={[Function]}
               >
-                Show all
+                Show more
               </Button>
             }
             hasButton={true}
@@ -17783,12 +18059,12 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                 </a>
               </ExternalLink>
               <ExternalLink
-                className=""
+                className="is--hidden"
                 href="https://www.sod.bg/"
                 key="8"
               >
                 <a
-                  className=""
+                  className="is--hidden"
                   href="https://www.sod.bg/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -17830,12 +18106,12 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                 </a>
               </ExternalLink>
               <ExternalLink
-                className="disabled"
+                className="disabled is--hidden"
                 href=""
                 key="9"
               >
                 <a
-                  className="disabled"
+                  className="disabled is--hidden"
                   href=""
                   rel="noopener noreferrer"
                   target="_blank"
@@ -17871,6 +18147,98 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                       alt="At the Wall"
                       loading="lazy"
                       src="images/temp/at-the-wall.png"
+                      width="600"
+                    />
+                  </object>
+                </a>
+              </ExternalLink>
+              <ExternalLink
+                className="is--hidden"
+                href="https://snake.atanas.info"
+                key="10"
+              >
+                <a
+                  className="is--hidden"
+                  href="https://snake.atanas.info"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Loader>
+                    <div
+                      className="c-loading"
+                    >
+                      <div
+                        className="c-loader"
+                      />
+                    </div>
+                  </Loader>
+                  <section>
+                    <strong>
+                      Material Snake
+                    </strong>
+                    <span>
+                      <small>
+                        Technologies used:
+                      </small>
+                      <br />
+                      TypeScript, HTML, CSS3
+                    </span>
+                  </section>
+                  <object
+                    data="images/temp/material-snake.png"
+                    title="Material Snake"
+                    type="image/png"
+                    width="600"
+                  >
+                    <img
+                      alt="Material Snake"
+                      loading="lazy"
+                      src="images/temp/material-snake.png"
+                      width="600"
+                    />
+                  </object>
+                </a>
+              </ExternalLink>
+              <ExternalLink
+                className="is--hidden"
+                href="https://www.google.com"
+                key="11"
+              >
+                <a
+                  className="is--hidden"
+                  href="https://www.google.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Loader>
+                    <div
+                      className="c-loading"
+                    >
+                      <div
+                        className="c-loader"
+                      />
+                    </div>
+                  </Loader>
+                  <section>
+                    <strong>
+                      Project 1
+                    </strong>
+                    <span>
+                      <small>
+                        Technologies used:
+                      </small>
+                      <br />
+                      Description 1
+                    </span>
+                  </section>
+                  <object
+                    data="image 1"
+                    title="Project 1"
+                    type="image/png"
+                    width="600"
+                  >
+                    <img
+                      loading="lazy"
                       width="600"
                     />
                   </object>
@@ -18020,7 +18388,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                   className="c-btn "
                   onClick={[Function]}
                 >
-                  Show all
+                  Show more
                 </button>
               </Button>
             </div>
@@ -18039,7 +18407,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
       <Button
         onClick={[Function]}
       >
-        Show all
+        Show more
       </Button>
     }
     hasButton={true}
@@ -18061,7 +18429,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
               <Button
                 onClick={[Function]}
               >
-                Show all
+                Show more
               </Button>
             }
             hasButton={true}
@@ -22291,12 +22659,12 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                 </a>
               </ExternalLink>
               <ExternalLink
-                className=""
+                className="is--hidden"
                 href="https://www.sod.bg/"
                 key="8"
               >
                 <a
-                  className=""
+                  className="is--hidden"
                   href="https://www.sod.bg/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -22338,12 +22706,12 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                 </a>
               </ExternalLink>
               <ExternalLink
-                className="disabled"
+                className="disabled is--hidden"
                 href=""
                 key="9"
               >
                 <a
-                  className="disabled"
+                  className="disabled is--hidden"
                   href=""
                   rel="noopener noreferrer"
                   target="_blank"
@@ -22379,6 +22747,98 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                       alt="At the Wall"
                       loading="lazy"
                       src="images/temp/at-the-wall.png"
+                      width="600"
+                    />
+                  </object>
+                </a>
+              </ExternalLink>
+              <ExternalLink
+                className="is--hidden"
+                href="https://snake.atanas.info"
+                key="10"
+              >
+                <a
+                  className="is--hidden"
+                  href="https://snake.atanas.info"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Loader>
+                    <div
+                      className="c-loading"
+                    >
+                      <div
+                        className="c-loader"
+                      />
+                    </div>
+                  </Loader>
+                  <section>
+                    <strong>
+                      Material Snake
+                    </strong>
+                    <span>
+                      <small>
+                        Technologies used:
+                      </small>
+                      <br />
+                      TypeScript, HTML, CSS3
+                    </span>
+                  </section>
+                  <object
+                    data="images/temp/material-snake.png"
+                    title="Material Snake"
+                    type="image/png"
+                    width="600"
+                  >
+                    <img
+                      alt="Material Snake"
+                      loading="lazy"
+                      src="images/temp/material-snake.png"
+                      width="600"
+                    />
+                  </object>
+                </a>
+              </ExternalLink>
+              <ExternalLink
+                className="is--hidden"
+                href="https://www.google.com"
+                key="11"
+              >
+                <a
+                  className="is--hidden"
+                  href="https://www.google.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Loader>
+                    <div
+                      className="c-loading"
+                    >
+                      <div
+                        className="c-loader"
+                      />
+                    </div>
+                  </Loader>
+                  <section>
+                    <strong>
+                      Project 1
+                    </strong>
+                    <span>
+                      <small>
+                        Technologies used:
+                      </small>
+                      <br />
+                      Description 1
+                    </span>
+                  </section>
+                  <object
+                    data="image 1"
+                    title="Project 1"
+                    type="image/png"
+                    width="600"
+                  >
+                    <img
+                      loading="lazy"
                       width="600"
                     />
                   </object>
@@ -22528,7 +22988,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                   className="c-btn "
                   onClick={[Function]}
                 >
-                  Show all
+                  Show more
                 </button>
               </Button>
             </div>
@@ -22547,7 +23007,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
       <Button
         onClick={[Function]}
       >
-        Show all
+        Show more
       </Button>
     }
     hasButton={true}
@@ -22569,7 +23029,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
               <Button
                 onClick={[Function]}
               >
-                Show all
+                Show more
               </Button>
             }
             hasButton={true}
@@ -26799,12 +27259,12 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                 </a>
               </ExternalLink>
               <ExternalLink
-                className=""
+                className="is--hidden"
                 href="https://www.sod.bg/"
                 key="8"
               >
                 <a
-                  className=""
+                  className="is--hidden"
                   href="https://www.sod.bg/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -26846,12 +27306,12 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                 </a>
               </ExternalLink>
               <ExternalLink
-                className="disabled"
+                className="disabled is--hidden"
                 href=""
                 key="9"
               >
                 <a
-                  className="disabled"
+                  className="disabled is--hidden"
                   href=""
                   rel="noopener noreferrer"
                   target="_blank"
@@ -26887,6 +27347,98 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                       alt="At the Wall"
                       loading="lazy"
                       src="images/temp/at-the-wall.png"
+                      width="600"
+                    />
+                  </object>
+                </a>
+              </ExternalLink>
+              <ExternalLink
+                className="is--hidden"
+                href="https://snake.atanas.info"
+                key="10"
+              >
+                <a
+                  className="is--hidden"
+                  href="https://snake.atanas.info"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Loader>
+                    <div
+                      className="c-loading"
+                    >
+                      <div
+                        className="c-loader"
+                      />
+                    </div>
+                  </Loader>
+                  <section>
+                    <strong>
+                      Material Snake
+                    </strong>
+                    <span>
+                      <small>
+                        Technologies used:
+                      </small>
+                      <br />
+                      TypeScript, HTML, CSS3
+                    </span>
+                  </section>
+                  <object
+                    data="images/temp/material-snake.png"
+                    title="Material Snake"
+                    type="image/png"
+                    width="600"
+                  >
+                    <img
+                      alt="Material Snake"
+                      loading="lazy"
+                      src="images/temp/material-snake.png"
+                      width="600"
+                    />
+                  </object>
+                </a>
+              </ExternalLink>
+              <ExternalLink
+                className="is--hidden"
+                href="https://www.google.com"
+                key="11"
+              >
+                <a
+                  className="is--hidden"
+                  href="https://www.google.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Loader>
+                    <div
+                      className="c-loading"
+                    >
+                      <div
+                        className="c-loader"
+                      />
+                    </div>
+                  </Loader>
+                  <section>
+                    <strong>
+                      Project 1
+                    </strong>
+                    <span>
+                      <small>
+                        Technologies used:
+                      </small>
+                      <br />
+                      Description 1
+                    </span>
+                  </section>
+                  <object
+                    data="image 1"
+                    title="Project 1"
+                    type="image/png"
+                    width="600"
+                  >
+                    <img
+                      loading="lazy"
                       width="600"
                     />
                   </object>
@@ -27036,7 +27588,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                   className="c-btn "
                   onClick={[Function]}
                 >
-                  Show all
+                  Show more
                 </button>
               </Button>
             </div>
@@ -27055,7 +27607,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
       <Button
         onClick={[Function]}
       >
-        Show all
+        Show more
       </Button>
     }
     hasButton={true}
@@ -27077,7 +27629,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
               <Button
                 onClick={[Function]}
               >
-                Show all
+                Show more
               </Button>
             }
             hasButton={true}
@@ -31307,12 +31859,12 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                 </a>
               </ExternalLink>
               <ExternalLink
-                className=""
+                className="is--hidden"
                 href="https://www.sod.bg/"
                 key="8"
               >
                 <a
-                  className=""
+                  className="is--hidden"
                   href="https://www.sod.bg/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -31354,12 +31906,12 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                 </a>
               </ExternalLink>
               <ExternalLink
-                className="disabled"
+                className="disabled is--hidden"
                 href=""
                 key="9"
               >
                 <a
-                  className="disabled"
+                  className="disabled is--hidden"
                   href=""
                   rel="noopener noreferrer"
                   target="_blank"
@@ -31395,6 +31947,98 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                       alt="At the Wall"
                       loading="lazy"
                       src="images/temp/at-the-wall.png"
+                      width="600"
+                    />
+                  </object>
+                </a>
+              </ExternalLink>
+              <ExternalLink
+                className="is--hidden"
+                href="https://snake.atanas.info"
+                key="10"
+              >
+                <a
+                  className="is--hidden"
+                  href="https://snake.atanas.info"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Loader>
+                    <div
+                      className="c-loading"
+                    >
+                      <div
+                        className="c-loader"
+                      />
+                    </div>
+                  </Loader>
+                  <section>
+                    <strong>
+                      Material Snake
+                    </strong>
+                    <span>
+                      <small>
+                        Technologies used:
+                      </small>
+                      <br />
+                      TypeScript, HTML, CSS3
+                    </span>
+                  </section>
+                  <object
+                    data="images/temp/material-snake.png"
+                    title="Material Snake"
+                    type="image/png"
+                    width="600"
+                  >
+                    <img
+                      alt="Material Snake"
+                      loading="lazy"
+                      src="images/temp/material-snake.png"
+                      width="600"
+                    />
+                  </object>
+                </a>
+              </ExternalLink>
+              <ExternalLink
+                className="is--hidden"
+                href="https://www.google.com"
+                key="11"
+              >
+                <a
+                  className="is--hidden"
+                  href="https://www.google.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Loader>
+                    <div
+                      className="c-loading"
+                    >
+                      <div
+                        className="c-loader"
+                      />
+                    </div>
+                  </Loader>
+                  <section>
+                    <strong>
+                      Project 1
+                    </strong>
+                    <span>
+                      <small>
+                        Technologies used:
+                      </small>
+                      <br />
+                      Description 1
+                    </span>
+                  </section>
+                  <object
+                    data="image 1"
+                    title="Project 1"
+                    type="image/png"
+                    width="600"
+                  >
+                    <img
+                      loading="lazy"
                       width="600"
                     />
                   </object>
@@ -31544,7 +32188,7 @@ exports[`SectionPortfolio component Should handle state changes in the SectionPo
                   className="c-btn "
                   onClick={[Function]}
                 >
-                  Show all
+                  Show more
                 </button>
               </Button>
             </div>
@@ -36137,7 +36781,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
     <Button
       onClick={[Function]}
     >
-      Show all
+      Show more
     </Button>
   }
   hasButton={true}
@@ -36909,7 +37553,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       </object>
     </ExternalLink>
     <ExternalLink
-      className=""
+      className="is--hidden"
       href="https://www.sod.bg/"
       key="8"
     >
@@ -36941,7 +37585,7 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
       </object>
     </ExternalLink>
     <ExternalLink
-      className="disabled"
+      className="disabled is--hidden"
       href=""
       key="9"
     >
@@ -36968,6 +37612,68 @@ exports[`SectionPortfolio component Should render the SectionPortfolio component
           alt="At the Wall"
           loading="lazy"
           src="images/temp/at-the-wall.png"
+          width="600"
+        />
+      </object>
+    </ExternalLink>
+    <ExternalLink
+      className="is--hidden"
+      href="https://snake.atanas.info"
+      key="10"
+    >
+      <Loader />
+      <section>
+        <strong>
+          Material Snake
+        </strong>
+        <span>
+          <small>
+            Technologies used:
+          </small>
+          <br />
+          TypeScript, HTML, CSS3
+        </span>
+      </section>
+      <object
+        data="images/temp/material-snake.png"
+        title="Material Snake"
+        type="image/png"
+        width="600"
+      >
+        <img
+          alt="Material Snake"
+          loading="lazy"
+          src="images/temp/material-snake.png"
+          width="600"
+        />
+      </object>
+    </ExternalLink>
+    <ExternalLink
+      className="is--hidden"
+      href="https://www.google.com"
+      key="11"
+    >
+      <Loader />
+      <section>
+        <strong>
+          Project 1
+        </strong>
+        <span>
+          <small>
+            Technologies used:
+          </small>
+          <br />
+          Description 1
+        </span>
+      </section>
+      <object
+        data="image 1"
+        title="Project 1"
+        type="image/png"
+        width="600"
+      >
+        <img
+          loading="lazy"
           width="600"
         />
       </object>

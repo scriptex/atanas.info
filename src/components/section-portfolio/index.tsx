@@ -5,13 +5,19 @@ import projectsList from '../../data/projects-list.json';
 import { Button, Loader, Section, ExternalLink } from '..';
 import { Project, projects, MobileApp, mobileApps } from '../../data/projects';
 
+const webApps = projectsList as unknown as Project[];
+
 export const SectionPortfolio: React.FunctionComponent = () => {
-	const [showAll, setShowAll] = React.useState(false);
+	const [itemsToShow, setItemsToShow] = React.useState(7);
 
 	return (
 		<Section
 			id="portfolio"
-			actions={showAll ? null : <Button onClick={() => setShowAll(true)}>Show all</Button>}
+			actions={
+				itemsToShow >= webApps.length ? null : (
+					<Button onClick={() => setItemsToShow(itemsToShow + 6)}>Show more</Button>
+				)
+			}
 			hasButton={true}
 		>
 			<h1>Portfolio</h1>
@@ -68,15 +74,20 @@ export const SectionPortfolio: React.FunctionComponent = () => {
 			<h2>Web applications</h2>
 
 			<div className="c-section__body">
-				{(projectsList as unknown as Project[]).map((project: Project, index: number) => {
-					if (!showAll && index > 9) {
-						return null;
+				{webApps.map((project: Project, index: number) => {
+					const match = projects.find((item: Project) => item.title === project.title);
+					const classNames = [];
+
+					if (!project.url) {
+						classNames.push('disabled');
 					}
 
-					const match = projects.find((item: Project) => item.title === project.title);
+					if (index > itemsToShow) {
+						classNames.push('is--hidden');
+					}
 
 					return (
-						<ExternalLink key={index} href={project.url} className={project.url ? '' : 'disabled'}>
+						<ExternalLink key={index} href={project.url} className={classNames.join(' ')}>
 							<Loader />
 
 							<section>
