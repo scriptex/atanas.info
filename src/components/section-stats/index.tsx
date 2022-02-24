@@ -341,33 +341,27 @@ export const SectionStats: React.FunctionComponent<Readonly<Props>> = (props: Re
 	const timeout: React.MutableRefObject<NodeJS.Timeout | null> = React.useRef(null);
 
 	React.useEffect(() => {
-		const onLoad = () => {
+		timeout.current = setTimeout(() => {
 			if (isPrerendering) {
 				return;
 			}
 
-			timeout.current = setTimeout(() => {
-				addTitles('.c-calendar--gitlab', (rect: SVGRectElement) => rect.getAttribute('title') || '');
+			addTitles('.c-calendar--gitlab', (rect: SVGRectElement) => rect.getAttribute('title') || '');
 
-				addTitles('.c-calendar--github', (rect: SVGRectElement) => {
-					const { date, count } = rect.dataset;
+			addTitles('.c-calendar--github', (rect: SVGRectElement) => {
+				const { date, count } = rect.dataset;
 
-					if (typeof date === 'undefined' || typeof count === 'undefined') {
-						return '';
-					}
+				if (typeof date === 'undefined' || typeof count === 'undefined') {
+					return '';
+				}
 
-					const formattedDate = format(new Date(date as string), 'EEEE MMM d, yyyy');
+				const formattedDate = format(new Date(date as string), 'EEEE MMM d, yyyy');
 
-					return `${count} contribution${count === '1' ? '' : 's'} on ${formattedDate}`;
-				});
-			}, 3000);
-		};
-
-		window.addEventListener('load', onLoad);
+				return `${count} contribution${count === '1' ? '' : 's'} on ${formattedDate}`;
+			});
+		}, 3000);
 
 		return () => {
-			window.removeEventListener('load', onLoad);
-
 			if (timeout.current !== null) {
 				clearTimeout(timeout.current);
 			}
