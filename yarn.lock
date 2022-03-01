@@ -6211,6 +6211,11 @@ cssnano-utils@^3.0.2:
   resolved "https://registry.yarnpkg.com/cssnano-utils/-/cssnano-utils-3.0.2.tgz#d82b4991a27ba6fec644b39bab35fe027137f516"
   integrity sha512-KhprijuQv2sP4kT92sSQwhlK3SJTbDIsxcfIEySB0O+3m9esFOai7dP9bMx5enHAh2MwarVIcnwiWoOm01RIbQ==
 
+cssnano-utils@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/cssnano-utils/-/cssnano-utils-3.1.0.tgz#95684d08c91511edfc70d2636338ca37ef3a6861"
+  integrity sha512-JQNR19/YZhz4psLX/rQ9M83e3z2Wf/HdJbryzte4a3NSuafyp9w/I4U+hx5C2S9g41qlstH7DEWnZaaj83OuEA==
+
 cssnano@^4.1.10:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/cssnano/-/cssnano-4.1.11.tgz#c7b5f5b81da269cb1fd982cb960c1200910c9a99"
@@ -13371,14 +13376,14 @@ postcss-merge-longhand@^5.0.6:
     postcss-value-parser "^4.2.0"
     stylehacks "^5.0.3"
 
-postcss-merge-rules@5.0.6, postcss-merge-rules@^5.0.6:
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/postcss-merge-rules/-/postcss-merge-rules-5.0.6.tgz#26b37411fe1e80202fcef61cab027265b8925f2b"
-  integrity sha512-nzJWJ9yXWp8AOEpn/HFAW72WKVGD2bsLiAmgw4hDchSij27bt6TF+sIK0cJUBAYT3SGcjtGGsOR89bwkkMuMgQ==
+postcss-merge-rules@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-merge-rules/-/postcss-merge-rules-5.1.0.tgz#a2d5117eba09c8686a5471d97bd9afcf30d1b41f"
+  integrity sha512-NecukEJovQ0mG7h7xV8wbYAkXGTO3MPKnXvuiXzOKcxoOodfTTKYjeo8TMhAswlSkjcPIBlnKbSFcTuVSDaPyQ==
   dependencies:
     browserslist "^4.16.6"
     caniuse-api "^3.0.0"
-    cssnano-utils "^3.0.2"
+    cssnano-utils "^3.1.0"
     postcss-selector-parser "^6.0.5"
 
 postcss-merge-rules@^4.0.3:
@@ -13392,6 +13397,16 @@ postcss-merge-rules@^4.0.3:
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
     vendors "^1.0.0"
+
+postcss-merge-rules@^5.0.6:
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/postcss-merge-rules/-/postcss-merge-rules-5.0.6.tgz#26b37411fe1e80202fcef61cab027265b8925f2b"
+  integrity sha512-nzJWJ9yXWp8AOEpn/HFAW72WKVGD2bsLiAmgw4hDchSij27bt6TF+sIK0cJUBAYT3SGcjtGGsOR89bwkkMuMgQ==
+  dependencies:
+    browserslist "^4.16.6"
+    caniuse-api "^3.0.0"
+    cssnano-utils "^3.0.2"
+    postcss-selector-parser "^6.0.5"
 
 postcss-minify-font-values@^4.0.2:
   version "4.0.2"
