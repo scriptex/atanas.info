@@ -7,6 +7,7 @@ import { Project, projects, MobileApp, mobileApps } from '../../data/projects';
 
 const webApps = projectsList as unknown as Project[];
 
+// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 export const SectionPortfolio: React.FunctionComponent = () => {
 	const [itemsToShow, setItemsToShow] = React.useState(7);
 
@@ -110,5 +111,6 @@ export const SectionPortfolio: React.FunctionComponent = () => {
 		</Section>
 	);
 };
+// codebeat:enable[ABC,LOC,BLOCK_NESTING]
 
 export default SectionPortfolio;
