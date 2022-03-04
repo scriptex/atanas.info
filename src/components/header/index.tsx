@@ -10,6 +10,7 @@ export const Header: React.FunctionComponent = () => {
 	return (
 		<header className={`c-header${open ? ' c-header--open' : ''}`}>
 			<Link to={Routes.HOME} className="c-logo" title="Back to homepage">
+				<img src="/images/icons/logo-alt.svg" alt="" />
 				<Icon name="svg-logo" className="c-svg-logo" />
 			</Link>
 

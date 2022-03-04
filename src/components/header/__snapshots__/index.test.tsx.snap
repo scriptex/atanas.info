@@ -9,6 +9,10 @@ exports[`Header component Should render the Header component 1`] = `
     title="Back to homepage"
     to="/"
   >
+    <img
+      alt=""
+      src="/images/icons/logo-alt.svg"
+    />
     <Icon
       className="c-svg-logo"
       name="svg-logo"
