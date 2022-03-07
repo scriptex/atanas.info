@@ -18,16 +18,20 @@ exports[`Header component Should render the Header component 1`] = `
       name="svg-logo"
     />
   </Link>
-  <button
-    aria-label="Toggle menu"
-    className="c-nav__toggle"
-    name="menu-toggle"
-    onClick={[Function]}
+  <div
+    className="c-header__actions"
   >
-    <span />
-    <span />
-    <span />
-  </button>
+    <button
+      aria-label="Toggle menu"
+      className="c-nav__toggle"
+      name="menu-toggle"
+      onClick={[Function]}
+    >
+      <span />
+      <span />
+      <span />
+    </button>
+  </div>
   <Nav
     onClick={[Function]}
   />

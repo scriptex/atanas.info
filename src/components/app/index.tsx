@@ -25,22 +25,41 @@ import {
 	InteractiveResume
 } from '../../loadables';
 
+export const enum Theme {
+	DARK = 'dark',
+	LIGHT = 'light'
+}
+
 export const AppContext = React.createContext({
+	theme: 'dark',
+	setTheme: (value: Theme) => {
+		console.log(value);
+	},
 	contactVisible: false,
-	setContactVisible: (state: boolean) => state
+	setContactVisible: (value: boolean) => {
+		console.log(value);
+	}
 });
 
 // codebeat:disable[ABC,LOC,BLOCK_NESTING]
 export const App: React.FunctionComponent = () => {
+	const [theme, setTheme] = React.useState<'light' | 'dark'>('dark');
 	const [contactVisible, setContactVisible] = React.useState(false);
-	const value: any = { contactVisible, setContactVisible };
+
+	React.useEffect(() => {
+		document.documentElement.classList.add(theme === Theme.DARK ? 'dark' : 'light');
+
+		return () => {
+			document.documentElement.classList.remove('dark', 'light');
+		};
+	}, [theme]);
 
 	return (
 		<Router>
 			<ScrollToTop />
 
 			<React.Suspense fallback={<Loader />}>
-				<AppContext.Provider value={value}>
+				<AppContext.Provider value={{ theme, setTheme, contactVisible, setContactVisible }}>
 					<Head />
 
 					<Svg src="/sprite.svg" />
