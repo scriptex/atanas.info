@@ -1012,6 +1012,13 @@
   dependencies:
     tslib ">=1.10.0"
 
+"@babylonjs/core@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@babylonjs/core/-/core-5.0.3.tgz#c05e663c1becc382f8187ca3c0f481a4acd817d3"
+  integrity sha512-8ZZHOAWqm2WGPUWw94qDmXHfwsAImeVD+xJvo0bnBtoXTjeVhfarq/tA5mw9ONhPPaiHwv/V9QIOt4+njKEQ2A==
+  dependencies:
+    tslib "^2.3.1"
+
 "@babylonjs/gui@4.2.2":
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/@babylonjs/gui/-/gui-4.2.2.tgz#55715a7f875611f874a7778eb8a59530004eb065"
@@ -1020,14 +1027,14 @@
     "@babylonjs/core" "4.2.2"
     tslib ">=1.10.0"
 
-"@babylonjs/loaders@4.2.2":
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/@babylonjs/loaders/-/loaders-4.2.2.tgz#b57d096a050af3aa34a8dfb9952de322c216125b"
-  integrity sha512-Qk8r4xp4eOznbX3AsNYv8HgwS+tzGu6TwSpDX4il3g0B+k1N5k6KE5ghrnwDytoxUDVjGZ/VKk2cQqiHsg/NLg==
+"@babylonjs/loaders@5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@babylonjs/loaders/-/loaders-5.0.3.tgz#4dbb201f33b54d7c1d6fe29f5b41692892a00a3e"
+  integrity sha512-o6hT9zNYcs/Zh1M+Qs3146ydCEiDQNnvy9Xlga9D7CYacb+Y3ucAqKT5qmsiYxdCUx4X8YWqRUFdlkmb8K9UIg==
   dependencies:
-    "@babylonjs/core" "4.2.2"
-    babylonjs-gltf2interface "4.2.2"
-    tslib ">=1.10.0"
+    "@babylonjs/core" "^5.0.3"
+    babylonjs-gltf2interface "^5.0.3"
+    tslib "^2.3.1"
 
 "@babylonjs/materials@4.2.2":
   version "4.2.2"
@@ -4679,10 +4686,10 @@ babel-preset-jest@^27.5.1:
     babel-plugin-jest-hoist "^27.5.1"
     babel-preset-current-node-syntax "^1.0.0"
 
-babylonjs-gltf2interface@4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/babylonjs-gltf2interface/-/babylonjs-gltf2interface-4.2.2.tgz#365daf43110ec98b52379e6a9081e06b6835588b"
-  integrity sha512-LCQgW1lM+EpKK4yWMiPEgi6ONwJ7W4JrSu3t9JixNRgvnic72OnN2f0bt91rE30EJr1ZaokvkXD/aEiBp/Juyg==
+babylonjs-gltf2interface@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/babylonjs-gltf2interface/-/babylonjs-gltf2interface-5.0.3.tgz#ce8c09dafc6788666c90bfd5dbdf26d86c0ea854"
+  integrity sha512-O/hBz8bgCgJx0eFiPusXLEjzgTB1REQN8Rc+x9zR3HYuXGxqR4Psek0qY0rKPXAY+AFllxa58TfxyT69nHnsyg==
 
 bail@^1.0.0:
   version "1.0.5"
@@ -16910,7 +16917,7 @@ ts-node@10.7.0:
     v8-compile-cache-lib "^3.0.0"
     yn "3.1.1"
 
-"tslib@1 || 2", tslib@2.3.1, tslib@>=1.10.0, tslib@^2.0.1, tslib@^2.1.0, tslib@^2.2.0:
+"tslib@1 || 2", tslib@2.3.1, tslib@>=1.10.0, tslib@^2.0.1, tslib@^2.1.0, tslib@^2.2.0, tslib@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
