@@ -7,11 +7,11 @@ import { MenuItem, menuItems } from '../../data/menu';
 interface Props {
 	onClick?: () => void;
 	hasShell?: boolean;
-	children?: any;
+	children?: React.ReactNode;
 	className?: string;
 }
 
-export const checkActive = (match: match<any>, location: Location): boolean => {
+export const checkActive = (match: match<Record<string, string | undefined>> | null, location: Location): boolean => {
 	if (!location || !match) {
 		return false;
 	}
@@ -19,10 +19,10 @@ export const checkActive = (match: match<any>, location: Location): boolean => {
 	return location.pathname === match.path.replace('\\', '');
 };
 
-export const NavInner: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) =>
+export const NavInner: React.FC<Readonly<Props>> = (props: Readonly<Props>) =>
 	props.hasShell ? <div className="o-shell">{props.children}</div> : <>{props.children}</>;
 
-export const Nav: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
+export const Nav: React.FC<Readonly<Props>> = (props: Readonly<Props>) => {
 	const { onClick, hasShell, className } = props;
 	const classNames = ['c-nav'];
 

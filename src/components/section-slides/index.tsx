@@ -4,7 +4,7 @@ import { Slide, slides } from '../../data/slides';
 import { isPrerendering } from '../../scripts/shared';
 import { Loader, Section, SectionNav } from '..';
 
-export const SectionSlides: React.FunctionComponent = () => {
+export const SectionSlides: React.FC = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);
 
 	return (

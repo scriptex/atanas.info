@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-export const Head: React.FunctionComponent = () => (
+export const Head: React.FC = () => (
 	<Helmet>
 		<meta name="application-name" content="Atanas Atanasov" />
 		<meta name="msapplication-config" content="config.xml" />

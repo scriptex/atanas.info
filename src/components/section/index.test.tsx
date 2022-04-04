@@ -5,7 +5,7 @@ import { Props, Section, SectionElements } from '.';
 
 interface Component {
 	name: string;
-	component: React.FunctionComponent<Readonly<Props>>;
+	component: React.FC<Readonly<Props>>;
 }
 
 interface Components {
@@ -24,8 +24,8 @@ const components: Components = {
 	}
 };
 
-const test = (title: string, Component: React.ComponentType<any>, props: any): void => {
-	const Children: React.FunctionComponent = () => (
+const test = (title: string, Component: React.FC<Readonly<Props>>, props: Omit<Props, 'children'>): void => {
+	const Children: React.FC = () => (
 		<>
 			<p>Test</p>
 			<p>Test</p>
@@ -44,7 +44,7 @@ const test = (title: string, Component: React.ComponentType<any>, props: any): v
 };
 
 // codebeat:disable[ABC,LOC,BLOCK_NESTING]
-const suite = (Component: React.ComponentType<any>, name: string): void => {
+const suite = (Component: React.FC<Readonly<Props>>, name: string): void => {
 	describe(`${name} component`, () => {
 		test(`Should render the ${name} component`, Component, {
 			id: 'section',

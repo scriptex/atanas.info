@@ -3,7 +3,7 @@ import * as React from 'react';
 import { bio, BioEntry } from '../../data/bio';
 import { Section, ExternalLink } from '..';
 
-export const LastAbout: React.FunctionComponent = () => (
+export const LastAbout: React.FC = () => (
 	<div className="c-article__block">
 		<h3>Current occupation</h3>
 
@@ -62,7 +62,7 @@ export const LastAbout: React.FunctionComponent = () => (
 	</div>
 );
 
-export const SectionAbout: React.FunctionComponent = () => (
+export const SectionAbout: React.FC = () => (
 	<Section
 		id="about"
 		style={{ backgroundImage: 'url(images/temp/desktop.jpg)' }}

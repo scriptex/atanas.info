@@ -6,13 +6,13 @@ import { Article } from '../../data/articles';
 import { Presentation } from '../../data/presentations';
 
 interface Props {
-	name: string;
+	name: 'title';
 	data: Array<Presentation | Slide | Article>;
 	active: number;
 	onClick: (index: number) => void;
 }
 
-export const SectionNav: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
+export const SectionNav: React.FC<Readonly<Props>> = (props: Readonly<Props>) => {
 	const { name, data, active, onClick } = props;
 
 	return (
@@ -20,12 +20,8 @@ export const SectionNav: React.FunctionComponent<Readonly<Props>> = (props: Read
 			<ul>
 				{data.map((item: Presentation | Slide | Article, index: number) => (
 					<li key={index} className={active === index ? 'current' : ''}>
-						<Button
-							type="button"
-							onClick={() => onClick(index)}
-							aria-label={`Switch to ${(item as any)[name]}`}
-						>
-							{(item as any)[name]}
+						<Button type="button" onClick={() => onClick(index)} aria-label={`Switch to ${item[name]}`}>
+							{item[name]}
 						</Button>
 					</li>
 				))}

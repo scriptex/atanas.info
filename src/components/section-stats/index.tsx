@@ -49,7 +49,7 @@ export const addTitles = (selector: string, getTitle: (rect: SVGRectElement) => 
 	});
 };
 
-export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
+export const GithubStats: React.FC<Readonly<Props>> = (props: Readonly<Props>) => {
 	const [current, setCurrent] = React.useState(-1);
 
 	const { error, general, calendar, updated, repositories } = props.data;
@@ -180,7 +180,7 @@ export const GithubStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 	);
 };
 
-export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
+export const GitlabStats: React.FC<Readonly<Props>> = (props: Readonly<Props>) => {
 	const { error, general, calendar, updated, repositories } = props.data;
 	const calendarPlaceholder1: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
 	const calendarPlaceholder2: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
@@ -284,7 +284,7 @@ export const GitlabStats: React.FunctionComponent<Readonly<Props>> = (props: Rea
 	);
 };
 
-export const NPMStats: React.FunctionComponent = () => {
+export const NPMStats: React.FC = () => {
 	if (Object.keys(npmStats).length === 0) {
 		return null;
 	}
@@ -337,7 +337,7 @@ export const NPMStats: React.FunctionComponent = () => {
 	);
 };
 
-export const SectionStats: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
+export const SectionStats: React.FC<Readonly<Props>> = (props: Readonly<Props>) => {
 	const timeout: React.MutableRefObject<NodeJS.Timeout | null> = React.useRef(null);
 
 	React.useEffect(() => {

@@ -7,7 +7,7 @@ export const WorkIcon = (): JSX.Element => <Icon name="svg-work" className="vert
 export const PersonalIcon = (): JSX.Element => <Icon name="svg-personal" className="vertical-timeline__icon" />;
 export const EducationIcon = (): JSX.Element => <Icon name="svg-education" className="vertical-timeline__icon" />;
 
-export const SectionTimeline: React.FunctionComponent = () => (
+export const SectionTimeline: React.FC = () => (
 	<Section id="timeline" hasButton={true}>
 		<h2>Timeline</h2>
 

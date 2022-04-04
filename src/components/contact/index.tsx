@@ -9,7 +9,7 @@ enum Status {
 	DEFAULT = 'DEFAULT'
 }
 
-export const ContactSuccessContent: React.FunctionComponent = () => (
+export const ContactSuccessContent: React.FC = () => (
 	<>
 		<h2>Send me your message</h2>
 
@@ -47,7 +47,7 @@ export const onSubmit = (
 		body: data
 	})
 		.then((r: Response) => r.json())
-		.then((result: any) => {
+		.then((result: Record<string, string>) => {
 			if (result.error) {
 				setStatus(Status.ERROR);
 				setErrorMessage(result.error);
@@ -61,7 +61,7 @@ export const onSubmit = (
 		});
 };
 
-export const Contact: React.FunctionComponent = () => {
+export const Contact: React.FC = () => {
 	const [status, setStatus] = React.useState(Status.DEFAULT);
 	const [errorMessage, setErrorMessage] = React.useState('');
 	const { contactVisible, setContactVisible } = React.useContext(AppContext);

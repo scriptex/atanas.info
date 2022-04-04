@@ -7,7 +7,7 @@ export interface Props {
 	id: string;
 	style?: React.CSSProperties;
 	actions?: React.ReactNode;
-	children: any;
+	children: React.ReactNode;
 	hasShell?: boolean;
 	hasButton: boolean;
 	className?: string;
@@ -15,7 +15,7 @@ export interface Props {
 	wrapperClassName?: string;
 }
 
-export const SectionElements: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
+export const SectionElements: React.FC<Readonly<Props>> = (props: Readonly<Props>) => {
 	const [open, setOpen] = React.useState(false);
 	const { setContactVisible } = React.useContext(AppContext);
 	const onClose = () => setOpen(false);
@@ -89,7 +89,7 @@ export const SectionElements: React.FunctionComponent<Readonly<Props>> = (props:
 	);
 };
 
-export const Section: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => (
+export const Section: React.FC<Readonly<Props>> = (props: Readonly<Props>) => (
 	<main className={`o-main ${props.wrapperClassName || ''}`}>
 		<section
 			id={props.id}

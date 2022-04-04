@@ -31,7 +31,7 @@ export const AppContext = React.createContext({
 });
 
 // codebeat:disable[ABC,LOC,BLOCK_NESTING]
-export const App: React.FunctionComponent = () => {
+export const App: React.FC = () => {
 	const [contactVisible, setContactVisible] = React.useState(false);
 	const value: any = { contactVisible, setContactVisible };
 

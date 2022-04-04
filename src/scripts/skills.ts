@@ -20,16 +20,23 @@ interface Node extends Skill {
 	readonly r: number;
 }
 
+interface Data {
+	nodes: Node[];
+	links: Array<{
+		target: number;
+		source: number;
+	}>;
+}
+
 export const drawSkills = (words: Skill[]): void => {
 	const all = words.length;
-	const width = window.innerWidth;
-	const height = window.innerHeight;
-	const svg = createSVG('skills-graph', width, height);
+	const size = window.innerHeight;
+	const svg = createSVG('skills-graph', size, size);
 
-	const renderSkills = (data: any): void => {
-		const simulation: any = createSimulation(width, height);
+	const renderSkills = (data: Data): void => {
+		const simulation: Simulation<any, any> = createSimulation(size, size);
 		const links = createLinks(svg, data.links);
-		const nodes = createNodes(svg, data.nodes, width, dragHandler(simulation));
+		const nodes = createNodes(svg, data.nodes, size, dragHandler(simulation));
 
 		simulation.nodes(data.nodes).on('tick', () => {
 			links
@@ -52,26 +59,14 @@ export const drawSkills = (words: Skill[]): void => {
 			});
 		});
 
-		simulation.force('link').links(data.links);
+		simulation.force('link', forceLink(data.links));
 	};
 
 	renderSkills({
-		nodes: words.map(word => {
-			let r = 40;
-
-			if (width < 1024) {
-				r = 30;
-			}
-
-			if (width < 768) {
-				r = 20;
-			}
-
-			return {
-				r,
-				...word
-			};
-		}),
+		nodes: words.map(word => ({
+			r: 30,
+			...word
+		})),
 		links: range(0, all).map(() => ({
 			source: ~~randomUniform(all)(),
 			target: ~~randomUniform(all)()
@@ -79,8 +74,8 @@ export const drawSkills = (words: Skill[]): void => {
 	});
 };
 
-export const dragHandler = (simulation: Simulation<any, any>): any => {
-	return drag()
+export const dragHandler = (simulation: Simulation<any, any>): any =>
+	drag()
 		.on('start', (event: any, d: any) => {
 			if (!event.active) {
 				simulation.alphaTarget(0.3).restart();
@@ -101,10 +96,9 @@ export const dragHandler = (simulation: Simulation<any, any>): any => {
 			d.fx = null;
 			d.fy = null;
 		});
-};
 
-export const createSimulation = (width: number, height: number): Simulation<any, any> => {
-	return forceSimulation()
+export const createSimulation = (width: number, height: number): Simulation<any, any> =>
+	forceSimulation()
 		.force(
 			'link',
 			forceLink().id((d: any) => d.index)
@@ -114,11 +108,9 @@ export const createSimulation = (width: number, height: number): Simulation<any,
 		.force('center', forceCenter(width / 2, height / 2))
 		.force('y', forceY(0))
 		.force('x', forceX(0));
-};
 
-export const createLinks = (svg: Canvas, data: Node[]): any => {
-	return svg.append('g').selectAll('line').data(data).enter().append('line');
-};
+// prettier-ignore
+export const createLinks = (svg: Canvas, data: Data['links']): any => svg.append('g').selectAll('line').data(data).enter().append('line');
 
 export const createNodes = (
 	svg: Canvas,

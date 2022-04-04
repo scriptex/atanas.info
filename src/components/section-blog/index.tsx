@@ -5,7 +5,7 @@ import { isPrerendering } from '../../scripts/shared';
 import { Loader, Section } from '..';
 import { articles, Article } from '../../data/articles';
 
-export const SectionBlog: React.FunctionComponent = () => (
+export const SectionBlog: React.FC = () => (
 	<Section
 		id="blog"
 		style={{ backgroundImage: 'url(images/temp/articles.jpg)' }}
