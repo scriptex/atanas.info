@@ -4,7 +4,7 @@ import { music } from '../../scripts/music';
 import { Section } from '..';
 
 // codebeat:disable[ABC,LOC,BLOCK_NESTING]
-export const SectionMusic: React.FunctionComponent = () => {
+export const SectionMusic: React.FC = () => {
 	const container: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
 
 	React.useEffect(() => {

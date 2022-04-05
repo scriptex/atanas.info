@@ -5,7 +5,7 @@ import { Skill, skills } from '../../data/skills-list';
 import { isPrerendering } from '../../scripts/shared';
 import { Icon, Lines, Button, Section } from '..';
 
-export const SectionSkills: React.FunctionComponent = () => {
+export const SectionSkills: React.FC = () => {
 	const [showTable, setShowTable] = React.useState(false);
 
 	React.useEffect(() => {

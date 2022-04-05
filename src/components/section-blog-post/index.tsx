@@ -34,7 +34,7 @@ interface Props {
 	match: match<Params>;
 }
 
-export const SectionBlogPost: React.FunctionComponent<Props> = (props: Props) => {
+export const SectionBlogPost: React.FC<Props> = (props: Props) => {
 	const {
 		params: { slug }
 	} = props.match;

@@ -13,5 +13,15 @@
 	"rangeStrategy": "replace",
 	"major": {
 		"automerge": false
-	}
+	},
+	"packageRules": [
+		{
+			"matchPackagePatterns": ["parcel"],
+			"groupName": "parcel"
+		},
+		{
+			"matchPackagePatterns": ["@babylonjs"],
+			"groupName": "babylonjs"
+		}
+	]
 }

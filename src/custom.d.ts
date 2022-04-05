@@ -90,3 +90,9 @@ declare module '*.mdx' {
 	let MDXComponent: (props: any) => JSX.Element;
 	export default MDXComponent;
 }
+
+declare namespace CSS {
+	namespace paintWorklet {
+		export function addModule(url: URL): void;
+	}
+}

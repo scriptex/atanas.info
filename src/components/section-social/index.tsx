@@ -8,9 +8,13 @@ import { formatDate } from '../section-stats';
 import { useScript, isPrerendering } from '../../scripts/shared';
 import { Lines, Section, ExternalLink } from '..';
 
-const filteredData = (data: any[]): any[] =>
+type TopAlbum = typeof lastFm['topAlbums'][0];
+type LastFMData = typeof lastFm & { error: string };
+type WeeklyAlbumChart = typeof lastFm['weeklyAlbumChart'][0];
+
+const filteredData = (data: TopAlbum[] | WeeklyAlbumChart[]) =>
 	data
-		.filter((album: any) => !!album.images[2]['#text'])
+		.filter((album: TopAlbum | WeeklyAlbumChart) => !!album.images[2]['#text'])
 		.map(album => ({
 			alt: album.name,
 			image: album.images[2]['#text'],
@@ -24,8 +28,8 @@ const filteredData = (data: any[]): any[] =>
 		}));
 
 // codebeat:disable[ABC,LOC,BLOCK_NESTING]
-export const SectionSocial: React.FunctionComponent = () => {
-	const { error, updated, topAlbums, weeklyAlbumChart }: any = lastFm;
+export const SectionSocial: React.FC = () => {
+	const { error, updated, topAlbums, weeklyAlbumChart } = lastFm as LastFMData;
 
 	if (!isPrerendering) {
 		useScript('https://profile.codersrank.io/widget/widget.js');

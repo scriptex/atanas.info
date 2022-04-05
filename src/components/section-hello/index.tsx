@@ -6,7 +6,7 @@ import { Section } from '..';
 import { isPrerendering } from '../../scripts/shared';
 import { initCanvas, createDots, destroyDots } from '../../scripts/canvas';
 
-export const Slider: React.FunctionComponent = () => {
+export const Slider: React.FC = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);
 
 	useInterval(() => {
@@ -30,7 +30,7 @@ export const Slider: React.FunctionComponent = () => {
 	);
 };
 
-export const SectionHello: React.FunctionComponent = () => {
+export const SectionHello: React.FC = () => {
 	React.useEffect(() => {
 		let el: d3.Selection<SVGCircleElement, any, SVGSVGElement, any> | null = null;
 

@@ -6,11 +6,11 @@ interface Props {
 	type?: 'submit' | 'reset' | 'button' | 'link';
 	children?: React.ReactChild[] | React.ReactText;
 	className?: string;
-	onClick?: (...args: any[]) => any;
-	[x: string]: any;
+	onClick?: (...args: unknown[]) => unknown;
+	[x: string]: unknown;
 }
 
-export const Button: React.FunctionComponent<Readonly<Props>> = (props: Readonly<Props>) => {
+export const Button: React.FC<Readonly<Props>> = (props: Readonly<Props>) => {
 	const { href, type, children, className, onClick, ...rest } = props;
 	const classes: string[] = className ? className.split(' ') : [''];
 	const classNames: string = ['c-btn'].concat(classes).join(' ');

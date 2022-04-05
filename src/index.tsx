@@ -1,7 +1,7 @@
 /* eslint-disable compat/compat */
 import * as React from 'react';
-import { render } from 'react-dom';
 import TagManager from 'react-gtm-module';
+import { createRoot } from 'react-dom/client';
 import 'html-head-component';
 import 'regenerator-runtime/runtime';
 
@@ -13,16 +13,12 @@ interface IWorker {
 	action?: (registration: ServiceWorkerRegistration) => void;
 }
 
-const node: HTMLElement | null = document.getElementById('root') || document.createElement('div');
-const router = (Application: React.ComponentType): JSX.Element => <Application />;
-const renderRoot = (app: JSX.Element): void => render(app, node);
+CSS.paintWorklet.addModule(new URL('./houdini/avatar-polygon.ts', import.meta.url));
+CSS.paintWorklet.addModule(new URL('./houdini/bubbles.ts', import.meta.url));
+CSS.paintWorklet.addModule(new URL('./houdini/circles.ts', import.meta.url));
+CSS.paintWorklet.addModule(new URL('./houdini/slanted-backgrounds.ts', import.meta.url));
 
-(CSS as any).paintWorklet.addModule(new URL('./houdini/avatar-polygon.ts', import.meta.url));
-(CSS as any).paintWorklet.addModule(new URL('./houdini/bubbles.ts', import.meta.url));
-(CSS as any).paintWorklet.addModule(new URL('./houdini/circles.ts', import.meta.url));
-(CSS as any).paintWorklet.addModule(new URL('./houdini/slanted-backgrounds.ts', import.meta.url));
-
-renderRoot(router(App));
+createRoot(document.getElementById('root') || document.createElement('div')).render(<App />);
 
 TagManager.initialize({
 	gtmId: process.env.GTM_ID as string

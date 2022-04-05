@@ -8,7 +8,7 @@ import { Project, projects, MobileApp, mobileApps } from '../../data/projects';
 const webApps = projectsList as unknown as Project[];
 
 // codebeat:disable[ABC,LOC,BLOCK_NESTING]
-export const SectionPortfolio: React.FunctionComponent = () => {
+export const SectionPortfolio: React.FC = () => {
 	const [itemsToShow, setItemsToShow] = React.useState(7);
 
 	return (

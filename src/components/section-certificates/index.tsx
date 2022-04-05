@@ -3,7 +3,7 @@ import { Certificate, certificates } from '../../data/certificates';
 
 import { Loader, Section, ExternalLink } from '..';
 
-export const SectionCertificates: React.FunctionComponent = () => (
+export const SectionCertificates: React.FC = () => (
 	<Section id="certificates" hasButton={true}>
 		<h1>Certificates</h1>
 
