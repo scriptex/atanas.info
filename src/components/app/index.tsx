@@ -66,7 +66,7 @@ export const App: React.FC = () => {
 						<Route path={AppRoutes.RESUME} element={<Resume />} />
 						<Route path={AppRoutes.INTERACTIVE_RESUME} element={<InteractiveResume />} />
 						<Route path={AppRoutes.MUSIC} element={<Music />} />
-						<Route element={<ErrorPage />} />
+						<Route path="*" element={<ErrorPage />} />
 					</Routes>
 
 					<Nav hasShell={true} className="c-nav--inline" />
