@@ -53,11 +53,13 @@ export const SectionBlogPost: React.FC<Props> = (props: Props) => {
 			<div className="c-blog-post">
 				<MDXProvider
 					components={{
-						code: ({ className, ...props }: { className?: string }) => {
+						code: ({ className, ...props }: Record<string, 'className' | 'children'>) => {
 							const match = /language-(\w+)/.exec(className || '');
 
 							return match ? (
-								<SyntaxHighlighter language={match[1]} {...props} style={dracula} />
+								<SyntaxHighlighter language={match[1]} {...props} style={dracula}>
+									{props.children}
+								</SyntaxHighlighter>
 							) : (
 								<code className={className} {...props} />
 							);
