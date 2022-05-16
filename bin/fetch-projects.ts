@@ -4,10 +4,8 @@ import fetch, { Response } from 'node-fetch';
 
 import { writeFileSync, unlinkSync, existsSync } from 'fs';
 
+import openSource from '../src/data/open-source';
 import { asyncForEach } from '../insights/utils';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import * as openSourceProjects from '../src/data/open-source';
 
 type OpenSource = {
 	main: string[];
@@ -29,14 +27,12 @@ const saveProject = (data: string, path: string, message: string): void => {
 		unlinkSync(path);
 	}
 
-	data += '\n<funding />';
-
 	writeFileSync(path, data);
 
 	console.log(message);
 };
 
-const { main, projects }: OpenSource = openSourceProjects;
+const { main, projects }: OpenSource = openSource;
 
 if (!projects.length) {
 	console.log('atanas.info: No projects specified.');

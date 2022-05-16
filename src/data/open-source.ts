@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	projects: [
 		'scriptex/2048',
 		'scriptex/AnimateMe',
