@@ -1,10 +1,17 @@
-const { resolve } = require('path');
+import { resolve } from 'path';
 
-require('dotenv').config({
+import { defaultTheme } from '@vuepress/theme-default';
+import { defineUserConfig } from 'vuepress';
+import googleAnalyticsPlugin from '@vuepress/plugin-google-analytics';
+import { config as dotenvConfig } from 'dotenv';
+
+import openSource from '../../src/data/open-source';
+
+dotenvConfig({
 	path: resolve(process.cwd(), '../.env')
 });
 
-module.exports = {
+export default defineUserConfig({
 	base: '/projects/',
 	title: 'Atanas Atanasov',
 	description: "Atanas Atanasov's open source projects",
@@ -285,26 +292,22 @@ module.exports = {
 	],
 	dest: '../dist/projects',
 	plugins: [
-		[
-			'@vuepress/google-analytics',
-			{
-				ga: process.env.GTM_ID
-			}
-		],
-		'@goy/svg-icons'
+		// @ts-ignore
+		googleAnalyticsPlugin({
+			id: process.env.GTM_ID
+		})
 	],
-	ga: process.env.GTM_ID,
-	serviceWorker: true,
-	themeConfig: {
-		sidebar: require('../../src/data/open-source')
-			.projects.sort()
-			.map(item => {
-				const name = item.split('/').pop();
+	theme: defaultTheme({
+		sidebar: openSource.projects.sort().map(item => {
+			const text = item.split('/').pop();
 
-				return ['./' + name + '.md', name];
-			}),
+			return {
+				link: `/${text}`,
+				text
+			};
+		}),
 		repo: 'https://atanas.info',
 		repoLabel: 'Back to atanas.info',
 		editLinks: false
-	}
-};
+	})
+});
