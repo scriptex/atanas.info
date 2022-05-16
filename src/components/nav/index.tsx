@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Location } from 'history';
-import { match, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { MenuItem, menuItems } from '../../data/menu';
 
@@ -10,14 +9,6 @@ interface Props {
 	children?: React.ReactNode;
 	className?: string;
 }
-
-export const checkActive = (match: match<Record<string, string | undefined>> | null, location: Location): boolean => {
-	if (!location || !match) {
-		return false;
-	}
-
-	return location.pathname === match.path.replace('\\', '');
-};
 
 export const NavInner: React.FC<Readonly<Props>> = (props: Readonly<Props>) =>
 	props.hasShell ? <div className="o-shell">{props.children}</div> : <>{props.children}</>;
@@ -45,8 +36,7 @@ export const Nav: React.FC<Readonly<Props>> = (props: Readonly<Props>) => {
 									to={href}
 									title={title}
 									onClick={onClick}
-									activeClassName="active"
-									isActive={checkActive}
+									className={({ isActive }) => (isActive ? 'active' : '')}
 								>
 									{content}
 								</NavLink>

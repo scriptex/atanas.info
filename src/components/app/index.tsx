@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import github from '../../data/github-insights.json';
 import gitlab from '../../data/gitlab-insights.json';
-import { Routes } from '../../data/routes';
+import { Routes as AppRoutes } from '../../data/routes';
 import { Svg, Nav, Head, Header, Footer, Loader, Contact, ScrollToTop } from '..';
 import {
 	Home,
@@ -49,25 +49,25 @@ export const App: React.FC = () => {
 
 					<Contact />
 
-					<Switch>
-						<Route exact={true} path={Routes.HOME} component={Home} />
-						<Route exact={true} path={Routes.ABOUT} component={About} />
-						<Route exact={true} path={Routes.TIMELINE} component={Timeline} />
-						<Route exact={true} path={Routes.SKILLS} component={Skills} />
-						<Route exact={true} path={Routes.PORTFOLIO} component={Portfolio} />
-						<Route exact={true} path={Routes.STATS} component={() => <Stats data={{ github, gitlab }} />} />
-						<Route exact={true} path={Routes.SLIDES} component={Slides} />
-						<Route exact={true} path={Routes.VIDEOS} component={Videos} />
-						<Route exact={true} path={Routes.ARTICLES} component={Articles} />
-						<Route exact={true} path={Routes.CERTIFICATES} component={Certificates} />
-						<Route exact={true} path={Routes.SOCIAL} component={Social} />
-						<Route exact={true} path={Routes.BLOG} component={Blog} />
-						<Route exact={true} path={`${Routes.BLOG}/:slug`} component={BlogPost} />
-						<Route exact={true} path={Routes.RESUME} component={Resume} />
-						<Route exact={true} path={Routes.INTERACTIVE_RESUME} component={InteractiveResume} />
-						<Route exact={true} path={Routes.MUSIC} component={Music} />
-						<Route component={ErrorPage} />
-					</Switch>
+					<Routes>
+						<Route path={AppRoutes.HOME} element={<Home />} />
+						<Route path={AppRoutes.ABOUT} element={<About />} />
+						<Route path={AppRoutes.TIMELINE} element={<Timeline />} />
+						<Route path={AppRoutes.SKILLS} element={<Skills />} />
+						<Route path={AppRoutes.PORTFOLIO} element={<Portfolio />} />
+						<Route path={AppRoutes.STATS} element={<Stats data={{ github, gitlab }} />} />
+						<Route path={AppRoutes.SLIDES} element={<Slides />} />
+						<Route path={AppRoutes.VIDEOS} element={<Videos />} />
+						<Route path={AppRoutes.ARTICLES} element={<Articles />} />
+						<Route path={AppRoutes.CERTIFICATES} element={<Certificates />} />
+						<Route path={AppRoutes.SOCIAL} element={<Social />} />
+						<Route path={AppRoutes.BLOG} element={<Blog />} />
+						<Route path={`${AppRoutes.BLOG}/:slug`} element={<BlogPost />} />
+						<Route path={AppRoutes.RESUME} element={<Resume />} />
+						<Route path={AppRoutes.INTERACTIVE_RESUME} element={<InteractiveResume />} />
+						<Route path={AppRoutes.MUSIC} element={<Music />} />
+						<Route element={<ErrorPage />} />
+					</Routes>
 
 					<Nav hasShell={true} className="c-nav--inline" />
 

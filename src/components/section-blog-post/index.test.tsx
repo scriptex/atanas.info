@@ -3,6 +3,11 @@ import { render } from 'enzyme';
 
 import { SectionBlogPost } from '.';
 
+jest.mock('react-router-dom', () => ({
+	...jest.requireActual('react-router-dom'),
+	useParams: jest.fn().mockReturnValue({ slug: 'bulk-image-watermark-with-nodejs-and-jimp' })
+}));
+
 jest.mock('../../data/articles', () => ({
 	articles: [
 		{
@@ -17,16 +22,7 @@ jest.mock('../../data/articles', () => ({
 
 describe('SectionBlogPost component', () => {
 	it('Should render the SectionBlogPost component', () => {
-		const wrapper = render(
-			<SectionBlogPost
-				match={{
-					params: { slug: 'bulk-image-watermark-with-nodejs-and-jimp' },
-					isExact: false,
-					path: '/blog/bulk-image-watermark-with-nodejs-and-jimp',
-					url: '/blog/bulk-image-watermark-with-nodejs-and-jimp'
-				}}
-			/>
-		);
+		const wrapper = render(<SectionBlogPost />);
 
 		expect(wrapper).toMatchSnapshot();
 	});

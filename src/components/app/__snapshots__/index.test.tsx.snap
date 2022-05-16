@@ -20,235 +20,84 @@ exports[`App component Should render the App component 1`] = `
       />
       <Header />
       <Contact />
-      <Switch>
+      <Routes>
         <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_init": [Function],
-              "_payload": Object {
-                "_result": [Function],
-                "_status": -1,
-              },
-            }
-          }
-          exact={true}
+          element={<UNDEFINED />}
           path="/"
         />
         <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_init": [Function],
-              "_payload": Object {
-                "_result": [Function],
-                "_status": -1,
-              },
-            }
-          }
-          exact={true}
+          element={<UNDEFINED />}
           path="/about"
         />
         <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_init": [Function],
-              "_payload": Object {
-                "_result": [Function],
-                "_status": -1,
-              },
-            }
-          }
-          exact={true}
+          element={<UNDEFINED />}
           path="/timeline"
         />
         <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_init": [Function],
-              "_payload": Object {
-                "_result": [Function],
-                "_status": -1,
-              },
-            }
-          }
-          exact={true}
+          element={<UNDEFINED />}
           path="/skills"
         />
         <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_init": [Function],
-              "_payload": Object {
-                "_result": [Function],
-                "_status": -1,
-              },
-            }
-          }
-          exact={true}
+          element={<UNDEFINED />}
           path="/portfolio"
         />
         <Route
-          component={[Function]}
-          exact={true}
+          element={
+            <UNDEFINED
+              data={
+                Object {
+                  "github": undefined,
+                  "gitlab": undefined,
+                }
+              }
+            />
+          }
           path="/stats"
         />
         <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_init": [Function],
-              "_payload": Object {
-                "_result": [Function],
-                "_status": -1,
-              },
-            }
-          }
-          exact={true}
+          element={<UNDEFINED />}
           path="/slides"
         />
         <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_init": [Function],
-              "_payload": Object {
-                "_result": [Function],
-                "_status": -1,
-              },
-            }
-          }
-          exact={true}
+          element={<UNDEFINED />}
           path="/videos"
         />
         <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_init": [Function],
-              "_payload": Object {
-                "_result": [Function],
-                "_status": -1,
-              },
-            }
-          }
-          exact={true}
+          element={<UNDEFINED />}
           path="/articles"
         />
         <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_init": [Function],
-              "_payload": Object {
-                "_result": [Function],
-                "_status": -1,
-              },
-            }
-          }
-          exact={true}
+          element={<UNDEFINED />}
           path="/certificates"
         />
         <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_init": [Function],
-              "_payload": Object {
-                "_result": [Function],
-                "_status": -1,
-              },
-            }
-          }
-          exact={true}
+          element={<UNDEFINED />}
           path="/social"
         />
         <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_init": [Function],
-              "_payload": Object {
-                "_result": [Function],
-                "_status": -1,
-              },
-            }
-          }
-          exact={true}
+          element={<UNDEFINED />}
           path="/blog"
         />
         <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_init": [Function],
-              "_payload": Object {
-                "_result": [Function],
-                "_status": -1,
-              },
-            }
-          }
-          exact={true}
+          element={<UNDEFINED />}
           path="/blog/:slug"
         />
         <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_init": [Function],
-              "_payload": Object {
-                "_result": [Function],
-                "_status": -1,
-              },
-            }
-          }
-          exact={true}
+          element={<UNDEFINED />}
           path="/resume"
         />
         <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_init": [Function],
-              "_payload": Object {
-                "_result": [Function],
-                "_status": -1,
-              },
-            }
-          }
-          exact={true}
+          element={<UNDEFINED />}
           path="/interactive-resume"
         />
         <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_init": [Function],
-              "_payload": Object {
-                "_result": [Function],
-                "_status": -1,
-              },
-            }
-          }
-          exact={true}
+          element={<UNDEFINED />}
           path="/music"
         />
         <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.lazy),
-              "_init": [Function],
-              "_payload": Object {
-                "_result": [Function],
-                "_status": -1,
-              },
-            }
-          }
+          element={<UNDEFINED />}
         />
-      </Switch>
+      </Routes>
       <Nav
         className="c-nav--inline"
         hasShell={true}

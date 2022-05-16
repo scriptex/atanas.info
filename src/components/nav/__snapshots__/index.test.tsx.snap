@@ -10,8 +10,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="0"
       >
         <NavLink
-          activeClassName="active"
-          isActive={[Function]}
+          className={[Function]}
           title="Back to homepage"
           to="/"
         >
@@ -22,8 +21,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="1"
       >
         <NavLink
-          activeClassName="active"
-          isActive={[Function]}
+          className={[Function]}
           title="About me"
           to="/about"
         >
@@ -34,8 +32,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="2"
       >
         <NavLink
-          activeClassName="active"
-          isActive={[Function]}
+          className={[Function]}
           title="Life events"
           to="/timeline"
         >
@@ -46,8 +43,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="3"
       >
         <NavLink
-          activeClassName="active"
-          isActive={[Function]}
+          className={[Function]}
           title="My skills"
           to="/skills"
         >
@@ -58,8 +54,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="4"
       >
         <NavLink
-          activeClassName="active"
-          isActive={[Function]}
+          className={[Function]}
           title="My portfolio"
           to="/portfolio"
         >
@@ -70,8 +65,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="5"
       >
         <NavLink
-          activeClassName="active"
-          isActive={[Function]}
+          className={[Function]}
           title="My stats"
           to="/stats"
         >
@@ -82,8 +76,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="6"
       >
         <NavLink
-          activeClassName="active"
-          isActive={[Function]}
+          className={[Function]}
           title="My presentations"
           to="/slides"
         >
@@ -94,8 +87,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="7"
       >
         <NavLink
-          activeClassName="active"
-          isActive={[Function]}
+          className={[Function]}
           title="My video presentations"
           to="/videos"
         >
@@ -106,8 +98,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="8"
       >
         <NavLink
-          activeClassName="active"
-          isActive={[Function]}
+          className={[Function]}
           title="My published articles"
           to="/articles"
         >
@@ -118,8 +109,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="9"
       >
         <NavLink
-          activeClassName="active"
-          isActive={[Function]}
+          className={[Function]}
           title="My certificates"
           to="/certificates"
         >
@@ -130,8 +120,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="10"
       >
         <NavLink
-          activeClassName="active"
-          isActive={[Function]}
+          className={[Function]}
           title="Social widgets"
           to="/social"
         >
@@ -142,8 +131,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="11"
       >
         <NavLink
-          activeClassName="active"
-          isActive={[Function]}
+          className={[Function]}
           title="My blog"
           to="/blog"
         >
@@ -154,8 +142,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="12"
       >
         <NavLink
-          activeClassName="active"
-          isActive={[Function]}
+          className={[Function]}
           title="My resume"
           to="/resume"
         >
@@ -166,8 +153,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="13"
       >
         <NavLink
-          activeClassName="active"
-          isActive={[Function]}
+          className={[Function]}
           title="My interactive resume"
           to="/interactive-resume"
         >
@@ -190,8 +176,7 @@ exports[`Nav component Should render the Nav component 1`] = `
         key="15"
       >
         <NavLink
-          activeClassName="active"
-          isActive={[Function]}
+          className={[Function]}
           title="My music"
           to="/music"
         >
@@ -223,6 +208,7 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       </li>
       <li>
         <a
+          class=""
           href="/about"
           title="About me"
         >
@@ -231,6 +217,7 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       </li>
       <li>
         <a
+          class=""
           href="/timeline"
           title="Life events"
         >
@@ -239,6 +226,7 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       </li>
       <li>
         <a
+          class=""
           href="/skills"
           title="My skills"
         >
@@ -247,6 +235,7 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       </li>
       <li>
         <a
+          class=""
           href="/portfolio"
           title="My portfolio"
         >
@@ -255,6 +244,7 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       </li>
       <li>
         <a
+          class=""
           href="/stats"
           title="My stats"
         >
@@ -263,6 +253,7 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       </li>
       <li>
         <a
+          class=""
           href="/slides"
           title="My presentations"
         >
@@ -271,6 +262,7 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       </li>
       <li>
         <a
+          class=""
           href="/videos"
           title="My video presentations"
         >
@@ -279,6 +271,7 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       </li>
       <li>
         <a
+          class=""
           href="/articles"
           title="My published articles"
         >
@@ -287,6 +280,7 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       </li>
       <li>
         <a
+          class=""
           href="/certificates"
           title="My certificates"
         >
@@ -295,6 +289,7 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       </li>
       <li>
         <a
+          class=""
           href="/social"
           title="Social widgets"
         >
@@ -303,6 +298,7 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       </li>
       <li>
         <a
+          class=""
           href="/blog"
           title="My blog"
         >
@@ -311,6 +307,7 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       </li>
       <li>
         <a
+          class=""
           href="/resume"
           title="My resume"
         >
@@ -319,6 +316,7 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       </li>
       <li>
         <a
+          class=""
           href="/interactive-resume"
           title="My interactive resume"
         >
@@ -337,6 +335,7 @@ exports[`Nav component Should render the Nav component with props 1`] = `
       </li>
       <li>
         <a
+          class=""
           href="/music"
           title="My music"
         >

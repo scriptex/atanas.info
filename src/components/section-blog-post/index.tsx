@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import * as React from 'react';
-import { match } from 'react-router-dom';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { useParams } from 'react-router-dom';
 // @ts-ignore
 import { MDXProvider } from '@mdx-js/react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -26,20 +26,11 @@ SyntaxHighlighter.registerLanguage('shell', shell);
 SyntaxHighlighter.registerLanguage('javascript', js);
 SyntaxHighlighter.registerLanguage('typescript', ts);
 
-interface Params {
-	slug: string;
-}
+export const SectionBlogPost: React.FC = () => {
+	const { slug } = useParams();
 
-interface Props {
-	match: match<Params>;
-}
-
-export const SectionBlogPost: React.FC<Props> = (props: Props) => {
-	const {
-		params: { slug }
-	} = props.match;
-
-	const article = articles.find(({ url }) => url.includes(slug));
+	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+	const article = articles.find(({ url }) => url.includes(slug!));
 	const Content = article?.content;
 
 	return (
