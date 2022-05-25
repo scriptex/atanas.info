@@ -289,7 +289,11 @@ export const NPMStats: React.FC = () => {
 		return null;
 	}
 
-	const { sum, ...packages } = npmStats;
+	const { sum = null, ...packages } = npmStats;
+
+	if (sum === null) {
+		return null;
+	}
 
 	return (
 		<div className="c-section__entry c-section__entry--no-background">

@@ -32,6 +32,7 @@ import * as npmtotal from 'npmtotal';
 		console.log('Successfully saved stats for NPM packages');
 	} catch (e) {
 		console.log('Error saving stats for NPM packages');
+		console.log(e);
 	}
 
 	await writeFileSync(resolve(__dirname, '../src/data/npm-stats.json'), JSON.stringify(result, null, 2));
