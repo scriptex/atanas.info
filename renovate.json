@@ -1,8 +1,5 @@
 {
-	"extends": ["config:base", ":automergePatch", ":automergeBranch", ":disableDependencyDashboard"],
-	"travis": {
-		"enabled": true
-	},
+	"extends": ["config:base", ":disableDependencyDashboard"],
 	"assignees": ["@scriptex"],
 	"labels": ["dependencies"],
 	"rebaseWhen": "conflicted",
