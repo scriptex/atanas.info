@@ -18,7 +18,7 @@ export const music = (container: HTMLDivElement | null): void => {
 	const playBtn = container.querySelector('#play') as HTMLButtonElement;
 	const pauseBtn = container.querySelector('#pause') as HTMLButtonElement;
 
-	canvas.width = window.innerWidth;
+	canvas.width = Math.min(window.innerWidth, 1400);
 	canvas.height = window.innerHeight;
 
 	let WIDTH: number = canvas.width;
@@ -143,7 +143,7 @@ export const music = (container: HTMLDivElement | null): void => {
 		WIDTH = canvas.width;
 		HEIGHT = canvas.height;
 
-		canvas.width = window.innerWidth;
+		canvas.width = Math.min(window.innerWidth, 1400);
 		canvas.height = window.innerHeight;
 
 		background('#000');
