@@ -292,7 +292,6 @@ export default defineUserConfig({
 	],
 	dest: '../dist/projects',
 	plugins: [
-		// @ts-ignore
 		googleAnalyticsPlugin({
 			id: process.env.GTM_ID
 		})
