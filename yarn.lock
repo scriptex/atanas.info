@@ -981,36 +981,36 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
-"@babylonjs/core@5.9.1", "@babylonjs/core@^5.9.1":
-  version "5.9.1"
-  resolved "https://registry.yarnpkg.com/@babylonjs/core/-/core-5.9.1.tgz#ab0357f72ba4d6aec759289bea88bb6adc6c748a"
-  integrity sha512-7gYujcwLKJX9n+QjUin7RHf+pJm7NZcASIosZZj+kzkJbPtdB0g2IrxG7mNH6lBU9n29IbhcJkBJS51Z8yvOZA==
+"@babylonjs/core@5.10.0", "@babylonjs/core@^5.10.0":
+  version "5.10.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/core/-/core-5.10.0.tgz#c7ae117ff4af0b8c83b0d28b892962c179e585d9"
+  integrity sha512-xAfEYbYykHRwV633Q0rpbA+v/GpeBm7cVC2/YgwzcySJ5JYB/oAfx/MEKJX4PXIQctZ7SjipcE5HdnMh0H1F2g==
   dependencies:
     tslib "^2.3.1"
 
-"@babylonjs/gui@5.9.1":
-  version "5.9.1"
-  resolved "https://registry.yarnpkg.com/@babylonjs/gui/-/gui-5.9.1.tgz#a52f3fbc01a3f3ab6a3c5231cfdcb0ec822c28cc"
-  integrity sha512-Ifl2wD5uBEOiFAWcjVBmqZ+NGENBhXok575hbNsWYs051Hr374K2i2y5eaFNdEXwaQXE+zWsK5KhF6qdp873UQ==
+"@babylonjs/gui@5.10.0":
+  version "5.10.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/gui/-/gui-5.10.0.tgz#f8c652e3ec7c0a46961d0b7a4c8fe954421274cc"
+  integrity sha512-8vR3g7ODtnc3LQdZdMEetZ6Ao6pfUM9OhxKxAVCIsoyj0QDc1sqk0l13bjVATYkBxWd7k4toiSqY56Pqrxo6Vw==
   dependencies:
-    "@babylonjs/core" "^5.9.1"
+    "@babylonjs/core" "^5.10.0"
     tslib "^2.3.1"
 
-"@babylonjs/loaders@5.9.1":
-  version "5.9.1"
-  resolved "https://registry.yarnpkg.com/@babylonjs/loaders/-/loaders-5.9.1.tgz#bc6efcffbf4995e36de73d7d3745b01404d062bd"
-  integrity sha512-gnY0TRoYQkDcXXi6VrocEDyR3ET8q59+r4x4KF5wKosZl+HSIjWW5/emmsl9DFR1N+nxY35KDzyGVtTnnrhviA==
+"@babylonjs/loaders@5.10.0":
+  version "5.10.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/loaders/-/loaders-5.10.0.tgz#049951c792a7a173e5f937e90f190c8e40526b9a"
+  integrity sha512-n4pQvLyNiT8A08iWD44V/3WdA8I40D8auBrelbfeZ+dQh/4HGnPNkfFAfUrwS00HwP44ncl3DMJcbrYg/hdLog==
   dependencies:
-    "@babylonjs/core" "^5.9.1"
-    babylonjs-gltf2interface "^5.9.1"
+    "@babylonjs/core" "^5.10.0"
+    babylonjs-gltf2interface "^5.10.0"
     tslib "^2.3.1"
 
-"@babylonjs/materials@5.9.1":
-  version "5.9.1"
-  resolved "https://registry.yarnpkg.com/@babylonjs/materials/-/materials-5.9.1.tgz#91c8ae54c82001693912766a48b20faca2a0271c"
-  integrity sha512-YMYSR/pUYSTH7CkxpletLjsG0Lxb3wy5VQEHTfgAwZ0ysqAo7onVba0WTCSaK2cJ5Mdb2Q94J/P2zvDFGvtVKQ==
+"@babylonjs/materials@5.10.0":
+  version "5.10.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/materials/-/materials-5.10.0.tgz#adbbd5f8b66e793c83d6d1b8f2aca43b24044127"
+  integrity sha512-aTtSbZe5Cfj52C5AAsPH4GSXevIVbqGOCgnoxUq1/9SiSi8Ak3yil7+JZD5XsCSht71+K5/ar4wuln9pXt22oA==
   dependencies:
-    "@babylonjs/core" "^5.9.1"
+    "@babylonjs/core" "^5.10.0"
     tslib "^2.3.1"
 
 "@bcoe/v8-coverage@^0.2.3":
@@ -4527,10 +4527,10 @@ babel-preset-jest@^27.5.1:
     babel-plugin-jest-hoist "^27.5.1"
     babel-preset-current-node-syntax "^1.0.0"
 
-babylonjs-gltf2interface@^5.9.1:
-  version "5.9.1"
-  resolved "https://registry.yarnpkg.com/babylonjs-gltf2interface/-/babylonjs-gltf2interface-5.9.1.tgz#6687820a9511881c69f89bdc37ccc7dc6b65b402"
-  integrity sha512-GoZog+5WUDvxB/mUjU6DlqCzOTvZuiRW91/xBfKpIyC/729EK//bGzeeiXJJCSGlsdYqZqrCbnmpxMiuH4/IDQ==
+babylonjs-gltf2interface@^5.10.0:
+  version "5.10.0"
+  resolved "https://registry.yarnpkg.com/babylonjs-gltf2interface/-/babylonjs-gltf2interface-5.10.0.tgz#8103808f178ca3052dd3705c4f6b7eb16db5dae7"
+  integrity sha512-nW4CeC09wC8mSlD0IG4CoNnozhB71+dmJXtMuw4xS8WRXuJsFzWvFIwKXUiRpf2W4C/PIWcDjUwqRwZuk6BNKQ==
 
 bail@^1.0.0:
   version "1.0.5"
