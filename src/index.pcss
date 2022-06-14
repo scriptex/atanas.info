@@ -2779,8 +2779,38 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 		display: block;
 	}
 
+	& .c-btn {
+		font-size: 0.75rem;
+		position: absolute;
+		bottom: 1rem;
+		right: 1rem;
+		padding: 0.3125rem 0.5rem 0.25rem;
+	}
+
 	& .c-loading {
 		@mixin centered;
+	}
+}
+
+.c-skyline__item--expanded {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 110;
+}
+
+.has-expanded {
+	overflow: hidden;
+
+	& .c-footer,
+	& .c-nav--inline {
+		display: none;
+	}
+
+	& .c-section--stats .c-section__entry:nth-of-type(2) {
+		z-index: 5;
 	}
 }
 

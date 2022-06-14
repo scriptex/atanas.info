@@ -78,10 +78,23 @@ export const onSceneMount = (args: SceneEventArgs, props: Props, onLoad: () => v
 
 export const GithubSkyline = (props: Props): React.ReactElement => {
 	const [loading, setLoading] = React.useState(true);
+	const [expanded, setExpanded] = React.useState(false);
+
+	React.useEffect(() => {
+		document.documentElement.classList[expanded ? 'add' : 'remove']('has-expanded');
+
+		return () => {
+			document.documentElement.classList.remove('has-expanded');
+		};
+	}, [expanded]);
 
 	return (
-		<div className="c-skyline__item">
+		<div className={`c-skyline__item${expanded ? ' c-skyline__item--expanded' : ''}`}>
 			{loading && <Loader />}
+
+			<button type="button" onClick={() => setExpanded(!expanded)} className="c-btn c-btn--small">
+				{expanded ? 'Collapse' : 'Expand'}
+			</button>
 
 			{/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
 			{/* @ts-ignore */}
