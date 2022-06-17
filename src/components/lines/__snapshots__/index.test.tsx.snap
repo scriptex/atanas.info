@@ -1,32 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Lines component Should render the Lines component 1`] = `
-<Fragment>
+<DocumentFragment>
   <div
-    className="lines"
+    class="lines"
   >
     <div
-      className="line line--vertical"
+      class="line line--vertical"
     />
     <div
-      className="line line--vertical"
+      class="line line--vertical"
     />
     <div
-      className="line line--vertical"
+      class="line line--vertical"
     />
   </div>
   <div
-    className="lines"
+    class="lines"
   >
     <div
-      className="line line--horizontal"
+      class="line line--horizontal"
     />
     <div
-      className="line line--horizontal"
+      class="line line--horizontal"
     />
     <div
-      className="line line--horizontal"
+      class="line line--horizontal"
     />
   </div>
-</Fragment>
+</DocumentFragment>
 `;

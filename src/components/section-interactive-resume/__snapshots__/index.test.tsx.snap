@@ -1,249 +1,251 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionInteractiveResume component Should render the SectionInteractiveResume component 1`] = `
-<main
-  class="o-main "
->
-  <section
-    class="c-section c-section--interactive-resume"
-    id="interactive-resume"
+<DocumentFragment>
+  <main
+    class="o-main "
   >
-    <div
-      class="o-shell"
+    <section
+      class="c-section c-section--interactive-resume"
+      id="interactive-resume"
     >
       <div
-        class="lines"
+        class="o-shell"
       >
         <div
-          class="line line--vertical"
-        />
-        <div
-          class="line line--vertical"
-        />
-        <div
-          class="line line--vertical"
-        />
-      </div>
-      <div
-        class="lines"
-      >
-        <div
-          class="line line--horizontal"
-        />
-        <div
-          class="line line--horizontal"
-        />
-        <div
-          class="line line--horizontal"
-        />
-      </div>
-      <div
-        class="c-interactive-resume"
-      >
-        <h2>
-          Interactive resume
-        </h2>
-        <div
-          class="c-interactive-resume__widget"
+          class="lines"
         >
-          <h3>
-            Activity
-          </h3>
-          <codersrank-activity
-            branding="false"
-            labels="true"
-            legend="true"
-            tooltip="true"
-            username="scriptex"
+          <div
+            class="line line--vertical"
+          />
+          <div
+            class="line line--vertical"
+          />
+          <div
+            class="line line--vertical"
           />
         </div>
         <div
-          class="c-interactive-resume__widget"
+          class="lines"
         >
-          <h3>
-            Education
-          </h3>
-          <codersrank-education
-            branding="false"
-            certificates-section-title="Certificates"
-            education-section-title="Schools"
-            grid="true"
-            username="scriptex"
+          <div
+            class="line line--horizontal"
+          />
+          <div
+            class="line line--horizontal"
+          />
+          <div
+            class="line line--horizontal"
           />
         </div>
         <div
-          class="c-interactive-resume__widget"
+          class="c-interactive-resume"
         >
-          <h3>
-            Portfolio
-          </h3>
-          <codersrank-portfolio
-            branding="false"
-            grid="true"
-            username="scriptex"
-          />
+          <h2>
+            Interactive resume
+          </h2>
+          <div
+            class="c-interactive-resume__widget"
+          >
+            <h3>
+              Activity
+            </h3>
+            <codersrank-activity
+              branding="false"
+              labels="true"
+              legend="true"
+              tooltip="true"
+              username="scriptex"
+            />
+          </div>
+          <div
+            class="c-interactive-resume__widget"
+          >
+            <h3>
+              Education
+            </h3>
+            <codersrank-education
+              branding="false"
+              certificates-section-title="Certificates"
+              education-section-title="Schools"
+              grid="true"
+              username="scriptex"
+            />
+          </div>
+          <div
+            class="c-interactive-resume__widget"
+          >
+            <h3>
+              Portfolio
+            </h3>
+            <codersrank-portfolio
+              branding="false"
+              grid="true"
+              username="scriptex"
+            />
+          </div>
+          <div
+            class="c-interactive-resume__widget"
+          >
+            <h3>
+              Skills
+            </h3>
+            <codersrank-skills-chart
+              branding="false"
+              labels="true"
+              legend="true"
+              tooltip="true"
+              username="scriptex"
+            />
+          </div>
+          <div
+            class="c-interactive-resume__widget"
+          >
+            <h3>
+              Summary
+            </h3>
+            <codersrank-summary
+              username="scriptex"
+            />
+          </div>
+          <div
+            class="c-interactive-resume__widget"
+          >
+            <h3>
+              Work
+            </h3>
+            <codersrank-work-experience
+              branding="false"
+              grid="true"
+              logos="true"
+              username="scriptex"
+            />
+          </div>
+          <div
+            class="c-interactive-resume__widget"
+          >
+            <h3>
+              Work Experience Timeline
+            </h3>
+            <codersrank-timeline
+              branding="false"
+              type="workexperience"
+              username="scriptex"
+            />
+          </div>
+          <div
+            class="c-interactive-resume__widget"
+          >
+            <h3>
+              Portfolio Timeline
+            </h3>
+            <codersrank-timeline
+              branding="false"
+              type="portfolio"
+              username="scriptex"
+            />
+          </div>
+          <div
+            class="c-interactive-resume__widget"
+          >
+            <h3>
+              Technologies Timeline
+            </h3>
+            <codersrank-timeline
+              branding="false"
+              type="technologies"
+              username="scriptex"
+            />
+          </div>
         </div>
         <div
-          class="c-interactive-resume__widget"
+          class="c-section__actions"
         >
-          <h3>
-            Skills
-          </h3>
-          <codersrank-skills-chart
-            branding="false"
-            labels="true"
-            legend="true"
-            tooltip="true"
-            username="scriptex"
-          />
-        </div>
-        <div
-          class="c-interactive-resume__widget"
-        >
-          <h3>
-            Summary
-          </h3>
-          <codersrank-summary
-            username="scriptex"
-          />
-        </div>
-        <div
-          class="c-interactive-resume__widget"
-        >
-          <h3>
-            Work
-          </h3>
-          <codersrank-work-experience
-            branding="false"
-            grid="true"
-            logos="true"
-            username="scriptex"
-          />
-        </div>
-        <div
-          class="c-interactive-resume__widget"
-        >
-          <h3>
-            Work Experience Timeline
-          </h3>
-          <codersrank-timeline
-            branding="false"
-            type="workexperience"
-            username="scriptex"
-          />
-        </div>
-        <div
-          class="c-interactive-resume__widget"
-        >
-          <h3>
-            Portfolio Timeline
-          </h3>
-          <codersrank-timeline
-            branding="false"
-            type="portfolio"
-            username="scriptex"
-          />
-        </div>
-        <div
-          class="c-interactive-resume__widget"
-        >
-          <h3>
-            Technologies Timeline
-          </h3>
-          <codersrank-timeline
-            branding="false"
-            type="technologies"
-            username="scriptex"
-          />
-        </div>
-      </div>
-      <div
-        class="c-section__actions"
-      >
-        <button
-          class="c-btn "
-          type="button"
-        >
-          Get in touch
-        </button>
-        <ul
-          class="c-section__actions-list"
-        >
-          <li>
-            <button
-              class="c-btn c-section__actions-close"
-              type="button"
-            >
-              Close
-            </button>
-          </li>
-          <li>
-            <button
-              class="c-btn "
-              type="button"
-            >
-              <svg
-                class="c-section__actions-icon"
+          <button
+            class="c-btn "
+            type="button"
+          >
+            Get in touch
+          </button>
+          <ul
+            class="c-section__actions-list"
+          >
+            <li>
+              <button
+                class="c-btn c-section__actions-close"
+                type="button"
               >
-                <use
-                  href="#svg-email"
-                />
-              </svg>
-              <span>
-                Contact me
-              </span>
-              <strong>
-                directly
-              </strong>
-            </button>
-          </li>
-          <li>
-            <a
-              class="c-btn"
-              href="https://app.usebraintrust.com/talent/782/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <svg
-                class="c-section__actions-icon"
+                Close
+              </button>
+            </li>
+            <li>
+              <button
+                class="c-btn "
+                type="button"
               >
-                <use
-                  href="#svg-braintrust"
-                />
-              </svg>
-              <span>
-                Hire me on
-              </span>
-              <strong>
-                Braintrust
-              </strong>
-            </a>
-          </li>
-          <li>
-            <a
-              class="c-btn"
-              href="https://www.toptal.com/resume/atanas-atanasov"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <svg
-                class="c-section__actions-icon"
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-email"
+                  />
+                </svg>
+                <span>
+                  Contact me
+                </span>
+                <strong>
+                  directly
+                </strong>
+              </button>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://app.usebraintrust.com/talent/782/"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <use
-                  href="#svg-toptal"
-                />
-              </svg>
-              <span>
-                Hire me on
-              </span>
-              <strong>
-                Toptal
-              </strong>
-            </a>
-          </li>
-        </ul>
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-braintrust"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Braintrust
+                </strong>
+              </a>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://www.toptal.com/resume/atanas-atanasov"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-toptal"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Toptal
+                </strong>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
+</DocumentFragment>
 `;

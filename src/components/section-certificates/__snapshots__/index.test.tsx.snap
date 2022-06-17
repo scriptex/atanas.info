@@ -1,119 +1,256 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionCertificates component Should render the SectionCertificates component 1`] = `
-<Section
-  hasButton={true}
-  hasShell={true}
-  id="certificates"
->
-  <h1>
-    Certificates
-  </h1>
-  <div
-    className="o-grid c-section__body"
+<DocumentFragment>
+  <main
+    class="o-main "
   >
-    <div
-      className="o-grid__item xs-12 sm-6"
-      key="0"
+    <section
+      class="c-section c-section--certificates"
+      id="certificates"
     >
-      <ExternalLink
-        className="c-certificate"
-        href="cert/html.pdf"
+      <div
+        class="o-shell"
       >
-        <Loader />
-        <img
-          alt="HTML"
-          loading="lazy"
-          src="cert/html.jpg"
-          width="600"
-        />
-      </ExternalLink>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6"
-      key="1"
-    >
-      <ExternalLink
-        className="c-certificate"
-        href="cert/javascript.pdf"
-      >
-        <Loader />
-        <img
-          alt="JavaScript"
-          loading="lazy"
-          src="cert/javascript.jpg"
-          width="600"
-        />
-      </ExternalLink>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6"
-      key="2"
-    >
-      <ExternalLink
-        className="c-certificate"
-        href="cert/python.pdf"
-      >
-        <Loader />
-        <img
-          alt="Python"
-          loading="lazy"
-          src="cert/python.jpg"
-          width="600"
-        />
-      </ExternalLink>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6"
-      key="3"
-    >
-      <ExternalLink
-        className="c-certificate"
-        href="cert/react.pdf"
-      >
-        <Loader />
-        <img
-          alt="React Development"
-          loading="lazy"
-          src="cert/react.jpg"
-          width="600"
-        />
-      </ExternalLink>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6"
-      key="4"
-    >
-      <ExternalLink
-        className="c-certificate"
-        href="cert/css.pdf"
-      >
-        <Loader />
-        <img
-          alt="CSS"
-          loading="lazy"
-          src="cert/css.jpg"
-          width="600"
-        />
-      </ExternalLink>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6"
-      key="5"
-    >
-      <ExternalLink
-        className="c-certificate"
-        href="cert/deno.pdf"
-      >
-        <Loader />
-        <img
-          alt="Deno"
-          loading="lazy"
-          src="cert/deno.jpg"
-          width="600"
-        />
-      </ExternalLink>
-    </div>
-  </div>
-</Section>
+        <h1>
+          Certificates
+        </h1>
+        <div
+          class="o-grid c-section__body"
+        >
+          <div
+            class="o-grid__item xs-12 sm-6"
+          >
+            <a
+              class="c-certificate"
+              href="cert/html.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div
+                class="c-loading"
+              >
+                <div
+                  class="c-loader"
+                />
+              </div>
+              <img
+                alt="HTML"
+                loading="lazy"
+                src="cert/html.jpg"
+                width="600"
+              />
+            </a>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6"
+          >
+            <a
+              class="c-certificate"
+              href="cert/javascript.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div
+                class="c-loading"
+              >
+                <div
+                  class="c-loader"
+                />
+              </div>
+              <img
+                alt="JavaScript"
+                loading="lazy"
+                src="cert/javascript.jpg"
+                width="600"
+              />
+            </a>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6"
+          >
+            <a
+              class="c-certificate"
+              href="cert/python.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div
+                class="c-loading"
+              >
+                <div
+                  class="c-loader"
+                />
+              </div>
+              <img
+                alt="Python"
+                loading="lazy"
+                src="cert/python.jpg"
+                width="600"
+              />
+            </a>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6"
+          >
+            <a
+              class="c-certificate"
+              href="cert/react.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div
+                class="c-loading"
+              >
+                <div
+                  class="c-loader"
+                />
+              </div>
+              <img
+                alt="React Development"
+                loading="lazy"
+                src="cert/react.jpg"
+                width="600"
+              />
+            </a>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6"
+          >
+            <a
+              class="c-certificate"
+              href="cert/css.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div
+                class="c-loading"
+              >
+                <div
+                  class="c-loader"
+                />
+              </div>
+              <img
+                alt="CSS"
+                loading="lazy"
+                src="cert/css.jpg"
+                width="600"
+              />
+            </a>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6"
+          >
+            <a
+              class="c-certificate"
+              href="cert/deno.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div
+                class="c-loading"
+              >
+                <div
+                  class="c-loader"
+                />
+              </div>
+              <img
+                alt="Deno"
+                loading="lazy"
+                src="cert/deno.jpg"
+                width="600"
+              />
+            </a>
+          </div>
+        </div>
+        <div
+          class="c-section__actions"
+        >
+          <button
+            class="c-btn "
+            type="button"
+          >
+            Get in touch
+          </button>
+          <ul
+            class="c-section__actions-list"
+          >
+            <li>
+              <button
+                class="c-btn c-section__actions-close"
+                type="button"
+              >
+                Close
+              </button>
+            </li>
+            <li>
+              <button
+                class="c-btn "
+                type="button"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-email"
+                  />
+                </svg>
+                <span>
+                  Contact me
+                </span>
+                <strong>
+                  directly
+                </strong>
+              </button>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://app.usebraintrust.com/talent/782/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-braintrust"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Braintrust
+                </strong>
+              </a>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://www.toptal.com/resume/atanas-atanasov"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-toptal"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Toptal
+                </strong>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
 `;

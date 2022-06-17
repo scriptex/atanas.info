@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { render } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { render, RenderResult } from '@testing-library/react';
 
 import { SectionBlogPost } from '.';
 
@@ -22,8 +23,14 @@ jest.mock('../../data/articles', () => ({
 
 describe('SectionBlogPost component', () => {
 	it('Should render the SectionBlogPost component', () => {
-		const wrapper = render(<SectionBlogPost />);
+		let result: RenderResult;
 
-		expect(wrapper).toMatchSnapshot();
+		act(() => {
+			result = render(<SectionBlogPost />);
+		});
+
+		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+		// @ts-ignore
+		expect(result.asFragment()).toMatchSnapshot();
 	});
 });

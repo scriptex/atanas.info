@@ -185,18 +185,6 @@ export const GitlabStats: React.FC<Readonly<Props>> = (props: Readonly<Props>) =
 	const calendarPlaceholder1: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
 	const calendarPlaceholder2: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
 
-	if (error) {
-		return (
-			<div className="c-section__entry c-section__entry--no-background">
-				<div className="o-shell">
-					<h2>Gitlab profile statistics</h2>
-
-					<p>Failed fetching data from Gitlab. Please check again in 4 hours.</p>
-				</div>
-			</div>
-		);
-	}
-
 	const blocks: GeneralInsight[] = [
 		{
 			title: 'Used languages',
@@ -239,6 +227,18 @@ export const GitlabStats: React.FC<Readonly<Props>> = (props: Readonly<Props>) =
 			new GitlabActivityCalendar(calendarPlaceholder2.current, gitlabCalendarData);
 		}
 	}, []);
+
+	if (error) {
+		return (
+			<div className="c-section__entry c-section__entry--no-background">
+				<div className="o-shell">
+					<h2>Gitlab profile statistics</h2>
+
+					<p>Failed fetching data from Gitlab. Please check again in 4 hours.</p>
+				</div>
+			</div>
+		);
+	}
 
 	return (
 		<>
@@ -285,7 +285,7 @@ export const GitlabStats: React.FC<Readonly<Props>> = (props: Readonly<Props>) =
 };
 
 export const NPMStats: React.FC = () => {
-	if (Object.keys(npmStats).length === 0) {
+	if (!npmStats || Object.keys(npmStats).length === 0) {
 		return null;
 	}
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { SectionSkills } from '.';
 import { mockUseEffect } from '../../scripts/shared';
@@ -8,8 +8,8 @@ describe('SectionSkills component', () => {
 	mockUseEffect();
 
 	it('Should render the SectionSkills component', () => {
-		const wrapper = shallow(<SectionSkills />);
+		const { asFragment } = render(<SectionSkills />);
 
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 });

@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { mount, render } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { SectionResume } from '.';
+import { act } from 'react-dom/test-utils';
 
 beforeEach(() => {
 	window.print = jest.fn();
@@ -9,18 +10,16 @@ beforeEach(() => {
 
 describe('SectionResume component', () => {
 	it('Should render the SectionResume component', () => {
-		const wrapper = render(<SectionResume />);
+		const { asFragment, container } = render(<SectionResume />);
 
-		expect(wrapper).toMatchSnapshot();
-	});
+		expect(asFragment()).toMatchSnapshot();
 
-	it('Should mount the SectionResume component', () => {
-		const wrapper = mount(<SectionResume />);
+		act(() => {
+			container.querySelectorAll<HTMLElement>('.c-btn').forEach(button => {
+				button.click();
 
-		wrapper.find('.c-btn').forEach(button => {
-			button.simulate('click');
-
-			expect(wrapper).toMatchSnapshot();
+				expect(asFragment()).toMatchSnapshot();
+			});
 		});
 	});
 });

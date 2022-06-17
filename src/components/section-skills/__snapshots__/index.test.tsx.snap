@@ -1,1927 +1,1855 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionSkills component Should render the SectionSkills component 1`] = `
-<Section
-  actions={
-    <Button
-      onClick={[Function]}
-    >
-      Static
-       mode
-    </Button>
-  }
-  className=" bubbles"
-  hasButton={true}
-  hasShell={true}
-  id="skills"
->
-  <Lines />
-  <h2>
-    Skills 
-    <br />
-    <small
-      hidden={false}
-    >
-      (Drag the bubbles to play)
-    </small>
-  </h2>
-  <div
-    className=""
-    id="skills-graph"
-  />
-  <div
-    className="o-grid is--hidden"
+<DocumentFragment>
+  <main
+    class="o-main "
   >
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="0"
+    <section
+      class="c-section c-section--skills bubbles"
+      id="skills"
     >
       <div
-        className="c-skill"
+        class="o-shell"
       >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
+        <div
+          class="lines"
         >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-agile"
-            width={30}
+          <div
+            class="line line--vertical"
           />
-        </figure>
-        <p>
-          <strong>
-            Agile
-          </strong>
-          Since 
-          2010
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="1"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
+          <div
+            class="line line--vertical"
+          />
+          <div
+            class="line line--vertical"
+          />
+        </div>
+        <div
+          class="lines"
         >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-angular"
-            width={30}
+          <div
+            class="line line--horizontal"
           />
-        </figure>
-        <p>
-          <strong>
-            Angular
-          </strong>
-          Since 
-          2017
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="2"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
+          <div
+            class="line line--horizontal"
+          />
+          <div
+            class="line line--horizontal"
+          />
+        </div>
+        <h2>
+          Skills 
+          <br />
+          <small>
+            (Drag the bubbles to play)
+          </small>
+        </h2>
+        <div
+          class=""
+          id="skills-graph"
+        />
+        <div
+          class="o-grid is--hidden"
         >
-          <Icon
-            className="c-skill__icon"
-            height={32}
-            name="svg-angularjs"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Angular JS
-          </strong>
-          Since 
-          2014
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="3"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-agile"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Agile
+                </strong>
+                Since 2010
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-angular"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Angular
+                </strong>
+                Since 2017
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="32"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-angularjs"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Angular JS
+                </strong>
+                Since 2014
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="18"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-aws"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Amazon Web Services
+                </strong>
+                Since 2019
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(34, 34, 34);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="12"
+                  width="31"
+                >
+                  <use
+                    xlink:href="#svg-babel"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Babel
+                </strong>
+                Since 2015
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-babylonjs"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  BabylonJS
+                </strong>
+                Since 2018
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(189, 201, 236);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-backbone"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  BackboneJS
+                </strong>
+                Since 2013
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(72, 153, 42);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-bash"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Bash
+                </strong>
+                Since 2015
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(0, 0, 0);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="24"
+                  width="29"
+                >
+                  <use
+                    xlink:href="#svg-bem"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  BEM
+                </strong>
+                Since 2013
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(204, 204, 204);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-bootstrap"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Bootstrap
+                </strong>
+                Since 2012
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(18, 40, 88);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-css"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  CSS3
+                </strong>
+                Since 2010
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(125, 125, 125);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-chartjs"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Chart JS
+                </strong>
+                Since 2014
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(221, 221, 221);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-circleci"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Circle CI
+                </strong>
+                Since 2019
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(151, 218, 168);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="29"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-cordova"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Cordova
+                </strong>
+                Since 2014
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-confluence"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Confluence
+                </strong>
+                Since 2017
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(73, 73, 76);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-cypress"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Cypress
+                </strong>
+                Since 2021
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(90, 65, 38);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-d3"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  D3
+                </strong>
+                Since 2012
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-deno"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Deno
+                </strong>
+                Since 2020
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="27"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-eslint"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  ESLint
+                </strong>
+                Since 2016
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="25"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-expressjs"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Express JS
+                </strong>
+                Since 2017
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="25"
+                >
+                  <use
+                    xlink:href="#svg-firebase"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Firebase
+                </strong>
+                Since 2018
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(20, 30, 31);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="32"
+                  width="22"
+                >
+                  <use
+                    xlink:href="#svg-foundation"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Foundation
+                </strong>
+                Since 2013
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(102, 51, 153);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-gatsby"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Gatsby
+                </strong>
+                Since 2019
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(249, 215, 215);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-git"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  GIT
+                </strong>
+                Since 2011
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="29"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-github"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Github Actions
+                </strong>
+                Since 2020
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-gitlab-logo"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Gitlab CI/CD
+                </strong>
+                Since 2017
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(243, 147, 65);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-grunt"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Grunt
+                </strong>
+                Since 2013
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(7, 38, 123);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="40"
+                  width="40"
+                >
+                  <use
+                    xlink:href="#svg-gulp"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Gulp
+                </strong>
+                Since 2013
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(82, 38, 12);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-html"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  HTML5
+                </strong>
+                Since 2010
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(58, 58, 79);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="29"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-highcharts"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Highcharts
+                </strong>
+                Since 2016
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-ionic"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Ionic
+                </strong>
+                Since 2014
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(240, 219, 79);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-javascript"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  JavaScript
+                </strong>
+                Since 2011
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-jest"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Jest
+                </strong>
+                Since 2017
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-jira"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Jira
+                </strong>
+                Since 2017
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(204, 204, 204);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="28"
+                >
+                  <use
+                    xlink:href="#svg-json"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  JSON
+                </strong>
+                Since 2013
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(123, 223, 253);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-jquery"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  jQuery
+                </strong>
+                Since 2011
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(182, 236, 236);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-less"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  LESS
+                </strong>
+                Since 2012
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="20"
+                  width="32"
+                >
+                  <use
+                    xlink:href="#svg-markdown"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Markdown
+                </strong>
+                Since 2014
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(51, 255, 170);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="26"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-mjml"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  MJML
+                </strong>
+                Since 2019
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(53, 49, 52);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="24"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-azure"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Microsoft Azure
+                </strong>
+                Since 2019
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(141, 103, 72);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="26"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-mocha"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Mocha
+                </strong>
+                Since 2021
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(29, 64, 2);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-nodejs"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Node JS
+                </strong>
+                Since 2016
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(125, 125, 125);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-parcel"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Parcel Bundler
+                </strong>
+                Since 2019
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(246, 201, 251);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-php"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  PHP
+                </strong>
+                Since 2013
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(51, 51, 51);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-photoshop"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Photoshop
+                </strong>
+                Since 2010
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(176, 241, 220);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-postcss"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  PostCSS
+                </strong>
+                Since 2014
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-react"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  React
+                </strong>
+                Since 2016
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(34, 34, 34);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-redux"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Redux
+                </strong>
+                Since 2016
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(156, 59, 45);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="19"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-redux-saga"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Redux Saga
+                </strong>
+                Since 2018
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(247, 247, 247);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-rollup"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Rollup
+                </strong>
+                Since 2018
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(250, 244, 207);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-sass"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  SASS
+                </strong>
+                Since 2012
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 177, 59);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-svg"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  SVG
+                </strong>
+                Since 2011
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(43, 19, 6);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="22"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-svn"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  SVN
+                </strong>
+                Since 2010
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(41, 18, 18);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-sketch"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Sketch
+                </strong>
+                Since 2017
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(170, 170, 170);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-styled-components"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Styled Components
+                </strong>
+                Since 2018
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(77, 77, 78);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-sublime-text"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Sublime Text
+                </strong>
+                Since 2010
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(221, 238, 238);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-travisci"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Travis CI
+                </strong>
+                Since 2017
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(0, 122, 204);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-typescript"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Typescript
+                </strong>
+                Since 2017
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(0, 0, 0);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="26"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-vercel"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Vercel
+                </strong>
+                Since 2019
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-vscode"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Visual Studio Code
+                </strong>
+                Since 2017
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(74, 92, 113);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="26"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-vue"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Vue
+                </strong>
+                Since 2016
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(13, 39, 72);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-webpack"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Webpack
+                </strong>
+                Since 2015
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(17, 17, 17);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="30"
+                  width="30"
+                >
+                  <use
+                    xlink:href="#svg-wordpress"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  WordPress
+                </strong>
+                Since 2013
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="c-section__actions"
         >
-          <Icon
-            className="c-skill__icon"
-            height={18}
-            name="svg-aws"
-            width={30}
+          <button
+            class="c-btn "
+            type="button"
+          >
+            Get in touch
+          </button>
+          <ul
+            class="c-section__actions-list"
+          >
+            <li>
+              <button
+                class="c-btn c-section__actions-close"
+                type="button"
+              >
+                Close
+              </button>
+            </li>
+            <li>
+              <button
+                class="c-btn "
+                type="button"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-email"
+                  />
+                </svg>
+                <span>
+                  Contact me
+                </span>
+                <strong>
+                  directly
+                </strong>
+              </button>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://app.usebraintrust.com/talent/782/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-braintrust"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Braintrust
+                </strong>
+              </a>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://www.toptal.com/resume/atanas-atanasov"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-toptal"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Toptal
+                </strong>
+              </a>
+            </li>
+          </ul>
+          <br
+            class="visible-xs-block"
           />
-        </figure>
-        <p>
-          <strong>
-            Amazon Web Services
-          </strong>
-          Since 
-          2019
-        </p>
+          <button
+            class="c-btn "
+          >
+            Static mode
+          </button>
+        </div>
       </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="4"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#222",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={12}
-            name="svg-babel"
-            width={31}
-          />
-        </figure>
-        <p>
-          <strong>
-            Babel
-          </strong>
-          Since 
-          2015
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="5"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-babylonjs"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            BabylonJS
-          </strong>
-          Since 
-          2018
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="6"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#bdc9ec",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-backbone"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            BackboneJS
-          </strong>
-          Since 
-          2013
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="7"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#48992a",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-bash"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Bash
-          </strong>
-          Since 
-          2015
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="8"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#000",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={24}
-            name="svg-bem"
-            width={29}
-          />
-        </figure>
-        <p>
-          <strong>
-            BEM
-          </strong>
-          Since 
-          2013
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="9"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#ccc",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-bootstrap"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Bootstrap
-          </strong>
-          Since 
-          2012
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="10"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#122858",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-css"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            CSS3
-          </strong>
-          Since 
-          2010
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="11"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#7d7d7d",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-chartjs"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Chart JS
-          </strong>
-          Since 
-          2014
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="12"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#ddd",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-circleci"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Circle CI
-          </strong>
-          Since 
-          2019
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="13"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#97daa8",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={29}
-            name="svg-cordova"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Cordova
-          </strong>
-          Since 
-          2014
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="14"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-confluence"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Confluence
-          </strong>
-          Since 
-          2017
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="15"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#49494C",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-cypress"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Cypress
-          </strong>
-          Since 
-          2021
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="16"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#5a4126",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-d3"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            D3
-          </strong>
-          Since 
-          2012
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="17"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-deno"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Deno
-          </strong>
-          Since 
-          2020
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="18"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={27}
-            name="svg-eslint"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            ESLint
-          </strong>
-          Since 
-          2016
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="19"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={25}
-            name="svg-expressjs"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Express JS
-          </strong>
-          Since 
-          2017
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="20"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-firebase"
-            width={25}
-          />
-        </figure>
-        <p>
-          <strong>
-            Firebase
-          </strong>
-          Since 
-          2018
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="21"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#141e1f",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={32}
-            name="svg-foundation"
-            width={22}
-          />
-        </figure>
-        <p>
-          <strong>
-            Foundation
-          </strong>
-          Since 
-          2013
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="22"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#663399",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-gatsby"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Gatsby
-          </strong>
-          Since 
-          2019
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="23"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#f9d7d7",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-git"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            GIT
-          </strong>
-          Since 
-          2011
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="24"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={29}
-            name="svg-github"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Github Actions
-          </strong>
-          Since 
-          2020
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="25"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-gitlab-logo"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Gitlab CI/CD
-          </strong>
-          Since 
-          2017
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="26"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#f39341",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-grunt"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Grunt
-          </strong>
-          Since 
-          2013
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="27"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#07267b",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={40}
-            name="svg-gulp"
-            width={40}
-          />
-        </figure>
-        <p>
-          <strong>
-            Gulp
-          </strong>
-          Since 
-          2013
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="28"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#52260c",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-html"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            HTML5
-          </strong>
-          Since 
-          2010
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="29"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#3a3a4f",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={29}
-            name="svg-highcharts"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Highcharts
-          </strong>
-          Since 
-          2016
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="30"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-ionic"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Ionic
-          </strong>
-          Since 
-          2014
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="31"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#f0db4f",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-javascript"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            JavaScript
-          </strong>
-          Since 
-          2011
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="32"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-jest"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Jest
-          </strong>
-          Since 
-          2017
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="33"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-jira"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Jira
-          </strong>
-          Since 
-          2017
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="34"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#ccc",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-json"
-            width={28}
-          />
-        </figure>
-        <p>
-          <strong>
-            JSON
-          </strong>
-          Since 
-          2013
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="35"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#7bdffd",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-jquery"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            jQuery
-          </strong>
-          Since 
-          2011
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="36"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#b6ecec",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-less"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            LESS
-          </strong>
-          Since 
-          2012
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="37"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={20}
-            name="svg-markdown"
-            width={32}
-          />
-        </figure>
-        <p>
-          <strong>
-            Markdown
-          </strong>
-          Since 
-          2014
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="38"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#3fa",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={26}
-            name="svg-mjml"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            MJML
-          </strong>
-          Since 
-          2019
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="39"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#353134",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={24}
-            name="svg-azure"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Microsoft Azure
-          </strong>
-          Since 
-          2019
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="40"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#8D6748",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={26}
-            name="svg-mocha"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Mocha
-          </strong>
-          Since 
-          2021
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="41"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#1d4002",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-nodejs"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Node JS
-          </strong>
-          Since 
-          2016
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="42"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#7d7d7d",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-parcel"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Parcel Bundler
-          </strong>
-          Since 
-          2019
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="43"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#f6c9fb",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-php"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            PHP
-          </strong>
-          Since 
-          2013
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="44"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#333",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-photoshop"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Photoshop
-          </strong>
-          Since 
-          2010
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="45"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#b0f1dc",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-postcss"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            PostCSS
-          </strong>
-          Since 
-          2014
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="46"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-react"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            React
-          </strong>
-          Since 
-          2016
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="47"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#222",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-redux"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Redux
-          </strong>
-          Since 
-          2016
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="48"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#9c3b2d",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={19}
-            name="svg-redux-saga"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Redux Saga
-          </strong>
-          Since 
-          2018
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="49"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#f7f7f7",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-rollup"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Rollup
-          </strong>
-          Since 
-          2018
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="50"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#faf4cf",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-sass"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            SASS
-          </strong>
-          Since 
-          2012
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="51"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#ffb13b",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-svg"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            SVG
-          </strong>
-          Since 
-          2011
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="52"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#2b1306",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={22}
-            name="svg-svn"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            SVN
-          </strong>
-          Since 
-          2010
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="53"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#291212",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-sketch"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Sketch
-          </strong>
-          Since 
-          2017
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="54"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#aaa",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-styled-components"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Styled Components
-          </strong>
-          Since 
-          2018
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="55"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#4d4d4e",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-sublime-text"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Sublime Text
-          </strong>
-          Since 
-          2010
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="56"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#dee",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-travisci"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Travis CI
-          </strong>
-          Since 
-          2017
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="57"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#007ACC",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-typescript"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Typescript
-          </strong>
-          Since 
-          2017
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="58"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#000",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={26}
-            name="svg-vercel"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Vercel
-          </strong>
-          Since 
-          2019
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="59"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-vscode"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Visual Studio Code
-          </strong>
-          Since 
-          2017
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="60"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#4a5c71",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={26}
-            name="svg-vue"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Vue
-          </strong>
-          Since 
-          2016
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="61"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#0d2748",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-webpack"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            Webpack
-          </strong>
-          Since 
-          2015
-        </p>
-      </div>
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6 md-4 lg-3"
-      key="62"
-    >
-      <div
-        className="c-skill"
-      >
-        <figure
-          style={
-            Object {
-              "backgroundColor": "#111",
-            }
-          }
-        >
-          <Icon
-            className="c-skill__icon"
-            height={30}
-            name="svg-wordpress"
-            width={30}
-          />
-        </figure>
-        <p>
-          <strong>
-            WordPress
-          </strong>
-          Since 
-          2013
-        </p>
-      </div>
-    </div>
-  </div>
-</Section>
+    </section>
+  </main>
+</DocumentFragment>
 `;

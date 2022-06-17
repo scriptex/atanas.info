@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { mount, shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { ScrollToTop } from '.';
 
@@ -19,14 +19,8 @@ beforeEach(() => {
 
 describe('ScrollToTop component', () => {
 	it('Should render the ScrollToTop component', () => {
-		const wrapper = shallow(<ScrollToTop />);
+		const { asFragment } = render(<ScrollToTop />);
 
-		expect(wrapper).toMatchSnapshot();
-	});
-
-	it('Should run the effects', () => {
-		const wrapper = mount(<ScrollToTop />);
-
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 });

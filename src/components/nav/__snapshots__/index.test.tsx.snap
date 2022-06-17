@@ -1,348 +1,162 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Nav component Should render the Nav component 1`] = `
-<nav
-  className="c-nav"
->
-  <NavInner>
-    <ul>
-      <li
-        key="0"
-      >
-        <NavLink
-          className={[Function]}
-          title="Back to homepage"
-          to="/"
-        >
-          Home
-        </NavLink>
-      </li>
-      <li
-        key="1"
-      >
-        <NavLink
-          className={[Function]}
-          title="About me"
-          to="/about"
-        >
-          About
-        </NavLink>
-      </li>
-      <li
-        key="2"
-      >
-        <NavLink
-          className={[Function]}
-          title="Life events"
-          to="/timeline"
-        >
-          Timeline
-        </NavLink>
-      </li>
-      <li
-        key="3"
-      >
-        <NavLink
-          className={[Function]}
-          title="My skills"
-          to="/skills"
-        >
-          Skills
-        </NavLink>
-      </li>
-      <li
-        key="4"
-      >
-        <NavLink
-          className={[Function]}
-          title="My portfolio"
-          to="/portfolio"
-        >
-          Portfolio
-        </NavLink>
-      </li>
-      <li
-        key="5"
-      >
-        <NavLink
-          className={[Function]}
-          title="My stats"
-          to="/stats"
-        >
-          Stats
-        </NavLink>
-      </li>
-      <li
-        key="6"
-      >
-        <NavLink
-          className={[Function]}
-          title="My presentations"
-          to="/slides"
-        >
-          Slides
-        </NavLink>
-      </li>
-      <li
-        key="7"
-      >
-        <NavLink
-          className={[Function]}
-          title="My video presentations"
-          to="/videos"
-        >
-          Videos
-        </NavLink>
-      </li>
-      <li
-        key="8"
-      >
-        <NavLink
-          className={[Function]}
-          title="My published articles"
-          to="/articles"
-        >
-          Articles
-        </NavLink>
-      </li>
-      <li
-        key="9"
-      >
-        <NavLink
-          className={[Function]}
-          title="My certificates"
-          to="/certificates"
-        >
-          Certificates
-        </NavLink>
-      </li>
-      <li
-        key="10"
-      >
-        <NavLink
-          className={[Function]}
-          title="Social widgets"
-          to="/social"
-        >
-          Social
-        </NavLink>
-      </li>
-      <li
-        key="11"
-      >
-        <NavLink
-          className={[Function]}
-          title="My blog"
-          to="/blog"
-        >
-          Blog
-        </NavLink>
-      </li>
-      <li
-        key="12"
-      >
-        <NavLink
-          className={[Function]}
-          title="My resume"
-          to="/resume"
-        >
-          Resume
-        </NavLink>
-      </li>
-      <li
-        key="13"
-      >
-        <NavLink
-          className={[Function]}
-          title="My interactive resume"
-          to="/interactive-resume"
-        >
-          Interactive resume
-        </NavLink>
-      </li>
-      <li
-        key="14"
-      >
-        <a
-          href="/projects"
-          rel="noopener noreferrer"
-          target="_blank"
-          title="My open source projects"
-        >
-          Open source
-        </a>
-      </li>
-      <li
-        key="15"
-      >
-        <NavLink
-          className={[Function]}
-          title="My music"
-          to="/music"
-        >
-          Music
-        </NavLink>
-      </li>
-    </ul>
-  </NavInner>
-</nav>
-`;
-
-exports[`Nav component Should render the Nav component with props 1`] = `
-<nav
-  class="c-nav c-nav--test"
->
-  <div
-    class="o-shell"
+<DocumentFragment>
+  <nav
+    class="c-nav c-nav--test"
   >
-    <ul>
-      <li>
-        <a
-          aria-current="page"
-          class="active"
-          href="/"
-          title="Back to homepage"
-        >
-          Home
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="/about"
-          title="About me"
-        >
-          About
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="/timeline"
-          title="Life events"
-        >
-          Timeline
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="/skills"
-          title="My skills"
-        >
-          Skills
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="/portfolio"
-          title="My portfolio"
-        >
-          Portfolio
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="/stats"
-          title="My stats"
-        >
-          Stats
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="/slides"
-          title="My presentations"
-        >
-          Slides
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="/videos"
-          title="My video presentations"
-        >
-          Videos
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="/articles"
-          title="My published articles"
-        >
-          Articles
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="/certificates"
-          title="My certificates"
-        >
-          Certificates
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="/social"
-          title="Social widgets"
-        >
-          Social
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="/blog"
-          title="My blog"
-        >
-          Blog
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="/resume"
-          title="My resume"
-        >
-          Resume
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="/interactive-resume"
-          title="My interactive resume"
-        >
-          Interactive resume
-        </a>
-      </li>
-      <li>
-        <a
-          href="/projects"
-          rel="noopener noreferrer"
-          target="_blank"
-          title="My open source projects"
-        >
-          Open source
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="/music"
-          title="My music"
-        >
-          Music
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
+    <div
+      class="o-shell"
+    >
+      <ul>
+        <li>
+          <a
+            aria-current="page"
+            class="active"
+            href="/"
+            title="Back to homepage"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/about"
+            title="About me"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/timeline"
+            title="Life events"
+          >
+            Timeline
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/skills"
+            title="My skills"
+          >
+            Skills
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/portfolio"
+            title="My portfolio"
+          >
+            Portfolio
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/stats"
+            title="My stats"
+          >
+            Stats
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/slides"
+            title="My presentations"
+          >
+            Slides
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/videos"
+            title="My video presentations"
+          >
+            Videos
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/articles"
+            title="My published articles"
+          >
+            Articles
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/certificates"
+            title="My certificates"
+          >
+            Certificates
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/social"
+            title="Social widgets"
+          >
+            Social
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/blog"
+            title="My blog"
+          >
+            Blog
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/resume"
+            title="My resume"
+          >
+            Resume
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/interactive-resume"
+            title="My interactive resume"
+          >
+            Interactive resume
+          </a>
+        </li>
+        <li>
+          <a
+            href="/projects"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="My open source projects"
+          >
+            Open source
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/music"
+            title="My music"
+          >
+            Music
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</DocumentFragment>
 `;

@@ -1,67 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionNav component Should render the SectionNav component 1`] = `
-<nav
-  className="c-section__nav"
->
-  <ul>
-    <li
-      className="current"
-      key="0"
-    >
-      <Button
-        aria-label="Switch to Title 1"
-        onClick={[Function]}
-        type="button"
+<DocumentFragment>
+  <nav
+    class="c-section__nav"
+  >
+    <ul>
+      <li
+        class="current"
       >
-        Title 1
-      </Button>
-    </li>
-    <li
-      className=""
-      key="1"
-    >
-      <Button
-        aria-label="Switch to Title 2"
-        onClick={[Function]}
-        type="button"
+        <button
+          aria-label="Switch to Title 1"
+          class="c-btn "
+          type="button"
+        >
+          Title 1
+        </button>
+      </li>
+      <li
+        class=""
       >
-        Title 2
-      </Button>
-    </li>
-  </ul>
-</nav>
+        <button
+          aria-label="Switch to Title 2"
+          class="c-btn "
+          type="button"
+        >
+          Title 2
+        </button>
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
 `;
 
 exports[`SectionNav component Should render the SectionNav component 2`] = `
-<nav
-  className="c-section__nav"
->
-  <ul>
-    <li
-      className="current"
-      key="0"
-    >
-      <Button
-        aria-label="Switch to Title 1"
-        onClick={[Function]}
-        type="button"
+<DocumentFragment>
+  <nav
+    class="c-section__nav"
+  >
+    <ul>
+      <li
+        class="current"
       >
-        Title 1
-      </Button>
-    </li>
-    <li
-      className=""
-      key="1"
-    >
-      <Button
-        aria-label="Switch to Title 2"
-        onClick={[Function]}
-        type="button"
+        <button
+          aria-label="Switch to Title 1"
+          class="c-btn "
+          type="button"
+        >
+          Title 1
+        </button>
+      </li>
+      <li
+        class=""
       >
-        Title 2
-      </Button>
-    </li>
-  </ul>
-</nav>
+        <button
+          aria-label="Switch to Title 2"
+          class="c-btn "
+          type="button"
+        >
+          Title 2
+        </button>
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
 `;

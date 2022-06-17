@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { Footer } from '.';
 import * as stats from '../section-stats';
@@ -12,8 +12,8 @@ stats.formatDate.mockImplementation(() => 'Mock date');
 
 describe('Footer component', () => {
 	it('Should render the Footer component', () => {
-		const wrapper = shallow(<Footer />);
+		const { asFragment } = render(<Footer />);
 
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 });

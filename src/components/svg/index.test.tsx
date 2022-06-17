@@ -1,18 +1,16 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { Svg } from '.';
 
 describe('Svg component', () => {
 	it('Should render the Svg component', () => {
-		const wrapper = shallow(<Svg src="test" className="test" />);
+		const { asFragment, rerender } = render(<Svg src="test" className="test" />);
 
-		expect(wrapper).toMatchSnapshot();
-	});
+		expect(asFragment()).toMatchSnapshot();
 
-	it('Should render the Svg component without an additional className', () => {
-		const wrapper = shallow(<Svg src="test" />);
+		rerender(<Svg src="test" />);
 
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 });

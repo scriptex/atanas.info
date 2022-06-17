@@ -1,21 +1,19 @@
 import * as React from 'react';
-import { render, shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import * as utils from '../../scripts/shared';
 import { SectionArticles } from '.';
 
 describe('SectionArticles component', () => {
 	it('Should render the SectionArticles component', () => {
-		const wrapper = shallow(<SectionArticles />);
+		const { rerender, asFragment } = render(<SectionArticles />);
 
-		expect(wrapper).toMatchSnapshot();
-	});
+		expect(asFragment()).toMatchSnapshot();
 
-	it('Should render the SectionArticles component while prerendering', () => {
 		Object.defineProperty(utils, 'isPrerendering', { value: true });
 
-		const wrapper = render(<SectionArticles />);
+		rerender(<SectionArticles />);
 
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 });

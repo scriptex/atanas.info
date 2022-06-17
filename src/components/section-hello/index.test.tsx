@@ -1,24 +1,18 @@
 import * as React from 'react';
-import { mount, shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { mockUseEffect } from '../../scripts/shared';
 import { Slider, SectionHello } from '.';
 
 describe('Slider component', () => {
 	it('Should render the Slider component', () => {
-		const wrapper = shallow(<Slider />);
+		const { asFragment, unmount } = render(<Slider />);
 
-		expect(wrapper).toMatchSnapshot();
-	});
+		expect(asFragment()).toMatchSnapshot();
 
-	it('Should handle lifecycle methods', () => {
-		const wrapper = mount(<Slider />);
+		unmount();
 
-		expect(wrapper).toMatchSnapshot();
-
-		wrapper.unmount();
-
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 });
 
@@ -26,18 +20,12 @@ describe('SectionHello component', () => {
 	mockUseEffect();
 
 	it('Should render the SectionHello component', () => {
-		const wrapper = shallow(<SectionHello />);
+		const { asFragment, unmount } = render(<SectionHello />);
 
-		expect(wrapper).toMatchSnapshot();
-	});
+		expect(asFragment()).toMatchSnapshot();
 
-	it('Should handle lifecycle methods', () => {
-		const wrapper = mount(<SectionHello />);
+		unmount();
 
-		expect(wrapper).toMatchSnapshot();
-
-		wrapper.unmount();
-
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 });

@@ -1,210 +1,321 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionSlides component Should render the SectionSlides component 1`] = `
-<Section
-  className=" fullsize-background"
-  hasButton={true}
-  hasShell={true}
-  id="slides"
-  style={
-    Object {
-      "backgroundImage": "url(images/temp/presentation.jpg)",
-    }
-  }
->
-  <h2>
-    Slides
-  </h2>
-  <SectionNav
-    active={0}
-    data={
-      Array [
-        Object {
-          "description": "Presentation about the EcmaScript language history and features",
-          "title": "EcmaScript Features",
-          "url": "https://docs.google.com/presentation/d/e/2PACX-1vSA8qN0_3lb0YWDYJheJ3q0AAsXWlLLpP86pnmV0KWfPo_2G-SSdSK--GVRyJbwT8_kWyJ0TZxFoaH8",
-        },
-        Object {
-          "description": "Presentation about improving workflow using Sublime Text editor",
-          "title": "Do more with Sublime Text",
-          "url": "https://docs.google.com/presentation/d/e/2PACX-1vTivcVmPyjYPdWgoJMChe_rrVyZEIw4ZgF37lCOlxUUm7DchxhMJouEV_BcrH6LDL8kiNmRSIWkiSxK",
-        },
-      ]
-    }
-    name="title"
-    onClick={[Function]}
-  />
-  <div
-    className="c-section__body"
+<DocumentFragment>
+  <main
+    class="o-main "
   >
-    <div
-      className="c-section__frame current"
-      key="0"
+    <section
+      class="c-section c-section--slides fullsize-background"
+      id="slides"
+      style="background-image: url(images/temp/presentation.jpg);"
     >
-      <Loader />
-      <iframe
-        allowFullScreen={true}
-        loading="lazy"
-        src="https://docs.google.com/presentation/d/e/2PACX-1vSA8qN0_3lb0YWDYJheJ3q0AAsXWlLLpP86pnmV0KWfPo_2G-SSdSK--GVRyJbwT8_kWyJ0TZxFoaH8/embed?start=false&loop=false&delayms=3000"
-        title="Presentation about the EcmaScript language history and features"
-      />
-    </div>
-    <div
-      className="c-section__frame"
-      key="1"
-    >
-      <Loader />
-      <iframe
-        allowFullScreen={true}
-        loading="lazy"
-        src="https://docs.google.com/presentation/d/e/2PACX-1vTivcVmPyjYPdWgoJMChe_rrVyZEIw4ZgF37lCOlxUUm7DchxhMJouEV_BcrH6LDL8kiNmRSIWkiSxK/embed?start=false&loop=false&delayms=3000"
-        title="Presentation about improving workflow using Sublime Text editor"
-      />
-    </div>
-  </div>
-</Section>
+      <div
+        class="o-shell"
+      >
+        <h2>
+          Slides
+        </h2>
+        <nav
+          class="c-section__nav"
+        >
+          <ul>
+            <li
+              class="current"
+            >
+              <button
+                aria-label="Switch to EcmaScript Features"
+                class="c-btn "
+                type="button"
+              >
+                EcmaScript Features
+              </button>
+            </li>
+            <li
+              class=""
+            >
+              <button
+                aria-label="Switch to Do more with Sublime Text"
+                class="c-btn "
+                type="button"
+              >
+                Do more with Sublime Text
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <div
+          class="c-section__body"
+        >
+          <div
+            class="c-section__frame current"
+          >
+            <div
+              class="c-loading"
+            >
+              <div
+                class="c-loader"
+              />
+            </div>
+            <iframe
+              allowfullscreen=""
+              loading="lazy"
+              src="https://docs.google.com/presentation/d/e/2PACX-1vSA8qN0_3lb0YWDYJheJ3q0AAsXWlLLpP86pnmV0KWfPo_2G-SSdSK--GVRyJbwT8_kWyJ0TZxFoaH8/embed?start=false&loop=false&delayms=3000"
+              title="Presentation about the EcmaScript language history and features"
+            />
+          </div>
+          <div
+            class="c-section__frame"
+          >
+            <div
+              class="c-loading"
+            >
+              <div
+                class="c-loader"
+              />
+            </div>
+            <iframe
+              allowfullscreen=""
+              loading="lazy"
+              src="https://docs.google.com/presentation/d/e/2PACX-1vTivcVmPyjYPdWgoJMChe_rrVyZEIw4ZgF37lCOlxUUm7DchxhMJouEV_BcrH6LDL8kiNmRSIWkiSxK/embed?start=false&loop=false&delayms=3000"
+              title="Presentation about improving workflow using Sublime Text editor"
+            />
+          </div>
+        </div>
+        <div
+          class="c-section__actions"
+        >
+          <button
+            class="c-btn "
+            type="button"
+          >
+            Get in touch
+          </button>
+          <ul
+            class="c-section__actions-list"
+          >
+            <li>
+              <button
+                class="c-btn c-section__actions-close"
+                type="button"
+              >
+                Close
+              </button>
+            </li>
+            <li>
+              <button
+                class="c-btn "
+                type="button"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-email"
+                  />
+                </svg>
+                <span>
+                  Contact me
+                </span>
+                <strong>
+                  directly
+                </strong>
+              </button>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://app.usebraintrust.com/talent/782/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-braintrust"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Braintrust
+                </strong>
+              </a>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://www.toptal.com/resume/atanas-atanasov"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-toptal"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Toptal
+                </strong>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
 `;
 
-exports[`SectionSlides component Should render the SectionSlides component while prerendering 1`] = `
-<main
-  class="o-main "
->
-  <section
-    class="c-section c-section--slides fullsize-background"
-    id="slides"
-    style="background-image:url(images/temp/presentation.jpg)"
+exports[`SectionSlides component Should render the SectionSlides component 2`] = `
+<DocumentFragment>
+  <main
+    class="o-main "
   >
-    <div
-      class="o-shell"
+    <section
+      class="c-section c-section--slides fullsize-background"
+      id="slides"
+      style="background-image: url(images/temp/presentation.jpg);"
     >
-      <h2>
-        Slides
-      </h2>
-      <nav
-        class="c-section__nav"
-      >
-        <ul>
-          <li
-            class="current"
-          >
-            <button
-              aria-label="Switch to EcmaScript Features"
-              class="c-btn "
-              type="button"
-            >
-              EcmaScript Features
-            </button>
-          </li>
-          <li
-            class=""
-          >
-            <button
-              aria-label="Switch to Do more with Sublime Text"
-              class="c-btn "
-              type="button"
-            >
-              Do more with Sublime Text
-            </button>
-          </li>
-        </ul>
-      </nav>
       <div
-        class="c-section__body"
+        class="o-shell"
       >
-        <div
-          class="c-section__frame current"
-        />
-        <div
-          class="c-section__frame"
-        />
-      </div>
-      <div
-        class="c-section__actions"
-      >
-        <button
-          class="c-btn "
-          type="button"
+        <h2>
+          Slides
+        </h2>
+        <nav
+          class="c-section__nav"
         >
-          Get in touch
-        </button>
-        <ul
-          class="c-section__actions-list"
+          <ul>
+            <li
+              class="current"
+            >
+              <button
+                aria-label="Switch to EcmaScript Features"
+                class="c-btn "
+                type="button"
+              >
+                EcmaScript Features
+              </button>
+            </li>
+            <li
+              class=""
+            >
+              <button
+                aria-label="Switch to Do more with Sublime Text"
+                class="c-btn "
+                type="button"
+              >
+                Do more with Sublime Text
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <div
+          class="c-section__body"
         >
-          <li>
-            <button
-              class="c-btn c-section__actions-close"
-              type="button"
-            >
-              Close
-            </button>
-          </li>
-          <li>
-            <button
-              class="c-btn "
-              type="button"
-            >
-              <svg
-                class="c-section__actions-icon"
+          <div
+            class="c-section__frame current"
+          />
+          <div
+            class="c-section__frame"
+          />
+        </div>
+        <div
+          class="c-section__actions"
+        >
+          <button
+            class="c-btn "
+            type="button"
+          >
+            Get in touch
+          </button>
+          <ul
+            class="c-section__actions-list"
+          >
+            <li>
+              <button
+                class="c-btn c-section__actions-close"
+                type="button"
               >
-                <use
-                  href="#svg-email"
-                />
-              </svg>
-              <span>
-                Contact me
-              </span>
-              <strong>
-                directly
-              </strong>
-            </button>
-          </li>
-          <li>
-            <a
-              class="c-btn"
-              href="https://app.usebraintrust.com/talent/782/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <svg
-                class="c-section__actions-icon"
+                Close
+              </button>
+            </li>
+            <li>
+              <button
+                class="c-btn "
+                type="button"
               >
-                <use
-                  href="#svg-braintrust"
-                />
-              </svg>
-              <span>
-                Hire me on
-              </span>
-              <strong>
-                Braintrust
-              </strong>
-            </a>
-          </li>
-          <li>
-            <a
-              class="c-btn"
-              href="https://www.toptal.com/resume/atanas-atanasov"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <svg
-                class="c-section__actions-icon"
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-email"
+                  />
+                </svg>
+                <span>
+                  Contact me
+                </span>
+                <strong>
+                  directly
+                </strong>
+              </button>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://app.usebraintrust.com/talent/782/"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <use
-                  href="#svg-toptal"
-                />
-              </svg>
-              <span>
-                Hire me on
-              </span>
-              <strong>
-                Toptal
-              </strong>
-            </a>
-          </li>
-        </ul>
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-braintrust"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Braintrust
+                </strong>
+              </a>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://www.toptal.com/resume/atanas-atanasov"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-toptal"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Toptal
+                </strong>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
+</DocumentFragment>
 `;

@@ -1,15 +1,14 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
-import { Button } from '..';
 import { SectionNav } from '.';
 
 // codebeat:disable[ABC,LOC,BLOCK_NESTING]
 describe('SectionNav component', () => {
 	it('Should render the SectionNav component', () => {
-		const wrapper = shallow(
+		const { asFragment, container } = render(
 			<SectionNav
 				name="title"
 				data={[
@@ -29,12 +28,11 @@ describe('SectionNav component', () => {
 			/>
 		);
 
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 
-		// @ts-ignore
-		wrapper.find(Button).at(0).props().onClick();
+		container.querySelector<HTMLElement>('.c-btn')?.click();
 
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 });
 // codebeat:enable[ABC,LOC,BLOCK_NESTING]

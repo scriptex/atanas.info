@@ -1,11 +1,4 @@
-// @ts-nocheck
-const Enzyme = require('enzyme');
 const crypto = require('crypto');
-const Adapter = require('@wojtekmaj/enzyme-adapter-react-17');
-
-Enzyme.configure({
-	adapter: new Adapter()
-});
 
 // prettier-ignore
 window.matchMedia = window.matchMedia || (() => ({
@@ -15,8 +8,11 @@ window.matchMedia = window.matchMedia || (() => ({
 }));
 
 window.crypto = {
+	// @ts-ignore
 	getRandomValues: buffer => crypto.randomFillSync(buffer)
 };
+
+window.scrollTo = jest.fn();
 
 jest.mock('../src/components/github-skyline', () => jest.fn(() => 'Github Skyline'));
 
@@ -65,20 +61,40 @@ jest.mock('../src/scripts/skills.ts', () => ({
 	drawSkills: jest.fn()
 }));
 
-[
-	'@codersrank/summary',
-	'@codersrank/timeline',
-	'@codersrank/activity',
-	'@codersrank/education',
-	'@codersrank/portfolio',
-	'@codersrank/skills-chart',
-	'@codersrank/work-experience'
-].forEach(module => {
-	jest.mock(module, () => ({
-		__esModule: true,
-		default: class {}
-	}));
-});
+jest.mock('@codersrank/summary/codersrank-summary.min', () => ({
+	__esModule: true,
+	default: jest.fn()
+}));
+
+jest.mock('@codersrank/activity/codersrank-activity.min', () => ({
+	__esModule: true,
+	default: jest.fn()
+}));
+
+jest.mock('@codersrank/timeline/codersrank-timeline.min', () => ({
+	__esModule: true,
+	default: jest.fn()
+}));
+
+jest.mock('@codersrank/education/codersrank-education.min', () => ({
+	__esModule: true,
+	default: jest.fn()
+}));
+
+jest.mock('@codersrank/portfolio/codersrank-portfolio.min', () => ({
+	__esModule: true,
+	default: jest.fn()
+}));
+
+jest.mock('@codersrank/skills-chart/codersrank-skills-chart.min', () => ({
+	__esModule: true,
+	default: jest.fn()
+}));
+
+jest.mock('@codersrank/work-experience/codersrank-work-experience.min', () => ({
+	__esModule: true,
+	default: jest.fn()
+}));
 
 jest.mock('react-ts-github-calendar', () => ({
 	__esModule: true,

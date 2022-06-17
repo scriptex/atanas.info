@@ -1,110 +1,864 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component Should render the App component 1`] = `
-<BrowserRouter>
-  <ScrollToTop />
-  <Suspense
-    fallback={<Loader />}
+<DocumentFragment>
+  <header
+    class="c-header"
   >
-    <ContextProvider
-      value={
-        Object {
-          "contactVisible": false,
-          "setContactVisible": [Function],
-        }
-      }
+    <a
+      class="c-logo"
+      href="/"
+      title="Back to homepage"
     >
-      <Head />
-      <Svg
-        src="/sprite.svg"
+      <img
+        alt=""
+        src="/images/icons/logo-alt.svg"
       />
-      <Header />
-      <Contact />
-      <Routes>
-        <Route
-          element={<UNDEFINED />}
-          path="/"
+      <svg
+        class="c-svg-logo"
+      >
+        <use
+          xlink:href="#svg-logo"
         />
-        <Route
-          element={<UNDEFINED />}
-          path="/about"
+      </svg>
+    </a>
+    <button
+      aria-label="Toggle menu"
+      class="c-nav__toggle"
+      name="menu-toggle"
+    >
+      <span />
+      <span />
+      <span />
+    </button>
+    <nav
+      class="c-nav"
+    >
+      <ul>
+        <li>
+          <a
+            aria-current="page"
+            class="active"
+            href="/"
+            title="Back to homepage"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/about"
+            title="About me"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/timeline"
+            title="Life events"
+          >
+            Timeline
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/skills"
+            title="My skills"
+          >
+            Skills
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/portfolio"
+            title="My portfolio"
+          >
+            Portfolio
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/stats"
+            title="My stats"
+          >
+            Stats
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/slides"
+            title="My presentations"
+          >
+            Slides
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/videos"
+            title="My video presentations"
+          >
+            Videos
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/articles"
+            title="My published articles"
+          >
+            Articles
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/certificates"
+            title="My certificates"
+          >
+            Certificates
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/social"
+            title="Social widgets"
+          >
+            Social
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/blog"
+            title="My blog"
+          >
+            Blog
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/resume"
+            title="My resume"
+          >
+            Resume
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/interactive-resume"
+            title="My interactive resume"
+          >
+            Interactive resume
+          </a>
+        </li>
+        <li>
+          <a
+            href="/projects"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="My open source projects"
+          >
+            Open source
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/music"
+            title="My music"
+          >
+            Music
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <form
+    action="https://formspree.io/meqrwbvd"
+    class="c-contact"
+    method="POST"
+  >
+    <button
+      class="c-contact__close"
+      type="button"
+    >
+      Close
+    </button>
+    <div
+      class="c-contact__body"
+    >
+      <h2>
+        Send me your message
+      </h2>
+      <div
+        class="c-contact__field"
+      >
+        <label
+          for="email"
+        >
+          Email:
+        </label>
+        <input
+          id="email"
+          name="email"
+          required=""
+          type="email"
         />
-        <Route
-          element={<UNDEFINED />}
-          path="/timeline"
+      </div>
+      <div
+        class="c-contact__field"
+      >
+        <label
+          for="message"
+        >
+          Message:
+        </label>
+        <textarea
+          cols="30"
+          id="message"
+          name="message"
+          required=""
+          rows="10"
         />
-        <Route
-          element={<UNDEFINED />}
-          path="/skills"
+      </div>
+      <div
+        class="c-contact__actions"
+      >
+        <button
+          class="c-btn "
+          type="submit"
+        >
+          Send message
+        </button>
+      </div>
+    </div>
+  </form>
+  <main
+    class="o-main o-main--high"
+  >
+    <section
+      class="c-section c-section--hello"
+      id="hello"
+    >
+      <div
+        class="o-shell"
+      >
+        <div
+          class="c-canvas"
+          id="canvas"
         />
-        <Route
-          element={<UNDEFINED />}
-          path="/portfolio"
+        <div
+          class="c-slider"
+        >
+          <h1>
+            👋 Hello! 
+            <br />
+            I am Atanas Atanasov
+          </h1>
+          <h2>
+            <span
+              class="current"
+            >
+              lead front-end developer at E.ON
+            </span>
+            <span
+              class=""
+            >
+              senior software engineer at Toptal
+            </span>
+            <span
+              class=""
+            >
+              founding member at Braintrust
+            </span>
+            <span
+              class=""
+            >
+              a TypeScript fanatic
+            </span>
+            <span
+              class=""
+            >
+              a CSS wizard
+            </span>
+            <span
+              class=""
+            >
+              a JavaScript tinkerer
+            </span>
+            <span
+              class=""
+            >
+              a minimalist
+            </span>
+            <span
+              class=""
+            >
+              an open source enthusiast
+            </span>
+            <span
+              class=""
+            >
+              a maker of things
+            </span>
+            <span
+              class=""
+            >
+              an a11y and UX advocate
+            </span>
+            <span
+              class=""
+            >
+              a front-end magician
+            </span>
+            <span
+              class=""
+            >
+              a bug fixer
+            </span>
+            <span
+              class=""
+            >
+              a senior web developer
+            </span>
+            <span
+              class=""
+            >
+              I am into data visualization
+            </span>
+            <span
+              class=""
+            >
+              an UI architect
+            </span>
+            <span
+              class=""
+            >
+              I am obsessed with quality
+            </span>
+            <span
+              class=""
+            >
+              a web standards fanatic
+            </span>
+            <span
+              class=""
+            >
+              a JavaScript master
+            </span>
+            <span
+              class=""
+            >
+              a NodeJS hacker
+            </span>
+            <span
+              class=""
+            >
+              a father
+            </span>
+            <span
+              class=""
+            >
+              a husband
+            </span>
+          </h2>
+        </div>
+      </div>
+    </section>
+  </main>
+  <nav
+    class="c-nav c-nav--inline"
+  >
+    <div
+      class="o-shell"
+    >
+      <ul>
+        <li>
+          <a
+            aria-current="page"
+            class="active"
+            href="/"
+            title="Back to homepage"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/about"
+            title="About me"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/timeline"
+            title="Life events"
+          >
+            Timeline
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/skills"
+            title="My skills"
+          >
+            Skills
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/portfolio"
+            title="My portfolio"
+          >
+            Portfolio
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/stats"
+            title="My stats"
+          >
+            Stats
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/slides"
+            title="My presentations"
+          >
+            Slides
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/videos"
+            title="My video presentations"
+          >
+            Videos
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/articles"
+            title="My published articles"
+          >
+            Articles
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/certificates"
+            title="My certificates"
+          >
+            Certificates
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/social"
+            title="Social widgets"
+          >
+            Social
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/blog"
+            title="My blog"
+          >
+            Blog
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/resume"
+            title="My resume"
+          >
+            Resume
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/interactive-resume"
+            title="My interactive resume"
+          >
+            Interactive resume
+          </a>
+        </li>
+        <li>
+          <a
+            href="/projects"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="My open source projects"
+          >
+            Open source
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/music"
+            title="My music"
+          >
+            Music
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <footer
+    class="c-footer"
+  >
+    <div
+      class="o-shell o-shell--flex"
+    >
+      <p>
+        © 2022 Atanas Atanasov. 
+        <br
+          class="visible-xs-block"
         />
-        <Route
-          element={
-            <UNDEFINED
-              data={
-                Object {
-                  "github": undefined,
-                  "gitlab": undefined,
-                }
-              }
+        All rights reserved.
+      </p>
+      <social-links />
+    </div>
+    <div
+      class="o-shell text-center"
+    >
+      <small>
+        Designed and developed by Atanas Atanasov.
+      </small>
+      <small>
+        All code is licensed under 
+        <a
+          href="https://github.com/scriptex/atanas.info/blob/master/LICENSE"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          MIT license
+        </a>
+         and available 
+        <a
+          href="https://github.com/scriptex/atanas.info/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          on Github
+        </a>
+        .
+      </small>
+      <small>
+        Updated at 14 Jun 2022 08:42:49
+      </small>
+      <div
+        class="c-funding"
+      >
+        <button
+          class="c-btn c-btn--small"
+        >
+          Sponsor me
+        </button>
+        <div
+          class="c-funding__backdrop"
+        />
+        <svg
+          class="c-funding__knob"
+          viewBox="-100 -100 700 700"
+        >
+          <g>
+            <g
+              class="c-funding__item"
+              transform="matrix(1,0,0,1,0,0)"
+            >
+              <path
+                d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+                fill="none"
+              />
+              <a
+                href="https://github.com/sponsors/scriptex"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <text
+                  fill="var(--color-secondary)"
+                  font-size="1em"
+                  text-anchor="middle"
+                  transform="rotate(60 397.2243347167969 165)"
+                  x="398"
+                  y="200"
+                >
+                  Github
+                </text>
+                <use
+                  height="40"
+                  transform="rotate(60 397.2243347167969 165)"
+                  width="40"
+                  x="377.2243347167969"
+                  xlink:href="#svg-github"
+                  y="145"
+                />
+              </a>
+            </g>
+            <g
+              class="c-funding__item"
+              transform="matrix(0.5,-0.86602,0.86602,0.5,-91.5063509461097,341.5063509461096)"
+            >
+              <path
+                d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+                fill="none"
+              />
+              <a
+                href="https://www.patreon.com/atanas"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <text
+                  fill="var(--color-secondary)"
+                  font-size="1em"
+                  text-anchor="middle"
+                  transform="rotate(60 397.2243347167969 165)"
+                  x="398"
+                  y="200"
+                >
+                  Patreon
+                </text>
+                <use
+                  height="40"
+                  transform="rotate(60 397.2243347167969 165)"
+                  width="40"
+                  x="377.2243347167969"
+                  xlink:href="#svg-patreon"
+                  y="145"
+                />
+              </a>
+            </g>
+            <g
+              class="c-funding__item"
+              transform="matrix(-0.49999,-0.86602,0.86602,-0.49999,158.49364905389024,591.5063509461097)"
+            >
+              <path
+                d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+                fill="none"
+              />
+              <a
+                href="https://paypal.me/scriptex"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <text
+                  fill="var(--color-secondary)"
+                  font-size="1em"
+                  text-anchor="middle"
+                  transform="rotate(60 397.2243347167969 165)"
+                  x="398"
+                  y="200"
+                >
+                  PayPal
+                </text>
+                <use
+                  height="40"
+                  transform="rotate(60 397.2243347167969 165)"
+                  width="40"
+                  x="377.2243347167969"
+                  xlink:href="#svg-paypal"
+                  y="145"
+                />
+              </a>
+            </g>
+            <g
+              class="c-funding__item"
+              transform="matrix(-1,0,0,-1,500,500)"
+            >
+              <path
+                d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+                fill="none"
+              />
+              <a
+                href="https://ko-fi.com/scriptex"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <text
+                  fill="var(--color-secondary)"
+                  font-size="1em"
+                  text-anchor="middle"
+                  transform="rotate(60 397.2243347167969 165)"
+                  x="398"
+                  y="200"
+                >
+                  Ko-fi
+                </text>
+                <use
+                  height="40"
+                  transform="rotate(60 397.2243347167969 165)"
+                  width="40"
+                  x="377.2243347167969"
+                  xlink:href="#svg-ko-fi"
+                  y="145"
+                />
+              </a>
+            </g>
+            <g
+              class="c-funding__item"
+              transform="matrix(-0.5,0.86602,-0.86602,-0.5,591.5063509461097,158.49364905389052)"
+            >
+              <path
+                d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+                fill="none"
+              />
+              <a
+                href="https://liberapay.com/scriptex"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <text
+                  fill="var(--color-secondary)"
+                  font-size="1em"
+                  text-anchor="middle"
+                  transform="rotate(60 397.2243347167969 165)"
+                  x="398"
+                  y="200"
+                >
+                  Liberapay
+                </text>
+                <use
+                  height="40"
+                  transform="rotate(60 397.2243347167969 165)"
+                  width="40"
+                  x="377.2243347167969"
+                  xlink:href="#svg-liberapay"
+                  y="145"
+                />
+              </a>
+            </g>
+            <g
+              class="c-funding__item"
+              transform="matrix(0.5,0.86602,-0.86602,0.5,341.50635094610965,-91.50635094610965)"
+            >
+              <path
+                d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+                fill="none"
+              />
+              <a
+                href="https://issuehunt.io/u/scriptex"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <text
+                  fill="var(--color-secondary)"
+                  font-size="1em"
+                  text-anchor="middle"
+                  transform="rotate(60 397.2243347167969 165)"
+                  x="398"
+                  y="200"
+                >
+                  Issuehunt
+                </text>
+                <use
+                  height="40"
+                  transform="rotate(60 397.2243347167969 165)"
+                  width="40"
+                  x="377.2243347167969"
+                  xlink:href="#svg-issuehunt"
+                  y="145"
+                />
+              </a>
+            </g>
+          </g>
+          <g
+            class="c-funding__trigger"
+            role="button"
+          >
+            <circle
+              cx="250"
+              cy="250"
+              r="30"
             />
-          }
-          path="/stats"
-        />
-        <Route
-          element={<UNDEFINED />}
-          path="/slides"
-        />
-        <Route
-          element={<UNDEFINED />}
-          path="/videos"
-        />
-        <Route
-          element={<UNDEFINED />}
-          path="/articles"
-        />
-        <Route
-          element={<UNDEFINED />}
-          path="/certificates"
-        />
-        <Route
-          element={<UNDEFINED />}
-          path="/social"
-        />
-        <Route
-          element={<UNDEFINED />}
-          path="/blog"
-        />
-        <Route
-          element={<UNDEFINED />}
-          path="/blog/:slug"
-        />
-        <Route
-          element={<UNDEFINED />}
-          path="/resume"
-        />
-        <Route
-          element={<UNDEFINED />}
-          path="/interactive-resume"
-        />
-        <Route
-          element={<UNDEFINED />}
-          path="/music"
-        />
-        <Route
-          element={<UNDEFINED />}
-          path="*"
-        />
-      </Routes>
-      <Nav
-        className="c-nav--inline"
-        hasShell={true}
-      />
-      <Footer />
-    </ContextProvider>
-  </Suspense>
-</BrowserRouter>
+            <text
+              fill="var(--color-primary)"
+              font-size="2.5em"
+              text-anchor="middle"
+              x="250"
+              y="260"
+            >
+              +
+            </text>
+          </g>
+        </svg>
+        <div
+          class="c-funding__crypto c-funding__crypto--bitcoin"
+        >
+          <h6>
+            Donate Bitcoin
+          </h6>
+          <button
+            title="Donate Bitcoin"
+          >
+            <svg
+              class="c-funding__crypto-icon"
+            >
+              <use
+                xlink:href="#svg-bitcoin"
+              />
+            </svg>
+          </button>
+          <small>
+            <em>
+              Click to copy wallet address
+            </em>
+          </small>
+        </div>
+        <div
+          class="c-funding__crypto c-funding__crypto--shiba-inu"
+        >
+          <h6>
+            Donate Shiba Inu
+          </h6>
+          <button
+            title="Donate Shiba Inu"
+          >
+            <svg
+              class="c-funding__crypto-icon"
+            >
+              <use
+                xlink:href="#svg-shiba-inu"
+              />
+            </svg>
+          </button>
+          <small>
+            <em>
+              Click to copy wallet address
+            </em>
+          </small>
+        </div>
+      </div>
+    </div>
+  </footer>
+</DocumentFragment>
 `;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { render } from 'enzyme';
+import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import * as utils from '../../scripts/shared';
@@ -7,24 +7,22 @@ import { SectionBlog } from '.';
 
 describe('SectionBlog component', () => {
 	it('Should render the SectionBlog component', () => {
-		const wrapper = render(
+		const { asFragment, rerender } = render(
 			<Router>
 				<SectionBlog />
 			</Router>
 		);
 
-		expect(wrapper).toMatchSnapshot();
-	});
+		expect(asFragment()).toMatchSnapshot();
 
-	it('Should render the SectionBlog component while prerendering', () => {
 		Object.defineProperty(utils, 'isPrerendering', { value: true });
 
-		const wrapper = render(
+		rerender(
 			<Router>
 				<SectionBlog />
 			</Router>
 		);
 
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 });

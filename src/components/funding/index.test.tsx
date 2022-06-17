@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { act } from 'react-dom/test-utils';
-import { mount, render } from 'enzyme';
+import { render, waitFor } from '@testing-library/react';
 
 import { Funding, FundingCrypto } from '.';
 
@@ -9,41 +9,35 @@ beforeEach(() => {
 });
 
 describe('Funding component', () => {
-	it('Should render the Funding component', () => {
-		act(() => {
-			const wrapper = render(<Funding />);
+	it('Should render the Funding component', async () => {
+		const { asFragment, rerender, container } = await waitFor(() => render(<Funding />));
 
-			expect(wrapper).toMatchSnapshot();
-		});
-	});
-
-	it('Should properly handle state changes', () => {
-		act(() => {
-			const wrapper = mount(<Funding />);
-
-			wrapper.find('.c-btn').simulate('click');
-		});
+		expect(asFragment()).toMatchSnapshot();
 
 		act(() => {
-			const wrapper = mount(<Funding />);
-
-			wrapper.find('.c-funding__backdrop').simulate('click');
+			container.querySelector<HTMLElement>('.c-btn')?.click();
 		});
+
+		expect(asFragment()).toMatchSnapshot();
 
 		act(() => {
-			const wrapper = mount(<Funding />);
-
-			wrapper.find('.c-funding__trigger').simulate('click');
+			container.querySelector<HTMLElement>('.c-funding__backdrop')?.click();
 		});
-	});
-});
 
-describe('FundingCrypto component', () => {
-	it('Should render the Funding component', () => {
+		expect(asFragment()).toMatchSnapshot();
+
+		rerender(<FundingCrypto name="test" title="Test title" wallet="random-wallet-string" />);
+
 		act(() => {
-			const wrapper = mount(<FundingCrypto name="test" title="Test title" wallet="random-wallet-string" />);
-
-			wrapper.simulate('click');
+			container.querySelector<HTMLElement>('.c-funding__trigger')?.click();
 		});
+
+		expect(asFragment()).toMatchSnapshot();
+
+		rerender(<FundingCrypto name="test" title="Test title" wallet="random-wallet-string" />);
+
+		container.click();
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 });

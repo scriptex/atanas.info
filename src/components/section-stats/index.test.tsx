@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import * as stats from '.';
 import { mockUseEffect } from '../../scripts/shared';
@@ -127,9 +127,19 @@ jest.mock('../../data/npm-stats.json', () => ({
 	}
 }));
 
+jest.mock('../../scripts/gitlab-calendar', () => ({
+	__esModule: true,
+	default: class {}
+}));
+
+jest.mock('react-ts-github-calendar', () => ({
+	__esModule: true,
+	default: () => <div>Mocked Github Calendar</div>
+}));
+
 describe('SectionStats component', () => {
 	it('Should render the SectionStats component', () => {
-		const wrapper = shallow(
+		const { asFragment } = render(
 			<stats.SectionStats
 				data={{
 					github,
@@ -138,15 +148,15 @@ describe('SectionStats component', () => {
 			/>
 		);
 
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 });
 
 describe('GithubStats component', () => {
 	it('Should render the GithubStats component', () => {
-		const wrapper = shallow(<stats.GithubStats data={github} />);
+		const { asFragment } = render(<stats.GithubStats data={github} />);
 
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 });
 
@@ -154,8 +164,8 @@ describe('GitlabStats component', () => {
 	mockUseEffect();
 
 	it('Should render the GitlabStats component', () => {
-		const wrapper = shallow(<stats.GitlabStats data={gitlab} />);
+		const { asFragment } = render(<stats.GitlabStats data={gitlab} />);
 
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 });
