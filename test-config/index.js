@@ -14,19 +14,21 @@ window.crypto = {
 
 window.scrollTo = jest.fn();
 
-jest.mock('../src/components/github-skyline', () => jest.fn(() => 'Github Skyline'));
-
-jest.mock('gsap/Draggable', () => ({
-	__esModule: true,
-	default: {
-		create: jest.fn()
-	}
-}));
-
-jest.mock('simplex-noise', () => ({
+const defaultMock = () => ({
 	__esModule: true,
 	default: jest.fn()
-}));
+});
+
+jest.mock('../src/components/github-skyline', () => jest.fn(() => 'Github Skyline'));
+
+jest.mock('simplex-noise', defaultMock);
+jest.mock('@codersrank/summary/codersrank-summary.min', defaultMock);
+jest.mock('@codersrank/activity/codersrank-activity.min', defaultMock);
+jest.mock('@codersrank/timeline/codersrank-timeline.min', defaultMock);
+jest.mock('@codersrank/education/codersrank-education.min', defaultMock);
+jest.mock('@codersrank/portfolio/codersrank-portfolio.min', defaultMock);
+jest.mock('@codersrank/skills-chart/codersrank-skills-chart.min', defaultMock);
+jest.mock('@codersrank/work-experience/codersrank-work-experience.min', defaultMock);
 
 [
 	'react-syntax-highlighter/dist/esm/languages/hljs/javascript',
@@ -44,6 +46,13 @@ jest.mock('simplex-noise', () => ({
 	}));
 });
 
+jest.mock('gsap/Draggable', () => ({
+	__esModule: true,
+	default: {
+		create: jest.fn()
+	}
+}));
+
 jest.mock('react-syntax-highlighter/dist/esm/styles/prism', () =>
 	jest.fn(() => ({
 		dark: {}
@@ -59,41 +68,6 @@ jest.mock('../src/scripts/canvas', () => ({
 
 jest.mock('../src/scripts/skills.ts', () => ({
 	drawSkills: jest.fn()
-}));
-
-jest.mock('@codersrank/summary/codersrank-summary.min', () => ({
-	__esModule: true,
-	default: jest.fn()
-}));
-
-jest.mock('@codersrank/activity/codersrank-activity.min', () => ({
-	__esModule: true,
-	default: jest.fn()
-}));
-
-jest.mock('@codersrank/timeline/codersrank-timeline.min', () => ({
-	__esModule: true,
-	default: jest.fn()
-}));
-
-jest.mock('@codersrank/education/codersrank-education.min', () => ({
-	__esModule: true,
-	default: jest.fn()
-}));
-
-jest.mock('@codersrank/portfolio/codersrank-portfolio.min', () => ({
-	__esModule: true,
-	default: jest.fn()
-}));
-
-jest.mock('@codersrank/skills-chart/codersrank-skills-chart.min', () => ({
-	__esModule: true,
-	default: jest.fn()
-}));
-
-jest.mock('@codersrank/work-experience/codersrank-work-experience.min', () => ({
-	__esModule: true,
-	default: jest.fn()
 }));
 
 jest.mock('react-ts-github-calendar', () => ({
