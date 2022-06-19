@@ -1,5 +1,10 @@
 const crypto = require('crypto');
 
+const defaultMock = () => ({
+	__esModule: true,
+	default: jest.fn()
+});
+
 // prettier-ignore
 window.matchMedia = window.matchMedia || (() => ({
 	matches: false,
@@ -13,13 +18,6 @@ window.crypto = {
 };
 
 window.scrollTo = jest.fn();
-
-const defaultMock = () => ({
-	__esModule: true,
-	default: jest.fn()
-});
-
-jest.mock('../src/components/github-skyline', () => jest.fn(() => 'Github Skyline'));
 
 jest.mock('simplex-noise', defaultMock);
 jest.mock('@codersrank/summary/codersrank-summary.min', defaultMock);
@@ -53,6 +51,11 @@ jest.mock('gsap/Draggable', () => ({
 	}
 }));
 
+jest.mock('react-ts-github-calendar', () => ({
+	__esModule: true,
+	default: 'GitHubCalendar'
+}));
+
 jest.mock('react-syntax-highlighter/dist/esm/styles/prism', () =>
 	jest.fn(() => ({
 		dark: {}
@@ -70,12 +73,9 @@ jest.mock('../src/scripts/skills.ts', () => ({
 	drawSkills: jest.fn()
 }));
 
-jest.mock('react-ts-github-calendar', () => ({
-	__esModule: true,
-	default: 'GitHubCalendar'
-}));
-
 jest.mock('../src/scripts/gitlab-calendar', () => ({
 	__esModule: true,
 	default: 'GitLabCalendar'
 }));
+
+jest.mock('../src/components/github-skyline', () => jest.fn(() => 'Github Skyline'));

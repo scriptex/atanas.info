@@ -1,7 +1,5 @@
 module.exports = {
 	process() {
-		return {
-			code: 'style-mock'
-		};
+		return { code: 'style-mock' };
 	}
 };
