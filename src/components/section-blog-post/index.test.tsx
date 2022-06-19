@@ -23,14 +23,12 @@ jest.mock('../../data/articles', () => ({
 
 describe('SectionBlogPost component', () => {
 	it('Should render the SectionBlogPost component', () => {
-		let result: RenderResult;
+		let result!: RenderResult;
 
 		act(() => {
 			result = render(<SectionBlogPost />);
 		});
 
-		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-		// @ts-ignore
 		expect(result.asFragment()).toMatchSnapshot();
 	});
 });

@@ -285,7 +285,9 @@ export const GitlabStats: React.FC<Readonly<Props>> = (props: Readonly<Props>) =
 };
 
 export const NPMStats: React.FC = () => {
-	if (!npmStats || Object.keys(npmStats).length === 0) {
+	const error: boolean = (npmStats as any)?.error;
+
+	if (!npmStats || Object.keys(npmStats).length === 0 || error) {
 		return null;
 	}
 

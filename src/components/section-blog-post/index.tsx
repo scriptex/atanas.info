@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import * as React from 'react';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useParams } from 'react-router-dom';

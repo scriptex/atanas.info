@@ -13,9 +13,7 @@ jest.mock('../../data/last.fm-insights.json', () => ({
 
 jest.spyOn(stats, 'formatDate');
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-stats.formatDate.mockImplementation(() => 'Mock date');
+(stats.formatDate as jest.Mock).mockImplementation(() => 'Mock date');
 
 describe('SectionSocial component', () => {
 	it('Should render the SectionSocial component', () => {
