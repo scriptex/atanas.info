@@ -1,3 +1,4 @@
+// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 import { select, Selection } from 'd3-selection';
 import { format as dateFormat } from 'date-fns';
 
@@ -288,3 +289,4 @@ export default class GitlabActivityCalendar {
 			.text('Issues, merge requests, pushes, and comments.');
 	}
 }
+// codebeat:enable[ABC,LOC,BLOCK_NESTING]
