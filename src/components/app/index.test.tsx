@@ -1,12 +1,22 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { render, RenderResult, waitFor } from '@testing-library/react';
 
 import { App } from '.';
+import * as stats from '../section-stats';
+
+jest.spyOn(stats, 'formatDate');
+
+(stats.formatDate as jest.Mock).mockImplementation(() => 'Mock date');
 
 describe('App component', () => {
-	it('Should render the App component', () => {
-		const wrapper = shallow(<App />);
+	it('Should render the App component', async () => {
+		let result!: RenderResult;
 
-		expect(wrapper).toMatchSnapshot();
+		await act(async () => {
+			result = await waitFor(() => render(<App />));
+		});
+
+		expect(result.asFragment()).toMatchSnapshot();
 	});
 });

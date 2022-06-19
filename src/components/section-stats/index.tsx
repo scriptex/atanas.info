@@ -8,6 +8,7 @@ import gitlabCalendarData from '../../data/gitlab-calendar.json';
 import GitlabActivityCalendar from '../../scripts/gitlab-calendar';
 import { Section, GithubSkyline, ExternalLink } from '..';
 
+// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 interface GeneralInsight {
 	readonly title: string;
 	readonly value: any;
@@ -31,7 +32,6 @@ const YEARS: string[] = Array(years)
 // prettier-ignore
 export const formatDate = (date: string | number, formatter = 'dd MMM yyyy'): string => format(new Date(date), formatter);
 
-// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 export const addTitles = (selector: string, getTitle: (rect: SVGRectElement) => string): void => {
 	const rects: SVGRectElement[] = Array.from(document.querySelectorAll(`${selector} rect`));
 
@@ -48,6 +48,31 @@ export const addTitles = (selector: string, getTitle: (rect: SVGRectElement) => 
 		group.appendChild(rect);
 	});
 };
+
+interface SestionStatsEntryProps {
+	data: GeneralInsight[];
+	title: string;
+}
+
+export const SestionStatsEntry: React.FC<Readonly<SestionStatsEntryProps>> = ({
+	title,
+	data
+}: SestionStatsEntryProps) => (
+	<div className="c-section__entry c-section__entry--no-background">
+		<div className="o-shell">
+			<h2>{title}</h2>
+
+			<ul className="c-section__list">
+				{data.map((item: GeneralInsight, i: number) => (
+					<li key={i}>
+						<span>{item.title}:</span>
+						<strong>{item.value}</strong>
+					</li>
+				))}
+			</ul>
+		</div>
+	</div>
+);
 
 export const GithubStats: React.FC<Readonly<Props>> = (props: Readonly<Props>) => {
 	const [current, setCurrent] = React.useState(-1);
@@ -125,20 +150,7 @@ export const GithubStats: React.FC<Readonly<Props>> = (props: Readonly<Props>) =
 
 	return (
 		<>
-			<div className="c-section__entry c-section__entry--no-background">
-				<div className="o-shell">
-					<h2>Github profile statistics</h2>
-
-					<ul className="c-section__list">
-						{blocks.map((item: GeneralInsight, i: number) => (
-							<li key={i}>
-								<span>{item.title}:</span>
-								<strong>{item.value}</strong>
-							</li>
-						))}
-					</ul>
-				</div>
-			</div>
+			<SestionStatsEntry data={blocks} title="Github profile statistics" />
 
 			<div className="c-section__entry">
 				<small className="c-section__stamp">Last updated: {formatDate(updated, 'dd MMM yyyy HH:mm:ss')}</small>
@@ -185,18 +197,6 @@ export const GitlabStats: React.FC<Readonly<Props>> = (props: Readonly<Props>) =
 	const calendarPlaceholder1: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
 	const calendarPlaceholder2: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
 
-	if (error) {
-		return (
-			<div className="c-section__entry c-section__entry--no-background">
-				<div className="o-shell">
-					<h2>Gitlab profile statistics</h2>
-
-					<p>Failed fetching data from Gitlab. Please check again in 4 hours.</p>
-				</div>
-			</div>
-		);
-	}
-
 	const blocks: GeneralInsight[] = [
 		{
 			title: 'Used languages',
@@ -240,22 +240,21 @@ export const GitlabStats: React.FC<Readonly<Props>> = (props: Readonly<Props>) =
 		}
 	}, []);
 
-	return (
-		<>
+	if (error) {
+		return (
 			<div className="c-section__entry c-section__entry--no-background">
 				<div className="o-shell">
 					<h2>Gitlab profile statistics</h2>
 
-					<ul className="c-section__list">
-						{blocks.map((item: GeneralInsight, i: number) => (
-							<li key={i}>
-								<span>{item.title}:</span>
-								<strong>{item.value}</strong>
-							</li>
-						))}
-					</ul>
+					<p>Failed fetching data from Gitlab. Please check again in 4 hours.</p>
 				</div>
 			</div>
+		);
+	}
+
+	return (
+		<>
+			<SestionStatsEntry data={blocks} title="Gitlab profile statistics" />
 
 			<div className="c-section__entry">
 				<small className="c-section__stamp">Last updated: {formatDate(updated, 'dd MMM yyyy HH:mm:ss')}</small>
@@ -285,7 +284,9 @@ export const GitlabStats: React.FC<Readonly<Props>> = (props: Readonly<Props>) =
 };
 
 export const NPMStats: React.FC = () => {
-	if (Object.keys(npmStats).length === 0) {
+	const error: boolean = (npmStats as any)?.error;
+
+	if (!npmStats || Object.keys(npmStats).length === 0 || error) {
 		return null;
 	}
 

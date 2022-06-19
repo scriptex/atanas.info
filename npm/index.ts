@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { resolve } from 'path';
 import { writeFileSync } from 'fs';
 

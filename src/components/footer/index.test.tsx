@@ -1,19 +1,17 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { Footer } from '.';
 import * as stats from '../section-stats';
 
 jest.spyOn(stats, 'formatDate');
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-stats.formatDate.mockImplementation(() => 'Mock date');
+(stats.formatDate as jest.Mock).mockImplementation(() => 'Mock date');
 
 describe('Footer component', () => {
 	it('Should render the Footer component', () => {
-		const wrapper = shallow(<Footer />);
+		const { asFragment } = render(<Footer />);
 
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 });

@@ -7,8 +7,7 @@ module.exports = {
 		'\\.(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
 			'<rootDir>/test-config/file-mock.js'
 	},
-	setupFiles: ['jest-canvas-mock', '<rootDir>/test-config/index.js', '<rootDir>/test-config/local-storage-mock.js'],
-	snapshotSerializers: ['enzyme-to-json/serializer'],
+	setupFiles: ['jest-canvas-mock', '<rootDir>/test-config/index.js'],
 	transform: {
 		'^.+\\.tsx?$': 'ts-jest',
 		'\\.(css|less|sass|scss)$': '<rootDir>/test-config/style-mock.js',
@@ -37,10 +36,10 @@ module.exports = {
 	],
 	coverageThreshold: {
 		global: {
-			branches: 25,
-			functions: 25,
-			lines: 25,
-			statements: 25
+			branches: 65,
+			functions: 80,
+			lines: 85,
+			statements: 85
 		}
 	},
 	coverageReporters: ['lcov', 'html', 'cobertura'],

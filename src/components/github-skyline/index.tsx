@@ -96,7 +96,6 @@ export const GithubSkyline = (props: Props): React.ReactElement => {
 				{expanded ? 'Collapse' : 'Expand'}
 			</button>
 
-			{/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
 			{/* @ts-ignore */}
 			<Engine antialias adaptToDeviceRatio canvasId={`c-skyline__item-${props.index}`}>
 				<Scene onSceneMount={(args: SceneEventArgs) => onSceneMount(args, props, () => setLoading(false))}>

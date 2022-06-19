@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import * as React from 'react';
 import Carousel from 'react-round-carousel';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
@@ -29,7 +28,10 @@ const filteredData = (data: TopAlbum[] | WeeklyAlbumChart[]) =>
 
 // codebeat:disable[ABC,LOC,BLOCK_NESTING]
 export const SectionSocial: React.FC = () => {
-	const { error, updated, topAlbums, weeklyAlbumChart } = lastFm as LastFMData;
+	const error = (lastFm as LastFMData).error;
+	const updated = lastFm.updated;
+	const topAlbums = lastFm.topAlbums;
+	const weeklyAlbumChart = lastFm.weeklyAlbumChart;
 
 	if (!isPrerendering) {
 		useScript('https://profile.codersrank.io/widget/widget.js');

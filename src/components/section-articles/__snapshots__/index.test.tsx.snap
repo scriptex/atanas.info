@@ -1,213 +1,313 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionArticles component Should render the SectionArticles component 1`] = `
-<Section
-  className=" c-section--slides fullsize-background"
-  hasButton={true}
-  hasShell={true}
-  id="articles"
-  style={
-    Object {
-      "backgroundImage": "url(images/temp/articles.jpg)",
-    }
-  }
->
-  <h2>
-    Articles
-  </h2>
-  <div
-    className="c-section__body o-grid"
+<DocumentFragment>
+  <main
+    class="o-main "
   >
-    <div
-      className="o-grid__item xs-12 sm-6"
-      key="0"
+    <section
+      class="c-section c-section--articles c-section--slides fullsize-background"
+      id="articles"
+      style="background-image: url(images/temp/articles.jpg);"
     >
-      <ExternalLink
-        className="c-article-link fullsize-background"
-        href="https://htmlburger.com/blog/jarvis-task-runner/"
-        style={
-          Object {
-            "backgroundImage": "url(https://htmlburger.com/blog/wp-content/uploads/2017/11/jarvis-Recovered-2-826x464.jpg)",
-          }
-        }
+      <div
+        class="o-shell"
       >
-        <strong>
-          Jarvis: The Intelligent Front-End Task Runner
-        </strong>
-      </ExternalLink>
-      <Loader />
-    </div>
-    <div
-      className="o-grid__item xs-12 sm-6"
-      key="1"
-    >
-      <ExternalLink
-        className="c-article-link fullsize-background"
-        href="https://htmlboutique.com/blog/2015/11/13/ionic-development-by-htmlboutique/"
-        style={
-          Object {
-            "backgroundImage": "url(https://htmlboutique.com/blog/wp-content/uploads/2015/11/ionicnew3.jpg)",
-          }
-        }
-      >
-        <strong>
-          Ionic Development by htmlBoutique
-        </strong>
-      </ExternalLink>
-      <Loader />
-    </div>
-  </div>
-</Section>
+        <h2>
+          Articles
+        </h2>
+        <div
+          class="c-section__body o-grid"
+        >
+          <div
+            class="o-grid__item xs-12 sm-6"
+          >
+            <a
+              class="c-article-link fullsize-background"
+              href="https://htmlburger.com/blog/jarvis-task-runner/"
+              rel="noopener noreferrer"
+              style="background-image: url(https://htmlburger.com/blog/wp-content/uploads/2017/11/jarvis-Recovered-2-826x464.jpg);"
+              target="_blank"
+            >
+              <strong>
+                Jarvis: The Intelligent Front-End Task Runner
+              </strong>
+            </a>
+            <div
+              class="c-loading"
+            >
+              <div
+                class="c-loader"
+              />
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6"
+          >
+            <a
+              class="c-article-link fullsize-background"
+              href="https://htmlboutique.com/blog/2015/11/13/ionic-development-by-htmlboutique/"
+              rel="noopener noreferrer"
+              style="background-image: url(https://htmlboutique.com/blog/wp-content/uploads/2015/11/ionicnew3.jpg);"
+              target="_blank"
+            >
+              <strong>
+                Ionic Development by htmlBoutique
+              </strong>
+            </a>
+            <div
+              class="c-loading"
+            >
+              <div
+                class="c-loader"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="c-section__actions"
+        >
+          <button
+            class="c-btn "
+            type="button"
+          >
+            Get in touch
+          </button>
+          <ul
+            class="c-section__actions-list"
+          >
+            <li>
+              <button
+                class="c-btn c-section__actions-close"
+                type="button"
+              >
+                Close
+              </button>
+            </li>
+            <li>
+              <button
+                class="c-btn "
+                type="button"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-email"
+                  />
+                </svg>
+                <span>
+                  Contact me
+                </span>
+                <strong>
+                  directly
+                </strong>
+              </button>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://app.usebraintrust.com/talent/782/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-braintrust"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Braintrust
+                </strong>
+              </a>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://www.toptal.com/resume/atanas-atanasov"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-toptal"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Toptal
+                </strong>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
 `;
 
-exports[`SectionArticles component Should render the SectionArticles component while prerendering 1`] = `
-<main
-  class="o-main "
->
-  <section
-    class="c-section c-section--articles c-section--slides fullsize-background"
-    id="articles"
-    style="background-image:url(images/temp/articles.jpg)"
+exports[`SectionArticles component Should render the SectionArticles component 2`] = `
+<DocumentFragment>
+  <main
+    class="o-main "
   >
-    <div
-      class="o-shell"
+    <section
+      class="c-section c-section--articles c-section--slides fullsize-background"
+      id="articles"
+      style="background-image: url(images/temp/articles.jpg);"
     >
-      <h2>
-        Articles
-      </h2>
       <div
-        class="c-section__body o-grid"
+        class="o-shell"
       >
+        <h2>
+          Articles
+        </h2>
         <div
-          class="o-grid__item xs-12 sm-6"
+          class="c-section__body o-grid"
         >
-          <a
-            class="c-article-link fullsize-background"
-            href="https://htmlburger.com/blog/jarvis-task-runner/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <strong>
-              Jarvis: The Intelligent Front-End Task Runner
-            </strong>
-          </a>
           <div
-            class="c-loading"
+            class="o-grid__item xs-12 sm-6"
           >
+            <a
+              class="c-article-link fullsize-background"
+              href="https://htmlburger.com/blog/jarvis-task-runner/"
+              rel="noopener noreferrer"
+              style=""
+              target="_blank"
+            >
+              <strong>
+                Jarvis: The Intelligent Front-End Task Runner
+              </strong>
+            </a>
             <div
-              class="c-loader"
-            />
+              class="c-loading"
+            >
+              <div
+                class="c-loader"
+              />
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6"
+          >
+            <a
+              class="c-article-link fullsize-background"
+              href="https://htmlboutique.com/blog/2015/11/13/ionic-development-by-htmlboutique/"
+              rel="noopener noreferrer"
+              style=""
+              target="_blank"
+            >
+              <strong>
+                Ionic Development by htmlBoutique
+              </strong>
+            </a>
+            <div
+              class="c-loading"
+            >
+              <div
+                class="c-loader"
+              />
+            </div>
           </div>
         </div>
         <div
-          class="o-grid__item xs-12 sm-6"
+          class="c-section__actions"
         >
-          <a
-            class="c-article-link fullsize-background"
-            href="https://htmlboutique.com/blog/2015/11/13/ionic-development-by-htmlboutique/"
-            rel="noopener noreferrer"
-            target="_blank"
+          <button
+            class="c-btn "
+            type="button"
           >
-            <strong>
-              Ionic Development by htmlBoutique
-            </strong>
-          </a>
-          <div
-            class="c-loading"
+            Get in touch
+          </button>
+          <ul
+            class="c-section__actions-list"
           >
-            <div
-              class="c-loader"
-            />
-          </div>
+            <li>
+              <button
+                class="c-btn c-section__actions-close"
+                type="button"
+              >
+                Close
+              </button>
+            </li>
+            <li>
+              <button
+                class="c-btn "
+                type="button"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-email"
+                  />
+                </svg>
+                <span>
+                  Contact me
+                </span>
+                <strong>
+                  directly
+                </strong>
+              </button>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://app.usebraintrust.com/talent/782/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-braintrust"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Braintrust
+                </strong>
+              </a>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://www.toptal.com/resume/atanas-atanasov"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-toptal"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Toptal
+                </strong>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div
-        class="c-section__actions"
-      >
-        <button
-          class="c-btn "
-          type="button"
-        >
-          Get in touch
-        </button>
-        <ul
-          class="c-section__actions-list"
-        >
-          <li>
-            <button
-              class="c-btn c-section__actions-close"
-              type="button"
-            >
-              Close
-            </button>
-          </li>
-          <li>
-            <button
-              class="c-btn "
-              type="button"
-            >
-              <svg
-                class="c-section__actions-icon"
-              >
-                <use
-                  href="#svg-email"
-                />
-              </svg>
-              <span>
-                Contact me
-              </span>
-              <strong>
-                directly
-              </strong>
-            </button>
-          </li>
-          <li>
-            <a
-              class="c-btn"
-              href="https://app.usebraintrust.com/talent/782/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <svg
-                class="c-section__actions-icon"
-              >
-                <use
-                  href="#svg-braintrust"
-                />
-              </svg>
-              <span>
-                Hire me on
-              </span>
-              <strong>
-                Braintrust
-              </strong>
-            </a>
-          </li>
-          <li>
-            <a
-              class="c-btn"
-              href="https://www.toptal.com/resume/atanas-atanasov"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <svg
-                class="c-section__actions-icon"
-              >
-                <use
-                  href="#svg-toptal"
-                />
-              </svg>
-              <span>
-                Hire me on
-              </span>
-              <strong>
-                Toptal
-              </strong>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
+</DocumentFragment>
 `;

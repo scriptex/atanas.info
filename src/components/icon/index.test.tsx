@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { Icon } from '.';
 
 describe('Icon component', () => {
 	it('Should render the Icon component', () => {
-		const wrapper = shallow(<Icon name="test" className="test" />);
+		const { asFragment } = render(<Icon name="test" className="test" />);
 
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 });

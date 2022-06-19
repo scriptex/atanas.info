@@ -1,11 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Loader component Should render the Loader component 1`] = `
-<div
-  className="c-loading"
->
+<DocumentFragment>
   <div
-    className="c-loader"
-  />
-</div>
+    class="c-loading"
+  >
+    <div
+      class="c-loader"
+    />
+  </div>
+</DocumentFragment>
 `;

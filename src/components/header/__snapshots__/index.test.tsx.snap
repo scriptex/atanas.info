@@ -1,35 +1,375 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header component Should render the Header component 1`] = `
-<header
-  className="c-header"
->
-  <Link
-    className="c-logo"
-    title="Back to homepage"
-    to="/"
+<DocumentFragment>
+  <header
+    class="c-header"
   >
-    <img
-      alt=""
-      src="/images/icons/logo-alt.svg"
-    />
-    <Icon
-      className="c-svg-logo"
-      name="svg-logo"
-    />
-  </Link>
-  <button
-    aria-label="Toggle menu"
-    className="c-nav__toggle"
-    name="menu-toggle"
-    onClick={[Function]}
+    <a
+      class="c-logo"
+      href="/"
+      title="Back to homepage"
+    >
+      <img
+        alt=""
+        src="/images/icons/logo-alt.svg"
+      />
+      <svg
+        class="c-svg-logo"
+      >
+        <use
+          xlink:href="#svg-logo"
+        />
+      </svg>
+    </a>
+    <button
+      aria-label="Toggle menu"
+      class="c-nav__toggle"
+      name="menu-toggle"
+    >
+      <span />
+      <span />
+      <span />
+    </button>
+    <nav
+      class="c-nav"
+    >
+      <ul>
+        <li>
+          <a
+            aria-current="page"
+            class="active"
+            href="/"
+            title="Back to homepage"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/about"
+            title="About me"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/timeline"
+            title="Life events"
+          >
+            Timeline
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/skills"
+            title="My skills"
+          >
+            Skills
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/portfolio"
+            title="My portfolio"
+          >
+            Portfolio
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/stats"
+            title="My stats"
+          >
+            Stats
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/slides"
+            title="My presentations"
+          >
+            Slides
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/videos"
+            title="My video presentations"
+          >
+            Videos
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/articles"
+            title="My published articles"
+          >
+            Articles
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/certificates"
+            title="My certificates"
+          >
+            Certificates
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/social"
+            title="Social widgets"
+          >
+            Social
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/blog"
+            title="My blog"
+          >
+            Blog
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/resume"
+            title="My resume"
+          >
+            Resume
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/interactive-resume"
+            title="My interactive resume"
+          >
+            Interactive resume
+          </a>
+        </li>
+        <li>
+          <a
+            href="/projects"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="My open source projects"
+          >
+            Open source
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/music"
+            title="My music"
+          >
+            Music
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</DocumentFragment>
+`;
+
+exports[`Header component Should render the Header component 2`] = `
+<DocumentFragment>
+  <header
+    class="c-header c-header--open"
   >
-    <span />
-    <span />
-    <span />
-  </button>
-  <Nav
-    onClick={[Function]}
-  />
-</header>
+    <a
+      class="c-logo"
+      href="/"
+      title="Back to homepage"
+    >
+      <img
+        alt=""
+        src="/images/icons/logo-alt.svg"
+      />
+      <svg
+        class="c-svg-logo"
+      >
+        <use
+          xlink:href="#svg-logo"
+        />
+      </svg>
+    </a>
+    <button
+      aria-label="Toggle menu"
+      class="c-nav__toggle"
+      name="menu-toggle"
+    >
+      <span />
+      <span />
+      <span />
+    </button>
+    <nav
+      class="c-nav"
+    >
+      <ul>
+        <li>
+          <a
+            aria-current="page"
+            class="active"
+            href="/"
+            title="Back to homepage"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/about"
+            title="About me"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/timeline"
+            title="Life events"
+          >
+            Timeline
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/skills"
+            title="My skills"
+          >
+            Skills
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/portfolio"
+            title="My portfolio"
+          >
+            Portfolio
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/stats"
+            title="My stats"
+          >
+            Stats
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/slides"
+            title="My presentations"
+          >
+            Slides
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/videos"
+            title="My video presentations"
+          >
+            Videos
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/articles"
+            title="My published articles"
+          >
+            Articles
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/certificates"
+            title="My certificates"
+          >
+            Certificates
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/social"
+            title="Social widgets"
+          >
+            Social
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/blog"
+            title="My blog"
+          >
+            Blog
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/resume"
+            title="My resume"
+          >
+            Resume
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/interactive-resume"
+            title="My interactive resume"
+          >
+            Interactive resume
+          </a>
+        </li>
+        <li>
+          <a
+            href="/projects"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="My open source projects"
+          >
+            Open source
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/music"
+            title="My music"
+          >
+            Music
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</DocumentFragment>
 `;

@@ -27,7 +27,7 @@ export const sortProjects = (projects: Project[]): Project[] => {
 	return projects.sort((a: Project, b: Project) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0));
 };
 
-export const getContributions = async (url = 'https://github.com/scriptex'): Promise<Contribution[]> =>
+export const getContributions = async (url = 'https://github.com/scriptex'): Promise<Record<string, Contribution>> =>
 	await fetch(url)
 		.then(res => res.text())
 		.then((markup: string) => {
@@ -38,7 +38,7 @@ export const getContributions = async (url = 'https://github.com/scriptex'): Pro
 				.reduce(
 					(data, rect) => ({
 						...data,
-						[$(rect).data('date')]: {
+						[$(rect).data('date') as string]: {
 							count: $(rect).data('count'),
 							color: $(rect).attr('fill')
 						}

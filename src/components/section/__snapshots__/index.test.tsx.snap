@@ -1,265 +1,1125 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Section component Should render the Section component 1`] = `
-<main
-  className="o-main "
->
-  <section
-    className="c-section c-section--section test"
-    id="section"
+<DocumentFragment>
+  <main
+    class="o-main "
   >
-    <div
-      className="o-shell"
+    <section
+      class="c-section c-section--section test"
+      id="section"
     >
-      <SectionElements
-        className=" test"
-        hasButton={true}
-        hasShell={true}
-        id="section"
+      <div
+        class="o-shell"
       >
-        <Children />
-      </SectionElements>
-    </div>
-  </section>
-</main>
+        <p>
+          Test
+        </p>
+        <p>
+          Test
+        </p>
+        <div
+          class="c-section__actions"
+        >
+          <button
+            class="c-btn "
+            type="button"
+          >
+            Get in touch
+          </button>
+          <ul
+            class="c-section__actions-list"
+          >
+            <li>
+              <button
+                class="c-btn c-section__actions-close"
+                type="button"
+              >
+                Close
+              </button>
+            </li>
+            <li>
+              <button
+                class="c-btn "
+                type="button"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-email"
+                  />
+                </svg>
+                <span>
+                  Contact me
+                </span>
+                <strong>
+                  directly
+                </strong>
+              </button>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://app.usebraintrust.com/talent/782/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-braintrust"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Braintrust
+                </strong>
+              </a>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://www.toptal.com/resume/atanas-atanasov"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-toptal"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Toptal
+                </strong>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
 `;
 
 exports[`Section component Should render the Section component without a button 1`] = `
-<main
-  className="o-main "
->
-  <section
-    className="c-section c-section--section"
-    id="section"
+<DocumentFragment>
+  <main
+    class="o-main "
   >
-    <div
-      className="o-shell o-shell--flex"
+    <section
+      class="c-section c-section--section"
+      id="section"
     >
-      <SectionElements
-        hasButton={false}
-        hasShell={true}
-        id="section"
-        shellClass="o-shell--flex"
+      <div
+        class="o-shell o-shell--flex"
       >
-        <Children />
-      </SectionElements>
-    </div>
-  </section>
-</main>
+        <p>
+          Test
+        </p>
+        <p>
+          Test
+        </p>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
 `;
 
 exports[`Section component Should render the Section component without a button and a shell 1`] = `
-<main
-  className="o-main "
->
-  <section
-    className="c-section c-section--section test"
-    id="section"
+<DocumentFragment>
+  <main
+    class="o-main "
   >
-    <SectionElements
-      className=" test"
-      hasButton={false}
-      hasShell={false}
+    <section
+      class="c-section c-section--section test"
       id="section"
     >
-      <Children />
-    </SectionElements>
-  </section>
-</main>
+      <p>
+        Test
+      </p>
+      <p>
+        Test
+      </p>
+    </section>
+  </main>
+</DocumentFragment>
 `;
 
 exports[`Section component Should render the Section component without a shell 1`] = `
-<main
-  className="o-main "
->
-  <section
-    className="c-section c-section--section test"
-    id="section"
+<DocumentFragment>
+  <main
+    class="o-main "
   >
-    <SectionElements
-      className=" test"
-      hasButton={true}
-      hasShell={false}
+    <section
+      class="c-section c-section--section test"
       id="section"
     >
-      <Children />
-    </SectionElements>
-  </section>
-</main>
+      <p>
+        Test
+      </p>
+      <p>
+        Test
+      </p>
+      <div
+        class="c-section__actions"
+      >
+        <button
+          class="c-btn "
+          type="button"
+        >
+          Get in touch
+        </button>
+        <ul
+          class="c-section__actions-list"
+        >
+          <li>
+            <button
+              class="c-btn c-section__actions-close"
+              type="button"
+            >
+              Close
+            </button>
+          </li>
+          <li>
+            <button
+              class="c-btn "
+              type="button"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  xlink:href="#svg-email"
+                />
+              </svg>
+              <span>
+                Contact me
+              </span>
+              <strong>
+                directly
+              </strong>
+            </button>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://app.usebraintrust.com/talent/782/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  xlink:href="#svg-braintrust"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Braintrust
+              </strong>
+            </a>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://www.toptal.com/resume/atanas-atanasov"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  xlink:href="#svg-toptal"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Toptal
+              </strong>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Section component state management Should handle state management 1`] = `
+<DocumentFragment>
+  <main
+    class="o-main "
+  >
+    <section
+      class="c-section c-section--test"
+      id="test"
+    >
+      <div
+        class="o-shell"
+      >
+        Test
+        <div
+          class="c-section__actions"
+        >
+          <button
+            class="c-btn "
+            type="button"
+          >
+            Get in touch
+          </button>
+          <ul
+            class="c-section__actions-list"
+          >
+            <li>
+              <button
+                class="c-btn c-section__actions-close"
+                type="button"
+              >
+                Close
+              </button>
+            </li>
+            <li>
+              <button
+                class="c-btn "
+                type="button"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-email"
+                  />
+                </svg>
+                <span>
+                  Contact me
+                </span>
+                <strong>
+                  directly
+                </strong>
+              </button>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://app.usebraintrust.com/talent/782/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-braintrust"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Braintrust
+                </strong>
+              </a>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://www.toptal.com/resume/atanas-atanasov"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-toptal"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Toptal
+                </strong>
+              </a>
+            </li>
+          </ul>
+          <br
+            class="visible-xs-block"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Section component state management Should handle state management 2`] = `
+<DocumentFragment>
+  <main
+    class="o-main "
+  >
+    <section
+      class="c-section c-section--test"
+      id="test"
+    >
+      <div
+        class="o-shell"
+      >
+        Test
+        <div
+          class="c-section__actions"
+        >
+          <button
+            class="c-btn "
+            type="button"
+          >
+            Get in touch
+          </button>
+          <ul
+            class="c-section__actions-list"
+          >
+            <li>
+              <button
+                class="c-btn c-section__actions-close"
+                type="button"
+              >
+                Close
+              </button>
+            </li>
+            <li>
+              <button
+                class="c-btn "
+                type="button"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-email"
+                  />
+                </svg>
+                <span>
+                  Contact me
+                </span>
+                <strong>
+                  directly
+                </strong>
+              </button>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://app.usebraintrust.com/talent/782/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-braintrust"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Braintrust
+                </strong>
+              </a>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://www.toptal.com/resume/atanas-atanasov"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-toptal"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Toptal
+                </strong>
+              </a>
+            </li>
+          </ul>
+          <br
+            class="visible-xs-block"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Section component state management Should handle state management 3`] = `
+<DocumentFragment>
+  <main
+    class="o-main "
+  >
+    <section
+      class="c-section c-section--test"
+      id="test"
+    >
+      <div
+        class="o-shell"
+      >
+        Test
+        <div
+          class="c-section__actions"
+        >
+          <button
+            class="c-btn "
+            type="button"
+          >
+            Get in touch
+          </button>
+          <ul
+            class="c-section__actions-list"
+          >
+            <li>
+              <button
+                class="c-btn c-section__actions-close"
+                type="button"
+              >
+                Close
+              </button>
+            </li>
+            <li>
+              <button
+                class="c-btn "
+                type="button"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-email"
+                  />
+                </svg>
+                <span>
+                  Contact me
+                </span>
+                <strong>
+                  directly
+                </strong>
+              </button>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://app.usebraintrust.com/talent/782/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-braintrust"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Braintrust
+                </strong>
+              </a>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://www.toptal.com/resume/atanas-atanasov"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-toptal"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Toptal
+                </strong>
+              </a>
+            </li>
+          </ul>
+          <br
+            class="visible-xs-block"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Section component state management Should handle state management 4`] = `
+<DocumentFragment>
+  <main
+    class="o-main "
+  >
+    <section
+      class="c-section c-section--test"
+      id="test"
+    >
+      <div
+        class="o-shell"
+      >
+        Test
+        <div
+          class="c-section__actions"
+        >
+          <button
+            class="c-btn "
+            type="button"
+          >
+            Get in touch
+          </button>
+          <ul
+            class="c-section__actions-list"
+          >
+            <li>
+              <button
+                class="c-btn c-section__actions-close"
+                type="button"
+              >
+                Close
+              </button>
+            </li>
+            <li>
+              <button
+                class="c-btn "
+                type="button"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-email"
+                  />
+                </svg>
+                <span>
+                  Contact me
+                </span>
+                <strong>
+                  directly
+                </strong>
+              </button>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://app.usebraintrust.com/talent/782/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-braintrust"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Braintrust
+                </strong>
+              </a>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://www.toptal.com/resume/atanas-atanasov"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-toptal"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Toptal
+                </strong>
+              </a>
+            </li>
+          </ul>
+          <br
+            class="visible-xs-block"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Section component state management Should handle state management 5`] = `
+<DocumentFragment>
+  <main
+    class="o-main "
+  >
+    <section
+      class="c-section c-section--test"
+      id="test"
+    >
+      <div
+        class="o-shell"
+      >
+        Test
+        <div
+          class="c-section__actions"
+        >
+          <button
+            class="c-btn "
+            type="button"
+          >
+            Get in touch
+          </button>
+          <ul
+            class="c-section__actions-list"
+          >
+            <li>
+              <button
+                class="c-btn c-section__actions-close"
+                type="button"
+              >
+                Close
+              </button>
+            </li>
+            <li>
+              <button
+                class="c-btn "
+                type="button"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-email"
+                  />
+                </svg>
+                <span>
+                  Contact me
+                </span>
+                <strong>
+                  directly
+                </strong>
+              </button>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://app.usebraintrust.com/talent/782/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-braintrust"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Braintrust
+                </strong>
+              </a>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://www.toptal.com/resume/atanas-atanasov"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-toptal"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Toptal
+                </strong>
+              </a>
+            </li>
+          </ul>
+          <br
+            class="visible-xs-block"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Section component state management Should handle state management 6`] = `
+<DocumentFragment>
+  <main
+    class="o-main "
+  >
+    <section
+      class="c-section c-section--test"
+      id="test"
+    >
+      <div
+        class="o-shell"
+      >
+        Test
+        <div
+          class="c-section__actions"
+        >
+          <button
+            class="c-btn "
+            type="button"
+          >
+            Get in touch
+          </button>
+          <ul
+            class="c-section__actions-list"
+          >
+            <li>
+              <button
+                class="c-btn c-section__actions-close"
+                type="button"
+              >
+                Close
+              </button>
+            </li>
+            <li>
+              <button
+                class="c-btn "
+                type="button"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-email"
+                  />
+                </svg>
+                <span>
+                  Contact me
+                </span>
+                <strong>
+                  directly
+                </strong>
+              </button>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://app.usebraintrust.com/talent/782/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-braintrust"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Braintrust
+                </strong>
+              </a>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://www.toptal.com/resume/atanas-atanasov"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-toptal"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Toptal
+                </strong>
+              </a>
+            </li>
+          </ul>
+          <br
+            class="visible-xs-block"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
 `;
 
 exports[`SectionElements component Should render the SectionElements component 1`] = `
-<Fragment>
-  <Children />
+<DocumentFragment>
+  <p>
+    Test
+  </p>
+  <p>
+    Test
+  </p>
   <div
-    className="c-section__actions"
+    class="c-section__actions"
   >
-    <Button
-      onClick={[Function]}
+    <button
+      class="c-btn "
       type="button"
     >
       Get in touch
-    </Button>
+    </button>
     <ul
-      className="c-section__actions-list"
+      class="c-section__actions-list"
     >
       <li>
-        <Button
-          className="c-section__actions-close"
-          onClick={[Function]}
+        <button
+          class="c-btn c-section__actions-close"
           type="button"
         >
           Close
-        </Button>
+        </button>
       </li>
       <li>
-        <Button
-          onClick={[Function]}
+        <button
+          class="c-btn "
           type="button"
         >
-          <Icon
-            className="c-section__actions-icon"
-            name="svg-email"
-          />
+          <svg
+            class="c-section__actions-icon"
+          >
+            <use
+              xlink:href="#svg-email"
+            />
+          </svg>
           <span>
             Contact me
           </span>
           <strong>
             directly
           </strong>
-        </Button>
+        </button>
       </li>
       <li>
-        <ExternalLink
-          className="c-btn"
+        <a
+          class="c-btn"
           href="https://app.usebraintrust.com/talent/782/"
-          onClick={[Function]}
+          rel="noopener noreferrer"
+          target="_blank"
         >
-          <Icon
-            className="c-section__actions-icon"
-            name="svg-braintrust"
-          />
+          <svg
+            class="c-section__actions-icon"
+          >
+            <use
+              xlink:href="#svg-braintrust"
+            />
+          </svg>
           <span>
             Hire me on
           </span>
           <strong>
             Braintrust
           </strong>
-        </ExternalLink>
+        </a>
       </li>
       <li>
-        <ExternalLink
-          className="c-btn"
+        <a
+          class="c-btn"
           href="https://www.toptal.com/resume/atanas-atanasov"
-          onClick={[Function]}
+          rel="noopener noreferrer"
+          target="_blank"
         >
-          <Icon
-            className="c-section__actions-icon"
-            name="svg-toptal"
-          />
+          <svg
+            class="c-section__actions-icon"
+          >
+            <use
+              xlink:href="#svg-toptal"
+            />
+          </svg>
           <span>
             Hire me on
           </span>
           <strong>
             Toptal
           </strong>
-        </ExternalLink>
+        </a>
       </li>
     </ul>
   </div>
-</Fragment>
+</DocumentFragment>
 `;
 
 exports[`SectionElements component Should render the SectionElements component without a button 1`] = `
-<Fragment>
-  <Children />
-</Fragment>
+<DocumentFragment>
+  <p>
+    Test
+  </p>
+  <p>
+    Test
+  </p>
+</DocumentFragment>
 `;
 
 exports[`SectionElements component Should render the SectionElements component without a button and a shell 1`] = `
-<Fragment>
-  <Children />
-</Fragment>
+<DocumentFragment>
+  <p>
+    Test
+  </p>
+  <p>
+    Test
+  </p>
+</DocumentFragment>
 `;
 
 exports[`SectionElements component Should render the SectionElements component without a shell 1`] = `
-<Fragment>
-  <Children />
+<DocumentFragment>
+  <p>
+    Test
+  </p>
+  <p>
+    Test
+  </p>
   <div
-    className="c-section__actions"
+    class="c-section__actions"
   >
-    <Button
-      onClick={[Function]}
+    <button
+      class="c-btn "
       type="button"
     >
       Get in touch
-    </Button>
+    </button>
     <ul
-      className="c-section__actions-list"
+      class="c-section__actions-list"
     >
       <li>
-        <Button
-          className="c-section__actions-close"
-          onClick={[Function]}
+        <button
+          class="c-btn c-section__actions-close"
           type="button"
         >
           Close
-        </Button>
+        </button>
       </li>
       <li>
-        <Button
-          onClick={[Function]}
+        <button
+          class="c-btn "
           type="button"
         >
-          <Icon
-            className="c-section__actions-icon"
-            name="svg-email"
-          />
+          <svg
+            class="c-section__actions-icon"
+          >
+            <use
+              xlink:href="#svg-email"
+            />
+          </svg>
           <span>
             Contact me
           </span>
           <strong>
             directly
           </strong>
-        </Button>
+        </button>
       </li>
       <li>
-        <ExternalLink
-          className="c-btn"
+        <a
+          class="c-btn"
           href="https://app.usebraintrust.com/talent/782/"
-          onClick={[Function]}
+          rel="noopener noreferrer"
+          target="_blank"
         >
-          <Icon
-            className="c-section__actions-icon"
-            name="svg-braintrust"
-          />
+          <svg
+            class="c-section__actions-icon"
+          >
+            <use
+              xlink:href="#svg-braintrust"
+            />
+          </svg>
           <span>
             Hire me on
           </span>
           <strong>
             Braintrust
           </strong>
-        </ExternalLink>
+        </a>
       </li>
       <li>
-        <ExternalLink
-          className="c-btn"
+        <a
+          class="c-btn"
           href="https://www.toptal.com/resume/atanas-atanasov"
-          onClick={[Function]}
+          rel="noopener noreferrer"
+          target="_blank"
         >
-          <Icon
-            className="c-section__actions-icon"
-            name="svg-toptal"
-          />
+          <svg
+            class="c-section__actions-icon"
+          >
+            <use
+              xlink:href="#svg-toptal"
+            />
+          </svg>
           <span>
             Hire me on
           </span>
           <strong>
             Toptal
           </strong>
-        </ExternalLink>
+        </a>
       </li>
     </ul>
   </div>
-</Fragment>
+</DocumentFragment>
 `;

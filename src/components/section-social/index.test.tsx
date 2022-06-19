@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { render, shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { SectionSocial } from '.';
 import * as stats from '../section-stats';
-import * as utils from '../../scripts/shared';
 
 jest.mock('../../data/last.fm-insights.json', () => ({
 	default: {
@@ -14,22 +13,14 @@ jest.mock('../../data/last.fm-insights.json', () => ({
 
 jest.spyOn(stats, 'formatDate');
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-stats.formatDate.mockImplementation(() => 'Mock date');
+(stats.formatDate as jest.Mock).mockImplementation(() => 'Mock date');
 
 describe('SectionSocial component', () => {
 	it('Should render the SectionSocial component', () => {
-		const wrapper = shallow(<SectionSocial />);
+		const { asFragment } = render(<SectionSocial />);
 
-		expect(wrapper).toMatchSnapshot();
-	});
+		expect(asFragment()).toMatchSnapshot();
 
-	it('Should render the SectionSocial component while prerendering', () => {
-		Object.defineProperty(utils, 'isPrerendering', { value: true });
-
-		const wrapper = render(<SectionSocial />);
-
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 });

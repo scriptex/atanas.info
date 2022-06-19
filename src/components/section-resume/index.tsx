@@ -2,6 +2,25 @@ import * as React from 'react';
 
 import { Lines, Button, Section } from '..';
 
+interface ResumeEntryProps {
+	place: string;
+	period: string;
+}
+
+export const ResumeEntry: React.FC<Readonly<ResumeEntryProps>> = ({ place, period }: ResumeEntryProps) => (
+	<ul className="c-resume__list">
+		<li>
+			<i className="icon-calendar"></i>
+			{period}
+		</li>
+
+		<li>
+			<i className="icon-location"></i>
+			{place}
+		</li>
+	</ul>
+);
+
 // codebeat:disable[ABC,LOC,BLOCK_NESTING]
 export const SectionResume: React.FC = () => (
 	<Section
@@ -79,17 +98,7 @@ export const SectionResume: React.FC = () => (
 						<strong>Master in Marketing</strong>
 					</p>
 
-					<ul className="c-resume__list">
-						<li>
-							<i className="icon-calendar"></i>
-							2003 - 2009
-						</li>
-
-						<li>
-							<i className="icon-location"></i>
-							University of Economics Varna
-						</li>
-					</ul>
+					<ResumeEntry place="University of Economics Varna" period="2003 - 2009" />
 				</div>
 
 				<div className="c-resume__block">
@@ -102,17 +111,7 @@ export const SectionResume: React.FC = () => (
 							E.ON, E.ON Home project, <em>contract</em>
 						</h4>
 
-						<ul className="c-resume__list">
-							<li>
-								<i className="icon-calendar"></i>
-								Jul 2018 - Present
-							</li>
-
-							<li>
-								<i className="icon-location"></i>
-								Remote
-							</li>
-						</ul>
+						<ResumeEntry place="Remote" period="Jul 2018 - Present" />
 
 						<ul>
 							<li>
@@ -136,17 +135,7 @@ export const SectionResume: React.FC = () => (
 							3-11, <em>full-time</em>
 						</h4>
 
-						<ul className="c-resume__list">
-							<li>
-								<i className="icon-calendar"></i>
-								Jan 2018 - Present
-							</li>
-
-							<li>
-								<i className="icon-location"></i>
-								Varna, Bulgaria
-							</li>
-						</ul>
+						<ResumeEntry place="Varna, Bulgaria" period="Jan 2018 - Present" />
 
 						<ul>
 							<li>
@@ -169,17 +158,7 @@ export const SectionResume: React.FC = () => (
 							Toptal, <em>freelance</em>
 						</h4>
 
-						<ul className="c-resume__list">
-							<li>
-								<i className="icon-calendar"></i>
-								Jun 2018 - Present
-							</li>
-
-							<li>
-								<i className="icon-location"></i>
-								Remote
-							</li>
-						</ul>
+						<ResumeEntry place="Remote" period="Jun 2018 - Present" />
 
 						<ul>
 							<li>
@@ -198,17 +177,7 @@ export const SectionResume: React.FC = () => (
 							2create, <em>full-time</em>
 						</h4>
 
-						<ul className="c-resume__list">
-							<li>
-								<i className="icon-calendar"></i>
-								May 2012 - Jan 2018
-							</li>
-
-							<li>
-								<i className="icon-location"></i>
-								Varna, Bulgaria
-							</li>
-						</ul>
+						<ResumeEntry place="Varna, Bulgaria" period="May 2012 - Jan 2018" />
 
 						<ul>
 							<li>Worked for brands such as htmlBurger and htmlBoutique.</li>

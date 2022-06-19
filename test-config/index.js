@@ -1,10 +1,8 @@
-// @ts-nocheck
-const Enzyme = require('enzyme');
 const crypto = require('crypto');
-const Adapter = require('@wojtekmaj/enzyme-adapter-react-17');
 
-Enzyme.configure({
-	adapter: new Adapter()
+const defaultMock = () => ({
+	__esModule: true,
+	default: jest.fn()
 });
 
 // prettier-ignore
@@ -15,22 +13,20 @@ window.matchMedia = window.matchMedia || (() => ({
 }));
 
 window.crypto = {
+	// @ts-ignore
 	getRandomValues: buffer => crypto.randomFillSync(buffer)
 };
 
-jest.mock('../src/components/github-skyline', () => jest.fn(() => 'Github Skyline'));
+window.scrollTo = jest.fn();
 
-jest.mock('gsap/Draggable', () => ({
-	__esModule: true,
-	default: {
-		create: jest.fn()
-	}
-}));
-
-jest.mock('simplex-noise', () => ({
-	__esModule: true,
-	default: jest.fn()
-}));
+jest.mock('simplex-noise', defaultMock);
+jest.mock('@codersrank/summary/codersrank-summary.min', defaultMock);
+jest.mock('@codersrank/activity/codersrank-activity.min', defaultMock);
+jest.mock('@codersrank/timeline/codersrank-timeline.min', defaultMock);
+jest.mock('@codersrank/education/codersrank-education.min', defaultMock);
+jest.mock('@codersrank/portfolio/codersrank-portfolio.min', defaultMock);
+jest.mock('@codersrank/skills-chart/codersrank-skills-chart.min', defaultMock);
+jest.mock('@codersrank/work-experience/codersrank-work-experience.min', defaultMock);
 
 [
 	'react-syntax-highlighter/dist/esm/languages/hljs/javascript',
@@ -47,6 +43,18 @@ jest.mock('simplex-noise', () => ({
 		}))
 	}));
 });
+
+jest.mock('gsap/Draggable', () => ({
+	__esModule: true,
+	default: {
+		create: jest.fn()
+	}
+}));
+
+jest.mock('react-ts-github-calendar', () => ({
+	__esModule: true,
+	default: 'GitHubCalendar'
+}));
 
 jest.mock('react-syntax-highlighter/dist/esm/styles/prism', () =>
 	jest.fn(() => ({
@@ -65,27 +73,9 @@ jest.mock('../src/scripts/skills.ts', () => ({
 	drawSkills: jest.fn()
 }));
 
-[
-	'@codersrank/summary',
-	'@codersrank/timeline',
-	'@codersrank/activity',
-	'@codersrank/education',
-	'@codersrank/portfolio',
-	'@codersrank/skills-chart',
-	'@codersrank/work-experience'
-].forEach(module => {
-	jest.mock(module, () => ({
-		__esModule: true,
-		default: class {}
-	}));
-});
-
-jest.mock('react-ts-github-calendar', () => ({
-	__esModule: true,
-	default: 'GitHubCalendar'
-}));
-
 jest.mock('../src/scripts/gitlab-calendar', () => ({
 	__esModule: true,
 	default: 'GitLabCalendar'
 }));
+
+jest.mock('../src/components/github-skyline', () => jest.fn(() => 'Github Skyline'));

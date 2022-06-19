@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { Head } from '.';
 
 describe('Head component', () => {
 	it('Should render the Head component', () => {
-		const wrapper = shallow(<Head />);
+		const { asFragment } = render(<Head />);
 
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 });

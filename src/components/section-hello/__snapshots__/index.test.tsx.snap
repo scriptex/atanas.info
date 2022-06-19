@@ -1,201 +1,149 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SectionHello component Should handle lifecycle methods 1`] = `
-<SectionHello>
-  <Section
-    hasButton={false}
-    hasShell={true}
-    id="hello"
-    wrapperClassName="o-main--high"
+exports[`SectionHello component Should render the SectionHello component 1`] = `
+<DocumentFragment>
+  <main
+    class="o-main o-main--high"
   >
-    <main
-      className="o-main o-main--high"
+    <section
+      class="c-section c-section--hello"
+      id="hello"
     >
-      <section
-        className="c-section c-section--hello"
-        id="hello"
+      <div
+        class="o-shell"
       >
         <div
-          className="o-shell"
+          class="c-canvas"
+          id="canvas"
+        />
+        <div
+          class="c-slider"
         >
-          <SectionElements
-            hasButton={false}
-            hasShell={true}
-            id="hello"
-            wrapperClassName="o-main--high"
-          >
-            <div
-              className="c-canvas"
-              id="canvas"
-            />
-            <Slider>
-              <div
-                className="c-slider"
-              >
-                <h1>
-                  👋 Hello! 
-                  <br />
-                  I am Atanas Atanasov
-                </h1>
-                <h2>
-                  <span
-                    className="current"
-                    key="0"
-                  >
-                    lead front-end developer at E.ON
-                  </span>
-                  <span
-                    className=""
-                    key="1"
-                  >
-                    senior software engineer at Toptal
-                  </span>
-                  <span
-                    className=""
-                    key="2"
-                  >
-                    founding member at Braintrust
-                  </span>
-                  <span
-                    className=""
-                    key="3"
-                  >
-                    a TypeScript fanatic
-                  </span>
-                  <span
-                    className=""
-                    key="4"
-                  >
-                    a CSS wizard
-                  </span>
-                  <span
-                    className=""
-                    key="5"
-                  >
-                    a JavaScript tinkerer
-                  </span>
-                  <span
-                    className=""
-                    key="6"
-                  >
-                    a minimalist
-                  </span>
-                  <span
-                    className=""
-                    key="7"
-                  >
-                    an open source enthusiast
-                  </span>
-                  <span
-                    className=""
-                    key="8"
-                  >
-                    a maker of things
-                  </span>
-                  <span
-                    className=""
-                    key="9"
-                  >
-                    an a11y and UX advocate
-                  </span>
-                  <span
-                    className=""
-                    key="10"
-                  >
-                    a front-end magician
-                  </span>
-                  <span
-                    className=""
-                    key="11"
-                  >
-                    a bug fixer
-                  </span>
-                  <span
-                    className=""
-                    key="12"
-                  >
-                    a senior web developer
-                  </span>
-                  <span
-                    className=""
-                    key="13"
-                  >
-                    I am into data visualization
-                  </span>
-                  <span
-                    className=""
-                    key="14"
-                  >
-                    an UI architect
-                  </span>
-                  <span
-                    className=""
-                    key="15"
-                  >
-                    I am obsessed with quality
-                  </span>
-                  <span
-                    className=""
-                    key="16"
-                  >
-                    a web standards fanatic
-                  </span>
-                  <span
-                    className=""
-                    key="17"
-                  >
-                    a JavaScript master
-                  </span>
-                  <span
-                    className=""
-                    key="18"
-                  >
-                    a NodeJS hacker
-                  </span>
-                  <span
-                    className=""
-                    key="19"
-                  >
-                    a father
-                  </span>
-                  <span
-                    className=""
-                    key="20"
-                  >
-                    a husband
-                  </span>
-                </h2>
-              </div>
-            </Slider>
-          </SectionElements>
+          <h1>
+            👋 Hello! 
+            <br />
+            I am Atanas Atanasov
+          </h1>
+          <h2>
+            <span
+              class="current"
+            >
+              lead front-end developer at E.ON
+            </span>
+            <span
+              class=""
+            >
+              senior software engineer at Toptal
+            </span>
+            <span
+              class=""
+            >
+              founding member at Braintrust
+            </span>
+            <span
+              class=""
+            >
+              a TypeScript fanatic
+            </span>
+            <span
+              class=""
+            >
+              a CSS wizard
+            </span>
+            <span
+              class=""
+            >
+              a JavaScript tinkerer
+            </span>
+            <span
+              class=""
+            >
+              a minimalist
+            </span>
+            <span
+              class=""
+            >
+              an open source enthusiast
+            </span>
+            <span
+              class=""
+            >
+              a maker of things
+            </span>
+            <span
+              class=""
+            >
+              an a11y and UX advocate
+            </span>
+            <span
+              class=""
+            >
+              a front-end magician
+            </span>
+            <span
+              class=""
+            >
+              a bug fixer
+            </span>
+            <span
+              class=""
+            >
+              a senior web developer
+            </span>
+            <span
+              class=""
+            >
+              I am into data visualization
+            </span>
+            <span
+              class=""
+            >
+              an UI architect
+            </span>
+            <span
+              class=""
+            >
+              I am obsessed with quality
+            </span>
+            <span
+              class=""
+            >
+              a web standards fanatic
+            </span>
+            <span
+              class=""
+            >
+              a JavaScript master
+            </span>
+            <span
+              class=""
+            >
+              a NodeJS hacker
+            </span>
+            <span
+              class=""
+            >
+              a father
+            </span>
+            <span
+              class=""
+            >
+              a husband
+            </span>
+          </h2>
         </div>
-      </section>
-    </main>
-  </Section>
-</SectionHello>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
 `;
 
-exports[`SectionHello component Should handle lifecycle methods 2`] = `null`;
+exports[`SectionHello component Should render the SectionHello component 2`] = `<DocumentFragment />`;
 
-exports[`SectionHello component Should render the SectionHello component 1`] = `
-<Section
-  hasButton={false}
-  hasShell={true}
-  id="hello"
-  wrapperClassName="o-main--high"
->
+exports[`Slider component Should render the Slider component 1`] = `
+<DocumentFragment>
   <div
-    className="c-canvas"
-    id="canvas"
-  />
-  <Slider />
-</Section>
-`;
-
-exports[`Slider component Should handle lifecycle methods 1`] = `
-<Slider>
-  <div
-    className="c-slider"
+    class="c-slider"
   >
     <h1>
       👋 Hello! 
@@ -204,274 +152,113 @@ exports[`Slider component Should handle lifecycle methods 1`] = `
     </h1>
     <h2>
       <span
-        className="current"
-        key="0"
+        class="current"
       >
         lead front-end developer at E.ON
       </span>
       <span
-        className=""
-        key="1"
+        class=""
       >
         senior software engineer at Toptal
       </span>
       <span
-        className=""
-        key="2"
+        class=""
       >
         founding member at Braintrust
       </span>
       <span
-        className=""
-        key="3"
+        class=""
       >
         a TypeScript fanatic
       </span>
       <span
-        className=""
-        key="4"
+        class=""
       >
         a CSS wizard
       </span>
       <span
-        className=""
-        key="5"
+        class=""
       >
         a JavaScript tinkerer
       </span>
       <span
-        className=""
-        key="6"
+        class=""
       >
         a minimalist
       </span>
       <span
-        className=""
-        key="7"
+        class=""
       >
         an open source enthusiast
       </span>
       <span
-        className=""
-        key="8"
+        class=""
       >
         a maker of things
       </span>
       <span
-        className=""
-        key="9"
+        class=""
       >
         an a11y and UX advocate
       </span>
       <span
-        className=""
-        key="10"
+        class=""
       >
         a front-end magician
       </span>
       <span
-        className=""
-        key="11"
+        class=""
       >
         a bug fixer
       </span>
       <span
-        className=""
-        key="12"
+        class=""
       >
         a senior web developer
       </span>
       <span
-        className=""
-        key="13"
+        class=""
       >
         I am into data visualization
       </span>
       <span
-        className=""
-        key="14"
+        class=""
       >
         an UI architect
       </span>
       <span
-        className=""
-        key="15"
+        class=""
       >
         I am obsessed with quality
       </span>
       <span
-        className=""
-        key="16"
+        class=""
       >
         a web standards fanatic
       </span>
       <span
-        className=""
-        key="17"
+        class=""
       >
         a JavaScript master
       </span>
       <span
-        className=""
-        key="18"
+        class=""
       >
         a NodeJS hacker
       </span>
       <span
-        className=""
-        key="19"
+        class=""
       >
         a father
       </span>
       <span
-        className=""
-        key="20"
+        class=""
       >
         a husband
       </span>
     </h2>
   </div>
-</Slider>
+</DocumentFragment>
 `;
 
-exports[`Slider component Should handle lifecycle methods 2`] = `null`;
-
-exports[`Slider component Should render the Slider component 1`] = `
-<div
-  className="c-slider"
->
-  <h1>
-    👋 Hello! 
-    <br />
-    I am Atanas Atanasov
-  </h1>
-  <h2>
-    <span
-      className="current"
-      key="0"
-    >
-      lead front-end developer at E.ON
-    </span>
-    <span
-      className=""
-      key="1"
-    >
-      senior software engineer at Toptal
-    </span>
-    <span
-      className=""
-      key="2"
-    >
-      founding member at Braintrust
-    </span>
-    <span
-      className=""
-      key="3"
-    >
-      a TypeScript fanatic
-    </span>
-    <span
-      className=""
-      key="4"
-    >
-      a CSS wizard
-    </span>
-    <span
-      className=""
-      key="5"
-    >
-      a JavaScript tinkerer
-    </span>
-    <span
-      className=""
-      key="6"
-    >
-      a minimalist
-    </span>
-    <span
-      className=""
-      key="7"
-    >
-      an open source enthusiast
-    </span>
-    <span
-      className=""
-      key="8"
-    >
-      a maker of things
-    </span>
-    <span
-      className=""
-      key="9"
-    >
-      an a11y and UX advocate
-    </span>
-    <span
-      className=""
-      key="10"
-    >
-      a front-end magician
-    </span>
-    <span
-      className=""
-      key="11"
-    >
-      a bug fixer
-    </span>
-    <span
-      className=""
-      key="12"
-    >
-      a senior web developer
-    </span>
-    <span
-      className=""
-      key="13"
-    >
-      I am into data visualization
-    </span>
-    <span
-      className=""
-      key="14"
-    >
-      an UI architect
-    </span>
-    <span
-      className=""
-      key="15"
-    >
-      I am obsessed with quality
-    </span>
-    <span
-      className=""
-      key="16"
-    >
-      a web standards fanatic
-    </span>
-    <span
-      className=""
-      key="17"
-    >
-      a JavaScript master
-    </span>
-    <span
-      className=""
-      key="18"
-    >
-      a NodeJS hacker
-    </span>
-    <span
-      className=""
-      key="19"
-    >
-      a father
-    </span>
-    <span
-      className=""
-      key="20"
-    >
-      a husband
-    </span>
-  </h2>
-</div>
-`;
+exports[`Slider component Should render the Slider component 2`] = `<DocumentFragment />`;

@@ -1,22 +1,20 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { ExternalLink } from '.';
 
 describe('ExternalLink component', () => {
 	it('Should render the ExternalLink component', () => {
-		const wrapper = shallow(<ExternalLink href="https://google.com">Link</ExternalLink>);
+		const { asFragment, rerender } = render(<ExternalLink href="https://google.com">Link</ExternalLink>);
 
-		expect(wrapper).toMatchSnapshot();
-	});
+		expect(asFragment()).toMatchSnapshot();
 
-	it('Should render the ExternalLink component with more attributes', () => {
-		const wrapper = shallow(
+		rerender(
 			<ExternalLink href="https://google.com" className="link">
 				Link
 			</ExternalLink>
 		);
 
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 });

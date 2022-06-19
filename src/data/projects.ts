@@ -21,7 +21,7 @@ export const projects: Project[] = [
 		url: 'https://app.home.eon.com/',
 		image: 'images/temp/E.ON-Home.png',
 		title: 'E.ON Home',
-		description: 'TypeScript, SCSS, React, Redux, MS Azure, AWS, NodeJS, Jest, Enzyme',
+		description: 'TypeScript, SCSS, React, Redux, MS Azure, AWS, NodeJS, Jest, React Testing Library',
 		skip: true
 	},
 	{
@@ -42,7 +42,7 @@ export const projects: Project[] = [
 		url: 'https://app.home.fotontechnik.pl/',
 		image: 'images/temp/foton-home.png',
 		title: 'Foton Home',
-		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS, Jest, Enzyme',
+		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS, Jest, React Testing Library',
 		skip: true
 	},
 	{

@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { mount, shallow } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { render } from '@testing-library/react';
 
 import { Props, Section, SectionElements } from '.';
 
@@ -33,13 +34,13 @@ const test = (title: string, Component: React.FC<Readonly<Props>>, props: Omit<P
 	);
 
 	it(title, () => {
-		const wrapper = shallow(
+		const { asFragment } = render(
 			<Component {...props}>
 				<Children />
 			</Component>
 		);
 
-		expect(wrapper).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 };
 
@@ -81,14 +82,20 @@ Object.values(components).forEach((value: Component) => suite(value.component, v
 
 describe('Section component state management', () => {
 	it('Should handle state management', () => {
-		const wrapper = mount(
+		const { asFragment, container } = render(
 			<Section id="test" hasButton={true} actions>
 				Test
 			</Section>
 		);
 
-		wrapper.find('.c-btn').forEach(button => {
-			button.simulate('click');
+		expect(asFragment()).toMatchSnapshot();
+
+		act(() => {
+			container.querySelectorAll<HTMLElement>('.c-btn').forEach(button => {
+				button.click();
+
+				expect(asFragment()).toMatchSnapshot();
+			});
 		});
 	});
 });

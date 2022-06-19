@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { mount, shallow } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import { render } from '@testing-library/react';
 
 import { SectionPortfolio } from '.';
 
@@ -83,17 +84,16 @@ jest.mock('../../data/projects-list.json', () => ({
 
 describe('SectionPortfolio component', () => {
 	it('Should render the SectionPortfolio component', () => {
-		const wrapper = shallow(<SectionPortfolio />);
+		const { asFragment, container } = render(<SectionPortfolio />);
 
-		expect(wrapper).toMatchSnapshot();
-	});
+		expect(asFragment()).toMatchSnapshot();
 
-	it('Should handle state changes in the SectionPortfolio component', () => {
-		const wrapper = mount(<SectionPortfolio />);
+		act(() => {
+			container.querySelectorAll<HTMLElement>('.c-section__actions .c-btn').forEach(button => {
+				button.click();
 
-		wrapper.find('.c-section__actions .c-btn').forEach(button => {
-			button.simulate('click');
-			expect(wrapper).toMatchSnapshot();
+				expect(asFragment()).toMatchSnapshot();
+			});
 		});
 	});
 });

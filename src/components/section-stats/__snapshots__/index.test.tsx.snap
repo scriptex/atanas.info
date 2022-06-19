@@ -1,190 +1,142 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GithubStats component Should render the GithubStats component 1`] = `
-<Fragment>
+<DocumentFragment>
   <div
-    className="c-section__entry c-section__entry--no-background"
+    class="c-section__entry c-section__entry--no-background"
   >
     <div
-      className="o-shell"
+      class="o-shell"
     >
       <h2>
         Github profile statistics
       </h2>
       <ul
-        className="c-section__list"
+        class="c-section__list"
       >
-        <li
-          key="0"
-        >
+        <li>
           <span>
-            Used languages
-            :
+            Used languages:
           </span>
           <strong>
             JavaScript, TypeScript
           </strong>
         </li>
-        <li
-          key="1"
-        >
+        <li>
           <span>
-            Followers
-            :
+            Followers:
           </span>
           <strong>
             50
           </strong>
         </li>
-        <li
-          key="2"
-        >
+        <li>
           <span>
-            Following
-            :
+            Following:
           </span>
           <strong>
             154
           </strong>
         </li>
-        <li
-          key="3"
-        >
+        <li>
           <span>
-            Joined date
-            :
+            Joined date:
           </span>
           <strong>
             Mock date
           </strong>
         </li>
-        <li
-          key="4"
-        >
+        <li>
           <span>
-            Updated at
-            :
+            Updated at:
           </span>
           <strong>
             Mock date
           </strong>
         </li>
-        <li
-          key="5"
-        >
+        <li>
           <span>
-            Last active
-            :
+            Last active:
           </span>
           <strong>
             Mock date
           </strong>
         </li>
-        <li
-          key="6"
-        >
+        <li>
           <span>
-            Total repositories
-            :
+            Total repositories:
           </span>
           <strong>
             2
           </strong>
         </li>
-        <li
-          key="7"
-        >
+        <li>
           <span>
-            Private repositories
-            :
+            Private repositories:
           </span>
           <strong>
             5
           </strong>
         </li>
-        <li
-          key="8"
-        >
+        <li>
           <span>
-            Public repositories
-            :
+            Public repositories:
           </span>
           <strong>
             47
           </strong>
         </li>
-        <li
-          key="9"
-        >
+        <li>
           <span>
-            Organizations repositories
-            :
+            Organizations repositories:
           </span>
           <strong>
             -50
           </strong>
         </li>
-        <li
-          key="10"
-        >
+        <li>
           <span>
-            Total gists
-            :
+            Total gists:
           </span>
           <strong>
             28
           </strong>
         </li>
-        <li
-          key="11"
-        >
+        <li>
           <span>
-            Private gists
-            :
+            Private gists:
           </span>
           <strong>
             8
           </strong>
         </li>
-        <li
-          key="12"
-        >
+        <li>
           <span>
-            Public gists
-            :
+            Public gists:
           </span>
           <strong>
             20
           </strong>
         </li>
-        <li
-          key="13"
-        >
+        <li>
           <span>
-            Total contributions
-            :
+            Total contributions:
           </span>
           <strong>
             301
           </strong>
         </li>
-        <li
-          key="14"
-        >
+        <li>
           <span>
-            Total stars
-            :
+            Total stars:
           </span>
           <strong>
             4
           </strong>
         </li>
-        <li
-          key="15"
-        >
+        <li>
           <span>
-            Total issues
-            :
+            Total issues:
           </span>
           <strong>
             3
@@ -194,37 +146,35 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
     </div>
   </div>
   <div
-    className="c-section__entry"
+    class="c-section__entry"
   >
     <small
-      className="c-section__stamp"
+      class="c-section__stamp"
     >
-      Last updated: 
-      Mock date
+      Last updated: Mock date
     </small>
     <div
-      className="o-shell"
+      class="o-shell"
     >
       <h2>
         Github contributions calendar
       </h2>
       <div
-        className="c-calendar__outer"
+        class="c-calendar__outer"
       >
         <div
-          className="c-calendar c-calendar--github"
+          class="c-calendar c-calendar--github"
         >
-          <GitHubCalendar
-            tooltips={true}
-            userName="scriptex"
-          />
+          <div>
+            Mocked Github Calendar
+          </div>
         </div>
       </div>
       <div
-        className="c-skyline"
+        class="c-skyline"
       >
         <nav
-          className="c-skyline__nav"
+          class="c-skyline__nav"
         >
           <h3>
             Previous years Github contributions 
@@ -234,92 +184,65 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
             </small>
           </h3>
           <ul>
-            <li
-              key="0"
-            >
+            <li>
               <button
-                className="c-btn c-btn--small"
-                onClick={[Function]}
+                class="c-btn c-btn--small"
               >
                 2013
               </button>
             </li>
-            <li
-              key="1"
-            >
+            <li>
               <button
-                className="c-btn c-btn--small"
-                onClick={[Function]}
+                class="c-btn c-btn--small"
               >
                 2014
               </button>
             </li>
-            <li
-              key="2"
-            >
+            <li>
               <button
-                className="c-btn c-btn--small"
-                onClick={[Function]}
+                class="c-btn c-btn--small"
               >
                 2015
               </button>
             </li>
-            <li
-              key="3"
-            >
+            <li>
               <button
-                className="c-btn c-btn--small"
-                onClick={[Function]}
+                class="c-btn c-btn--small"
               >
                 2016
               </button>
             </li>
-            <li
-              key="4"
-            >
+            <li>
               <button
-                className="c-btn c-btn--small"
-                onClick={[Function]}
+                class="c-btn c-btn--small"
               >
                 2017
               </button>
             </li>
-            <li
-              key="5"
-            >
+            <li>
               <button
-                className="c-btn c-btn--small"
-                onClick={[Function]}
+                class="c-btn c-btn--small"
               >
                 2018
               </button>
             </li>
-            <li
-              key="6"
-            >
+            <li>
               <button
-                className="c-btn c-btn--small"
-                onClick={[Function]}
+                class="c-btn c-btn--small"
               >
                 2019
               </button>
             </li>
-            <li
-              key="7"
-            >
+            <li>
               <button
-                className="c-btn c-btn--small"
-                onClick={[Function]}
+                class="c-btn c-btn--small"
               >
                 2020
               </button>
             </li>
-            <li
-              key="8"
-            >
+            <li>
               <button
-                className="c-btn c-btn--small"
-                onClick={[Function]}
+                class="c-btn c-btn--small"
               >
                 2021
               </button>
@@ -329,139 +252,106 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
       </div>
     </div>
   </div>
-</Fragment>
+</DocumentFragment>
 `;
 
 exports[`GitlabStats component Should render the GitlabStats component 1`] = `
-<Fragment>
+<DocumentFragment>
   <div
-    className="c-section__entry c-section__entry--no-background"
+    class="c-section__entry c-section__entry--no-background"
   >
     <div
-      className="o-shell"
+      class="o-shell"
     >
       <h2>
         Gitlab profile statistics
       </h2>
       <ul
-        className="c-section__list"
+        class="c-section__list"
       >
-        <li
-          key="0"
-        >
+        <li>
           <span>
-            Used languages
-            :
+            Used languages:
           </span>
           <strong>
             JavaScript, HTML, CSS, PHP, Shell
           </strong>
         </li>
-        <li
-          key="1"
-        >
+        <li>
           <span>
-            Joined date
-            :
+            Joined date:
           </span>
           <strong>
             Mock date
           </strong>
         </li>
-        <li
-          key="2"
-        >
+        <li>
           <span>
-            Last active
-            :
+            Last active:
           </span>
           <strong>
             Mock date
           </strong>
         </li>
-        <li
-          key="3"
-        >
+        <li>
           <span>
-            Last year contributions
-            :
+            Last year contributions:
           </span>
           <strong>
             105
           </strong>
         </li>
-        <li
-          key="4"
-        >
+        <li>
           <span>
-            Total repositories
-            :
+            Total repositories:
           </span>
           <strong>
             1
           </strong>
         </li>
-        <li
-          key="5"
-        >
+        <li>
           <span>
-            Public repositories
-            :
+            Public repositories:
           </span>
           <strong>
             0
           </strong>
         </li>
-        <li
-          key="6"
-        >
+        <li>
           <span>
-            Private repositories
-            :
+            Private repositories:
           </span>
           <strong>
             1
           </strong>
         </li>
-        <li
-          key="7"
-        >
+        <li>
           <span>
-            Personal repositories
-            :
+            Personal repositories:
           </span>
           <strong>
             0
           </strong>
         </li>
-        <li
-          key="8"
-        >
+        <li>
           <span>
-            Organizations repositories
-            :
+            Organizations repositories:
           </span>
           <strong>
             1
           </strong>
         </li>
-        <li
-          key="9"
-        >
+        <li>
           <span>
-            Total stars
-            :
+            Total stars:
           </span>
           <strong>
             0
           </strong>
         </li>
-        <li
-          key="10"
-        >
+        <li>
           <span>
-            Total issues
-            :
+            Total issues:
           </span>
           <strong>
             0
@@ -471,28 +361,27 @@ exports[`GitlabStats component Should render the GitlabStats component 1`] = `
     </div>
   </div>
   <div
-    className="c-section__entry"
+    class="c-section__entry"
   >
     <small
-      className="c-section__stamp"
+      class="c-section__stamp"
     >
-      Last updated: 
-      Mock date
+      Last updated: Mock date
     </small>
     <div
-      className="o-shell"
+      class="o-shell"
     >
       <h2>
         Gitlab contributions calendars
       </h2>
       <div
-        className="c-calendar__outer"
+        class="c-calendar__outer"
       >
         <div
-          className="c-calendar c-calendar--gitlab"
+          class="c-calendar c-calendar--gitlab"
         >
           <div
-            className="c-calendar__entry"
+            class="c-calendar__entry"
           >
             <h3>
               Public Gitlab profile
@@ -500,7 +389,7 @@ exports[`GitlabStats component Should render the GitlabStats component 1`] = `
             <div />
           </div>
           <div
-            className="c-calendar__entry"
+            class="c-calendar__entry"
           >
             <h3>
               Private Gitlab profile
@@ -511,128 +400,509 @@ exports[`GitlabStats component Should render the GitlabStats component 1`] = `
       </div>
     </div>
   </div>
-</Fragment>
+</DocumentFragment>
 `;
 
 exports[`SectionStats component Should render the SectionStats component 1`] = `
-<Section
-  className=" circles"
-  hasButton={true}
-  hasShell={false}
-  id="stats"
->
-  <header
-    className="c-section__head"
+<DocumentFragment>
+  <main
+    class="o-main "
   >
-    <div
-      className="o-shell"
+    <section
+      class="c-section c-section--stats circles"
+      id="stats"
     >
-      <h1>
-        Stats
-      </h1>
-    </div>
-  </header>
-  <GithubStats
-    data={
-      Object {
-        "calendar": Object {
-          "2019-06-23": Object {
-            "color": "#c6e48b",
-            "count": 10,
-          },
-          "2019-06-24": Object {
-            "color": "#c6e48b",
-            "count": 9,
-          },
-        },
-        "general": Object {
-          "createdAt": "2013-06-03T18:11:48Z",
-          "followers": 50,
-          "following": 154,
-          "privateGists": 8,
-          "privateRepos": 5,
-          "publicGists": 20,
-          "publicRepos": 47,
-          "updatedAt": "2020-06-23T10:52:09Z",
-        },
-        "repositories": Array [
-          Object {
-            "contributions": Array [
-              Object {
-                "count": 301,
-                "user": "scriptex",
-              },
-            ],
-            "createdAt": "2017-01-24T10:26:06Z",
-            "fork": false,
-            "issues": 1,
-            "language": "JavaScript",
-            "name": "atanas.info",
-            "private": false,
-            "size": 2042,
-            "stargazers": 4,
-            "updated_at": "2020-06-23T14:42:49Z",
-            "watchers": 4,
-          },
-          Object {
-            "contributions": Array [
-              Object {
-                "count": 200,
-                "user": "test",
-              },
-            ],
-            "createdAt": "2017-01-24T10:26:06Z",
-            "fork": false,
-            "issues": 2,
-            "language": "TypeScript",
-            "name": "test",
-            "private": true,
-            "size": 1024,
-            "stargazers": 0,
-            "updated_at": "2020-06-23T14:42:49Z",
-            "watchers": 0,
-          },
-        ],
-        "updated": "2020-11-26T14:14:22.858Z",
-      }
-    }
-  />
-  <GitlabStats
-    data={
-      Object {
-        "calendar": Object {
-          "2019-10-26": 50,
-          "2019-11-07": 34,
-          "2020-03-06": 21,
-        },
-        "general": Object {
-          "createdAt": "2018-01-03T11:47:34.435Z",
-          "repos": 101,
-          "updatedAt": "2020-06-24T13:19:32.897Z",
-        },
-        "repositories": Array [
-          Object {
-            "createdAt": "2019-08-14T06:13:34.958Z",
-            "fork": 0,
-            "issues": 0,
-            "languages": Object {
-              "CSS": 25.79,
-              "HTML": 26.07,
-              "JavaScript": 47.72,
-              "PHP": 0.41,
-              "Shell": 0.01,
-            },
-            "name": "atanas.info",
-            "private": true,
-            "size": 18926796,
-            "stargazers": 0,
-            "updated_at": "2019-08-14T06:13:34.958Z",
-          },
-        ],
-        "updated": "2020-11-26T14:14:22.858Z",
-      }
-    }
-  />
-  <NPMStats />
-</Section>
+      <header
+        class="c-section__head"
+      >
+        <div
+          class="o-shell"
+        >
+          <h1>
+            Stats
+          </h1>
+        </div>
+      </header>
+      <div
+        class="c-section__entry c-section__entry--no-background"
+      >
+        <div
+          class="o-shell"
+        >
+          <h2>
+            Github profile statistics
+          </h2>
+          <ul
+            class="c-section__list"
+          >
+            <li>
+              <span>
+                Used languages:
+              </span>
+              <strong>
+                JavaScript, TypeScript
+              </strong>
+            </li>
+            <li>
+              <span>
+                Followers:
+              </span>
+              <strong>
+                50
+              </strong>
+            </li>
+            <li>
+              <span>
+                Following:
+              </span>
+              <strong>
+                154
+              </strong>
+            </li>
+            <li>
+              <span>
+                Joined date:
+              </span>
+              <strong>
+                Mock date
+              </strong>
+            </li>
+            <li>
+              <span>
+                Updated at:
+              </span>
+              <strong>
+                Mock date
+              </strong>
+            </li>
+            <li>
+              <span>
+                Last active:
+              </span>
+              <strong>
+                Mock date
+              </strong>
+            </li>
+            <li>
+              <span>
+                Total repositories:
+              </span>
+              <strong>
+                2
+              </strong>
+            </li>
+            <li>
+              <span>
+                Private repositories:
+              </span>
+              <strong>
+                5
+              </strong>
+            </li>
+            <li>
+              <span>
+                Public repositories:
+              </span>
+              <strong>
+                47
+              </strong>
+            </li>
+            <li>
+              <span>
+                Organizations repositories:
+              </span>
+              <strong>
+                -50
+              </strong>
+            </li>
+            <li>
+              <span>
+                Total gists:
+              </span>
+              <strong>
+                28
+              </strong>
+            </li>
+            <li>
+              <span>
+                Private gists:
+              </span>
+              <strong>
+                8
+              </strong>
+            </li>
+            <li>
+              <span>
+                Public gists:
+              </span>
+              <strong>
+                20
+              </strong>
+            </li>
+            <li>
+              <span>
+                Total contributions:
+              </span>
+              <strong>
+                301
+              </strong>
+            </li>
+            <li>
+              <span>
+                Total stars:
+              </span>
+              <strong>
+                4
+              </strong>
+            </li>
+            <li>
+              <span>
+                Total issues:
+              </span>
+              <strong>
+                3
+              </strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="c-section__entry"
+      >
+        <small
+          class="c-section__stamp"
+        >
+          Last updated: Mock date
+        </small>
+        <div
+          class="o-shell"
+        >
+          <h2>
+            Github contributions calendar
+          </h2>
+          <div
+            class="c-calendar__outer"
+          >
+            <div
+              class="c-calendar c-calendar--github"
+            >
+              <div>
+                Mocked Github Calendar
+              </div>
+            </div>
+          </div>
+          <div
+            class="c-skyline"
+          >
+            <nav
+              class="c-skyline__nav"
+            >
+              <h3>
+                Previous years Github contributions 
+                <br />
+                <small>
+                  (requires WebGL)
+                </small>
+              </h3>
+              <ul>
+                <li>
+                  <button
+                    class="c-btn c-btn--small"
+                  >
+                    2013
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="c-btn c-btn--small"
+                  >
+                    2014
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="c-btn c-btn--small"
+                  >
+                    2015
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="c-btn c-btn--small"
+                  >
+                    2016
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="c-btn c-btn--small"
+                  >
+                    2017
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="c-btn c-btn--small"
+                  >
+                    2018
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="c-btn c-btn--small"
+                  >
+                    2019
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="c-btn c-btn--small"
+                  >
+                    2020
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="c-btn c-btn--small"
+                  >
+                    2021
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div
+        class="c-section__entry c-section__entry--no-background"
+      >
+        <div
+          class="o-shell"
+        >
+          <h2>
+            Gitlab profile statistics
+          </h2>
+          <ul
+            class="c-section__list"
+          >
+            <li>
+              <span>
+                Used languages:
+              </span>
+              <strong>
+                JavaScript, HTML, CSS, PHP, Shell
+              </strong>
+            </li>
+            <li>
+              <span>
+                Joined date:
+              </span>
+              <strong>
+                Mock date
+              </strong>
+            </li>
+            <li>
+              <span>
+                Last active:
+              </span>
+              <strong>
+                Mock date
+              </strong>
+            </li>
+            <li>
+              <span>
+                Last year contributions:
+              </span>
+              <strong>
+                105
+              </strong>
+            </li>
+            <li>
+              <span>
+                Total repositories:
+              </span>
+              <strong>
+                1
+              </strong>
+            </li>
+            <li>
+              <span>
+                Public repositories:
+              </span>
+              <strong>
+                0
+              </strong>
+            </li>
+            <li>
+              <span>
+                Private repositories:
+              </span>
+              <strong>
+                1
+              </strong>
+            </li>
+            <li>
+              <span>
+                Personal repositories:
+              </span>
+              <strong>
+                0
+              </strong>
+            </li>
+            <li>
+              <span>
+                Organizations repositories:
+              </span>
+              <strong>
+                1
+              </strong>
+            </li>
+            <li>
+              <span>
+                Total stars:
+              </span>
+              <strong>
+                0
+              </strong>
+            </li>
+            <li>
+              <span>
+                Total issues:
+              </span>
+              <strong>
+                0
+              </strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="c-section__entry"
+      >
+        <small
+          class="c-section__stamp"
+        >
+          Last updated: Mock date
+        </small>
+        <div
+          class="o-shell"
+        >
+          <h2>
+            Gitlab contributions calendars
+          </h2>
+          <div
+            class="c-calendar__outer"
+          >
+            <div
+              class="c-calendar c-calendar--gitlab"
+            >
+              <div
+                class="c-calendar__entry"
+              >
+                <h3>
+                  Public Gitlab profile
+                </h3>
+                <div />
+              </div>
+              <div
+                class="c-calendar__entry"
+              >
+                <h3>
+                  Private Gitlab profile
+                </h3>
+                <div />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="c-section__actions"
+      >
+        <button
+          class="c-btn "
+          type="button"
+        >
+          Get in touch
+        </button>
+        <ul
+          class="c-section__actions-list"
+        >
+          <li>
+            <button
+              class="c-btn c-section__actions-close"
+              type="button"
+            >
+              Close
+            </button>
+          </li>
+          <li>
+            <button
+              class="c-btn "
+              type="button"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  xlink:href="#svg-email"
+                />
+              </svg>
+              <span>
+                Contact me
+              </span>
+              <strong>
+                directly
+              </strong>
+            </button>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://app.usebraintrust.com/talent/782/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  xlink:href="#svg-braintrust"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Braintrust
+              </strong>
+            </a>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://www.toptal.com/resume/atanas-atanasov"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  xlink:href="#svg-toptal"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Toptal
+              </strong>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
 `;
