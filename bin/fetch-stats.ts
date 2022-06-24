@@ -11,6 +11,10 @@ interface EndpointConfig {
 	readonly init: RequestInit;
 }
 
+interface VueDecoratedElement extends Element {
+	__vue__: any;
+}
+
 const ENDPOINTS: Record<string, EndpointConfig> = {
 	npm: {
 		url: 'https://api.npms.io/v2/search?q=maintainer:scriptex&size=100&from=0',
@@ -68,7 +72,7 @@ const getDataFromWebsite = async (url: EndpointConfig['url']): Promise<Record<st
 	await page.goto(url, { waitUntil: 'networkidle2' });
 	await page.waitForTimeout(5000);
 
-	const element = await page.$('#__nuxt');
+	const element = (await page.$('#__nuxt')) as unknown as VueDecoratedElement;
 
 	let result = {};
 
