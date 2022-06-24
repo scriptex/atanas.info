@@ -6133,10 +6133,10 @@ detect-newline@^3.0.0:
   resolved "https://registry.yarnpkg.com/detect-newline/-/detect-newline-3.1.0.tgz#576f5dfc63ae1a192ff192d8ad3af6308991b651"
   integrity sha512-TLz+x/vEXm/Y7P7wn1EJFNLxYpUD4TgMosxY6fAVJUnJMbupHBOncxyWUG9OpTaH9EBD7uFI5LfEgmMOc54DsA==
 
-devtools-protocol@0.0.1001819:
-  version "0.0.1001819"
-  resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.1001819.tgz#0a98f44cefdb02cc684f3d5e6bd898a1690231d9"
-  integrity sha512-G6OsIFnv/rDyxSqBa2lDLR6thp9oJioLsb2Gl+LbQlyoA9/OBAkrTU9jiCcQ8Pnh7z4d6slDiLaogR5hzgJLmQ==
+devtools-protocol@0.0.1011705:
+  version "0.0.1011705"
+  resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.1011705.tgz#2582ed29f84848df83fba488122015540a744539"
+  integrity sha512-OKvTvu9n3swmgYshvsyVHYX0+aPzCoYUnyXUacfQMmFtBtBKewV/gT4I9jkAbpTqtTi2E4S9MXLlvzBDUlqg0Q==
 
 devtools-protocol@0.0.818844:
   version "0.0.818844"
@@ -11752,14 +11752,14 @@ pupa@^2.0.1, pupa@^2.1.1:
   dependencies:
     escape-goat "^2.0.0"
 
-puppeteer@15.0.2:
-  version "15.0.2"
-  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-15.0.2.tgz#59ec1f256547651dec1444941513a323211951b2"
-  integrity sha512-7gJkr2skctdyRn9hACFw8olqtbnUXxT7LZ2dQT5krUgB30TsAUZ5c/NDQ/4H3514IrDB9DmKqZGHT0I369SvAQ==
+puppeteer@15.1.0:
+  version "15.1.0"
+  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-15.1.0.tgz#5f225d7662f0f23ca49979797fc0853d23ec47a0"
+  integrity sha512-AZLQs6QB7tcYV4r7SRh8tN1OyTGI1hUBy5FDyd9Ry5wyfo1h2Tgl1uhT49sG2T8jI6JFuBXr+ratj9+zvNlx2g==
   dependencies:
     cross-fetch "3.1.5"
     debug "4.3.4"
-    devtools-protocol "0.0.1001819"
+    devtools-protocol "0.0.1011705"
     extract-zip "2.0.1"
     https-proxy-agent "5.0.1"
     pkg-dir "4.2.0"
