@@ -1,5 +1,5 @@
 {
-	"extends": ["config:base", ":disableDependencyDashboard"],
+	"extends": ["config:base", ":automergePatch", ":automergeMinor", ":automergeBranch", ":disableDependencyDashboard"],
 	"assignees": ["@scriptex"],
 	"labels": ["dependencies"],
 	"rebaseWhen": "conflicted",
