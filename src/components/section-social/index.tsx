@@ -8,30 +8,26 @@ import { useScript, isPrerendering } from '../../scripts/shared';
 import { Lines, Section, ExternalLink } from '..';
 
 type TopAlbum = typeof lastFm['topAlbums'][0];
-type LastFMData = typeof lastFm & { error: string };
 type WeeklyAlbumChart = typeof lastFm['weeklyAlbumChart'][0];
 
 const filteredData = (data: TopAlbum[] | WeeklyAlbumChart[]) =>
 	data
-		.filter((album: TopAlbum | WeeklyAlbumChart) => !!album.images[2]['#text'])
+		.filter((album: TopAlbum | WeeklyAlbumChart) => !!album?.images[2]['#text'])
 		.map(album => ({
-			alt: album.name,
-			image: album.images[2]['#text'],
+			alt: album?.name,
+			image: album?.images[2]['#text'],
 			content: (
 				<>
-					<strong>{album.name}</strong>
+					<strong>{album?.name}</strong>
 
-					<span>{album.artist}</span>
+					<span>{album?.artist}</span>
 				</>
 			)
 		}));
 
 // codebeat:disable[ABC,LOC,BLOCK_NESTING]
 export const SectionSocial: React.FC = () => {
-	const error = (lastFm as LastFMData).error;
-	const updated = lastFm.updated;
-	const topAlbums = lastFm.topAlbums;
-	const weeklyAlbumChart = lastFm.weeklyAlbumChart;
+	const { error, updated, topAlbums, weeklyAlbumChart } = lastFm;
 
 	if (!isPrerendering) {
 		useScript('https://profile.codersrank.io/widget/widget.js');

@@ -40,17 +40,18 @@ export const getLastFMInsights = async (): Promise<void> => {
 			file,
 			JSON.stringify(
 				{
-					weeklyAlbumChart: weeklyAlbumChart.map((item: any) => ({
-						name: item.name,
-						images: item.apiDetails.album.image,
-						artist: item.artist['#text']
-					})),
+					error: false,
+					updated: new Date(),
 					topAlbums: topAlbums.map((item: any) => ({
 						name: item.name,
 						images: item.image,
 						artist: item.artist.name
 					})),
-					updated: new Date()
+					weeklyAlbumChart: weeklyAlbumChart.map((item: any) => ({
+						name: item.name,
+						images: item.apiDetails.album.image,
+						artist: item.artist['#text']
+					}))
 				},
 				null,
 				2
@@ -63,7 +64,10 @@ export const getLastFMInsights = async (): Promise<void> => {
 			file,
 			JSON.stringify(
 				{
-					error: true
+					error: true,
+					updated: new Date(),
+					topAlbums: [],
+					weeklyAlbumChart: []
 				},
 				null,
 				2
