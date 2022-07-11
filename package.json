@@ -23,7 +23,7 @@
 		"post": "yarn css && yarn tsc && yarn houdini && yarn parcel-build && yarn fetch-projects && yarn build-projects",
 		"start": "yarn time && concurrently -r \"yarn css:watch\" \"yarn tsc:watch\" \"yarn houdini:watch\" \"yarn parcel-start\"",
 		"start-dist": "http-server ./dist -p=1234 -P=http://localhost:1234/? -o",
-		"build": "yarn pre && yarn post && yarn snap",
+		"build": "yarn pre && yarn post",
 		"postbuild": "workbox generateSW ./config/workbox-config.js",
 		"test": "jest --runInBand --config=./config/jest.config.js --rootDir=./ --env=jsdom",
 		"test:watch": "yarn test --watch",
