@@ -1,13 +1,131 @@
 import * as React from 'react';
 import Slider from 'react-slick';
 
-import projectsList from '../../data/projects-list.json';
+import webApps from '../../data/projects-list.json';
 import { Button, Loader, Section, ExternalLink } from '..';
-import { Project, projects, MobileApp, mobileApps } from '../../data/projects';
+import { WebProject, ExtendedProject, mobileApps, automotiveProjects } from '../../data/projects';
 
-const webApps = projectsList as unknown as Project[];
+interface PortfolioSlidersProps {
+	data: ExtendedProject[];
+	className?: string;
+	slidesToShow: number;
+}
 
-// codebeat:disable[ABC,LOC,BLOCK_NESTING]
+export const PortfolioSliders: React.FC<Readonly<PortfolioSlidersProps>> = ({
+	data,
+	className,
+	slidesToShow
+}: PortfolioSlidersProps) => {
+	const classNames = React.useMemo(() => ['c-section__slider', className].filter(Boolean), []);
+
+	return (
+		<div className="c-section__sliders">
+			{data.map((app: ExtendedProject, i: number) => (
+				<div className={classNames.join(' ')} key={i}>
+					<Loader />
+
+					<ExternalLink href={app.url}>
+						<h3>{app.title}</h3>
+
+						<p>{app.description}</p>
+
+						<code>
+							Technologies used:
+							<br />
+							{app.details}
+						</code>
+					</ExternalLink>
+
+					<Slider
+						dots={false}
+						speed={500}
+						infinite={true}
+						autoplaySpeed={5000}
+						slidesToShow={slidesToShow}
+						slidesToScroll={1}
+						responsive={
+							!app.adjustable
+								? []
+								: [
+										{
+											breakpoint: 768,
+											settings: {
+												slidesToShow: 1
+											}
+										}
+								  ]
+						}
+					>
+						{app.images.map((img: string, j: number) => (
+							<div key={j}>
+								<img src={`images/temp/${img}`} alt={`${app.title} screenshot ${j + 1}`} />
+							</div>
+						))}
+					</Slider>
+				</div>
+			))}
+		</div>
+	);
+};
+
+export const MobileApps: React.FC = () => (
+	<>
+		<h2>Mobile applications</h2>
+
+		<PortfolioSliders data={mobileApps} slidesToShow={2} />
+	</>
+);
+
+export const AutomotiveProjects: React.FC = () => (
+	<>
+		<h2>Automotive projects</h2>
+
+		<PortfolioSliders data={automotiveProjects} slidesToShow={1} className="c-section__slider--fullwidth" />
+	</>
+);
+
+interface WebAppsProps {
+	itemsToShow: number;
+}
+
+export const WebApps: React.FC<Readonly<WebAppsProps>> = ({ itemsToShow }: WebAppsProps) => (
+	<>
+		<h2>Web applications</h2>
+
+		<div className="c-section__body">
+			{webApps.map((project: WebProject, index: number) => {
+				const classNames = [];
+
+				if (!project.url) {
+					classNames.push('disabled');
+				}
+
+				if (index > itemsToShow) {
+					classNames.push('is--hidden');
+				}
+
+				return (
+					<ExternalLink key={index} href={project.url} className={classNames.join(' ')}>
+						<Loader />
+
+						<section>
+							<strong>{project.title}</strong>
+
+							<span>
+								<small>Technologies used:</small>
+								<br />
+								{project.description}
+							</span>
+						</section>
+
+						<img width="600" loading="lazy" src={project.image} alt={project.title} />
+					</ExternalLink>
+				);
+			})}
+		</div>
+	</>
+);
+
 export const SectionPortfolio: React.FC = () => {
 	const [itemsToShow, setItemsToShow] = React.useState(7);
 
@@ -23,94 +141,13 @@ export const SectionPortfolio: React.FC = () => {
 		>
 			<h1>Portfolio</h1>
 
-			<h2>Mobile applications</h2>
+			<MobileApps />
 
-			<div className="c-section__sliders">
-				{mobileApps.map((app: MobileApp, i: number) => (
-					<div className="c-section__slider" key={i}>
-						<Loader />
+			<AutomotiveProjects />
 
-						<ExternalLink href={app.url}>
-							<h3>{app.title}</h3>
-
-							<p>{app.description}</p>
-
-							<code>
-								Technologies used:
-								<br />
-								{app.details}
-							</code>
-						</ExternalLink>
-
-						<Slider
-							dots={false}
-							speed={500}
-							infinite={true}
-							autoplaySpeed={5000}
-							slidesToShow={2}
-							slidesToScroll={1}
-							responsive={
-								!app.adjustable
-									? []
-									: [
-											{
-												breakpoint: 768,
-												settings: {
-													slidesToShow: 1
-												}
-											}
-									  ]
-							}
-						>
-							{app.images.map((img: string, j: number) => (
-								<div key={j}>
-									<img src={`images/temp/${img}`} alt={`${app.title} screenshot ${j + 1}`} />
-								</div>
-							))}
-						</Slider>
-					</div>
-				))}
-			</div>
-
-			<h2>Web applications</h2>
-
-			<div className="c-section__body">
-				{webApps.map((project: Project, index: number) => {
-					const match = projects.find((item: Project) => item.title === project.title);
-					const classNames = [];
-
-					if (!project.url) {
-						classNames.push('disabled');
-					}
-
-					if (index > itemsToShow) {
-						classNames.push('is--hidden');
-					}
-
-					return (
-						<ExternalLink key={index} href={project.url} className={classNames.join(' ')}>
-							<Loader />
-
-							<section>
-								<strong>{project.title}</strong>
-
-								<span>
-									<small>Technologies used:</small>
-									<br />
-									{project.description}
-								</span>
-							</section>
-
-							<object data={project.image} type="image/png" title={project.title} width="600">
-								<img width="600" loading="lazy" src={match?.image} alt={match?.title} />
-							</object>
-						</ExternalLink>
-					);
-				})}
-			</div>
+			<WebApps itemsToShow={itemsToShow} />
 		</Section>
 	);
 };
-// codebeat:enable[ABC,LOC,BLOCK_NESTING]
 
 export default SectionPortfolio;

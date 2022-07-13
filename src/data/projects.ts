@@ -1,22 +1,21 @@
 export interface Project {
 	readonly url: string;
-	readonly image: string;
 	readonly title: string;
 	readonly description: string;
-	readonly timeout?: number;
-	readonly skip: boolean;
 }
 
-export interface MobileApp {
-	readonly url: string;
-	readonly title: string;
-	readonly description: string;
+export interface WebProject extends Project {
+	readonly skip: boolean;
+	readonly image: string;
+}
+
+export interface ExtendedProject extends Project {
 	readonly details: string;
 	readonly images: string[];
 	readonly adjustable?: boolean;
 }
 
-export const projects: Project[] = [
+export const projects: WebProject[] = [
 	{
 		url: 'https://app.home.eon.com/',
 		image: 'images/temp/E.ON-Home.png',
@@ -211,7 +210,7 @@ export const projects: Project[] = [
 		image: 'images/temp/F-Type-For-Sale.png',
 		title: 'F Type For Sale',
 		description: 'HTML5, CSS3, JavaScript',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://www.zeevan.com/',
@@ -270,6 +269,13 @@ export const projects: Project[] = [
 		skip: false
 	},
 	{
+		url: 'https://www.predictablyirrational.com/',
+		image: 'images/temp/Preditably-Irrational.png',
+		title: 'Preditably Irrational',
+		description: 'HTML, Advanced CSS, JavaScript, Webpack',
+		skip: false
+	},
+	{
 		url: '',
 		image: 'images/temp/atelier-coolinar.png',
 		title: 'Atelier Coolinar (Ателие Кулинар)',
@@ -299,7 +305,7 @@ export const projects: Project[] = [
 	}
 ];
 
-export const mobileApps: MobileApp[] = [
+export const mobileApps: ExtendedProject[] = [
 	{
 		url: 'https://apps.apple.com/gb/app/e-on-home-solar-and-heating/id1468486784#?platform=iphone',
 		title: 'E.ON Home for iPhone',
@@ -379,5 +385,36 @@ export const mobileApps: MobileApp[] = [
 		details: 'TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS',
 		images: ['foton-home-ipad-light.png', 'foton-home-ipad-dark.png'],
 		adjustable: true
+	}
+];
+
+export const automotiveProjects: ExtendedProject[] = [
+	{
+		url: 'https://kinetik-infotainment.netlify.app/',
+		title: 'Kinetik Infotainment',
+		description: 'Dashboard and infotainment system for the Kinetik Model 27 electric kart',
+		details: 'TypeScript, SCSS, SVG, React, Redux, NodeJS, Express, WebSocket',
+		images: [
+			'kinetik-infotainment-1.png',
+			'kinetik-infotainment-2.png',
+			'kinetik-infotainment-3.png',
+			'kinetik-infotainment-4.png',
+			'kinetik-infotainment-5.png',
+			'kinetik-infotainment-6.png',
+			'kinetik-infotainment-7.png'
+		]
+	},
+	{
+		url: 'https://volvo-dashboard.netlify.app/',
+		title: 'Volvo Dashboard',
+		description: 'Dashboard system for the Volvo P1800 custom hybrid automobile',
+		details: 'TypeScript, SCSS, SVG, React, Redux, NodeJS, Express, WebSocket',
+		images: [
+			'volvo-dashboard-1.png',
+			'volvo-dashboard-2.png',
+			'volvo-dashboard-3.png',
+			'volvo-dashboard-4.png',
+			'volvo-dashboard-5.png'
+		]
 	}
 ];

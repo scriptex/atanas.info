@@ -8,7 +8,7 @@ import { config as dotenvConfig } from 'dotenv';
 import { v2 as cloudinary, UploadApiOptions, UploadApiResponse } from 'cloudinary';
 
 import * as pckg from '../package.json';
-import { Project, projects } from '../src/data/projects';
+import { WebProject, projects } from '../src/data/projects';
 
 if (!projects || !projects.length) {
 	console.log('No projects found.');
@@ -89,14 +89,14 @@ function upload(shotResult: Buffer, options: UploadApiOptions, name: string): Pr
 	});
 }
 
-async function createScreenshots(allPages: Project[]): Promise<void> {
+async function createScreenshots(allPages: WebProject[]): Promise<void> {
 	// await cloudinary.api.delete_resources_by_prefix(`${FOLDER}/`);
 
 	const results: any[] = [];
 
-	let newProjects: Project[] = [...projects];
+	let newProjects: WebProject[] = [...projects];
 
-	const pages: Project[] = allPages.filter((page: Project) => !page.skip);
+	const pages: WebProject[] = allPages.filter((page: WebProject) => !page.skip);
 
 	for (const page of pages) {
 		console.log('-----');
@@ -104,10 +104,10 @@ async function createScreenshots(allPages: Project[]): Promise<void> {
 			console.log(`${page.title} does not have a valid URL.`);
 		} else {
 			try {
-				const result = await createScreenshot(page.url, page.title.replace(/\s/g, '-'), page.timeout);
+				const result = await createScreenshot(page.url, page.title.replace(/\s/g, '-'));
 
 				if (result) {
-					newProjects = newProjects.map((project: Project) => {
+					newProjects = newProjects.map((project: WebProject) => {
 						if (project.title === page.title) {
 							return {
 								...project,

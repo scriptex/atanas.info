@@ -78,10 +78,13 @@ declare module '@codersrank/timeline/codersrank-timeline.min' {
 }
 
 interface Window {
+	msCrypto: any;
 	dataLayer: {
 		push: (...args: any[]) => void;
 	};
-	msCrypto: any;
+	__PRERENDER_INJECTED: {
+		isPrerendering: boolean;
+	};
 }
 
 declare const registerPaint: <T>(name: string, constructor: T) => void;
