@@ -1,35 +1,34 @@
 export interface Project {
 	readonly url: string;
-	readonly image: string;
 	readonly title: string;
 	readonly description: string;
-	readonly timeout?: number;
-	readonly skip: boolean;
 }
 
-export interface MobileApp {
-	readonly url: string;
-	readonly title: string;
-	readonly description: string;
+export interface WebProject extends Project {
+	readonly skip: boolean;
+	readonly image: string;
+}
+
+export interface ExtendedProject extends Project {
 	readonly details: string;
 	readonly images: string[];
 	readonly adjustable?: boolean;
 }
 
-export const projects: Project[] = [
+export const projects: WebProject[] = [
 	{
 		url: 'https://app.home.eon.com/',
 		image: 'images/temp/E.ON-Home.png',
 		title: 'E.ON Home',
 		description: 'TypeScript, SCSS, React, Redux, MS Azure, AWS, NodeJS, Jest, React Testing Library',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://admin.eonhome.eu/',
 		image: 'images/temp/E.ON-H.E.M.S-(Home-Energy-Management-System).png',
 		title: 'E.ON H.E.M.S (Home Energy Management System)',
 		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS, Cypress',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://mama-culinar.com/',
@@ -39,46 +38,46 @@ export const projects: Project[] = [
 		skip: false
 	},
 	{
-		url: 'https://app.home.fotontechnik.pl/',
+		url: 'https://app.home.eonfoton.pl/',
 		image: 'images/temp/foton-home.png',
 		title: 'Foton Home',
 		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS, Jest, React Testing Library',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://xpndnow.com/',
 		image: 'images/temp/xpnd.png',
 		title: 'XPND',
 		description: 'TypeScript, SCSS, React, Redux, NodeJS, Jest, Enzyme',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://xpndnow.com/ebook',
 		image: 'images/temp/xpnd-ebook.png',
 		title: 'XPND Ebook',
 		description: 'TypeScript, SCSS, React, Redux, NodeJS',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://demo.xpndnow.com/',
 		image: 'images/temp/XPND-demo-application.png',
 		title: 'XPND demo application',
 		description: 'TypeScript, SCSS, React, Redux, NodeJS',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://emailio.com/',
 		image: 'images/temp/Emailio-Landing.png',
 		title: 'Emailio Landing',
 		description: 'CSS, JavaScript, HTML',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://emailio.vercel.app/',
 		image: 'images/temp/Emailio-Web-Application.png',
 		title: 'Emailio Web Application',
 		description: 'SCSS, JavaScript, React, Redux, Redux Saga, Jest, Enzyme',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://www.nulla.tv/',
@@ -96,7 +95,7 @@ export const projects: Project[] = [
 	},
 	{
 		url: 'https://kinetik-e.com/',
-		image: 'images/temp/kinetik-e.png',
+		image: 'images/temp/Kinetik-Electric-Karting-Championship.png',
 		title: 'Kinetik Electric Karting Championship',
 		description: 'HTML5, SVG, CSS3, JavaScript, React, Styled Components',
 		skip: true
@@ -106,98 +105,98 @@ export const projects: Project[] = [
 		image: 'images/temp/SOD-64-(СОД-64).png',
 		title: 'SOD 64 (СОД 64)',
 		description: 'HTML5, CSS3, JavaScript, jQuery, PHP',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://at-the-wall.atanas.info',
 		image: 'images/temp/at-the-wall.png',
 		title: 'At the Wall',
 		description: 'CSS3, PHP',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://snake.atanas.info',
 		image: 'images/temp/material-snake.png',
 		title: 'Material Snake',
 		description: 'TypeScript, HTML, CSS3',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://tetris.atanas.info',
 		image: 'images/temp/material-tetris.png',
 		title: 'Material Tetris',
 		description: 'TypeScript, HTML, CSS3',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://scriptex.js.org/2048',
 		image: 'images/temp/2048.png',
 		title: '2048',
 		description: 'TypeScript, HTML, CSS3',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://retirement-calc.vercel.app/',
 		image: 'images/temp/retirement-calculator.png',
 		title: 'Retirement calculator',
 		description: 'JavaScript, SCSS, Vue, Vuex, Chart JS',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://paternalism-tool.vercel.app/',
 		image: 'images/temp/paternalism-tool.png',
 		title: 'Paternalism tool',
 		description: 'JavaScript, SCSS, React, Redux, Redux Saga',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://fertility-tool.vercel.app/',
 		image: 'images/temp/fertility-tool.png',
 		title: 'Fertility tool',
 		description: 'TypeScript, SCSS, React, Redux, Redux Saga',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://imgn.vercel.app/',
 		image: 'images/temp/imgn.png',
 		title: 'IMGN',
 		description: 'TypeScript, SCSS, React, Redux, Redux Saga',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://three-11.com/',
 		image: 'images/temp/three-11.png',
 		title: 'Three 11',
 		description: 'HTML5, CSS3, SVG, JavaScript, D3',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://flows.vercel.app/',
 		image: 'images/temp/Three-11-Company-Flows.png',
 		title: 'Three 11 Company Flows',
 		description: 'JavaScript, Stylus, VuePress, NodeJS',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://html-lab.com/',
 		image: 'images/temp/html-lab.png',
 		title: 'HTML Lab',
 		description: 'HTML5, CSS3, JavaScript',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://malaikapictures.com/',
 		image: 'images/temp/malaika-pictures.png',
 		title: 'Malaika Pictures',
 		description: 'HTML5, CSS3, JavaScript, Fullpage JS, Shuffle JS, PHP, WordPress',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://pascoe.cn/',
 		image: 'images/temp/pascoe.png',
 		title: 'Pascoe',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://varnafoodtours.com/',
@@ -208,7 +207,7 @@ export const projects: Project[] = [
 	},
 	{
 		url: 'https://ftypeforsale.com/',
-		image: 'images/temp/ftypeforsale.png',
+		image: 'images/temp/F-Type-For-Sale.png',
 		title: 'F Type For Sale',
 		description: 'HTML5, CSS3, JavaScript',
 		skip: true
@@ -225,7 +224,7 @@ export const projects: Project[] = [
 		image: 'images/temp/mario-pricken.png',
 		title: 'Mario Pricken',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://sqillinehealth.com/',
@@ -239,14 +238,14 @@ export const projects: Project[] = [
 		image: 'images/temp/kinetik.png',
 		title: 'Kinetik',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://danariely.com/',
-		image: 'images/temp/danariely.png',
+		image: 'images/temp/Dan-Ariely.png',
 		title: 'Dan Ariely',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://shortwhale.com/',
@@ -267,39 +266,46 @@ export const projects: Project[] = [
 		image: 'images/temp/social-header.png',
 		title: 'Social Header',
 		description: 'React, SCSS, Parcel',
-		skip: true
+		skip: false
+	},
+	{
+		url: 'https://www.predictablyirrational.com/',
+		image: 'images/temp/Preditably-Irrational.png',
+		title: 'Preditably Irrational',
+		description: 'HTML, Advanced CSS, JavaScript, Webpack',
+		skip: false
 	},
 	{
 		url: '',
 		image: 'images/temp/atelier-coolinar.png',
 		title: 'Atelier Coolinar (Ателие Кулинар)',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
-		skip: true
+		skip: false
 	},
 	{
 		url: '',
 		image: 'images/temp/x-form.png',
 		title: 'X Form',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
-		skip: true
+		skip: false
 	},
 	{
 		url: '',
 		image: 'images/temp/faraon-bg.png',
 		title: 'Faraon (Фараон)',
 		description: 'HTML5, CSS3, JavaScript, jQuery, PHP',
-		skip: true
+		skip: false
 	},
 	{
 		url: '',
 		image: 'images/temp/sirius-real-estate.png',
 		title: 'Sirius Real Estate',
 		description: 'HTML5, CSS3, JavaScript, jQuery, PHP, WordPress',
-		skip: true
+		skip: false
 	}
 ];
 
-export const mobileApps: MobileApp[] = [
+export const mobileApps: ExtendedProject[] = [
 	{
 		url: 'https://apps.apple.com/gb/app/e-on-home-solar-and-heating/id1468486784#?platform=iphone',
 		title: 'E.ON Home for iPhone',
@@ -379,5 +385,36 @@ export const mobileApps: MobileApp[] = [
 		details: 'TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS',
 		images: ['foton-home-ipad-light.png', 'foton-home-ipad-dark.png'],
 		adjustable: true
+	}
+];
+
+export const automotiveProjects: ExtendedProject[] = [
+	{
+		url: 'https://kinetik-infotainment.netlify.app/',
+		title: 'Kinetik Infotainment',
+		description: 'Dashboard and infotainment system for the Kinetik Model 27 electric kart',
+		details: 'TypeScript, SCSS, SVG, React, Redux, NodeJS, Express, WebSocket',
+		images: [
+			'kinetik-infotainment-1.png',
+			'kinetik-infotainment-2.png',
+			'kinetik-infotainment-3.png',
+			'kinetik-infotainment-4.png',
+			'kinetik-infotainment-5.png',
+			'kinetik-infotainment-6.png',
+			'kinetik-infotainment-7.png'
+		]
+	},
+	{
+		url: 'https://volvo-dashboard.netlify.app/',
+		title: 'Volvo Dashboard',
+		description: 'Dashboard system for the Volvo P1800 custom hybrid automobile',
+		details: 'TypeScript, SCSS, SVG, React, Redux, NodeJS, Express, WebSocket',
+		images: [
+			'volvo-dashboard-1.png',
+			'volvo-dashboard-2.png',
+			'volvo-dashboard-3.png',
+			'volvo-dashboard-4.png',
+			'volvo-dashboard-5.png'
+		]
 	}
 ];

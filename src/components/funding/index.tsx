@@ -4,6 +4,7 @@ import Draggable from 'gsap/Draggable';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import { Icon } from '..';
+import { isPrerendering } from '../../scripts/shared';
 
 gsap.registerPlugin(Draggable);
 
@@ -30,14 +31,16 @@ export const FundingItem: React.FC<ItemProps> = (props: ItemProps) => (
 				{props.name}
 			</text>
 
-			<use
-				x="377.2243347167969"
-				y="145"
-				width="40"
-				height="40"
-				xlinkHref={`#svg-${props.icon}`}
-				transform="rotate(60 397.2243347167969 165)"
-			/>
+			{isPrerendering ? null : (
+				<use
+					x="377.2243347167969"
+					y="145"
+					width="40"
+					height="40"
+					xlinkHref={`#svg-${props.icon}`}
+					transform="rotate(60 397.2243347167969 165)"
+				/>
+			)}
 		</a>
 	</g>
 );
