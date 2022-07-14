@@ -1193,6 +1193,10 @@ body {
 		visibility: visible;
 		transition: opacity var(--timing) var(--easing), visibility var(--timing) var(--easing);
 		pointer-events: none;
+
+		&:not([fill]) {
+			fill: var(--color-primary);
+		}
 	}
 
 	& circle {
@@ -1220,7 +1224,7 @@ body {
 	}
 
 	& .o-grid {
-		max-height: 103.75rem;
+		max-height: 188.5rem;
 		justify-content: flex-start;
 		overflow: hidden;
 		transition: max-height var(--timing) var(--easing);
@@ -1284,17 +1288,22 @@ body {
 		width: 3.5rem;
 		height: 3.5rem;
 		@mixin flex-row nowrap, center, center;
-		padding: 1rem;
+		padding: 0.0625rem;
 		margin-right: 1rem;
 		background-color: color-mod(var(--color-secondary) a(20%));
 		border-radius: 50%;
+
+		& svg {
+			width: auto;
+			margin: auto;
+		}
 	}
 }
 
 @media (--tablet-landscape) {
 	.c-section--skills {
 		& .o-grid {
-			max-height: 136.75rem;
+			max-height: 247.25rem;
 		}
 	}
 }
@@ -1307,7 +1316,7 @@ body {
 		}
 
 		& .o-grid {
-			max-height: 208rem;
+			max-height: 370.5rem;
 		}
 	}
 }
@@ -1326,7 +1335,7 @@ body {
 		}
 
 		& .o-grid {
-			max-height: 314.75rem;
+			max-height: 565rem;
 		}
 
 		& .o-grid__item + .o-grid__item {

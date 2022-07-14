@@ -59,23 +59,104 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(255, 255, 255);"
+                style="background-color: rgb(255, 154, 0);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
-                    xlink:href="#svg-agile"
+                    xlink:href="#svg-adobeillustrator"
                   />
                 </svg>
               </figure>
               <p>
                 <strong>
-                  Agile
+                  Adobe Illustrator
                 </strong>
-                Since 2010
+                Since 2014
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(49, 168, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-adobephotoshop"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Adobe Photoshop
+                </strong>
+                Since 2012
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 97, 246);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-adobexd"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Adobe XD
+                </strong>
+                Since 2018
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(27, 114, 190);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-affinitydesigner"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Affinity Designer
+                </strong>
+                Since 2018
               </p>
             </div>
           </div>
@@ -90,8 +171,62 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-agile"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Agile
+                </strong>
+                Since 2011
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(35, 47, 62);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-amazonaws"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Amazon Web Services
+                </strong>
+                Since 2019
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(221, 0, 49);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-angular"
@@ -113,12 +248,12 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(255, 255, 255);"
+                style="background-color: rgb(226, 50, 55);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="32"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-angularjs"
@@ -140,21 +275,49 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(255, 255, 255);"
+                style="background-color: rgb(232, 232, 232);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="18"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
-                    xlink:href="#svg-aws"
+                    fill="#000"
+                    xlink:href="#svg-apachecordova"
                   />
                 </svg>
               </figure>
               <p>
                 <strong>
-                  Amazon Web Services
+                  Apache Cordova
+                </strong>
+                Since 2014
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(0, 120, 215);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-azuredevops"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Azure DevOps
                 </strong>
                 Since 2019
               </p>
@@ -167,14 +330,42 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(34, 34, 34);"
+                style="background-color: rgb(0, 98, 173);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="12"
-                  width="31"
+                  height="34"
+                  width="34"
                 >
                   <use
+                    xlink:href="#svg-azurefunctions"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Azure Functions
+                </strong>
+                Since 2019
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(249, 220, 62);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    fill="#000"
                     xlink:href="#svg-babel"
                   />
                 </svg>
@@ -198,8 +389,8 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-babylonjs"
@@ -221,15 +412,15 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(189, 201, 236);"
+                style="background-color: rgb(0, 113, 181);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
-                    xlink:href="#svg-backbone"
+                    xlink:href="#svg-backbonedotjs"
                   />
                 </svg>
               </figure>
@@ -248,39 +439,12 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(72, 153, 42);"
-              >
-                <svg
-                  class="c-skill__icon"
-                  height="30"
-                  width="30"
-                >
-                  <use
-                    xlink:href="#svg-bash"
-                  />
-                </svg>
-              </figure>
-              <p>
-                <strong>
-                  Bash
-                </strong>
-                Since 2015
-              </p>
-            </div>
-          </div>
-          <div
-            class="o-grid__item xs-12 sm-6 md-4 lg-3"
-          >
-            <div
-              class="c-skill"
-            >
-              <figure
                 style="background-color: rgb(0, 0, 0);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="24"
-                  width="29"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-bem"
@@ -302,12 +466,12 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(204, 204, 204);"
+                style="background-color: rgb(121, 82, 179);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-bootstrap"
@@ -329,23 +493,23 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(18, 40, 88);"
+                style="background-color: rgb(0, 209, 178);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
-                    xlink:href="#svg-css"
+                    xlink:href="#svg-bulma"
                   />
                 </svg>
               </figure>
               <p>
                 <strong>
-                  CSS3
+                  Bulma
                 </strong>
-                Since 2010
+                Since 2012
               </p>
             </div>
           </div>
@@ -356,15 +520,42 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(125, 125, 125);"
+                style="background-color: rgb(0, 196, 204);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
-                    xlink:href="#svg-chartjs"
+                    xlink:href="#svg-canva"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Canva
+                </strong>
+                Since 2018
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 99, 132);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-chartdotjs"
                   />
                 </svg>
               </figure>
@@ -383,12 +574,12 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(221, 221, 221);"
+                style="background-color: rgb(52, 52, 52);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-circleci"
@@ -410,39 +601,12 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(151, 218, 168);"
+                style="background-color: rgb(23, 43, 77);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="29"
-                  width="30"
-                >
-                  <use
-                    xlink:href="#svg-cordova"
-                  />
-                </svg>
-              </figure>
-              <p>
-                <strong>
-                  Cordova
-                </strong>
-                Since 2014
-              </p>
-            </div>
-          </div>
-          <div
-            class="o-grid__item xs-12 sm-6 md-4 lg-3"
-          >
-            <div
-              class="c-skill"
-            >
-              <figure
-                style="background-color: rgb(255, 255, 255);"
-              >
-                <svg
-                  class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-confluence"
@@ -464,12 +628,66 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(73, 73, 76);"
+                style="background-color: rgb(21, 114, 182);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-css3"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  CSS3
+                </strong>
+                Since 2010
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(0, 0, 0);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-cssmodules"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  CSS Modules
+                </strong>
+                Since 2018
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(23, 32, 44);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-cypress"
@@ -491,21 +709,21 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(90, 65, 38);"
+                style="background-color: rgb(249, 160, 60);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
-                    xlink:href="#svg-d3"
+                    xlink:href="#svg-d3dotjs"
                   />
                 </svg>
               </figure>
               <p>
                 <strong>
-                  D3
+                  D3.js
                 </strong>
                 Since 2012
               </p>
@@ -518,12 +736,39 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(255, 255, 255);"
+                style="background-color: rgb(1, 117, 194);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-dart"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Dart
+                </strong>
+                Since 2022
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(0, 0, 0);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-deno"
@@ -545,12 +790,12 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(255, 255, 255);"
+                style="background-color: rgb(75, 50, 195);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="27"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-eslint"
@@ -572,15 +817,42 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(255, 255, 255);"
+                style="background-color: rgb(0, 0, 32);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="25"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
-                    xlink:href="#svg-expressjs"
+                    xlink:href="#svg-expo"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Expo
+                </strong>
+                Since 2019
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(0, 0, 0);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-express"
                   />
                 </svg>
               </figure>
@@ -599,14 +871,42 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(255, 255, 255);"
+                style="background-color: rgb(242, 78, 30);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="25"
+                  height="34"
+                  width="34"
                 >
                   <use
+                    xlink:href="#svg-figma"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Figma
+                </strong>
+                Since 2020
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 202, 40);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    fill="#000"
                     xlink:href="#svg-firebase"
                   />
                 </svg>
@@ -626,12 +926,39 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
+                style="background-color: rgb(2, 86, 155);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-flutter"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Flutter
+                </strong>
+                Since 2022
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
                 style="background-color: rgb(20, 30, 31);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="32"
-                  width="22"
+                  height="35"
+                  width="24"
                 >
                   <use
                     xlink:href="#svg-foundation"
@@ -657,8 +984,8 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-gatsby"
@@ -680,12 +1007,12 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(249, 215, 215);"
+                style="background-color: rgb(240, 80, 50);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-git"
@@ -707,15 +1034,15 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(255, 255, 255);"
+                style="background-color: rgb(32, 136, 255);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="29"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
-                    xlink:href="#svg-github"
+                    xlink:href="#svg-githubactions"
                   />
                 </svg>
               </figure>
@@ -734,15 +1061,42 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(255, 255, 255);"
+                style="background-color: rgb(34, 34, 34);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
-                    xlink:href="#svg-gitlab-logo"
+                    xlink:href="#svg-githubpages"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Github Pages
+                </strong>
+                Since 2014
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(252, 109, 38);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-gitlab"
                   />
                 </svg>
               </figure>
@@ -761,14 +1115,177 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(243, 147, 65);"
+                style="background-color: rgb(78, 170, 37);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
+                    xlink:href="#svg-gnubash"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Gnu Bash
+                </strong>
+                Since 2015
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(227, 116, 0);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-googleanalytics"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Google Analytics
+                </strong>
+                Since 2018
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(66, 133, 244);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-googlechrome"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Google Chrome
+                </strong>
+                Since 2011
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(66, 133, 244);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-googlefonts"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Google Fonts
+                </strong>
+                Since 2014
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(66, 133, 244);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-googlemaps"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Google Maps
+                </strong>
+                Since 2016
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(36, 111, 219);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-googletagmanager"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Google Tag Manager
+                </strong>
+                Since 2020
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(250, 169, 24);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    fill="#000"
                     xlink:href="#svg-grunt"
                   />
                 </svg>
@@ -788,12 +1305,12 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(7, 38, 123);"
+                style="background-color: rgb(207, 70, 71);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="40"
-                  width="40"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-gulp"
@@ -815,39 +1332,12 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(82, 38, 12);"
-              >
-                <svg
-                  class="c-skill__icon"
-                  height="30"
-                  width="30"
-                >
-                  <use
-                    xlink:href="#svg-html"
-                  />
-                </svg>
-              </figure>
-              <p>
-                <strong>
-                  HTML5
-                </strong>
-                Since 2010
-              </p>
-            </div>
-          </div>
-          <div
-            class="o-grid__item xs-12 sm-6 md-4 lg-3"
-          >
-            <div
-              class="c-skill"
-            >
-              <figure
                 style="background-color: rgb(58, 58, 79);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="29"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-highcharts"
@@ -869,12 +1359,121 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(255, 255, 255);"
+                style="background-color: rgb(251, 176, 64);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    fill="#000"
+                    xlink:href="#svg-homebrew"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Homebrew
+                </strong>
+                Since 2018
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 71, 19);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-houdini"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Houdini
+                </strong>
+                Since 2020
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(227, 79, 38);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-html5"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  HTML5
+                </strong>
+                Since 2010
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(38, 166, 154);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-i18next"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  i18next
+                </strong>
+                Since 2018
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(56, 128, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-ionic"
@@ -896,14 +1495,15 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(240, 219, 79);"
+                style="background-color: rgb(247, 223, 30);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
+                    fill="#000"
                     xlink:href="#svg-javascript"
                   />
                 </svg>
@@ -923,12 +1523,12 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(255, 255, 255);"
+                style="background-color: rgb(194, 19, 37);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-jest"
@@ -950,12 +1550,12 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(255, 255, 255);"
+                style="background-color: rgb(0, 82, 204);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-jira"
@@ -977,39 +1577,12 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(204, 204, 204);"
+                style="background-color: rgb(7, 105, 173);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="28"
-                >
-                  <use
-                    xlink:href="#svg-json"
-                  />
-                </svg>
-              </figure>
-              <p>
-                <strong>
-                  JSON
-                </strong>
-                Since 2013
-              </p>
-            </div>
-          </div>
-          <div
-            class="o-grid__item xs-12 sm-6 md-4 lg-3"
-          >
-            <div
-              class="c-skill"
-            >
-              <figure
-                style="background-color: rgb(123, 223, 253);"
-              >
-                <svg
-                  class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-jquery"
@@ -1031,12 +1604,39 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(182, 236, 236);"
+                style="background-color: rgb(0, 0, 0);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-json"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  JSON
+                </strong>
+                Since 2013
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(29, 54, 93);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-less"
@@ -1058,12 +1658,149 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(255, 255, 255);"
+                style="background-color: rgb(252, 198, 36);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="20"
-                  width="32"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    fill="#000"
+                    xlink:href="#svg-linux"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Linux
+                </strong>
+                Since 2018
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(52, 146, 255);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-lodash"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Lodash
+                </strong>
+                Since 2015
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(0, 0, 0);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-macos"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  MacOS
+                </strong>
+                Since 2017
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 224, 27);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    fill="#000"
+                    xlink:href="#svg-mailchimp"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Mailchimp
+                </strong>
+                Since 2019
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(2, 116, 156);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-mamp"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  MAMP
+                </strong>
+                Since 2017
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(0, 0, 0);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-markdown"
@@ -1085,12 +1822,120 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(51, 255, 170);"
+                style="background-color: rgb(27, 31, 36);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="26"
-                  width="30"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-mdx"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  MDX
+                </strong>
+                Since 2020
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(33, 115, 70);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-microsoftexcel"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  MS Excel
+                </strong>
+                Since 2010
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(183, 71, 42);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-microsoftpowerpoint"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  MS PowerPoint
+                </strong>
+                Since 2010
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(43, 87, 154);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-microsoftword"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  MS Word
+                </strong>
+                Since 2010
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(242, 95, 74);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-mjml"
@@ -1112,39 +1957,12 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(53, 49, 52);"
-              >
-                <svg
-                  class="c-skill__icon"
-                  height="24"
-                  width="30"
-                >
-                  <use
-                    xlink:href="#svg-azure"
-                  />
-                </svg>
-              </figure>
-              <p>
-                <strong>
-                  Microsoft Azure
-                </strong>
-                Since 2019
-              </p>
-            </div>
-          </div>
-          <div
-            class="o-grid__item xs-12 sm-6 md-4 lg-3"
-          >
-            <div
-              class="c-skill"
-            >
-              <figure
                 style="background-color: rgb(141, 103, 72);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="26"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-mocha"
@@ -1166,15 +1984,96 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(29, 64, 2);"
+                style="background-color: rgb(71, 162, 72);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
-                    xlink:href="#svg-nodejs"
+                    xlink:href="#svg-mongodb"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Mongo DB
+                </strong>
+                Since 2019
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(0, 199, 183);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-netlify"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Netlify
+                </strong>
+                Since 2019
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(0, 0, 0);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-nextdotjs"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Next JS
+                </strong>
+                Since 2020
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(51, 153, 51);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-nodedotjs"
                   />
                 </svg>
               </figure>
@@ -1193,12 +2092,39 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
+                style="background-color: rgb(0, 220, 130);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-nuxtdotjs"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Nuxt JS
+                </strong>
+                Since 2018
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
                 style="background-color: rgb(125, 125, 125);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-parcel"
@@ -1220,12 +2146,39 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(246, 201, 251);"
+                style="background-color: rgb(24, 164, 151);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-photopea"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Photopea
+                </strong>
+                Since 2020
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(119, 123, 180);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-php"
@@ -1247,39 +2200,12 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(51, 51, 51);"
+                style="background-color: rgb(221, 58, 10);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
-                >
-                  <use
-                    xlink:href="#svg-photoshop"
-                  />
-                </svg>
-              </figure>
-              <p>
-                <strong>
-                  Photoshop
-                </strong>
-                Since 2010
-              </p>
-            </div>
-          </div>
-          <div
-            class="o-grid__item xs-12 sm-6 md-4 lg-3"
-          >
-            <div
-              class="c-skill"
-            >
-              <figure
-                style="background-color: rgb(176, 241, 220);"
-              >
-                <svg
-                  class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-postcss"
@@ -1301,12 +2227,93 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(255, 255, 255);"
+                style="background-color: rgb(255, 108, 55);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-postman"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Postman
+                </strong>
+                Since 2019
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(247, 185, 62);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-prettier"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Prettier
+                </strong>
+                Since 2014
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(64, 181, 164);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-puppeteer"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Puppeteer
+                </strong>
+                Since 2019
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(97, 218, 251);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-react"
@@ -1328,12 +2335,39 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(34, 34, 34);"
+                style="background-color: rgb(202, 66, 69);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-reactrouter"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  React Router
+                </strong>
+                Since 2016
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(118, 74, 188);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-redux"
@@ -1355,15 +2389,15 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(156, 59, 45);"
+                style="background-color: rgb(153, 153, 153);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="19"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
-                    xlink:href="#svg-redux-saga"
+                    xlink:href="#svg-reduxsaga"
                   />
                 </svg>
               </figure>
@@ -1382,15 +2416,42 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(247, 247, 247);"
+                style="background-color: rgb(26, 31, 108);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
-                    xlink:href="#svg-rollup"
+                    xlink:href="#svg-renovatebot"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Renovate
+                </strong>
+                Since 2017
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(236, 74, 63);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-rollupdotjs"
                   />
                 </svg>
               </figure>
@@ -1409,12 +2470,12 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(250, 244, 207);"
+                style="background-color: rgb(204, 102, 153);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-sass"
@@ -1436,23 +2497,23 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(255, 177, 59);"
+                style="background-color: rgb(54, 45, 89);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
-                    xlink:href="#svg-svg"
+                    xlink:href="#svg-sentry"
                   />
                 </svg>
               </figure>
               <p>
                 <strong>
-                  SVG
+                  Sentry
                 </strong>
-                Since 2011
+                Since 2019
               </p>
             </div>
           </div>
@@ -1463,39 +2524,12 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(43, 19, 6);"
+                style="background-color: rgb(247, 181, 0);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="22"
-                  width="30"
-                >
-                  <use
-                    xlink:href="#svg-svn"
-                  />
-                </svg>
-              </figure>
-              <p>
-                <strong>
-                  SVN
-                </strong>
-                Since 2010
-              </p>
-            </div>
-          </div>
-          <div
-            class="o-grid__item xs-12 sm-6 md-4 lg-3"
-          >
-            <div
-              class="c-skill"
-            >
-              <figure
-                style="background-color: rgb(41, 18, 18);"
-              >
-                <svg
-                  class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-sketch"
@@ -1517,15 +2551,42 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(170, 170, 170);"
+                style="background-color: rgb(54, 54, 54);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
-                    xlink:href="#svg-styled-components"
+                    xlink:href="#svg-solidity"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Solidity
+                </strong>
+                Since 2022
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(219, 112, 147);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-styledcomponents"
                   />
                 </svg>
               </figure>
@@ -1544,15 +2605,69 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(77, 77, 78);"
+                style="background-color: rgb(38, 50, 56);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
-                    xlink:href="#svg-sublime-text"
+                    xlink:href="#svg-stylelint"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Stylelint
+                </strong>
+                Since 2017
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(51, 51, 51);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-stylus"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Stylus
+                </strong>
+                Since 2019
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 152, 0);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-sublimetext"
                   />
                 </svg>
               </figure>
@@ -1571,14 +2686,178 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(221, 238, 238);"
+                style="background-color: rgb(128, 156, 201);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
+                    xlink:href="#svg-subversion"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Subversion
+                </strong>
+                Since 2010
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(255, 177, 59);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-svg"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  SVG
+                </strong>
+                Since 2011
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(62, 127, 193);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-svgo"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  SVGO
+                </strong>
+                Since 2018
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(133, 234, 45);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    fill="#000"
+                    xlink:href="#svg-swagger"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Swagger
+                </strong>
+                Since 2019
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(99, 50, 246);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-swiper"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Swiper
+                </strong>
+                Since 2017
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(227, 51, 50);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-testinglibrary"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Testing Library
+                </strong>
+                Since 2021
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(62, 170, 175);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    fill="#000"
                     xlink:href="#svg-travisci"
                   />
                 </svg>
@@ -1598,12 +2877,39 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(0, 122, 204);"
+                style="background-color: rgb(49, 120, 198);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-tsnode"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  TS-Node
+                </strong>
+                Since 2020
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(49, 120, 198);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-typescript"
@@ -1629,8 +2935,8 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               >
                 <svg
                   class="c-skill__icon"
-                  height="26"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-vercel"
@@ -1652,15 +2958,15 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(255, 255, 255);"
+                style="background-color: rgb(0, 122, 204);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
-                    xlink:href="#svg-vscode"
+                    xlink:href="#svg-visualstudiocode"
                   />
                 </svg>
               </figure>
@@ -1679,15 +2985,15 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(74, 92, 113);"
+                style="background-color: rgb(79, 192, 141);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="26"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
-                    xlink:href="#svg-vue"
+                    xlink:href="#svg-vuedotjs"
                   />
                 </svg>
               </figure>
@@ -1706,14 +3012,15 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(13, 39, 72);"
+                style="background-color: rgb(141, 214, 249);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
+                    fill="#000"
                     xlink:href="#svg-webpack"
                   />
                 </svg>
@@ -1733,12 +3040,12 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
               class="c-skill"
             >
               <figure
-                style="background-color: rgb(17, 17, 17);"
+                style="background-color: rgb(33, 117, 155);"
               >
                 <svg
                   class="c-skill__icon"
-                  height="30"
-                  width="30"
+                  height="34"
+                  width="34"
                 >
                   <use
                     xlink:href="#svg-wordpress"
@@ -1750,6 +3057,60 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
                   WordPress
                 </strong>
                 Since 2013
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(251, 122, 36);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-xampp"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  XAMPP
+                </strong>
+                Since 2013
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4 lg-3"
+          >
+            <div
+              class="c-skill"
+            >
+              <figure
+                style="background-color: rgb(44, 142, 187);"
+              >
+                <svg
+                  class="c-skill__icon"
+                  height="34"
+                  width="34"
+                >
+                  <use
+                    xlink:href="#svg-yarn"
+                  />
+                </svg>
+              </figure>
+              <p>
+                <strong>
+                  Yarn
+                </strong>
+                Since 2016
               </p>
             </div>
           </div>

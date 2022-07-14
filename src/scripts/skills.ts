@@ -153,7 +153,8 @@ export const createNodes = (
 			.attr('width', imgWidth)
 			.attr('height', imgHeight)
 			.attr('transform', `translate(-${imgWidth / 2},-${imgHeight / 2})`)
-			.attr('xlink:xlink:href', `#svg-${d.icon}`);
+			.attr('xlink:xlink:href', `#svg-${d.icon}`)
+			.attr('fill', d.iconFill);
 
 		group
 			.append('text')
