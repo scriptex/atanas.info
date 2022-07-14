@@ -216,6 +216,8 @@ export const SectionResume: React.FC = () => (
 						<li>HTML</li>
 
 						<li>SVG</li>
+
+						<li>MJML</li>
 					</ul>
 
 					<ul className="c-resume__skills">
@@ -229,7 +231,37 @@ export const SectionResume: React.FC = () => (
 
 						<li>NodeJS</li>
 
+						<li>D3</li>
+
+						<li>Chart JS</li>
+
+						<li>Highcharts</li>
+					</ul>
+
+					<ul className="c-resume__skills">
+						<li>NPM / Yarn</li>
+
 						<li>Webpack</li>
+
+						<li>Rollup</li>
+
+						<li>Parcel</li>
+
+						<li>Vite</li>
+					</ul>
+
+					<ul className="c-resume__skills">
+						<li>Jest</li>
+
+						<li>Cypress</li>
+
+						<li>React Testing Library</li>
+
+						<li>Mocha</li>
+
+						<li>Tape</li>
+
+						<li>Chai</li>
 					</ul>
 
 					<ul className="c-resume__skills">
@@ -240,8 +272,14 @@ export const SectionResume: React.FC = () => (
 						<li>Accessibility (a11y)</li>
 
 						<li>Internationalization (i18n)</li>
+					</ul>
 
-						<li>Testing</li>
+					<ul className="c-resume__skills">
+						<li>Azure DevOps</li>
+
+						<li>Github Actions</li>
+
+						<li>Gitlab CI</li>
 					</ul>
 
 					<ul className="c-resume__skills">
