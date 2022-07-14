@@ -38,6 +38,7 @@ export const SectionSkills: React.FC = () => {
 						<div className="c-skill">
 							<figure style={{ backgroundColor: skill.fill }}>
 								<Icon
+									fill={skill.iconFill}
 									name={`svg-${skill.icon}`}
 									width={skill.width}
 									height={skill.height}
