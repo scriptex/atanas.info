@@ -656,10 +656,14 @@ body {
 	pointer-events: none;
 }
 
-.c-section__actions {
-	text-align: center;
+.c-section__actions,
+.c-section__container {
 	position: relative;
 	z-index: 2;
+}
+
+.c-section__actions {
+	text-align: center;
 	padding-top: 1.5rem;
 
 	& .c-btn {
@@ -1175,7 +1179,7 @@ body {
 		font-size: 1rem;
 		line-height: 1;
 		fill: var(--color-primary);
-		text-shadow: 0 0 2rem var(--color-secondary);
+		text-shadow: 0 0 0.25rem var(--color-secondary);
 		opacity: 0;
 		visibility: hidden;
 		transition: opacity var(--timing) var(--easing), visibility var(--timing) var(--easing);

@@ -20,39 +20,44 @@ export const SectionSkills: React.FC = () => {
 			actions={
 				<Button onClick={() => setShowTable(!showTable)}>{showTable ? 'Interactive' : 'Static'} mode</Button>
 			}
+			hasShell={false}
 			hasButton={true}
 			className=" bubbles"
 		>
-			<Lines />
+			<div className="c-section__container">
+				<Lines />
 
-			<h2>
-				Skills <br />
-				<small hidden={showTable}>(Drag the bubbles to play)</small>
-			</h2>
+				<h2>
+					Skills <br />
+					<small hidden={showTable}>(Drag the bubbles to play)</small>
+				</h2>
 
-			<div id="skills-graph" className={showTable ? 'is--hidden' : ''}></div>
+				<div id="skills-graph" className={showTable ? 'is--hidden' : ''}></div>
 
-			<div className={`o-grid${showTable ? '' : ' is--hidden'}`}>
-				{skills.map((skill: Skill, index: number) => (
-					<div key={index} className="o-grid__item xs-12 sm-6 md-4 lg-3">
-						<div className="c-skill">
-							<figure style={{ backgroundColor: skill.fill }}>
-								<Icon
-									fill={skill.iconFill}
-									name={`svg-${skill.icon}`}
-									width={skill.width}
-									height={skill.height}
-									className="c-skill__icon"
-								/>
-							</figure>
+				<div className="o-shell">
+					<div className={`o-grid${showTable ? '' : ' is--hidden'}`}>
+						{skills.map((skill: Skill, index: number) => (
+							<div key={index} className="o-grid__item xs-12 sm-6 md-4 lg-3">
+								<div className="c-skill">
+									<figure style={{ backgroundColor: skill.fill }}>
+										<Icon
+											fill={skill.iconFill}
+											name={`svg-${skill.icon}`}
+											width={skill.width}
+											height={skill.height}
+											className="c-skill__icon"
+										/>
+									</figure>
 
-							<p>
-								<strong>{skill.text}</strong>
-								Since {skill.since}
-							</p>
-						</div>
+									<p>
+										<strong>{skill.text}</strong>
+										Since {skill.since}
+									</p>
+								</div>
+							</div>
+						))}
 					</div>
-				))}
+				</div>
 			</div>
 		</Section>
 	);
