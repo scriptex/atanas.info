@@ -21,7 +21,6 @@ export const SectionSkills: React.FC = () => {
 			actions={
 				<Button onClick={() => setShowTable(!showTable)}>{showTable ? 'Interactive' : 'Static'} mode</Button>
 			}
-			hasShell={false}
 			hasButton={true}
 			className=" bubbles"
 			subtitle={showTable ? undefined : 'Drag the bubbles to play'}
@@ -31,29 +30,27 @@ export const SectionSkills: React.FC = () => {
 
 				<div id="skills-graph" className={showTable ? 'is--hidden' : ''}></div>
 
-				<div className="o-shell">
-					<div className={`o-grid${showTable ? '' : ' is--hidden'}`}>
-						{skills.map((skill: Skill, index: number) => (
-							<div key={index} className="o-grid__item xs-12 sm-6 md-4 lg-3">
-								<div className="c-skill">
-									<figure style={{ backgroundColor: skill.fill }}>
-										<Icon
-											fill={skill.iconFill}
-											name={`svg-${skill.icon}`}
-											width={skill.width}
-											height={skill.height}
-											className="c-skill__icon"
-										/>
-									</figure>
+				<div className={`o-grid${showTable ? '' : ' is--hidden'}`}>
+					{skills.map((skill: Skill, index: number) => (
+						<div key={index} className="o-grid__item xs-12 sm-6 md-4 lg-3">
+							<div className="c-skill">
+								<figure style={{ backgroundColor: skill.fill }}>
+									<Icon
+										fill={skill.iconFill}
+										name={`svg-${skill.icon}`}
+										width={skill.width}
+										height={skill.height}
+										className="c-skill__icon"
+									/>
+								</figure>
 
-									<p>
-										<strong>{skill.text}</strong>
-										Since {skill.since}
-									</p>
-								</div>
+								<p>
+									<strong>{skill.text}</strong>
+									Since {skill.since}
+								</p>
 							</div>
-						))}
-					</div>
+						</div>
+					))}
 				</div>
 			</div>
 		</Section>

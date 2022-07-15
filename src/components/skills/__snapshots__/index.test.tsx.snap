@@ -9,52 +9,52 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
       class="c-section c-section--skills bubbles"
       id="skills"
     >
-      <header
-        class="c-section__header"
-      >
-        <h2>
-          Skills
-        </h2>
-        <h3>
-          Drag the bubbles to play
-        </h3>
-      </header>
       <div
-        class="c-section__container"
+        class="o-shell"
       >
+        <header
+          class="c-section__header"
+        >
+          <h2>
+            Skills
+          </h2>
+          <h3>
+            Drag the bubbles to play
+          </h3>
+        </header>
         <div
-          class="lines"
+          class="c-section__container"
         >
           <div
-            class="line line--vertical"
-          />
+            class="lines"
+          >
+            <div
+              class="line line--vertical"
+            />
+            <div
+              class="line line--vertical"
+            />
+            <div
+              class="line line--vertical"
+            />
+          </div>
           <div
-            class="line line--vertical"
-          />
+            class="lines"
+          >
+            <div
+              class="line line--horizontal"
+            />
+            <div
+              class="line line--horizontal"
+            />
+            <div
+              class="line line--horizontal"
+            />
+          </div>
           <div
-            class="line line--vertical"
+            class=""
+            id="skills-graph"
           />
-        </div>
-        <div
-          class="lines"
-        >
-          <div
-            class="line line--horizontal"
-          />
-          <div
-            class="line line--horizontal"
-          />
-          <div
-            class="line line--horizontal"
-          />
-        </div>
-        <div
-          class=""
-          id="skills-graph"
-        />
-        <div
-          class="o-shell"
-        >
           <div
             class="o-grid is--hidden"
           >
@@ -3122,100 +3122,100 @@ exports[`SectionSkills component Should render the SectionSkills component 1`] =
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="c-section__actions"
-      >
-        <button
-          class="c-btn "
-          type="button"
+        <div
+          class="c-section__actions"
         >
-          Get in touch
-        </button>
-        <ul
-          class="c-section__actions-list"
-        >
-          <li>
-            <button
-              class="c-btn c-section__actions-close"
-              type="button"
-            >
-              Close
-            </button>
-          </li>
-          <li>
-            <button
-              class="c-btn "
-              type="button"
-            >
-              <svg
-                class="c-section__actions-icon"
+          <button
+            class="c-btn "
+            type="button"
+          >
+            Get in touch
+          </button>
+          <ul
+            class="c-section__actions-list"
+          >
+            <li>
+              <button
+                class="c-btn c-section__actions-close"
+                type="button"
               >
-                <use
-                  xlink:href="#svg-email"
-                />
-              </svg>
-              <span>
-                Contact me
-              </span>
-              <strong>
-                directly
-              </strong>
-            </button>
-          </li>
-          <li>
-            <a
-              class="c-btn"
-              href="https://app.usebraintrust.com/talent/782/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <svg
-                class="c-section__actions-icon"
+                Close
+              </button>
+            </li>
+            <li>
+              <button
+                class="c-btn "
+                type="button"
               >
-                <use
-                  xlink:href="#svg-braintrust"
-                />
-              </svg>
-              <span>
-                Hire me on
-              </span>
-              <strong>
-                Braintrust
-              </strong>
-            </a>
-          </li>
-          <li>
-            <a
-              class="c-btn"
-              href="https://www.toptal.com/resume/atanas-atanasov"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <svg
-                class="c-section__actions-icon"
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-email"
+                  />
+                </svg>
+                <span>
+                  Contact me
+                </span>
+                <strong>
+                  directly
+                </strong>
+              </button>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://app.usebraintrust.com/talent/782/"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <use
-                  xlink:href="#svg-toptal"
-                />
-              </svg>
-              <span>
-                Hire me on
-              </span>
-              <strong>
-                Toptal
-              </strong>
-            </a>
-          </li>
-        </ul>
-        <br
-          class="visible-xs-block"
-        />
-        <button
-          class="c-btn "
-        >
-          Static mode
-        </button>
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-braintrust"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Braintrust
+                </strong>
+              </a>
+            </li>
+            <li>
+              <a
+                class="c-btn"
+                href="https://www.toptal.com/resume/atanas-atanasov"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  class="c-section__actions-icon"
+                >
+                  <use
+                    xlink:href="#svg-toptal"
+                  />
+                </svg>
+                <span>
+                  Hire me on
+                </span>
+                <strong>
+                  Toptal
+                </strong>
+              </a>
+            </li>
+          </ul>
+          <br
+            class="visible-xs-block"
+          />
+          <button
+            class="c-btn "
+          >
+            Static mode
+          </button>
+        </div>
       </div>
     </section>
   </main>
