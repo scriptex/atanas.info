@@ -1,0 +1,27 @@
+.c-loader {
+	width: 5rem;
+	height: 5rem;
+	@mixin centered;
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		opacity: 1;
+		@mixin centered;
+		border: 0.125rem solid var(--color-primary);
+		border-radius: 50%;
+		animation: loading 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+	}
+
+	&::after {
+		border-color: var(--color-action);
+		animation-delay: -1s;
+	}
+}
+
+.c-loader__wrapper {
+	height: 100%;
+	position: relative;
+	background-color: var(--color-secondary);
+}

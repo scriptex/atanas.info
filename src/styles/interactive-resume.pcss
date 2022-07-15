@@ -1,0 +1,91 @@
+.c-interactive-resume {
+	text-align: center;
+	@mixin flex-row wrap, flex-start, center;
+	position: relative;
+	z-index: 1;
+	padding-bottom: 1rem;
+
+	& h2 {
+		align-self: center;
+		@mixin slanted;
+		margin-bottom: 4rem;
+	}
+}
+
+.c-interactive-resume__widget {
+	max-width: 100%;
+	flex: 0 0 100%;
+	padding: 2rem;
+	background-color: color-mod(var(--color-primary) a(25%));
+
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+
+	& h3 {
+		@mixin slanted;
+	}
+
+	& codersrank-portfolio,
+	& codersrank-work-experience {
+		--grid-columns: 2;
+	}
+
+	& codersrank-education {
+		--grid-columns: 3;
+	}
+
+	& codersrank-summary,
+	& codersrank-activity,
+	& codersrank-education,
+	& codersrank-timeline,
+	& codersrank-portfolio,
+	& codersrank-skills-chart,
+	& codersrank-work-experience {
+		text-align: left;
+	}
+
+	& codersrank-timeline {
+		color: var(--color-base);
+	}
+}
+
+@media (--tablet-portrait) {
+	.c-interactive-resume h2 {
+		margin-bottom: 1rem;
+	}
+
+	.c-interactive-resume__widget {
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+
+		& codersrank-portfolio,
+		& codersrank-work-experience {
+			--grid-columns: 1;
+		}
+
+		& codersrank-education {
+			--grid-columns: 2;
+		}
+	}
+}
+
+@media (--mobile) {
+	.c-section--interactive-resume {
+		padding: 6.125rem 0 1rem;
+	}
+
+	.c-interactive-resume {
+		padding: 0;
+		margin: 0 -1rem;
+	}
+
+	.c-interactive-resume__widget {
+		padding: 1rem;
+
+		& codersrank-education {
+			--grid-columns: 1;
+		}
+	}
+}

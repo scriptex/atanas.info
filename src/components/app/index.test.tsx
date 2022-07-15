@@ -3,7 +3,7 @@ import { act } from 'react-dom/test-utils';
 import { render, RenderResult, waitFor } from '@testing-library/react';
 
 import { App } from '.';
-import * as stats from '../section-stats';
+import * as stats from '../stats';
 
 jest.spyOn(stats, 'formatDate');
 

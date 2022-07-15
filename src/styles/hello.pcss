@@ -1,0 +1,80 @@
+.c-section--hello {
+	text-align: center;
+	padding: 0;
+
+	& h1 {
+		margin: 0;
+	}
+
+	& h2 {
+		min-height: 6.25rem;
+		position: relative;
+		overflow: hidden;
+	}
+}
+
+.c-canvas {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-color: var(--color-secondary);
+
+	& svg {
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+}
+
+.c-slider {
+	width: 30rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	transform: translate(-50%, -50%);
+
+	& h2 {
+		width: 100%;
+		perspective: 50rem;
+		perspective-origin: 50% 10rem;
+	}
+
+	& span {
+		width: 100%;
+		text-align: center;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		opacity: 0;
+		transition: all var(--timing) var(--easing);
+		transform: rotateY(-90deg) translateZ(9rem);
+
+		&:nth-child(odd) {
+			transform: rotateY(90deg) translateZ(9rem);
+		}
+
+		&.current {
+			opacity: 1;
+			transform: rotateY(0deg) translateZ(0);
+		}
+	}
+}
+
+@media (--mobile) {
+	.c-slider {
+		width: 18rem;
+
+		& h1 {
+			font-size: 1.75rem;
+		}
+
+		& h2 {
+			font-size: 1.5rem;
+		}
+	}
+}

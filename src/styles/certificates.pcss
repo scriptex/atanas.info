@@ -1,0 +1,39 @@
+.c-section--certificates {
+	color: var(--color-primary);
+	text-align: center;
+}
+
+.c-certificate {
+	display: block;
+	@mixin with-loader;
+
+	& img {
+		width: 100%;
+		height: auto;
+		display: block;
+		position: relative;
+		z-index: 2;
+	}
+}
+
+@media (--mobile) {
+	.c-section--certificates {
+		padding: 7rem 0 2rem;
+
+		& h1 {
+			margin-bottom: 2rem;
+		}
+
+		& .c-section__body {
+			padding-bottom: 0;
+		}
+
+		& .c-section__actions {
+			padding-top: 1rem;
+		}
+
+		& .o-grid__item + .o-grid__item {
+			padding-top: 0;
+		}
+	}
+}

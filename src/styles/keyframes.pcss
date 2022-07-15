@@ -1,0 +1,54 @@
+@keyframes float {
+	0%,
+	100% {
+		transform: translate(0rem, 0rem);
+	}
+
+	50% {
+		transform: translate(-1rem, -1rem);
+	}
+}
+
+@keyframes stars {
+	from {
+		transform: translateY(0px);
+	}
+
+	to {
+		transform: translateY(-2000px);
+	}
+}
+
+@keyframes drop-vertical {
+	from {
+		top: -50%;
+	}
+
+	to {
+		top: 110%;
+	}
+}
+
+@keyframes drop-horizontal {
+	from {
+		left: -50%;
+	}
+
+	to {
+		left: 110%;
+	}
+}
+
+@keyframes loading {
+	0% {
+		width: 0;
+		height: 0;
+		opacity: 1;
+	}
+
+	100% {
+		width: 4.5rem;
+		height: 4.5rem;
+		opacity: 0;
+	}
+}

@@ -1,5 +1,3 @@
-// https://glossarytech.com/terms/front_end-technologies
-
 export interface Skill {
 	readonly text: string;
 	readonly icon: string;

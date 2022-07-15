@@ -4,7 +4,6 @@ import { Power4, TweenMax } from 'gsap';
 import { random } from './shared';
 import { tracks } from '../data/tracks';
 
-// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 export const music = (container: HTMLDivElement | null): void => {
 	if (!container) {
 		return;
@@ -59,7 +58,7 @@ export const music = (container: HTMLDivElement | null): void => {
 
 		analyser.getByteFrequencyData(dataArray);
 
-		background('rgba(0,0,0,0.5)');
+		background('#000');
 		showCircles();
 		requestAnimationFrame(update);
 	};
@@ -87,7 +86,6 @@ export const music = (container: HTMLDivElement | null): void => {
 
 		await audio.play();
 
-		// eslint-disable-next-line compat/compat
 		context = new AudioContext();
 
 		if (!src) {
@@ -226,4 +224,3 @@ export const music = (container: HTMLDivElement | null): void => {
 
 	createCircles();
 };
-// codebeat:enable[ABC,LOC,BLOCK_NESTING]

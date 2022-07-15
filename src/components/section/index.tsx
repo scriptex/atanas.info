@@ -5,9 +5,11 @@ import { Icon, Button, ExternalLink } from '../../components';
 
 export interface Props {
 	id: string;
+	title?: string;
 	style?: React.CSSProperties;
 	actions?: React.ReactNode;
 	children: React.ReactNode;
+	subtitle?: string;
 	hasShell?: boolean;
 	hasButton: boolean;
 	className?: string;
@@ -15,16 +17,30 @@ export interface Props {
 	wrapperClassName?: string;
 }
 
-export const SectionElements: React.FC<Readonly<Props>> = (props: Readonly<Props>) => {
+export const SectionElements: React.FC<Readonly<Props>> = ({
+	title,
+	actions,
+	children,
+	subtitle,
+	hasButton
+}: Readonly<Props>) => {
 	const [open, setOpen] = React.useState(false);
 	const { setContactVisible } = React.useContext(AppContext);
 	const onClose = () => setOpen(false);
 
 	return (
 		<>
-			{props.children}
+			{!!title || !!subtitle ? (
+				<header className="c-section__header">
+					{!!title && <h2>{title}</h2>}
 
-			{props.hasButton && (
+					{!!subtitle && <h3>{subtitle}</h3>}
+				</header>
+			) : null}
+
+			{children}
+
+			{hasButton && (
 				<div className="c-section__actions">
 					<Button type="button" onClick={() => setOpen(!open)}>
 						Get in touch
@@ -76,11 +92,11 @@ export const SectionElements: React.FC<Readonly<Props>> = (props: Readonly<Props
 						</li>
 					</ul>
 
-					{!!props.actions && (
+					{!!actions && (
 						<>
 							<br className="visible-xs-block" />
 
-							{props.actions}
+							{actions}
 						</>
 					)}
 				</div>
@@ -89,23 +105,23 @@ export const SectionElements: React.FC<Readonly<Props>> = (props: Readonly<Props
 	);
 };
 
-export const Section: React.FC<Readonly<Props>> = (props: Readonly<Props>) => (
-	<main className={`o-main ${props.wrapperClassName || ''}`}>
-		<section
-			id={props.id}
-			style={props.style}
-			className={`c-section c-section--${props.id}${props.className || ''}`}
-		>
-			{props.hasShell ? (
-				<div className={`o-shell${props.shellClass ? ' ' + props.shellClass : ''}`}>
+export const Section: React.FC<Readonly<Props>> = (props: Readonly<Props>) => {
+	const { id, style, hasShell, className, shellClass, wrapperClassName } = props;
+
+	return (
+		<main className={`o-main ${wrapperClassName || ''}`}>
+			<section id={id} style={style} className={`c-section c-section--${id}${className || ''}`}>
+				{hasShell ? (
+					<div className={`o-shell${shellClass ? ' ' + shellClass : ''}`}>
+						<SectionElements {...props} />
+					</div>
+				) : (
 					<SectionElements {...props} />
-				</div>
-			) : (
-				<SectionElements {...props} />
-			)}
-		</section>
-	</main>
-);
+				)}
+			</section>
+		</main>
+	);
+};
 
 Section.defaultProps = {
 	hasShell: true,

@@ -1,0 +1,29 @@
+.c-header {
+	@mixin flex-row nowrap, center, space-between;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 30;
+	padding: 1rem;
+	background-color: color-mod(var(--color-secondary) a(85%));
+
+	& a {
+		color: var(--color-primary);
+		display: block;
+		position: relative;
+
+		& svg {
+			display: block;
+		}
+
+		& img {
+			width: 3.13rem;
+			height: 3.13rem;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+}

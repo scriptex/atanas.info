@@ -1,0 +1,140 @@
+.c-funding__knob,
+.c-funding__crypto {
+	opacity: 0;
+	visibility: hidden;
+	display: block;
+	position: fixed;
+	pointer-events: none;
+	transition: all var(--timing) var(--easing);
+}
+
+.c-funding__knob {
+	max-width: 37.5rem;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	margin: auto;
+	overflow: visible;
+	filter: drop-shadow(0 0 1.5rem color-mod(var(--color-primary) a(70%)));
+
+	& path {
+		transition: fill var(--timing) var(--easing);
+	}
+}
+
+.c-funding__knob,
+.c-funding__knob * {
+	touch-action: manipulation !important;
+}
+
+.c-funding__crypto {
+	width: 8rem;
+	top: 50%;
+	left: 50%;
+	z-index: 101;
+	margin: 0;
+
+	& h6 {
+		font-size: 0.875rem;
+		margin: 0 0 0.5rem;
+	}
+
+	& svg {
+		width: 100%;
+		height: 100%;
+		display: block;
+		margin: 0;
+		filter: drop-shadow(0 0 1.5rem color-mod(var(--color-primary) a(70%)));
+	}
+
+	& small {
+		display: block;
+	}
+
+	& button {
+		width: 3rem;
+		height: 3rem;
+		padding: 0;
+		border: 0;
+		margin: 0 0 0.5rem;
+		background: none;
+		border-radius: 0;
+		box-shadow: none;
+		appearance: none;
+		cursor: pointer;
+	}
+}
+
+.c-funding__crypto--bitcoin {
+	margin: -18rem 0 0 -18rem;
+}
+
+.c-funding__crypto--shiba-inu {
+	margin: -18rem 0 0 10rem;
+}
+
+.c-funding__item {
+	color: inherit;
+	text-decoration: none;
+
+	& a {
+		text-decoration: none;
+	}
+
+	& path {
+		fill: var(--color-primary);
+	}
+
+	&:hover {
+		& path {
+			fill: var(--color-action);
+		}
+	}
+}
+
+.c-funding__trigger {
+	fill: var(--color-action);
+	pointer-events: auto;
+	cursor: pointer;
+}
+
+.c-funding__backdrop {
+	opacity: 0;
+	display: block;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 90;
+	background-color: var(--color-secondary);
+	transition: opacity var(--timing) var(--easing);
+	pointer-events: none;
+}
+
+.c-funding--open {
+	& .c-funding__knob,
+	& .c-funding__crypto {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+		pointer-events: auto;
+	}
+
+	& .c-funding__backdrop {
+		opacity: 0.8;
+		pointer-events: auto;
+	}
+}
+
+@media (--mobile) {
+	.c-funding__crypto--bitcoin {
+		margin: -15rem 0 0 -11rem;
+	}
+
+	.c-funding__crypto--shiba-inu {
+		margin: -15rem 0 0 3rem;
+	}
+}

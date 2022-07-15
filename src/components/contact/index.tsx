@@ -27,7 +27,6 @@ export const ContactSuccessContent: React.FC = () => (
 	</>
 );
 
-// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 export const onSubmit = (
 	e: React.FormEvent<HTMLFormElement>,
 	setStatus: (status: Status) => void,
@@ -38,7 +37,6 @@ export const onSubmit = (
 	const form = e.target as HTMLFormElement;
 	const data = new FormData(form);
 
-	// eslint-disable-next-line compat/compat
 	fetch(form.action, {
 		method: form.method,
 		headers: {
@@ -103,6 +101,5 @@ export const Contact: React.FC = () => {
 		</form>
 	);
 };
-// codebeat:enable[ABC,LOC,BLOCK_NESTING]
 
 export default Contact;

@@ -252,128 +252,124 @@ exports[`App component Should render the App component 1`] = `
       id="hello"
     >
       <div
-        class="o-shell"
+        class="c-canvas"
+        id="canvas"
+      />
+      <div
+        class="c-slider"
       >
-        <div
-          class="c-canvas"
-          id="canvas"
-        />
-        <div
-          class="c-slider"
-        >
-          <h1>
-            👋 Hello! 
-            <br />
-            I am Atanas Atanasov
-          </h1>
-          <h2>
-            <span
-              class="current"
-            >
-              lead front-end developer at E.ON
-            </span>
-            <span
-              class=""
-            >
-              senior software engineer at Toptal
-            </span>
-            <span
-              class=""
-            >
-              founding member at Braintrust
-            </span>
-            <span
-              class=""
-            >
-              a TypeScript fanatic
-            </span>
-            <span
-              class=""
-            >
-              a CSS wizard
-            </span>
-            <span
-              class=""
-            >
-              a JavaScript tinkerer
-            </span>
-            <span
-              class=""
-            >
-              a minimalist
-            </span>
-            <span
-              class=""
-            >
-              an open source enthusiast
-            </span>
-            <span
-              class=""
-            >
-              a maker of things
-            </span>
-            <span
-              class=""
-            >
-              an a11y and UX advocate
-            </span>
-            <span
-              class=""
-            >
-              a front-end magician
-            </span>
-            <span
-              class=""
-            >
-              a bug fixer
-            </span>
-            <span
-              class=""
-            >
-              a senior web developer
-            </span>
-            <span
-              class=""
-            >
-              I am into data visualization
-            </span>
-            <span
-              class=""
-            >
-              an UI architect
-            </span>
-            <span
-              class=""
-            >
-              I am obsessed with quality
-            </span>
-            <span
-              class=""
-            >
-              a web standards fanatic
-            </span>
-            <span
-              class=""
-            >
-              a JavaScript master
-            </span>
-            <span
-              class=""
-            >
-              a NodeJS hacker
-            </span>
-            <span
-              class=""
-            >
-              a father
-            </span>
-            <span
-              class=""
-            >
-              a husband
-            </span>
-          </h2>
-        </div>
+        <h1>
+          👋 Hello! 
+          <br />
+          I am Atanas Atanasov
+        </h1>
+        <h2>
+          <span
+            class="current"
+          >
+            lead front-end developer at E.ON
+          </span>
+          <span
+            class=""
+          >
+            senior software engineer at Toptal
+          </span>
+          <span
+            class=""
+          >
+            founding member at Braintrust
+          </span>
+          <span
+            class=""
+          >
+            a TypeScript fanatic
+          </span>
+          <span
+            class=""
+          >
+            a CSS wizard
+          </span>
+          <span
+            class=""
+          >
+            a JavaScript tinkerer
+          </span>
+          <span
+            class=""
+          >
+            a minimalist
+          </span>
+          <span
+            class=""
+          >
+            an open source enthusiast
+          </span>
+          <span
+            class=""
+          >
+            a maker of things
+          </span>
+          <span
+            class=""
+          >
+            an a11y and UX advocate
+          </span>
+          <span
+            class=""
+          >
+            a front-end magician
+          </span>
+          <span
+            class=""
+          >
+            a bug fixer
+          </span>
+          <span
+            class=""
+          >
+            a senior web developer
+          </span>
+          <span
+            class=""
+          >
+            I am into data visualization
+          </span>
+          <span
+            class=""
+          >
+            an UI architect
+          </span>
+          <span
+            class=""
+          >
+            I am obsessed with quality
+          </span>
+          <span
+            class=""
+          >
+            a web standards fanatic
+          </span>
+          <span
+            class=""
+          >
+            a JavaScript master
+          </span>
+          <span
+            class=""
+          >
+            a NodeJS hacker
+          </span>
+          <span
+            class=""
+          >
+            a father
+          </span>
+          <span
+            class=""
+          >
+            a husband
+          </span>
+        </h2>
       </div>
     </section>
   </main>

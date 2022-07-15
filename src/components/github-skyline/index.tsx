@@ -26,7 +26,6 @@ interface Props {
 const ROOT = './stl';
 const SIZE = 750;
 
-// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 export const onSceneMount = (args: SceneEventArgs, props: Props, onLoad: () => void): void => {
 	SceneLoader.Append('./stl/', props.file, args.scene, (scene: SceneCore) => {
 		const cubeTexture = CubeTexture.CreateFromPrefilteredData(`${ROOT}/texture.dds`, scene);
@@ -128,6 +127,5 @@ export const GithubSkyline = (props: Props): React.ReactElement => {
 		</div>
 	);
 };
-// codebeat:enable[ABC,LOC,BLOCK_NESTING]
 
 export default GithubSkyline;

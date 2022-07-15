@@ -3,7 +3,6 @@ import { render } from '@testing-library/react';
 
 import { Button } from '.';
 
-// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 describe('Button component', () => {
 	it('Should render the Button component with type button', () => {
 		const { asFragment, rerender } = render(
@@ -31,4 +30,3 @@ describe('Button component', () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 });
-// codebeat:enable[ABC,LOC,BLOCK_NESTING]

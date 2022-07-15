@@ -1,0 +1,275 @@
+.c-section--stats {
+	color: var(--color-secondary);
+	text-align: center;
+
+	&::before {
+		@mixin overlay;
+		opacity: 0.6;
+		z-index: 1;
+		background-color: var(--color-secondary);
+	}
+
+	& h3 {
+		@mixin slanted;
+		margin: 0 0 1rem;
+	}
+
+	& h6 {
+		font-size: 1rem;
+		line-height: 1.2;
+		font-style: italic;
+
+		& strong {
+			color: var(--color-action);
+		}
+	}
+
+	& ul {
+		list-style: none outside none;
+		padding: 0;
+		margin: 0;
+	}
+
+	& li {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 1rem 1rem 0;
+	}
+
+	& .c-section__entry {
+		position: relative;
+		padding: 4rem 0;
+		background-color: color-mod(var(--color-primary) a(80%));
+	}
+
+	& .c-section__header + .c-section__entry {
+		padding-top: 0;
+	}
+
+	& .c-section__stamp {
+		font-size: 0.75rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 1rem;
+	}
+
+	& .c-section__entry--no-background {
+		color: var(--color-primary);
+		margin: 0;
+		background-color: transparent;
+	}
+
+	& .c-section__actions {
+		padding: 0;
+		margin-top: -1rem;
+	}
+
+	& .c-section__list {
+		text-align: center;
+		max-width: 62rem;
+		@mixin flex-row wrap, center, center;
+		padding: 0;
+		margin: 0 auto -1rem;
+
+		& li {
+			color: var(--color-secondary);
+			width: 10rem;
+			height: 10rem;
+			@mixin flex-row wrap, center, center;
+			align-content: center;
+			padding: 1rem;
+			margin: 1rem;
+			border: 0.25rem solid var(--color-primary);
+			background-color: color-mod(var(--color-primary) a(80%));
+			border-radius: 50%;
+			animation: float 10s infinite alternate;
+
+			@supports (background: paint(avatar-polygon)) {
+				&:not(:first-child) {
+					@mixin polygon 10;
+					border-width: 0.5rem;
+					border-radius: 50%;
+				}
+			}
+
+			&:nth-child(even) {
+				animation-direction: alternate-reverse;
+			}
+
+			&:first-child {
+				color: var(--color-primary);
+				width: 100%;
+				height: auto;
+				display: block;
+				padding: 0 0 2rem;
+				border: 0;
+				margin: 0;
+				background-color: transparent;
+				border-radius: 0;
+				animation: none;
+			}
+
+			& span,
+			& strong {
+				width: 100%;
+				display: block;
+			}
+
+			& span {
+				padding-top: 1rem;
+			}
+
+			& strong {
+				font-size: 1.5rem;
+				padding-top: 1.5rem;
+			}
+		}
+	}
+}
+
+@for $i from 1 to 20 {
+	.c-section--stats .c-section__list li:nth-child($(i)) {
+		/* prettier-ignore */
+		animation-delay: $(i)s;
+	}
+}
+
+.c-calendar {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	margin-bottom: 2rem;
+
+	& text {
+		font-size: 0.625rem;
+	}
+
+	& rect {
+		shape-rendering: geometricPrecision;
+		outline: 1px solid var(--color-calendar-graph-day-border);
+		outline-offset: -1px;
+	}
+}
+
+.c-calendar--github {
+	& rect {
+		fill: var(--color-calendar-graph-day-bg);
+		outline: 1px solid var(--color-calendar-graph-day-border);
+
+		&[data-level='1'] {
+			fill: var(--color-calendar-graph-day-L1-bg);
+		}
+
+		&[data-level='2'] {
+			fill: var(--color-calendar-graph-day-L2-bg);
+		}
+
+		&[data-level='3'] {
+			fill: var(--color-calendar-graph-day-L3-bg);
+		}
+
+		&[data-level='4'] {
+			fill: var(--color-calendar-graph-day-L4-bg);
+		}
+	}
+
+	& svg + div a {
+		display: none;
+	}
+
+	& .contrib-column {
+		border: 0;
+	}
+}
+
+.c-calendar--gitlab {
+	& text {
+		font-size: 0.75rem;
+		fill: currentColor;
+	}
+
+	& rect {
+		&[data-level='0'] {
+			fill: #ededed;
+		}
+
+		&[data-level='1'] {
+			fill: #acd5f2;
+		}
+
+		&[data-level='2'] {
+			fill: #7fa8c9;
+		}
+
+		&[data-level='3'] {
+			fill: #527ba0;
+		}
+
+		&[data-level='4'] {
+			fill: #254e77;
+		}
+	}
+}
+
+.c-calendar__outer {
+	width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+}
+
+.c-calendar__entry:not(:first-child) {
+	padding-top: 3.5rem;
+}
+
+@media (--tablet-portrait) {
+	.c-section--stats {
+		& ul {
+			padding-bottom: 4.5rem;
+		}
+	}
+}
+
+@media (--mobile) {
+	.c-section--stats {
+		& h1,
+		& h2 {
+			margin-bottom: 2rem;
+		}
+
+		& .c-section__head {
+			padding-top: 2rem;
+		}
+
+		& .c-section__entry {
+			padding: 2rem 0;
+		}
+
+		& .c-section__entry + .c-section__entry {
+			margin-top: 0;
+		}
+
+		& .c-section__list li {
+			width: 9rem;
+			height: 9rem;
+			margin: 0.5rem;
+		}
+
+		& .c-section__stamp {
+			padding: 0.25rem 1rem;
+		}
+	}
+
+	.c-calendar {
+		margin-bottom: 0;
+
+		& ul {
+			padding: 0;
+		}
+	}
+
+	.c-calendar__entry:not(:first-child) {
+		padding-top: 2rem;
+	}
+}

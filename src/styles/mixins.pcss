@@ -1,0 +1,30 @@
+@define-mixin slanted {
+	color: var(--color-primary);
+	display: inline-block;
+	padding: 0.5rem 2rem 0.5rem 1rem;
+	background: paint(slanted-background);
+	--slanted-background-color: var(--color-action);
+	--slanted-background-opacity: 0.35;
+}
+
+@define-mixin polygon $sides {
+	border-radius: 0;
+	mask-image: paint(avatar-polygon);
+	--avatar-sides: $sides;
+	--avatar-angle: 0deg;
+}
+
+@define-mixin overlay {
+	content: '';
+	@mixin centered;
+	z-index: 1;
+}
+
+@define-mixin with-loader {
+	position: relative;
+
+	& > .c-loading {
+		@mixin centered;
+		z-index: 1;
+	}
+}
