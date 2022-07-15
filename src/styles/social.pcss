@@ -27,6 +27,11 @@
 		padding-top: 0;
 	}
 
+	& .c-section__header:not(:first-child) {
+		padding-top: 4rem;
+		border-top: 1px solid var(--color-primary);
+	}
+
 	& .github-frame,
 	& .youtube-frame,
 	& .spotify-frame,
@@ -48,29 +53,9 @@
 
 @media (--mobile) {
 	.c-section--social {
-		padding: 5rem 0 2rem;
-
-		& h1,
-		& h2 {
-			margin-bottom: 2rem;
-		}
-
 		/* prettier-ignore */
 		& codersrank-widget { /* stylelint-disable-line selector-type-no-unknown */
 			max-width: none;
-		}
-
-		& .c-section__head {
-			padding-top: 2rem;
-			margin-bottom: 0;
-
-			& small {
-				padding: 0.25rem 1rem;
-			}
-		}
-
-		& .c-section__actions {
-			padding-top: 2rem;
 		}
 
 		& .o-grid__item {
@@ -79,6 +64,10 @@
 
 		& .github-frame {
 			height: 11rem;
+		}
+
+		& .c-section__header:not(:first-child) {
+			padding-top: 2rem;
 		}
 	}
 }

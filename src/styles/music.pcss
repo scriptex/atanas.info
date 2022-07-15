@@ -14,6 +14,29 @@
 	}
 }
 
+@media (--tablet-portrait) {
+	.c-section--music {
+		& .c-section__actions-list {
+			min-width: 0;
+			width: 70vw;
+		}
+	}
+}
+
+@media (--mobile) {
+	.c-section--music {
+		& .c-section__actions {
+			right: 0;
+			left: 0;
+			transform: none;
+		}
+
+		& .c-section__actions-list {
+			width: 90vw;
+		}
+	}
+}
+
 .c-music {
 	padding-top: 5.125rem;
 	margin: 0 -1rem;
@@ -133,6 +156,18 @@
 	.c-music__tracks button:hover {
 		color: #000;
 		background-color: #fff;
+	}
+}
+
+@media (--mobile) {
+	.c-music__btn,
+	.c-music__menu {
+		bottom: 5.5rem;
+	}
+
+	.c-music__menu {
+		right: 1rem;
+		left: auto;
 	}
 }
 

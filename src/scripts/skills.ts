@@ -30,15 +30,14 @@ interface Data {
 
 export const drawSkills = (words: Skill[]): void => {
 	const all = words.length;
-	const node = document.getElementById('skills-graph') as HTMLDivElement;
-	const width = node.clientWidth;
-	const height = node.clientHeight;
-	const svg = createSVG('skills-graph', width, height);
+	const size = window.innerHeight;
+	const svg = createSVG('skills-graph', size, size);
 
 	const renderSkills = (data: Data): void => {
-		const simulation: Simulation<any, any> = createSimulation(width, height);
+		const sizeAdjustment = window.innerWidth > window.innerHeight ? 1.2 : 1;
+		const simulation: Simulation<any, any> = createSimulation(size * sizeAdjustment, size);
 		const links = createLinks(svg, data.links);
-		const nodes = createNodes(svg, data.nodes, width, dragHandler(simulation));
+		const nodes = createNodes(svg, data.nodes, size, dragHandler(simulation));
 
 		simulation.nodes(data.nodes).on('tick', () => {
 			links
@@ -105,7 +104,7 @@ export const createSimulation = (width: number, height: number): Simulation<any,
 			'link',
 			forceLink().id((d: any) => d.index)
 		)
-		.force('collide', forceCollide((d: any) => d.r * 1.75).iterations(5))
+		.force('collide', forceCollide((d: any) => d.r * 1.75).iterations(10))
 		.force('charge', forceManyBody())
 		.force('center', forceCenter(width / 2, height / 2))
 		.force('y', forceY(0))

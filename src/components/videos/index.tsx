@@ -8,7 +8,7 @@ export const SectionVideos: React.FC = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);
 
 	return (
-		<Section id="videos" title="Videos" hasButton={true} className=" c-section--videos">
+		<Section id="videos" title="Videos" hasButton={true} className=" c-section--slides">
 			<Lines />
 
 			<SectionNav name="title" data={presentations} active={activeIndex} onClick={setActiveIndex} />
