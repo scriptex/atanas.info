@@ -1,0 +1,91 @@
+.lines {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: -1;
+	margin: auto;
+	pointer-events: none;
+}
+
+.line {
+	position: absolute;
+	overflow: hidden;
+
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		animation-duration: 7s;
+		animation-iteration-count: infinite;
+		animation-fill-mode: forwards;
+		animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+	}
+
+	&.line--vertical {
+		width: 1px;
+		height: 100%;
+		top: 0;
+		left: 50%;
+
+		&::after {
+			width: 100%;
+			height: 15vh;
+			top: -50%;
+			left: 0;
+			background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 75%, #fff 100%);
+			animation-name: drop-vertical;
+		}
+
+		&:nth-child(1) {
+			margin-left: -30vw;
+
+			&::after {
+				animation-delay: 2s;
+			}
+		}
+
+		&:nth-child(3) {
+			margin-left: 30vw;
+
+			&::after {
+				animation-delay: 3s;
+			}
+		}
+	}
+
+	&.line--horizontal {
+		width: 100%;
+		height: 1px;
+		top: 50%;
+		left: 0;
+
+		&::after {
+			width: 15vw;
+			height: 100%;
+			top: 0;
+			left: 50%;
+			background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fff 75%, #fff 100%);
+			animation-name: drop-horizontal;
+			animation-delay: 0.5s;
+		}
+
+		&:nth-child(1) {
+			margin-top: -30vh;
+
+			&::after {
+				animation-delay: 1s;
+			}
+		}
+
+		&:nth-child(3) {
+			margin-top: 30vh;
+
+			&::after {
+				animation-delay: 4s;
+			}
+		}
+	}
+}

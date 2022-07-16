@@ -62,13 +62,11 @@ export const setCircleData = (canvas: Canvas, circle: SVGCircleElement, data: Da
 		.attr('r', 0)
 		.style('stroke', () => data.color as string)
 		.style('stroke-width', '1')
-		// eslint-disable-next-line
 		.style('stroke-opacity', () => data.op!)
 		.style('stroke-linecap', 'round')
 		.style('fill', 'none')
 		.transition()
 		.duration(rand(10000))
-		// eslint-disable-next-line
 		.attr('r', () => data.r!)
 		.transition()
 		.delay(rand(100000))

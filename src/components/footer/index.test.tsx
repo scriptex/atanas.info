@@ -2,7 +2,7 @@ import * as React from 'react';
 import { render } from '@testing-library/react';
 
 import { Footer } from '.';
-import * as stats from '../section-stats';
+import * as stats from '../stats';
 
 jest.spyOn(stats, 'formatDate');
 

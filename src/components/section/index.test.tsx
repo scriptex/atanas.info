@@ -44,7 +44,6 @@ const test = (title: string, Component: React.FC<Readonly<Props>>, props: Omit<P
 	});
 };
 
-// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 const suite = (Component: React.FC<Readonly<Props>>, name: string): void => {
 	describe(`${name} component`, () => {
 		test(`Should render the ${name} component`, Component, {
@@ -76,7 +75,6 @@ const suite = (Component: React.FC<Readonly<Props>>, name: string): void => {
 		});
 	});
 };
-// codebeat:enable[ABC,LOC,BLOCK_NESTING]
 
 Object.values(components).forEach((value: Component) => suite(value.component, value.name));
 

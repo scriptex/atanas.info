@@ -1,0 +1,193 @@
+.c-section--skills {
+	&::before {
+		@mixin overlay;
+		z-index: 1;
+		opacity: 0.8;
+		background-color: var(--color-secondary);
+	}
+
+	& svg {
+		width: 100%;
+		display: block;
+		overflow: visible;
+	}
+
+	& text {
+		font-size: 1rem;
+		line-height: 1;
+		fill: var(--color-primary);
+		text-shadow: 0 0 0.25rem var(--color-secondary);
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity var(--timing) var(--easing), visibility var(--timing) var(--easing);
+		pointer-events: none;
+		user-select: none;
+	}
+
+	& line {
+		stroke: var(--color-primary);
+		stroke-width: 0.1275rem;
+	}
+
+	& use {
+		opacity: 1;
+		visibility: visible;
+		transition: opacity var(--timing) var(--easing), visibility var(--timing) var(--easing);
+		pointer-events: none;
+
+		&:not([fill]) {
+			fill: var(--color-primary);
+		}
+	}
+
+	& circle {
+		stroke: var(--color-primary);
+		stroke-width: 0.1275rem;
+		cursor: all-scroll;
+		transition: fill var(--timing) var(--easing), stroke var(--timing) var(--easing),
+			stroke-width var(--timing) var(--easing);
+
+		&:hover {
+			fill: var(--color-action);
+			stroke: var(--color-action);
+			stroke-width: 1rem;
+
+			& ~ text {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			& ~ use {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+
+	& .o-grid {
+		max-height: 188.5rem;
+		justify-content: flex-start;
+		overflow: hidden;
+		transition: max-height var(--timing) var(--easing);
+
+		&.is--hidden {
+			max-height: 0;
+		}
+	}
+
+	& .o-shell {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+#skills-graph {
+	height: 100vh;
+	position: relative;
+	transition: height var(--timing) var(--easing);
+
+	& svg {
+		opacity: 1;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: opacity var(--timing) var(--easing);
+	}
+
+	&.is--hidden {
+		height: 0vh;
+		pointer-events: none;
+
+		& svg {
+			opacity: 0;
+		}
+	}
+}
+
+.c-skill {
+	color: var(--color-secondary);
+	text-align: left;
+	min-height: 100%;
+	@mixin flex-row nowrap, center, flex-start;
+	padding: 1rem;
+	margin: 0;
+	list-style: none outside none;
+	background-color: color-mod(var(--color-primary) a(85%));
+	border-radius: 1rem;
+
+	& img,
+	& strong {
+		display: block;
+	}
+
+	& strong {
+		padding-bottom: 0.5rem;
+	}
+
+	& figure {
+		width: 3.5rem;
+		height: 3.5rem;
+		@mixin flex-row nowrap, center, center;
+		padding: 0.0625rem;
+		margin-right: 1rem;
+		background-color: color-mod(var(--color-secondary) a(20%));
+		border-radius: 50%;
+
+		& svg {
+			width: auto;
+			margin: auto;
+		}
+	}
+}
+
+@media (--tablet-landscape) {
+	.c-section--skills {
+		& .o-grid {
+			max-height: 247.25rem;
+		}
+	}
+}
+
+@media (--tablet-portrait) {
+	.c-section--skills {
+		& .o-grid {
+			max-height: 370.5rem;
+		}
+	}
+}
+
+@media (--mobile) {
+	.c-section--skills {
+		& .o-grid {
+			max-height: 565rem;
+		}
+
+		& .o-grid__item + .o-grid__item {
+			padding-top: 0;
+		}
+	}
+
+	#skills-graph {
+		height: 75vh;
+
+		& svg {
+			transform: translate(-50%, -25%);
+		}
+	}
+
+	.c-skill {
+		padding: 0.5rem;
+
+		& figure {
+			width: 3rem;
+			height: 3rem;
+			padding: 0.25rem;
+			margin-right: 0.5rem;
+		}
+
+		& strong {
+			padding: 0;
+		}
+	}
+}

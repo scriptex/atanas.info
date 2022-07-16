@@ -30,7 +30,6 @@ export const AppContext = React.createContext({
 	setContactVisible: (state: boolean) => state
 });
 
-// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 export const App: React.FC = () => {
 	const [contactVisible, setContactVisible] = React.useState(false);
 	const value: any = { contactVisible, setContactVisible };
@@ -77,6 +76,5 @@ export const App: React.FC = () => {
 		</Router>
 	);
 };
-// codebeat:enable[ABC,LOC,BLOCK_NESTING]
 
 export default App;

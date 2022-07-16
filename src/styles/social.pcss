@@ -1,0 +1,310 @@
+.c-section--social {
+	color: var(--color-secondary);
+	text-align: center;
+
+	& h3:not([class]) {
+		color: var(--color-primary);
+		@mixin slanted;
+		margin-bottom: 1rem;
+	}
+
+	/* prettier-ignore */
+	& codersrank-widget { /* stylelint-disable-line selector-type-no-unknown */
+		width: 100%;
+		max-width: 40rem;
+		display: block;
+	}
+
+	& .o-grid__item {
+		padding-bottom: 2rem;
+	}
+
+	& .c-section__entry {
+		padding-bottom: 2rem;
+	}
+
+	& .c-section__actions {
+		padding-top: 0;
+	}
+
+	& .c-section__header:not(:first-child) {
+		padding-top: 4rem;
+		border-top: 1px solid var(--color-primary);
+	}
+
+	& .github-frame,
+	& .youtube-frame,
+	& .spotify-frame,
+	& .stackoverflow-frame {
+		width: 100%;
+		display: block;
+	}
+
+	& .github-frame {
+		height: 25rem;
+		background-color: var(--color-primary);
+		border-radius: 0.25rem;
+	}
+
+	& .youtube-frame {
+		border: 1px solid var(--color-primary);
+	}
+}
+
+@media (--mobile) {
+	.c-section--social {
+		/* prettier-ignore */
+		& codersrank-widget { /* stylelint-disable-line selector-type-no-unknown */
+			max-width: none;
+		}
+
+		& .o-grid__item {
+			padding-bottom: 0;
+		}
+
+		& .github-frame {
+			height: 11rem;
+		}
+
+		& .c-section__header:not(:first-child) {
+			padding-top: 2rem;
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	.c-section--social .github-frame {
+		height: 12.75rem;
+	}
+}
+
+@media (max-width: 685px) {
+	.c-section--social .github-frame {
+		height: 14.25rem;
+	}
+}
+
+@media (max-width: 610px) {
+	.c-section--social .github-frame {
+		height: 15.75rem;
+	}
+}
+
+@media (max-width: 590px) {
+	.c-section--social .github-frame {
+		height: 13rem;
+	}
+}
+
+@media (max-width: 568px) {
+	.c-section--social .github-frame {
+		height: 14.75rem;
+	}
+}
+
+@media (max-width: 554px) {
+	.c-section--social .github-frame {
+		height: 16.5rem;
+	}
+}
+
+@media (max-width: 478px) {
+	.c-section--social .github-frame {
+		height: 18rem;
+	}
+}
+
+@media (max-width: 425px) {
+	.c-section--social .github-frame {
+		height: 19.25rem;
+	}
+}
+
+@media (max-width: 390px) {
+	.c-section--social .github-frame {
+		height: 20.75rem;
+	}
+}
+
+@media (max-width: 379px) {
+	.c-section--social .github-frame {
+		height: 22.625rem;
+	}
+}
+
+@media (max-width: 375px) {
+	.c-section--social .github-frame {
+		height: 24.25rem;
+	}
+}
+
+@media (max-width: 360px) {
+	.c-section--social .github-frame {
+		height: 26rem;
+	}
+}
+
+.page-social {
+	font-size: 100%;
+
+	& a,
+	& a:hover,
+	& a:visited,
+	& a:visited:hover {
+		font-weight: inherit;
+		color: var(--color-primary);
+	}
+
+	& p,
+	& body {
+		font-weight: inherit;
+		font-size: 1rem;
+		line-height: 1.35;
+		color: var(--color-secondary);
+	}
+
+	& p {
+		color: var(--color-primary);
+	}
+
+	& body {
+		font-family: system-ui;
+		color: var(--color-secondary);
+		background: var(--color-secondary);
+	}
+
+	& h1 {
+		font-size: var(--font-size-h1);
+		font-weight: bold;
+	}
+
+	& h2 {
+		font-size: var(--font-size-h2);
+		font-weight: bold;
+	}
+
+	& h3 {
+		font-size: var(--font-size-h3);
+		font-weight: bold;
+	}
+
+	& h4 {
+		font-size: var(--font-size-h4);
+		font-weight: bold;
+	}
+
+	& h5 {
+		font-size: var(--font-size-h5);
+		font-weight: bold;
+	}
+
+	& h6 {
+		font-size: var(--font-size-h6);
+		font-weight: bold;
+	}
+
+	& .linkedin-frame {
+		@mixin flex-row nowrap, center, center;
+	}
+
+	& .c-section--social h1 a {
+		color: var(--color-action);
+		text-decoration: underline;
+	}
+
+	& .c-nav:not(.c-nav--inline) {
+		color: var(--color-primary);
+
+		& a.active {
+			color: var(--color-action);
+		}
+	}
+
+	& .c-footer {
+		font-size: var(--font-size-base);
+		color: var(--color-primary);
+
+		& small {
+			font-size: 80%;
+
+			& a {
+				color: var(--color-action);
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+@media (--hover) {
+	.page-social {
+		& .c-nav:not(.c-nav--inline) a:hover,
+		& .c-footer small a:hover,
+		& .c-section--social h1 a:hover {
+			color: var(--color-action);
+			text-decoration: none;
+		}
+	}
+}
+
+.LI-profile-badge {
+	--font-size-h3: 1.25rem;
+	--font-size-h4: 0.875rem;
+
+	& > div {
+		width: 100%;
+	}
+
+	& h3,
+	& h4 {
+		text-align: left;
+		line-height: 1;
+		padding: 0 0 0.5rem;
+
+		& a {
+			font-size: inherit;
+			line-height: inherit;
+		}
+	}
+
+	& .profile-badge {
+		width: 100%;
+		padding-bottom: 0.5rem;
+		margin: 0;
+	}
+
+	& .profile-badge__header {
+		padding: 0.5rem 1rem;
+	}
+
+	& .profile-badge__header-logo-icon {
+		display: block;
+		margin: auto;
+	}
+
+	& .profile-badge__content {
+		position: relative;
+		padding: 0.5rem 0.5rem 0;
+	}
+
+	& .profile-badge__content-profile-image {
+		width: 3rem;
+		height: 3rem;
+		position: absolute;
+		top: 0.5rem;
+		left: 0.5rem;
+		margin: 0;
+	}
+
+	& .profile-badge__content-profile-name {
+		padding: 0.875rem 0 0.875rem 4rem;
+		margin-bottom: 0.5rem;
+	}
+
+	& .profile-badge__cta-btn {
+		font-size: 1rem;
+		line-height: 1.1;
+		height: auto;
+		padding: 0.5rem 1rem;
+		margin: 0.5rem 0 0;
+	}
+}

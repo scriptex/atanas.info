@@ -1,0 +1,25 @@
+.c-section--certificates {
+	color: var(--color-primary);
+	text-align: center;
+}
+
+.c-certificate {
+	display: block;
+	@mixin with-loader;
+
+	& img {
+		width: 100%;
+		height: auto;
+		display: block;
+		position: relative;
+		z-index: 2;
+	}
+}
+
+@media (--mobile) {
+	.c-section--certificates {
+		& .o-grid__item + .o-grid__item {
+			padding-top: 0;
+		}
+	}
+}

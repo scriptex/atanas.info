@@ -116,7 +116,7 @@ export const createLinks = (svg: Canvas, data: Data['links']): any => svg.append
 export const createNodes = (
 	svg: Canvas,
 	data: Node[],
-	winWidth: number,
+	nodeWidth: number,
 	callable: () => void
 ): Selection<SVGCircleElement, Node, SVGElement, unknown> => {
 	const nodes = svg
@@ -135,24 +135,11 @@ export const createNodes = (
 		const group = select((this as any).parentNode);
 		const { width, height } = d;
 
-		let mod = 1.5;
-
-		if (winWidth < 1024) {
-			mod = 1.25;
-		}
-
-		if (winWidth < 768) {
-			mod = 1;
-		}
-
-		const imgWidth = width * mod;
-		const imgHeight = height * mod;
-
 		group
 			.append('use')
-			.attr('width', imgWidth)
-			.attr('height', imgHeight)
-			.attr('transform', `translate(-${imgWidth / 2},-${imgHeight / 2})`)
+			.attr('width', width)
+			.attr('height', height)
+			.attr('transform', `translate(-${width / 2},-${height / 2})`)
 			.attr('xlink:xlink:href', `#svg-${d.icon}`)
 			.attr('fill', d.iconFill);
 

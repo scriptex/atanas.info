@@ -298,7 +298,7 @@ export default defineUserConfig({
 	],
 	theme: defaultTheme({
 		sidebar: openSource.projects.sort().map(item => {
-			const text = item.split('/').pop();
+			const text = item.split('/').pop() || '';
 
 			return {
 				link: `/${text}`,
@@ -307,6 +307,6 @@ export default defineUserConfig({
 		}),
 		repo: 'https://atanas.info',
 		repoLabel: 'Back to atanas.info',
-		editLinks: false
+		editLink: false
 	})
 });

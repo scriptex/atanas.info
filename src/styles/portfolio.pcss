@@ -1,0 +1,283 @@
+.c-section--portfolio {
+	text-align: center;
+
+	& h3 {
+		@mixin slanted;
+		margin-bottom: 2rem;
+	}
+
+	& .c-section__body {
+		@mixin flex-row wrap, stretch, space-between;
+
+		& a {
+			font-size: 1.25rem;
+			line-height: 1.25;
+			color: var(--color-primary);
+			text-decoration: none;
+			width: calc(50% - 0.5rem);
+			height: 1px;
+			display: block;
+			flex: 0 0 calc(50% - 0.5rem);
+			position: relative;
+			padding-bottom: 36%;
+			margin-bottom: 1rem;
+			overflow: hidden;
+			@mixin with-loader;
+			transform: scale(1);
+			transition: transform var(--timing) var(--easing);
+
+			& img,
+			& object {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				z-index: 2;
+				transform: translate(-50%, -50%);
+				transition: all var(--timing) var(--easing);
+			}
+
+			&.disabled {
+				cursor: default;
+			}
+
+			&.is--hidden {
+				max-height: 0;
+				padding-bottom: 0;
+				margin-bottom: 0;
+				transform: scale(0);
+			}
+
+			&::before {
+				content: '';
+				@mixin centered;
+				opacity: 0;
+				z-index: 3;
+				background-color: color-mod(var(--color-secondary) a(80%));
+				transition: opacity var(--timing) var(--easing);
+			}
+
+			& section {
+				display: block;
+				opacity: 0;
+				position: absolute;
+				top: 50%;
+				right: 0;
+				left: 0;
+				z-index: 4;
+				padding: 1rem;
+				transform: translateY(0%);
+				transition: all var(--timing) var(--easing);
+			}
+
+			& strong {
+				text-transform: uppercase;
+				display: block;
+			}
+
+			& span {
+				font-family: monospace;
+				font-size: 0.875rem;
+				text-transform: lowercase;
+			}
+
+			& small {
+				font-size: 100%;
+				font-family: var(--font-sans-serif);
+			}
+		}
+	}
+}
+
+.c-section__sliders {
+	@mixin flex-row wrap, flex-start, center;
+	padding-bottom: 1rem;
+}
+
+.c-section__slider {
+	&:not(.c-section__slider--fullwidth) {
+		width: calc(50% - 1rem);
+		flex: 0 0 calc(50% - 1rem);
+		margin-right: 0.5rem;
+		margin-left: 0.5rem;
+	}
+
+	margin-bottom: 1rem;
+	overflow: hidden;
+	@mixin with-loader;
+
+	& img {
+		display: block;
+		border: 1px solid var(--color-primary);
+		margin: auto;
+	}
+
+	& div[style] {
+		vertical-align: top;
+	}
+
+	& a {
+		color: inherit;
+		text-decoration: none;
+		display: block;
+		position: relative;
+		z-index: 2;
+		padding: 1rem 1rem 0.5rem;
+		border: 1px solid var(--color-primary);
+		background-color: var(--color-secondary);
+
+		& h3,
+		& p,
+		& code {
+			display: block;
+			margin: 0 0 0.5rem;
+		}
+	}
+
+	& .slick-slider {
+		z-index: 3;
+	}
+
+	& .slick-arrow {
+		font-size: 0;
+		line-height: 0;
+		text-indent: -100%;
+		width: 2.5rem;
+		height: 2.5rem;
+		display: block;
+		position: absolute;
+		top: 50%;
+		z-index: 2;
+		border: 1px solid;
+		margin-top: -1.25rem;
+		background: var(--color-action);
+		border-radius: 50%;
+		box-shadow: none;
+
+		&::before,
+		&::after {
+			content: '';
+			@mixin centered;
+		}
+
+		&::before {
+			width: 50%;
+			height: 1px;
+			background-color: var(--color-primary);
+		}
+
+		&::after {
+			width: 50%;
+			height: 1px;
+			@mixin chevron 0.9375rem, 0 0 1px 1px, var(--color-primary), auto, -135deg;
+		}
+	}
+
+	& .slick-prev {
+		left: 0.5rem;
+	}
+
+	& .slick-prev::after {
+		transform: rotate(45deg);
+	}
+
+	& .slick-next {
+		right: 0.5rem;
+	}
+}
+
+@media (--hover) {
+	.c-section--portfolio {
+		& .c-section__body {
+			& a {
+				&:hover {
+					box-shadow: 0 0 4.75rem color-mod(var(--color-primary) a(40%));
+					background-size: 110% auto;
+				}
+
+				&:hover::before {
+					opacity: 1;
+				}
+
+				&:hover section {
+					opacity: 1;
+					transform: translateY(-50%);
+				}
+
+				&:hover img,
+				&:hover object {
+					transform: translate(-50%, -50%) scale(1.1);
+				}
+			}
+		}
+	}
+}
+
+@media (--tablet-portrait) {
+	.c-section__sliders {
+		display: block;
+	}
+
+	.c-section__slider:not(.c-section__slider--fullwidth) {
+		max-width: 37.5rem;
+		width: 100%;
+		margin: 0 auto 1rem;
+	}
+}
+
+@media (--mobile) {
+	.c-section--portfolio {
+		& object {
+			width: 100%;
+		}
+
+		& .c-section__body {
+			display: block;
+
+			& a {
+				font-size: 1rem;
+				width: 100%;
+				padding-bottom: calc(75% + 92px);
+				margin-bottom: 1rem;
+				background-position: 50% 92px;
+
+				&::before {
+					content: none;
+				}
+
+				& img,
+				& object,
+				& section {
+					position: relative;
+					top: auto;
+					right: auto;
+					left: auto;
+					transform: none !important;
+				}
+
+				& section {
+					min-height: 92px;
+					@mixin flex-row wrap, center, center;
+					align-content: center;
+					opacity: 1;
+					position: relative;
+					z-index: 2;
+					padding: 0.5rem;
+					background-color: var(--color-secondary);
+				}
+
+				& strong {
+					flex: 0 0 100%;
+				}
+
+				&:hover {
+					box-shadow: none;
+					background-size: 100% auto;
+				}
+
+				&:hover div {
+					transform: none;
+				}
+			}
+		}
+	}
+}

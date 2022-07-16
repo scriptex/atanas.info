@@ -3,7 +3,6 @@ import { render } from '@testing-library/react';
 
 import { SectionNav } from '.';
 
-// codebeat:disable[ABC,LOC,BLOCK_NESTING]
 describe('SectionNav component', () => {
 	it('Should render the SectionNav component', () => {
 		const { asFragment, container } = render(
@@ -33,4 +32,3 @@ describe('SectionNav component', () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 });
-// codebeat:enable[ABC,LOC,BLOCK_NESTING]

@@ -1,0 +1,281 @@
+.c-resume {
+	@mixin flex-row wrap, flex-start, space-between;
+	position: relative;
+	z-index: 1;
+
+	& i {
+		color: var(--color-action);
+	}
+}
+
+.c-resume__head,
+.c-resume__title {
+	flex: 0 0 100%;
+}
+
+.c-resume__head {
+	text-align: center;
+	flex: 0 0 100%;
+	margin-bottom: 4rem;
+
+	& strong {
+		font-size: var(--font-size-h2);
+		@mixin slanted;
+	}
+}
+
+.c-resume__title,
+.c-resume__block {
+	padding: 2rem 2rem 1rem;
+	margin-bottom: 1rem;
+	background-color: color-mod(var(--color-primary) a(25%));
+}
+
+.c-resume__title {
+	overflow: hidden;
+
+	& * {
+		overflow: hidden;
+	}
+
+	& h1 {
+		padding-bottom: 0.5rem;
+		border-bottom: 0.25rem solid var(--color-action);
+	}
+
+	& img {
+		width: 13rem;
+		height: auto;
+		float: right;
+		margin-left: 2rem;
+		border-radius: 50%;
+	}
+}
+
+.c-resume__list {
+	@mixin flex-row wrap, flex-start, space-between;
+	padding: 0;
+	margin: 0 0;
+	list-style: none outside none;
+
+	& li {
+		flex: 0 0 calc(50% - 0.5rem);
+		padding-bottom: 1rem;
+
+		& i {
+			margin-right: 1rem;
+		}
+	}
+}
+
+.c-resume__content {
+	flex: 0 0 calc(67% - 0.5rem);
+}
+
+.c-resume__aside {
+	flex: 0 0 calc(33% - 0.5rem);
+}
+
+.c-resume__block {
+	& p {
+		margin-bottom: 1.5em;
+	}
+
+	& h2 {
+		padding-bottom: 0.5rem;
+		border-bottom: 0.25rem solid var(--color-action);
+	}
+
+	& ul:not([class]) {
+		padding: 0;
+		margin: 0 0 1.25em 1.25em;
+	}
+}
+
+.c-resume__experience {
+	&:not(:last-child) {
+		border-bottom: 1px dashed;
+		margin-bottom: 1.25em;
+	}
+}
+
+.c-resume__skills {
+	padding: 0;
+	margin: 0 -0.5rem;
+	list-style: none outside none;
+
+	&:not(:first-child) {
+		padding-top: 1.375rem;
+	}
+
+	& li {
+		display: inline-block;
+		vertical-align: top;
+		border-bottom: 0.125rem solid;
+		margin: 0 0.5rem 0.5rem;
+	}
+}
+
+.c-resume__strengths {
+	padding: 0;
+	margin: 0;
+	list-style: none outside none;
+
+	& li {
+		&:not(:first-child) {
+			padding-top: 1.5em;
+			border-top: 1px dashed;
+		}
+
+		& i {
+			margin-right: 1rem;
+		}
+	}
+}
+
+@media only screen and (--tablet-landscape) {
+	.c-resume__title,
+	.c-resume__block {
+		padding: 1rem 1rem 1px;
+	}
+}
+
+@media only screen and (--tablet-portrait) {
+	.c-resume__content,
+	.c-resume__aside {
+		flex: 0 0 100%;
+	}
+}
+
+@media only screen and (--mobile) {
+	.c-section--resume {
+		padding: 6.125rem 0 1rem;
+
+		& .c-section__actions {
+			padding: 0;
+
+			& br {
+				display: none !important;
+			}
+
+			& .c-btn {
+				width: 100%;
+				display: block;
+
+				& ~ .c-btn {
+					margin-top: 1rem;
+				}
+			}
+		}
+	}
+
+	.c-resume {
+		padding: 0;
+	}
+
+	.c-resume,
+	.c-resume__list {
+		display: block;
+	}
+
+	.c-resume__head {
+		margin-bottom: 1rem;
+	}
+
+	.c-resume__title,
+	.c-resume__block {
+		margin: 0 -1rem 1rem;
+	}
+
+	.c-resume__title {
+		& img {
+			float: none;
+			display: block;
+			margin: 0 auto 1rem;
+		}
+	}
+
+	.c-resume__skills {
+		padding-bottom: 1rem;
+
+		&:not(:first-child) {
+			padding-top: 0;
+		}
+	}
+}
+
+@media print {
+	body {
+		color: black;
+		background: white;
+	}
+
+	.o-shell {
+		max-width: none;
+		padding: 0;
+	}
+
+	.c-nav,
+	.c-lines,
+	.c-header,
+	.c-footer,
+	.c-resume__head,
+	.c-section__actions {
+		display: none;
+	}
+
+	.c-section--about,
+	.c-section--resume,
+	.c-section--social,
+	.c-section--videos,
+	.c-section--timeline,
+	.c-section--blog-post,
+	.c-section--portfolio,
+	.c-section--certificates,
+	.c-section--interactive-resume {
+		&::before,
+		&::after {
+			content: none;
+		}
+	}
+
+	.c-resume__title,
+	.c-resume__block,
+	.c-section--resume {
+		padding: 0;
+	}
+
+	.c-resume {
+		display: block;
+
+		& h1 {
+			font-size: 2rem;
+		}
+
+		& h2 {
+			font-size: 1.5rem;
+		}
+
+		& h3 {
+			font-size: 1.25rem;
+		}
+	}
+
+	.c-resume__list {
+		display: block;
+
+		& li {
+			padding-bottom: 0.25rem;
+		}
+	}
+
+	.c-resume__skills:not(:first-child) {
+		padding-top: 1rem;
+	}
+
+	.c-resume__experience,
+	.c-resume__aside .c-resume__block {
+		break-inside: avoid;
+		page-break-inside: avoid;
+	}
+}

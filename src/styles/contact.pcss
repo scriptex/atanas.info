@@ -1,0 +1,153 @@
+.c-contact {
+	color: var(--color-secondary);
+	@mixin flex-row wrap, center, center;
+	opacity: 0;
+	visibility: hidden;
+	@mixin centered;
+	position: fixed;
+	z-index: 40;
+	pointer-events: none;
+
+	&::before {
+		content: '';
+		opacity: 0;
+		visibility: hidden;
+		@mixin centered;
+		z-index: 1;
+		background-color: var(--color-secondary);
+		border-radius: 50%;
+		transform: scale(0);
+		transition: all var(--timing) var(--easing) 0.25s;
+	}
+}
+
+.c-contact__close {
+	color: var(--color-primary);
+	font-size: 0;
+	line-height: 0;
+	width: 2rem;
+	height: 2rem;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	z-index: 3;
+	padding: 0;
+	border: 1px solid var(--color-action);
+	background-color: var(--color-action);
+	border-radius: 50%;
+	box-shadow: none;
+	transform: rotate(-180deg) scale(0);
+	transition: all var(--timing) var(--easing) 0.5s;
+
+	&::before,
+	&::after {
+		content: '';
+		width: 0.125rem;
+		height: 1.25rem;
+		display: block;
+		@mixin centered;
+		z-index: 2;
+		background-color: currentColor;
+	}
+
+	&::before {
+		transform: rotate(45deg);
+	}
+
+	&::after {
+		transform: rotate(-45deg);
+	}
+}
+
+@media (--hover) {
+	.c-contact__close:hover {
+		color: var(--color-action);
+		background-color: var(--color-primary);
+	}
+}
+
+.c-contact__body {
+	width: 25rem;
+	margin: auto;
+	position: relative;
+	z-index: 2;
+	transform: translateY(-100vh);
+	transition: all var(--timing) var(--easing) 0.75s;
+
+	& p,
+	& h2,
+	& h4 {
+		color: var(--color-primary);
+		text-align: center;
+		margin: 0 0 1.5rem;
+	}
+}
+
+.c-contact__field {
+	padding-bottom: 1rem;
+
+	& label {
+		color: var(--color-primary);
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: 0.5rem;
+	}
+
+	& input,
+	& textarea {
+		width: 100%;
+		display: block;
+		padding: 0.5rem;
+		border: 1px solid var(--color-action);
+		background-color: var(--color-primary);
+		border-radius: 0.25rem;
+		box-shadow: none;
+		appearance: none;
+		resize: none;
+	}
+}
+
+.c-contact__error,
+.c-contact__success {
+	color: var(--color-primary);
+	text-align: center;
+}
+
+.c-contact__actions {
+	& .c-btn {
+		width: 100%;
+		display: block;
+	}
+}
+
+.c-contact--visible {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+
+	&::before {
+		opacity: 0.95;
+		visibility: visible;
+		border-radius: 0;
+		transform: scale(1);
+	}
+
+	& .c-contact__close {
+		transform: rotate(0deg) scale(1);
+	}
+
+	& .c-contact__body {
+		transform: translateX(0);
+	}
+}
+
+@media (--mobile) {
+	.c-contact {
+		display: block;
+		padding: 3.5rem 1rem 1rem;
+	}
+
+	.c-contact__body {
+		width: auto;
+	}
+}

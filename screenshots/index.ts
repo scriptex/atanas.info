@@ -71,7 +71,6 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 }
 
 function upload(shotResult: Buffer, options: UploadApiOptions, name: string): Promise<UploadApiResponse> {
-	// eslint-disable-next-line compat/compat
 	return new Promise((success, fail) => {
 		cloudinary.uploader
 			.upload_stream(options, (error, result) => {
@@ -82,7 +81,6 @@ function upload(shotResult: Buffer, options: UploadApiOptions, name: string): Pr
 
 				console.log(`Uploaded screenshot for ${name}...`);
 
-				// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 				success(result!);
 			})
 			.end(shotResult);
@@ -90,8 +88,6 @@ function upload(shotResult: Buffer, options: UploadApiOptions, name: string): Pr
 }
 
 async function createScreenshots(allPages: WebProject[]): Promise<void> {
-	// await cloudinary.api.delete_resources_by_prefix(`${FOLDER}/`);
-
 	const results: any[] = [];
 
 	let newProjects: WebProject[] = [...projects];
@@ -126,7 +122,6 @@ async function createScreenshots(allPages: WebProject[]): Promise<void> {
 		}
 	}
 
-	// eslint-disable-next-line compat/compat
 	Promise.all(results).then(() => {
 		writeFileSync(resolve(__dirname, '../src/data/projects-list.json'), JSON.stringify(newProjects, null, 2));
 		writeFileSync(resolve(__dirname, '../src/data/cloudinary-data.json'), JSON.stringify(results, null, 2));

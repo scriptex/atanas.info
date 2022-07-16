@@ -1,0 +1,53 @@
+html,
+body,
+#root,
+.c-music,
+.o-main--high,
+.c-section--hello,
+.c-section--music,
+.c-section--music .o-shell {
+	height: 100%;
+}
+
+body {
+	color: var(--color-primary);
+	background-color: var(--color-secondary);
+}
+
+@media (--hover) {
+	a:hover {
+		text-decoration: none;
+	}
+}
+
+.o-grid__item {
+	padding-bottom: 1rem;
+}
+
+@media (--mobile) {
+	.o-grid__item + .o-grid__item {
+		padding-top: 1rem;
+	}
+}
+
+.bubbles,
+.circles {
+	background-attachment: initial;
+}
+
+.bubbles {
+	background-image: paint(bubbles);
+}
+
+.circles {
+	background-image: paint(circles);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
