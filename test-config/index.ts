@@ -1,10 +1,3 @@
-const crypto = require('crypto');
-
-const defaultMock = () => ({
-	__esModule: true,
-	default: jest.fn()
-});
-
 // prettier-ignore
 window.matchMedia = window.matchMedia || (() => ({
 	matches: false,
@@ -13,20 +6,27 @@ window.matchMedia = window.matchMedia || (() => ({
 }));
 
 window.crypto = {
-	// @ts-ignore
-	getRandomValues: buffer => crypto.randomFillSync(buffer)
+	...require('crypto'),
+	getRandomValues: buffer => require('crypto').randomFillSync(buffer)
 };
 
 window.scrollTo = jest.fn();
 
-jest.mock('simplex-noise', defaultMock);
-jest.mock('@codersrank/summary/codersrank-summary.min', defaultMock);
-jest.mock('@codersrank/activity/codersrank-activity.min', defaultMock);
-jest.mock('@codersrank/timeline/codersrank-timeline.min', defaultMock);
-jest.mock('@codersrank/education/codersrank-education.min', defaultMock);
-jest.mock('@codersrank/portfolio/codersrank-portfolio.min', defaultMock);
-jest.mock('@codersrank/skills-chart/codersrank-skills-chart.min', defaultMock);
-jest.mock('@codersrank/work-experience/codersrank-work-experience.min', defaultMock);
+[
+	'simplex-noise',
+	'@codersrank/summary/codersrank-summary.min',
+	'@codersrank/activity/codersrank-activity.min',
+	'@codersrank/timeline/codersrank-timeline.min',
+	'@codersrank/education/codersrank-education.min',
+	'@codersrank/portfolio/codersrank-portfolio.min',
+	'@codersrank/skills-chart/codersrank-skills-chart.min',
+	'@codersrank/work-experience/codersrank-work-experience.min'
+].forEach(module => {
+	jest.mock(module, () => ({
+		__esModule: true,
+		default: jest.fn()
+	}));
+});
 
 [
 	'react-syntax-highlighter/dist/esm/languages/hljs/javascript',
