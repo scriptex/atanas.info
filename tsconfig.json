@@ -35,7 +35,16 @@
 		"resolveJsonModule": true
 	},
 	"compileOnSave": false,
-	"include": ["bin/**/*.ts", "insights/**/*", "npm/**/*", "screenshots/**/*", "server/**/*", "src/**/*"],
+	"include": [
+		"bin/**/*.ts",
+		"config/**/*.ts",
+		"insights/**/*",
+		"npm/**/*",
+		"screenshots/**/*",
+		"server/**/*",
+		"src/**/*",
+		"test-config/**/*.ts"
+	],
 	"exclude": ["node_modules", "src/scripts/analytics.js", "src/scripts/google-analytics-local.js"],
 	"ts-node": {
 		"compilerOptions": {

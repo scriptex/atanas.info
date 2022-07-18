@@ -12,11 +12,10 @@
  *     ...
  * });
  */
-
 const DateConstructor = Date;
 const globalObject = global as any;
 
-export const randomDate: string = '2018-12-31T23:59:59.000Z';
+export const randomDate = '2018-12-31T23:59:59.000Z';
 
 export const onBeforeEach = (): void => {
 	globalObject.Date = jest.fn((...props) => {
