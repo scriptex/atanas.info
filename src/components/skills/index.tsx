@@ -25,7 +25,7 @@ export const SectionSkills: React.FC = () => {
 			className=" bubbles"
 			subtitle={showTable ? undefined : 'Drag the bubbles to play'}
 		>
-			<div className="c-section__container">
+			<div className={showTable ? 'c-section__wrapper' : 'c-section__container'}>
 				<Lines />
 
 				<div id="skills-graph" className={showTable ? 'is--hidden' : ''}></div>
