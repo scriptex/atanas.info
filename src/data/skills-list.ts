@@ -130,6 +130,7 @@ export const skills: Skill[] = [
 	{ text: 'Vercel', icon: 'vercel', fill: '#000', since: 2019, ...defaultSize },
 	{ text: 'Visual Studio Code', icon: 'visualstudiocode', fill: '#007ACC', since: 2017, ...defaultSize },
 	{ text: 'Vue', icon: 'vuedotjs', fill: '#4FC08D', since: 2016, ...defaultSize },
+	{ text: 'VuePress', icon: 'vuepress', fill: '#4FC08D', since: 2019, ...defaultSize },
 	{ text: 'Webpack', icon: 'webpack', fill: '#8DD6F9', since: 2015, iconFill: '#000', ...defaultSize },
 	{ text: 'WordPress', icon: 'wordpress', fill: '#21759B', since: 2013, ...defaultSize },
 	{ text: 'XAMPP', icon: 'xampp', fill: '#FB7A24', since: 2013, ...defaultSize },
