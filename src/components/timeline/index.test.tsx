@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
 
-import { WorkIcon, PersonalIcon, EducationIcon, SectionTimeline } from '.';
+import { Timeline } from '.';
+
 beforeEach(() => {
 	const mockIntersectionObserver = jest.fn();
 
@@ -14,12 +15,10 @@ beforeEach(() => {
 	window.IntersectionObserver = mockIntersectionObserver;
 });
 
-describe('SectionTimeline component', () => {
-	[WorkIcon, PersonalIcon, EducationIcon, SectionTimeline].forEach(Component => {
-		it(`Should render the ${Component.name} component`, () => {
-			const { asFragment } = render(<Component />);
+describe('Timeline component', () => {
+	it(`Should render the Timeline component`, () => {
+		const { asFragment } = render(<Timeline />);
 
-			expect(asFragment()).toMatchSnapshot();
-		});
+		expect(asFragment()).toMatchSnapshot();
 	});
 });

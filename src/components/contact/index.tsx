@@ -1,63 +1,8 @@
 import * as React from 'react';
 
-import { Button } from '..';
 import { AppContext } from '../app';
-
-enum Status {
-	ERROR = 'ERROR',
-	SUCCESS = 'SUCCESS',
-	DEFAULT = 'DEFAULT'
-}
-
-export const ContactSuccessContent: React.FC = () => (
-	<>
-		<h2>Send me your message</h2>
-
-		<div className="c-contact__field">
-			<label htmlFor="email">Email:</label>
-
-			<input id="email" type="email" name="email" required={true} />
-		</div>
-
-		<div className="c-contact__field">
-			<label htmlFor="message">Message:</label>
-
-			<textarea name="message" id="message" cols={30} rows={10} required={true}></textarea>
-		</div>
-	</>
-);
-
-export const onSubmit = (
-	e: React.FormEvent<HTMLFormElement>,
-	setStatus: (status: Status) => void,
-	setErrorMessage: (message: string) => void
-): void => {
-	e.preventDefault();
-
-	const form = e.target as HTMLFormElement;
-	const data = new FormData(form);
-
-	fetch(form.action, {
-		method: form.method,
-		headers: {
-			Accept: 'application/json'
-		},
-		body: data
-	})
-		.then((r: Response) => r.json())
-		.then((result: Record<string, string>) => {
-			if (result.error) {
-				setStatus(Status.ERROR);
-				setErrorMessage(result.error);
-			} else {
-				setStatus(Status.SUCCESS);
-			}
-		})
-		.catch(() => {
-			setStatus(Status.ERROR);
-			setErrorMessage('Something went wrong. Please try again.');
-		});
-};
+import { onSubmit, Status } from './utils';
+import { Button, ContactSuccess } from '..';
 
 export const Contact: React.FC = () => {
 	const [status, setStatus] = React.useState(Status.DEFAULT);
@@ -84,7 +29,7 @@ export const Contact: React.FC = () => {
 			</button>
 
 			<div className="c-contact__body">
-				{status === Status.SUCCESS ? null : <ContactSuccessContent />}
+				{status === Status.SUCCESS ? null : <ContactSuccess />}
 
 				<div className="c-contact__actions">
 					{status === Status.SUCCESS ? (

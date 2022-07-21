@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
 
-import { SectionVideos } from '.';
+import { Videos } from '.';
 
-describe('SectionVideos component', () => {
-	it('Should render the SectionVideos component', () => {
-		const { asFragment } = render(<SectionVideos />);
+describe('Videos component', () => {
+	it('Should render the Videos component', () => {
+		const { asFragment } = render(<Videos />);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

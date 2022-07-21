@@ -25,7 +25,7 @@ SyntaxHighlighter.registerLanguage('shell', shell);
 SyntaxHighlighter.registerLanguage('javascript', js);
 SyntaxHighlighter.registerLanguage('typescript', ts);
 
-export const SectionBlogPost: React.FC = () => {
+export const BlogPost: React.FC = () => {
 	const { slug } = useParams();
 
 	const article = articles.find(({ url }) => url.includes(slug!));
@@ -60,4 +60,4 @@ export const SectionBlogPost: React.FC = () => {
 	);
 };
 
-export default SectionBlogPost;
+export default BlogPost;

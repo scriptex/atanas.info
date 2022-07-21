@@ -2,7 +2,7 @@ import * as React from 'react';
 import { act } from 'react-dom/test-utils';
 import { render } from '@testing-library/react';
 
-import { SectionPortfolio } from '.';
+import { Portfolio } from '.';
 
 jest.mock('../../data/projects-list.json', () => ({
 	default: [
@@ -82,9 +82,9 @@ jest.mock('../../data/projects-list.json', () => ({
 	]
 }));
 
-describe('SectionPortfolio component', () => {
-	it('Should render the SectionPortfolio component', () => {
-		const { asFragment, container } = render(<SectionPortfolio />);
+describe('Portfolio component', () => {
+	it('Should render the Portfolio component', () => {
+		const { asFragment, container } = render(<Portfolio />);
 
 		expect(asFragment()).toMatchSnapshot();
 

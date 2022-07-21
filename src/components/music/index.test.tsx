@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
 
-import { SectionMusic } from '.';
+import { Music } from '.';
 
 Object.defineProperty(global.window.HTMLMediaElement.prototype, 'load', {
 	configurable: true,
@@ -10,9 +10,9 @@ Object.defineProperty(global.window.HTMLMediaElement.prototype, 'load', {
 	}
 });
 
-describe('SectionMusic component', () => {
-	it('Should render the SectionMusic component', () => {
-		const { asFragment } = render(<SectionMusic />);
+describe('Music component', () => {
+	it('Should render the Music component', () => {
+		const { asFragment } = render(<Music />);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

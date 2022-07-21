@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
 
-import { SectionAbout, LastAbout } from '.';
+import { About } from '.';
+import { LastAbout } from './last-about';
 
-describe('SectionAbout component', () => {
-	it('Should render the SectionAbout component', () => {
-		const { asFragment } = render(<SectionAbout />);
+describe('About component', () => {
+	it('Should render the About component', () => {
+		const { asFragment } = render(<About />);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

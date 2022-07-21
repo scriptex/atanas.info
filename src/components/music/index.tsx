@@ -3,7 +3,7 @@ import * as React from 'react';
 import { music } from '../../scripts/music';
 import { Section } from '..';
 
-export const SectionMusic: React.FC = () => {
+export const Music: React.FC = () => {
 	const container: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
 
 	React.useEffect(() => {
@@ -32,13 +32,11 @@ export const SectionMusic: React.FC = () => {
 				<div id="tracks" className="c-music__tracks" hidden />
 
 				<h2>
-					Pick a track and
-					<br />
-					press the play button.
+					Pick a track and <br /> press the play button.
 				</h2>
 			</div>
 		</Section>
 	);
 };
 
-export default SectionMusic;
+export default Music;

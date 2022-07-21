@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
 
-import { SectionCertificates } from '.';
+import { Certificates } from '.';
 
-describe('SectionCertificates component', () => {
-	it('Should render the SectionCertificates component', () => {
-		const { asFragment } = render(<SectionCertificates />);
+describe('Certificates component', () => {
+	it('Should render the Certificates component', () => {
+		const { asFragment } = render(<Certificates />);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

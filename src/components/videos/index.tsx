@@ -4,7 +4,7 @@ import 'lite-youtube-embed';
 import { presentations, Presentation } from '../../data/presentations';
 import { Lines, Loader, Section, SectionNav } from '..';
 
-export const SectionVideos: React.FC = () => {
+export const Videos: React.FC = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);
 
 	return (
@@ -31,4 +31,4 @@ export const SectionVideos: React.FC = () => {
 	);
 };
 
-export default SectionVideos;
+export default Videos;

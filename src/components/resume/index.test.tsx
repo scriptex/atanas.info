@@ -1,16 +1,16 @@
 import * as React from 'react';
+import { act } from 'react-dom/test-utils';
 import { render } from '@testing-library/react';
 
-import { SectionResume } from '.';
-import { act } from 'react-dom/test-utils';
+import { Resume } from '.';
 
 beforeEach(() => {
 	window.print = jest.fn();
 });
 
-describe('SectionResume component', () => {
-	it('Should render the SectionResume component', () => {
-		const { asFragment, container } = render(<SectionResume />);
+describe('Resume component', () => {
+	it('Should render the Resume component', () => {
+		const { asFragment, container } = render(<Resume />);
 
 		expect(asFragment()).toMatchSnapshot();
 

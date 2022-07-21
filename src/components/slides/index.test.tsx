@@ -2,17 +2,17 @@ import * as React from 'react';
 import { render } from '@testing-library/react';
 
 import * as utils from '../../scripts/shared';
-import { SectionSlides } from '.';
+import { Slides } from '.';
 
-describe('SectionSlides component', () => {
-	it('Should render the SectionSlides component', () => {
-		const { asFragment, rerender } = render(<SectionSlides />);
+describe('Slides component', () => {
+	it('Should render the Slides component', () => {
+		const { asFragment, rerender } = render(<Slides />);
 
 		expect(asFragment()).toMatchSnapshot();
 
 		Object.defineProperty(utils, 'isPrerendering', { value: true });
 
-		rerender(<SectionSlides />);
+		rerender(<Slides />);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

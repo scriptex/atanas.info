@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { format } from 'date-fns';
 
 export const useScript = (url: string, defer = false): void => {
 	React.useEffect(() => {
@@ -41,3 +42,6 @@ export const random = (): number => {
 };
 
 export const isPrerendering = window?.__PRERENDER_INJECTED?.isPrerendering === true;
+
+// prettier-ignore
+export const formatDate = (date: string | number, formatter = 'dd MMM yyyy'): string => format(new Date(date), formatter);

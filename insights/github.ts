@@ -69,6 +69,7 @@ export const getGithubInsights = async (): Promise<void> => {
 			file,
 			JSON.stringify(
 				{
+					error: false,
 					general,
 					calendar,
 					repositories,
@@ -85,7 +86,11 @@ export const getGithubInsights = async (): Promise<void> => {
 			file,
 			JSON.stringify(
 				{
-					error: true
+					error: true,
+					general: null,
+					calendar: null,
+					repositories: null,
+					updated: null
 				},
 				null,
 				2
