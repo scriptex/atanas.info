@@ -3,7 +3,7 @@ import { Certificate, certificates } from '../../data/certificates';
 
 import { Loader, Section, ExternalLink } from '..';
 
-export const SectionCertificates: React.FC = () => (
+export const Certificates: React.FC = () => (
 	<Section id="certificates" title="Certificates" hasButton={true}>
 		<div className="c-section__body o-grid">
 			{certificates.map((certificate: Certificate, index: number) => (
@@ -19,4 +19,4 @@ export const SectionCertificates: React.FC = () => (
 	</Section>
 );
 
-export default SectionCertificates;
+export default Certificates;

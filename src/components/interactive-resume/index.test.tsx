@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
 
-import { SectionInteractiveResume } from '.';
+import { InteractiveResume } from '.';
 
-describe('SectionInteractiveResume component', () => {
-	it('Should render the SectionInteractiveResume component', () => {
-		const { asFragment } = render(<SectionInteractiveResume />);
+describe('InteractiveResume component', () => {
+	it('Should render the InteractiveResume component', () => {
+		const { asFragment } = render(<InteractiveResume />);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

@@ -2,14 +2,14 @@ import * as React from 'react';
 import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
+import { Blog } from '.';
 import * as utils from '../../scripts/shared';
-import { SectionBlog } from '.';
 
-describe('SectionBlog component', () => {
-	it('Should render the SectionBlog component', () => {
+describe('Blog component', () => {
+	it('Should render the Blog component', () => {
 		const { asFragment, rerender } = render(
 			<Router>
-				<SectionBlog />
+				<Blog />
 			</Router>
 		);
 
@@ -19,7 +19,7 @@ describe('SectionBlog component', () => {
 
 		rerender(
 			<Router>
-				<SectionBlog />
+				<Blog />
 			</Router>
 		);
 

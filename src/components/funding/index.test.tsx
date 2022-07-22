@@ -2,7 +2,8 @@ import * as React from 'react';
 import { act } from 'react-dom/test-utils';
 import { render, waitFor } from '@testing-library/react';
 
-import { Funding, FundingCrypto } from '.';
+import { Funding } from '.';
+import { FundingCrypto } from './crypto';
 
 beforeEach(() => {
 	window.prompt = jest.fn();

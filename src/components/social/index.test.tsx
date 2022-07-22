@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
 
-import { SectionSocial } from '.';
-import * as stats from '../stats';
+import { Social } from '.';
+import * as shared from '../../scripts/shared';
 
 jest.mock('../../data/last.fm-insights.json', () => ({
 	default: {
@@ -11,13 +11,13 @@ jest.mock('../../data/last.fm-insights.json', () => ({
 	}
 }));
 
-jest.spyOn(stats, 'formatDate');
+jest.spyOn(shared, 'formatDate');
 
-(stats.formatDate as jest.Mock).mockImplementation(() => 'Mock date');
+(shared.formatDate as jest.Mock).mockImplementation(() => 'Mock date');
 
-describe('SectionSocial component', () => {
-	it('Should render the SectionSocial component', () => {
-		const { asFragment } = render(<SectionSocial />);
+describe('Social component', () => {
+	it('Should render the Social component', () => {
+		const { asFragment } = render(<Social />);
 
 		expect(asFragment()).toMatchSnapshot();
 

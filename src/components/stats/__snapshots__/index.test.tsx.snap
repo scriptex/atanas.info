@@ -813,6 +813,101 @@ exports[`SectionStats component Should render the SectionStats component 1`] = `
         </div>
       </div>
       <div
+        class="c-section__entry c-section__entry--no-background"
+      >
+        <div
+          class="o-shell"
+        >
+          <h3>
+            Statistics for NPM packages
+          </h3>
+          <h6>
+            Total downloads: 
+            <strong>
+              591668
+            </strong>
+          </h6>
+          <div
+            class="o-grid c-packages"
+          >
+            <div
+              class="o-grid__item xs-12 sm-6 md-4 lg-4"
+            >
+              <a
+                class="c-package"
+                href="https://example.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <h4>
+                  package1
+                </h4>
+                <p>
+                  Description 1
+                </p>
+                <ul>
+                  <li>
+                    Version 
+                    <strong>
+                      1.0.0
+                    </strong>
+                  </li>
+                  <li>
+                    Downloads: 
+                    <strong>
+                      0
+                    </strong>
+                  </li>
+                  <li>
+                    Author: 
+                    <strong>
+                      author
+                    </strong>
+                  </li>
+                </ul>
+              </a>
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6 md-4 lg-4"
+            >
+              <a
+                class="c-package"
+                href="https://example.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <h4>
+                  package2
+                </h4>
+                <p>
+                  Description 2
+                </p>
+                <ul>
+                  <li>
+                    Version 
+                    <strong>
+                      1.0.0
+                    </strong>
+                  </li>
+                  <li>
+                    Downloads: 
+                    <strong>
+                      0
+                    </strong>
+                  </li>
+                  <li>
+                    Author: 
+                    <strong>
+                      author
+                    </strong>
+                  </li>
+                </ul>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
         class="c-section__actions"
       >
         <button

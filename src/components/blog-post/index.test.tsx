@@ -2,7 +2,7 @@ import * as React from 'react';
 import { act } from 'react-dom/test-utils';
 import { render, RenderResult } from '@testing-library/react';
 
-import { SectionBlogPost } from '.';
+import { BlogPost } from '.';
 
 jest.mock('react-router-dom', () => ({
 	...jest.requireActual('react-router-dom'),
@@ -21,12 +21,12 @@ jest.mock('../../data/articles', () => ({
 	]
 }));
 
-describe('SectionBlogPost component', () => {
-	it('Should render the SectionBlogPost component', () => {
+describe('BlogPost component', () => {
+	it('Should render the BlogPost component', () => {
 		let result!: RenderResult;
 
 		act(() => {
-			result = render(<SectionBlogPost />);
+			result = render(<BlogPost />);
 		});
 
 		expect(result.asFragment()).toMatchSnapshot();

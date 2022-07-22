@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
 
+import { Hello } from '.';
+import { Slider } from './slider';
 import { mockUseEffect } from '../../scripts/shared';
-import { Slider, SectionHello } from '.';
 
 describe('Slider component', () => {
 	it('Should render the Slider component', () => {
@@ -16,11 +17,11 @@ describe('Slider component', () => {
 	});
 });
 
-describe('SectionHello component', () => {
+describe('Hello component', () => {
 	mockUseEffect();
 
-	it('Should render the SectionHello component', () => {
-		const { asFragment, unmount } = render(<SectionHello />);
+	it('Should render the Hello component', () => {
+		const { asFragment, unmount } = render(<Hello />);
 
 		expect(asFragment()).toMatchSnapshot();
 

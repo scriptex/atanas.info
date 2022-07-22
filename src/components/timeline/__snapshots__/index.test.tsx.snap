@@ -1,30 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SectionTimeline component Should render the EducationIcon component 1`] = `
-<DocumentFragment>
-  <svg
-    class="vertical-timeline__icon"
-  >
-    <use
-      xlink:href="#svg-education"
-    />
-  </svg>
-</DocumentFragment>
-`;
-
-exports[`SectionTimeline component Should render the PersonalIcon component 1`] = `
-<DocumentFragment>
-  <svg
-    class="vertical-timeline__icon"
-  >
-    <use
-      xlink:href="#svg-personal"
-    />
-  </svg>
-</DocumentFragment>
-`;
-
-exports[`SectionTimeline component Should render the SectionTimeline component 1`] = `
+exports[`Timeline component Should render the Timeline component 1`] = `
 <DocumentFragment>
   <main
     class="o-main "
@@ -862,17 +838,5 @@ exports[`SectionTimeline component Should render the SectionTimeline component 1
       </div>
     </section>
   </main>
-</DocumentFragment>
-`;
-
-exports[`SectionTimeline component Should render the WorkIcon component 1`] = `
-<DocumentFragment>
-  <svg
-    class="vertical-timeline__icon"
-  >
-    <use
-      xlink:href="#svg-work"
-    />
-  </svg>
 </DocumentFragment>
 `;

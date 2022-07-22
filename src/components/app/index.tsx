@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import github from '../../data/github-insights.json';
-import gitlab from '../../data/gitlab-insights.json';
 import { Routes as AppRoutes } from '../../data/routes';
 import { Svg, Nav, Head, Header, Footer, Loader, Contact, ScrollToTop } from '..';
 import {
@@ -30,6 +28,26 @@ export const AppContext = React.createContext({
 	setContactVisible: (state: boolean) => state
 });
 
+export const routes = [
+	{ path: AppRoutes.HOME, element: <Home /> },
+	{ path: AppRoutes.ABOUT, element: <About /> },
+	{ path: AppRoutes.TIMELINE, element: <Timeline /> },
+	{ path: AppRoutes.SKILLS, element: <Skills /> },
+	{ path: AppRoutes.PORTFOLIO, element: <Portfolio /> },
+	{ path: AppRoutes.STATS, element: <Stats /> },
+	{ path: AppRoutes.SLIDES, element: <Slides /> },
+	{ path: AppRoutes.VIDEOS, element: <Videos /> },
+	{ path: AppRoutes.ARTICLES, element: <Articles /> },
+	{ path: AppRoutes.CERTIFICATES, element: <Certificates /> },
+	{ path: AppRoutes.SOCIAL, element: <Social /> },
+	{ path: AppRoutes.BLOG, element: <Blog /> },
+	{ path: `${AppRoutes.BLOG}/:slug`, element: <BlogPost /> },
+	{ path: AppRoutes.RESUME, element: <Resume /> },
+	{ path: AppRoutes.INTERACTIVE_RESUME, element: <InteractiveResume /> },
+	{ path: AppRoutes.MUSIC, element: <Music /> },
+	{ path: '*', element: <ErrorPage /> }
+];
+
 export const App: React.FC = () => {
 	const [contactVisible, setContactVisible] = React.useState(false);
 	const value: any = { contactVisible, setContactVisible };
@@ -49,23 +67,9 @@ export const App: React.FC = () => {
 					<Contact />
 
 					<Routes>
-						<Route path={AppRoutes.HOME} element={<Home />} />
-						<Route path={AppRoutes.ABOUT} element={<About />} />
-						<Route path={AppRoutes.TIMELINE} element={<Timeline />} />
-						<Route path={AppRoutes.SKILLS} element={<Skills />} />
-						<Route path={AppRoutes.PORTFOLIO} element={<Portfolio />} />
-						<Route path={AppRoutes.STATS} element={<Stats data={{ github, gitlab }} />} />
-						<Route path={AppRoutes.SLIDES} element={<Slides />} />
-						<Route path={AppRoutes.VIDEOS} element={<Videos />} />
-						<Route path={AppRoutes.ARTICLES} element={<Articles />} />
-						<Route path={AppRoutes.CERTIFICATES} element={<Certificates />} />
-						<Route path={AppRoutes.SOCIAL} element={<Social />} />
-						<Route path={AppRoutes.BLOG} element={<Blog />} />
-						<Route path={`${AppRoutes.BLOG}/:slug`} element={<BlogPost />} />
-						<Route path={AppRoutes.RESUME} element={<Resume />} />
-						<Route path={AppRoutes.INTERACTIVE_RESUME} element={<InteractiveResume />} />
-						<Route path={AppRoutes.MUSIC} element={<Music />} />
-						<Route path="*" element={<ErrorPage />} />
+						{routes.map((route, index) => (
+							<Route {...route} key={index} />
+						))}
 					</Routes>
 
 					<Nav hasShell={true} className="c-nav--inline" />

@@ -2,11 +2,11 @@ import * as React from 'react';
 import { render } from '@testing-library/react';
 
 import { Footer } from '.';
-import * as stats from '../stats';
+import * as shared from '../../scripts/shared';
 
-jest.spyOn(stats, 'formatDate');
+jest.spyOn(shared, 'formatDate');
 
-(stats.formatDate as jest.Mock).mockImplementation(() => 'Mock date');
+(shared.formatDate as jest.Mock).mockImplementation(() => 'Mock date');
 
 describe('Footer component', () => {
 	it('Should render the Footer component', () => {

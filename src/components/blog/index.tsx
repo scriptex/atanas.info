@@ -5,7 +5,7 @@ import { isPrerendering } from '../../scripts/shared';
 import { Loader, Section } from '..';
 import { articles, Article } from '../../data/articles';
 
-export const SectionBlog: React.FC = () => (
+export const Blog: React.FC = () => (
 	<Section
 		id="blog"
 		style={{ backgroundImage: 'url(images/temp/articles.jpg)' }}
@@ -35,4 +35,4 @@ export const SectionBlog: React.FC = () => (
 	</Section>
 );
 
-export default SectionBlog;
+export default Blog;

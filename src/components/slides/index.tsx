@@ -4,7 +4,7 @@ import { Slide, slides } from '../../data/slides';
 import { isPrerendering } from '../../scripts/shared';
 import { Loader, Section, SectionNav } from '..';
 
-export const SectionSlides: React.FC = () => {
+export const Slides: React.FC = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);
 
 	return (
@@ -39,4 +39,4 @@ export const SectionSlides: React.FC = () => {
 	);
 };
 
-export default SectionSlides;
+export default Slides;

@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
 
-import { SectionSkills } from '.';
+import { Skills } from '.';
 import { mockUseEffect } from '../../scripts/shared';
 
-describe('SectionSkills component', () => {
+describe('Skills component', () => {
 	mockUseEffect();
 
-	it('Should render the SectionSkills component', () => {
-		const { asFragment } = render(<SectionSkills />);
+	it('Should render the Skills component', () => {
+		const { asFragment } = render(<Skills />);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

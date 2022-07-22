@@ -3,15 +3,19 @@ import * as React from 'react';
 export const Lines: React.FC = () => (
 	<>
 		<div className="lines">
-			<div className="line line--vertical" />
-			<div className="line line--vertical" />
-			<div className="line line--vertical" />
+			{Array(3)
+				.fill(0)
+				.map((_, i) => (
+					<div key={i} className="line line--vertical" />
+				))}
 		</div>
 
 		<div className="lines">
-			<div className="line line--horizontal" />
-			<div className="line line--horizontal" />
-			<div className="line line--horizontal" />
+			{Array(3)
+				.fill(0)
+				.map((_, i) => (
+					<div key={i} className="line line--horizontal" />
+				))}
 		</div>
 	</>
 );
