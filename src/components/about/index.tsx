@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { bio, BioEntry } from '../../data/bio';
-import { Section, LastAbout } from '..';
+import { Section, LastAbout, FeaturedAbout } from '..';
 
 export const About: React.FC = () => (
 	<Section
@@ -17,6 +17,8 @@ export const About: React.FC = () => (
 			width="240"
 			height="240"
 		/>
+
+		<FeaturedAbout />
 
 		{bio.map((item: BioEntry, i: number) => (
 			<div className="c-article__block" key={i}>
