@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { act } from 'react-dom/test-utils';
 import { render } from '@testing-library/react';
 
+import { buttonsTest } from '..';
 import { Props, Section, SectionElements } from '.';
 
 interface Component {
@@ -88,12 +88,6 @@ describe('Section component state management', () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		act(() => {
-			container.querySelectorAll<HTMLElement>('.c-btn').forEach(button => {
-				button.click();
-
-				expect(asFragment()).toMatchSnapshot();
-			});
-		});
+		buttonsTest(container, asFragment, '.c-btn');
 	});
 });

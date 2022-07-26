@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 import { writeFileSync } from 'fs';
 
 import { gitlab } from './client';
-import { asyncForEach, getCalendarWithBrowser } from './utils';
+import { asyncForEach, getCalendarWithBrowser, saveInsights } from './utils';
 
 const setOwner = (repo: any, owner: string): any => ({ ...repo, owner });
 
@@ -65,38 +65,28 @@ export const getGitlabInsights = async (): Promise<void> => {
 			updatedAt: new Date().toISOString()
 		};
 
-		writeFileSync(
+		saveInsights(
 			file,
-			JSON.stringify(
-				{
-					error: false,
-					general,
-					calendar,
-					repositories,
-					updated: new Date()
-				},
-				null,
-				2
-			)
+			{
+				error: false,
+				general,
+				calendar,
+				repositories,
+				updated: new Date()
+			},
+			'Gitlab'
 		);
-
-		console.log(`Successfully wrote insights data from Gitlab in ${file}`);
 	} catch (e) {
-		writeFileSync(
+		saveInsights(
 			file,
-			JSON.stringify(
-				{
-					error: true,
-					general: null,
-					calendar: null,
-					repositories: null,
-					updated: null
-				},
-				null,
-				2
-			)
+			{
+				error: true,
+				general: null,
+				calendar: null,
+				repositories: null,
+				updated: null
+			},
+			'Gitlab'
 		);
-
-		console.log('Error getting data from Gitlab.', e);
 	}
 };

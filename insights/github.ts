@@ -1,7 +1,7 @@
 import { writeFileSync } from 'fs';
 
 import { github } from './client';
-import { getCalendar, asyncForEach, getContributions } from './utils';
+import { getCalendar, asyncForEach, getContributions, saveInsights } from './utils';
 
 const reposToSkip = ['three11/code-of-conduct'];
 
@@ -65,38 +65,28 @@ export const getGithubInsights = async (): Promise<void> => {
 			updatedAt: user.updated_at
 		};
 
-		writeFileSync(
+		saveInsights(
 			file,
-			JSON.stringify(
-				{
-					error: false,
-					general,
-					calendar,
-					repositories,
-					updated: new Date()
-				},
-				null,
-				2
-			)
+			{
+				error: false,
+				general,
+				calendar,
+				repositories,
+				updated: new Date()
+			},
+			'Github'
 		);
-
-		console.log(`Successfully wrote insights data from Github in ${file}`);
 	} catch (e) {
-		writeFileSync(
+		saveInsights(
 			file,
-			JSON.stringify(
-				{
-					error: true,
-					general: null,
-					calendar: null,
-					repositories: null,
-					updated: null
-				},
-				null,
-				2
-			)
+			{
+				error: true,
+				general: null,
+				calendar: null,
+				repositories: null,
+				updated: null
+			},
+			'Github'
 		);
-
-		console.log('Error getting data from Github.', e);
 	}
 };

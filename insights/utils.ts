@@ -1,3 +1,5 @@
+import { writeFileSync } from 'fs';
+
 import fetch from 'node-fetch';
 import { load } from 'cheerio';
 import * as puppeteer from 'puppeteer';
@@ -72,4 +74,10 @@ export const getCalendarWithBrowser = async (url: string, selector: string, time
 	await page.waitForTimeout(timeout);
 
 	return await page.$eval(selector, (element: Element) => element.innerHTML);
+};
+
+export const saveInsights = (file: string, data: unknown, network: 'Github' | 'Gitlab'): void => {
+	writeFileSync(file, JSON.stringify(data, null, 2));
+
+	console.log(`Successfully wrote insights data from ${network} in ${file}`);
 };

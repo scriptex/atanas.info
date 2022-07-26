@@ -1,8 +1,5 @@
-import * as React from 'react';
-import { act } from 'react-dom/test-utils';
-import { render } from '@testing-library/react';
-
 import { Portfolio } from '.';
+import { snapshotTestWithButtons } from '..';
 
 jest.mock('../../data/projects-list.json', () => ({
 	default: [
@@ -82,18 +79,4 @@ jest.mock('../../data/projects-list.json', () => ({
 	]
 }));
 
-describe('Portfolio component', () => {
-	it('Should render the Portfolio component', () => {
-		const { asFragment, container } = render(<Portfolio />);
-
-		expect(asFragment()).toMatchSnapshot();
-
-		act(() => {
-			container.querySelectorAll<HTMLElement>('.c-section__actions .c-btn').forEach(button => {
-				button.click();
-
-				expect(asFragment()).toMatchSnapshot();
-			});
-		});
-	});
-});
+snapshotTestWithButtons(Portfolio, '.c-section__actions .c-btn');

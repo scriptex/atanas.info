@@ -4,8 +4,8 @@ import gitlab from '../../data/gitlab-insights.json';
 import gitlabCalendarData from '../../data/gitlab-calendar.json';
 import GitlabActivityCalendar from '../../scripts/gitlab-calendar';
 
-import { StatsEntry } from '..';
 import { GeneralInsight } from './utils';
+import { StatsEntry, StatsError } from '..';
 import { formatDate, isPrerendering } from '../../scripts/shared';
 
 export const GitlabStats: React.FC = () => {
@@ -57,15 +57,7 @@ export const GitlabStats: React.FC = () => {
 	}, []);
 
 	if (error) {
-		return (
-			<div className="c-section__entry c-section__entry--no-background">
-				<div className="o-shell">
-					<h3>Gitlab profile statistics</h3>
-
-					<p>Failed fetching data from Gitlab. Please check again in 4 hours.</p>
-				</div>
-			</div>
-		);
+		return <StatsError network="Gitlab" />;
 	}
 
 	return (
