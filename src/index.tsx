@@ -16,6 +16,7 @@ interface IWorker {
 CSS.paintWorklet.addModule(new URL('./houdini/avatar-polygon.ts', import.meta.url));
 CSS.paintWorklet.addModule(new URL('./houdini/bubbles.ts', import.meta.url));
 CSS.paintWorklet.addModule(new URL('./houdini/circles.ts', import.meta.url));
+CSS.paintWorklet.addModule(new URL('./houdini/confetti.ts', import.meta.url));
 CSS.paintWorklet.addModule(new URL('./houdini/slanted-backgrounds.ts', import.meta.url));
 
 createRoot(document.getElementById('root') || document.createElement('div')).render(<App />);
