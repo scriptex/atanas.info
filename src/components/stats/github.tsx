@@ -3,24 +3,16 @@ import ReactGitHubCalendar from 'react-ts-github-calendar';
 
 import github from '../../data/github-insights.json';
 
-import { StatsEntry, GithubSkyline } from '..';
 import { GeneralInsight, YEARS } from './utils';
 import { formatDate, isPrerendering } from '../../scripts/shared';
+import { StatsEntry, StatsError, GithubSkyline } from '..';
 
 export const GithubStats: React.FC = () => {
 	const [current, setCurrent] = React.useState(-1);
 	const { error, general, calendar, updated, repositories } = github;
 
 	if (error) {
-		return (
-			<div className="c-section__entry c-section__entry--no-background">
-				<div className="o-shell">
-					<h3>Github profile statistics</h3>
-
-					<p>Failed fetching data from Github. Please check again in 4 hours.</p>
-				</div>
-			</div>
-		);
+		return <StatsError network="Github" />;
 	}
 
 	const calendarDates = Object.keys(calendar).reduce((result: string[], key: string) => {
