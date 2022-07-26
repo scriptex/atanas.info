@@ -13,7 +13,6 @@ window.crypto = {
 window.scrollTo = jest.fn();
 
 [
-	'simplex-noise',
 	'@codersrank/summary/codersrank-summary.min',
 	'@codersrank/activity/codersrank-activity.min',
 	'@codersrank/timeline/codersrank-timeline.min',
@@ -61,6 +60,10 @@ jest.mock('react-syntax-highlighter/dist/esm/styles/prism', () =>
 		dark: {}
 	}))
 );
+
+jest.mock('simplex-noise', () => ({
+	createNoise2D: () => jest.fn()
+}));
 
 jest.mock('../src/scripts/canvas', () => ({
 	createSVG: jest.fn(),

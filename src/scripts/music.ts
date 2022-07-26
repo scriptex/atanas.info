@@ -1,4 +1,4 @@
-import SimplexNoise from 'simplex-noise';
+import { createNoise2D } from 'simplex-noise';
 import { Power4, TweenMax } from 'gsap';
 
 import { random } from './shared';
@@ -24,7 +24,7 @@ export const music = (container: HTMLDivElement | null): void => {
 	let HEIGHT: number = canvas.height;
 
 	const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
-	const simplex: SimplexNoise = new SimplexNoise();
+	const noise2D = createNoise2D();
 	const circles: Circle[] = [];
 
 	let src: MediaElementAudioSourceNode;
@@ -203,8 +203,8 @@ export const music = (container: HTMLDivElement | null): void => {
 
 				this.p = (210 - this.value) * 0.5;
 
-				this.y = simplex.noise2D(this.xR, this.i) * this.p + this.yC;
-				this.x = simplex.noise2D(this.yR, this.i) * this.p + this.xC;
+				this.y = noise2D(this.xR, this.i) * this.p + this.yC;
+				this.x = noise2D(this.yR, this.i) * this.p + this.xC;
 
 				this.i += 0.01;
 			}
