@@ -238,7 +238,7 @@ export const projects: WebProject[] = [
 		image: 'images/temp/kinetik.png',
 		title: 'Kinetik',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://danariely.com/',
@@ -258,6 +258,13 @@ export const projects: WebProject[] = [
 		url: 'https://onelogic.de/',
 		image: 'images/temp/one-logic.png',
 		title: 'One Logic',
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
+		skip: true
+	},
+	{
+		url: 'https://hochzeitskiste.info/',
+		image: 'images/temp/hochzeitskiste.png',
+		title: 'Hochzeitskiste',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
 		skip: true
 	},
