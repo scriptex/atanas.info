@@ -262,6 +262,13 @@ export const projects: WebProject[] = [
 		skip: true
 	},
 	{
+		url: 'https://hochzeitskiste.info/',
+		image: 'images/temp/hochzeitskiste.png',
+		title: 'Hochzeitskiste',
+		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
+		skip: true
+	},
+	{
 		url: 'https://social-header.tk/',
 		image: 'images/temp/social-header.png',
 		title: 'Social Header',
