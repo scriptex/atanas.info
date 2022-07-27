@@ -3,7 +3,7 @@ import 'scriptex-socials';
 
 import { updatedAt } from '../../data/updated-at';
 import { formatDate } from '../../scripts/shared';
-import { Funding, ExternalLink } from '..';
+import { Funding, ExternalLink, FooterReferral } from '..';
 
 export const Footer: React.FC = () => (
 	<footer className="c-footer">
@@ -30,6 +30,8 @@ export const Footer: React.FC = () => (
 			<small>Updated at {formatDate(updatedAt * 1000, 'dd MMM yyyy HH:mm:ss')}</small>
 
 			<Funding />
+
+			<FooterReferral />
 		</div>
 	</footer>
 );

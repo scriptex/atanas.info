@@ -12,6 +12,7 @@ export { default as Contact } from './contact';
 export { default as ContactSuccess } from './contact/success';
 export { default as ExternalLink } from './external-link';
 export { default as Footer } from './footer';
+export { default as FooterReferral } from './footer/referral';
 export { default as Funding } from './funding';
 export { default as FundingCrypto } from './funding/crypto';
 export { default as FundingNetwork } from './funding/network';

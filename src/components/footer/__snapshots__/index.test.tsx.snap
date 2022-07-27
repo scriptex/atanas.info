@@ -327,6 +327,30 @@ exports[`Footer component Should render the Footer component 1`] = `
           </small>
         </div>
       </div>
+      <div
+        class="c-footer__referral"
+      >
+        <img
+          alt=""
+          src="/images/temp/share-job-modal-infographic.svg"
+        />
+        <div>
+          <h5>
+            Access the world’s best freelance jobs.
+          </h5>
+          <p>
+             Your work. Your network. Your future.
+          </p>
+          <a
+            class="c-btn c-btn--small"
+            href="https://app.usebraintrust.com/r/atanas1/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Apply to Braintrust
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 </DocumentFragment>
