@@ -148,7 +148,7 @@ export const createNodes = (
 			.text((d: any) => `${d.text}`)
 			.attr('class', 'skill-name')
 			.attr('text-anchor', 'middle')
-			.attr('dy', '-0.25rem');
+			.attr('dy', '-0.25em');
 
 		group
 			.append('text')
@@ -156,7 +156,7 @@ export const createNodes = (
 			.text((d: any) => `Since ${d.since}`)
 			.attr('text-anchor', 'middle')
 			.attr('font-weight', 'bold')
-			.attr('dy', '1rem');
+			.attr('dy', '1em');
 	});
 
 	return nodes;

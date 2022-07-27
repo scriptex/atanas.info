@@ -49,7 +49,10 @@
 		font-weight: 700;
 		flex: 1;
 		margin: 0 0 3rem 3rem;
-		background: paint(confetti);
+
+		@supports (background: paint(confetti)) {
+			background: paint(confetti);
+		}
 	}
 
 	&:nth-of-type(2) {

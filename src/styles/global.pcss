@@ -35,12 +35,16 @@ body {
 	background-attachment: initial;
 }
 
-.bubbles {
-	background-image: paint(bubbles);
+@supports (background-image: paint(bubbles)) {
+	.bubbles {
+		background-image: paint(bubbles);
+	}
 }
 
-.circles {
-	background-image: paint(circles);
+@supports (background-image: paint(circles)) {
+	.circles {
+		background-image: paint(circles);
+	}
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,10 +1,15 @@
 @define-mixin slanted {
 	color: var(--color-primary);
 	display: inline-block;
-	padding: 0.5rem 2rem 0.5rem 1rem;
-	background: paint(slanted-background);
-	--slanted-background-color: var(--color-action);
-	--slanted-background-opacity: 0.35;
+	padding: 0.5rem 1rem;
+	background: var(--color-action);
+
+	@supports (background: paint(slanted-background)) {
+		--slanted-background-color: var(--color-action);
+		--slanted-background-opacity: 0.35;
+		padding: 0.5rem 2rem 0.5rem 1rem;
+		background: paint(slanted-background);
+	}
 }
 
 @define-mixin polygon $sides {
