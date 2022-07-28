@@ -122,6 +122,13 @@ export const projects: WebProject[] = [
 		skip: false
 	},
 	{
+		url: 'https://influencingforgood.com/',
+		image: 'images/temp/Influencing-For-Good.png',
+		title: 'Influencing For Good',
+		description: 'JavaScript, SCSS, React, Redux, Redux Saga',
+		skip: false
+	},
+	{
 		url: 'https://tetris.atanas.info',
 		image: 'images/temp/material-tetris.png',
 		title: 'Material Tetris',
@@ -143,9 +150,9 @@ export const projects: WebProject[] = [
 		skip: false
 	},
 	{
-		url: 'https://paternalism-tool.vercel.app/',
-		image: 'images/temp/paternalism-tool.png',
-		title: 'Paternalism tool',
+		url: 'https://paternalismforgood.com/',
+		image: 'images/temp/Paternalism-For-Good.png',
+		title: 'Paternalism For Good',
 		description: 'JavaScript, SCSS, React, Redux, Redux Saga',
 		skip: false
 	},
