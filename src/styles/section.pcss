@@ -1,7 +1,7 @@
 .c-section {
 	position: relative;
 	z-index: 2;
-	padding: 8rem 0 4rem;
+	padding: 9rem 0 4rem;
 	overflow: hidden;
 
 	& .o-shell {
@@ -213,6 +213,11 @@
 	}
 }
 
+.c-section__animation {
+	position: absolute;
+	right: 0;
+}
+
 @media (--hover) {
 	.c-section__actions-list {
 		& li {
@@ -321,5 +326,12 @@
 				transform: scale(1) translate(0, -1rem);
 			}
 		}
+	}
+
+	.c-section__animation {
+		position: relative;
+		top: auto !important;
+		right: auto;
+		margin-bottom: 2rem;
 	}
 }

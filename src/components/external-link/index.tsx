@@ -6,7 +6,7 @@ interface Props {
 	[x: string]: unknown;
 }
 
-export const ExternalLink: React.FC<Readonly<Props>> = ({ href, children, ...rest }: Readonly<Props>) => (
+export const ExternalLink: React.FC<Readonly<Props>> = ({ href, children, ...rest }: Props) => (
 	<a href={href} target="_blank" rel="noopener noreferrer" {...rest}>
 		{children}
 	</a>

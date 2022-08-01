@@ -1,3 +1,9 @@
+.c-section--resume {
+	& .c-section__animation {
+		top: -3rem;
+	}
+}
+
 .c-resume {
 	@mixin flex-row wrap, flex-start, space-between;
 	position: relative;
@@ -167,6 +173,10 @@
 				}
 			}
 		}
+
+		& .c-section__animation {
+			margin: -2.5rem 0 -1.5rem;
+		}
 	}
 
 	.c-resume {
@@ -220,6 +230,7 @@
 	.c-header,
 	.c-footer,
 	.c-resume__head,
+	.c-section__header,
 	.c-section__actions {
 		display: none;
 	}

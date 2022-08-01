@@ -1,11 +1,17 @@
 import * as React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 
-import { Section } from '..';
+import timeline from '../../data/lotties/timeline.json';
+import { Section, Animation } from '..';
 import { TimelineItem, timelineItems } from '../../data/timeline';
 
 export const Timeline: React.FC = () => (
-	<Section id="timeline" title="Timeline" hasButton={true}>
+	<Section
+		id="timeline"
+		title="Timeline"
+		hasButton={true}
+		additionalElements={<Animation data={timeline} width={367} height={32} className="c-section__animation" />}
+	>
 		<VerticalTimeline>
 			{timelineItems.map((item: TimelineItem, i: number) => (
 				<VerticalTimelineElement key={i} date={item.date} icon={item.icon}>

@@ -259,8 +259,10 @@ exports[`App component Should render the App component 1`] = `
         class="c-slider"
       >
         <h1>
-          👋 Hello! 
-          <br />
+          <div
+            class="c-slider__animation"
+            style="width: 100px; height: 100px; margin: auto;"
+          />
           I am Atanas Atanasov
         </h1>
         <h2>

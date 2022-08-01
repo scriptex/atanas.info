@@ -1,9 +1,11 @@
 import * as React from 'react';
 
+import resume from '../../data/lotties/resume.json';
 import {
 	Lines,
 	Button,
 	Section,
+	Animation,
 	ResumeTitle,
 	ResumeSkills,
 	ResumeSummary,
@@ -28,6 +30,7 @@ export const Resume: React.FC = () => (
 			</>
 		}
 		hasButton
+		additionalElements={<Animation data={resume} width={150} height={150} className="c-section__animation" />}
 	>
 		<Lines />
 

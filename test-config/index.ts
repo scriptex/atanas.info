@@ -82,3 +82,10 @@ jest.mock('../src/scripts/gitlab-calendar', () => ({
 }));
 
 jest.mock('../src/components/github-skyline', () => jest.fn(() => 'Github Skyline'));
+
+jest.mock('lottie-web', () => ({
+	__esModule: true,
+	default: {
+		loadAnimation: jest.fn()
+	}
+}));

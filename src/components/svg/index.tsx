@@ -6,7 +6,7 @@ interface Props {
 	className?: string;
 }
 
-export const Svg: React.FC<Readonly<Props>> = ({ src, className }: Readonly<Props>) => {
+export const Svg: React.FC<Readonly<Props>> = ({ src, className }: Props) => {
 	const classes = ['c-svg-icon'].concat(className || '');
 
 	return <SVG src={src} className={classes.join(' ')} />;

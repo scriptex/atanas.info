@@ -10,7 +10,7 @@ interface Props {
 	[x: string]: unknown;
 }
 
-export const Button: React.FC<Readonly<Props>> = (props: Readonly<Props>) => {
+export const Button: React.FC<Readonly<Props>> = (props: Props) => {
 	const { href, type, children, className, onClick, ...rest } = props;
 	const classes: string[] = className ? className.split(' ') : [''];
 	const classNames: string = ['c-btn'].concat(classes).join(' ');

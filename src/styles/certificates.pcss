@@ -1,6 +1,10 @@
 .c-section--certificates {
 	color: var(--color-primary);
 	text-align: center;
+
+	& .c-section__animation {
+		top: -2rem;
+	}
 }
 
 .c-certificate {
@@ -20,6 +24,10 @@
 	.c-section--certificates {
 		& .o-grid__item + .o-grid__item {
 			padding-top: 0;
+		}
+
+		& .c-section__animation {
+			margin: 0;
 		}
 	}
 }

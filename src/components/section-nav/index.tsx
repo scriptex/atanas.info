@@ -12,7 +12,7 @@ interface Props {
 	onClick: (index: number) => void;
 }
 
-export const SectionNav: React.FC<Readonly<Props>> = (props: Readonly<Props>) => {
+export const SectionNav: React.FC<Readonly<Props>> = (props: Props) => {
 	const { name, data, active, onClick } = props;
 
 	return (

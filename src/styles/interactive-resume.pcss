@@ -1,3 +1,9 @@
+.c-section--interactive-resume {
+	& .c-section__animation {
+		top: -3rem;
+	}
+}
+
 .c-interactive-resume {
 	text-align: center;
 	@mixin flex-row wrap, flex-start, center;
@@ -64,6 +70,12 @@
 }
 
 @media (--mobile) {
+	.c-section--interactive-resume {
+		& .c-section__animation {
+			margin: -2.5rem 0 -1.5rem;
+		}
+	}
+
 	.c-interactive-resume {
 		margin: 0 -1rem;
 	}

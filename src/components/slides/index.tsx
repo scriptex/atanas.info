@@ -1,8 +1,9 @@
 import * as React from 'react';
 
+import presentation from '../../data/lotties/presentation.json';
 import { Slide, slides } from '../../data/slides';
 import { isPrerendering } from '../../scripts/shared';
-import { Loader, Section, SectionNav } from '..';
+import { Loader, Section, Animation, SectionNav } from '..';
 
 export const Slides: React.FC = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);
@@ -14,6 +15,9 @@ export const Slides: React.FC = () => {
 			title="Slides"
 			className=" fullsize-background"
 			hasButton={true}
+			additionalElements={
+				<Animation data={presentation} width={150} height={150} className="c-section__animation" />
+			}
 		>
 			<SectionNav name="title" data={slides} active={activeIndex} onClick={setActiveIndex} />
 

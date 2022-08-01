@@ -415,9 +415,17 @@ exports[`SectionStats component Should render the SectionStats component 1`] = `
       <header
         class="c-section__header"
       >
-        <h2>
-          Stats
-        </h2>
+        <div
+          class="o-shell"
+        >
+          <div
+            class="c-section__animation"
+            style="width: 150px; height: 150px; margin: auto;"
+          />
+          <h2>
+            Stats
+          </h2>
+        </div>
       </header>
       <div
         class="c-section__entry c-section__entry--no-background"

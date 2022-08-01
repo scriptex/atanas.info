@@ -15,6 +15,10 @@ exports[`InteractiveResume component Should render the InteractiveResume compone
         <header
           class="c-section__header"
         >
+          <div
+            class="c-section__animation"
+            style="width: 150px; height: 150px; margin: auto;"
+          />
           <h2>
             Interactive resume
           </h2>

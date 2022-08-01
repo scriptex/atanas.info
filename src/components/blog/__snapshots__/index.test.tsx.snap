@@ -16,6 +16,10 @@ exports[`Blog component Should render the Blog component 1`] = `
         <header
           class="c-section__header"
         >
+          <div
+            class="c-section__animation"
+            style="width: 150px; height: 150px; margin: auto;"
+          />
           <h2>
             Blog
           </h2>
@@ -172,6 +176,10 @@ exports[`Blog component Should render the Blog component 2`] = `
         <header
           class="c-section__header"
         >
+          <div
+            class="c-section__animation"
+            style="width: 150px; height: 150px; margin: auto;"
+          />
           <h2>
             Blog
           </h2>

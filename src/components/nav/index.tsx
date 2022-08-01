@@ -10,10 +10,11 @@ interface Props {
 	className?: string;
 }
 
-export const NavInner: React.FC<Readonly<Props>> = (props: Readonly<Props>) =>
-	props.hasShell ? <div className="o-shell">{props.children}</div> : <>{props.children}</>;
+export const NavInner: React.FC<Readonly<Props>> = (props: Props) => {
+	return props.hasShell ? <div className="o-shell">{props.children}</div> : <>{props.children}</>;
+};
 
-export const Nav: React.FC<Readonly<Props>> = (props: Readonly<Props>) => {
+export const Nav: React.FC<Readonly<Props>> = (props: Props) => {
 	const { onClick, hasShell, className } = props;
 	const classNames = ['c-nav'];
 

@@ -16,6 +16,10 @@ exports[`About component Should render the About component 1`] = `
         <header
           class="c-section__header"
         >
+          <div
+            class="c-section__animation"
+            style="width: 200px; height: 200px; margin: auto;"
+          />
           <h2>
             About me
           </h2>

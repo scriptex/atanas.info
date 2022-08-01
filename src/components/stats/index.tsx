@@ -4,8 +4,9 @@ import { format } from 'date-fns';
 
 import { addTitles } from './utils';
 
+import statistics from '../../data/lotties/statistics.json';
 import { isPrerendering } from '../../scripts/shared';
-import { Section, NPMStats, GithubStats, GitlabStats } from '..';
+import { Section, NPMStats, Animation, GithubStats, GitlabStats } from '..';
 
 export const Stats: React.FC = () => {
 	const timeout: React.MutableRefObject<NodeJS.Timeout | null> = React.useRef(null);
@@ -39,7 +40,16 @@ export const Stats: React.FC = () => {
 	}, []);
 
 	return (
-		<Section id="stats" title="Stats" hasShell={false} hasButton={true} className=" circles">
+		<Section
+			id="stats"
+			title="Stats"
+			hasShell={false}
+			hasButton={true}
+			className=" circles"
+			additionalElements={
+				<Animation data={statistics} width={150} height={150} className="c-section__animation" />
+			}
+		>
 			<GithubStats />
 
 			<GitlabStats />
