@@ -7,6 +7,10 @@
 		opacity: 0.5;
 		background-color: var(--color-secondary);
 	}
+
+	& .c-section__animation {
+		top: -4.5rem;
+	}
 }
 
 .c-article {
@@ -143,6 +147,12 @@
 }
 
 @media (--mobile) {
+	.c-section--about {
+		& .c-section__animation {
+			margin: -3rem 0 -1rem;
+		}
+	}
+
 	.c-article {
 		& .c-article__block:nth-of-type(7) {
 			margin-bottom: 2rem;

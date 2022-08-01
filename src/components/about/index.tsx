@@ -1,7 +1,8 @@
 import * as React from 'react';
 
+import book from '../../data/lotties/book.json';
 import { bio, BioEntry } from '../../data/bio';
-import { Section, LastAbout, FeaturedAbout } from '..';
+import { Section, Animation, LastAbout, FeaturedAbout } from '..';
 
 export const About: React.FC = () => (
 	<Section
@@ -10,6 +11,7 @@ export const About: React.FC = () => (
 		title="About me"
 		className=" c-article fullsize-background"
 		hasButton={true}
+		additionalElements={<Animation data={book} width={200} height={200} className="c-section__animation" />}
 	>
 		<img
 			src="/images/temp/atanas.jpg"

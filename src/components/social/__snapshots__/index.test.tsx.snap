@@ -12,9 +12,17 @@ exports[`Social component Should render the Social component 1`] = `
       <header
         class="c-section__header"
       >
-        <h2>
-          Social
-        </h2>
+        <div
+          class="o-shell"
+        >
+          <div
+            class="c-section__animation"
+            style="width: 150px; height: 150px; margin: auto;"
+          />
+          <h2>
+            Social
+          </h2>
+        </div>
       </header>
       <div
         class="lines"
@@ -353,9 +361,17 @@ exports[`Social component Should render the Social component 2`] = `
       <header
         class="c-section__header"
       >
-        <h2>
-          Social
-        </h2>
+        <div
+          class="o-shell"
+        >
+          <div
+            class="c-section__animation"
+            style="width: 150px; height: 150px; margin: auto;"
+          />
+          <h2>
+            Social
+          </h2>
+        </div>
       </header>
       <div
         class="lines"

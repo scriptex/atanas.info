@@ -17,8 +17,10 @@ exports[`Hello component Should render the Hello component 1`] = `
         class="c-slider"
       >
         <h1>
-          👋 Hello! 
-          <br />
+          <div
+            class="c-slider__animation"
+            style="width: 100px; height: 100px; margin: auto;"
+          />
           I am Atanas Atanasov
         </h1>
         <h2>
@@ -142,8 +144,10 @@ exports[`Slider component Should render the Slider component 1`] = `
     class="c-slider"
   >
     <h1>
-      👋 Hello! 
-      <br />
+      <div
+        class="c-slider__animation"
+        style="width: 100px; height: 100px; margin: auto;"
+      />
       I am Atanas Atanasov
     </h1>
     <h2>

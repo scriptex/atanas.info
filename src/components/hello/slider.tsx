@@ -1,7 +1,9 @@
 import * as React from 'react';
 import useInterval from 'use-interval';
 
+import hello from '../../data/lotties/hello.json';
 import { titles } from '../../data/titles';
+import { Animation } from '../';
 
 export const Slider: React.FC = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);
@@ -13,7 +15,7 @@ export const Slider: React.FC = () => {
 	return (
 		<div className="c-slider">
 			<h1>
-				👋 Hello! <br />I am Atanas Atanasov
+				<Animation data={hello} width={100} height={100} className="c-slider__animation" />I am Atanas Atanasov
 			</h1>
 
 			<h2>

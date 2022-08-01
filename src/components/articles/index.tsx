@@ -1,8 +1,9 @@
 import * as React from 'react';
 
+import book from '../../data/lotties/book.json';
 import { isPrerendering } from '../../scripts/shared';
 import { articles, Article } from '../../data/articles';
-import { Loader, Section, ExternalLink } from '..';
+import { Loader, Section, Animation, ExternalLink } from '..';
 
 export const Articles: React.FC = () => (
 	<Section
@@ -11,6 +12,7 @@ export const Articles: React.FC = () => (
 		title="Articles"
 		className=" c-section--slides fullsize-background"
 		hasButton={true}
+		additionalElements={<Animation data={book} width={150} height={150} className="c-section__animation" />}
 	>
 		<div className="c-section__body o-grid">
 			{articles

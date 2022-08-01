@@ -15,6 +15,7 @@ export interface Props {
 	className?: string;
 	shellClass?: string;
 	wrapperClassName?: string;
+	additionalElements?: React.ReactNode;
 }
 
 export const SectionElements: React.FC<Readonly<Props>> = ({
@@ -22,19 +23,29 @@ export const SectionElements: React.FC<Readonly<Props>> = ({
 	actions,
 	children,
 	subtitle,
-	hasButton
-}: Readonly<Props>) => {
+	hasShell,
+	hasButton,
+	additionalElements
+}: Props) => {
 	const [open, setOpen] = React.useState(false);
 	const { setContactVisible } = React.useContext(AppContext);
 	const onClose = () => setOpen(false);
+
+	const HeaderWrapper: React.FC<Pick<Props, 'children'>> = ({ children }) => {
+		return hasShell ? <>{children}</> : <div className="o-shell">{children}</div>;
+	};
 
 	return (
 		<>
 			{!!title || !!subtitle ? (
 				<header className="c-section__header">
-					{!!title && <h2>{title}</h2>}
+					<HeaderWrapper>
+						{additionalElements}
 
-					{!!subtitle && <h3>{subtitle}</h3>}
+						{!!title && <h2>{title}</h2>}
+
+						{!!subtitle && <h3>{subtitle}</h3>}
+					</HeaderWrapper>
 				</header>
 			) : null}
 
@@ -105,7 +116,7 @@ export const SectionElements: React.FC<Readonly<Props>> = ({
 	);
 };
 
-export const Section: React.FC<Readonly<Props>> = (props: Readonly<Props>) => {
+export const Section: React.FC<Readonly<Props>> = (props: Props) => {
 	const { id, style, hasShell, className, shellClass, wrapperClassName } = props;
 
 	return (

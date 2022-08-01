@@ -1,7 +1,8 @@
 import * as React from 'react';
 
 import webApps from '../../data/projects-list.json';
-import { Button, Section, PortfolioWebApps, PortfolioMobileApps, PortfolioAutomotiveApps } from '..';
+import portfolio from '../../data/lotties/portfolio.json';
+import { Button, Section, Animation, PortfolioWebApps, PortfolioMobileApps, PortfolioAutomotiveApps } from '..';
 
 export const Portfolio: React.FC = () => {
 	const [itemsToShow, setItemsToShow] = React.useState(7);
@@ -16,6 +17,9 @@ export const Portfolio: React.FC = () => {
 				)
 			}
 			hasButton={true}
+			additionalElements={
+				<Animation data={portfolio} width={200} height={150} className="c-section__animation" />
+			}
 		>
 			<PortfolioMobileApps />
 

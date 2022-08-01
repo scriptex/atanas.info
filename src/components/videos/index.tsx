@@ -1,14 +1,23 @@
 import * as React from 'react';
 import 'lite-youtube-embed';
 
+import videoCamera from '../../data/lotties/video-camera.json';
 import { presentations, Presentation } from '../../data/presentations';
-import { Lines, Loader, Section, SectionNav } from '..';
+import { Lines, Loader, Section, Animation, SectionNav } from '..';
 
 export const Videos: React.FC = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);
 
 	return (
-		<Section id="videos" title="Videos" hasButton={true} className=" c-section--slides">
+		<Section
+			id="videos"
+			title="Videos"
+			hasButton={true}
+			className=" c-section--slides"
+			additionalElements={
+				<Animation data={videoCamera} width={150} height={150} className="c-section__animation" />
+			}
+		>
 			<Lines />
 
 			<SectionNav name="title" data={presentations} active={activeIndex} onClick={setActiveIndex} />

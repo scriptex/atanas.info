@@ -1,6 +1,7 @@
 export { default as ErrorPage } from './404';
 export { default as App } from './app';
 export { default as About } from './about';
+export { default as Animation } from './animation';
 export { default as FeaturedAbout } from './about/featured';
 export { default as LastAbout } from './about/last-about';
 export { default as Articles } from './articles';

@@ -1,10 +1,16 @@
 import * as React from 'react';
 
-import { Lines, Section } from '..';
+import resume from '../../data/lotties/resume.json';
+import { Lines, Section, Animation } from '..';
 import { interactiveResumeItems, InteractiveResumeItem } from '../../data/interactive-resume';
 
 export const InteractiveResume: React.FC = () => (
-	<Section id="interactive-resume" title="Interactive resume" hasButton={true}>
+	<Section
+		id="interactive-resume"
+		title="Interactive resume"
+		hasButton={true}
+		additionalElements={<Animation data={resume} width={150} height={150} className="c-section__animation" />}
+	>
 		<Lines />
 
 		<div className="c-interactive-resume">
