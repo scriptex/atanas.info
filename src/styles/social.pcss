@@ -147,10 +147,10 @@
 .page-social {
 	font-size: 100%;
 
-	& a,
-	& a:hover,
-	& a:visited,
-	& a:visited:hover {
+	& a:not(.c-btn),
+	& a:not(.c-btn):hover,
+	& a:not(.c-btn):visited,
+	& a:not(.c-btn):visited:hover {
 		font-weight: inherit;
 		color: var(--color-primary);
 	}
@@ -224,6 +224,12 @@
 		font-size: var(--font-size-base);
 		color: var(--color-primary);
 
+		& p,
+		& h5,
+		& h6 {
+			color: inherit;
+		}
+
 		& small {
 			font-size: 80%;
 
@@ -242,6 +248,16 @@
 		& .c-section--social h1 a:hover {
 			color: var(--color-action);
 			text-decoration: none;
+		}
+
+		& .c-btn:hover {
+			text-decoration: none;
+		}
+
+		& .c-funding {
+			& a:hover {
+				text-decoration: none;
+			}
 		}
 	}
 }

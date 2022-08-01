@@ -7,9 +7,9 @@ export const FooterReferral: React.FC = () => (
 		<img src="/images/temp/share-job-modal-infographic.svg" alt="" />
 
 		<div>
-			<h5>Access the world’s best freelance jobs.</h5>
+			<h5>Access the world&apos;s best freelance jobs.</h5>
 
-			<p> Your work. Your network. Your future.</p>
+			<p>Your work. Your network. Your future.</p>
 
 			<ExternalLink href="https://app.usebraintrust.com/r/atanas1/" className="c-btn c-btn--small">
 				Apply to Braintrust
