@@ -12,6 +12,22 @@ interface Props {
 export const FundingCrypto: React.FC<Props> = ({ name, title, wallet }: Props) => {
 	const [copied, setCopied] = React.useState(false);
 
+	React.useEffect(() => {
+		let timeout: NodeJS.Timeout | null = null;
+
+		if (copied) {
+			timeout = setTimeout(() => {
+				setCopied(false);
+			}, 2000);
+		}
+
+		return () => {
+			if (typeof timeout === 'number') {
+				clearTimeout(timeout);
+			}
+		};
+	}, [copied]);
+
 	return (
 		<CopyToClipboard text={wallet} onCopy={() => setCopied(true)}>
 			<div className={`c-funding__crypto c-funding__crypto--${name}`}>
