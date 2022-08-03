@@ -41,7 +41,9 @@ export const Animation: React.FC<Readonly<Props>> = ({
 		};
 	}, [animationData]);
 
-	return <div className={className} style={{ width, height, margin: 'auto' }} ref={element} />;
+	return (
+		<div className={className} style={{ width, height, marginLeft: 'auto', marginRight: 'auto' }} ref={element} />
+	);
 };
 
 export default Animation;

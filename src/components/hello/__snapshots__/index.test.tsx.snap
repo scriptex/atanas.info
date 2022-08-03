@@ -19,7 +19,7 @@ exports[`Hello component Should render the Hello component 1`] = `
         <h1>
           <div
             class="c-slider__animation"
-            style="width: 100px; height: 100px; margin: auto;"
+            style="width: 100px; height: 100px; margin-left: auto; margin-right: auto;"
           />
           I am Atanas Atanasov
         </h1>
@@ -146,7 +146,7 @@ exports[`Slider component Should render the Slider component 1`] = `
     <h1>
       <div
         class="c-slider__animation"
-        style="width: 100px; height: 100px; margin: auto;"
+        style="width: 100px; height: 100px; margin-left: auto; margin-right: auto;"
       />
       I am Atanas Atanasov
     </h1>
