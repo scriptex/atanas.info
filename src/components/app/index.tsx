@@ -52,10 +52,6 @@ export const App: React.FC = () => {
 	const [contactVisible, setContactVisible] = React.useState(false);
 	const value: any = { contactVisible, setContactVisible };
 
-	React.useEffect(() => {
-		document.dispatchEvent(new Event('prerender-trigger'));
-	}, []);
-
 	return (
 		<Router>
 			<ScrollToTop />

@@ -4,8 +4,7 @@
 	],
 	"reporters": [
 		"...",
-		"parcel-reporter-static-files-copy",
-		"parcel-reporter-prerender"
+		"parcel-reporter-static-files-copy"
 	],
 	"transformers": {
 		"*.{ts,tsx}": [

@@ -24,7 +24,7 @@
 		"start": "yarn time && concurrently -r \"yarn css:watch\" \"yarn tsc:watch\" \"yarn houdini:watch\" \"yarn parcel-start\"",
 		"start-dist": "http-server ./dist -p=1234 -P=http://localhost:1234/? -o",
 		"build": "yarn pre && yarn post",
-		"postbuild": "workbox generateSW ./config/workbox-config.ts",
+		"postbuild": "workbox generateSW ./config/workbox-config.ts && yarn prerender",
 		"test": "jest --runInBand --config=./config/jest.config.ts --rootDir=./ --env=jsdom",
 		"test:watch": "yarn test --watch",
 		"test:coverage": "yarn test --coverage",
@@ -38,7 +38,9 @@
 		"npm-stats": "ts-node ./npm/index.ts",
 		"pwa": "create-pwa --icon static/images/icons/icon.png --launch static/images/icons/splash.png",
 		"type-coverage": "type-coverage --ignore-catch --detail",
-		"please": "rm -rf .cache dist coverage node_modules yarn.lock"
+		"please": "rm -rf .cache dist coverage node_modules yarn.lock",
+		"prerender": "react-spa-prerender",
+		"postprerender": "ts-node server/index.ts"
 	},
 	"keywords": [],
 	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
@@ -152,7 +154,6 @@
 		"npmtotal": "1.4.1",
 		"package-info": "4.1.1",
 		"parcel": "2.7.0",
-		"parcel-reporter-prerender": "github:msmuenchen/parcel-reporter-prerender",
 		"parcel-reporter-static-files-copy": "1.4.0",
 		"postcss": "8.4.16",
 		"postcss-calc": "8.2.4",
@@ -175,6 +176,7 @@
 		"postcss-utilities": "0.8.4",
 		"prettier": "2.7.1",
 		"puppeteer": "16.1.0",
+		"react-spa-prerender": "1.0.14",
 		"stylelint": "14.9.1",
 		"stylelint-config-recommended": "8.0.0",
 		"stylelint-no-unsupported-browser-features": "5.0.3",
@@ -198,36 +200,5 @@
 	"private": true,
 	"typeCoverage": {
 		"atLeast": 93
-	},
-	"prerender": {
-		"routes": [
-			"/",
-			"/about",
-			"/timeline",
-			"/skills",
-			"/portfolio",
-			"/stats",
-			"/slides",
-			"/videos",
-			"/articles",
-			"/certificates",
-			"/social",
-			"/blog",
-			"/music",
-			"/resume",
-			"/projects",
-			"/interactive-resume"
-		],
-		"rendererConfig": {
-			"inject": {
-				"isPrerendering": true
-			},
-			"headless": true,
-			"puppeteerArgs": [
-				"--no-sandbox",
-				"--disable-setuid-sandbox"
-			],
-			"renderAfterDocumentEvent": "prerender-trigger"
-		}
 	}
 }
