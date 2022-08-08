@@ -68,6 +68,7 @@ export const skills: Skill[] = [
 	{ text: 'Google Tag Manager', icon: 'googletagmanager', fill: '#246FDB', since: 2020, ...defaultSize },
 	{ text: 'Grunt', icon: 'grunt', fill: '#FAA918', since: 2013, iconFill: '#000', ...defaultSize },
 	{ text: 'Gulp', icon: 'gulp', fill: '#CF4647', since: 2013, ...defaultSize },
+	{ text: 'Handlebars', icon: 'handlebarsdotjs', fill: '#000000', since: 2013, ...defaultSize },
 	{ text: 'Highcharts', icon: 'highcharts', fill: '#3a3a4f', since: 2016, ...defaultSize },
 	{ text: 'Homebrew', icon: 'homebrew', fill: '#FBB040', since: 2018, iconFill: '#000', ...defaultSize },
 	{ text: 'Houdini', icon: 'houdini', fill: '#FF4713', since: 2020, ...defaultSize },

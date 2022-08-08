@@ -286,7 +286,35 @@ export const projects: WebProject[] = [
 		url: 'https://www.predictablyirrational.com/',
 		image: 'images/temp/Preditably-Irrational.png',
 		title: 'Preditably Irrational',
-		description: 'HTML, Advanced CSS, JavaScript, Webpack',
+		description: 'HTML, Advanced CSS, SCSS, PostCSS, JavaScript, Webpack',
+		skip: false
+	},
+	{
+		url: 'https://payoffbook.com/',
+		image: 'images/temp/Payoff.png',
+		title: 'Payoff',
+		description: 'HTML, SVG, Sketch, SCSS, PostCSS, JavaScript, Swiper, Webpack',
+		skip: false
+	},
+	{
+		url: 'https://thehonesttruthaboutdishonesty.com/',
+		image: 'images/temp/The-(Honest)-Truth-About-Dishonesty.png',
+		title: 'The (Honest) Truth About Dishonesty',
+		description: 'HTML, SVG, SCSS, PostCSS, Webpack',
+		skip: false
+	},
+	{
+		url: 'https://irrationallyyours.com/',
+		image: 'images/temp/Irrationally-Yours.png',
+		title: 'Irrationally Yours',
+		description: 'HTML, SVG, SCSS, PostCSS, JavaScript, Swiper, ShuffleJS, Webpack',
+		skip: false
+	},
+	{
+		url: 'https://amazingdecisionsbook.com/',
+		image: 'images/temp/Amazing-Decisions.png',
+		title: 'Amazing Decisions',
+		description: 'HTML, SVG, SCSS, PostCSS, JavaScript, Swiper, Webpack',
 		skip: false
 	},
 	{

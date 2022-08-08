@@ -1338,6 +1338,33 @@ exports[`Skills component Should render the Skills component 1`] = `
                 class="c-skill"
               >
                 <figure
+                  style="background-color: rgb(0, 0, 0);"
+                >
+                  <svg
+                    class="c-skill__icon"
+                    height="34"
+                    width="34"
+                  >
+                    <use
+                      xlink:href="#svg-handlebarsdotjs"
+                    />
+                  </svg>
+                </figure>
+                <p>
+                  <strong>
+                    Handlebars
+                  </strong>
+                  Since 2013
+                </p>
+              </div>
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6 md-4 lg-3"
+            >
+              <div
+                class="c-skill"
+              >
+                <figure
                   style="background-color: rgb(58, 58, 79);"
                 >
                   <svg
