@@ -443,7 +443,9 @@ export const automotiveProjects: ExtendedProject[] = [
 			'kinetik-infotainment-4.png',
 			'kinetik-infotainment-5.png',
 			'kinetik-infotainment-6.png',
-			'kinetik-infotainment-7.png'
+			'kinetik-infotainment-7.png',
+			'kinetik-infotainment-8.png',
+			'kinetik-infotainment-9.png'
 		]
 	},
 	{
