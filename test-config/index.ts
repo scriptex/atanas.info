@@ -2,7 +2,9 @@
 window.matchMedia = window.matchMedia || (() => ({
 	matches: false,
 	addListener: () => 'mocked matchMedia addListener',
-	removeListener: () => 'mocked matchMedia removeListener'
+	removeListener: () => 'mocked matchMedia removeListener',
+	addEventListener: () => 'mocked matchMedia addEventListener',
+	removeEventListener: () => 'mocked matchMedia removeEventListener',
 }));
 
 window.crypto = {

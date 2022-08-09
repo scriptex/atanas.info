@@ -8,6 +8,11 @@
 		margin-bottom: 1rem;
 	}
 
+	& iframe {
+		border: 1px solid var(--color-primary) !important;
+		border-radius: 0.25rem !important;
+	}
+
 	/* prettier-ignore */
 	& codersrank-widget { /* stylelint-disable-line selector-type-no-unknown */
 		width: 100%;
@@ -42,8 +47,6 @@
 
 	& .github-frame {
 		height: 25rem;
-		background-color: var(--color-primary);
-		border-radius: 0.25rem;
 	}
 
 	& .youtube-frame {
@@ -330,8 +333,14 @@
 }
 
 @media (--light-theme) {
-	.c-section--social h3:not([class]) {
-		color: var(--color-secondary);
+	.c-section--social {
+		& h3:not([class]) {
+			color: var(--color-secondary);
+		}
+
+		& .github-frame {
+			background-color: var(--color-secondary);
+		}
 	}
 
 	.page-social {

@@ -80,17 +80,17 @@
 	text-decoration: none;
 
 	& a {
+		color: inherit;
 		text-decoration: none;
+		transition: none;
 	}
 
 	& path {
 		fill: var(--color-primary);
 	}
 
-	&:hover {
-		& path {
-			fill: var(--color-action);
-		}
+	& text {
+		transition: fill var(--timing) var(--easing);
 	}
 }
 
@@ -124,7 +124,7 @@
 	}
 
 	& .c-funding__backdrop {
-		opacity: 0.8;
+		opacity: 0.7;
 		pointer-events: auto;
 	}
 }
@@ -139,24 +139,27 @@
 	}
 }
 
-@media (--light-theme) {
-	.c-funding__item path,
-	.c-funding__trigger text {
-		fill: var(--color-secondary);
-	}
+@media (--hover) {
+	.c-funding__item {
+		&:hover,
+		& a:hover {
+			& path {
+				fill: var(--color-action);
+			}
 
-	.c-funding__item a text {
-		fill: var(--color-primary);
+			& text {
+				fill: currentcolor;
+			}
+		}
+	}
+}
+
+@media (--light-theme) {
+	.c-funding__item {
+		color: var(--color-secondary);
 	}
 
 	.c-funding__knob {
 		filter: drop-shadow(0 0 1.5rem color-mod(var(--color-secondary) a(70%)));
-	}
-}
-
-@media (--light-theme-hover) {
-	.c-funding__item:hover a text,
-	.c-funding__item a:hover text {
-		fill: var(--color-secondary);
 	}
 }

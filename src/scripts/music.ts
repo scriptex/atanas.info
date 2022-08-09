@@ -56,15 +56,15 @@ export const music = (container: HTMLDivElement | null): void => {
 
 		radius = circles[3].value;
 
-		analyser.getByteFrequencyData(dataArray);
+		analyser?.getByteFrequencyData(dataArray);
 
-		background('#000');
+		background();
 		showCircles();
 		requestAnimationFrame(update);
 	};
 
-	const background = (color: string): void => {
-		ctx.fillStyle = color;
+	const background = (): void => {
+		ctx.fillStyle = window.getComputedStyle(document.documentElement).getPropertyValue('--color-secondary');
 		ctx.fillRect(0, 0, WIDTH, HEIGHT);
 	};
 
@@ -144,8 +144,11 @@ export const music = (container: HTMLDivElement | null): void => {
 		canvas.width = Math.min(window.innerWidth, 1400);
 		canvas.height = window.innerHeight;
 
-		background('#000');
+		background();
 	});
+
+	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', update);
+	window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', update);
 
 	Array.from(list.querySelectorAll('button')).forEach((button: HTMLButtonElement) => {
 		button.addEventListener('click', async () => {
@@ -158,7 +161,7 @@ export const music = (container: HTMLDivElement | null): void => {
 		});
 	});
 
-	background('#000');
+	background();
 
 	class Circle {
 		private i: number;

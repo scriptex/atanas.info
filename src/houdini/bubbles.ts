@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 type Bubble = {
 	x: number;
 	y: number;
@@ -9,7 +10,13 @@ registerPaint(
 	'bubbles',
 	class {
 		public static get inputProperties(): string[] {
-			return ['--bubbles-colors', '--bubbles-min-radius', '--bubbles-max-radius', '--bubbles-total-num'];
+			return [
+				'--bubbles-colors',
+				'--bubbles-min-radius',
+				'--bubbles-max-radius',
+				'--bubbles-total-num',
+				'--bubbles-background'
+			];
 		}
 
 		public paint(
@@ -18,16 +25,19 @@ registerPaint(
 			props: Map<string, any>
 		) {
 			let [
-				// eslint-disable-next-line
 				colors = ['#ef4c23', '#ff8d71'],
 				minRadius = 10,
 				maxRadius = 60,
-				numCircles = 50
+				numCircles = 50,
+				background = '#000'
 			]: any = this.parseProps(props);
 
 			c.beginPath();
 
+			c.fillStyle = background;
+
 			c.fillRect(0, 0, w, h);
+
 			c.closePath();
 
 			minRadius = this.normalize(minRadius, 10);
@@ -45,23 +55,31 @@ registerPaint(
 		}
 
 		private parseProps(props: Map<string, any>): Array<string | void> {
-			return ['--bubbles-colors', '--bubbles-min-radius', '--bubbles-max-radius', '--bubbles-total-num'].map(
-				prop => {
-					if (!props.get(prop).length) {
-						return undefined;
-					}
-
-					if (prop === '--bubbles-colors') {
-						return props
-							.get(prop)
-							.toString()
-							.split(',')
-							.map((color: string) => color.trim());
-					} else {
-						return parseInt(props.get(prop).toString(), 10);
-					}
+			return [
+				'--bubbles-colors',
+				'--bubbles-min-radius',
+				'--bubbles-max-radius',
+				'--bubbles-total-num',
+				'--bubbles-background'
+			].map(prop => {
+				if (!props.get(prop).length) {
+					return undefined;
 				}
-			);
+
+				if (prop === '--bubbles-colors') {
+					return props
+						.get(prop)
+						.toString()
+						.split(',')
+						.map((color: string) => color.trim());
+				}
+
+				if (prop === '--bubbles-background') {
+					return props.get(prop).toString().trim();
+				}
+
+				return parseInt(props.get(prop).toString(), 10);
+			});
 		}
 
 		private drawCircle(c: CanvasRenderingContext2D, bubble: Bubble): void {
