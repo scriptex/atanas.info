@@ -296,3 +296,27 @@
 		}
 	}
 }
+
+@media (--light-theme) {
+	.c-section--portfolio {
+		& .o-shell > h3 {
+			color: var(--color-secondary);
+		}
+
+		& .c-section__body a::before {
+			background-color: color-mod(var(--color-primary) a(70%));
+		}
+	}
+
+	.c-section__slider {
+		& .slick-arrow {
+			&::before {
+				background-color: var(--color-secondary);
+			}
+
+			&::after {
+				border-color: var(--color-secondary);
+			}
+		}
+	}
+}

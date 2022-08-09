@@ -130,6 +130,10 @@
 	& .c-section__animation {
 		top: -3.25rem;
 	}
+
+	& .contrib-number {
+		color: inherit;
+	}
 }
 
 @for $i from 1 to 20 {
@@ -269,5 +273,25 @@
 
 	.c-calendar__entry:not(:first-child) {
 		padding-top: 0;
+	}
+}
+
+@media (--light-theme) {
+	.c-section--stats {
+		& .o-shell > h3 {
+			color: var(--color-secondary);
+		}
+
+		& .c-section__entry {
+			background-color: color-mod(var(--color-secondary) a(70%));
+		}
+
+		& .c-section__list li {
+			background-color: color-mod(var(--color-secondary) a(70%));
+		}
+
+		& .c-section__entry--no-background {
+			background-color: transparent;
+		}
 	}
 }

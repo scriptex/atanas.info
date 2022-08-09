@@ -232,7 +232,7 @@
 	.c-resume__head,
 	.c-section__header,
 	.c-section__actions {
-		display: none;
+		display: none !important;
 	}
 
 	.c-section--about,
@@ -288,5 +288,13 @@
 	.c-resume__aside .c-resume__block {
 		break-inside: avoid;
 		page-break-inside: avoid;
+	}
+}
+
+@media only screen and (--light-theme) {
+	.c-resume__title,
+	.c-resume__block {
+		color: var(--color-secondary);
+		background-color: color-mod(var(--color-secondary) a(70%));
 	}
 }

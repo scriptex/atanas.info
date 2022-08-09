@@ -85,3 +85,23 @@
 		}
 	}
 }
+
+@media (--light-theme) {
+	.c-article h3,
+	.c-article-link {
+		color: var(--color-secondary);
+	}
+
+	.c-article-link {
+		&::before {
+			background-color: var(--color-primary);
+		}
+	}
+
+	.c-section--blog,
+	.c-section--articles {
+		&::before {
+			background-color: var(--color-secondary);
+		}
+	}
+}

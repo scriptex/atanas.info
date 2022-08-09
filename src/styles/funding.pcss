@@ -138,3 +138,25 @@
 		margin: -15rem 0 0 3rem;
 	}
 }
+
+@media (--light-theme) {
+	.c-funding__item path,
+	.c-funding__trigger text {
+		fill: var(--color-secondary);
+	}
+
+	.c-funding__item a text {
+		fill: var(--color-primary);
+	}
+
+	.c-funding__knob {
+		filter: drop-shadow(0 0 1.5rem color-mod(var(--color-secondary) a(70%)));
+	}
+}
+
+@media (--light-theme-hover) {
+	.c-funding__item:hover a text,
+	.c-funding__item a:hover text {
+		fill: var(--color-secondary);
+	}
+}

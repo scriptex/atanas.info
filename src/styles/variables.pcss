@@ -1,3 +1,10 @@
+@custom-media --light-theme (prefers-color-scheme: light);
+@custom-media --light-theme-hover (prefers-color-scheme: light),
+	(-ms-high-contrast: none),
+	(-ms-high-contrast: active),
+	(-moz-touch-enabled: 0),
+	(hover);
+
 :root {
 	--font-sans-serif: system-ui;
 	--color-base: #333;
@@ -12,11 +19,11 @@
 	--color-calendar-graph-day-L4-bg: #216e39;
 }
 
-@media (prefers-color-scheme: light) {
+@media (--light-theme) {
 	:root {
 		--color-base: #333;
-		--color-primary: #fff;
-		--color-secondary: #000;
+		--color-primary: #000;
+		--color-secondary: #fff;
 		--color-action: #ef4c23;
 	}
 }
