@@ -12,8 +12,9 @@ import scss from 'react-syntax-highlighter/dist/esm/languages/hljs/scss';
 import json from 'react-syntax-highlighter/dist/esm/languages/hljs/json';
 import shell from 'react-syntax-highlighter/dist/esm/languages/hljs/shell';
 
+import { Routes } from '../../data/routes';
 import { articles } from '../../data/articles';
-import { Lines, Section } from '..';
+import { Lines, Button, Section } from '..';
 
 SyntaxHighlighter.registerLanguage('js', js);
 SyntaxHighlighter.registerLanguage('ts', ts);
@@ -32,7 +33,16 @@ export const BlogPost: React.FC = () => {
 	const Content = article?.content;
 
 	return (
-		<Section id="blog-post" title={article?.title} hasButton={true}>
+		<Section
+			id="blog-post"
+			title={article?.title}
+			actions={
+				<Button type="link" href={Routes.BLOG}>
+					Go back
+				</Button>
+			}
+			hasButton={true}
+		>
 			<Lines />
 
 			<img src={article?.image} alt="" />

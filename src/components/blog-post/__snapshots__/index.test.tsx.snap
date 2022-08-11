@@ -141,6 +141,15 @@ exports[`BlogPost component Should render the BlogPost component 1`] = `
               </a>
             </li>
           </ul>
+          <br
+            class="visible-xs-block"
+          />
+          <a
+            class="c-btn "
+            href="/blog"
+          >
+            Go back
+          </a>
         </div>
       </div>
     </section>
