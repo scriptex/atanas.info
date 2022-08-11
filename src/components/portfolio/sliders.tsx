@@ -17,7 +17,7 @@ export const PortfolioSliders: React.FC<Readonly<Props>> = ({ data, className, s
 				<Loader />
 
 				<ExternalLink href={app.url}>
-					<h3>{app.title}</h3>
+					<h4>{app.title}</h4>
 
 					<p>{app.description}</p>
 

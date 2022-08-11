@@ -134,6 +134,10 @@
 	& .contrib-number {
 		color: inherit;
 	}
+
+	& text.ContributionCalendar-label {
+		fill: currentcolor;
+	}
 }
 
 @for $i from 1 to 20 {
@@ -283,11 +287,13 @@
 		}
 
 		& .c-section__entry {
-			background-color: color-mod(var(--color-secondary) a(70%));
+			color: var(--color-primary);
+			background-color: color-mod(var(--color-secondary) a(7%));
 		}
 
 		& .c-section__list li {
-			background-color: color-mod(var(--color-secondary) a(70%));
+			color: var(--color-primary);
+			background-color: color-mod(var(--color-secondary) a(7%));
 		}
 
 		& .c-section__entry--no-background {
