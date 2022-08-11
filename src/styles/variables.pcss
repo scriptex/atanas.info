@@ -1,9 +1,3 @@
-@custom-media --light-theme (prefers-color-scheme: light);
-@custom-media --light-theme-hover (prefers-color-scheme: light) and (-ms-high-contrast: none),
-	(-ms-high-contrast: active),
-	(-moz-touch-enabled: 0),
-	(hover);
-
 :root {
 	--font-sans-serif: system-ui;
 	--color-base: #333;
@@ -18,12 +12,10 @@
 	--color-calendar-graph-day-L4-bg: #216e39;
 }
 
-@media (--light-theme) {
-	:root {
-		--color-base: #333;
-		--color-primary: #000;
-		--color-secondary: #fff;
-		--color-action: #ef4c23;
-		--color-calendar-graph-day-border: rgba(27, 31, 35, 0.3);
-	}
+.theme-light {
+	--color-base: #333;
+	--color-primary: #000;
+	--color-secondary: #fff;
+	--color-action: #ef4c23;
+	--color-calendar-graph-day-border: rgba(27, 31, 35, 0.3);
 }

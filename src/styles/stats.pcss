@@ -280,24 +280,22 @@
 	}
 }
 
-@media (--light-theme) {
-	.c-section--stats {
-		& .o-shell > h3 {
-			color: var(--color-secondary);
-		}
+.theme-light .c-section--stats {
+	& .o-shell > h3 {
+		color: var(--color-secondary);
+	}
 
-		& .c-section__entry {
-			color: var(--color-primary);
-			background-color: color-mod(var(--color-secondary) a(7%));
-		}
+	& .c-section__entry {
+		color: var(--color-primary);
+		background-color: color-mod(var(--color-secondary) a(7%));
+	}
 
-		& .c-section__list li {
-			color: var(--color-primary);
-			background-color: color-mod(var(--color-secondary) a(7%));
-		}
+	& .c-section__list li {
+		color: var(--color-primary);
+		background-color: color-mod(var(--color-secondary) a(7%));
+	}
 
-		& .c-section__entry--no-background {
-			background-color: transparent;
-		}
+	& .c-section__entry--no-background {
+		background-color: transparent;
 	}
 }

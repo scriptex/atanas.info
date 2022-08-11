@@ -248,27 +248,6 @@
 	}
 }
 
-@media (--hover) {
-	.page-social {
-		& .c-nav:not(.c-nav--inline) a:hover,
-		& .c-footer small a:hover,
-		& .c-section--social h1 a:hover {
-			color: var(--color-action);
-			text-decoration: none;
-		}
-
-		& .c-btn:hover {
-			text-decoration: none;
-		}
-
-		& .c-funding {
-			& a:hover {
-				text-decoration: none;
-			}
-		}
-	}
-}
-
 .LI-profile-badge {
 	--font-size-h3: 1.25rem;
 	--font-size-h4: 0.875rem;
@@ -332,8 +311,8 @@
 	}
 }
 
-@media (--light-theme) {
-	.c-section--social {
+.theme-light {
+	& .c-section--social {
 		& h3:not([class]) {
 			color: var(--color-secondary);
 		}
@@ -343,7 +322,7 @@
 		}
 	}
 
-	.page-social {
+	& .page-social {
 		& p,
 		& body,
 		& a:not(.c-btn),
@@ -368,8 +347,22 @@
 	}
 }
 
-@media (--light-theme-hover) {
+@media (--hover) {
 	.page-social {
+		& .c-nav:not(.c-nav--inline) a:hover,
+		& .c-footer small a:hover,
+		& .c-section--social h1 a:hover {
+			color: var(--color-action);
+			text-decoration: none;
+		}
+
+		& .c-btn:hover,
+		& .c-funding a:hover {
+			text-decoration: none;
+		}
+	}
+
+	.theme-light .page-social {
 		& .c-nav:not(.c-nav--inline) a:not(.active):hover,
 		& .c-nav:not(.c-nav--inline) a:not(.active):visited:hover {
 			color: var(--color-action);

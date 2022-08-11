@@ -20,6 +20,7 @@ export { default as FundingNetwork } from './funding/network';
 export { default as GithubSkyline } from './github-skyline';
 export { default as Head } from './head';
 export { default as Header } from './header';
+export { default as ThemeSwitcher } from './header/theme-switcher';
 export { default as Hello } from './hello';
 export { default as Slider } from './hello/slider';
 export { default as Icon } from './icon';

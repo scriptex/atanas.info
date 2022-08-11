@@ -1,8 +1,8 @@
 import { createNoise2D } from 'simplex-noise';
 import { Power4, TweenMax } from 'gsap';
 
-import { random } from './shared';
 import { tracks } from '../data/tracks';
+import { random, onThemeChange } from './shared';
 
 export const music = (container: HTMLDivElement | null): void => {
 	if (!container) {
@@ -147,8 +147,7 @@ export const music = (container: HTMLDivElement | null): void => {
 		background();
 	});
 
-	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', update);
-	window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', update);
+	onThemeChange(update);
 
 	Array.from(list.querySelectorAll('button')).forEach((button: HTMLButtonElement) => {
 		button.addEventListener('click', async () => {

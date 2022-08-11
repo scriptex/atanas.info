@@ -300,8 +300,8 @@
 	}
 }
 
-@media (--light-theme) {
-	.c-section--portfolio {
+.theme-light {
+	& .c-section--portfolio {
 		& .o-shell > h3 {
 			color: var(--color-secondary);
 		}
@@ -311,7 +311,7 @@
 		}
 	}
 
-	.c-section__slider {
+	& .c-section__slider {
 		& .slick-arrow {
 			&::before {
 				background-color: var(--color-secondary);

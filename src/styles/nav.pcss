@@ -72,13 +72,6 @@
 	}
 }
 
-@media (--hover) {
-	.c-nav a:hover {
-		color: var(--color-action);
-		background-color: var(--color-primary);
-	}
-}
-
 .c-nav--inline {
 	font-size: 0.875rem;
 	position: relative;
@@ -127,6 +120,7 @@
 		width: auto;
 		display: inline-flex;
 		padding: 0;
+		background-color: transparent;
 
 		&.active {
 			color: inherit;
@@ -138,6 +132,11 @@
 }
 
 @media (--hover) {
+	.c-nav a:hover {
+		color: var(--color-action);
+		background-color: var(--color-primary);
+	}
+
 	.c-nav--inline a:hover {
 		color: inherit;
 		text-decoration: underline;

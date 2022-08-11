@@ -195,8 +195,8 @@
 	}
 }
 
-@media (--light-theme) {
-	.c-section--skills {
+.theme-light {
+	& .c-section--skills {
 		& .c-section__wrapper,
 		& .c-section__container {
 			& text,
@@ -210,7 +210,7 @@
 		}
 	}
 
-	.c-skill {
+	& .c-skill {
 		color: var(--color-primary);
 		background-color: color-mod(var(--color-secondary) a(7%));
 	}

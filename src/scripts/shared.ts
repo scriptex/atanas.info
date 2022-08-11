@@ -45,3 +45,8 @@ export const isPrerendering = window?.__PRERENDER_INJECTED?.isPrerendering === t
 
 // prettier-ignore
 export const formatDate = (date: string | number, formatter = 'dd MMM yyyy'): string => format(new Date(date), formatter);
+
+export const onThemeChange = (callback: (e: MediaQueryListEvent) => void) => {
+	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', callback);
+	window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', callback);
+};

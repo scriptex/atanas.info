@@ -320,13 +320,13 @@
 	}
 }
 
-@media (--light-theme) {
-	.c-section__header h2,
-	.c-section__actions-close {
+.theme-light {
+	& .c-section__header h2,
+	& .c-section__actions-close {
 		color: var(--color-secondary);
 	}
 
-	.c-section__actions-list {
+	& .c-section__actions-list {
 		& li:not(:first-child) .c-btn {
 			border-color: var(--color-secondary);
 		}

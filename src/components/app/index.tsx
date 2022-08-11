@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
+import { onThemeChange } from '../../scripts/shared';
 import { Routes as AppRoutes } from '../../data/routes';
 import { Svg, Nav, Head, Header, Footer, Loader, Contact, ScrollToTop } from '..';
 import {
@@ -48,9 +49,31 @@ export const routes = [
 	{ path: '*', element: <ErrorPage /> }
 ];
 
+type Theme = 'dark' | 'light';
+
+export const setThemeClassName = (theme: Theme) => {
+	const { classList } = document.documentElement;
+
+	classList.remove('theme-dark');
+	classList.remove('theme-light');
+	classList.add(`theme-${theme}`);
+};
+
+setThemeClassName(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
 export const App: React.FC = () => {
 	const [contactVisible, setContactVisible] = React.useState(false);
 	const value: any = { contactVisible, setContactVisible };
+
+	React.useEffect(() => {
+		onThemeChange(({ media, matches }) => {
+			if (!matches) {
+				return;
+			}
+
+			setThemeClassName(media.replace(/^\(prefers-color-scheme: (.*)\)$/, (_, match) => match) as Theme);
+		});
+	}, []);
 
 	return (
 		<Router>
