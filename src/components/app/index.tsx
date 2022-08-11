@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import { onThemeChange } from '../../scripts/shared';
 import { Routes as AppRoutes } from '../../data/routes';
+import { Theme, onThemeChange, setThemeClassName } from '../../scripts/shared';
 import { Svg, Nav, Head, Header, Footer, Loader, Contact, ScrollToTop } from '..';
 import {
 	Home,
@@ -48,16 +48,6 @@ export const routes = [
 	{ path: AppRoutes.MUSIC, element: <Music /> },
 	{ path: '*', element: <ErrorPage /> }
 ];
-
-type Theme = 'dark' | 'light';
-
-export const setThemeClassName = (theme: Theme) => {
-	const { classList } = document.documentElement;
-
-	classList.remove('theme-dark');
-	classList.remove('theme-light');
-	classList.add(`theme-${theme}`);
-};
 
 setThemeClassName(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
