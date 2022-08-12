@@ -21,15 +21,23 @@
 
 	/* prettier-ignore */
 	& codersrank-widget { /* stylelint-disable-line selector-type-no-unknown */
+		--bg-color: var(--color-action);
+		--badge-bg-color: var(--color-secondary);
+		--header-bg-color: var(--color-action);
+		--preloader-color: var(--color-action);
+		--badge-text-color: var(--color-primary);
 		width: 100%;
 		max-width: 40rem;
 		display: block;
 	}
 
-	& .o-grid__item {
+	& .o-grid__item,
+	& .c-section__entry {
 		padding-bottom: 2rem;
+	}
 
-		& > :last-child:not(iframe) {
+	& .c-section__entry--primary {
+		& .o-grid__item > :last-child:not(iframe) {
 			height: calc(100% - 4.025rem);
 
 			& iframe {
@@ -37,10 +45,6 @@
 				min-height: 300px !important;
 			}
 		}
-	}
-
-	& .c-section__entry {
-		padding-bottom: 2rem;
 	}
 
 	& .c-section__actions {

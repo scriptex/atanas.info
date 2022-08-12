@@ -38,7 +38,7 @@ export const Social: React.FC = () => {
 		>
 			<Lines />
 
-			<div className="c-section__entry">
+			<div className="c-section__entry c-section__entry--primary">
 				<div className="o-shell">
 					<div className="o-grid">
 						{socialItems.map((item: SocialItem, i) => (
