@@ -21,9 +21,9 @@ export const Skills: React.FC = () => {
 			actions={
 				<Button onClick={() => setShowTable(!showTable)}>{showTable ? 'Interactive' : 'Static'} mode</Button>
 			}
-			hasButton={true}
-			className=" bubbles"
 			subtitle={showTable ? undefined : 'Drag the bubbles to play'}
+			hasButton
+			className=" bubbles"
 		>
 			<div className={showTable ? 'c-section__wrapper' : 'c-section__container'}>
 				<Lines />

@@ -2,29 +2,36 @@ import * as React from 'react';
 
 import socialMedia from '../../data/lotties/social-media.json';
 import { SocialItem, socialItems } from '../../data/social';
-import { useScript, isPrerendering } from '../../scripts/shared';
 import { Lines, Section, Animation, SocialMusic } from '..';
+import { useScript, isPrerendering, waitForElement } from '../../scripts/shared';
 
 export const Social: React.FC = () => {
 	if (!isPrerendering) {
-		useScript('https://profile.codersrank.io/widget/widget.js');
-		useScript('https://platform.linkedin.com/badges/js/profile.js', true);
+		useScript('//profile.codersrank.io/widget/widget.js');
+		useScript('//platform.linkedin.com/badges/js/profile.js');
 	}
 
 	React.useEffect(() => {
-		document.documentElement.classList.add('page-social');
+		waitForElement('.profile-badge').then((badge: Element | null) => {
+			if (!badge) {
+				return;
+			}
 
-		return () => {
-			document.documentElement.classList.remove('page-social');
-		};
-	});
+			const parent = badge.parentNode;
+			const badgeLink = parent?.querySelector('link');
+
+			if (badgeLink) {
+				parent?.removeChild(badgeLink);
+			}
+		});
+	}, []);
 
 	return (
 		<Section
 			id="social"
 			title="Social"
 			hasShell={false}
-			hasButton={true}
+			hasButton
 			additionalElements={
 				<Animation data={socialMedia} width={150} height={150} className="c-section__animation" />
 			}

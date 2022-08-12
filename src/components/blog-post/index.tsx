@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useParams } from 'react-router-dom';
 // @ts-ignore
@@ -14,7 +15,7 @@ import shell from 'react-syntax-highlighter/dist/esm/languages/hljs/shell';
 
 import { Routes } from '../../data/routes';
 import { articles } from '../../data/articles';
-import { Lines, Button, Section } from '..';
+import { Lines, Section } from '..';
 
 SyntaxHighlighter.registerLanguage('js', js);
 SyntaxHighlighter.registerLanguage('ts', ts);
@@ -37,11 +38,11 @@ export const BlogPost: React.FC = () => {
 			id="blog-post"
 			title={article?.title}
 			actions={
-				<Button type="link" href={Routes.BLOG}>
+				<Link to={Routes.BLOG} className="c-btn">
 					Go back
-				</Button>
+				</Link>
 			}
-			hasButton={true}
+			hasButton
 		>
 			<Lines />
 

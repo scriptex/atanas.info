@@ -31,7 +31,7 @@ export const PortfolioSliders: React.FC<Readonly<Props>> = ({ data, className, s
 				<Slider
 					dots={false}
 					speed={500}
-					infinite={true}
+					infinite
 					autoplaySpeed={5000}
 					slidesToShow={slidesToShow}
 					slidesToScroll={1}

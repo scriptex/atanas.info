@@ -8,7 +8,7 @@ export const InteractiveResume: React.FC = () => (
 	<Section
 		id="interactive-resume"
 		title="Interactive resume"
-		hasButton={true}
+		hasButton
 		additionalElements={<Animation data={resume} width={150} height={150} className="c-section__animation" />}
 	>
 		<Lines />

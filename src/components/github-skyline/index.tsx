@@ -43,7 +43,7 @@ export const GithubSkyline = (props: GithubSkylineProps): React.ReactElement => 
 						lowerRadiusLimit={50}
 						upperRadiusLimit={100}
 						panningSensibility={0}
-						useAutoRotationBehavior={true}
+						useAutoRotationBehavior
 					/>
 
 					<autoRotationBehavior

@@ -12,7 +12,7 @@ export const Blog: React.FC = () => (
 		style={{ backgroundImage: 'url(images/temp/articles.jpg)' }}
 		title="Blog"
 		className=" c-section--slides fullsize-background"
-		hasButton={true}
+		hasButton
 		additionalElements={<Animation data={book} width={150} height={150} className="c-section__animation" />}
 	>
 		<div className="c-section__body o-grid">

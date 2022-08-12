@@ -11,7 +11,7 @@ export const Music: React.FC = () => {
 	}, []);
 
 	return (
-		<Section id="music" hasButton={true} wrapperClassName="o-main--high">
+		<Section id="music" hasButton wrapperClassName="o-main--high">
 			<div ref={container} className="c-music">
 				<canvas id="canvas" />
 

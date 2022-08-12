@@ -12,7 +12,7 @@ export const Videos: React.FC = () => {
 		<Section
 			id="videos"
 			title="Videos"
-			hasButton={true}
+			hasButton
 			className=" c-section--slides"
 			additionalElements={
 				<Animation data={videoCamera} width={150} height={150} className="c-section__animation" />

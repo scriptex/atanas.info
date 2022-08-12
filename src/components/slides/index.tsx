@@ -14,7 +14,7 @@ export const Slides: React.FC = () => {
 			style={{ backgroundImage: 'url(images/temp/presentation.jpg)' }}
 			title="Slides"
 			className=" fullsize-background"
-			hasButton={true}
+			hasButton
 			additionalElements={
 				<Animation data={presentation} width={150} height={150} className="c-section__animation" />
 			}
@@ -32,7 +32,7 @@ export const Slides: React.FC = () => {
 									src={`${slide.url}/embed?start=false&loop=false&delayms=3000`}
 									title={slide.description}
 									loading="lazy"
-									allowFullScreen={true}
+									allowFullScreen
 								/>
 							</>
 						)}

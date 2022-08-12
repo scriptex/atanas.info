@@ -85,7 +85,7 @@ export const App: React.FC = () => {
 						))}
 					</Routes>
 
-					<Nav hasShell={true} className="c-nav--inline" />
+					<Nav hasShell className="c-nav--inline" />
 
 					<Footer />
 				</AppContext.Provider>

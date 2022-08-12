@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { act } from 'react-dom/test-utils';
 import { render, RenderResult } from '@testing-library/react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import { BlogPost } from '.';
 
@@ -26,7 +27,11 @@ describe('BlogPost component', () => {
 		let result!: RenderResult;
 
 		act(() => {
-			result = render(<BlogPost />);
+			result = render(
+				<Router>
+					<BlogPost />
+				</Router>
+			);
 		});
 
 		expect(result.asFragment()).toMatchSnapshot();

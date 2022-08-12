@@ -8,7 +8,7 @@ describe('Nav component', () => {
 	it('Should render the Nav component', () => {
 		const { asFragment } = render(
 			<Router>
-				<Nav hasShell={true} className="c-nav--test" onClick={jest.fn()}>
+				<Nav hasShell className="c-nav--test" onClick={jest.fn()}>
 					Test
 				</Nav>
 			</Router>
