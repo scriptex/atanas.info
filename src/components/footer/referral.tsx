@@ -4,7 +4,7 @@ import { ExternalLink } from '..';
 
 export const FooterReferral: React.FC = () => (
 	<div className="c-footer__referral">
-		<img src="/images/temp/share-job-modal-infographic.svg" alt="" />
+		<img src="/images/temp/share-job-modal-infographic.svg" alt="" loading="lazy" />
 
 		<div>
 			<h5>Access the world&apos;s best freelance jobs.</h5>

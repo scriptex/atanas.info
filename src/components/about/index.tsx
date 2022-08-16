@@ -16,8 +16,9 @@ export const About: React.FC = () => (
 		<img
 			src="/images/temp/atanas.jpg"
 			alt="Atanas Atanasov smiling dressed in a green t-shirt"
-			width="240"
-			height="240"
+			width={240}
+			height={240}
+			loading="lazy"
 		/>
 
 		<FeaturedAbout />

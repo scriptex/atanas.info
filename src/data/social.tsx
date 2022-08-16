@@ -14,20 +14,6 @@ export const socialItems: SocialItem[] = [
 		element: <codersrank-widget username="scriptex" branding={false} />
 	},
 	{
-		title: 'LinkedIn Profile',
-		element: (
-			<div
-				className="badge-base LI-profile-badge linkedin-frame"
-				data-size="large"
-				data-type="HORIZONTAL"
-				data-theme="dark"
-				data-locale="en_US"
-				data-vanity="scriptex"
-				data-version="v1"
-			/>
-		)
-	},
-	{
 		title: 'Github Profile',
 		element: (
 			<iframe
@@ -93,6 +79,7 @@ export const socialItems: SocialItem[] = [
 						title="profile for Atanas Atanasov at Stack Overflow, Q&amp;A for professional and enthusiast programmers"
 						width={208}
 						height={58}
+						loading="lazy"
 					/>
 				</ExternalLink>
 			</div>

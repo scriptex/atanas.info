@@ -51,6 +51,7 @@ export { default as SectionNav } from './section-nav';
 export { default as Skills } from './skills';
 export { default as Slides } from './slides';
 export { default as Social } from './social';
+export { default as LinkedInBadge } from './social/linkedin';
 export { default as SocialMusic } from './social/music';
 export { default as Stats } from './stats';
 export { default as StatsEntry } from './stats/entry';

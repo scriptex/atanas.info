@@ -12,6 +12,7 @@ exports[`Header component Should render the Header component 1`] = `
     >
       <img
         alt=""
+        loading="lazy"
         src="/images/icons/logo-alt.svg"
       />
       <svg
@@ -483,6 +484,7 @@ exports[`Header component Should render the Header component 2`] = `
     >
       <img
         alt=""
+        loading="lazy"
         src="/images/icons/logo-alt.svg"
       />
       <svg

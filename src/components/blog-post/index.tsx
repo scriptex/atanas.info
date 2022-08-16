@@ -46,7 +46,7 @@ export const BlogPost: React.FC = () => {
 		>
 			<Lines />
 
-			<img src={article?.image} alt="" />
+			<img src={article?.image} alt="" loading="lazy" />
 
 			<div className="c-blog-post">
 				<MDXProvider

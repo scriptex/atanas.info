@@ -1,115 +1,55 @@
-.profile-badge {
+.linkedin-badge {
+	--bubbles-total-num: 10;
 	color: var(--color-primary);
+	text-align: left;
+	position: relative;
 	border: 1px solid;
-	overflow: hidden;
+	padding: 0.5rem;
 	background-color: var(--color-secondary);
 	border-radius: 0.25rem;
 
-	& .sr-only {
-		white-space: nowrap !important;
-		width: 1px !important;
-		height: 1px !important;
-		position: absolute !important;
-		padding: 0 !important;
-		border: 0 !important;
-		overflow: hidden;
-		clip: rect(1px, 1px, 1px, 1px);
+	&::before {
+		content: '';
+		@mixin centered;
+		z-index: 1;
+		background-color: color-mod(var(--color-secondary) a(70%));
 	}
-}
 
-.profile-badge__header {
-	padding: 0.75rem 1rem;
-	background-color: var(--color-base);
-	border-radius: 0.25rem 0.25rem 0 0;
-}
+	& div {
+		position: relative;
+		z-index: 2;
+	}
 
-.profile-badge__header-logo-icon {
-	width: 5.25rem;
-	height: 1.3125rem;
-	display: block;
-	margin: auto;
-
-	& svg {
+	& img {
+		width: 3.5rem;
+		height: 3.5rem;
 		display: block;
+		margin-bottom: 0.5rem;
+		border-radius: 50%;
+	}
+
+	& h4,
+	& h5 {
+		margin: 0 0 0.5rem;
+
+		& a {
+			color: inherit;
+			text-decoration: none;
+		}
 	}
 }
 
-.profile-badge__content {
-	padding: 1rem 1rem 0;
-}
-
-.profile-badge__content-profile-image {
-	width: 3.5rem;
-	height: 3.5rem;
-	display: block;
-	margin: 0 auto 1rem;
-	border-radius: 50%;
-}
-
-.profile-badge__content-profile-name {
-	font-size: var(--font-size-h4);
-
-	& a {
-		color: inherit;
-		text-decoration: none;
-	}
-}
-
-.profile-badge__content-profile-headline,
-.profile-badge__content-profile-company-school-info {
-	font-size: var(--font-size-h5);
-
-	& a {
-		color: inherit;
-		text-decoration: none;
-	}
-}
-
-.profile-badge__content-profile-headline {
-	padding: 0.5rem 0;
-}
-
-.profile-badge__cta-btn {
-	font-size: 0.875rem;
-	line-height: 1;
-	color: var(--color-primary);
-	font-weight: 400;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
-	letter-spacing: 0.04em;
-	display: inline-block;
-	vertical-align: middle;
-	padding: 0.5rem 1rem;
-	border: 1px solid var(--color-action);
-	margin: 0.5rem 1rem 1rem;
-	background-color: var(--color-action);
-	border-radius: 0.25rem;
-	box-shadow: none;
-	appearance: none;
-}
-
-.theme-light {
-	& .profile-badge__cta-btn {
-		color: var(--color-secondary);
-	}
+.theme-light .linkedin-badge::before {
+	background-color: color-mod(var(--color-primary) a(70%));
 }
 
 @media (--hover) {
-	.profile-badge__content-profile-name,
-	.profile-badge__content-profile-headline,
-	.profile-badge__content-profile-company-school-info {
-		& a:hover {
-			text-decoration: underline;
+	.linkedin-badge {
+		& h4,
+		& h5 {
+			& a:hover {
+				text-decoration: underline;
+			}
 		}
-	}
-
-	.profile-badge__cta-btn:hover {
-		color: var(--color-action);
-		background-color: var(--color-primary);
-	}
-
-	.theme-light .profile-badge__cta-btn:hover {
-		background-color: var(--color-secondary);
 	}
 }
