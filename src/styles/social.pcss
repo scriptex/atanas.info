@@ -19,8 +19,7 @@
 		border-radius: 0.25rem !important;
 	}
 
-	/* prettier-ignore */
-	& codersrank-widget { /* stylelint-disable-line selector-type-no-unknown */
+	& codersrank-widget {
 		--bg-color: var(--color-action);
 		--badge-bg-color: var(--color-secondary);
 		--header-bg-color: var(--color-action);
@@ -58,6 +57,7 @@
 
 	& .linkedin-frame iframe {
 		width: auto;
+		min-width: 20.75rem;
 		border: 0 !important;
 		margin: auto;
 	}
@@ -67,10 +67,17 @@
 	}
 }
 
+@media (--tablet-landscape) {
+	.c-section--social {
+		& codersrank-widget {
+			--badge-technology-font-size: 0.75rem;
+		}
+	}
+}
+
 @media (--mobile) {
 	.c-section--social {
-		/* prettier-ignore */
-		& codersrank-widget { /* stylelint-disable-line selector-type-no-unknown */
+		& codersrank-widget {
 			max-width: none;
 		}
 
