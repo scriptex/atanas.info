@@ -6,7 +6,6 @@ import 'html-head-component';
 import 'regenerator-runtime/runtime';
 
 import { App } from './components';
-import { isPrerendering } from './scripts/shared';
 
 interface IWorker {
 	name: string;
@@ -33,7 +32,7 @@ TagManager.initialize({
 	gtmId: process.env.GTM_ID as string
 });
 
-if ('serviceWorker' in navigator && !isPrerendering && process.env.NODE_ENV !== 'development') {
+if ('serviceWorker' in navigator && process.env.NODE_ENV !== 'development') {
 	const workers: IWorker[] = [
 		{
 			name: `/offline-worker.js`

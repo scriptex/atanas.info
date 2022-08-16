@@ -1,16 +1,11 @@
 import * as React from 'react';
 
 import { Slider, Section } from '..';
-import { isPrerendering } from '../../scripts/shared';
 import { initCanvas, createDots, destroyDots } from '../../scripts/canvas';
 
 export const Hello: React.FC = () => {
 	React.useEffect(() => {
-		let el: d3.Selection<SVGCircleElement, any, SVGSVGElement, any> | null = null;
-
-		if (!isPrerendering) {
-			el = createDots(initCanvas('canvas'));
-		}
+		const el: d3.Selection<SVGCircleElement, any, SVGSVGElement, any> | null = createDots(initCanvas('canvas'));
 
 		return () => {
 			destroyDots(el);

@@ -5,7 +5,6 @@ import { format } from 'date-fns';
 import { addTitles } from './utils';
 
 import statistics from '../../data/lotties/statistics.json';
-import { isPrerendering } from '../../scripts/shared';
 import { Section, NPMStats, Animation, GithubStats, GitlabStats } from '..';
 
 export const Stats: React.FC = () => {
@@ -13,10 +12,6 @@ export const Stats: React.FC = () => {
 
 	React.useEffect(() => {
 		timeout.current = setTimeout(() => {
-			if (isPrerendering) {
-				return;
-			}
-
 			addTitles('.c-calendar--gitlab', (rect: SVGRectElement) => rect.getAttribute('title') || '');
 
 			addTitles('.c-calendar--github', (rect: SVGRectElement) => {
