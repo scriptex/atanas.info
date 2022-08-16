@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { format } from 'date-fns';
 
+export type Theme = 'dark' | 'light';
+
 export const useScript = (url: string, defer = false): void => {
 	React.useEffect(() => {
 		const script = document.createElement('script');
@@ -45,3 +47,35 @@ export const isPrerendering = window?.__PRERENDER_INJECTED?.isPrerendering === t
 
 // prettier-ignore
 export const formatDate = (date: string | number, formatter = 'dd MMM yyyy'): string => format(new Date(date), formatter);
+
+export const setThemeClassName = (theme: Theme): void => {
+	const { classList } = document.documentElement;
+
+	classList.remove('theme-dark');
+	classList.remove('theme-light');
+	classList.add(`theme-${theme}`);
+};
+
+export const onThemeChange = (callback: (e: MediaQueryListEvent) => void): void => {
+	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', callback);
+	window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', callback);
+};
+
+export const waitForElement = (selector: string): Promise<Element | null> =>
+	new Promise(resolve => {
+		if (document.querySelector(selector)) {
+			return resolve(document.querySelector(selector));
+		}
+
+		const observer = new MutationObserver(() => {
+			if (document.querySelector(selector)) {
+				resolve(document.querySelector(selector));
+				observer.disconnect();
+			}
+		});
+
+		observer.observe(document.body, {
+			childList: true,
+			subtree: true
+		});
+	});

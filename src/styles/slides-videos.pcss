@@ -79,7 +79,7 @@
 .c-section--slides {
 	&::before {
 		@mixin overlay;
-		opacity: 0.5;
+		opacity: 0.7;
 		z-index: 1;
 		background-color: var(--color-secondary);
 	}
@@ -118,6 +118,15 @@
 	.c-section--videos {
 		& .c-section__animation {
 			margin: -1.5rem 0 -0.25rem;
+		}
+	}
+}
+
+.theme-light {
+	& .c-section--slides,
+	& .c-section--videos {
+		& .c-section__nav li.current .c-btn {
+			background-color: var(--color-secondary);
 		}
 	}
 }

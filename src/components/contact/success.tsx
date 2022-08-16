@@ -7,13 +7,13 @@ export const ContactSuccess: React.FC = () => (
 		<div className="c-contact__field">
 			<label htmlFor="email">Email:</label>
 
-			<input id="email" type="email" name="email" required={true} />
+			<input id="email" type="email" name="email" required />
 		</div>
 
 		<div className="c-contact__field">
 			<label htmlFor="message">Message:</label>
 
-			<textarea name="message" id="message" cols={30} rows={10} required={true}></textarea>
+			<textarea name="message" id="message" cols={30} rows={10} required />
 		</div>
 	</>
 );

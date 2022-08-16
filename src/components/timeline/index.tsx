@@ -9,7 +9,7 @@ export const Timeline: React.FC = () => (
 	<Section
 		id="timeline"
 		title="Timeline"
-		hasButton={true}
+		hasButton
 		additionalElements={<Animation data={timeline} width={367} height={32} className="c-section__animation" />}
 	>
 		<VerticalTimeline>

@@ -1,19 +1,12 @@
 import * as React from 'react';
 
-import book from '../../data/lotties/book.json';
+import { blogProps } from '../blog';
 import { isPrerendering } from '../../scripts/shared';
 import { articles, Article } from '../../data/articles';
-import { Loader, Section, Animation, ExternalLink } from '..';
+import { Loader, Section, ExternalLink } from '..';
 
 export const Articles: React.FC = () => (
-	<Section
-		id="articles"
-		style={{ backgroundImage: 'url(images/temp/articles.jpg)' }}
-		title="Articles"
-		className=" c-section--slides fullsize-background"
-		hasButton={true}
-		additionalElements={<Animation data={book} width={150} height={150} className="c-section__animation" />}
-	>
+	<Section id="articles" title="Articles" {...blogProps}>
 		<div className="c-section__body o-grid">
 			{articles
 				.filter((article: Article) => article.external)

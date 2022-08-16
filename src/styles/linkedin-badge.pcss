@@ -1,0 +1,55 @@
+.linkedin-badge {
+	--bubbles-total-num: 10;
+	color: var(--color-primary);
+	text-align: left;
+	position: relative;
+	border: 1px solid;
+	padding: 0.5rem;
+	background-color: var(--color-secondary);
+	border-radius: 0.25rem;
+
+	&::before {
+		content: '';
+		@mixin centered;
+		z-index: 1;
+		background-color: color-mod(var(--color-secondary) a(70%));
+	}
+
+	& div {
+		position: relative;
+		z-index: 2;
+	}
+
+	& img {
+		width: 3.5rem;
+		height: 3.5rem;
+		display: block;
+		margin-bottom: 0.5rem;
+		border-radius: 50%;
+	}
+
+	& h4,
+	& h5 {
+		margin: 0 0 0.5rem;
+
+		& a {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+}
+
+.theme-light .linkedin-badge::before {
+	background-color: color-mod(var(--color-primary) a(70%));
+}
+
+@media (--hover) {
+	.linkedin-badge {
+		& h4,
+		& h5 {
+			& a:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

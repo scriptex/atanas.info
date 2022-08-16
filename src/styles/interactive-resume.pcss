@@ -22,7 +22,7 @@
 	max-width: 100%;
 	flex: 0 0 100%;
 	padding: 2rem;
-	background-color: color-mod(var(--color-primary) a(25%));
+	background-color: color-mod(var(--color-primary) a(30%));
 
 	&:not(:last-child) {
 		margin-bottom: 1rem;
@@ -48,11 +48,31 @@
 	& codersrank-portfolio,
 	& codersrank-skills-chart,
 	& codersrank-work-experience {
+		--preloader-color: var(--color-action);
 		text-align: left;
 	}
 
 	& codersrank-timeline {
-		color: var(--color-base);
+		--tooltip-bg-color: var(--color-secondary);
+		--tooltip-text-color: var(--color-primary);
+		--timeline-item-bg-color: var(--color-action);
+		--timeline-item-text-color: #fff;
+	}
+
+	& codersrank-activity {
+		--bg-color-0: #fff;
+		--bg-color-1: color-mod(var(--color-action) a(25%));
+		--bg-color-2: color-mod(var(--color-action) a(50%));
+		--bg-color-3: color-mod(var(--color-action) a(75%));
+		--bg-color-4: var(--color-action);
+	}
+
+	& codersrank-summary {
+		--bg-color: var(--color-action);
+		--badge-bg-color: var(--color-secondary);
+		--header-bg-color: var(--color-action);
+		--preloader-color: var(--color-action);
+		--badge-text-color: var(--color-primary);
 	}
 }
 
@@ -86,5 +106,13 @@
 		& codersrank-education {
 			--grid-columns: 1;
 		}
+	}
+}
+
+.theme-light .c-interactive-resume__widget {
+	background-color: color-mod(var(--color-secondary) a(7%));
+
+	& h3 {
+		color: var(--color-secondary);
 	}
 }

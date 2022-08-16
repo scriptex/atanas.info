@@ -44,7 +44,7 @@ export const Stats: React.FC = () => {
 			id="stats"
 			title="Stats"
 			hasShell={false}
-			hasButton={true}
+			hasButton
 			className=" circles"
 			additionalElements={
 				<Animation data={statistics} width={150} height={150} className="c-section__animation" />

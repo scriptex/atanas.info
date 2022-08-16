@@ -81,7 +81,7 @@ Object.values(components).forEach((value: Component) => suite(value.component, v
 describe('Section component state management', () => {
 	it('Should handle state management', () => {
 		const { asFragment, container } = render(
-			<Section id="test" hasButton={true} actions>
+			<Section id="test" hasButton actions>
 				Test
 			</Section>
 		);

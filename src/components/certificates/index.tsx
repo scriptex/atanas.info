@@ -8,7 +8,7 @@ export const Certificates: React.FC = () => (
 	<Section
 		id="certificates"
 		title="Certificates"
-		hasButton={true}
+		hasButton
 		additionalElements={<Animation data={certificate} width={150} height={150} className="c-section__animation" />}
 	>
 		<div className="c-section__body o-grid">

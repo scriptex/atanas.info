@@ -16,7 +16,7 @@ export const Portfolio: React.FC = () => {
 					<Button onClick={() => setItemsToShow(itemsToShow + 6)}>Show more</Button>
 				)
 			}
-			hasButton={true}
+			hasButton
 			additionalElements={
 				<Animation data={portfolio} width={200} height={150} className="c-section__animation" />
 			}

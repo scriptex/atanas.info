@@ -34,7 +34,7 @@
 .c-resume__block {
 	padding: 2rem 2rem 1rem;
 	margin-bottom: 1rem;
-	background-color: color-mod(var(--color-primary) a(25%));
+	background-color: color-mod(var(--color-primary) a(30%));
 }
 
 .c-resume__title {
@@ -232,7 +232,7 @@
 	.c-resume__head,
 	.c-section__header,
 	.c-section__actions {
-		display: none;
+		display: none !important;
 	}
 
 	.c-section--about,
@@ -288,5 +288,12 @@
 	.c-resume__aside .c-resume__block {
 		break-inside: avoid;
 		page-break-inside: avoid;
+	}
+}
+
+.theme-light {
+	& .c-resume__title,
+	& .c-resume__block {
+		background-color: color-mod(var(--color-secondary) a(7%));
 	}
 }

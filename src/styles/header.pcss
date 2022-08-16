@@ -6,7 +6,7 @@
 	left: 0;
 	z-index: 30;
 	padding: 1rem;
-	background-color: color-mod(var(--color-secondary) a(85%));
+	background-color: color-mod(var(--color-secondary) a(70%));
 
 	& a {
 		color: var(--color-primary);
@@ -26,4 +26,45 @@
 			left: 0;
 		}
 	}
+}
+
+.c-header__actions {
+	@mixin flex-row nowrap, center, space-between;
+}
+
+.c-theme-switcher {
+	height: 3.13rem;
+	@mixin flex-row nowrap, center, center;
+	padding: 0.5rem 0;
+	margin: 0;
+	border: 0;
+	background: none;
+	border-radius: 0;
+	box-shadow: none;
+	appearance: none;
+
+	& svg {
+		width: auto;
+		height: 100%;
+		display: block;
+	}
+
+	& .sun,
+	& .moon {
+		transition: opacity var(--timing) var(--easing);
+	}
+}
+
+.theme-light {
+	& .c-header {
+		background-color: color-mod(var(--color-primary) a(70%));
+	}
+
+	& .c-theme-switcher .moon {
+		opacity: 0;
+	}
+}
+
+.theme-dark .c-theme-switcher .sun {
+	opacity: 0;
 }

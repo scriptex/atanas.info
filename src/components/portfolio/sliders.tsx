@@ -17,7 +17,7 @@ export const PortfolioSliders: React.FC<Readonly<Props>> = ({ data, className, s
 				<Loader />
 
 				<ExternalLink href={app.url}>
-					<h3>{app.title}</h3>
+					<h4>{app.title}</h4>
 
 					<p>{app.description}</p>
 
@@ -31,7 +31,7 @@ export const PortfolioSliders: React.FC<Readonly<Props>> = ({ data, className, s
 				<Slider
 					dots={false}
 					speed={500}
-					infinite={true}
+					infinite
 					autoplaySpeed={5000}
 					slidesToShow={slidesToShow}
 					slidesToScroll={1}
@@ -50,7 +50,7 @@ export const PortfolioSliders: React.FC<Readonly<Props>> = ({ data, className, s
 				>
 					{app.images.map((img: string, j: number) => (
 						<div key={j}>
-							<img src={`images/temp/${img}`} alt={`${app.title} screenshot ${j + 1}`} />
+							<img src={`images/temp/${img}`} alt={`${app.title} screenshot ${j + 1}`} loading="lazy" />
 						</div>
 					))}
 				</Slider>

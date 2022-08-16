@@ -2,82 +2,85 @@
 	&::before {
 		@mixin overlay;
 		z-index: 1;
-		opacity: 0.8;
+		opacity: 0.7;
 		background-color: var(--color-secondary);
 	}
 
-	& svg {
-		width: 100%;
-		display: block;
-		overflow: visible;
-	}
+	& .c-section__wrapper,
+	& .c-section__container {
+		& svg {
+			width: 100%;
+			display: block;
+			overflow: visible;
+		}
 
-	& text {
-		font-size: 1rem;
-		line-height: 1;
-		fill: var(--color-primary);
-		text-shadow: 0 0 0.25rem var(--color-secondary);
-		opacity: 0;
-		visibility: hidden;
-		transition: opacity var(--timing) var(--easing), visibility var(--timing) var(--easing);
-		pointer-events: none;
-		user-select: none;
-	}
-
-	& line {
-		stroke: var(--color-primary);
-		stroke-width: 0.1275rem;
-	}
-
-	& use {
-		opacity: 1;
-		visibility: visible;
-		transition: opacity var(--timing) var(--easing), visibility var(--timing) var(--easing);
-		pointer-events: none;
-
-		&:not([fill]) {
+		& text {
+			font-size: 1rem;
+			line-height: 1;
 			fill: var(--color-primary);
+			text-shadow: 0 0 0.25rem var(--color-secondary);
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity var(--timing) var(--easing), visibility var(--timing) var(--easing);
+			pointer-events: none;
+			user-select: none;
 		}
-	}
 
-	& circle {
-		stroke: var(--color-primary);
-		stroke-width: 0.1275rem;
-		cursor: all-scroll;
-		transition: fill var(--timing) var(--easing), stroke var(--timing) var(--easing),
-			stroke-width var(--timing) var(--easing);
+		& line {
+			stroke: var(--color-primary);
+			stroke-width: 0.1275rem;
+		}
 
-		&:hover {
-			fill: var(--color-action);
-			stroke: var(--color-action);
-			stroke-width: 1rem;
+		& use {
+			opacity: 1;
+			visibility: visible;
+			transition: opacity var(--timing) var(--easing), visibility var(--timing) var(--easing);
+			pointer-events: none;
 
-			& ~ text {
-				opacity: 1;
-				visibility: visible;
-			}
-
-			& ~ use {
-				opacity: 0;
-				visibility: hidden;
+			&:not([fill]) {
+				fill: var(--color-primary);
 			}
 		}
-	}
 
-	& .o-grid {
-		max-height: 188.5rem;
-		justify-content: flex-start;
-		overflow: hidden;
-		transition: max-height var(--timing) var(--easing);
+		& circle {
+			stroke: var(--color-primary);
+			stroke-width: 0.1275rem;
+			cursor: all-scroll;
+			transition: fill var(--timing) var(--easing), stroke var(--timing) var(--easing),
+				stroke-width var(--timing) var(--easing);
 
-		&.is--hidden {
-			max-height: 0;
+			&:hover {
+				fill: var(--color-action);
+				stroke: var(--color-action);
+				stroke-width: 1rem;
+
+				& ~ text {
+					opacity: 1;
+					visibility: visible;
+				}
+
+				& ~ use {
+					opacity: 0;
+					visibility: hidden;
+				}
+			}
 		}
-	}
 
-	& .o-shell {
-		position: relative;
-		z-index: 2;
+		& .o-grid {
+			max-height: 188.5rem;
+			justify-content: flex-start;
+			overflow: hidden;
+			transition: max-height var(--timing) var(--easing);
+
+			&.is--hidden {
+				max-height: 0;
+			}
+		}
+
+		& .o-shell {
+			position: relative;
+			z-index: 2;
+		}
 	}
 }
 
@@ -113,7 +116,7 @@
 	padding: 1rem;
 	margin: 0;
 	list-style: none outside none;
-	background-color: color-mod(var(--color-primary) a(85%));
+	background-color: color-mod(var(--color-primary) a(70%));
 	border-radius: 1rem;
 
 	& img,
@@ -131,7 +134,7 @@
 		@mixin flex-row nowrap, center, center;
 		padding: 0.0625rem;
 		margin-right: 1rem;
-		background-color: color-mod(var(--color-secondary) a(20%));
+		background-color: color-mod(var(--color-secondary) a(30%));
 		border-radius: 50%;
 
 		& svg {
@@ -189,5 +192,26 @@
 		& strong {
 			padding: 0;
 		}
+	}
+}
+
+.theme-light {
+	& .c-section--skills {
+		& .c-section__wrapper,
+		& .c-section__container {
+			& text,
+			& use:not([fill]) {
+				fill: var(--color-secondary);
+			}
+
+			& text {
+				text-shadow: 0 0 0.25rem var(--color-primary);
+			}
+		}
+	}
+
+	& .c-skill {
+		color: var(--color-primary);
+		background-color: color-mod(var(--color-secondary) a(7%));
 	}
 }

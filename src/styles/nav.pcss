@@ -22,7 +22,7 @@
 		bottom: 0;
 		left: 0;
 		z-index: 1;
-		background-color: color-mod(var(--color-secondary) a(50%));
+		background-color: color-mod(var(--color-secondary) a(70%));
 	}
 
 	& ul {
@@ -69,13 +69,6 @@
 	.c-nav li:nth-child($(i)) {
 		/* prettier-ignore */
 		transition-delay: calc(0.075s * $i);
-	}
-}
-
-@media (--hover) {
-	.c-nav a:hover {
-		color: var(--color-action);
-		background-color: var(--color-primary);
 	}
 }
 
@@ -127,6 +120,7 @@
 		width: auto;
 		display: inline-flex;
 		padding: 0;
+		background-color: transparent;
 
 		&.active {
 			color: inherit;
@@ -138,6 +132,11 @@
 }
 
 @media (--hover) {
+	.c-nav a:hover {
+		color: var(--color-action);
+		background-color: var(--color-primary);
+	}
+
 	.c-nav--inline a:hover {
 		color: inherit;
 		text-decoration: underline;

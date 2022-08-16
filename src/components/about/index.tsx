@@ -10,14 +10,15 @@ export const About: React.FC = () => (
 		style={{ backgroundImage: 'url(/images/temp/desktop.jpg)' }}
 		title="About me"
 		className=" c-article fullsize-background"
-		hasButton={true}
+		hasButton
 		additionalElements={<Animation data={book} width={200} height={200} className="c-section__animation" />}
 	>
 		<img
 			src="/images/temp/atanas.jpg"
 			alt="Atanas Atanasov smiling dressed in a green t-shirt"
-			width="240"
-			height="240"
+			width={240}
+			height={240}
+			loading="lazy"
 		/>
 
 		<FeaturedAbout />

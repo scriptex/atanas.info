@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useParams } from 'react-router-dom';
 // @ts-ignore
@@ -12,6 +13,7 @@ import scss from 'react-syntax-highlighter/dist/esm/languages/hljs/scss';
 import json from 'react-syntax-highlighter/dist/esm/languages/hljs/json';
 import shell from 'react-syntax-highlighter/dist/esm/languages/hljs/shell';
 
+import { Routes } from '../../data/routes';
 import { articles } from '../../data/articles';
 import { Lines, Section } from '..';
 
@@ -32,10 +34,19 @@ export const BlogPost: React.FC = () => {
 	const Content = article?.content;
 
 	return (
-		<Section id="blog-post" title={article?.title} hasButton={true}>
+		<Section
+			id="blog-post"
+			title={article?.title}
+			actions={
+				<Link to={Routes.BLOG} className="c-btn">
+					Go back
+				</Link>
+			}
+			hasButton
+		>
 			<Lines />
 
-			<img src={article?.image} alt="" />
+			<img src={article?.image} alt="" loading="lazy" />
 
 			<div className="c-blog-post">
 				<MDXProvider

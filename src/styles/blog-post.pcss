@@ -28,19 +28,19 @@
 	}
 
 	& th {
-		background-color: rgba(0, 0, 0, 0.3);
+		background-color: rgba(0, 0, 0, 0.7);
 	}
 
 	& table,
 	& th,
 	& td {
 		padding: 0.3125rem;
-		border: 1px solid rgba(0, 0, 0, 0.3);
+		border: 1px solid rgba(0, 0, 0, 0.7);
 		border-radius: 0.4em;
 	}
 
 	& tr:nth-child(even) {
-		background-color: rgba(0, 0, 0, 0.3);
+		background-color: rgba(0, 0, 0, 0.7);
 	}
 
 	& p,
@@ -86,4 +86,8 @@
 	.c-blog-post {
 		padding: 1rem;
 	}
+}
+
+.theme-light .c-blog-post {
+	background-color: color-mod(var(--color-secondary) a(7%));
 }

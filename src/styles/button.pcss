@@ -23,9 +23,19 @@
 	padding: 0.5rem 1rem;
 }
 
+.theme-light {
+	& .c-btn {
+		color: var(--color-secondary);
+	}
+}
+
 @media (--hover) {
 	.c-btn:hover {
 		color: var(--color-action);
 		background-color: var(--color-primary);
+	}
+
+	.theme-light .c-btn:hover {
+		background-color: var(--color-secondary);
 	}
 }
