@@ -1,7 +1,7 @@
 /* eslint-disable compat/compat */
 import * as React from 'react';
 import TagManager from 'react-gtm-module';
-import { createRoot, hydrateRoot } from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import 'html-head-component';
 import 'regenerator-runtime/runtime';
 
@@ -22,11 +22,7 @@ if (CSS && CSS.paintWorklet && CSS.paintWorklet.addModule && typeof CSS.paintWor
 
 const node = document.getElementById('root') || document.createElement('div');
 
-if (node.hasChildNodes()) {
-	hydrateRoot(node, <App />);
-} else {
-	createRoot(node).render(<App />);
-}
+createRoot(node).render(<App />);
 
 TagManager.initialize({
 	gtmId: process.env.GTM_ID as string
