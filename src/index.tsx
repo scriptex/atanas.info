@@ -1,12 +1,11 @@
 /* eslint-disable compat/compat */
 import * as React from 'react';
 import TagManager from 'react-gtm-module';
-import { createRoot, hydrateRoot } from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import 'html-head-component';
 import 'regenerator-runtime/runtime';
 
 import { App } from './components';
-import { isPrerendering } from './scripts/shared';
 
 interface IWorker {
 	name: string;
@@ -23,17 +22,13 @@ if (CSS && CSS.paintWorklet && CSS.paintWorklet.addModule && typeof CSS.paintWor
 
 const node = document.getElementById('root') || document.createElement('div');
 
-if (node.hasChildNodes()) {
-	hydrateRoot(node, <App />);
-} else {
-	createRoot(node).render(<App />);
-}
+createRoot(node).render(<App />);
 
 TagManager.initialize({
 	gtmId: process.env.GTM_ID as string
 });
 
-if ('serviceWorker' in navigator && !isPrerendering && process.env.NODE_ENV !== 'development') {
+if ('serviceWorker' in navigator && process.env.NODE_ENV !== 'development') {
 	const workers: IWorker[] = [
 		{
 			name: `/offline-worker.js`

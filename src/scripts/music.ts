@@ -4,6 +4,8 @@ import { Power4, TweenMax } from 'gsap';
 import { tracks } from '../data/tracks';
 import { random, onThemeChange } from './shared';
 
+let src: MediaElementAudioSourceNode;
+
 export const music = (container: HTMLDivElement | null): void => {
 	if (!container) {
 		return;
@@ -27,10 +29,8 @@ export const music = (container: HTMLDivElement | null): void => {
 	const noise2D = createNoise2D();
 	const circles: Circle[] = [];
 
-	let src: MediaElementAudioSourceNode;
-	let context: AudioContext;
-
 	let radius: number;
+	let context: AudioContext;
 	let isPause = false;
 	let analyser: AnalyserNode;
 	let dataArray: Uint8Array;
@@ -124,8 +124,8 @@ export const music = (container: HTMLDivElement | null): void => {
 		list.hidden = !list.hidden;
 	});
 
-	playBtn.addEventListener('click', () => {
-		createVis();
+	playBtn.addEventListener('click', async () => {
+		await createVis();
 	});
 
 	pauseBtn.addEventListener('click', () => {
@@ -155,8 +155,7 @@ export const music = (container: HTMLDivElement | null): void => {
 
 			await audio.pause();
 			await audio.load();
-
-			createVis();
+			await createVis();
 		});
 	});
 

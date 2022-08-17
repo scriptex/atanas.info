@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-import { isPrerendering } from '../../scripts/shared';
-
 interface Props {
 	url: string;
 	icon: string;
@@ -25,16 +23,14 @@ export const FundingNetwork: React.FC<Props> = (props: Props) => (
 				{props.name}
 			</text>
 
-			{isPrerendering ? null : (
-				<use
-					x="377.2243347167969"
-					y="145"
-					width="40"
-					height="40"
-					xlinkHref={`#svg-${props.icon}`}
-					transform="rotate(60 397.2243347167969 165)"
-				/>
-			)}
+			<use
+				x="377.2243347167969"
+				y="145"
+				width="40"
+				height="40"
+				xlinkHref={`#svg-${props.icon}`}
+				transform="rotate(60 397.2243347167969 165)"
+			/>
 		</a>
 	</g>
 );

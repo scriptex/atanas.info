@@ -1,14 +1,12 @@
 import * as React from 'react';
 
 import socialMedia from '../../data/lotties/social-media.json';
+import { useScript } from '../../scripts/shared';
 import { SocialItem, socialItems } from '../../data/social';
-import { useScript, isPrerendering } from '../../scripts/shared';
 import { Lines, Section, Animation, SocialMusic, LinkedInBadge } from '..';
 
 export const Social: React.FC = () => {
-	if (!isPrerendering) {
-		useScript('//profile.codersrank.io/widget/widget.js');
-	}
+	useScript('//profile.codersrank.io/widget/widget.js');
 
 	return (
 		<Section
@@ -35,7 +33,7 @@ export const Social: React.FC = () => {
 							<div key={i} className="o-grid__item xs-12 sm-6">
 								<h3>{item.title}</h3>
 
-								{isPrerendering ? null : item.element}
+								{item.element}
 							</div>
 						))}
 					</div>

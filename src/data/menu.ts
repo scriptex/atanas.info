@@ -1,5 +1,4 @@
 import { Routes } from './routes';
-import { isPrerendering } from '../scripts/shared';
 
 export interface MenuItem {
 	rel?: string;
@@ -80,17 +79,13 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 		title: 'My interactive resume',
 		content: 'Interactive resume'
 	},
-	...(isPrerendering
-		? []
-		: [
-				{
-					rel: 'noopener noreferrer',
-					href: Routes.PROJECTS,
-					title: 'My open source projects',
-					target: '_blank',
-					content: 'Open source'
-				}
-		  ]),
+	{
+		rel: 'noopener noreferrer',
+		href: Routes.PROJECTS,
+		title: 'My open source projects',
+		target: '_blank',
+		content: 'Open source'
+	},
 	{
 		href: Routes.MUSIC,
 		title: 'My music',

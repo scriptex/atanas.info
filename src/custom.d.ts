@@ -82,9 +82,6 @@ interface Window {
 	dataLayer: {
 		push: (...args: any[]) => void;
 	};
-	__PRERENDER_INJECTED: {
-		isPrerendering: boolean;
-	};
 }
 
 declare const registerPaint: <T>(name: string, constructor: T) => void;

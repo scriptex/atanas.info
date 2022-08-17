@@ -4,9 +4,9 @@ import gitlab from '../../data/gitlab-insights.json';
 import gitlabCalendarData from '../../data/gitlab-calendar.json';
 import GitlabActivityCalendar from '../../scripts/gitlab-calendar';
 
+import { formatDate } from '../../scripts/shared';
 import { GeneralInsight } from './utils';
 import { StatsEntry, StatsError } from '..';
-import { formatDate, isPrerendering } from '../../scripts/shared';
 
 export const GitlabStats: React.FC = () => {
 	const { error, general, calendar, updated, repositories } = gitlab;
@@ -47,11 +47,11 @@ export const GitlabStats: React.FC = () => {
 	];
 
 	React.useEffect(() => {
-		if (calendarPlaceholder1.current && !isPrerendering) {
+		if (calendarPlaceholder1.current) {
 			new GitlabActivityCalendar(calendarPlaceholder1.current, calendar);
 		}
 
-		if (calendarPlaceholder2.current && !isPrerendering) {
+		if (calendarPlaceholder2.current) {
 			new GitlabActivityCalendar(calendarPlaceholder2.current, gitlabCalendarData);
 		}
 	}, []);

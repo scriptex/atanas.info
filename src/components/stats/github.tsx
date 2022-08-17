@@ -3,8 +3,8 @@ import ReactGitHubCalendar from 'react-ts-github-calendar';
 
 import github from '../../data/github-insights.json';
 
+import { formatDate } from '../../scripts/shared';
 import { GeneralInsight, YEARS } from './utils';
-import { formatDate, isPrerendering } from '../../scripts/shared';
 import { StatsEntry, StatsError, GithubSkyline } from '..';
 
 export const GithubStats: React.FC = () => {
@@ -84,7 +84,7 @@ export const GithubStats: React.FC = () => {
 
 					<div className="c-calendar__outer">
 						<div className="c-calendar c-calendar--github">
-							{isPrerendering ? null : <ReactGitHubCalendar tooltips userName="scriptex" />}
+							<ReactGitHubCalendar tooltips userName="scriptex" />
 						</div>
 					</div>
 

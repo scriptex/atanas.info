@@ -96,6 +96,12 @@
 	cursor: pointer;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
+
+	& svg {
+		fill: currentcolor;
+		display: block;
+		pointer-events: none;
+	}
 }
 
 .c-music__btn--play,
@@ -104,11 +110,6 @@
 	line-height: 0;
 	text-indent: -100%;
 	overflow: hidden;
-
-	& svg {
-		display: block;
-		fill: currentcolor;
-	}
 }
 
 .c-music__btn--play {

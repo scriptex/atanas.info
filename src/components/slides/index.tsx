@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import presentation from '../../data/lotties/presentation.json';
 import { Slide, slides } from '../../data/slides';
-import { isPrerendering } from '../../scripts/shared';
 import { Loader, Section, Animation, SectionNav } from '..';
 
 export const Slides: React.FC = () => {
@@ -24,18 +23,14 @@ export const Slides: React.FC = () => {
 			<div className="c-section__body">
 				{slides.map((slide: Slide, index: number) => (
 					<div key={index} className={`c-section__frame${activeIndex === index ? ' current' : ''}`}>
-						{isPrerendering ? null : (
-							<>
-								<Loader />
+						<Loader />
 
-								<iframe
-									src={`${slide.url}/embed?start=false&loop=false&delayms=3000`}
-									title={slide.description}
-									loading="lazy"
-									allowFullScreen
-								/>
-							</>
-						)}
+						<iframe
+							src={`${slide.url}/embed?start=false&loop=false&delayms=3000`}
+							title={slide.description}
+							loading="lazy"
+							allowFullScreen
+						/>
 					</div>
 				))}
 			</div>

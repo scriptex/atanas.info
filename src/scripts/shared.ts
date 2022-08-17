@@ -43,8 +43,6 @@ export const random = (): number => {
 	return crypto.getRandomValues(array)[0] / (Math.pow(2, 32) - 1);
 };
 
-export const isPrerendering = window?.__PRERENDER_INJECTED?.isPrerendering === true;
-
 // prettier-ignore
 export const formatDate = (date: string | number, formatter = 'dd MMM yyyy'): string => format(new Date(date), formatter);
 
