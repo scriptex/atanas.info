@@ -2467,6 +2467,14 @@
     globals "^13.2.0"
     nullthrows "^1.1.1"
 
+"@parcel/packager-raw-url@2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@parcel/packager-raw-url/-/packager-raw-url-2.7.0.tgz#b37aa6750f66ecb847cc3fd82d95c77d8ad4e146"
+  integrity sha512-qbMYvYizkAmSlTM69DxAd8yCEfP6FfpeoQ+e258TD8PDlwzfxNghuBbbnT2kULZGeYuzQd8aGyuErJdmbJmC4w==
+  dependencies:
+    "@parcel/plugin" "2.7.0"
+    "@parcel/utils" "2.7.0"
+
 "@parcel/packager-raw@2.7.0":
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/@parcel/packager-raw/-/packager-raw-2.7.0.tgz#5b68de05c19bbcf438f40b4ae9f45411ba9739bd"
@@ -2483,6 +2491,16 @@
     "@parcel/types" "2.7.0"
     "@parcel/utils" "2.7.0"
     posthtml "^0.16.4"
+
+"@parcel/packager-xml@2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@parcel/packager-xml/-/packager-xml-2.7.0.tgz#adb4b0585686aeebf959ee2f7b87afcc3fc0d6e0"
+  integrity sha512-V/JgF4WkCbizuG7KLb9GDwmfg86ecWT4n7VGPJnVe7JjLj0ULmcMayTjZBa1d0te+58VBwUBCsxro5pX0ga4PQ==
+  dependencies:
+    "@parcel/plugin" "2.7.0"
+    "@parcel/types" "2.7.0"
+    "@parcel/utils" "2.7.0"
+    "@xmldom/xmldom" "^0.7.5"
 
 "@parcel/plugin@2.7.0", "@parcel/plugin@^2.0.0-beta.1":
   version "2.7.0"
@@ -2710,6 +2728,24 @@
     "@parcel/plugin" "2.7.0"
     "@parcel/source-map" "^2.0.0"
     "@parcel/ts-utils" "2.7.0"
+
+"@parcel/transformer-webmanifest@2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@parcel/transformer-webmanifest/-/transformer-webmanifest-2.7.0.tgz#276cc26ea8078b118d68df6d4ac109e8e19f5806"
+  integrity sha512-QPLxLGdi2e9KBPhAi+Hpo00kvEhytZoxE56E9+jTgVKwZynn+7YoGhqoNz73MtqHSnrZ+IKojveU81w7Nl00cw==
+  dependencies:
+    "@mischnic/json-sourcemap" "^0.1.0"
+    "@parcel/diagnostic" "2.7.0"
+    "@parcel/plugin" "2.7.0"
+    "@parcel/utils" "2.7.0"
+
+"@parcel/transformer-xml@2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@parcel/transformer-xml/-/transformer-xml-2.7.0.tgz#bfc870ccb56a1f0d890b620e7b90ddc647b3b50b"
+  integrity sha512-OFtEiPhPET5oXNelwY7fEYI/Hfs8QQKlileut/pqNqP6I6LNZFFuEox6CKm1gY/fxyfK1pef9YHdKtsEdhxFFA==
+  dependencies:
+    "@parcel/plugin" "2.7.0"
+    "@xmldom/xmldom" "^0.7.5"
 
 "@parcel/ts-utils@2.7.0":
   version "2.7.0"
@@ -4179,6 +4215,11 @@
   integrity sha512-wt+T30c4K6dGRMVqPddexEVLa28YwxW5OFIPmzUHICjphfAuBFTTdDoyqREZNDOFJZ44ARH1WWQNCUK8koJ+Ag==
   dependencies:
     vue-demi "*"
+
+"@xmldom/xmldom@^0.7.5":
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.7.5.tgz#09fa51e356d07d0be200642b0e4f91d8e6dd408d"
+  integrity sha512-V3BIhmY36fXZ1OtVcI9W+FxQqxVLsPKcNjWigIaa81dLC9IolJl5Mt4Cvhmr0flUnjSpTdrbMTSbXqYqV5dT6A==
 
 "@yarnpkg/lockfile@^1.1.0":
   version "1.1.0"
@@ -6318,9 +6359,9 @@ ejs@^3.1.6:
     jake "^10.8.5"
 
 electron-to-chromium@^1.4.202:
-  version "1.4.224"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.224.tgz#ecf2eed395cfedcbbe634658ccc4b457f7b254c3"
-  integrity sha512-dOujC5Yzj0nOVE23iD5HKqrRSDj2SD7RazpZS/b/WX85MtO6/LzKDF4TlYZTBteB+7fvSg5JpWh0sN7fImNF8w==
+  version "1.4.225"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.225.tgz#3e27bdd157cbaf19768141f2e0f0f45071e52338"
+  integrity sha512-ICHvGaCIQR3P88uK8aRtx8gmejbVJyC6bB4LEC3anzBrIzdzC7aiZHY4iFfXhN4st6I7lMO0x4sgBHf/7kBvRw==
 
 elly@^1.1.11:
   version "1.1.11"
@@ -12350,9 +12391,9 @@ rollup-plugin-terser@^7.0.0:
     fsevents "~2.3.2"
 
 rollup@^2.43.1, rollup@^2.76.0:
-  version "2.78.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.78.0.tgz#00995deae70c0f712ea79ad904d5f6b033209d9e"
-  integrity sha512-4+YfbQC9QEVvKTanHhIAFVUFSRsezvQF8vFOJwtGfb9Bb+r014S+qryr9PSmw8x6sMnPkmFBGAvIFVQxvJxjtg==
+  version "2.78.1"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.78.1.tgz#52fe3934d9c83cb4f7c4cb5fb75d88591be8648f"
+  integrity sha512-VeeCgtGi4P+o9hIg+xz4qQpRl6R401LWEXBmxYKOV4zlF82lyhgh2hTZnheFUbANE8l2A41F458iwj2vEYaXJg==
   optionalDependencies:
     fsevents "~2.3.2"
 

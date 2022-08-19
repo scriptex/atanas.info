@@ -3,12 +3,7 @@ export type MetaTag = {
 	content: string;
 };
 
-export const metaTags = [
-	{
-		name: 'msapplication-config',
-		content: '/config.xml'
-	}
-];
+export const metaTags = [];
 
 export type LinkTag = {
 	rel: string;
