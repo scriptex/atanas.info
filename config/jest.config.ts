@@ -40,8 +40,8 @@ const config: Config.InitialOptions = {
 		global: {
 			branches: 65,
 			functions: 80,
-			lines: 85,
-			statements: 85
+			lines: 80,
+			statements: 80
 		}
 	},
 	coverageReporters: ['lcov', 'html', 'cobertura'],
