@@ -5,7 +5,12 @@ import { random, onThemeChange } from './shared';
 
 let src: MediaElementAudioSourceNode;
 
-export const music = (container: HTMLDivElement | null) => {
+export type MusicFunctions = {
+	onPlay: () => void;
+	onPause: () => void;
+};
+
+export const music = (container: HTMLDivElement | null): MusicFunctions | void => {
 	if (!container) {
 		return;
 	}

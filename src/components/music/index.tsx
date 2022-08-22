@@ -1,14 +1,14 @@
 import * as React from 'react';
 
-import { music } from '../../scripts/music';
 import { tracks } from '../../data/tracks';
 import { Section } from '..';
+import { music, MusicFunctions } from '../../scripts/music';
 
 export const Music: React.FC = () => {
 	const [source, setSource] = React.useState(tracks[0]);
 	const [playing, setPlaying] = React.useState(false);
 	const [visible, setVisible] = React.useState(false);
-	const [functions, setFunctions] = React.useState<any>({});
+	const [functions, setFunctions] = React.useState<MusicFunctions | void>();
 
 	const audio: React.MutableRefObject<HTMLAudioElement | null> = React.useRef(null);
 	const canvas: React.MutableRefObject<HTMLCanvasElement | null> = React.useRef(null);
