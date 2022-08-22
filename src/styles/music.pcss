@@ -121,7 +121,7 @@
 .c-music__tracks {
 	font-size: 0.875rem;
 	line-height: 1.25;
-	color: #fff;
+	color: var(--color-primary);
 	width: 80%;
 	height: 80%;
 	@mixin flex-row wrap;
@@ -133,7 +133,7 @@
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: color-mod(var(--color-secondary) a(70%));
 	transform: translate(-50%, -50%);
 
 	& button {
@@ -150,13 +150,18 @@
 		border-radius: 0;
 		box-shadow: none;
 		transition: all 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+		&.active {
+			color: var(--color-secondary);
+			background-color: var(--color-primary);
+		}
 	}
 }
 
 @media (--hover) {
 	.c-music__tracks button:hover {
-		color: #000;
-		background-color: #fff;
+		color: var(--color-secondary);
+		background-color: var(--color-primary);
 	}
 }
 
@@ -202,6 +207,12 @@
 	}
 }
 
-.theme-light .c-music h2 {
-	color: var(--color-secondary);
+.theme-light {
+	& .c-music h2 {
+		color: var(--color-secondary);
+	}
+
+	& .c-music__tracks {
+		background-color: color-mod(var(--color-primary) a(70%));
+	}
 }
