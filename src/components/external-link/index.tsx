@@ -2,12 +2,14 @@ import * as React from 'react';
 
 interface Props {
 	href: string;
-	children: React.ReactChild | React.ReactText | React.ReactChild[] | React.ReactText[];
-	[x: string]: unknown;
+	style?: React.CSSProperties;
+	onClick?: (e?: React.MouseEvent<HTMLAnchorElement>) => void;
+	children: React.ReactNode | string | Array<React.ReactNode | string>;
+	className?: string;
 }
 
-export const ExternalLink: React.FC<Readonly<Props>> = ({ href, children, ...rest }: Props) => (
-	<a href={href} target="_blank" rel="noopener noreferrer" {...rest}>
+export const ExternalLink: React.FC<Readonly<Props>> = ({ href, style, onClick, children, className }: Props) => (
+	<a rel="noopener noreferrer" href={href} style={style} target="_blank" onClick={onClick} className={className}>
 		{children}
 	</a>
 );

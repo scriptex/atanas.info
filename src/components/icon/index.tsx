@@ -3,12 +3,13 @@ import * as React from 'react';
 interface Props {
 	name: string;
 	fill?: string;
+	width?: number;
+	height?: number;
 	className: string;
-	[x: string]: unknown;
 }
 
-export const Icon: React.FC<Readonly<Props>> = ({ name, fill, className, ...rest }: Props) => (
-	<svg {...rest} className={className}>
+export const Icon: React.FC<Readonly<Props>> = ({ name, fill, width, height, className }: Props) => (
+	<svg width={width} height={height} className={className}>
 		<use fill={fill} xlinkHref={`#${name}`} />
 	</svg>
 );

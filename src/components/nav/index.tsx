@@ -7,43 +7,39 @@ import { MenuItem, menuItems } from '../../data/menu';
 interface Props {
 	onClick?: () => void;
 	hasShell?: boolean;
-	children?: React.ReactNode;
+	children?: React.ReactNode | string | Array<React.ReactNode | string>;
 	className?: string;
 }
 
-export const NavInner: React.FC<Readonly<Props>> = (props: Props) => {
-	return props.hasShell ? <div className="o-shell">{props.children}</div> : <>{props.children}</>;
+export const NavInner: React.FC<Readonly<Props>> = ({ hasShell, children }: Props) => {
+	return hasShell ? <div className="o-shell">{children}</div> : <>{children}</>;
 };
 
-export const Nav: React.FC<Readonly<Props>> = (props: Props) => {
-	const { onClick, hasShell, className } = props;
-
-	return (
-		<nav className={composeClassName('c-nav', [], [className])}>
-			<NavInner hasShell={hasShell}>
-				<ul>
-					{menuItems.map(({ href, title, content, ...rest }: MenuItem, index: number) => (
-						<li key={index}>
-							{rest.rel ? (
-								<a href={href} title={title} {...rest} onClick={onClick}>
-									{content}
-								</a>
-							) : (
-								<NavLink
-									to={href}
-									title={title}
-									onClick={onClick}
-									className={({ isActive }) => (isActive ? 'active' : '')}
-								>
-									{content}
-								</NavLink>
-							)}
-						</li>
-					))}
-				</ul>
-			</NavInner>
-		</nav>
-	);
-};
+export const Nav: React.FC<Readonly<Props>> = ({ onClick, hasShell, className }: Props) => (
+	<nav className={composeClassName('c-nav', [], [className])}>
+		<NavInner hasShell={hasShell}>
+			<ul>
+				{menuItems.map(({ href, title, content, ...rest }: MenuItem, index: number) => (
+					<li key={index}>
+						{rest.rel ? (
+							<a href={href} title={title} {...rest} onClick={onClick}>
+								{content}
+							</a>
+						) : (
+							<NavLink
+								to={href}
+								title={title}
+								onClick={onClick}
+								className={({ isActive }) => (isActive ? 'active' : '')}
+							>
+								{content}
+							</NavLink>
+						)}
+					</li>
+				))}
+			</ul>
+		</NavInner>
+	</nav>
+);
 
 export default Nav;

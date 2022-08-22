@@ -9,7 +9,7 @@ export interface Props {
 	title?: string;
 	style?: React.CSSProperties;
 	actions?: React.ReactNode;
-	children: React.ReactNode;
+	children: React.ReactNode | string | Array<React.ReactNode | string>;
 	subtitle?: string;
 	hasShell?: boolean;
 	hasButton: boolean;

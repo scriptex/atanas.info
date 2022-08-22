@@ -12,22 +12,18 @@ interface Props {
 	onClick: (index: number) => void;
 }
 
-export const SectionNav: React.FC<Readonly<Props>> = (props: Props) => {
-	const { name, data, active, onClick } = props;
-
-	return (
-		<nav className="c-section__nav">
-			<ul>
-				{data.map((item: Presentation | Slide | Article, index: number) => (
-					<li key={index} className={active === index ? 'current' : undefined}>
-						<Button type="button" onClick={() => onClick(index)} aria-label={`Switch to ${item[name]}`}>
-							{item[name]}
-						</Button>
-					</li>
-				))}
-			</ul>
-		</nav>
-	);
-};
+export const SectionNav: React.FC<Readonly<Props>> = ({ name, data, active, onClick }: Props) => (
+	<nav className="c-section__nav">
+		<ul>
+			{data.map((item: Presentation | Slide | Article, index: number) => (
+				<li key={index} className={active === index ? 'current' : undefined}>
+					<Button type="button" onClick={() => onClick(index)} ariaLabel={`Switch to ${item[name]}`}>
+						{item[name]}
+					</Button>
+				</li>
+			))}
+		</ul>
+	</nav>
+);
 
 export default SectionNav;

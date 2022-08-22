@@ -8,7 +8,7 @@ import { Button, Loader } from '..';
 import { composeClassName } from '../../scripts/shared';
 import { onSceneMount, GithubSkylineProps } from './utils';
 
-export const GithubSkyline = (props: GithubSkylineProps): React.ReactElement => {
+export const GithubSkyline: React.FC<GithubSkylineProps> = (props: GithubSkylineProps) => {
 	const [loading, setLoading] = React.useState(true);
 	const [expanded, setExpanded] = React.useState(false);
 

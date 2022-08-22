@@ -7,11 +7,11 @@ interface Props {
 	matrix: string;
 }
 
-export const FundingNetwork: React.FC<Props> = (props: Props) => (
-	<g transform={props.matrix} className="c-funding__item">
+export const FundingNetwork: React.FC<Props> = ({ url, icon, name, matrix }: Props) => (
+	<g transform={matrix} className="c-funding__item">
 		<path fill="none" d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z" />
 
-		<a rel="noopener noreferrer" target="_blank" href={props.url}>
+		<a rel="noopener noreferrer" target="_blank" href={url}>
 			<text
 				x="398"
 				y="200"
@@ -20,7 +20,7 @@ export const FundingNetwork: React.FC<Props> = (props: Props) => (
 				textAnchor="middle"
 				transform="rotate(60 397.2243347167969 165)"
 			>
-				{props.name}
+				{name}
 			</text>
 
 			<use
@@ -28,7 +28,7 @@ export const FundingNetwork: React.FC<Props> = (props: Props) => (
 				y="145"
 				width="40"
 				height="40"
-				xlinkHref={`#svg-${props.icon}`}
+				xlinkHref={`#svg-${icon}`}
 				transform="rotate(60 397.2243347167969 165)"
 			/>
 		</a>
