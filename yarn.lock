@@ -5319,7 +5319,7 @@ color@^4.2.3:
     color-convert "^2.0.1"
     color-string "^1.9.0"
 
-colord@^2.9.2:
+colord@^2.9.3:
   version "2.9.3"
   resolved "https://registry.yarnpkg.com/colord/-/colord-2.9.3.tgz#4f8ce919de456f1d5c1c368c307fe20f3e59fb43"
   integrity sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==
@@ -6692,10 +6692,10 @@ eslint-plugin-compat@4.0.2:
     lodash.memoize "4.1.2"
     semver "7.3.5"
 
-eslint-plugin-jest@26.8.3:
-  version "26.8.3"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-26.8.3.tgz#f5d9bb162636491c8f6f0cd2743fe67c86569338"
-  integrity sha512-2roWu1MkEiihQ/qEszPPoaoqVI1x2D8Jtadk5AmoXTdEeNVPMu01Dtz7jIuTOAmdW3L+tSkPZOtEtQroYJDt0A==
+eslint-plugin-jest@26.8.7:
+  version "26.8.7"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-26.8.7.tgz#f38f067d0a69483d64578eb43508ca7b29c8a4b7"
+  integrity sha512-nJJVv3VY6ZZvJGDMC8h1jN/TIGT4We1JkNn1lvstPURicr/eZPVnlFULQ4W2qL9ByCuCr1hPmlBOc2aZ1ktw4Q==
   dependencies:
     "@typescript-eslint/utils" "^5.10.0"
 
@@ -11666,17 +11666,16 @@ puppeteer@10.4.0:
     unbzip2-stream "1.3.3"
     ws "7.4.6"
 
-puppeteer@16.1.1:
-  version "16.1.1"
-  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-16.1.1.tgz#1bb8ec3b86f755c34b913421b81e9cd2cfad3588"
-  integrity sha512-lBneizsNF0zi1/iog9c0ogVnvDHJG4IWpkdIAgE2oiDKhr0MJRV8JeM2xbhUwCwhDJXjjVS2TNCZdLsMp9Ojdg==
+puppeteer@16.2.0:
+  version "16.2.0"
+  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-16.2.0.tgz#3fc9cc0c461d3166a98562a7dcd0bf3424a0523c"
+  integrity sha512-7Au6iC98rS6WEAD110V4Bxd0iIbqoFtzz9XzkG1BSofidS1VAJ881E1+GFR7Xn2Yea0hbj8n0ErzRyseMp1Ctg==
   dependencies:
     cross-fetch "3.1.5"
     debug "4.3.4"
     devtools-protocol "0.0.1019158"
     extract-zip "2.0.1"
     https-proxy-agent "5.0.1"
-    pkg-dir "4.2.0"
     progress "2.0.3"
     proxy-from-env "1.1.0"
     rimraf "3.0.2"
@@ -11841,10 +11840,10 @@ react-helmet@6.1.0:
     react-fast-compare "^3.1.1"
     react-side-effect "^2.1.0"
 
-react-inlinesvg@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/react-inlinesvg/-/react-inlinesvg-3.0.0.tgz#801c6bac1535334586708cd346f4b1125dcfa8f9"
-  integrity sha512-zUt0DW3cKBk+vYZJJCzJqA9STRb+ZFmKLQFWurTvM4UR6vyHT8kHZSzyZZseX9BUNbTFJAfirtwpt97BWDJoSg==
+react-inlinesvg@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-inlinesvg/-/react-inlinesvg-3.0.1.tgz#2133f5d2c770ac405060db2ce1c13eed30e7e83b"
+  integrity sha512-cBfoyfseNI2PkDA7ZKIlDoHq0eMfpoC3DhKBQNC+/X1M4ZQB+aXW+YiNPUDDDKXUsGDUIZWWiZWNFeauDIVdoA==
   dependencies:
     exenv "^1.2.2"
     react-from-dom "^0.6.2"
@@ -13132,14 +13131,14 @@ stylelint-no-unsupported-browser-features@5.0.3:
     lodash "^4.17.15"
     postcss "^8.3.6"
 
-stylelint@14.10.0:
-  version "14.10.0"
-  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-14.10.0.tgz#c588f5cd47cd214cf1acee5bc165961b6a3ad836"
-  integrity sha512-VAmyKrEK+wNFh9R8mNqoxEFzaa4gsHGhcT4xgkQDuOA5cjF6CaNS8loYV7gpi4tIZBPUyXesotPXzJAMN8VLOQ==
+stylelint@14.11.0:
+  version "14.11.0"
+  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-14.11.0.tgz#e2ecb28bbacab05e1fbeb84cbba23883b27499cc"
+  integrity sha512-OTLjLPxpvGtojEfpESWM8Ir64Z01E89xsisaBMUP/ngOx1+4VG2DPRcUyCCiin9Rd3kPXPsh/uwHd9eqnvhsYA==
   dependencies:
     "@csstools/selector-specificity" "^2.0.2"
     balanced-match "^2.0.0"
-    colord "^2.9.2"
+    colord "^2.9.3"
     cosmiconfig "^7.0.1"
     css-functions-list "^3.1.0"
     debug "^4.3.4"
@@ -13174,7 +13173,7 @@ stylelint@14.10.0:
     svg-tags "^1.0.0"
     table "^6.8.0"
     v8-compile-cache "^2.3.0"
-    write-file-atomic "^4.0.1"
+    write-file-atomic "^4.0.2"
 
 sugarss@^4.0.1:
   version "4.0.1"
@@ -14531,7 +14530,7 @@ write-file-atomic@^3.0.0:
     signal-exit "^3.0.2"
     typedarray-to-buffer "^3.1.5"
 
-write-file-atomic@^4.0.1:
+write-file-atomic@^4.0.1, write-file-atomic@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/write-file-atomic/-/write-file-atomic-4.0.2.tgz#a9df01ae5b77858a027fd2e80768ee433555fcfd"
   integrity sha512-7KxauUdBmSdWnmpaGFg+ppNjKF8uNLry8LyzjauQDOVONfFLNKrKvQOxZ/VuTIcS/gge/YNahf5RIIQWTSarlg==
