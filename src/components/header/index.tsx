@@ -2,13 +2,14 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 import { Routes } from '../../data/routes';
+import { composeClassName } from '../../scripts/shared';
 import { Nav, Icon, ThemeSwitcher } from '..';
 
 export const Header: React.FC = () => {
 	const [open, setOpen] = React.useState(false);
 
 	return (
-		<header className={`c-header${open ? ' c-header--open' : ''}`}>
+		<header className={composeClassName('c-header', open ? ['open'] : [])}>
 			<Link to={Routes.HOME} className="c-logo" title="Back to homepage">
 				<img src="/images/icons/logo-alt.svg" alt="" loading="lazy" />
 				<Icon name="svg-logo" className="c-svg-logo" />

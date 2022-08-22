@@ -20,7 +20,7 @@ export const Slider: React.FC = () => {
 
 			<h2>
 				{titles.map((title: string, index: number) => (
-					<span key={index} className={`${index === activeIndex ? 'current' : ''}`}>
+					<span key={index} className={index === activeIndex ? 'current' : undefined}>
 						{title}
 					</span>
 				))}

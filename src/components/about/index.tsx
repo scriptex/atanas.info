@@ -9,7 +9,7 @@ export const About: React.FC = () => (
 		id="about"
 		style={{ backgroundImage: 'url(/images/temp/desktop.jpg)' }}
 		title="About me"
-		className=" c-article fullsize-background"
+		className="c-article fullsize-background"
 		hasButton
 		additionalElements={<Animation data={book} width={200} height={200} className="c-section__animation" />}
 	>

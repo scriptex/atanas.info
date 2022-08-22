@@ -2,6 +2,7 @@ import * as React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import { Icon } from '..';
+import { composeClassName } from '../../scripts/shared';
 
 interface Props {
 	name: string;
@@ -30,7 +31,7 @@ export const FundingCrypto: React.FC<Props> = ({ name, title, wallet }: Props) =
 
 	return (
 		<CopyToClipboard text={wallet} onCopy={() => setCopied(true)}>
-			<div className={`c-funding__crypto c-funding__crypto--${name}`}>
+			<div className={composeClassName('c-funding__crypto', [name])}>
 				<h6>{title}</h6>
 
 				<button title={title}>

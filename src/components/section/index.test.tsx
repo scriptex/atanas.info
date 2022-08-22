@@ -48,7 +48,7 @@ const suite = (Component: React.FC<Readonly<Props>>, name: string): void => {
 	describe(`${name} component`, () => {
 		test(`Should render the ${name} component`, Component, {
 			id: 'section',
-			className: ' test',
+			className: 'test',
 			hasButton: true,
 			hasShell: true
 		});
@@ -62,14 +62,14 @@ const suite = (Component: React.FC<Readonly<Props>>, name: string): void => {
 
 		test(`Should render the ${name} component without a shell`, Component, {
 			id: 'section',
-			className: ' test',
+			className: 'test',
 			hasButton: true,
 			hasShell: false
 		});
 
 		test(`Should render the ${name} component without a button and a shell`, Component, {
 			id: 'section',
-			className: ' test',
+			className: 'test',
 			hasButton: false,
 			hasShell: false
 		});

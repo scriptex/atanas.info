@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import { tracks } from '../../data/tracks';
 import { Section } from '..';
+import { composeClassName } from '../../scripts/shared';
 import { music, MusicFunctions } from '../../scripts/music';
 
 export const Music: React.FC = () => {
@@ -20,17 +21,19 @@ export const Music: React.FC = () => {
 
 	return (
 		<Section id="music" hasButton wrapperClassName="o-main--high">
-			<div ref={container} className="c-music">
+			<div
+				ref={container}
+				className={composeClassName('c-music', [visible ? 'list-visible' : '', playing ? 'playing' : ''])}
+			>
 				<audio ref={audio} src={source.url} hidden controls crossOrigin="anonymous" />
 
-				<canvas ref={canvas} style={{ opacity: playing ? 1 : 0 }} />
+				<canvas ref={canvas} />
 
-				<button className="c-music__menu" onClick={() => setVisible(true)}>
-					Pick a track
+				<button className="c-music__menu" onClick={() => setVisible(!visible)}>
+					{visible ? 'Close track list' : 'Pick a track'}
 				</button>
 
 				<button
-					hidden={!playing}
 					onClick={() => {
 						setPlaying(false);
 						setVisible(false);
@@ -46,7 +49,6 @@ export const Music: React.FC = () => {
 				</button>
 
 				<button
-					hidden={playing}
 					onClick={() => {
 						setPlaying(true);
 						setVisible(false);
@@ -61,7 +63,7 @@ export const Music: React.FC = () => {
 					Play
 				</button>
 
-				<div className="c-music__tracks" hidden={!visible}>
+				<div className="c-music__tracks">
 					{tracks.map((track, index) => (
 						<button
 							key={index}
@@ -80,7 +82,7 @@ export const Music: React.FC = () => {
 					))}
 				</div>
 
-				<h2 style={{ opacity: playing ? 0 : 1 }}>
+				<h2>
 					Pick a track and <br /> press the play button.
 				</h2>
 			</div>

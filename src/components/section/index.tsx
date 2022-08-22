@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { AppContext } from '../app';
+import { composeClassName } from '../../scripts/shared';
 import { Icon, Button, ExternalLink } from '../../components';
 
 export interface Props {
@@ -57,7 +58,7 @@ export const SectionElements: React.FC<Readonly<Props>> = ({
 						Get in touch
 					</Button>
 
-					<ul className={`c-section__actions-list${open ? ' c-section__actions-list--open' : ''}`}>
+					<ul className={composeClassName('c-section__actions-list', open ? ['open'] : [])}>
 						<li>
 							<Button type="button" onClick={onClose} className="c-section__actions-close">
 								Close
@@ -120,10 +121,10 @@ export const Section: React.FC<Readonly<Props>> = (props: Props) => {
 	const { id, style, hasShell, className, shellClass, wrapperClassName } = props;
 
 	return (
-		<main className={`o-main ${wrapperClassName || ''}`}>
-			<section id={id} style={style} className={`c-section c-section--${id}${className || ''}`}>
+		<main className={composeClassName('o-main', [], [wrapperClassName])}>
+			<section id={id} style={style} className={composeClassName('c-section', [id], [className])}>
 				{hasShell ? (
-					<div className={`o-shell${shellClass ? ' ' + shellClass : ''}`}>
+					<div className={composeClassName('o-shell', [], [shellClass])}>
 						<SectionElements {...props} />
 					</div>
 				) : (

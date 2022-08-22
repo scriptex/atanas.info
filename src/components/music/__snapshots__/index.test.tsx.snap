@@ -23,7 +23,6 @@ exports[`Music component Should render the Music component 1`] = `
           />
           <canvas
             height="768"
-            style="opacity: 0;"
             width="1024"
           />
           <button
@@ -33,7 +32,6 @@ exports[`Music component Should render the Music component 1`] = `
           </button>
           <button
             class="c-music__btn c-music__btn--pause"
-            hidden=""
           >
             <svg
               viewBox="0 0 24 24"
@@ -60,7 +58,6 @@ exports[`Music component Should render the Music component 1`] = `
           </button>
           <div
             class="c-music__tracks"
-            hidden=""
           >
             <button
               class="active"
@@ -263,9 +260,7 @@ exports[`Music component Should render the Music component 1`] = `
               Scriptex - Alien Attack (Full version)
             </button>
           </div>
-          <h2
-            style="opacity: 1;"
-          >
+          <h2>
             Pick a track and 
             <br />
              press the play button.
@@ -275,7 +270,7 @@ exports[`Music component Should render the Music component 1`] = `
           class="c-section__actions"
         >
           <button
-            class="c-btn "
+            class="c-btn"
             type="button"
           >
             Get in touch
@@ -293,7 +288,7 @@ exports[`Music component Should render the Music component 1`] = `
             </li>
             <li>
               <button
-                class="c-btn "
+                class="c-btn"
                 type="button"
               >
                 <svg

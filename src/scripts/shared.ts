@@ -77,3 +77,8 @@ export const waitForElement = (selector: string): Promise<Element | null> =>
 			subtree: true
 		});
 	});
+
+export const composeClassName = (main: string, modifiers: string[], optional: Array<string | undefined> = []): string =>
+	[main, ...modifiers.filter(Boolean).map((modifier: string) => `${main}--${modifier}`), ...optional]
+		.filter(Boolean)
+		.join(' ');

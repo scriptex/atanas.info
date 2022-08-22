@@ -67,17 +67,6 @@ export const music = (container: HTMLDivElement | null): MusicFunctions | void =
 		ctx.fillRect(0, 0, WIDTH, HEIGHT);
 	};
 
-	const drawCircle = (x: number, y: number, size: number, fill: string): void => {
-		ctx.save();
-		ctx.beginPath();
-		ctx.fillStyle = fill;
-		ctx.translate(x, y);
-		ctx.arc(0, 0, size, 0, Math.PI * 2);
-		ctx.fill();
-		ctx.closePath();
-		ctx.restore();
-	};
-
 	const createVis = () => {
 		context = new AudioContext();
 
@@ -143,7 +132,7 @@ export const music = (container: HTMLDivElement | null): MusicFunctions | void =
 			this.value = 0;
 		}
 
-		update() {
+		public update(): void {
 			if (3 === this.index) {
 				TweenMax.to(this, 2, {
 					ease: Power4.easeOut,
@@ -167,7 +156,7 @@ export const music = (container: HTMLDivElement | null): MusicFunctions | void =
 			}
 		}
 
-		draw() {
+		public draw(): void {
 			if (this.value !== this.cachedValue) {
 				this.rgbArray = [this.value + 25 * (this.index / bufferLength), 500 * (this.index / bufferLength), 50];
 				this.rgb = `rgb(${Math.round(this.rgbArray[0])},${Math.round(this.rgbArray[1])},${Math.round(
@@ -175,7 +164,18 @@ export const music = (container: HTMLDivElement | null): MusicFunctions | void =
 				)})`;
 			}
 
-			drawCircle(Math.round(this.x), Math.round(this.y), this.value * 0.1, this.rgb);
+			this.drawCircle(Math.round(this.x), Math.round(this.y), this.value * 0.1, this.rgb);
+		}
+
+		private drawCircle(x: number, y: number, size: number, fill: string): void {
+			ctx.save();
+			ctx.beginPath();
+			ctx.fillStyle = fill;
+			ctx.translate(x, y);
+			ctx.arc(0, 0, size, 0, Math.PI * 2);
+			ctx.fill();
+			ctx.closePath();
+			ctx.restore();
 		}
 	}
 

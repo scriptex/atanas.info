@@ -40,7 +40,7 @@ export const Stats: React.FC = () => {
 			title="Stats"
 			hasShell={false}
 			hasButton
-			className=" circles"
+			className="circles"
 			additionalElements={
 				<Animation data={statistics} width={150} height={150} className="c-section__animation" />
 			}

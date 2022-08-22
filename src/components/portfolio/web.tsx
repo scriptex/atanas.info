@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import webApps from '../../data/projects-list.json';
 import { WebProject } from '../../data/projects';
+import { composeClassName } from '../../scripts/shared';
 import { Loader, ExternalLink } from '..';
 
 interface Props {
@@ -13,35 +14,31 @@ export const PortfolioWebApps: React.FC<Readonly<Props>> = ({ itemsToShow }: Pro
 		<h3>Web applications</h3>
 
 		<div className="c-section__body">
-			{webApps.map((project: WebProject, index: number) => {
-				const classNames = [];
+			{webApps.map((project: WebProject, index: number) => (
+				<ExternalLink
+					key={index}
+					href={project.url}
+					className={composeClassName(
+						'',
+						[],
+						[!project.url ? 'disabled' : '', index > itemsToShow ? 'is--hidden' : '']
+					)}
+				>
+					<Loader />
 
-				if (!project.url) {
-					classNames.push('disabled');
-				}
+					<section>
+						<strong>{project.title}</strong>
 
-				if (index > itemsToShow) {
-					classNames.push('is--hidden');
-				}
+						<span>
+							<small>Technologies used:</small>
+							<br />
+							{project.description}
+						</span>
+					</section>
 
-				return (
-					<ExternalLink key={index} href={project.url} className={classNames.join(' ')}>
-						<Loader />
-
-						<section>
-							<strong>{project.title}</strong>
-
-							<span>
-								<small>Technologies used:</small>
-								<br />
-								{project.description}
-							</span>
-						</section>
-
-						<img width="600" loading="lazy" src={project.image} alt={project.title} />
-					</ExternalLink>
-				);
-			})}
+					<img width="600" loading="lazy" src={project.image} alt={project.title} />
+				</ExternalLink>
+			))}
 		</div>
 	</>
 );

@@ -2,8 +2,9 @@ import * as React from 'react';
 import gsap from 'gsap';
 import Draggable from 'gsap/Draggable';
 
-import { FundingNetwork, FundingCrypto } from '..';
+import { composeClassName } from '../../scripts/shared';
 import { FundingNetworkData, fundingNetworks } from '../../data/funding';
+import { Button, FundingCrypto, FundingNetwork } from '..';
 
 gsap.registerPlugin(Draggable);
 
@@ -16,10 +17,10 @@ export const Funding: React.FC = () => {
 	}, []);
 
 	return (
-		<div className={`c-funding${open ? ' c-funding--open' : ''}`}>
-			<button onClick={() => setOpen(true)} className="c-btn c-btn--small">
+		<div className={composeClassName('c-funding', open ? ['open'] : [])}>
+			<Button onClick={() => setOpen(true)} className="c-btn--small">
 				Sponsor me
-			</button>
+			</Button>
 
 			<div className="c-funding__backdrop" onClick={() => setOpen(false)} />
 

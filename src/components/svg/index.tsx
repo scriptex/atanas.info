@@ -1,15 +1,15 @@
 import * as React from 'react';
 import SVG from 'react-inlinesvg';
 
+import { composeClassName } from '../../scripts/shared';
+
 interface Props {
 	src: string;
 	className?: string;
 }
 
-export const Svg: React.FC<Readonly<Props>> = ({ src, className }: Props) => {
-	const classes = ['c-svg-icon'].concat(className || '');
-
-	return <SVG src={src} className={classes.join(' ')} />;
-};
+export const Svg: React.FC<Readonly<Props>> = ({ src, className }: Props) => (
+	<SVG src={src} className={composeClassName('c-svg-icon', [], [className])} />
+);
 
 export default Svg;

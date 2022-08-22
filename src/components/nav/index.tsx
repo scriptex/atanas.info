@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import { composeClassName } from '../../scripts/shared';
 import { MenuItem, menuItems } from '../../data/menu';
 
 interface Props {
@@ -16,14 +17,9 @@ export const NavInner: React.FC<Readonly<Props>> = (props: Props) => {
 
 export const Nav: React.FC<Readonly<Props>> = (props: Props) => {
 	const { onClick, hasShell, className } = props;
-	const classNames = ['c-nav'];
-
-	if (className) {
-		classNames.push(className);
-	}
 
 	return (
-		<nav className={classNames.join(' ')}>
+		<nav className={composeClassName('c-nav', [], [className])}>
 			<NavInner hasShell={hasShell}>
 				<ul>
 					{menuItems.map(({ href, title, content, ...rest }: MenuItem, index: number) => (

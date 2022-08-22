@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import * as React from 'react';
 
+import { composeClassName } from '../../scripts/shared';
+
 interface Props {
 	href?: string;
 	type?: 'submit' | 'reset' | 'button' | 'link';
@@ -12,8 +14,7 @@ interface Props {
 
 export const Button: React.FC<Readonly<Props>> = (props: Props) => {
 	const { href, type, children, className, onClick, ...rest } = props;
-	const classes: string[] = className ? className.split(' ') : [''];
-	const classNames: string = ['c-btn'].concat(classes).join(' ');
+	const classNames = composeClassName('c-btn', [], [className]);
 
 	return type === 'link' ? (
 		<a href={href} className={classNames} {...rest}>

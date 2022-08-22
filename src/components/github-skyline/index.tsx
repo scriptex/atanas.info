@@ -4,7 +4,8 @@ import { Vector3 } from '@babylonjs/core';
 import { Scene, Engine, SceneEventArgs } from 'react-babylonjs';
 
 import { SIZE } from './constants';
-import { Loader } from '..';
+import { Button, Loader } from '..';
+import { composeClassName } from '../../scripts/shared';
 import { onSceneMount, GithubSkylineProps } from './utils';
 
 export const GithubSkyline = (props: GithubSkylineProps): React.ReactElement => {
@@ -20,12 +21,12 @@ export const GithubSkyline = (props: GithubSkylineProps): React.ReactElement => 
 	}, [expanded]);
 
 	return (
-		<div className={`c-skyline__item${expanded ? ' c-skyline__item--expanded' : ''}`}>
+		<div className={composeClassName('c-skyline__item', expanded ? ['expanded'] : [])}>
 			{loading && <Loader />}
 
-			<button type="button" onClick={() => setExpanded(!expanded)} className="c-btn c-btn--small">
+			<Button type="button" onClick={() => setExpanded(!expanded)} className="c-btn--small">
 				{expanded ? 'Collapse' : 'Expand'}
-			</button>
+			</Button>
 
 			<Engine antialias adaptToDeviceRatio canvasId={`c-skyline__item-${props.index}`}>
 				<Scene onSceneMount={(args: SceneEventArgs) => onSceneMount(args, props, () => setLoading(false))}>

@@ -5,7 +5,7 @@ import github from '../../data/github-insights.json';
 
 import { formatDate } from '../../scripts/shared';
 import { GeneralInsight, YEARS } from './utils';
-import { StatsEntry, StatsError, GithubSkyline } from '..';
+import { Button, StatsEntry, StatsError, GithubSkyline } from '..';
 
 export const GithubStats: React.FC = () => {
 	const [current, setCurrent] = React.useState(-1);
@@ -98,9 +98,9 @@ export const GithubStats: React.FC = () => {
 							<ul>
 								{YEARS.map((year: string, index: number) => (
 									<li key={index} className={current === index ? 'current' : undefined}>
-										<button onClick={() => setCurrent(index)} className="c-btn c-btn--small">
+										<Button onClick={() => setCurrent(index)} className="c-btn--small">
 											{year}
-										</button>
+										</Button>
 									</li>
 								))}
 							</ul>

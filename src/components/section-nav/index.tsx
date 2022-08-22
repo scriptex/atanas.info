@@ -19,7 +19,7 @@ export const SectionNav: React.FC<Readonly<Props>> = (props: Props) => {
 		<nav className="c-section__nav">
 			<ul>
 				{data.map((item: Presentation | Slide | Article, index: number) => (
-					<li key={index} className={active === index ? 'current' : ''}>
+					<li key={index} className={active === index ? 'current' : undefined}>
 						<Button type="button" onClick={() => onClick(index)} aria-label={`Switch to ${item[name]}`}>
 							{item[name]}
 						</Button>

@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { AppContext } from '../app';
+import { composeClassName } from '../../scripts/shared';
 import { onSubmit, Status } from './utils';
 import { Button, ContactSuccess } from '..';
 
@@ -13,8 +14,8 @@ export const Contact: React.FC = () => {
 		<form
 			action="https://formspree.io/meqrwbvd"
 			method="POST"
-			className={`c-contact${contactVisible ? ' c-contact--visible' : ''}`}
 			onSubmit={(e: React.FormEvent<HTMLFormElement>) => onSubmit(e, setStatus, setErrorMessage)}
+			className={composeClassName('c-contact', contactVisible ? ['visible'] : [])}
 		>
 			<button
 				type="button"

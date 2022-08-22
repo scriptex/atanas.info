@@ -2,6 +2,7 @@ import * as React from 'react';
 import Slider from 'react-slick';
 
 import { ExtendedProject } from '../../data/projects';
+import { composeClassName } from '../../scripts/shared';
 import { Loader, ExternalLink } from '..';
 
 interface Props {
@@ -13,7 +14,7 @@ interface Props {
 export const PortfolioSliders: React.FC<Readonly<Props>> = ({ data, className, slidesToShow }: Props) => (
 	<div className="c-section__sliders">
 		{data.map((app: ExtendedProject, i: number) => (
-			<div className={['c-section__slider', className].filter(Boolean).join(' ')} key={i}>
+			<div className={composeClassName('c-section__slider', [], [className])} key={i}>
 				<Loader />
 
 				<ExternalLink href={app.url}>
