@@ -1,23 +1,22 @@
 import { createNoise2D } from 'simplex-noise';
 import { Power4, TweenMax } from 'gsap';
 
-import { tracks } from '../data/tracks';
 import { random, onThemeChange } from './shared';
 
 let src: MediaElementAudioSourceNode;
 
-export const music = (container: HTMLDivElement | null): void => {
+export type MusicFunctions = {
+	onPlay: () => void;
+	onPause: () => void;
+};
+
+export const music = (container: HTMLDivElement | null): MusicFunctions | void => {
 	if (!container) {
 		return;
 	}
 
-	const list = container.querySelector('#tracks') as HTMLDivElement;
-	const menu = container.querySelector('#menu') as HTMLButtonElement;
-	const audio = container.querySelector('#audio') as HTMLMediaElement;
-	const canvas = container.querySelector('#canvas') as HTMLCanvasElement;
-
-	const playBtn = container.querySelector('#play') as HTMLButtonElement;
-	const pauseBtn = container.querySelector('#pause') as HTMLButtonElement;
+	const audio = container.querySelector('audio') as HTMLMediaElement;
+	const canvas = container.querySelector('canvas') as HTMLCanvasElement;
 
 	canvas.width = Math.min(window.innerWidth, 1400);
 	canvas.height = window.innerHeight;
@@ -79,13 +78,7 @@ export const music = (container: HTMLDivElement | null): void => {
 		ctx.restore();
 	};
 
-	const createVis = async () => {
-		list.hidden = true;
-		playBtn.hidden = true;
-		pauseBtn.hidden = false;
-
-		await audio.play();
-
+	const createVis = () => {
 		context = new AudioContext();
 
 		if (!src) {
@@ -110,33 +103,6 @@ export const music = (container: HTMLDivElement | null): void => {
 		update();
 	};
 
-	audio.src = tracks[0].url;
-	audio.load();
-	audio.volume = 0.5;
-
-	list.innerHTML = tracks
-		.map(track => `<button data-url="${track.url}">${track.metaData.artist} - ${track.metaData.title}</button>`)
-		.join('\n');
-
-	menu.addEventListener('click', (e: MouseEvent) => {
-		e.preventDefault();
-
-		list.hidden = !list.hidden;
-	});
-
-	playBtn.addEventListener('click', async () => {
-		await createVis();
-	});
-
-	pauseBtn.addEventListener('click', () => {
-		playBtn.hidden = false;
-		pauseBtn.hidden = true;
-
-		audio.pause();
-
-		isPause = true;
-	});
-
 	window.addEventListener('resize', () => {
 		WIDTH = canvas.width;
 		HEIGHT = canvas.height;
@@ -148,16 +114,6 @@ export const music = (container: HTMLDivElement | null): void => {
 	});
 
 	onThemeChange(update);
-
-	Array.from(list.querySelectorAll('button')).forEach((button: HTMLButtonElement) => {
-		button.addEventListener('click', async () => {
-			audio.src = button.dataset.url || tracks[0].url;
-
-			await audio.pause();
-			await audio.load();
-			await createVis();
-		});
-	});
 
 	background();
 
@@ -224,4 +180,11 @@ export const music = (container: HTMLDivElement | null): void => {
 	}
 
 	createCircles();
+
+	return {
+		onPlay: createVis,
+		onPause: () => {
+			isPause = true;
+		}
+	};
 };

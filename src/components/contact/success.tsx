@@ -1,21 +1,35 @@
 import * as React from 'react';
 
-export const ContactSuccess: React.FC = () => (
-	<>
-		<h2>Send me your message</h2>
+import { useScript, waitForElement } from '../../scripts/shared';
 
-		<div className="c-contact__field">
-			<label htmlFor="email">Email:</label>
+export const ContactSuccess: React.FC = () => {
+	useScript('https://www.google.com/recaptcha/api.js', true);
 
-			<input id="email" type="email" name="email" required />
-		</div>
+	React.useEffect(() => {
+		waitForElement('#g-recaptcha-response').then((el: Element | null) => {
+			el!.setAttribute('required', 'required');
+		});
+	}, []);
 
-		<div className="c-contact__field">
-			<label htmlFor="message">Message:</label>
+	return (
+		<>
+			<h2>Send me your message</h2>
 
-			<textarea name="message" id="message" cols={30} rows={10} required />
-		</div>
-	</>
-);
+			<div className="c-contact__field">
+				<label htmlFor="email">Email:</label>
+
+				<input id="email" type="email" name="email" required />
+			</div>
+
+			<div className="c-contact__field">
+				<label htmlFor="message">Message:</label>
+
+				<textarea name="message" id="message" cols={30} rows={10} required />
+			</div>
+
+			<div className="g-recaptcha" data-sitekey="6LeBnpkhAAAAAC-CeFw7NoOJMDifWeCeTulUuieB" />
+		</>
+	);
+};
 
 export default ContactSuccess;

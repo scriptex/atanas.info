@@ -19,6 +19,18 @@
 		transform: scale(0);
 		transition: all var(--timing) var(--easing) 0.25s;
 	}
+
+	& .g-recaptcha {
+		padding-bottom: 1rem;
+	}
+
+	& #g-recaptcha-response {
+		display: block !important;
+		opacity: 0;
+		position: absolute;
+		z-index: -999999;
+		margin: -50px 0 0 0 !important;
+	}
 }
 
 .c-contact__close {
@@ -154,4 +166,11 @@
 
 .theme-light .c-contact__close {
 	color: var(--color-secondary);
+}
+
+.c-contact__success {
+	padding: 2rem;
+	margin: 0;
+	background: var(--color-secondary);
+	border-radius: 0.25rem;
 }

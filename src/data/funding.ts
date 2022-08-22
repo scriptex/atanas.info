@@ -37,9 +37,9 @@ export const fundingNetworks: FundingNetworkData[] = [
 		matrix: 'matrix(-0.5,0.86602,-0.86602,-0.5,591.5063509461097,158.49364905389052)'
 	},
 	{
-		url: 'https://issuehunt.io/u/scriptex',
-		icon: 'issuehunt',
-		name: 'Issuehunt',
+		url: 'https://revolut.me/scriptex',
+		icon: 'revolut',
+		name: 'revolut',
 		matrix: 'matrix(0.5,0.86602,-0.86602,0.5,341.50635094610965,-91.50635094610965)'
 	}
 ];
