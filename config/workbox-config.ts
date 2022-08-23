@@ -2,7 +2,7 @@ module.exports = {
 	swDest: 'dist/offline-worker.js',
 	sourcemap: false,
 	skipWaiting: true,
-	globPatterns: ['**/!(*.css|*.js|*.html)'],
+	globPatterns: [],
 	clientsClaim: true,
 	globDirectory: 'dist',
 	maximumFileSizeToCacheInBytes: 8000000,
