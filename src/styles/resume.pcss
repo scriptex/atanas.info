@@ -214,6 +214,13 @@
 	}
 }
 
+.theme-light {
+	& .c-resume__title,
+	& .c-resume__block {
+		background-color: color-mod(var(--color-secondary) a(7%));
+	}
+}
+
 @media print {
 	body {
 		color: black;
@@ -226,7 +233,7 @@
 	}
 
 	.c-nav,
-	.c-lines,
+	.lines,
 	.c-header,
 	.c-footer,
 	.c-resume__head,
@@ -254,6 +261,7 @@
 	.c-resume__block,
 	.c-section--resume {
 		padding: 0;
+		background-color: transparent !important;
 	}
 
 	.c-resume {
@@ -289,11 +297,11 @@
 		break-inside: avoid;
 		page-break-inside: avoid;
 	}
-}
 
-.theme-light {
-	& .c-resume__title,
-	& .c-resume__block {
-		background-color: color-mod(var(--color-secondary) a(7%));
+	.theme-light {
+		& .c-resume__title,
+		& .c-resume__block {
+			background-color: transparent !important;
+		}
 	}
 }
