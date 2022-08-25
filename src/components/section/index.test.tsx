@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
 
-import { buttonsTest } from '..';
+import { snapshotTest } from '../test-helpers';
 import { Props, Section, SectionElements } from '.';
 
 interface Component {
@@ -78,16 +78,10 @@ const suite = (Component: React.FC<Readonly<Props>>, name: string): void => {
 
 Object.values(components).forEach((value: Component) => suite(value.component, value.name));
 
-describe('Section component state management', () => {
-	it('Should handle state management', () => {
-		const { asFragment, container } = render(
-			<Section id="test" hasButton actions>
-				Test
-			</Section>
-		);
+const SectionComponent: React.FC = () => (
+	<Section id="test" hasButton actions>
+		Test
+	</Section>
+);
 
-		expect(asFragment()).toMatchSnapshot();
-
-		buttonsTest(container, asFragment, '.c-btn');
-	});
-});
+snapshotTest(SectionComponent);

@@ -21,10 +21,7 @@ exports[`Music component Should render the Music component 1`] = `
             hidden=""
             src="https://dl.dropbox.com/s/fh1igvfnzzucnmh/Scriptex_-_01_-_La_Playa%28Invader__2004%29.mp3?dl=0"
           />
-          <canvas
-            height="768"
-            width="1024"
-          />
+          <canvas />
           <button
             class="c-music__menu"
           >
@@ -357,3 +354,5 @@ exports[`Music component Should render the Music component 1`] = `
   </main>
 </DocumentFragment>
 `;
+
+exports[`Music component Should unmount the Music component 1`] = `<DocumentFragment />`;

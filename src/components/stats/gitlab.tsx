@@ -4,14 +4,14 @@ import gitlab from '../../data/gitlab-insights.json';
 import gitlabCalendarData from '../../data/gitlab-calendar.json';
 import GitlabActivityCalendar from '../../scripts/gitlab-calendar';
 
-import { formatDate } from '../../scripts/shared';
 import { GeneralInsight } from './utils';
+import { Ref, formatDate } from '../../scripts/shared';
 import { StatsEntry, StatsError } from '..';
 
 export const GitlabStats: React.FC = () => {
 	const { error, general, calendar, updated, repositories } = gitlab;
-	const calendarPlaceholder1: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
-	const calendarPlaceholder2: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
+	const calendarPlaceholder1: Ref<HTMLDivElement> = React.useRef(null);
+	const calendarPlaceholder2: Ref<HTMLDivElement> = React.useRef(null);
 
 	const blocks: GeneralInsight[] = [
 		{

@@ -1,16 +1,4 @@
-import * as React from 'react';
-import { render } from '@testing-library/react';
-
 import { Svg } from '.';
+import { snapshotTest } from '../test-helpers';
 
-describe('Svg component', () => {
-	it('Should render the Svg component', () => {
-		const { asFragment, rerender } = render(<Svg src="test" className="test" />);
-
-		expect(asFragment()).toMatchSnapshot();
-
-		rerender(<Svg src="test" />);
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-});
+snapshotTest(Svg);

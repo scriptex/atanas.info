@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Nav component Should render the Nav component 1`] = `
+exports[`NavComponent component Should render the NavComponent component 1`] = `
 <DocumentFragment>
   <nav
     class="c-nav c-nav--test"
@@ -160,3 +160,5 @@ exports[`Nav component Should render the Nav component 1`] = `
   </nav>
 </DocumentFragment>
 `;
+
+exports[`NavComponent component Should unmount the NavComponent component 1`] = `<DocumentFragment />`;

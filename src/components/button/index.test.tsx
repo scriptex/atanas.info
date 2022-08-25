@@ -1,32 +1,26 @@
 import * as React from 'react';
-import { render } from '@testing-library/react';
 
 import { Button } from '.';
+import { snapshotTest } from '../test-helpers';
 
-describe('Button component', () => {
-	it('Should render the Button component with type button', () => {
-		const { asFragment, rerender } = render(
-			<Button type="submit" className="button" onClick={jest.fn()}>
-				Button
-			</Button>
-		);
+const ButtonSubmit: React.FC = () => (
+	<Button type="submit" className="button" onClick={jest.fn()}>
+		Button
+	</Button>
+);
 
-		expect(asFragment()).toMatchSnapshot();
+const ButtonReset: React.FC = () => (
+	<Button type="reset" onClick={jest.fn()}>
+		Button
+	</Button>
+);
 
-		rerender(
-			<Button type="submit" onClick={jest.fn()}>
-				Button
-			</Button>
-		);
+const ButtonLink: React.FC = () => (
+	<Button type="link" className="link" href="https://google.com" rel="noopener noreferrrer" target="_blank">
+		Link
+	</Button>
+);
 
-		expect(asFragment()).toMatchSnapshot();
-
-		rerender(
-			<Button type="link" className="link" href="https://google.com" rel="noopener noreferrrer" target="_blank">
-				Link
-			</Button>
-		);
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-});
+snapshotTest(ButtonSubmit);
+snapshotTest(ButtonReset);
+snapshotTest(ButtonLink);

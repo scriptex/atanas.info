@@ -2,6 +2,7 @@ import * as React from 'react';
 import { format } from 'date-fns';
 
 export type Theme = 'dark' | 'light';
+export type Ref<T> = React.MutableRefObject<T | null>;
 
 export const useScript = (url: string, defer = false): void => {
 	React.useEffect(() => {
@@ -20,20 +21,6 @@ export const useScript = (url: string, defer = false): void => {
 			document.body.removeChild(script);
 		};
 	}, [url]);
-};
-
-export const mockUseEffect = (): void => {
-	let useEffect: jest.Mock<React.EffectCallback>;
-
-	const mockedUseEffect = () => {
-		useEffect.mockImplementationOnce((f: () => React.EffectCallback) => f());
-	};
-
-	beforeEach(() => {
-		useEffect = jest.spyOn(React, 'useEffect') as unknown as jest.Mock<React.EffectCallback>;
-
-		mockedUseEffect();
-	});
 };
 
 export const random = (): number => {

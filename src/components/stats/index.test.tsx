@@ -1,15 +1,9 @@
 import * as React from 'react';
-import { render } from '@testing-library/react';
-
-import * as shared from '../../scripts/shared';
 
 import { Stats } from '.';
 import { GitlabStats } from './gitlab';
 import { GithubStats } from './github';
-
-jest.spyOn(shared, 'formatDate');
-
-(shared.formatDate as jest.Mock).mockImplementation(() => 'Mock date');
+import { snapshotTest } from '../test-helpers';
 
 jest.mock('../../data/github-insights.json', () => ({
 	__esModule: true,
@@ -149,28 +143,10 @@ jest.mock('react-ts-github-calendar', () => ({
 	default: () => <div>Mocked Github Calendar</div>
 }));
 
-describe('SectionStats component', () => {
-	it('Should render the SectionStats component', () => {
-		const { asFragment } = render(<Stats />);
-
-		expect(asFragment()).toMatchSnapshot();
-	});
+afterAll(() => {
+	jest.resetAllMocks();
 });
 
-describe('GithubStats component', () => {
-	it('Should render the GithubStats component', () => {
-		const { asFragment } = render(<GithubStats />);
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-});
-
-describe('GitlabStats component', () => {
-	shared.mockUseEffect();
-
-	it('Should render the GitlabStats component', () => {
-		const { asFragment } = render(<GitlabStats />);
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-});
+snapshotTest(Stats);
+snapshotTest(GithubStats);
+snapshotTest(GitlabStats);

@@ -10,11 +10,7 @@ export type MusicFunctions = {
 	onPause: () => void;
 };
 
-export const music = (container: HTMLDivElement | null): MusicFunctions | void => {
-	if (!container) {
-		return;
-	}
-
+export const music = (container: HTMLDivElement): MusicFunctions => {
 	const audio = container.querySelector('audio') as HTMLMediaElement;
 	const canvas = container.querySelector('canvas') as HTMLCanvasElement;
 

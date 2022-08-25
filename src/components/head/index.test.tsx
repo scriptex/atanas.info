@@ -1,12 +1,24 @@
-import * as React from 'react';
-import { render } from '@testing-library/react';
-
 import { Head } from '.';
+import { snapshotTest } from '../test-helpers';
 
-describe('Head component', () => {
-	it('Should render the Head component', () => {
-		const { asFragment } = render(<Head />);
+jest.mock('../../data/meta', () => ({
+	...jest.requireActual('../../data/meta'),
+	metaTags: [
+		{
+			name: 'mock',
+			content: 'Mocked meta'
+		}
+	],
+	linkTags: [
+		{
+			rel: 'stylesheet',
+			href: 'mock.css'
+		}
+	]
+}));
 
-		expect(asFragment()).toMatchSnapshot();
-	});
+afterAll(() => {
+	jest.resetAllMocks();
 });
+
+snapshotTest(Head);

@@ -10,7 +10,7 @@ interface Props {
 	wallet: string;
 }
 
-export const FundingCrypto: React.FC<Props> = ({ name, title, wallet }: Props) => {
+export const FundingCrypto: React.FC<Readonly<Props>> = ({ name, title, wallet }: Props) => {
 	const [copied, setCopied] = React.useState(false);
 
 	React.useEffect(() => {

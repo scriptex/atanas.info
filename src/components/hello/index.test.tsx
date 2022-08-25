@@ -1,13 +1,6 @@
 import { Hello } from '.';
 import { Slider } from './slider';
-import { mockUseEffect } from '../../scripts/shared';
-import { snapshotTestWithUnmount } from '..';
+import { snapshotTest } from '..';
 
-describe('Slider component', () => {
-	snapshotTestWithUnmount(Slider);
-});
-
-describe('Hello component', () => {
-	mockUseEffect();
-	snapshotTestWithUnmount(Hello);
-});
+snapshotTest(Hello);
+snapshotTest(Slider);

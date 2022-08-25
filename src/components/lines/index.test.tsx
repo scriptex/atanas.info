@@ -1,12 +1,4 @@
-import * as React from 'react';
-import { render } from '@testing-library/react';
-
 import { Lines } from '.';
+import { snapshotTest } from '../test-helpers';
 
-describe('Lines component', () => {
-	it('Should render the Lines component', () => {
-		const { asFragment } = render(<Lines />);
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-});
+snapshotTest(Lines);

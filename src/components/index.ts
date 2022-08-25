@@ -10,7 +10,7 @@ export { default as BlogPost } from './blog-post';
 export { default as Button } from './button';
 export { default as Certificates } from './certificates';
 export { default as Contact } from './contact';
-export { default as ContactSuccess } from './contact/success';
+export { default as ContactForm } from './contact/form';
 export { default as ExternalLink } from './external-link';
 export { default as Footer } from './footer';
 export { default as FooterReferral } from './footer/referral';

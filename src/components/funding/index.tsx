@@ -13,8 +13,10 @@ export const Funding: React.FC = () => {
 	const [open, setOpen] = React.useState(false);
 
 	React.useEffect(() => {
-		Draggable.create(knob.current, { type: 'rotation' });
-	}, []);
+		if (knob.current) {
+			Draggable.create(knob.current, { type: 'rotation' });
+		}
+	}, [knob.current]);
 
 	return (
 		<div className={composeClassName('c-funding', open ? ['open'] : [])}>

@@ -96,7 +96,7 @@ exports[`Hello component Should render the Hello component 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Hello component Should render the Hello component 2`] = `<DocumentFragment />`;
+exports[`Hello component Should unmount the Hello component 1`] = `<DocumentFragment />`;
 
 exports[`Slider component Should render the Slider component 1`] = `
 <DocumentFragment>
@@ -181,4 +181,4 @@ exports[`Slider component Should render the Slider component 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Slider component Should render the Slider component 2`] = `<DocumentFragment />`;
+exports[`Slider component Should unmount the Slider component 1`] = `<DocumentFragment />`;
