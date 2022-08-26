@@ -1,12 +1,4 @@
-import * as React from 'react';
-import { render } from '@testing-library/react';
-
 import { Loader } from '.';
+import { snapshotTest } from '../test-helpers';
 
-describe('Loader component', () => {
-	it('Should render the Loader component', () => {
-		const { asFragment } = render(<Loader />);
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-});
+snapshotTest(Loader);

@@ -255,6 +255,8 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
 </DocumentFragment>
 `;
 
+exports[`GithubStats component Should unmount the GithubStats component 1`] = `<DocumentFragment />`;
+
 exports[`GitlabStats component Should render the GitlabStats component 1`] = `
 <DocumentFragment>
   <div
@@ -403,7 +405,9 @@ exports[`GitlabStats component Should render the GitlabStats component 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SectionStats component Should render the SectionStats component 1`] = `
+exports[`GitlabStats component Should unmount the GitlabStats component 1`] = `<DocumentFragment />`;
+
+exports[`Stats component Should render the Stats component 1`] = `
 <DocumentFragment>
   <main
     class="o-main"
@@ -1005,3 +1009,5 @@ exports[`SectionStats component Should render the SectionStats component 1`] = `
   </main>
 </DocumentFragment>
 `;
+
+exports[`Stats component Should unmount the Stats component 1`] = `<DocumentFragment />`;

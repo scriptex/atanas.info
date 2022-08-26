@@ -1,7 +1,5 @@
-import * as React from 'react';
-import { render } from '@testing-library/react';
-
 import { Timeline } from '.';
+import { snapshotTest } from '../test-helpers';
 
 beforeEach(() => {
 	const mockIntersectionObserver = jest.fn();
@@ -15,10 +13,4 @@ beforeEach(() => {
 	window.IntersectionObserver = mockIntersectionObserver;
 });
 
-describe('Timeline component', () => {
-	it(`Should render the Timeline component`, () => {
-		const { asFragment } = render(<Timeline />);
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-});
+snapshotTest(Timeline);

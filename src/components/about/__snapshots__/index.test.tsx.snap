@@ -365,6 +365,8 @@ exports[`About component Should render the About component 1`] = `
 </DocumentFragment>
 `;
 
+exports[`About component Should unmount the About component 1`] = `<DocumentFragment />`;
+
 exports[`LastAbout component Should render the LastAbout component 1`] = `
 <DocumentFragment>
   <div
@@ -458,3 +460,5 @@ exports[`LastAbout component Should render the LastAbout component 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`LastAbout component Should unmount the LastAbout component 1`] = `<DocumentFragment />`;

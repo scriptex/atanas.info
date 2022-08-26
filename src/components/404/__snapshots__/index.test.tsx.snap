@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ErrorPage component Should render the ErrorPage component 1`] = `
+exports[`ErrorComponent component Should render the ErrorComponent component 1`] = `
 <DocumentFragment>
   <div
     class="c-error-page"
@@ -66,3 +66,5 @@ exports[`ErrorPage component Should render the ErrorPage component 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`ErrorComponent component Should unmount the ErrorComponent component 1`] = `<DocumentFragment />`;

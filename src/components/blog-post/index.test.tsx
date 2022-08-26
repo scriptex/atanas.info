@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { act } from 'react-dom/test-utils';
-import { render, RenderResult } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import { BlogPost } from '.';
+import { snapshotTest } from '../test-helpers';
 
 jest.mock('react-router-dom', () => ({
 	...jest.requireActual('react-router-dom'),
@@ -22,18 +21,14 @@ jest.mock('../../data/articles', () => ({
 	]
 }));
 
-describe('BlogPost component', () => {
-	it('Should render the BlogPost component', () => {
-		let result!: RenderResult;
+const BlogPostComponent: React.FC = () => (
+	<Router>
+		<BlogPost />
+	</Router>
+);
 
-		act(() => {
-			result = render(
-				<Router>
-					<BlogPost />
-				</Router>
-			);
-		});
-
-		expect(result.asFragment()).toMatchSnapshot();
-	});
+afterAll(() => {
+	jest.resetAllMocks();
 });
+
+snapshotTest(BlogPostComponent);

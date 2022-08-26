@@ -1,39 +1,78 @@
 import * as React from 'react';
 import { act } from 'react-dom/test-utils';
-import { render } from '@testing-library/react';
+import { render, RenderResult, waitFor } from '@testing-library/react';
 
-export const buttonsTest = (container: HTMLElement, asFragment: () => DocumentFragment, selector: string): void => {
-	act(() => {
-		container.querySelectorAll<HTMLElement>(selector).forEach(button => {
-			button.click();
+import * as shared from '../../scripts/shared';
 
-			expect(asFragment()).toMatchSnapshot();
-		});
+export const mockUseEffect = (): void => {
+	let useEffect: jest.Mock<React.EffectCallback>;
+
+	const mockedUseEffect = () => {
+		useEffect.mockImplementationOnce((f: () => React.EffectCallback) => f());
+	};
+
+	beforeEach(() => {
+		useEffect = jest.spyOn(React, 'useEffect') as unknown as jest.Mock<React.EffectCallback>;
+
+		mockedUseEffect();
 	});
 };
 
-export const snapshotTestWithButtons = (Component: React.FC, selector: string): void => {
+export const snapshotTest = (
+	Component: React.FC<Readonly<React.ComponentProps<any>>>,
+	buttonSelector?: string
+): void => {
 	const { name } = Component;
 
+	jest.spyOn(shared, 'formatDate');
+
+	(shared.formatDate as jest.Mock).mockImplementation(() => 'Mock date');
+
+	mockUseEffect();
+
+	afterAll(() => {
+		jest.clearAllMocks();
+	});
+
 	describe(`${name} component`, () => {
-		it(`Should render the ${name} component`, () => {
-			const { asFragment, container } = render(<Component />);
+		it(`Should render the ${name} component`, async () => {
+			let result: RenderResult;
+
+			await act(async () => {
+				result = await waitFor(() => render(<Component />));
+			});
+
+			// @ts-ignore
+			const { asFragment, container } = result;
 
 			expect(asFragment()).toMatchSnapshot();
 
-			buttonsTest(container, asFragment, selector);
+			if (buttonSelector) {
+				act(() => {
+					container.querySelectorAll<HTMLElement>(buttonSelector).forEach(button => {
+						if (!button.hasAttribute('download')) {
+							button.click();
+
+							expect(asFragment()).toMatchSnapshot();
+						}
+					});
+				});
+			}
 		});
-	});
-};
 
-export const snapshotTestWithUnmount = (Component: React.FC): void => {
-	it(`Should render the ${Component.name} component`, () => {
-		const { asFragment, unmount } = render(<Component />);
+		it(`Should unmount the ${name} component`, async () => {
+			let result: RenderResult;
 
-		expect(asFragment()).toMatchSnapshot();
+			await act(async () => {
+				result = await waitFor(() => render(<Component />));
+			});
 
-		unmount();
+			// @ts-ignore
+			const { unmount, asFragment } = result;
 
-		expect(asFragment()).toMatchSnapshot();
+			unmount();
+
+			expect(asFragment()).toMatchSnapshot();
+		});
 	});
 };

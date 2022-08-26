@@ -2,22 +2,24 @@ import * as React from 'react';
 
 import { tracks } from '../../data/tracks';
 import { Section } from '..';
-import { composeClassName } from '../../scripts/shared';
 import { music, MusicFunctions } from '../../scripts/music';
+import { Ref, composeClassName } from '../../scripts/shared';
 
 export const Music: React.FC = () => {
 	const [source, setSource] = React.useState(tracks[0]);
 	const [playing, setPlaying] = React.useState(false);
 	const [visible, setVisible] = React.useState(false);
-	const [functions, setFunctions] = React.useState<MusicFunctions | void>();
+	const [functions, setFunctions] = React.useState<MusicFunctions>();
 
-	const audio: React.MutableRefObject<HTMLAudioElement | null> = React.useRef(null);
-	const canvas: React.MutableRefObject<HTMLCanvasElement | null> = React.useRef(null);
-	const container: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
+	const audio: Ref<HTMLAudioElement> = React.useRef(null);
+	const canvas: Ref<HTMLCanvasElement> = React.useRef(null);
+	const container: Ref<HTMLDivElement> = React.useRef(null);
 
 	React.useEffect(() => {
-		setFunctions(music(container.current));
-	}, []);
+		if (container.current) {
+			setFunctions(music(container.current));
+		}
+	}, [container.current]);
 
 	return (
 		<Section id="music" hasButton wrapperClassName="o-main--high">

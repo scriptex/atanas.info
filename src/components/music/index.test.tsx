@@ -1,7 +1,5 @@
-import * as React from 'react';
-import { render } from '@testing-library/react';
-
 import { Music } from '.';
+import { snapshotTest } from '../test-helpers';
 
 Object.defineProperty(global.window.HTMLMediaElement.prototype, 'load', {
 	configurable: true,
@@ -10,10 +8,4 @@ Object.defineProperty(global.window.HTMLMediaElement.prototype, 'load', {
 	}
 });
 
-describe('Music component', () => {
-	it('Should render the Music component', () => {
-		const { asFragment } = render(<Music />);
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-});
+snapshotTest(Music);

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BlogPost component Should render the BlogPost component 1`] = `
+exports[`BlogPostComponent component Should render the BlogPostComponent component 1`] = `
 <DocumentFragment>
   <main
     class="o-main"
@@ -157,3 +157,5 @@ exports[`BlogPost component Should render the BlogPost component 1`] = `
   </main>
 </DocumentFragment>
 `;
+
+exports[`BlogPostComponent component Should unmount the BlogPostComponent component 1`] = `<DocumentFragment />`;

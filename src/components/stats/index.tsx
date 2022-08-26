@@ -4,11 +4,12 @@ import { format } from 'date-fns';
 
 import { addTitles } from './utils';
 
+import { Ref } from '../../scripts/shared';
 import statistics from '../../data/lotties/statistics.json';
 import { Section, NPMStats, Animation, GithubStats, GitlabStats } from '..';
 
 export const Stats: React.FC = () => {
-	const timeout: React.MutableRefObject<NodeJS.Timeout | null> = React.useRef(null);
+	const timeout: Ref<NodeJS.Timeout> = React.useRef(null);
 
 	React.useEffect(() => {
 		timeout.current = setTimeout(() => {

@@ -2,12 +2,12 @@ import * as React from 'react';
 
 import { useScript, waitForElement } from '../../scripts/shared';
 
-export const ContactSuccess: React.FC = () => {
+export const ContactForm: React.FC = () => {
 	useScript('https://www.google.com/recaptcha/api.js', true);
 
 	React.useEffect(() => {
 		waitForElement('#g-recaptcha-response').then((el: Element | null) => {
-			el!.setAttribute('required', 'required');
+			el?.setAttribute('required', 'required');
 		});
 	}, []);
 
@@ -32,4 +32,4 @@ export const ContactSuccess: React.FC = () => {
 	);
 };
 
-export default ContactSuccess;
+export default ContactForm;

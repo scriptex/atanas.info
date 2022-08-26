@@ -1,12 +1,4 @@
-import * as React from 'react';
-import { render } from '@testing-library/react';
-
 import { Icon } from '.';
+import { snapshotTest } from '../test-helpers';
 
-describe('Icon component', () => {
-	it('Should render the Icon component', () => {
-		const { asFragment } = render(<Icon name="test" className="test" />);
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-});
+snapshotTest(Icon);

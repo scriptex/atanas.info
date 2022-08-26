@@ -3,7 +3,7 @@ import * as React from 'react';
 import { AppContext } from '../app';
 import { composeClassName } from '../../scripts/shared';
 import { onSubmit, Status } from './utils';
-import { Button, ContactSuccess } from '..';
+import { Button, ContactForm } from '..';
 
 export const Contact: React.FC = () => {
 	const [status, setStatus] = React.useState(Status.DEFAULT);
@@ -30,7 +30,7 @@ export const Contact: React.FC = () => {
 			</button>
 
 			<div className="c-contact__body">
-				{status === Status.SUCCESS ? null : <ContactSuccess />}
+				{status === Status.SUCCESS ? null : <ContactForm />}
 
 				<div className="c-contact__actions">
 					{status === Status.SUCCESS ? (

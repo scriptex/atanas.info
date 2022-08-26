@@ -2,12 +2,12 @@
 
 exports[`Icon component Should render the Icon component 1`] = `
 <DocumentFragment>
-  <svg
-    class="test"
-  >
+  <svg>
     <use
-      xlink:href="#test"
+      xlink:href="#undefined"
     />
   </svg>
 </DocumentFragment>
 `;
+
+exports[`Icon component Should unmount the Icon component 1`] = `<DocumentFragment />`;

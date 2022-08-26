@@ -1,7 +1,5 @@
-import * as React from 'react';
-import { render } from '@testing-library/react';
-
 import { ScrollToTop } from '.';
+import { snapshotTest } from '../test-helpers';
 
 jest.mock('react-router-dom', () => ({
 	useLocation: jest.fn().mockReturnValue({
@@ -17,10 +15,8 @@ beforeEach(() => {
 	window.scrollTo = jest.fn();
 });
 
-describe('ScrollToTop component', () => {
-	it('Should render the ScrollToTop component', () => {
-		const { asFragment } = render(<ScrollToTop />);
-
-		expect(asFragment()).toMatchSnapshot();
-	});
+afterAll(() => {
+	jest.resetAllMocks();
 });
+
+snapshotTest(ScrollToTop);

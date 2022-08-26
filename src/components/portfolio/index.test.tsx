@@ -1,5 +1,5 @@
 import { Portfolio } from '.';
-import { snapshotTestWithButtons } from '..';
+import { snapshotTest } from '../test-helpers';
 
 jest.mock('../../data/projects-list.json', () => ({
 	default: [
@@ -79,4 +79,8 @@ jest.mock('../../data/projects-list.json', () => ({
 	]
 }));
 
-snapshotTestWithButtons(Portfolio, '.c-section__actions .c-btn');
+afterAll(() => {
+	jest.resetAllMocks();
+});
+
+snapshotTest(Portfolio, '.c-section__actions .c-btn');

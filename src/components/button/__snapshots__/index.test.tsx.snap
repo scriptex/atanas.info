@@ -1,28 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button component Should render the Button component with type button 1`] = `
-<DocumentFragment>
-  <button
-    class="c-btn button"
-    type="submit"
-  >
-    Button
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button component Should render the Button component with type button 2`] = `
-<DocumentFragment>
-  <button
-    class="c-btn"
-    type="submit"
-  >
-    Button
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button component Should render the Button component with type button 3`] = `
+exports[`ButtonLink component Should render the ButtonLink component 1`] = `
 <DocumentFragment>
   <a
     class="c-btn link"
@@ -34,3 +12,31 @@ exports[`Button component Should render the Button component with type button 3`
   </a>
 </DocumentFragment>
 `;
+
+exports[`ButtonLink component Should unmount the ButtonLink component 1`] = `<DocumentFragment />`;
+
+exports[`ButtonReset component Should render the ButtonReset component 1`] = `
+<DocumentFragment>
+  <button
+    class="c-btn"
+    type="reset"
+  >
+    Button
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonReset component Should unmount the ButtonReset component 1`] = `<DocumentFragment />`;
+
+exports[`ButtonSubmit component Should render the ButtonSubmit component 1`] = `
+<DocumentFragment>
+  <button
+    class="c-btn button"
+    type="submit"
+  >
+    Button
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonSubmit component Should unmount the ButtonSubmit component 1`] = `<DocumentFragment />`;
