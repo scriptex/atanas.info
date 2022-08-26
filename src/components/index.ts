@@ -60,6 +60,5 @@ export { default as GithubStats } from './stats/github';
 export { default as GitlabStats } from './stats/gitlab';
 export { default as NPMStats } from './stats/npm';
 export { default as Svg } from './svg';
-export * from './test-helpers';
 export { default as Timeline } from './timeline';
 export { default as Videos } from './videos';

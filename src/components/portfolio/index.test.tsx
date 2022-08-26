@@ -1,5 +1,5 @@
 import { Portfolio } from '.';
-import { snapshotTest } from '..';
+import { snapshotTest } from '../test-helpers';
 
 jest.mock('../../data/projects-list.json', () => ({
 	default: [
