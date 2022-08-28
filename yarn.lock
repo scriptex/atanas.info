@@ -5327,13 +5327,13 @@ cloudinary-core@^2.10.2:
   resolved "https://registry.yarnpkg.com/cloudinary-core/-/cloudinary-core-2.13.0.tgz#b59f90871b6c708c3d0735b9be47ac08181c57fb"
   integrity sha512-Nt0Q5I2FtenmJghtC4YZ3MZZbGg1wLm84SsxcuVwZ83OyJqG9CNIGp86CiI6iDv3QobaqBUpOT7vg+HqY5HxEA==
 
-cloudinary@1.30.1:
-  version "1.30.1"
-  resolved "https://registry.yarnpkg.com/cloudinary/-/cloudinary-1.30.1.tgz#eb63ae8460b93cdf8cd027573df11ea333fcb25a"
-  integrity sha512-Vri+R4VZXZUQWJ3vOoB5b0vjigxI/INRhzZF8E0A1O07bBNrwWAvodtDyumIk3RvEcgxzjvnqq83CPqoUyzEtA==
+cloudinary@1.31.0:
+  version "1.31.0"
+  resolved "https://registry.yarnpkg.com/cloudinary/-/cloudinary-1.31.0.tgz#f43baa266d7c86cbaed8ab733aca6b80a114b671"
+  integrity sha512-+A/x0gsmzBya4KPabY6Vmj1d1hxjI2kEhbKy52bahLFhDc5xiMhClWbzurYfFA83OUbwLQGZpjnW+Fwu1Kq3kQ==
   dependencies:
     cloudinary-core "^2.10.2"
-    core-js "3.6.5"
+    core-js "^3.6.5"
     lodash "^4.17.21"
     q "^1.5.1"
   optionalDependencies:
@@ -5550,12 +5550,7 @@ core-js-compat@^3.21.0, core-js-compat@^3.22.1:
     browserslist "^4.21.3"
     semver "7.0.0"
 
-core-js@3.6.5:
-  version "3.6.5"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.5.tgz#7395dc273af37fb2e50e9bd3d9fe841285231d1a"
-  integrity sha512-vZVEEwZoIsI+vPEuoF9Iqf5H7/M3eeQqWlQnYa8FSKKePuYTf5MWnxb5SDAzCa60b3JBRS5g9b+Dq7b1y/RCrA==
-
-core-js@^3.16.2:
+core-js@^3.16.2, core-js@^3.6.5:
   version "3.25.0"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.25.0.tgz#be71d9e0dd648ffd70c44a7ec2319d039357eceb"
   integrity sha512-CVU1xvJEfJGhyCpBrzzzU1kjCfgsGUxhEvwUV2e/cOedYWHdmluamx+knDnmhqALddMG16fZvIqvs9aijsHHaA==
