@@ -1,14 +1,18 @@
 import * as React from 'react';
 import { CarouselItem } from 'react-round-carousel';
 
-import lastFm from '../../data/last.fm-insights.json';
+type LastFMAlbum = {
+	name: string;
+	artist: string;
+	images: Array<{
+		size: string;
+		'#text': string;
+	}>;
+};
 
-export type TopAlbum = typeof lastFm['topAlbums'][0];
-export type WeeklyAlbumChart = typeof lastFm['weeklyAlbumChart'][0];
-
-export const filteredData = (data: TopAlbum[] | WeeklyAlbumChart[]): CarouselItem[] =>
+export const filteredData = (data: LastFMAlbum[]): CarouselItem[] =>
 	data
-		.filter((album: TopAlbum | WeeklyAlbumChart) => !!album?.images[2]['#text'])
+		.filter((album: LastFMAlbum) => !!album?.images[2]['#text'])
 		.map(album => ({
 			alt: album?.name,
 			image: album?.images[2]['#text'],
