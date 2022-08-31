@@ -117,6 +117,13 @@ exports[`BlogPostComponent component Should render the BlogPostComponent compone
                 <strong>
                   Braintrust
                 </strong>
+                <svg
+                  class="c-svg-external-link"
+                >
+                  <use
+                    xlink:href="#svg-external-link"
+                  />
+                </svg>
               </a>
             </li>
             <li>
@@ -139,6 +146,13 @@ exports[`BlogPostComponent component Should render the BlogPostComponent compone
                 <strong>
                   Toptal
                 </strong>
+                <svg
+                  class="c-svg-external-link"
+                >
+                  <use
+                    xlink:href="#svg-external-link"
+                  />
+                </svg>
               </a>
             </li>
           </ul>

@@ -137,21 +137,20 @@
 	font-size: 0.875rem;
 	line-height: 1.25;
 	color: var(--color-primary);
-	width: 80%;
-	height: 80%;
+	width: 100%;
+	height: calc(100% - 10.5rem);
 	@mixin flex-row wrap;
 	opacity: 0;
 	visibility: hidden;
 	position: absolute;
-	top: 50%;
-	left: 50%;
+	top: 5.13rem;
+	left: 0;
 	z-index: 5;
 	padding: 0.5rem;
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 	background-color: color-mod(var(--color-secondary) a(70%));
-	transform: translate(-50%, -50%);
 	transition: all var(--timing) var(--easing);
 
 	& button {
@@ -224,6 +223,10 @@
 	.c-music__menu {
 		right: 1rem;
 		left: auto;
+	}
+
+	.c-music__tracks {
+		height: calc(100% - 13.75rem);
 	}
 }
 

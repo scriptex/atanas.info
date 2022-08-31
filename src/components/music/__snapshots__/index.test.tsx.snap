@@ -323,6 +323,13 @@ exports[`Music component Should render the Music component 1`] = `
                 <strong>
                   Braintrust
                 </strong>
+                <svg
+                  class="c-svg-external-link"
+                >
+                  <use
+                    xlink:href="#svg-external-link"
+                  />
+                </svg>
               </a>
             </li>
             <li>
@@ -345,6 +352,13 @@ exports[`Music component Should render the Music component 1`] = `
                 <strong>
                   Toptal
                 </strong>
+                <svg
+                  class="c-svg-external-link"
+                >
+                  <use
+                    xlink:href="#svg-external-link"
+                  />
+                </svg>
               </a>
             </li>
           </ul>

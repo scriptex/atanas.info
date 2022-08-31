@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import { Icon } from '..';
 import { composeClassName } from '../../scripts/shared';
 import { MenuItem, menuItems } from '../../data/menu';
 
@@ -24,6 +25,8 @@ export const Nav: React.FC<Readonly<Props>> = ({ onClick, hasShell, className }:
 						{rest.rel ? (
 							<a href={href} title={title} {...rest} onClick={onClick}>
 								{content}
+
+								<Icon name="svg-external-link" className="c-svg-external-link" />
 							</a>
 						) : (
 							<NavLink

@@ -78,6 +78,13 @@ exports[`Section component Should render the Section component 1`] = `
                 <strong>
                   Braintrust
                 </strong>
+                <svg
+                  class="c-svg-external-link"
+                >
+                  <use
+                    xlink:href="#svg-external-link"
+                  />
+                </svg>
               </a>
             </li>
             <li>
@@ -100,6 +107,13 @@ exports[`Section component Should render the Section component 1`] = `
                 <strong>
                   Toptal
                 </strong>
+                <svg
+                  class="c-svg-external-link"
+                >
+                  <use
+                    xlink:href="#svg-external-link"
+                  />
+                </svg>
               </a>
             </li>
           </ul>
@@ -229,6 +243,13 @@ exports[`Section component Should render the Section component without a shell 1
               <strong>
                 Braintrust
               </strong>
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
             </a>
           </li>
           <li>
@@ -251,6 +272,13 @@ exports[`Section component Should render the Section component without a shell 1
               <strong>
                 Toptal
               </strong>
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
             </a>
           </li>
         </ul>
@@ -333,6 +361,13 @@ exports[`SectionComponent component Should render the SectionComponent component
                 <strong>
                   Braintrust
                 </strong>
+                <svg
+                  class="c-svg-external-link"
+                >
+                  <use
+                    xlink:href="#svg-external-link"
+                  />
+                </svg>
               </a>
             </li>
             <li>
@@ -355,6 +390,13 @@ exports[`SectionComponent component Should render the SectionComponent component
                 <strong>
                   Toptal
                 </strong>
+                <svg
+                  class="c-svg-external-link"
+                >
+                  <use
+                    xlink:href="#svg-external-link"
+                  />
+                </svg>
               </a>
             </li>
           </ul>
@@ -438,6 +480,13 @@ exports[`SectionElements component Should render the SectionElements component 1
           <strong>
             Braintrust
           </strong>
+          <svg
+            class="c-svg-external-link"
+          >
+            <use
+              xlink:href="#svg-external-link"
+            />
+          </svg>
         </a>
       </li>
       <li>
@@ -460,6 +509,13 @@ exports[`SectionElements component Should render the SectionElements component 1
           <strong>
             Toptal
           </strong>
+          <svg
+            class="c-svg-external-link"
+          >
+            <use
+              xlink:href="#svg-external-link"
+            />
+          </svg>
         </a>
       </li>
     </ul>
@@ -557,6 +613,13 @@ exports[`SectionElements component Should render the SectionElements component w
           <strong>
             Braintrust
           </strong>
+          <svg
+            class="c-svg-external-link"
+          >
+            <use
+              xlink:href="#svg-external-link"
+            />
+          </svg>
         </a>
       </li>
       <li>
@@ -579,6 +642,13 @@ exports[`SectionElements component Should render the SectionElements component w
           <strong>
             Toptal
           </strong>
+          <svg
+            class="c-svg-external-link"
+          >
+            <use
+              xlink:href="#svg-external-link"
+            />
+          </svg>
         </a>
       </li>
     </ul>

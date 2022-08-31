@@ -5,7 +5,11 @@ exports[`ExternalLink component Should render the ExternalLink component 1`] = `
   <a
     rel="noopener noreferrer"
     target="_blank"
-  />
+  >
+    <div>
+      Mocked icon
+    </div>
+  </a>
 </DocumentFragment>
 `;
 

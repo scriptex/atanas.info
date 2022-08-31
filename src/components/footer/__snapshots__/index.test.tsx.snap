@@ -31,6 +31,13 @@ exports[`Footer component Should render the Footer component 1`] = `
           target="_blank"
         >
           MIT license
+          <svg
+            class="c-svg-external-link"
+          >
+            <use
+              xlink:href="#svg-external-link"
+            />
+          </svg>
         </a>
          and available 
         <a
@@ -39,6 +46,13 @@ exports[`Footer component Should render the Footer component 1`] = `
           target="_blank"
         >
           on Github
+          <svg
+            class="c-svg-external-link"
+          >
+            <use
+              xlink:href="#svg-external-link"
+            />
+          </svg>
         </a>
         .
       </small>
@@ -349,6 +363,13 @@ exports[`Footer component Should render the Footer component 1`] = `
             target="_blank"
           >
             Apply to Braintrust
+            <svg
+              class="c-svg-external-link"
+            >
+              <use
+                xlink:href="#svg-external-link"
+              />
+            </svg>
           </a>
         </div>
       </div>

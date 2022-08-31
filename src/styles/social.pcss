@@ -69,6 +69,27 @@
 	& .c-section__animation {
 		top: -3.25rem;
 	}
+
+	& .stackoverflow-frame {
+		& a {
+			display: inline-block;
+			vertical-align: top;
+			position: relative;
+		}
+
+		& img {
+			display: block;
+			position: relative;
+			z-index: 1;
+		}
+
+		& .c-svg-external-link {
+			position: absolute;
+			bottom: 0.125rem;
+			left: 3.25rem;
+			z-index: 2;
+		}
+	}
 }
 
 @media (--tablet-landscape) {

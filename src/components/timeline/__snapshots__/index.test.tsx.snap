@@ -98,6 +98,13 @@ exports[`Timeline component Should render the Timeline component 1`] = `
                   target="_blank"
                 >
                   high school
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
                 </a>
               </h3>
               <h4
@@ -154,6 +161,13 @@ exports[`Timeline component Should render the Timeline component 1`] = `
                   target="_blank"
                 >
                   University of Economics in Varna
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
                 </a>
               </p>
               <span
@@ -202,6 +216,13 @@ exports[`Timeline component Should render the Timeline component 1`] = `
                   target="_blank"
                 >
                   University of Economics in Varna
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
                 </a>
               </p>
               <span
@@ -250,6 +271,13 @@ exports[`Timeline component Should render the Timeline component 1`] = `
                   target="_blank"
                 >
                   my brother
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
                 </a>
                  I started the path of the Web developer. My first steps included learning the basics of HTML and CSS.
               </p>
@@ -813,6 +841,13 @@ exports[`Timeline component Should render the Timeline component 1`] = `
                 <strong>
                   Braintrust
                 </strong>
+                <svg
+                  class="c-svg-external-link"
+                >
+                  <use
+                    xlink:href="#svg-external-link"
+                  />
+                </svg>
               </a>
             </li>
             <li>
@@ -835,6 +870,13 @@ exports[`Timeline component Should render the Timeline component 1`] = `
                 <strong>
                   Toptal
                 </strong>
+                <svg
+                  class="c-svg-external-link"
+                >
+                  <use
+                    xlink:href="#svg-external-link"
+                  />
+                </svg>
               </a>
             </li>
           </ul>
