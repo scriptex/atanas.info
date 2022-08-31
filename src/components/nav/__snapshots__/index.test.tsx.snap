@@ -144,6 +144,13 @@ exports[`NavComponent component Should render the NavComponent component 1`] = `
             title="My open source projects"
           >
             Open source
+            <svg
+              class="c-svg-external-link"
+            >
+              <use
+                xlink:href="#svg-external-link"
+              />
+            </svg>
           </a>
         </li>
         <li>

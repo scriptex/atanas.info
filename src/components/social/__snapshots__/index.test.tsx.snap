@@ -85,6 +85,13 @@ exports[`Social component Should render the Social component 1`] = `
                       target="_blank"
                     >
                       👨💻 Atanas Atanasov
+                      <svg
+                        class="c-svg-external-link"
+                      >
+                        <use
+                          xlink:href="#svg-external-link"
+                        />
+                      </svg>
                     </a>
                   </h4>
                   <h5>
@@ -97,6 +104,13 @@ exports[`Social component Should render the Social component 1`] = `
                       target="_blank"
                     >
                       E.ON
+                      <svg
+                        class="c-svg-external-link"
+                      >
+                        <use
+                          xlink:href="#svg-external-link"
+                        />
+                      </svg>
                     </a>
                      |
                     <a
@@ -105,6 +119,13 @@ exports[`Social component Should render the Social component 1`] = `
                       target="_blank"
                     >
                       University of Economics - Varna
+                      <svg
+                        class="c-svg-external-link"
+                      >
+                        <use
+                          xlink:href="#svg-external-link"
+                        />
+                      </svg>
                     </a>
                   </h5>
                   <a
@@ -114,6 +135,13 @@ exports[`Social component Should render the Social component 1`] = `
                     target="_blank"
                   >
                     View profile
+                    <svg
+                      class="c-svg-external-link"
+                    >
+                      <use
+                        xlink:href="#svg-external-link"
+                      />
+                    </svg>
                   </a>
                 </div>
               </div>
@@ -208,6 +236,13 @@ exports[`Social component Should render the Social component 1`] = `
                     title="profile for Atanas Atanasov at Stack Overflow, Q&A for professional and enthusiast programmers"
                     width="208"
                   />
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -224,6 +259,13 @@ exports[`Social component Should render the Social component 1`] = `
             target="_blank"
           >
             Last.FM
+            <svg
+              class="c-svg-external-link"
+            >
+              <use
+                xlink:href="#svg-external-link"
+              />
+            </svg>
           </a>
            statistics
           <small>
@@ -381,6 +423,13 @@ exports[`Social component Should render the Social component 1`] = `
               <strong>
                 Braintrust
               </strong>
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
             </a>
           </li>
           <li>
@@ -403,6 +452,13 @@ exports[`Social component Should render the Social component 1`] = `
               <strong>
                 Toptal
               </strong>
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
             </a>
           </li>
         </ul>

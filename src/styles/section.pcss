@@ -118,23 +118,34 @@
 	& .c-btn {
 		margin: 0;
 
-		& span,
-		& strong {
+		& span {
 			flex: 0 0 100%;
 			display: block;
-		}
-
-		& span {
 			padding: 0.5rem 0;
 		}
 
 		& svg {
+			fill: currentColor;
+			transition: none;
+		}
+
+		& .c-section__actions-icon {
 			width: 3rem;
 			height: 3rem;
-			fill: currentColor;
 			display: block;
 			margin: auto;
-			transition: none;
+		}
+
+		& strong,
+		& .c-svg-external-link {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		& .c-svg-external-link {
+			width: 1em;
+			height: 1em;
+			margin-top: 0;
 		}
 	}
 }
@@ -271,13 +282,13 @@
 		}
 
 		& .c-btn {
-			& svg {
-				width: 1rem;
-				height: 1rem;
-			}
-
 			& span {
 				padding: 0.25rem 0;
+			}
+
+			& .c-section__actions-icon {
+				width: 1.25rem;
+				height: 1.25rem;
 			}
 		}
 	}

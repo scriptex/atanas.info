@@ -23,9 +23,11 @@
 	background-size: auto 100%;
 	transition: background-size var(--timing) var(--easing);
 
-	& + .c-loading {
-		@mixin centered;
-		z-index: 1;
+	&::before {
+		@mixin overlay;
+		opacity: 0.7;
+		background-color: var(--color-secondary);
+		transition: opacity var(--timing) var(--easing);
 	}
 
 	& strong {
@@ -40,11 +42,16 @@
 		transition: all var(--timing) var(--easing);
 	}
 
-	&::before {
-		@mixin overlay;
-		opacity: 0.7;
-		background-color: var(--color-secondary);
-		transition: opacity var(--timing) var(--easing);
+	& .c-svg-external-link {
+		position: absolute;
+		top: 0.5rem;
+		right: 0.5rem;
+		z-index: 3;
+	}
+
+	& + .c-loading {
+		@mixin centered;
+		z-index: 1;
 	}
 }
 

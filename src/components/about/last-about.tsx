@@ -10,7 +10,7 @@ export const LastAbout: React.FC = () => (
 			<li>
 				A Senior JavaScript/TypeScript engineer and front-end mentor at{' '}
 				<strong>
-					<ExternalLink href="https://github.com/three11">Three 11</ExternalLink>
+					<ExternalLink href="https://github.com/three11">Three 11</ExternalLink>{' '}
 				</strong>
 				working on various boutique web applications including XPND, Kinetik Automotive and many more.
 			</li>
