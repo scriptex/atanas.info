@@ -5111,20 +5111,15 @@ commander@7, commander@^7.0.0, commander@^7.1.0, commander@^7.2.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
   integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
 
-commander@9.3.0:
-  version "9.3.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-9.3.0.tgz#f619114a5a2d2054e0d9ff1b31d5ccf89255e26b"
-  integrity sha512-hv95iU5uXPbK83mjrJKuZyFM/LBAoCV/XhVGkS5Je6tl7sxr6A0ITMw5WoRV46/UaJ46Nllm3Xt7IaJhXTIkzw==
+commander@9.4.0, commander@^9.4.0:
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-9.4.0.tgz#bc4a40918fefe52e22450c111ecd6b7acce6f11c"
+  integrity sha512-sRPT+umqkz90UA8M1yqYfnHlZA7fF6nSphDtxeywPZ49ysjxDQybzk13CL+mXekDRG92skbcqCLVovuCusNmFw==
 
 commander@^2.19.0, commander@^2.20.0:
   version "2.20.3"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
-
-commander@^9.4.0:
-  version "9.4.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-9.4.0.tgz#bc4a40918fefe52e22450c111ecd6b7acce6f11c"
-  integrity sha512-sRPT+umqkz90UA8M1yqYfnHlZA7fF6nSphDtxeywPZ49ysjxDQybzk13CL+mXekDRG92skbcqCLVovuCusNmFw==
 
 common-tags@^1.8.0:
   version "1.8.2"
@@ -13173,13 +13168,13 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-svg-symbol-sprite@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/svg-symbol-sprite/-/svg-symbol-sprite-1.0.4.tgz#7953d3156b36f97f38e78317c0137e1abfc0ed4b"
-  integrity sha512-AIb3EGnR6EtSFzcXpiyRJGrCfY/zMivcxAd7HfKrvG9kRPScOQ9debTjwpfTjeeeOQc6W2u24wmjS3qfLpctZg==
+svg-symbol-sprite@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/svg-symbol-sprite/-/svg-symbol-sprite-1.0.5.tgz#1223ff0d594c1687f3f4f7b44455c174c4c3569b"
+  integrity sha512-ZXCOQPhzT6PyXX3glUosPMwrHYE/acsP2Ysdpp5oKXZBzcCsOssyy1NJ7mxoj+jQ0qLnbHuAT7yW/syGNiLBjA==
   dependencies:
     cheerio "1.0.0-rc.12"
-    commander "9.3.0"
+    commander "9.4.0"
     svgo "2.8.0"
 
 svg-tags@^1.0.0:
