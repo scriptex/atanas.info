@@ -1,7 +1,26 @@
 {
 	"name": "atanas.info",
-	"version": "1.1.0",
-	"description": "Atanas Atanasov's Personal Website",
+	"version": "1.0.0",
+	"description": "Atanas Atanasov's personal portfolio website",
+	"keywords": [
+		"Developer portfolio",
+		"Personal website",
+		"Website",
+		"Portfolio"
+	],
+	"homepage": "https://atanas.info",
+	"bugs": {
+		"url": "https://github.com/scriptex/atanas.info/issues",
+		"email": "hi@atanas.info"
+	},
+	"license": "MIT",
+	"author": "Atanas Atanasov <hi@atanas.info> (https://atanas.info)",
+	"funding": "https://github.com/sponsors/scriptex",
+	"main": "dist/index.html",
+	"repository": {
+		"type": "git",
+		"url": "github:scriptex/atanas.info"
+	},
 	"scripts": {
 		"fetch-stats": "ts-node ./bin/fetch-stats.ts",
 		"fetch-music": "ts-node ./bin/fetch-music.ts",
@@ -42,14 +61,6 @@
 		"prerender": "react-spa-prerender",
 		"postprerender": "ts-node server/index.ts"
 	},
-	"keywords": [],
-	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
-	"repository": "https://github.com/scriptex/atanas.info",
-	"bugs": {
-		"url": "https://github.com/scriptex/atanas.info/issues",
-		"email": "scriptex.bg@gmail.com"
-	},
-	"license": "MIT",
 	"dependencies": {
 		"@babylonjs/core": "5.22.1",
 		"@babylonjs/gui": "5.22.1",
@@ -213,12 +224,11 @@
 		"workbox-cli": "6.5.4",
 		"yarn-deduplicate": "6.0.0"
 	},
-	"resolutions": {},
+	"private": true,
 	"browserslist": [
 		"> 1%",
 		"last 2 versions"
 	],
-	"private": true,
 	"typeCoverage": {
 		"atLeast": 93
 	}

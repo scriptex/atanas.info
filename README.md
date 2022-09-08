@@ -12,11 +12,11 @@
 [![DeepScan grade](https://deepscan.io/api/teams/3574/projects/5291/branches/40827/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=3574&pid=5291&bid=40827)
 [![Type Coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fscriptex%2Fatanas.info%2Fmaster%2Fpackage.json)](https://github.com/scriptex/atanas.infp)
 
-[![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/atanas.info/README.md)](https://github.com/scriptex/atanas.info/)
+[![Analytics](https://ga-beacon-361907.ew.r.appspot.com/UA-83446952-1/github.com/scriptex/atanas.info/README.md?pixel)](https://github.com/scriptex/atanas.info/)
 
 > My personal website
 
-Built with TypeScript, PostCSS, React, D3, BabylonJS, Vuepress, NodeJS, Parcel, Vercel, Puppeteer, Cloudinary, Houdini and more. 
+Built with TypeScript, PostCSS, React, D3, BabylonJS, Vuepress, NodeJS, Parcel, Vercel, Puppeteer, Cloudinary, Houdini and more.
 
 Installable as a Progressive Web App and available offline.
 
