@@ -2,6 +2,7 @@ export default {
 	projects: [
 		'scriptex/2048',
 		'scriptex/AnimateMe',
+		'scriptex/analytics-badge',
 		'scriptex/async-array-prototype',
 		'scriptex/at-the-wall',
 		'scriptex/atanas.info',
@@ -14,6 +15,7 @@ export default {
 		'scriptex/deno-rest-api',
 		'scriptex/Evolution',
 		'scriptex/express-watch-file',
+		'scriprex/ga-beacon',
 		'scriptex/github-contributions-snake',
 		'scriptex/github-insights',
 		'scriptex/github-pages-vuepress',
