@@ -15,7 +15,7 @@ export default {
 		'scriptex/deno-rest-api',
 		'scriptex/Evolution',
 		'scriptex/express-watch-file',
-		'scriprex/ga-beacon',
+		'scriptex/ga-beacon',
 		'scriptex/github-contributions-snake',
 		'scriptex/github-insights',
 		'scriptex/github-pages-vuepress',
