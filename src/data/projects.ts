@@ -318,6 +318,13 @@ export const projects: WebProject[] = [
 		skip: false
 	},
 	{
+		url: 'https://kinetik.vercel.app/',
+		image: 'images/temp/kinetik-nuxt.png',
+		title: 'Kinetik',
+		description: 'Vue, SVG, SCSS, PostCSS, JavaScript, Swiper, Nuxt',
+		skip: true
+	},
+	{
 		url: '',
 		image: 'images/temp/atelier-coolinar.png',
 		title: 'Atelier Coolinar (Ателие Кулинар)',
