@@ -9461,13 +9461,13 @@ lmdb@2.5.2:
     "@lmdb/lmdb-linux-x64" "2.5.2"
     "@lmdb/lmdb-win32-x64" "2.5.2"
 
-localga@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/localga/-/localga-2.2.0.tgz#7d7cb17796804dcfa9863bf1df1c80aad7f36d7d"
-  integrity sha512-s4e0PGJ0JDNQTYtB+4zMnkLyAz0AxcdZjzYdRZCbuI1AsobrqH8oTQtiXtK/wB/WALCGVsDm1caydV6abOBZLQ==
+localga@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/localga/-/localga-2.3.0.tgz#017dca636d5712dfe703fef6d37b44c222adcb4b"
+  integrity sha512-DvcsJ6ailVhUGAK431hrKGLY1+OoVo0sQ6cTzafOxUG1Zk/UowN6mWga4CN/Zgp1TvhNNKoyBTEjsQCvuRXIOw==
   dependencies:
-    meow "8.0.0"
-    node-fetch "2.6.1"
+    meow "9.0.0"
+    node-fetch "2.6.7"
 
 locate-path@^5.0.0:
   version "5.0.0"
@@ -9727,23 +9727,6 @@ medium-zoom@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/medium-zoom/-/medium-zoom-1.0.6.tgz#9247f21ca9313d8bbe9420aca153a410df08d027"
   integrity sha512-UdiUWfvz9fZMg1pzf4dcuqA0W079o0mpqbTnOz5ip4VGYX96QjmbM+OgOU/0uOzAytxC0Ny4z+VcYQnhdifimg==
-
-meow@8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/meow/-/meow-8.0.0.tgz#1aa10ee61046719e334ffdc038bb5069250ec99a"
-  integrity sha512-nbsTRz2fwniJBFgUkcdISq8y/q9n9VbiHYbfwklFh5V4V2uAcxtKQkDc0yCLPM/kP0d+inZBewn3zJqewHE7kg==
-  dependencies:
-    "@types/minimist" "^1.2.0"
-    camelcase-keys "^6.2.2"
-    decamelize-keys "^1.1.0"
-    hard-rejection "^2.1.0"
-    minimist-options "4.1.0"
-    normalize-package-data "^3.0.0"
-    read-pkg-up "^7.0.1"
-    redent "^3.0.0"
-    trim-newlines "^3.0.0"
-    type-fest "^0.18.0"
-    yargs-parser "^20.2.3"
 
 meow@9.0.0, meow@^9.0.0:
   version "9.0.0"
