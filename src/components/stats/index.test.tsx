@@ -133,11 +133,6 @@ jest.mock('../../data/npm-stats.json', () => ({
 	}
 }));
 
-jest.mock('../../scripts/gitlab-calendar', () => ({
-	__esModule: true,
-	default: class {}
-}));
-
 jest.mock('react-ts-github-calendar', () => ({
 	__esModule: true,
 	default: () => <div>Mocked Github Calendar</div>

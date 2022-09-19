@@ -78,11 +78,6 @@ jest.mock('../src/scripts/skills.ts', () => ({
 	drawSkills: jest.fn()
 }));
 
-jest.mock('../src/scripts/gitlab-calendar', () => ({
-	__esModule: true,
-	default: 'GitLabCalendar'
-}));
-
 jest.mock('../src/components/github-skyline', () => jest.fn(() => 'Github Skyline'));
 
 jest.mock('lottie-web', () => ({

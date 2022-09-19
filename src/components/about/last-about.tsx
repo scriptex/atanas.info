@@ -36,6 +36,20 @@ export const LastAbout: React.FC = () => (
 					<ExternalLink href="https://app.usebraintrust.com/talent/782/">Braintrust</ExternalLink>
 				</strong>
 			</li>
+
+			<li>
+				A Senior JavaScript/TypeScript engineer at{' '}
+				<strong>
+					<ExternalLink href="https://andela.com/">Andela</ExternalLink>
+				</strong>
+			</li>
+
+			<li>
+				A Senior Frontend engineer at{' '}
+				<strong>
+					<ExternalLink href="https://app.9am.works/hire/atanas-atanasov">9AM</ExternalLink>
+				</strong>
+			</li>
 		</ul>
 
 		<br />
