@@ -1,8 +1,8 @@
 import * as React from 'react';
+import GitlabCalendar from 'gitlab-calendar';
 
 import gitlab from '../../data/gitlab-insights.json';
 import gitlabCalendarData from '../../data/gitlab-calendar.json';
-import GitlabActivityCalendar from '../../scripts/gitlab-calendar';
 
 import { GeneralInsight } from './utils';
 import { Ref, formatDate } from '../../scripts/shared';
@@ -48,11 +48,11 @@ export const GitlabStats: React.FC = () => {
 
 	React.useEffect(() => {
 		if (calendarPlaceholder1.current) {
-			new GitlabActivityCalendar(calendarPlaceholder1.current, calendar);
+			new GitlabCalendar(calendarPlaceholder1.current, calendar, {});
 		}
 
 		if (calendarPlaceholder2.current) {
-			new GitlabActivityCalendar(calendarPlaceholder2.current, gitlabCalendarData);
+			new GitlabCalendar(calendarPlaceholder2.current, gitlabCalendarData, {});
 		}
 	}, []);
 
