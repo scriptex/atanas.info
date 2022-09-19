@@ -8976,6 +8976,11 @@ lastfm-node-client@2.2.0:
   resolved "https://registry.yarnpkg.com/lastfm-node-client/-/lastfm-node-client-2.2.0.tgz#c5fb02f860c05d5194b62284a50cfad36e8f14a8"
   integrity sha512-nhHxrRPaNKIJnEuRov68HGjQRAFel2UWnG86ieQAklaVOdBciC6DO0vajZjzPZGqwvUAxQzDHPsp2ceDOtKW2w==
 
+lastfm-ts-api@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/lastfm-ts-api/-/lastfm-ts-api-1.0.0.tgz#cd7f67ab55ec50089e5e10cb162a9a40be248f13"
+  integrity sha512-rIj71XaiqkKKm70KrfJnQDsBXz4YC5kvK1Bi0vAz8v1OYgCItfL8xeZQy5DK7/bXQPlT3/GfJ4rfKs0NiuzuXg==
+
 latest-version@^5.0.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/latest-version/-/latest-version-5.1.0.tgz#119dfe908fe38d15dfa43ecd13fa12ec8832face"
@@ -10951,7 +10956,7 @@ process-exists@^4.1.0:
   dependencies:
     ps-list "^6.3.0"
 
-process@^0.11.10:
+process@0.11.10:
   version "0.11.10"
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==
@@ -11860,7 +11865,7 @@ sass@1.46.0:
     immutable "^4.0.0"
     source-map-js ">=0.6.2 <2.0.0"
 
-sass@^1.54.5:
+sass@1.54.9, sass@^1.54.5:
   version "1.54.9"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.54.9.tgz#b05f14ed572869218d1a76961de60cd647221762"
   integrity sha512-xb1hjASzEH+0L0WI9oFjqhRi51t/gagWnxLiwUNMltA0Ab6jIDkAacgKiGYKM9Jhy109osM7woEEai6SXeJo5Q==
@@ -12059,6 +12064,11 @@ signal-exit@^3.0.2, signal-exit@^3.0.3, signal-exit@^3.0.7:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
+
+simple-calendar-widget@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/simple-calendar-widget/-/simple-calendar-widget-1.0.0.tgz#dd251f38c5ad0ac208864ef56887fd2db74a8b87"
+  integrity sha512-3PGIzMRsE2yeRfmkjSOQRrz8odulJx5wYvS2h+S+EURefzZArnI0Y0RAJ5N6F4c4X1vQ3Hzltm7kSVVnMWgZfQ==
 
 simple-concat@^1.0.0:
   version "1.0.1"
