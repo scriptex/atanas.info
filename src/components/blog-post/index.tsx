@@ -15,6 +15,7 @@ import shell from 'react-syntax-highlighter/dist/esm/languages/hljs/shell';
 
 import { Routes } from '../../data/routes';
 import { articles } from '../../data/articles';
+import { useScript } from '../../scripts/shared';
 import { Lines, Section } from '..';
 
 SyntaxHighlighter.registerLanguage('js', js);
@@ -32,6 +33,10 @@ export const BlogPost: React.FC = () => {
 
 	const article = articles.find(({ url }) => url.includes(slug!));
 	const Content = article?.content;
+
+	useScript('https://atanas-info.disqus.com/embed.js', (script: HTMLScriptElement) => {
+		script.setAttribute('data-timestamp', (+new Date()).toString());
+	});
 
 	return (
 		<Section
@@ -66,6 +71,8 @@ export const BlogPost: React.FC = () => {
 				>
 					<Content />
 				</MDXProvider>
+
+				<div id="disqus_thread" />
 			</div>
 		</Section>
 	);
