@@ -1,12 +1,12 @@
 The application I am building relies and uses heavily live data provided via [SSE (Server Sent Events)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) and [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API).
 
-Both live data streams require authentication in order to provide the correct data to the end user. This is relatively simple to achieve with the EventSource API but the WebSockets API do not provide this out-of-the-box. In order to authenticate the WebSocket connection, we must use a custom protocol which is provided as a second argument to the `WebSocket` constructor.
+Both live data streams require authentication in order to provide the correct data to the end user. This is relatively simple to achieve with the EventSource API but the WebSockets API does not provide this out-of-the-box. In order to authenticate the WebSocket connection, we must use a custom protocol which is provided as a second argument to the `WebSocket` constructor.
 
 The automation framework which I am using to test the end-to-end implementation is [Cypress](https://www.cypress.io/). At the time of writing, Cypress v10.8.0 does not support custom protocols in the WebSocket connection requests - these protocols are simply removed. After a significant amount of time spent in the Cypress issues and in the Cypress source code, I found out that this is caused by the `http-proxy` library which is used by Cypress behind the scenes. The lack of support for authenticated WebSockets results in constantly failing connection requests which have the 403 status.
 
-My application is using Azure DevOps as CI/CD environment and the 403s from the live data sources result in premature closing of the Cypress process when executed in the CI environment (latest Ubuntu, and NodeJS LTS) - the error is `This socket has been ended by the other party`. There are plenty of issues in the Cypress' Github repository related to this and all of them are related to failing WebSocket requests.
+My application is using Azure DevOps as CI/CD environment and the 403s from the live data sources result in premature closing of the Cypress process when executed in the CI environment (latest Ubuntu, and NodeJS LTS) - the error is `This socket has been ended by the other party`. There are plenty of issues in the Cypress' Github repository related to this and all of them are saying that this is caused by the multiple failing WebSockets requests.
 
-Some prerequisite: My application is built using React and Redux and is written in TypeScript. I am exposing the application's Redux store to the global Window namespace when the application is being opened via Cypress. In order to do so, I am checking if the `Cypress` object exists in the global namespace. Exposing the Redux store allows me to use the `dispatch` and `getState` methods in order to perform end-to-end testing:
+Some prerequisite: My application is built using React and Redux and is written in TypeScript. I am exposing the application's Redux store to the global `Window` namespace when the application is being opened via Cypress. In order to do so, I am checking if the `Cypress` object exists in the Global namespace. Exposing the Redux store allows me to use the `dispatch` and `getState` methods in order to perform end-to-end testing:
 
 ```typescript
 /**
@@ -23,7 +23,7 @@ if (window.Cypress) {
 
 I've decided that the only way for my application to receive the required live data is to build a proxy which connects to the live data streams on behalf of the logged in user and sends the live data back to the application.
 
-In order to do this, I decided to build a new web server which uses Socket.IO and provides unauthenticated Socket.IO access. This web server is supposed to run in parallel with the Cypress process so the application can connect to it.
+In order to do this, I decided to build a new web server which uses [Socket.IO](https://socket.io/) and provides unauthenticated Socket.IO access. This web server is supposed to run in parallel with the Cypress process so the application can connect to it.
 
 First, I installed the required dependencies - [`eventsource`](https://www.npmjs.com/package/eventsource), [`websocket`](https://www.npmjs.com/package/websocket), [`socket.io`](https://www.npmjs.com/package/socket.io) and [`socket.io-client`](https://www.npmjs.com/package/socket.io-client). `eventsource` and `websocket` are already installed for me but for the sake of the example, I will add them below:
 
@@ -32,9 +32,9 @@ yarn add eventsource websocket
 yarn add socket.io socket.io-client -D
 ```
 
-The parallel web server is a simple NodeJS server which uses Socket.IO. The servers listens on port 3000 but this can be modified to meat your project's needs.
+The parallel web server is a simple NodeJS server which uses Socket.IO. The servers listens on port 3000 but this can be modified to meet your project's needs.
 
-The `connectWebSocket` function accepts three arguments:
+The `connectWebSocket` function below accepts three arguments:
 
 -   the authentication token which is used to sign the connection requests for SSE and WebSockets on the original backend server
 -   the URL for the SSE server
@@ -63,6 +63,10 @@ const io = new Server(server);
 
 const connectWebSocket = (token, sse, socket) => {
 	try {
+		/**
+		 * x-api-key is my custom protocol
+		 * also, I pass the token as base64 encoded string
+		 */
 		const webSocket = new w3cwebsocket(socket, ['x-api-key', btoa(unescape(encodeURIComponent(token)))]);
 
 		webSocket.onclose = () => connectWebSocket(socket, token);
