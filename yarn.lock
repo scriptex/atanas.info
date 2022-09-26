@@ -11780,10 +11780,12 @@ rollup@^2.43.1, rollup@^2.78.1:
   optionalDependencies:
     fsevents "~2.3.2"
 
-round-carousel-component@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/round-carousel-component/-/round-carousel-component-1.1.0.tgz#39b66905bea839fa507e4d85c01b78dff61ae5e3"
-  integrity sha512-/OVilSf1wnX67vTFXoy05s5qNvc5ZxWdWOxMPCoO9+YmWs8+FKw2K73EjR7q6BWOprRb+uNHzkbt7t81Ll8zUg==
+round-carousel-component@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/round-carousel-component/-/round-carousel-component-1.2.0.tgz#e2c2794d3a67b390a44b1913d0b5b1490180772c"
+  integrity sha512-Nl2yC+SzrUr6D+Vb2iSA2Ng7uirP0TQPZ5VAIy0gEVxGfGFti75Vk2oCIL2SC6ro0fXMFWDIMqVko1hkhPzaGQ==
+  dependencies:
+    touchsweep "1.3.0"
 
 run-async@^2.4.0:
   version "2.4.1"
