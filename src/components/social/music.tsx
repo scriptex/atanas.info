@@ -8,8 +8,11 @@ import { filteredData } from './utils';
 
 export const SocialMusic: React.FC = () => {
 	const { error, updated, topAlbums, weeklyAlbumChart } = lastFm;
+	const topAlbumsLength = topAlbums.length;
+	const weeklyAlbumChartLength = weeklyAlbumChart.length;
+	const hasNoData = topAlbumsLength + weeklyAlbumChartLength === 0;
 
-	return error ? null : (
+	return error || hasNoData ? null : (
 		<>
 			<header className="c-section__header">
 				<h2>
@@ -21,17 +24,21 @@ export const SocialMusic: React.FC = () => {
 			<div className="c-section__entry">
 				<div className="o-shell">
 					<div className="o-grid">
-						<div className="o-grid__item xs-12">
-							<h3>Top albums for last week:</h3>
+						{weeklyAlbumChartLength > 0 && (
+							<div className="o-grid__item xs-12">
+								<h3>Top albums for last week:</h3>
 
-							<Carousel items={filteredData(weeklyAlbumChart)} />
-						</div>
+								<Carousel items={filteredData(weeklyAlbumChart)} />
+							</div>
+						)}
 
-						<div className="o-grid__item xs-12">
-							<h3>Top albums for last month:</h3>
+						{topAlbumsLength > 0 && (
+							<div className="o-grid__item xs-12">
+								<h3>Top albums for last month:</h3>
 
-							<Carousel items={filteredData(topAlbums)} />
-						</div>
+								<Carousel items={filteredData(topAlbums)} />
+							</div>
+						)}
 					</div>
 				</div>
 			</div>

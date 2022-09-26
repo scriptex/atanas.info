@@ -4,15 +4,15 @@ import { format } from 'date-fns';
 export type Theme = 'dark' | 'light';
 export type Ref<T> = React.MutableRefObject<T | null>;
 
-export const useScript = (url: string, defer = false): void => {
+export const useScript = (url: string, callback?: (script: HTMLScriptElement) => void): void => {
 	React.useEffect(() => {
 		const script = document.createElement('script');
 
 		script.src = url;
 		script.async = true;
 
-		if (defer) {
-			script.defer = true;
+		if (callback && typeof callback === 'function') {
+			callback(script);
 		}
 
 		document.body.appendChild(script);
