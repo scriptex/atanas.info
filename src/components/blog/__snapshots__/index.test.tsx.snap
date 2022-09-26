@@ -33,7 +33,7 @@ exports[`BlogComponent component Should render the BlogComponent component 1`] =
             <a
               class="c-article-link fullsize-background"
               href="/blog/bulk-image-watermark-with-nodejs-and-jimp"
-              style="background-image: url(/images/temp/bulk-image-watermark-with-nodejs-and-jimp.jpg);"
+              style="background-image: url(/images/temp/bulk-image-watermark-with-nodejs-and-jimp.png);"
             >
               <strong>
                 Bulk image watermark with NodeJS and Jimp
@@ -57,6 +57,26 @@ exports[`BlogComponent component Should render the BlogComponent component 1`] =
             >
               <strong>
                 Running multiple Webpack based applications simultaneously
+              </strong>
+            </a>
+            <div
+              class="c-loading"
+            >
+              <div
+                class="c-loader"
+              />
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6"
+          >
+            <a
+              class="c-article-link fullsize-background"
+              href="/blog/testing-websockets-with-cypress"
+              style="background-image: url(/images/temp/testing-websockets-with-cypress.png);"
+            >
+              <strong>
+                Testing WebSockets with Cypress
               </strong>
             </a>
             <div
