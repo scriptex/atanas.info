@@ -209,3 +209,60 @@ If you don't want to do this, you can just replace the script with
 Just make sure to replace `YOUR_FOLDER` with the actual folder in which you saved the `socket.io.server.js` file.
 
 Lastly, you need to run the `cypress-run` or the `cypress-open` command and start testing your live data!
+
+---
+
+It is possible to experience issues in a CI/CD environment such as Gitlab or Azure DevOps - **the Socket.IO server is not stopped after Cypress completes executing the automation tests**. In order to go around this issue, a slight modification of the code above is needed:
+
+First, you need to install a new dependency - [`fkill-cli`](https://www.npmjs.com/package/fkill-cli) - this is CLI tool which helps you kill running processes easily. By the way, `concurrently` is no longer needed so you can safely uninstall it.
+
+```sh
+yarn add fkill-cli -D && yarn remove concurrently
+```
+
+Then the `package.json`'s `scripts` should be updated to the following:
+
+```json
+{
+	"scripts": {
+		...
+		"cypress-run": "cypress run",
+        "cypress-open": "cypress open",
+        "websocket": "nodemon cypress/utilities/server.js",
+        "websocket:kill": "fkill :3000 -f"
+		...
+	}
+}
+```
+
+Now the interesting part - Cypress executes each `it` block syncronously, which allows the previous test to complete before the next one starts.
+
+We can use this feature to start the Socket.IO server before all other tests (I've tried using the `beforeEach` and `before` hooks and it didn't work - it behaved inconsistently):
+
+```typescript
+it('Starts the local Socket.IO server', () => {
+	cy.exec('yarn websocket', {
+		failOnNonZeroExit: false
+	})
+		.its('stdout')
+		.then((stdout: string) => {
+			cy.log(stdout);
+		});
+});
+```
+
+Using the logic above, we can stop the local Socket.IO server after all other tests have finished:
+
+```typescript
+it('Stops the local Socket.IO server', () => {
+	cy.exec('yarn websocket:kill', {
+		failOnNonZeroExit: false
+	})
+		.its('stdout')
+		.then((stdout: string) => {
+			cy.log(stdout);
+		});
+});
+```
+
+With these steps I was able to successfully execute all automation tests in a local and CI/CD environment without any issues.
