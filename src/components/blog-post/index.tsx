@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useParams } from 'react-router-dom';
-// @ts-ignore
 import { MDXProvider } from '@mdx-js/react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 
