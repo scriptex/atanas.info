@@ -1,12 +1,19 @@
 import * as React from 'react';
-
+import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
-
-import { addTitles } from './utils';
 
 import { Ref } from '../../scripts/shared';
 import statistics from '../../data/lotties/statistics.json';
-import { Section, NPMStats, Animation, GithubStats, GitlabStats } from '..';
+import { addTitles } from './utils';
+import { SubPage, statsItems } from '../../data/projects';
+import { Loader, Section, Animation } from '..';
+
+export const sectionStatsProps = {
+	id: 'stats',
+	title: 'Stats',
+	hasButton: true,
+	additionalElements: <Animation data={statistics} width={150} height={150} className="c-section__animation" />
+};
 
 export const Stats: React.FC = () => {
 	const timeout: Ref<NodeJS.Timeout> = React.useRef(null);
@@ -36,21 +43,22 @@ export const Stats: React.FC = () => {
 	}, []);
 
 	return (
-		<Section
-			id="stats"
-			title="Stats"
-			hasShell={false}
-			hasButton
-			className="circles"
-			additionalElements={
-				<Animation data={statistics} width={150} height={150} className="c-section__animation" />
-			}
-		>
-			<GithubStats />
+		<Section {...sectionStatsProps} hasShell={true}>
+			<div className="c-section__grid o-grid">
+				{statsItems.map((item: SubPage, index: number) => (
+					<div key={index} className="o-grid__item xs-12 sm-6 md-4 lg-4 xl-4">
+						<Link
+							to={item.url}
+							style={{ backgroundImage: `url(${item.image})` }}
+							className="c-article-link fullsize-background"
+						>
+							<strong>{item.text}</strong>
+						</Link>
 
-			<GitlabStats />
-
-			<NPMStats />
+						<Loader />
+					</div>
+				))}
+			</div>
 		</Section>
 	);
 };

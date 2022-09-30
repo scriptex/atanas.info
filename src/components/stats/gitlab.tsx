@@ -1,12 +1,15 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import GitlabCalendar from 'gitlab-calendar';
 
 import gitlab from '../../data/gitlab-insights.json';
 import gitlabCalendarData from '../../data/gitlab-calendar.json';
 
+import { Routes } from '../../data/routes';
 import { GeneralInsight } from './utils';
 import { Ref, formatDate } from '../../scripts/shared';
-import { StatsEntry, StatsError } from '..';
+import { sectionStatsProps } from '.';
+import { Section, StatsEntry, StatsError } from '..';
 
 export const GitlabStats: React.FC = () => {
 	const { error, general, calendar, updated, repositories } = gitlab;
@@ -61,7 +64,15 @@ export const GitlabStats: React.FC = () => {
 	}
 
 	return (
-		<>
+		<Section
+			{...sectionStatsProps}
+			actions={
+				<Link to={Routes.STATS} className="c-btn">
+					Go back
+				</Link>
+			}
+			hasShell={false}
+		>
 			<StatsEntry data={blocks} title="Gitlab profile statistics" />
 
 			<div className="c-section__entry">
@@ -87,7 +98,7 @@ export const GitlabStats: React.FC = () => {
 					</div>
 				</div>
 			</div>
-		</>
+		</Section>
 	);
 };
 

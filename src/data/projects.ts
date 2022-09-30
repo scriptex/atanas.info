@@ -17,7 +17,7 @@ export interface ExtendedProject extends Project {
 	readonly adjustable?: boolean;
 }
 
-export interface PortfolioItem {
+export interface SubPage {
 	readonly url: Routes;
 	readonly text: string;
 	readonly image: string;
@@ -478,7 +478,25 @@ export const automotiveProjects: ExtendedProject[] = [
 	}
 ];
 
-export const portfolioItems: PortfolioItem[] = [
+export const statsItems: SubPage[] = [
+	{
+		url: Routes.STATS_GITHUB,
+		text: 'Github stats',
+		image: '/images/temp/github.jpg'
+	},
+	{
+		url: Routes.STATS_GITLAB,
+		text: 'Gitlab stats',
+		image: '/images/temp/gitlab.jpg'
+	},
+	{
+		url: Routes.STATS_NPM,
+		text: 'NPM stats',
+		image: '/images/temp/npm.jpg'
+	}
+];
+
+export const portfolioItems: SubPage[] = [
 	{
 		url: Routes.PORTFOLIO_MOBILE_APPS,
 		text: 'Mobile applications',
@@ -491,7 +509,7 @@ export const portfolioItems: PortfolioItem[] = [
 	},
 	{
 		url: Routes.PORTFOLIO_WEB_APPS,
-		text: 'WEB applications',
+		text: 'Web applications',
 		image: '/images/temp/web-apps.jpg'
 	}
 ];

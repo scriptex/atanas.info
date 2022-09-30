@@ -55,7 +55,24 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 	{
 		href: Routes.STATS,
 		title: 'My stats',
-		content: 'Stats'
+		content: 'Stats',
+		links: [
+			{
+				href: Routes.STATS_GITHUB,
+				title: 'My Github profile stats',
+				content: 'Github stats'
+			},
+			{
+				href: Routes.STATS_GITLAB,
+				title: 'My Gitlab profile stats',
+				content: 'Gitlab stats'
+			},
+			{
+				href: Routes.STATS_NPM,
+				title: 'My NPM profile stats',
+				content: 'NPM stats'
+			}
+		]
 	},
 	{
 		href: Routes.SLIDES,

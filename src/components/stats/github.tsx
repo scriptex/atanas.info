@@ -1,11 +1,14 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import ReactGitHubCalendar from 'react-ts-github-calendar';
 
 import github from '../../data/github-insights.json';
 
+import { Routes } from '../../data/routes';
 import { formatDate } from '../../scripts/shared';
+import { sectionStatsProps } from '.';
 import { GeneralInsight, YEARS } from './utils';
-import { Button, StatsEntry, StatsError, GithubSkyline } from '..';
+import { Button, Section, StatsEntry, StatsError, GithubSkyline } from '..';
 
 export const GithubStats: React.FC = () => {
 	const [current, setCurrent] = React.useState(-1);
@@ -73,7 +76,15 @@ export const GithubStats: React.FC = () => {
 	];
 
 	return (
-		<>
+		<Section
+			{...sectionStatsProps}
+			actions={
+				<Link to={Routes.STATS} className="c-btn">
+					Go back
+				</Link>
+			}
+			hasShell={false}
+		>
 			<StatsEntry data={blocks} title="Github profile statistics" />
 
 			<div className="c-section__entry">
@@ -112,7 +123,7 @@ export const GithubStats: React.FC = () => {
 					</div>
 				</div>
 			</div>
-		</>
+		</Section>
 	);
 };
 

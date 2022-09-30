@@ -403,6 +403,35 @@ exports[`App component Should render the App component 1`] = `
           >
             Stats
           </a>
+          <ul>
+            <li>
+              <a
+                class=""
+                href="/stats/github"
+                title="My Github profile stats"
+              >
+                Github stats
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/stats/gitlab"
+                title="My Gitlab profile stats"
+              >
+                Gitlab stats
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/stats/npm"
+                title="My NPM profile stats"
+              >
+                NPM stats
+              </a>
+            </li>
+          </ul>
         </li>
         <li>
           <a
@@ -749,6 +778,35 @@ exports[`App component Should render the App component 1`] = `
           >
             Stats
           </a>
+          <ul>
+            <li>
+              <a
+                class=""
+                href="/stats/github"
+                title="My Github profile stats"
+              >
+                Github stats
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/stats/gitlab"
+                title="My Gitlab profile stats"
+              >
+                Gitlab stats
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/stats/npm"
+                title="My NPM profile stats"
+              >
+                NPM stats
+              </a>
+            </li>
+          </ul>
         </li>
         <li>
           <a

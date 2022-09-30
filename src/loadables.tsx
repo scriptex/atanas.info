@@ -9,6 +9,9 @@ export const WebApplications = React.lazy(() => import('./components/portfolio/w
 export const MobileApplications = React.lazy(() => import('./components/portfolio/mobile'));
 export const AutomotiveApplications = React.lazy(() => import('./components/portfolio/automotive'));
 export const Stats = React.lazy(() => import('./components/stats'));
+export const GithubStats = React.lazy(() => import('./components/stats/github'));
+export const GitlabStats = React.lazy(() => import('./components/stats/gitlab'));
+export const NPMStats = React.lazy(() => import('./components/stats/npm'));
 export const Slides = React.lazy(() => import('./components/slides'));
 export const Videos = React.lazy(() => import('./components/videos'));
 export const Articles = React.lazy(() => import('./components/articles'));
