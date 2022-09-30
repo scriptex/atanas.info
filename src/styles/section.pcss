@@ -220,6 +220,7 @@
 
 	& .c-article-link {
 		padding-bottom: 75%;
+		border: 1px solid;
 	}
 }
 
@@ -324,6 +325,12 @@
 		top: auto !important;
 		right: auto;
 		margin-bottom: 2rem;
+	}
+
+	.c-section__grid {
+		& .o-grid__item + .o-grid__item {
+			padding-top: 0;
+		}
 	}
 }
 

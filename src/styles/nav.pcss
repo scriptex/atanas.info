@@ -196,9 +196,52 @@
 }
 
 @media (--mobile) {
-	.c-nav--inline ul {
-		column-count: 2;
-		column-gap: 0;
+	.c-nav {
+		& ul {
+			display: block;
+		}
+
+		& > ul {
+			overflow-x: hidden;
+			overflow-y: auto;
+			-webkit-overflow-scrolling: touch;
+		}
+
+		& a {
+			padding: 1rem;
+
+			&.active,
+			&.has-active:not(:only-child) {
+				& + ul {
+					display: block;
+				}
+			}
+		}
+
+		& li ul {
+			opacity: 1;
+			visibility: visible;
+			display: none;
+			position: static;
+			top: auto;
+			right: auto;
+
+			& a {
+				padding: 0.5rem 1rem;
+			}
+		}
+	}
+
+	.c-nav--inline {
+		& ul {
+			column-count: 2;
+			column-gap: 0;
+		}
+
+		& a,
+		& li ul a {
+			padding: 0;
+		}
 	}
 }
 
