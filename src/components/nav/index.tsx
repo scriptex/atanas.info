@@ -60,7 +60,7 @@ export const Nav: React.FC<Readonly<Props>> = ({ onClick, hasShell, className }:
 					<li key={i}>
 						<Anchor {...rest} onClick={onClick} />
 
-						{links && links.length && (
+						{links && links.length > 0 && (
 							<ul>
 								{links.map((link: MenuItem, j: number) => (
 									<li key={j}>

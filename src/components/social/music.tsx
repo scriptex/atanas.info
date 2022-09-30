@@ -6,6 +6,21 @@ import { formatDate } from '../../scripts/shared';
 import { ExternalLink } from '..';
 import { filteredData } from './utils';
 
+interface Props {
+	data: typeof lastFm['weeklyAlbumChart'] | typeof lastFm['topAlbums'];
+	period: 'week' | 'month';
+	condition: boolean;
+}
+
+export const SocialMusicCarousel: React.FC<Readonly<Props>> = ({ data, period, condition }: Props) =>
+	condition ? (
+		<div className="o-grid__item xs-12">
+			<h3>Top albums for last {period}:</h3>
+
+			<Carousel items={filteredData(data)} />
+		</div>
+	) : null;
+
 export const SocialMusic: React.FC = () => {
 	const { error, updated, topAlbums, weeklyAlbumChart } = lastFm;
 	const topAlbumsLength = topAlbums.length;
@@ -24,21 +39,13 @@ export const SocialMusic: React.FC = () => {
 			<div className="c-section__entry">
 				<div className="o-shell">
 					<div className="o-grid">
-						{weeklyAlbumChartLength > 0 && (
-							<div className="o-grid__item xs-12">
-								<h3>Top albums for last week:</h3>
+						<SocialMusicCarousel
+							data={weeklyAlbumChart}
+							period="week"
+							condition={weeklyAlbumChartLength > 0}
+						/>
 
-								<Carousel items={filteredData(weeklyAlbumChart)} />
-							</div>
-						)}
-
-						{topAlbumsLength > 0 && (
-							<div className="o-grid__item xs-12">
-								<h3>Top albums for last month:</h3>
-
-								<Carousel items={filteredData(topAlbums)} />
-							</div>
-						)}
+						<SocialMusicCarousel data={topAlbums} period="month" condition={topAlbumsLength > 0} />
 					</div>
 				</div>
 			</div>
