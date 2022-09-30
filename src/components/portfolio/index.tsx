@@ -1,33 +1,35 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
-import webApps from '../../data/projects-list.json';
 import portfolio from '../../data/lotties/portfolio.json';
-import { Button, Section, Animation, PortfolioWebApps, PortfolioMobileApps, PortfolioAutomotiveApps } from '..';
+import { Loader, Section, Animation } from '..';
+import { portfolioItems, PortfolioItem } from '../../data/projects';
 
-export const Portfolio: React.FC = () => {
-	const [itemsToShow, setItemsToShow] = React.useState(7);
-
-	return (
-		<Section
-			id="portfolio"
-			title="Portfolio"
-			actions={
-				itemsToShow >= webApps.length ? null : (
-					<Button onClick={() => setItemsToShow(itemsToShow + 6)}>Show more</Button>
-				)
-			}
-			hasButton
-			additionalElements={
-				<Animation data={portfolio} width={200} height={150} className="c-section__animation" />
-			}
-		>
-			<PortfolioMobileApps />
-
-			<PortfolioAutomotiveApps />
-
-			<PortfolioWebApps itemsToShow={itemsToShow} />
-		</Section>
-	);
+export const portfolioSectionProps = {
+	id: 'portfolio',
+	title: 'Portfolio',
+	hasButton: true,
+	additionalElements: <Animation data={portfolio} width={200} height={150} className="c-section__animation" />
 };
+
+export const Portfolio: React.FC = () => (
+	<Section {...portfolioSectionProps}>
+		<div className="c-section__grid o-grid">
+			{portfolioItems.map((item: PortfolioItem, index: number) => (
+				<div key={index} className="o-grid__item xs-12 sm-6 md-4 lg-4 xl-4">
+					<Link
+						to={item.url}
+						style={{ backgroundImage: `url(${item.image})` }}
+						className="c-article-link fullsize-background"
+					>
+						<strong>{item.text}</strong>
+					</Link>
+
+					<Loader />
+				</div>
+			))}
+		</div>
+	</Section>
+);
 
 export default Portfolio;

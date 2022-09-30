@@ -365,6 +365,35 @@ exports[`App component Should render the App component 1`] = `
           >
             Portfolio
           </a>
+          <ul>
+            <li>
+              <a
+                class=""
+                href="/portfolio/web-applications"
+                title="My web applications portfolio"
+              >
+                Web applications
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/portfolio/mobile-applications"
+                title="My mobile applications portfolio"
+              >
+                Mobile applications
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/portfolio/automotive-applications"
+                title="My automotive applications portfolio"
+              >
+                Automotive applications
+              </a>
+            </li>
+          </ul>
         </li>
         <li>
           <a
@@ -450,7 +479,6 @@ exports[`App component Should render the App component 1`] = `
         <li>
           <a
             href="/projects"
-            rel="noopener noreferrer"
             target="_blank"
             title="My open source projects"
           >
@@ -683,6 +711,35 @@ exports[`App component Should render the App component 1`] = `
           >
             Portfolio
           </a>
+          <ul>
+            <li>
+              <a
+                class=""
+                href="/portfolio/web-applications"
+                title="My web applications portfolio"
+              >
+                Web applications
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/portfolio/mobile-applications"
+                title="My mobile applications portfolio"
+              >
+                Mobile applications
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/portfolio/automotive-applications"
+                title="My automotive applications portfolio"
+              >
+                Automotive applications
+              </a>
+            </li>
+          </ul>
         </li>
         <li>
           <a
@@ -768,7 +825,6 @@ exports[`App component Should render the App component 1`] = `
         <li>
           <a
             href="/projects"
-            rel="noopener noreferrer"
             target="_blank"
             title="My open source projects"
           >

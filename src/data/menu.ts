@@ -4,6 +4,7 @@ export interface MenuItem {
 	rel?: string;
 	href: string;
 	title: string;
+	links?: MenuItem[];
 	target?: string;
 	content: string;
 }
@@ -32,7 +33,24 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 	{
 		href: Routes.PORTFOLIO,
 		title: 'My portfolio',
-		content: 'Portfolio'
+		content: 'Portfolio',
+		links: [
+			{
+				href: Routes.PORTFOLIO_WEB_APPS,
+				title: 'My web applications portfolio',
+				content: 'Web applications'
+			},
+			{
+				href: Routes.PORTFOLIO_MOBILE_APPS,
+				title: 'My mobile applications portfolio',
+				content: 'Mobile applications'
+			},
+			{
+				href: Routes.PORTFOLIO_AUTOMOTIVE_APPS,
+				title: 'My automotive applications portfolio',
+				content: 'Automotive applications'
+			}
+		]
 	},
 	{
 		href: Routes.STATS,

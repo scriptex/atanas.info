@@ -51,7 +51,7 @@ export const PortfolioSliders: React.FC<Readonly<Props>> = ({ data, className, s
 				>
 					{app.images.map((img: string, j: number) => (
 						<div key={j}>
-							<img src={`images/temp/${img}`} alt={`${app.title} screenshot ${j + 1}`} loading="lazy" />
+							<img src={`/images/temp/${img}`} alt={`${app.title} screenshot ${j + 1}`} loading="lazy" />
 						</div>
 					))}
 				</Slider>

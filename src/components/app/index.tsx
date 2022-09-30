@@ -21,7 +21,10 @@ import {
 	ErrorPage,
 	Portfolio,
 	Certificates,
-	InteractiveResume
+	WebApplications,
+	InteractiveResume,
+	MobileApplications,
+	AutomotiveApplications
 } from '../../loadables';
 
 export const AppContext = React.createContext({
@@ -35,6 +38,9 @@ export const routes = [
 	{ path: AppRoutes.TIMELINE, element: <Timeline /> },
 	{ path: AppRoutes.SKILLS, element: <Skills /> },
 	{ path: AppRoutes.PORTFOLIO, element: <Portfolio /> },
+	{ path: AppRoutes.PORTFOLIO_WEB_APPS, element: <WebApplications /> },
+	{ path: AppRoutes.PORTFOLIO_MOBILE_APPS, element: <MobileApplications /> },
+	{ path: AppRoutes.PORTFOLIO_AUTOMOTIVE_APPS, element: <AutomotiveApplications /> },
 	{ path: AppRoutes.STATS, element: <Stats /> },
 	{ path: AppRoutes.SLIDES, element: <Slides /> },
 	{ path: AppRoutes.VIDEOS, element: <Videos /> },
