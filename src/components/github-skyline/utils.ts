@@ -22,7 +22,7 @@ export interface GithubSkylineProps {
 }
 
 export const onSceneMount = (args: SceneEventArgs, props: GithubSkylineProps, onLoad: () => void): void => {
-	SceneLoader.Append('./stl/', props.file, args.scene, (scene: SceneCore) => {
+	SceneLoader.Append(`${ROOT}/`, props.file, args.scene, (scene: SceneCore) => {
 		const cubeTexture = CubeTexture.CreateFromPrefilteredData(`${ROOT}/texture.dds`, scene);
 		const skySphere = Mesh.CreateSphere('skySphere', 8, SIZE, scene);
 		const skySphereMaterial = new StandardMaterial('skySphereMaterial', scene);
