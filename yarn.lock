@@ -10805,6 +10805,15 @@ postcss@8.4.16:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
+postcss@8.4.17:
+  version "8.4.17"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.17.tgz#f87863ec7cd353f81f7ab2dec5d67d861bbb1be5"
+  integrity sha512-UNxNOLQydcOFi41yHNMcKRZ39NeXlr8AxGuZJsdub8vIb12fHzcq37DTU/QtbI6WLxNg2gF9Z+8qtRwTj1UI1Q==
+  dependencies:
+    nanoid "^3.3.4"
+    picocolors "^1.0.0"
+    source-map-js "^1.0.2"
+
 postcss@^5.0.0, postcss@^5.0.21, postcss@^5.0.4:
   version "5.2.18"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.18.tgz#badfa1497d46244f6390f58b319830d9107853c5"
@@ -12521,10 +12530,10 @@ stylelint-config-recommended@9.0.0:
   resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-9.0.0.tgz#1c9e07536a8cd875405f8ecef7314916d94e7e40"
   integrity sha512-9YQSrJq4NvvRuTbzDsWX3rrFOzOlYBmZP+o513BJN/yfEmGSr0AxdvrWs0P/ilSpVV/wisamAHu5XSk8Rcf4CQ==
 
-stylelint-no-unsupported-browser-features@5.0.4:
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/stylelint-no-unsupported-browser-features/-/stylelint-no-unsupported-browser-features-5.0.4.tgz#49006462965b62d6384c40eab9403e292c6f3375"
-  integrity sha512-05DeIsWv262DXTSWhbQURDOxno9Tsu81sNnOpG1gD39WT+NNsEjhR2BQvwvNpZ/J/lS8vHxjhHULU2OGKSswvA==
+stylelint-no-unsupported-browser-features@6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/stylelint-no-unsupported-browser-features/-/stylelint-no-unsupported-browser-features-6.0.1.tgz#a816b72bfdf7d1c4ffcf2f6a4f3524442a4a8e7b"
+  integrity sha512-cuhp3gU+SMp0I5dCykjQ0iSTtBsWeA7qNZlNBYnCW7L4KPudunRYyGQ8gcClRJtFpGkElQUtsfLMALNFZVdEFw==
   dependencies:
     doiuse "^4.4.1"
     lodash "^4.17.15"
