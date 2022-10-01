@@ -6,20 +6,21 @@ import github from '../../data/github-insights.json';
 
 import { Routes } from '../../data/routes';
 import { formatDate } from '../../scripts/shared';
+import { GithubInsights, GithubRepository } from '../../scripts/types';
 import { sectionStatsProps } from '.';
 import { GeneralInsight, YEARS } from './utils';
 import { Button, Section, StatsEntry, StatsError, GithubSkyline } from '..';
 
 export const GithubStats: React.FC = () => {
 	const [current, setCurrent] = React.useState(-1);
-	const { error, general, calendar, updated, repositories } = github;
+	const { error, general, calendar, updated, repositories }: GithubInsights = github;
 
 	if (error) {
 		return <StatsError network="Github" />;
 	}
 
 	const calendarDates = Object.keys(calendar).reduce((result: string[], key: string) => {
-		if (Object.keys((calendar as any)[key]).length === 0) {
+		if (Object.keys(calendar[key]).length === 0) {
 			return result;
 		}
 
@@ -30,7 +31,10 @@ export const GithubStats: React.FC = () => {
 		{
 			title: 'Used languages',
 			value: repositories
-				.reduce((result: any[], repo: any) => Array.from(new Set([...result, repo.language])), [])
+				.reduce(
+					(result: string[], repo: GithubRepository) => Array.from(new Set([...result, repo.language || ''])),
+					[]
+				)
 				.filter(Boolean)
 				.join(', ')
 		},
@@ -51,7 +55,7 @@ export const GithubStats: React.FC = () => {
 		{ title: 'Public gists', value: general.publicGists },
 		{
 			title: 'Total contributions',
-			value: repositories.reduce((result: number, repo: any) => {
+			value: repositories.reduce((result: number, repo: GithubRepository) => {
 				const contributor = repo.contributions.find(({ user }: { user: string }) => {
 					user = user.toLowerCase();
 
@@ -67,11 +71,11 @@ export const GithubStats: React.FC = () => {
 		},
 		{
 			title: 'Total stars',
-			value: repositories.reduce((result: number, repo: any) => result + repo.stargazers, 0)
+			value: repositories.reduce((result: number, repo: GithubRepository) => result + repo.stargazers, 0)
 		},
 		{
 			title: 'Total issues',
-			value: repositories.reduce((result: number, repo: any) => result + repo.issues, 0)
+			value: repositories.reduce((result: number, repo: GithubRepository) => result + repo.issues, 0)
 		}
 	];
 

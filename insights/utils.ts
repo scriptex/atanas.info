@@ -37,16 +37,21 @@ export const getContributions = async (url = 'https://github.com/scriptex'): Pro
 
 			return $('rect')
 				.get()
-				.reduce(
-					(data, rect) => ({
+				.reduce((data, rect) => {
+					const date = $(rect).data('date') as string | void;
+
+					if (!date) {
+						return data;
+					}
+
+					return {
 						...data,
-						[$(rect).data('date') as string]: {
+						[date]: {
 							count: $(rect).data('count'),
 							color: $(rect).attr('fill')
 						}
-					}),
-					{}
-				);
+					};
+				}, {});
 		});
 
 export const getCalendar = async (
