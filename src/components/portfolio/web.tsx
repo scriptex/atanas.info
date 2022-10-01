@@ -20,6 +20,8 @@ export const PortfolioWebApps: React.FC = () => {
 						Go back
 					</Link>
 
+					<br className="visible-xs-block" />
+
 					{itemsToShow >= webApps.length ? null : (
 						<Button onClick={() => setItemsToShow(itemsToShow + 6)}>Show more</Button>
 					)}

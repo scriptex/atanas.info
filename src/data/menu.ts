@@ -37,18 +37,18 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 		links: [
 			{
 				href: Routes.PORTFOLIO_WEB_APPS,
-				title: 'My web applications portfolio',
-				content: 'Web applications'
+				title: 'My web apps portfolio',
+				content: 'Web'
 			},
 			{
 				href: Routes.PORTFOLIO_MOBILE_APPS,
-				title: 'My mobile applications portfolio',
-				content: 'Mobile applications'
+				title: 'My mobile apps portfolio',
+				content: 'Mobile'
 			},
 			{
 				href: Routes.PORTFOLIO_AUTOMOTIVE_APPS,
-				title: 'My automotive applications portfolio',
-				content: 'Automotive applications'
+				title: 'My automotive apps portfolio',
+				content: 'Automotive'
 			}
 		]
 	},
@@ -60,17 +60,17 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 			{
 				href: Routes.STATS_GITHUB,
 				title: 'My Github profile stats',
-				content: 'Github stats'
+				content: 'Github'
 			},
 			{
 				href: Routes.STATS_GITLAB,
 				title: 'My Gitlab profile stats',
-				content: 'Gitlab stats'
+				content: 'Gitlab'
 			},
 			{
 				href: Routes.STATS_NPM,
 				title: 'My NPM profile stats',
-				content: 'NPM stats'
+				content: 'NPM'
 			}
 		]
 	},
