@@ -342,6 +342,44 @@ exports[`HeaderComponent component Should render the HeaderComponent component 1
         <li>
           <a
             class=""
+            href="/portfolio"
+            title="My portfolio"
+          >
+            Portfolio
+          </a>
+          <ul>
+            <li>
+              <a
+                class=""
+                href="/portfolio/web-applications"
+                title="My web apps portfolio"
+              >
+                Web
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/portfolio/mobile-applications"
+                title="My mobile apps portfolio"
+              >
+                Mobile
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/portfolio/automotive-applications"
+                title="My automotive apps portfolio"
+              >
+                Automotive
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a
+            class=""
             href="/timeline"
             title="Life events"
           >
@@ -360,20 +398,40 @@ exports[`HeaderComponent component Should render the HeaderComponent component 1
         <li>
           <a
             class=""
-            href="/portfolio"
-            title="My portfolio"
-          >
-            Portfolio
-          </a>
-        </li>
-        <li>
-          <a
-            class=""
             href="/stats"
             title="My stats"
           >
             Stats
           </a>
+          <ul>
+            <li>
+              <a
+                class=""
+                href="/stats/github"
+                title="My Github profile stats"
+              >
+                Github
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/stats/gitlab"
+                title="My Gitlab profile stats"
+              >
+                Gitlab
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/stats/npm"
+                title="My NPM profile stats"
+              >
+                NPM
+              </a>
+            </li>
+          </ul>
         </li>
         <li>
           <a
@@ -450,7 +508,6 @@ exports[`HeaderComponent component Should render the HeaderComponent component 1
         <li>
           <a
             href="/projects"
-            rel="noopener noreferrer"
             target="_blank"
             title="My open source projects"
           >

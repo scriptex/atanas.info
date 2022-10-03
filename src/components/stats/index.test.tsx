@@ -1,6 +1,8 @@
 import * as React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import { Stats } from '.';
+import { NPMStats } from './npm';
 import { GitlabStats } from './gitlab';
 import { GithubStats } from './github';
 import { snapshotTest } from '../test-helpers';
@@ -142,6 +144,30 @@ afterAll(() => {
 	jest.resetAllMocks();
 });
 
-snapshotTest(Stats);
-snapshotTest(GithubStats);
-snapshotTest(GitlabStats);
+const StatsComponent: React.FC = () => (
+	<Router>
+		<Stats />
+	</Router>
+);
+
+const GithubStatsComponent: React.FC = () => (
+	<Router>
+		<GithubStats />
+	</Router>
+);
+
+const GitlabStatsComponent: React.FC = () => (
+	<Router>
+		<GitlabStats />
+	</Router>
+);
+
+const NPMStatsComponent: React.FC = () => (
+	<Router>
+		<NPMStats />
+	</Router>
+);
+
+[StatsComponent, GithubStatsComponent, GitlabStatsComponent, NPMStatsComponent].forEach(Component =>
+	snapshotTest(Component)
+);

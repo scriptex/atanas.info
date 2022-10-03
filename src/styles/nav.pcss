@@ -28,10 +28,13 @@
 	& ul {
 		width: 20rem;
 		height: 100%;
-		@mixin flex-column wrap;
+		@mixin flex-column nowrap;
 		position: relative;
 		z-index: 2;
 		margin: 0 0 0 auto;
+		overflow-x: hidden;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
 		transform: translateX(100%);
 	}
 
@@ -45,6 +48,21 @@
 		opacity: 0;
 		border-left: 1px solid;
 		transform: translateX(100%);
+
+		& ul {
+			font-size: 75%;
+			height: auto;
+			flex-flow: row nowrap;
+			opacity: 1;
+			visibility: visible;
+			transform: none;
+
+			& li {
+				width: auto;
+				flex: 1;
+				border-top: 1px solid;
+			}
+		}
 	}
 
 	& li + li {
@@ -53,18 +71,28 @@
 
 	& a {
 		color: var(--color-primary);
-		height: 100%;
-		@mixin flex-row nowrap, center, center;
 		text-decoration: none;
+		@mixin flex-row nowrap, center, center;
+		padding: 0.5rem;
 		background-color: var(--color-secondary);
 
 		& svg {
 			transition: none;
 		}
 
-		&.active {
+		&:only-child {
+			height: 100%;
+		}
+
+		&.active,
+		&.has-active:not(:only-child) {
 			color: var(--color-action);
 			background-color: var(--color-primary);
+
+			& + ul {
+				opacity: 1;
+				visibility: visible;
+			}
 		}
 	}
 }
@@ -113,9 +141,29 @@
 		border: 0;
 		transform: none;
 		transition: none;
+		break-inside: avoid;
 
 		& + li {
 			border: 0;
+		}
+
+		& ul {
+			font-size: 90%;
+			columns: 1;
+			column-gap: 0;
+			margin: 0.5rem 0 -0.5rem 0.5rem;
+
+			& li {
+				border: 0;
+
+				&::before {
+					content: '- \00a0';
+				}
+			}
+
+			& a {
+				padding: 0;
+			}
 		}
 	}
 
@@ -126,7 +174,8 @@
 		padding: 0;
 		background-color: transparent;
 
-		&.active {
+		&.active,
+		&.has-active:not(:only-child) {
 			color: inherit;
 			text-decoration: underline;
 			text-decoration-color: var(--color-action);
@@ -150,9 +199,11 @@
 }
 
 @media (--mobile) {
-	.c-nav--inline ul {
-		column-count: 2;
-		column-gap: 0;
+	.c-nav--inline {
+		& ul {
+			column-count: 2;
+			column-gap: 0;
+		}
 	}
 }
 
@@ -197,7 +248,7 @@
 	& .c-nav {
 		pointer-events: all;
 
-		& ul,
+		& > ul,
 		&::before {
 			opacity: 1;
 			visibility: visible;

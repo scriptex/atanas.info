@@ -6,10 +6,12 @@ import * as githubInsights from '../src/data/github-insights.json';
 
 interface Insights {
 	error?: boolean;
-	repositories?: {
-		name: string;
-		has_pages: boolean;
-	}[];
+	repositories:
+		| {
+				name: string;
+				has_pages: boolean;
+		  }[]
+		| null;
 }
 
 const insights: Insights = githubInsights;

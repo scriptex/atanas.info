@@ -1,12 +1,18 @@
 import * as React from 'react';
-
 import { format } from 'date-fns';
-
-import { addTitles } from './utils';
 
 import { Ref } from '../../scripts/shared';
 import statistics from '../../data/lotties/statistics.json';
-import { Section, NPMStats, Animation, GithubStats, GitlabStats } from '..';
+import { addTitles } from './utils';
+import { statsItems } from '../../data/projects';
+import { Section, Animation, SectionGrid } from '..';
+
+export const sectionStatsProps = {
+	id: 'stats',
+	title: 'Stats',
+	hasButton: true,
+	additionalElements: <Animation data={statistics} width={150} height={150} className="c-section__animation" />
+};
 
 export const Stats: React.FC = () => {
 	const timeout: Ref<NodeJS.Timeout> = React.useRef(null);
@@ -36,21 +42,8 @@ export const Stats: React.FC = () => {
 	}, []);
 
 	return (
-		<Section
-			id="stats"
-			title="Stats"
-			hasShell={false}
-			hasButton
-			className="circles"
-			additionalElements={
-				<Animation data={statistics} width={150} height={150} className="c-section__animation" />
-			}
-		>
-			<GithubStats />
-
-			<GitlabStats />
-
-			<NPMStats />
+		<Section {...sectionStatsProps} hasShell={true}>
+			<SectionGrid data={statsItems} />
 		</Section>
 	);
 };

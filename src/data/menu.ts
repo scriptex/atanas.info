@@ -4,6 +4,7 @@ export interface MenuItem {
 	rel?: string;
 	href: string;
 	title: string;
+	links?: MenuItem[];
 	target?: string;
 	content: string;
 }
@@ -20,6 +21,28 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 		content: 'About'
 	},
 	{
+		href: Routes.PORTFOLIO,
+		title: 'My portfolio',
+		content: 'Portfolio',
+		links: [
+			{
+				href: Routes.PORTFOLIO_WEB_APPS,
+				title: 'My web apps portfolio',
+				content: 'Web'
+			},
+			{
+				href: Routes.PORTFOLIO_MOBILE_APPS,
+				title: 'My mobile apps portfolio',
+				content: 'Mobile'
+			},
+			{
+				href: Routes.PORTFOLIO_AUTOMOTIVE_APPS,
+				title: 'My automotive apps portfolio',
+				content: 'Automotive'
+			}
+		]
+	},
+	{
 		href: Routes.TIMELINE,
 		title: 'Life events',
 		content: 'Timeline'
@@ -29,15 +52,28 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 		title: 'My skills',
 		content: 'Skills'
 	},
-	{
-		href: Routes.PORTFOLIO,
-		title: 'My portfolio',
-		content: 'Portfolio'
-	},
+
 	{
 		href: Routes.STATS,
 		title: 'My stats',
-		content: 'Stats'
+		content: 'Stats',
+		links: [
+			{
+				href: Routes.STATS_GITHUB,
+				title: 'My Github profile stats',
+				content: 'Github'
+			},
+			{
+				href: Routes.STATS_GITLAB,
+				title: 'My Gitlab profile stats',
+				content: 'Gitlab'
+			},
+			{
+				href: Routes.STATS_NPM,
+				title: 'My NPM profile stats',
+				content: 'NPM'
+			}
+		]
 	},
 	{
 		href: Routes.SLIDES,

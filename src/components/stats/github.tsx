@@ -1,33 +1,41 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import ReactGitHubCalendar from 'react-ts-github-calendar';
 
 import github from '../../data/github-insights.json';
 
+import { Routes } from '../../data/routes';
 import { formatDate } from '../../scripts/shared';
+import { GithubInsights, GithubRepository } from '../../scripts/types';
+import { sectionStatsProps } from '.';
 import { GeneralInsight, YEARS } from './utils';
-import { Button, StatsEntry, StatsError, GithubSkyline } from '..';
+import { Button, Section, StatsEntry, StatsError, GithubSkyline } from '..';
 
-export const GithubStats: React.FC = () => {
-	const [current, setCurrent] = React.useState(-1);
-	const { error, general, calendar, updated, repositories } = github;
-
-	if (error) {
-		return <StatsError network="Github" />;
+export const extractGithubData = ({
+	general,
+	calendar,
+	repositories
+}: Pick<GithubInsights, 'general' | 'calendar' | 'repositories'>): GeneralInsight[] => {
+	if (!general || !calendar || !repositories) {
+		return [];
 	}
 
 	const calendarDates = Object.keys(calendar).reduce((result: string[], key: string) => {
-		if (Object.keys((calendar as any)[key]).length === 0) {
+		if (Object.keys(calendar[key]).length === 0) {
 			return result;
 		}
 
 		return [...result, key];
 	}, []);
 
-	const blocks: GeneralInsight[] = [
+	return [
 		{
 			title: 'Used languages',
 			value: repositories
-				.reduce((result: any[], repo: any) => Array.from(new Set([...result, repo.language])), [])
+				.reduce(
+					(result: string[], repo: GithubRepository) => Array.from(new Set([...result, repo.language || ''])),
+					[]
+				)
 				.filter(Boolean)
 				.join(', ')
 		},
@@ -48,7 +56,7 @@ export const GithubStats: React.FC = () => {
 		{ title: 'Public gists', value: general.publicGists },
 		{
 			title: 'Total contributions',
-			value: repositories.reduce((result: number, repo: any) => {
+			value: repositories.reduce((result: number, repo: GithubRepository) => {
 				const contributor = repo.contributions.find(({ user }: { user: string }) => {
 					user = user.toLowerCase();
 
@@ -64,16 +72,35 @@ export const GithubStats: React.FC = () => {
 		},
 		{
 			title: 'Total stars',
-			value: repositories.reduce((result: number, repo: any) => result + repo.stargazers, 0)
+			value: repositories.reduce((result: number, repo: GithubRepository) => result + repo.stargazers, 0)
 		},
 		{
 			title: 'Total issues',
-			value: repositories.reduce((result: number, repo: any) => result + repo.issues, 0)
+			value: repositories.reduce((result: number, repo: GithubRepository) => result + repo.issues, 0)
 		}
 	];
+};
+
+export const GithubStats: React.FC = () => {
+	const [current, setCurrent] = React.useState(-1);
+	const { error, updated, ...rest }: GithubInsights = github;
+
+	if (error) {
+		return <StatsError network="Github" />;
+	}
+
+	const blocks: GeneralInsight[] = extractGithubData(rest);
 
 	return (
-		<>
+		<Section
+			{...sectionStatsProps}
+			actions={
+				<Link to={Routes.STATS} className="c-btn">
+					Go back
+				</Link>
+			}
+			hasShell={false}
+		>
 			<StatsEntry data={blocks} title="Github profile statistics" />
 
 			<div className="c-section__entry">
@@ -112,7 +139,7 @@ export const GithubStats: React.FC = () => {
 					</div>
 				</div>
 			</div>
-		</>
+		</Section>
 	);
 };
 

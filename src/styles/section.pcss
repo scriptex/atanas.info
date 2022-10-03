@@ -213,6 +213,17 @@
 	right: 0;
 }
 
+.c-section__grid {
+	& .o-grid__item {
+		position: relative;
+	}
+
+	& .c-article-link {
+		padding-bottom: 75%;
+		border: 1px solid;
+	}
+}
+
 @media (--tablet-portrait) {
 	.c-section__actions-list {
 		width: 70vw;
@@ -314,6 +325,12 @@
 		top: auto !important;
 		right: auto;
 		margin-bottom: 2rem;
+	}
+
+	.c-section__grid {
+		& .o-grid__item + .o-grid__item {
+			padding-top: 0;
+		}
 	}
 }
 

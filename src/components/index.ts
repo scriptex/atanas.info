@@ -46,7 +46,7 @@ export { default as ResumeStrengths } from './resume/strengths';
 export { default as ResumeSummary } from './resume/summary';
 export { default as ResumeTitle } from './resume/title';
 export { default as ScrollToTop } from './scroll-top';
-export { default as Section } from './section';
+export { default as Section, SectionGrid } from './section';
 export { default as SectionNav } from './section-nav';
 export { default as Skills } from './skills';
 export { default as Slides } from './slides';

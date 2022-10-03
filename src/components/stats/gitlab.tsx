@@ -1,24 +1,29 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import GitlabCalendar from 'gitlab-calendar';
 
 import gitlab from '../../data/gitlab-insights.json';
 import gitlabCalendarData from '../../data/gitlab-calendar.json';
 
+import { Routes } from '../../data/routes';
 import { GeneralInsight } from './utils';
 import { Ref, formatDate } from '../../scripts/shared';
-import { StatsEntry, StatsError } from '..';
+import { sectionStatsProps } from '.';
+import { Section, StatsEntry, StatsError } from '..';
+import { GitlabInsights, GitlabRepository } from '../../scripts/types';
 
-export const GitlabStats: React.FC = () => {
-	const { error, general, calendar, updated, repositories } = gitlab;
-	const calendarPlaceholder1: Ref<HTMLDivElement> = React.useRef(null);
-	const calendarPlaceholder2: Ref<HTMLDivElement> = React.useRef(null);
+export const extractGitlabData = ({ general, calendar, repositories }: GitlabInsights): GeneralInsight[] => {
+	if (!repositories || !general || !calendar) {
+		return [];
+	}
 
-	const blocks: GeneralInsight[] = [
+	return [
 		{
 			title: 'Used languages',
 			value: repositories
 				.reduce(
-					(result: any[], repo: any) => Array.from(new Set([...result, ...Object.keys(repo.languages)])),
+					(result: string[], repo: GitlabRepository) =>
+						Array.from(new Set([...result, ...Object.keys(repo.languages)])),
 					[]
 				)
 				.filter(Boolean)
@@ -32,22 +37,41 @@ export const GitlabStats: React.FC = () => {
 			value: Object.values<number>(calendar).reduce((total: number, value: number) => total + value, 0)
 		},
 		{ title: 'Total repositories', value: repositories.length },
-		{ title: 'Public repositories', value: repositories.filter((r: any) => !r.private).length },
-		{ title: 'Private repositories', value: repositories.filter((r: any) => r.private).length },
-		{ title: 'Personal repositories', value: repositories.filter((r: any) => r.owner === 'scriptex').length },
-		{ title: 'Organizations repositories', value: repositories.filter((r: any) => r.owner !== 'scriptex').length },
+		{
+			title: 'Public repositories',
+			value: repositories.filter((r: GitlabRepository) => !r.private).length
+		},
+		{
+			title: 'Private repositories',
+			value: repositories.filter((r: GitlabRepository) => r.private).length
+		},
+		{
+			title: 'Personal repositories',
+			value: repositories.filter((r: GitlabRepository) => r.owner === 'scriptex').length
+		},
+		{
+			title: 'Organizations repositories',
+			value: repositories.filter((r: GitlabRepository) => r.owner !== 'scriptex').length
+		},
 		{
 			title: 'Total stars',
-			value: repositories.reduce((result: number, repo: any) => result + repo.stargazers, 0)
+			value: repositories.reduce((result: number, repo: GitlabRepository) => result + repo.stargazers, 0)
 		},
 		{
 			title: 'Total issues',
-			value: repositories.reduce((result: number, repo: any) => result + repo.issues || 0, 0)
+			value: repositories.reduce((result: number, repo: GitlabRepository) => result + (repo.issues || 0), 0)
 		}
 	];
+};
+
+export const GitlabStats: React.FC = () => {
+	const { error, calendar, updated }: GitlabInsights = gitlab;
+	const calendarPlaceholder1: Ref<HTMLDivElement> = React.useRef(null);
+	const calendarPlaceholder2: Ref<HTMLDivElement> = React.useRef(null);
+	const blocks = extractGitlabData(gitlab);
 
 	React.useEffect(() => {
-		if (calendarPlaceholder1.current) {
+		if (calendarPlaceholder1.current && !!calendar) {
 			new GitlabCalendar(calendarPlaceholder1.current, calendar, {});
 		}
 
@@ -56,12 +80,20 @@ export const GitlabStats: React.FC = () => {
 		}
 	}, []);
 
-	if (error) {
+	if (error || blocks.length === 0) {
 		return <StatsError network="Gitlab" />;
 	}
 
 	return (
-		<>
+		<Section
+			{...sectionStatsProps}
+			actions={
+				<Link to={Routes.STATS} className="c-btn">
+					Go back
+				</Link>
+			}
+			hasShell={false}
+		>
 			<StatsEntry data={blocks} title="Gitlab profile statistics" />
 
 			<div className="c-section__entry">
@@ -87,7 +119,7 @@ export const GitlabStats: React.FC = () => {
 					</div>
 				</div>
 			</div>
-		</>
+		</Section>
 	);
 };
 

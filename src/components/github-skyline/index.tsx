@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import * as React from 'react';
 import '@babylonjs/loaders';
 import { Vector3 } from '@babylonjs/core';
