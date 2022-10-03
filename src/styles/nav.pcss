@@ -28,10 +28,13 @@
 	& ul {
 		width: 20rem;
 		height: 100%;
-		@mixin flex-column wrap;
+		@mixin flex-column nowrap;
 		position: relative;
 		z-index: 2;
 		margin: 0 0 0 auto;
+		overflow-x: hidden;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
 		transform: translateX(100%);
 	}
 
@@ -47,19 +50,17 @@
 		transform: translateX(100%);
 
 		& ul {
+			font-size: 75%;
 			height: auto;
-			opacity: 0;
-			visibility: hidden;
-			position: absolute;
-			top: 0;
-			right: 100%;
-			z-index: 2;
-			border-width: 1px 0;
-			border-style: solid;
-			margin-top: -1px;
+			flex-flow: row nowrap;
+			opacity: 1;
+			visibility: visible;
+			transform: none;
 
-			& a {
-				padding: 1rem 0;
+			& li {
+				width: auto;
+				flex: 1;
+				border-top: 1px solid;
 			}
 		}
 	}
@@ -70,13 +71,17 @@
 
 	& a {
 		color: var(--color-primary);
-		height: 100%;
-		@mixin flex-row nowrap, center, center;
 		text-decoration: none;
+		@mixin flex-row nowrap, center, center;
+		padding: 0.5rem;
 		background-color: var(--color-secondary);
 
 		& svg {
 			transition: none;
+		}
+
+		&:only-child {
+			height: 100%;
 		}
 
 		&.active,
@@ -143,16 +148,18 @@
 		}
 
 		& ul {
-			display: none;
-			opacity: 1;
-			visibility: visible;
-			position: static;
-			top: auto;
-			right: auto;
-			border: 0;
-			margin: 0.5rem 0 -0.5rem 0.5rem;
+			font-size: 90%;
 			columns: 1;
 			column-gap: 0;
+			margin: 0.5rem 0 -0.5rem 0.5rem;
+
+			& li {
+				border: 0;
+
+				&::before {
+					content: '- \00a0';
+				}
+			}
 
 			& a {
 				padding: 0;
@@ -173,10 +180,6 @@
 			text-decoration: underline;
 			text-decoration-color: var(--color-action);
 			background-color: transparent;
-
-			& + ul {
-				display: block;
-			}
 		}
 	}
 }
@@ -196,58 +199,11 @@
 }
 
 @media (--mobile) {
-	.c-nav {
-		& ul {
-			display: block;
-		}
-
-		& > ul {
-			overflow-x: hidden;
-			overflow-y: auto;
-			-webkit-overflow-scrolling: touch;
-		}
-
-		& a {
-			padding: 1rem;
-
-			&.active,
-			&.has-active:not(:only-child) {
-				& + ul {
-					display: block;
-				}
-			}
-		}
-
-		& li ul {
-			opacity: 1;
-			visibility: visible;
-			display: none;
-			position: static;
-			top: auto;
-			right: auto;
-
-			& a {
-				padding: 0.5rem 1rem;
-			}
-		}
-	}
-
 	.c-nav--inline {
 		& ul {
 			column-count: 2;
 			column-gap: 0;
 		}
-
-		& a,
-		& li ul a {
-			padding: 0;
-		}
-	}
-}
-
-@media (max-width: 374px) {
-	.c-nav--inline ul {
-		column-count: 1;
 	}
 }
 

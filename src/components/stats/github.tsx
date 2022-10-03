@@ -11,12 +11,13 @@ import { sectionStatsProps } from '.';
 import { GeneralInsight, YEARS } from './utils';
 import { Button, Section, StatsEntry, StatsError, GithubSkyline } from '..';
 
-export const GithubStats: React.FC = () => {
-	const [current, setCurrent] = React.useState(-1);
-	const { error, general, calendar, updated, repositories }: GithubInsights = github;
-
-	if (error) {
-		return <StatsError network="Github" />;
+export const extractGithubData = ({
+	general,
+	calendar,
+	repositories
+}: Pick<GithubInsights, 'general' | 'calendar' | 'repositories'>): GeneralInsight[] => {
+	if (!general || !calendar || !repositories) {
+		return [];
 	}
 
 	const calendarDates = Object.keys(calendar).reduce((result: string[], key: string) => {
@@ -27,7 +28,7 @@ export const GithubStats: React.FC = () => {
 		return [...result, key];
 	}, []);
 
-	const blocks: GeneralInsight[] = [
+	return [
 		{
 			title: 'Used languages',
 			value: repositories
@@ -78,6 +79,17 @@ export const GithubStats: React.FC = () => {
 			value: repositories.reduce((result: number, repo: GithubRepository) => result + repo.issues, 0)
 		}
 	];
+};
+
+export const GithubStats: React.FC = () => {
+	const [current, setCurrent] = React.useState(-1);
+	const { error, updated, ...rest }: GithubInsights = github;
+
+	if (error) {
+		return <StatsError network="Github" />;
+	}
+
+	const blocks: GeneralInsight[] = extractGithubData(rest);
 
 	return (
 		<Section

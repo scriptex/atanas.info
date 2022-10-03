@@ -12,68 +12,63 @@ import { sectionStatsProps } from '.';
 import { Section, StatsEntry, StatsError } from '..';
 import { GitlabInsights, GitlabRepository } from '../../scripts/types';
 
+export const extractGitlabData = ({ general, calendar, repositories }: GitlabInsights): GeneralInsight[] => {
+	if (!repositories || !general || !calendar) {
+		return [];
+	}
+
+	return [
+		{
+			title: 'Used languages',
+			value: repositories
+				.reduce(
+					(result: string[], repo: GitlabRepository) =>
+						Array.from(new Set([...result, ...Object.keys(repo.languages)])),
+					[]
+				)
+				.filter(Boolean)
+				.join(', ')
+		},
+
+		{ title: 'Joined date', value: formatDate(general.createdAt) },
+		{ title: 'Last active', value: formatDate(general.updatedAt) },
+		{
+			title: 'Last year contributions',
+			value: Object.values<number>(calendar).reduce((total: number, value: number) => total + value, 0)
+		},
+		{ title: 'Total repositories', value: repositories.length },
+		{
+			title: 'Public repositories',
+			value: repositories.filter((r: GitlabRepository) => !r.private).length
+		},
+		{
+			title: 'Private repositories',
+			value: repositories.filter((r: GitlabRepository) => r.private).length
+		},
+		{
+			title: 'Personal repositories',
+			value: repositories.filter((r: GitlabRepository) => r.owner === 'scriptex').length
+		},
+		{
+			title: 'Organizations repositories',
+			value: repositories.filter((r: GitlabRepository) => r.owner !== 'scriptex').length
+		},
+		{
+			title: 'Total stars',
+			value: repositories.reduce((result: number, repo: GitlabRepository) => result + repo.stargazers, 0)
+		},
+		{
+			title: 'Total issues',
+			value: repositories.reduce((result: number, repo: GitlabRepository) => result + (repo.issues || 0), 0)
+		}
+	];
+};
+
 export const GitlabStats: React.FC = () => {
-	const { error, general, calendar, updated, repositories }: GitlabInsights = gitlab;
+	const { error, calendar, updated }: GitlabInsights = gitlab;
 	const calendarPlaceholder1: Ref<HTMLDivElement> = React.useRef(null);
 	const calendarPlaceholder2: Ref<HTMLDivElement> = React.useRef(null);
-
-	const blocks: GeneralInsight[] =
-		!!repositories && !!general && !!calendar
-			? [
-					{
-						title: 'Used languages',
-						value: repositories
-							.reduce(
-								(result: string[], repo: GitlabRepository) =>
-									Array.from(new Set([...result, ...Object.keys(repo.languages)])),
-								[]
-							)
-							.filter(Boolean)
-							.join(', ')
-					},
-
-					{ title: 'Joined date', value: formatDate(general.createdAt) },
-					{ title: 'Last active', value: formatDate(general.updatedAt) },
-					{
-						title: 'Last year contributions',
-						value: Object.values<number>(calendar).reduce(
-							(total: number, value: number) => total + value,
-							0
-						)
-					},
-					{ title: 'Total repositories', value: repositories.length },
-					{
-						title: 'Public repositories',
-						value: repositories.filter((r: GitlabRepository) => !r.private).length
-					},
-					{
-						title: 'Private repositories',
-						value: repositories.filter((r: GitlabRepository) => r.private).length
-					},
-					{
-						title: 'Personal repositories',
-						value: repositories.filter((r: GitlabRepository) => r.owner === 'scriptex').length
-					},
-					{
-						title: 'Organizations repositories',
-						value: repositories.filter((r: GitlabRepository) => r.owner !== 'scriptex').length
-					},
-					{
-						title: 'Total stars',
-						value: repositories.reduce(
-							(result: number, repo: GitlabRepository) => result + repo.stargazers,
-							0
-						)
-					},
-					{
-						title: 'Total issues',
-						value: repositories.reduce(
-							(result: number, repo: GitlabRepository) => result + (repo.issues || 0),
-							0
-						)
-					}
-			  ]
-			: [];
+	const blocks = extractGitlabData(gitlab);
 
 	React.useEffect(() => {
 		if (calendarPlaceholder1.current && !!calendar) {

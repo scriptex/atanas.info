@@ -21,16 +21,6 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 		content: 'About'
 	},
 	{
-		href: Routes.TIMELINE,
-		title: 'Life events',
-		content: 'Timeline'
-	},
-	{
-		href: Routes.SKILLS,
-		title: 'My skills',
-		content: 'Skills'
-	},
-	{
 		href: Routes.PORTFOLIO,
 		title: 'My portfolio',
 		content: 'Portfolio',
@@ -52,6 +42,17 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 			}
 		]
 	},
+	{
+		href: Routes.TIMELINE,
+		title: 'Life events',
+		content: 'Timeline'
+	},
+	{
+		href: Routes.SKILLS,
+		title: 'My skills',
+		content: 'Skills'
+	},
+
 	{
 		href: Routes.STATS,
 		title: 'My stats',

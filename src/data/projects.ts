@@ -481,17 +481,17 @@ export const automotiveProjects: ExtendedProject[] = [
 export const statsItems: SubPage[] = [
 	{
 		url: Routes.STATS_GITHUB,
-		text: 'Github stats',
+		text: 'Github',
 		image: '/images/temp/github.jpg'
 	},
 	{
 		url: Routes.STATS_GITLAB,
-		text: 'Gitlab stats',
+		text: 'Gitlab',
 		image: '/images/temp/gitlab.jpg'
 	},
 	{
 		url: Routes.STATS_NPM,
-		text: 'NPM stats',
+		text: 'NPM',
 		image: '/images/temp/npm.jpg'
 	}
 ];
@@ -499,17 +499,17 @@ export const statsItems: SubPage[] = [
 export const portfolioItems: SubPage[] = [
 	{
 		url: Routes.PORTFOLIO_MOBILE_APPS,
-		text: 'Mobile applications',
+		text: 'Mobile',
 		image: '/images/temp/mobile-apps.jpg'
 	},
 	{
 		url: Routes.PORTFOLIO_AUTOMOTIVE_APPS,
-		text: 'Automotive applications',
+		text: 'Automotive',
 		image: '/images/temp/automotive-apps.jpg'
 	},
 	{
 		url: Routes.PORTFOLIO_WEB_APPS,
-		text: 'Web applications',
+		text: 'Web',
 		image: '/images/temp/web-apps.jpg'
 	}
 ];
