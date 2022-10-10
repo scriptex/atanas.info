@@ -1,10 +1,8 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 
-import { SubPage } from '../../data/projects';
 import { AppContext } from '../app';
 import { composeClassName } from '../../scripts/shared';
-import { Icon, Button, Loader, ExternalLink } from '../../components';
+import { Icon, Button, ExternalLink } from '../../components';
 
 export interface Props {
 	id: string;
@@ -118,28 +116,6 @@ export const SectionElements: React.FC<Readonly<Props>> = ({
 		</>
 	);
 };
-
-export interface SectionGridProps {
-	data: SubPage[];
-}
-
-export const SectionGrid: React.FC<Readonly<SectionGridProps>> = ({ data }: SectionGridProps) => (
-	<div className="c-section__grid o-grid">
-		{data.map((item: SubPage, index: number) => (
-			<div key={index} className="o-grid__item xs-12 sm-6 md-4 lg-4 xl-4">
-				<Link
-					to={item.url}
-					style={{ backgroundImage: `url(${item.image})` }}
-					className="c-article-link fullsize-background"
-				>
-					<strong>{item.text}</strong>
-				</Link>
-
-				<Loader />
-			</div>
-		))}
-	</div>
-);
 
 export const Section: React.FC<Readonly<Props>> = (props: Props) => {
 	const { id, style, hasShell, className, shellClass, wrapperClassName } = props;

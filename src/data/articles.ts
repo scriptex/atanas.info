@@ -26,7 +26,7 @@ export const articles: Article[] = [
 	{
 		url: '/blog/bulk-image-watermark-with-nodejs-and-jimp',
 		title: 'Bulk image watermark with NodeJS and Jimp',
-		image: '/images/temp/bulk-image-watermark-with-nodejs-and-jimp.png',
+		image: '/images/temp/bulk-image-watermark-with-nodejs-and-jimp.jpg',
 		content: bulkImageWatermarkWithNodejsAndJimp,
 		external: false
 	},

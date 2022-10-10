@@ -210,29 +210,85 @@
 	}
 }
 
+.c-section--personal {
+	--blotto-color: var(--color-action);
+	--houdini-color: var(--color-action), color-mod(var(--color-action) shade(20%)),
+		color-mod(var(--color-action) shade(40%));
+	--bytemare-colors: var(--houdini-color);
+	--parallelowow-base-colors: var(--houdini-color);
+
+	& .c-article-link {
+		@mixin flex-row wrap, center, center;
+		height: auto;
+		padding: 3rem;
+
+		&::before {
+			opacity: 0.5;
+		}
+
+		& strong,
+		& .c-svg-logo {
+			display: block;
+			position: relative;
+			top: auto;
+			right: auto;
+			left: auto;
+			z-index: 2;
+			transform: scale(1);
+			transition: transform var(--timing) var(--easing);
+		}
+
+		& strong {
+			font-family: monospace;
+			text-transform: lowercase;
+			font-size: 1rem;
+			text-shadow: 0 0.125rem 0.0625rem var(--color-secondary);
+			flex: 0 0 100%;
+			padding-top: 0.5rem;
+		}
+
+		& .c-svg-logo {
+			fill: currentcolor;
+			stroke: currentcolor;
+			margin-bottom: 0.5rem;
+		}
+
+		& ~ .c-loading {
+			display: none;
+		}
+	}
+}
+
 @media (--hover) {
-	.c-section--portfolio {
-		& .c-section__body {
-			& a {
-				&:hover {
-					box-shadow: 0 0 4.75rem color-mod(var(--color-primary) a(30%));
-					background-size: 110% auto;
-				}
+	.c-section--portfolio .c-section__body a {
+		&:hover {
+			box-shadow: 0 0 4.75rem color-mod(var(--color-primary) a(30%));
+			background-size: 110% auto;
+		}
 
-				&:hover::before {
-					opacity: 1;
-				}
+		&:hover::before {
+			opacity: 1;
+		}
 
-				&:hover section {
-					opacity: 1;
-					transform: translateY(-50%);
-				}
+		&:hover section {
+			opacity: 1;
+			transform: translateY(-50%);
+		}
 
-				&:hover img,
-				&:hover object {
-					transform: translate(-50%, -50%) scale(1.1);
-				}
-			}
+		&:hover img,
+		&:hover object {
+			transform: translate(-50%, -50%) scale(1.1);
+		}
+	}
+
+	.c-section--personal .c-article-link:hover {
+		&::before {
+			opacity: 0.7;
+		}
+
+		& strong,
+		& .c-svg-logo {
+			transform: scale(1.2);
 		}
 	}
 }
@@ -332,6 +388,14 @@
 			&::after {
 				border-color: var(--color-secondary);
 			}
+		}
+	}
+
+	& .c-section-personal .parallelowow a {
+		color: var(--color-secondary);
+
+		& strong {
+			text-shadow: 0 0.125rem 0.0625rem var(--color-primary);
 		}
 	}
 }

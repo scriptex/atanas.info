@@ -342,6 +342,42 @@ exports[`HeaderComponent component Should render the HeaderComponent component 1
         <li>
           <a
             class=""
+            href="/timeline"
+            title="Life events"
+          >
+            Timeline
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/skills"
+            title="My skills"
+          >
+            Skills
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/resume"
+            title="My resume"
+          >
+            Resume
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/interactive-resume"
+            title="My interactive resume"
+          >
+            Interactive resume
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
             href="/portfolio"
             title="My portfolio"
           >
@@ -375,25 +411,32 @@ exports[`HeaderComponent component Should render the HeaderComponent component 1
                 Automotive
               </a>
             </li>
+            <li>
+              <a
+                class=""
+                href="/portfolio/personal-projects"
+                title="My personal projects"
+              >
+                Personal
+              </a>
+            </li>
+            <li>
+              <a
+                href="/projects"
+                target="_blank"
+                title="My open source projects"
+              >
+                Open source
+                <svg
+                  class="c-svg-external-link"
+                >
+                  <use
+                    xlink:href="#svg-external-link"
+                  />
+                </svg>
+              </a>
+            </li>
           </ul>
-        </li>
-        <li>
-          <a
-            class=""
-            href="/timeline"
-            title="Life events"
-          >
-            Timeline
-          </a>
-        </li>
-        <li>
-          <a
-            class=""
-            href="/skills"
-            title="My skills"
-          >
-            Skills
-          </a>
         </li>
         <li>
           <a
@@ -463,6 +506,15 @@ exports[`HeaderComponent component Should render the HeaderComponent component 1
         <li>
           <a
             class=""
+            href="/blog"
+            title="My blog"
+          >
+            Blog
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
             href="/certificates"
             title="My certificates"
           >
@@ -476,49 +528,6 @@ exports[`HeaderComponent component Should render the HeaderComponent component 1
             title="Social widgets"
           >
             Social
-          </a>
-        </li>
-        <li>
-          <a
-            class=""
-            href="/blog"
-            title="My blog"
-          >
-            Blog
-          </a>
-        </li>
-        <li>
-          <a
-            class=""
-            href="/resume"
-            title="My resume"
-          >
-            Resume
-          </a>
-        </li>
-        <li>
-          <a
-            class=""
-            href="/interactive-resume"
-            title="My interactive resume"
-          >
-            Interactive resume
-          </a>
-        </li>
-        <li>
-          <a
-            href="/projects"
-            target="_blank"
-            title="My open source projects"
-          >
-            Open source
-            <svg
-              class="c-svg-external-link"
-            >
-              <use
-                xlink:href="#svg-external-link"
-              />
-            </svg>
           </a>
         </li>
         <li>

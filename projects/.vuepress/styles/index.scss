@@ -1,0 +1,21 @@
+:root {
+	--c-brand: #ef4c23;
+	--c-brand-light: #ef4c23;
+}
+
+html.dark {
+	--c-brand: #ef4c23;
+	--c-brand-light: #ef4c23;
+}
+
+#hi-i-m-atanas-👋 {
+	&::before {
+		content: '';
+		width: 200px;
+		height: 200px;
+		display: block;
+		margin: 0 auto 1rem;
+		background: url(https://atanas.info/images/temp/atanas.jpg) no-repeat 50% 50% / cover;
+		border-radius: 50%;
+	}
+}

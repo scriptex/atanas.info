@@ -291,6 +291,7 @@ export default defineUserConfig({
 		]
 	],
 	dest: '../dist/projects',
+	port: 1234,
 	plugins: [
 		googleAnalyticsPlugin({
 			id: process.env.GTM_ID
