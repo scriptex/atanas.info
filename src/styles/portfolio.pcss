@@ -235,7 +235,6 @@
 			left: auto;
 			z-index: 2;
 			transform: scale(1);
-			transition: transform var(--timing) var(--easing);
 		}
 
 		& strong {
@@ -278,17 +277,6 @@
 		&:hover img,
 		&:hover object {
 			transform: translate(-50%, -50%) scale(1.1);
-		}
-	}
-
-	.c-section--personal .c-article-link:hover {
-		&::before {
-			opacity: 0.7;
-		}
-
-		& strong,
-		& .c-svg-logo {
-			transform: scale(1.2);
 		}
 	}
 }
