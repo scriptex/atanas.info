@@ -27,15 +27,11 @@ registerPaint(
 			const yTiles = Math.round(height / tileSize);
 			const fullCircle = Math.PI * 2;
 
-			console.log(props.get(`--${paintName}-color`).toString(), tileSize, xTiles, yTiles);
-
 			ctx.fillStyle = props.get(`--${paintName}-color`).toString();
 			ctx.globalCompositeOperation = props.get(`--${paintName}-blend-mode`).toString();
 
 			for (let y = 0; y < yTiles; y++) {
 				const yOffset = y * tileSize;
-
-				console.log(yOffset);
 
 				for (let x = 0; x < xTiles; x++) {
 					const opacity = Math.random() % Math.random();
