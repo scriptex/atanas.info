@@ -16,7 +16,6 @@ export const PortfolioPersonalProjects: React.FC = () => (
 				</Link>
 			</>
 		}
-		className="c-section--personal"
 	>
 		<h3>Personal projects</h3>
 

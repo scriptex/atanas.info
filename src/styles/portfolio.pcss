@@ -210,54 +210,6 @@
 	}
 }
 
-.c-section--personal {
-	--blotto-color: var(--color-action);
-	--houdini-color: var(--color-action), color-mod(var(--color-action) shade(20%)),
-		color-mod(var(--color-action) shade(40%));
-	--bytemare-colors: var(--houdini-color);
-	--parallelowow-base-colors: var(--houdini-color);
-
-	& .c-article-link {
-		@mixin flex-row wrap, center, center;
-		height: auto;
-		padding: 3rem;
-
-		&::before {
-			opacity: 0.5;
-		}
-
-		& strong,
-		& .c-svg-logo {
-			display: block;
-			position: relative;
-			top: auto;
-			right: auto;
-			left: auto;
-			z-index: 2;
-			transform: scale(1);
-		}
-
-		& strong {
-			font-family: monospace;
-			text-transform: lowercase;
-			font-size: 1rem;
-			text-shadow: 0 0.125rem 0.0625rem var(--color-secondary);
-			flex: 0 0 100%;
-			padding-top: 0.5rem;
-		}
-
-		& .c-svg-logo {
-			fill: currentcolor;
-			stroke: currentcolor;
-			margin-bottom: 0.5rem;
-		}
-
-		& ~ .c-loading {
-			display: none;
-		}
-	}
-}
-
 @media (--hover) {
 	.c-section--portfolio .c-section__body a {
 		&:hover {
@@ -376,14 +328,6 @@
 			&::after {
 				border-color: var(--color-secondary);
 			}
-		}
-	}
-
-	& .c-section-personal .parallelowow a {
-		color: var(--color-secondary);
-
-		& strong {
-			text-shadow: 0 0.125rem 0.0625rem var(--color-primary);
 		}
 	}
 }
