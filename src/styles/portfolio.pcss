@@ -211,28 +211,24 @@
 }
 
 @media (--hover) {
-	.c-section--portfolio {
-		& .c-section__body {
-			& a {
-				&:hover {
-					box-shadow: 0 0 4.75rem color-mod(var(--color-primary) a(30%));
-					background-size: 110% auto;
-				}
+	.c-section--portfolio .c-section__body a {
+		&:hover {
+			box-shadow: 0 0 4.75rem color-mod(var(--color-primary) a(30%));
+			background-size: 110% auto;
+		}
 
-				&:hover::before {
-					opacity: 1;
-				}
+		&:hover::before {
+			opacity: 1;
+		}
 
-				&:hover section {
-					opacity: 1;
-					transform: translateY(-50%);
-				}
+		&:hover section {
+			opacity: 1;
+			transform: translateY(-50%);
+		}
 
-				&:hover img,
-				&:hover object {
-					transform: translate(-50%, -50%) scale(1.1);
-				}
-			}
+		&:hover img,
+		&:hover object {
+			transform: translate(-50%, -50%) scale(1.1);
 		}
 	}
 }

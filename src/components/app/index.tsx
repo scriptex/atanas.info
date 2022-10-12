@@ -25,6 +25,7 @@ import {
 	GitlabStats,
 	Certificates,
 	WebApplications,
+	PersonalProjects,
 	InteractiveResume,
 	MobileApplications,
 	AutomotiveApplications
@@ -36,29 +37,102 @@ export const AppContext = React.createContext({
 });
 
 export const routes = [
-	{ path: AppRoutes.HOME, element: <Home /> },
-	{ path: AppRoutes.ABOUT, element: <About /> },
-	{ path: AppRoutes.TIMELINE, element: <Timeline /> },
-	{ path: AppRoutes.SKILLS, element: <Skills /> },
-	{ path: AppRoutes.PORTFOLIO, element: <Portfolio /> },
-	{ path: AppRoutes.PORTFOLIO_WEB_APPS, element: <WebApplications /> },
-	{ path: AppRoutes.PORTFOLIO_MOBILE_APPS, element: <MobileApplications /> },
-	{ path: AppRoutes.PORTFOLIO_AUTOMOTIVE_APPS, element: <AutomotiveApplications /> },
-	{ path: AppRoutes.STATS, element: <Stats /> },
-	{ path: AppRoutes.STATS_GITHUB, element: <GithubStats /> },
-	{ path: AppRoutes.STATS_GITLAB, element: <GitlabStats /> },
-	{ path: AppRoutes.STATS_NPM, element: <NPMStats /> },
-	{ path: AppRoutes.SLIDES, element: <Slides /> },
-	{ path: AppRoutes.VIDEOS, element: <Videos /> },
-	{ path: AppRoutes.ARTICLES, element: <Articles /> },
-	{ path: AppRoutes.CERTIFICATES, element: <Certificates /> },
-	{ path: AppRoutes.SOCIAL, element: <Social /> },
-	{ path: AppRoutes.BLOG, element: <Blog /> },
-	{ path: `${AppRoutes.BLOG}/:slug`, element: <BlogPost /> },
-	{ path: AppRoutes.RESUME, element: <Resume /> },
-	{ path: AppRoutes.INTERACTIVE_RESUME, element: <InteractiveResume /> },
-	{ path: AppRoutes.MUSIC, element: <Music /> },
-	{ path: '*', element: <ErrorPage /> }
+	{
+		path: AppRoutes.HOME,
+		element: <Home />
+	},
+	{
+		path: AppRoutes.ABOUT,
+		element: <About />
+	},
+	{
+		path: AppRoutes.TIMELINE,
+		element: <Timeline />
+	},
+	{
+		path: AppRoutes.SKILLS,
+		element: <Skills />
+	},
+	{
+		path: AppRoutes.PORTFOLIO,
+		element: <Portfolio />
+	},
+	{
+		path: AppRoutes.PORTFOLIO_WEB_APPS,
+		element: <WebApplications />
+	},
+	{
+		path: AppRoutes.PORTFOLIO_MOBILE_APPS,
+		element: <MobileApplications />
+	},
+	{
+		path: AppRoutes.PORTFOLIO_AUTOMOTIVE_APPS,
+		element: <AutomotiveApplications />
+	},
+	{
+		path: AppRoutes.PORTFOLIO_PERSONAL_PROJECTS,
+		element: <PersonalProjects />
+	},
+	{
+		path: AppRoutes.STATS,
+		element: <Stats />
+	},
+	{
+		path: AppRoutes.STATS_GITHUB,
+		element: <GithubStats />
+	},
+	{
+		path: AppRoutes.STATS_GITLAB,
+		element: <GitlabStats />
+	},
+	{
+		path: AppRoutes.STATS_NPM,
+		element: <NPMStats />
+	},
+	{
+		path: AppRoutes.SLIDES,
+		element: <Slides />
+	},
+	{
+		path: AppRoutes.VIDEOS,
+		element: <Videos />
+	},
+	{
+		path: AppRoutes.ARTICLES,
+		element: <Articles />
+	},
+	{
+		path: AppRoutes.CERTIFICATES,
+		element: <Certificates />
+	},
+	{
+		path: AppRoutes.SOCIAL,
+		element: <Social />
+	},
+	{
+		path: AppRoutes.BLOG,
+		element: <Blog />
+	},
+	{
+		path: `${AppRoutes.BLOG}/:slug`,
+		element: <BlogPost />
+	},
+	{
+		path: AppRoutes.RESUME,
+		element: <Resume />
+	},
+	{
+		path: AppRoutes.INTERACTIVE_RESUME,
+		element: <InteractiveResume />
+	},
+	{
+		path: AppRoutes.MUSIC,
+		element: <Music />
+	},
+	{
+		path: '*',
+		element: <ErrorPage />
+	}
 ];
 
 setThemeClassName(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');

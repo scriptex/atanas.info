@@ -18,9 +18,9 @@ export interface ExtendedProject extends Project {
 }
 
 export interface SubPage {
-	readonly url: Routes;
+	readonly url: Routes | string;
 	readonly text: string;
-	readonly image: string;
+	readonly image?: string;
 }
 
 export const projects: WebProject[] = [
@@ -28,19 +28,19 @@ export const projects: WebProject[] = [
 		url: 'https://app.home.eon.com/',
 		image: '/images/temp/E.ON-Home.png',
 		title: 'E.ON Home',
-		description: 'TypeScript, SCSS, React, Redux, MS Azure, AWS, NodeJS, Jest, React Testing Library',
+		description: 'TypeScript, SCSS, React, Redux, MS Azure, AWS, NodeJS, Jest, React Testing Library, Cypress',
 		skip: false
 	},
 	{
 		url: 'https://admin.eonhome.eu/',
-		image: '/images/temp/E.ON-H.E.M.S-(Home-Energy-Management-System).png',
+		image: '/images/temp/E.ON-H.E.M.S-(Home-Energy-Management-System).jpg',
 		title: 'E.ON H.E.M.S (Home Energy Management System)',
 		description: 'TypeScript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS, Cypress',
 		skip: false
 	},
 	{
 		url: 'https://mama-culinar.com/',
-		image: '/images/temp/mama-culinar.png',
+		image: '/images/temp/mama-culinar.jpg',
 		title: 'Mama Culinar',
 		description: 'PHP, JavaScript, CSS, HTML, WordPress',
 		skip: false
@@ -54,28 +54,28 @@ export const projects: WebProject[] = [
 	},
 	{
 		url: 'https://xpndnow.com/',
-		image: '/images/temp/xpnd.png',
+		image: '/images/temp/xpnd.jpg',
 		title: 'XPND',
 		description: 'TypeScript, SCSS, React, Redux, NodeJS, Jest, Enzyme',
 		skip: false
 	},
 	{
 		url: 'https://xpndnow.com/ebook',
-		image: '/images/temp/xpnd-ebook.png',
+		image: '/images/temp/xpnd-ebook.jpg',
 		title: 'XPND Ebook',
 		description: 'TypeScript, SCSS, React, Redux, NodeJS',
 		skip: false
 	},
 	{
 		url: 'https://demo.xpndnow.com/',
-		image: '/images/temp/XPND-demo-application.png',
+		image: '/images/temp/XPND-demo-application.jpg',
 		title: 'XPND demo application',
 		description: 'TypeScript, SCSS, React, Redux, NodeJS',
 		skip: false
 	},
 	{
 		url: 'https://emailio.com/',
-		image: '/images/temp/Emailio-Landing.png',
+		image: '/images/temp/Emailio-Landing.jpg',
 		title: 'Emailio Landing',
 		description: 'CSS, JavaScript, HTML',
 		skip: false
@@ -89,21 +89,21 @@ export const projects: WebProject[] = [
 	},
 	{
 		url: 'https://www.nulla.tv/',
-		image: '/images/temp/nulla-tv.png',
+		image: '/images/temp/nulla-tv.jpg',
 		title: 'Nulla TV',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
 		skip: false
 	},
 	{
 		url: 'https://kinetikautomotive.com/',
-		image: '/images/temp/kinetik-automotive.png',
+		image: '/images/temp/kinetik-automotive.jpg',
 		title: 'Kinetik Automotive',
 		description: 'HTML5, CSS3, JavaScript, Fullpage JS, Vue, Nuxt, PHP, WordPress',
 		skip: false
 	},
 	{
 		url: 'https://kinetik-e.com/',
-		image: '/images/temp/Kinetik-Electric-Karting-Championship.png',
+		image: '/images/temp/Kinetik-Electric-Karting-Championship.jpg',
 		title: 'Kinetik Electric Karting Championship',
 		description: 'HTML5, SVG, CSS3, JavaScript, React, Styled Components',
 		skip: true
@@ -117,7 +117,7 @@ export const projects: WebProject[] = [
 	},
 	{
 		url: 'https://at-the-wall.atanas.info',
-		image: '/images/temp/at-the-wall.png',
+		image: '/images/temp/at-the-wall.jpg',
 		title: 'At the Wall',
 		description: 'CSS3, PHP',
 		skip: false
@@ -152,7 +152,7 @@ export const projects: WebProject[] = [
 	},
 	{
 		url: 'https://retirement-calc.vercel.app/',
-		image: '/images/temp/retirement-calculator.png',
+		image: '/images/temp/retirement-calculator.jpg',
 		title: 'Retirement calculator',
 		description: 'JavaScript, SCSS, Vue, Vuex, Chart JS',
 		skip: false
@@ -194,77 +194,77 @@ export const projects: WebProject[] = [
 	},
 	{
 		url: 'https://html-lab.com/',
-		image: '/images/temp/html-lab.png',
+		image: '/images/temp/html-lab.jpg',
 		title: 'HTML Lab',
 		description: 'HTML5, CSS3, JavaScript',
 		skip: false
 	},
 	{
 		url: 'https://malaikapictures.com/',
-		image: '/images/temp/malaika-pictures.png',
+		image: '/images/temp/malaika-pictures.jpg',
 		title: 'Malaika Pictures',
 		description: 'HTML5, CSS3, JavaScript, Fullpage JS, Shuffle JS, PHP, WordPress',
 		skip: false
 	},
 	{
 		url: 'https://pascoe.cn/',
-		image: '/images/temp/pascoe.png',
+		image: '/images/temp/pascoe.jpg',
 		title: 'Pascoe',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
 		skip: false
 	},
 	{
 		url: 'https://varnafoodtours.com/',
-		image: '/images/temp/Varna-Food-Tours.png',
+		image: '/images/temp/Varna-Food-Tours.jpg',
 		title: 'Varna Food Tours',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
 		skip: true
 	},
 	{
 		url: 'https://ftypeforsale.com/',
-		image: '/images/temp/F-Type-For-Sale.png',
+		image: '/images/temp/F-Type-For-Sale.jpg',
 		title: 'F Type For Sale',
 		description: 'HTML5, CSS3, JavaScript',
 		skip: true
 	},
 	{
 		url: 'https://www.zeevan.com/',
-		image: '/images/temp/zeevan.png',
+		image: '/images/temp/zeevan.jpg',
 		title: 'Zeevan',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
 		skip: true
 	},
 	{
 		url: 'https://www.mariopricken.com/',
-		image: '/images/temp/mario-pricken.png',
+		image: '/images/temp/mario-pricken.jpg',
 		title: 'Mario Pricken',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
 		skip: true
 	},
 	{
 		url: 'https://sqillinehealth.com/',
-		image: '/images/temp/sqillinehealth.png',
+		image: '/images/temp/sqillinehealth.jpg',
 		title: 'Sqillinehealth',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
 		skip: true
 	},
 	{
 		url: 'https://kinetik.bg/',
-		image: '/images/temp/kinetik.png',
+		image: '/images/temp/kinetik.jpg',
 		title: 'Kinetik',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
 		skip: true
 	},
 	{
 		url: 'https://danariely.com/',
-		image: '/images/temp/Dan-Ariely.png',
+		image: '/images/temp/Dan-Ariely.jpg',
 		title: 'Dan Ariely',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
 		skip: false
 	},
 	{
 		url: 'https://shortwhale.com/',
-		image: '/images/temp/shortwhale.png',
+		image: '/images/temp/shortwhale.jpg',
 		title: 'Shortwhale',
 		description: 'TypeScript, SCSS, React, Redux, Redux Saga, NodeJS, PostgreSQL',
 		skip: true
@@ -278,7 +278,7 @@ export const projects: WebProject[] = [
 	},
 	{
 		url: 'https://hochzeitskiste.info/',
-		image: '/images/temp/hochzeitskiste.png',
+		image: '/images/temp/hochzeitskiste.jpg',
 		title: 'Hochzeitskiste',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
 		skip: true
@@ -292,42 +292,42 @@ export const projects: WebProject[] = [
 	},
 	{
 		url: 'https://www.predictablyirrational.com/',
-		image: '/images/temp/Preditably-Irrational.png',
-		title: 'Preditably Irrational',
+		image: '/images/temp/Predictably-Irrational.jpg',
+		title: 'Predictably Irrational',
 		description: 'HTML, Advanced CSS, SCSS, PostCSS, JavaScript, Webpack',
 		skip: false
 	},
 	{
 		url: 'https://payoffbook.com/',
-		image: '/images/temp/Payoff.png',
+		image: '/images/temp/Payoff.jpg',
 		title: 'Payoff',
 		description: 'HTML, SVG, Sketch, SCSS, PostCSS, JavaScript, Swiper, Webpack',
 		skip: false
 	},
 	{
 		url: 'https://thehonesttruthaboutdishonesty.com/',
-		image: '/images/temp/The-(Honest)-Truth-About-Dishonesty.png',
+		image: '/images/temp/The-(Honest)-Truth-About-Dishonesty.jpg',
 		title: 'The (Honest) Truth About Dishonesty',
 		description: 'HTML, SVG, SCSS, PostCSS, Webpack',
 		skip: false
 	},
 	{
 		url: 'https://irrationallyyours.com/',
-		image: '/images/temp/Irrationally-Yours.png',
+		image: '/images/temp/Irrationally-Yours.jpg',
 		title: 'Irrationally Yours',
 		description: 'HTML, SVG, SCSS, PostCSS, JavaScript, Swiper, ShuffleJS, Webpack',
 		skip: false
 	},
 	{
 		url: 'https://amazingdecisionsbook.com/',
-		image: '/images/temp/Amazing-Decisions.png',
+		image: '/images/temp/Amazing-Decisions.jpg',
 		title: 'Amazing Decisions',
 		description: 'HTML, SVG, SCSS, PostCSS, JavaScript, Swiper, Webpack',
 		skip: false
 	},
 	{
-		url: 'https://kinetik.vercel.app/',
-		image: '/images/temp/kinetik-nuxt.png',
+		url: 'https://kinetik.atanas.info/',
+		image: '/images/temp/kinetik-nuxt.jpg',
 		title: 'Kinetik',
 		description: 'Vue, SVG, SCSS, PostCSS, JavaScript, Swiper, Nuxt',
 		skip: true
@@ -348,7 +348,7 @@ export const projects: WebProject[] = [
 	},
 	{
 		url: '',
-		image: '/images/temp/faraon-bg.png',
+		image: '/images/temp/faraon-bg.jpg',
 		title: 'Faraon (Фараон)',
 		description: 'HTML5, CSS3, JavaScript, jQuery, PHP',
 		skip: false
@@ -369,14 +369,14 @@ export const mobileApps: ExtendedProject[] = [
 		description: 'An award winning smart energy management application for iOS',
 		details: 'TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS',
 		images: [
-			'eon-home-iphone-dark1.png',
-			'eon-home-iphone-dark2.png',
-			'eon-home-iphone-dark3.png',
-			'eon-home-iphone-dark4.png',
-			'eon-home-iphone-light1.png',
-			'eon-home-iphone-light2.png',
-			'eon-home-iphone-light3.png',
-			'eon-home-iphone-light4.png'
+			'eon-home-iphone-dark1.jpg',
+			'eon-home-iphone-dark2.jpg',
+			'eon-home-iphone-dark3.jpg',
+			'eon-home-iphone-dark4.jpg',
+			'eon-home-iphone-light1.jpg',
+			'eon-home-iphone-light2.jpg',
+			'eon-home-iphone-light3.jpg',
+			'eon-home-iphone-light4.jpg'
 		]
 	},
 	{
@@ -385,14 +385,14 @@ export const mobileApps: ExtendedProject[] = [
 		description: 'Smart energy management application for iOS',
 		details: 'TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS',
 		images: [
-			'foton-home-iphone-light1.png',
-			'foton-home-iphone-light2.png',
-			'foton-home-iphone-light3.png',
-			'foton-home-iphone-light4.png',
-			'foton-home-iphone-dark1.png',
-			'foton-home-iphone-dark2.png',
-			'foton-home-iphone-dark3.png',
-			'foton-home-iphone-dark4.png'
+			'foton-home-iphone-light1.jpg',
+			'foton-home-iphone-light2.jpg',
+			'foton-home-iphone-light3.jpg',
+			'foton-home-iphone-light4.jpg',
+			'foton-home-iphone-dark1.jpg',
+			'foton-home-iphone-dark2.jpg',
+			'foton-home-iphone-dark3.jpg',
+			'foton-home-iphone-dark4.jpg'
 		]
 	},
 	{
@@ -401,14 +401,14 @@ export const mobileApps: ExtendedProject[] = [
 		description: 'An award winning smart energy management application for Android',
 		details: 'TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS',
 		images: [
-			'eon-home-android1.webp',
-			'eon-home-android2.webp',
-			'eon-home-android3.webp',
-			'eon-home-android4.webp',
-			'eon-home-android5.webp',
-			'eon-home-android6.webp',
-			'eon-home-android7.webp',
-			'eon-home-android8.webp'
+			'eon-home-android1.jpg',
+			'eon-home-android2.jpg',
+			'eon-home-android3.jpg',
+			'eon-home-android4.jpg',
+			'eon-home-android5.jpg',
+			'eon-home-android6.jpg',
+			'eon-home-android7.jpg',
+			'eon-home-android8.jpg'
 		]
 	},
 	{
@@ -417,14 +417,14 @@ export const mobileApps: ExtendedProject[] = [
 		description: 'Smart energy management application for Android',
 		details: 'TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS',
 		images: [
-			'foton-home-android5.webp',
-			'foton-home-android6.webp',
-			'foton-home-android7.webp',
-			'foton-home-android8.webp',
-			'foton-home-android1.webp',
-			'foton-home-android2.webp',
-			'foton-home-android3.webp',
-			'foton-home-android4.webp'
+			'foton-home-android5.jpg',
+			'foton-home-android6.jpg',
+			'foton-home-android7.jpg',
+			'foton-home-android8.jpg',
+			'foton-home-android1.jpg',
+			'foton-home-android2.jpg',
+			'foton-home-android3.jpg',
+			'foton-home-android4.jpg'
 		]
 	},
 	{
@@ -440,7 +440,7 @@ export const mobileApps: ExtendedProject[] = [
 		title: 'Foton Home for iPad',
 		description: 'Smart energy management application for iPad',
 		details: 'TypeScript, React, React Native, Redux, MS Azure, AWS, NodeJS',
-		images: ['foton-home-ipad-light.png', 'foton-home-ipad-dark.png'],
+		images: ['foton-home-ipad-light.jpg', 'foton-home-ipad-dark.jpg'],
 		adjustable: true
 	}
 ];
@@ -452,15 +452,15 @@ export const automotiveProjects: ExtendedProject[] = [
 		description: 'Dashboard and infotainment system for the Kinetik Model 27 electric kart',
 		details: 'TypeScript, SCSS, SVG, React, Redux, NodeJS, Express, WebSocket',
 		images: [
-			'kinetik-infotainment-1.png',
-			'kinetik-infotainment-2.png',
-			'kinetik-infotainment-3.png',
-			'kinetik-infotainment-4.png',
-			'kinetik-infotainment-5.png',
-			'kinetik-infotainment-6.png',
-			'kinetik-infotainment-7.png',
-			'kinetik-infotainment-8.png',
-			'kinetik-infotainment-9.png'
+			'kinetik-infotainment-1.jpg',
+			'kinetik-infotainment-2.jpg',
+			'kinetik-infotainment-3.jpg',
+			'kinetik-infotainment-4.jpg',
+			'kinetik-infotainment-5.jpg',
+			'kinetik-infotainment-6.jpg',
+			'kinetik-infotainment-7.jpg',
+			'kinetik-infotainment-8.jpg',
+			'kinetik-infotainment-9.jpg'
 		]
 	},
 	{
@@ -469,11 +469,11 @@ export const automotiveProjects: ExtendedProject[] = [
 		description: 'Dashboard system for the Volvo P1800 custom hybrid automobile',
 		details: 'TypeScript, SCSS, SVG, React, Redux, NodeJS, Express, WebSocket',
 		images: [
-			'volvo-dashboard-1.png',
-			'volvo-dashboard-2.png',
-			'volvo-dashboard-3.png',
-			'volvo-dashboard-4.png',
-			'volvo-dashboard-5.png'
+			'volvo-dashboard-1.jpg',
+			'volvo-dashboard-2.jpg',
+			'volvo-dashboard-3.jpg',
+			'volvo-dashboard-4.jpg',
+			'volvo-dashboard-5.jpg'
 		]
 	}
 ];
@@ -511,5 +511,146 @@ export const portfolioItems: SubPage[] = [
 		url: Routes.PORTFOLIO_WEB_APPS,
 		text: 'Web',
 		image: '/images/temp/web-apps.jpg'
+	},
+	{
+		url: Routes.PORTFOLIO_PERSONAL_PROJECTS,
+		text: 'Personal',
+		image: '/images/temp/personal-apps.jpg'
+	},
+	{
+		url: Routes.PROJECTS,
+		text: 'Open source',
+		image: '/images/temp/open-source.jpg'
+	}
+];
+
+export const personalProjects: SubPage[] = [
+	{
+		url: 'https://2048.atanas.info',
+		text: '2048 Game'
+	},
+	{
+		url: 'https://animate-me.atanas.info',
+		text: 'AnimateMe'
+	},
+	{
+		url: 'https://at-the-wall.atanas.info',
+		text: 'At the Wall'
+	},
+	{
+		url: 'https://calendar-widget.atanas.info',
+		text: 'Calendar Widget'
+	},
+	{
+		url: 'https://dator.atanas.info',
+		text: '(Vali) Dator'
+	},
+	{
+		url: 'https://github-insights.atanas.info',
+		text: 'Github Insights (beta)'
+	},
+	{
+		url: 'https://gitlab-calendar.atanas.info',
+		text: 'Gitlab Calendar'
+	},
+	{
+		url: 'https://html5-form-validator.atanas.info',
+		text: 'HTML5 Form Validator'
+	},
+	{
+		url: 'https://intro-scroll.atanas.info',
+		text: 'Intro Scroll'
+	},
+	{
+		url: 'https://itcss.atanas.info',
+		text: 'ITCSS'
+	},
+	{
+		url: 'https://itscss.atanas.info',
+		text: 'ITSCSS'
+	},
+	{
+		url: 'https://kinetik.atanas.info',
+		text: 'Kinetik'
+	},
+	{
+		url: 'https://no-html.atanas.info',
+		text: 'No HTML'
+	},
+	{
+		url: 'https://npm-maintainer.atanas.info',
+		text: 'NPM Maintainer'
+	},
+	{
+		url: 'https://pass-score.atanas.info',
+		text: 'Pass Score'
+	},
+	{
+		url: 'https://react-accordion-ts.atanas.info',
+		text: 'React Accordion TS'
+	},
+	{
+		url: 'https://react-carousel.atanas.info',
+		text: 'React Carousel'
+	},
+	{
+		url: 'https://react-dropper.atanas.info',
+		text: 'React Dropper'
+	},
+	{
+		url: 'https://react-round-carousel.atanas.info',
+		text: 'React Round Carousel'
+	},
+	{
+		url: 'https://react-svg-donuts.atanas.info',
+		text: 'React SVG Donuts'
+	},
+	{
+		url: 'https://round-carousel-component.atanas.info',
+		text: 'Round Carousel Component'
+	},
+	{
+		url: 'https://scriptex.tk',
+		text: 'Scriptex'
+	},
+	{
+		url: 'https://scss-goodies.atanas.info',
+		text: 'SCSS Goodies'
+	},
+	{
+		url: 'https://shortener.atanas.info',
+		text: 'URL Shortener'
+	},
+	{
+		url: 'https://snake.atanas.info',
+		text: 'Snake Game'
+	},
+	{
+		url: 'https://socialheader.tk',
+		text: 'Social Header'
+	},
+	{
+		url: 'https://socials.atanas.info',
+		text: "Scriptex's Socials"
+	},
+	{
+		url: 'https://sod.atanas.info',
+		text: 'SOD64'
+	},
+	{
+		url: 'https://svg64.atanas.info',
+		text: 'SVG64'
+	},
+	{
+		url: 'https://tetris.atanas.info',
+		text: 'Tetris Game'
+	},
+	{
+		url: 'https://touchsweep.atanas.info',
+		text: 'Touchsweep'
+	},
+	{
+		url: 'https://ts-helpers.atanas.info',
+		text: 'TS Helpers'
 	}
 ];

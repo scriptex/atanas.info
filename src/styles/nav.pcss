@@ -52,7 +52,7 @@
 		& ul {
 			font-size: 75%;
 			height: auto;
-			flex-flow: row nowrap;
+			flex-flow: row wrap;
 			opacity: 1;
 			visibility: visible;
 			transform: none;
@@ -99,7 +99,6 @@
 
 @for $i from 1 to 20 {
 	.c-nav li:nth-child($(i)) {
-		/* prettier-ignore */
 		transition-delay: calc(0.075s * $i);
 	}
 }

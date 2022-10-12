@@ -20,6 +20,10 @@ body {
 	}
 }
 
+.o-grid {
+	justify-content: flex-start;
+}
+
 .o-grid__item {
 	padding-bottom: 1rem;
 }
@@ -45,6 +49,26 @@ body {
 @supports (background-image: paint(circles)) {
 	.circles {
 		background-image: paint(circles);
+	}
+}
+
+@supports (background-image: paint(parallelowow)) {
+	.parallelowow {
+		background-color: var(--color-action);
+		background-image: paint(parallelowow);
+	}
+}
+
+@supports (background-image: paint(bytemare)) {
+	.bytemare {
+		background-color: var(--color-action);
+		background-image: paint(bytemare);
+	}
+}
+
+@supports (background-image: paint(blotto)) {
+	.blotto {
+		background-image: paint(blotto);
 	}
 }
 

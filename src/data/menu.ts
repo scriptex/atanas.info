@@ -21,6 +21,26 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 		content: 'About'
 	},
 	{
+		href: Routes.TIMELINE,
+		title: 'Life events',
+		content: 'Timeline'
+	},
+	{
+		href: Routes.SKILLS,
+		title: 'My skills',
+		content: 'Skills'
+	},
+	{
+		href: Routes.RESUME,
+		title: 'My resume',
+		content: 'Resume'
+	},
+	{
+		href: Routes.INTERACTIVE_RESUME,
+		title: 'My interactive resume',
+		content: 'Interactive resume'
+	},
+	{
 		href: Routes.PORTFOLIO,
 		title: 'My portfolio',
 		content: 'Portfolio',
@@ -39,20 +59,21 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 				href: Routes.PORTFOLIO_AUTOMOTIVE_APPS,
 				title: 'My automotive apps portfolio',
 				content: 'Automotive'
+			},
+			{
+				href: Routes.PORTFOLIO_PERSONAL_PROJECTS,
+				title: 'My personal projects',
+				content: 'Personal'
+			},
+			{
+				rel: 'noopener noreferrer',
+				href: Routes.PROJECTS,
+				title: 'My open source projects',
+				target: '_blank',
+				content: 'Open source'
 			}
 		]
 	},
-	{
-		href: Routes.TIMELINE,
-		title: 'Life events',
-		content: 'Timeline'
-	},
-	{
-		href: Routes.SKILLS,
-		title: 'My skills',
-		content: 'Skills'
-	},
-
 	{
 		href: Routes.STATS,
 		title: 'My stats',
@@ -91,6 +112,11 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 		content: 'Articles'
 	},
 	{
+		href: Routes.BLOG,
+		title: 'My blog',
+		content: 'Blog'
+	},
+	{
 		href: Routes.CERTIFICATES,
 		title: 'My certificates',
 		content: 'Certificates'
@@ -99,28 +125,6 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 		href: Routes.SOCIAL,
 		title: 'Social widgets',
 		content: 'Social'
-	},
-	{
-		href: Routes.BLOG,
-		title: 'My blog',
-		content: 'Blog'
-	},
-	{
-		href: Routes.RESUME,
-		title: 'My resume',
-		content: 'Resume'
-	},
-	{
-		href: Routes.INTERACTIVE_RESUME,
-		title: 'My interactive resume',
-		content: 'Interactive resume'
-	},
-	{
-		rel: 'noopener noreferrer',
-		href: Routes.PROJECTS,
-		title: 'My open source projects',
-		target: '_blank',
-		content: 'Open source'
 	},
 	{
 		href: Routes.MUSIC,

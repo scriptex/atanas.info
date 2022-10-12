@@ -32,14 +32,15 @@
 
 	& strong {
 		font-size: 1.25rem;
-		opacity: 1;
+		text-shadow: 0 0.125rem 0.125rem var(--color-secondary);
 		position: absolute;
 		top: 50%;
 		right: 0;
 		left: 0;
 		z-index: 2;
-		transform: translateY(-50%);
-		transition: all var(--timing) var(--easing);
+		margin-top: -0.625rem;
+		transform: scale(1);
+		transition: transform var(--timing) var(--easing);
 	}
 
 	& .c-svg-external-link {
@@ -62,12 +63,11 @@
 			background-size: auto 110%;
 
 			&::before {
-				opacity: 0;
+				opacity: 0.3;
 			}
 
 			& strong {
-				opacity: 0;
-				transform: translateY(100%);
+				transform: scale(1.1);
 			}
 		}
 	}
