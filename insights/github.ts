@@ -82,7 +82,7 @@ export const getGithubInsights = async (): Promise<void> => {
 				general: null,
 				calendar: null,
 				repositories: null,
-				updated: null
+				updated: new Date()
 			},
 			'Github'
 		);
