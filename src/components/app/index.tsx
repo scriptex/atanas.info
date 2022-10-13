@@ -27,7 +27,9 @@ import {
 	WebApplications,
 	PersonalProjects,
 	InteractiveResume,
+	OpenSourceProject,
 	MobileApplications,
+	OpenSourceProjects,
 	AutomotiveApplications
 } from '../../loadables';
 
@@ -72,6 +74,14 @@ export const routes = [
 	{
 		path: AppRoutes.PORTFOLIO_PERSONAL_PROJECTS,
 		element: <PersonalProjects />
+	},
+	{
+		path: AppRoutes.PORTFOLIO_OPEN_SOURCE_PROJECTS,
+		element: <OpenSourceProjects />
+	},
+	{
+		path: `${AppRoutes.PORTFOLIO_OPEN_SOURCE_PROJECTS}/:slug`,
+		element: <OpenSourceProject />
 	},
 	{
 		path: AppRoutes.STATS,

@@ -3,7 +3,13 @@ import { writeFileSync } from 'fs';
 import { github } from './client';
 import { getCalendar, asyncForEach, getContributions, saveInsights } from './utils';
 
-const reposToSkip = ['three11/code-of-conduct'];
+export const getGithubRepositories = async () => {
+	const reposToSkip = ['three11/code-of-conduct'];
+	const repos1 = await github.get({ path: '/user/repos?per_page=100' });
+	const repos2 = await github.get({ path: '/user/repos?page=2&per_page=100' });
+
+	return [...repos1, ...repos2].filter(repo => !reposToSkip.includes(repo.full_name));
+};
 
 export const getGithubInsights = async (): Promise<void> => {
 	console.log('Getting insights data from Github...');
@@ -14,18 +20,10 @@ export const getGithubInsights = async (): Promise<void> => {
 		writeFileSync('static/github-calendar.svg', (await getCalendar()) || '');
 
 		const user = await github.get({ path: '/users/scriptex' });
-		const repos1 = await github.get({ path: '/user/repos?per_page=100' });
-		const repos2 = await github.get({ path: '/user/repos?page=2&per_page=100' });
-		const repos = [...repos1, ...repos2].filter(repo => !reposToSkip.includes(repo.full_name));
+
 		const calendar = await getContributions();
 		const repositories: any[] = [];
-
-		const reposSSHUrls = repos
-			.filter(({ full_name }: { full_name: string }) => full_name.includes('scriptex/'))
-			.map(({ ssh_url }: { ssh_url: string }) => ssh_url)
-			.join('\n');
-
-		writeFileSync('bin/github.list', reposSSHUrls);
+		const repos = await getGithubRepositories();
 
 		await asyncForEach(repos, async ({ full_name }: { full_name: string }): Promise<void> => {
 			console.log('-----');

@@ -2,11 +2,11 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 import { Routes } from '../../data/routes';
-import { personalProjects } from '../../data/projects';
+import { openSourceProjects } from '../../data/projects';
 import { Section, SectionGrid } from '..';
 import { portfolioSectionProps } from '.';
 
-export const PortfolioPersonalProjects: React.FC = () => (
+export const PortfolioOpenSourceProjects: React.FC = () => (
 	<Section
 		{...portfolioSectionProps}
 		actions={
@@ -15,10 +15,10 @@ export const PortfolioPersonalProjects: React.FC = () => (
 			</Link>
 		}
 	>
-		<h3>Personal projects</h3>
+		<h3>Open-source projects</h3>
 
-		<SectionGrid data={personalProjects} linkType="external" />
+		<SectionGrid data={openSourceProjects} />
 	</Section>
 );
 
-export default PortfolioPersonalProjects;
+export default PortfolioOpenSourceProjects;

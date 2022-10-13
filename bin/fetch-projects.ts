@@ -4,13 +4,15 @@ import fetch, { Response } from 'node-fetch';
 
 import { writeFileSync, unlinkSync, existsSync } from 'fs';
 
-import openSource from '../src/data/open-source';
-import { asyncForEach } from '../insights/utils';
+import { getGithubRepositories } from '../insights/github';
 
-type OpenSource = {
-	main: string[];
-	projects: string[];
+type Project = {
+	name: string;
+	branch: string;
+	full_name: string;
 };
+
+const folder = 'src/data/open-source';
 
 const fetchProject = async (repo: string, branch = 'master', file = 'README.md'): Promise<string> => {
 	const rootURL = 'https://raw.githubusercontent.com';
@@ -22,6 +24,8 @@ const fetchProject = async (repo: string, branch = 'master', file = 'README.md')
 const saveProject = (data: string, path: string, message: string): void => {
 	data = data.replace(/\(http:\/\//gi, '(https://');
 	data = data.replace(/```sh/gi, '```bash');
+	data = data.replace(/alt="">/g, 'alt="" />');
+	data = data.replace(/<br>/g, '<br/>');
 
 	if (existsSync(path)) {
 		unlinkSync(path);
@@ -32,25 +36,70 @@ const saveProject = (data: string, path: string, message: string): void => {
 	console.log(message);
 };
 
-const { main, projects }: OpenSource = openSource;
+const createProjectsIndex = (projects: Project[]) => {
+	let i = 0;
+	let j = 0;
+	let result = '';
 
-if (!projects.length) {
-	console.log('atanas.info: No projects specified.');
-} else {
-	fetchProject('scriptex/scriptex', 'master').then((data: string) =>
-		saveProject(data, 'projects/README.md', "atanas.info: Saved project's README")
-	);
+	for (const project of projects) {
+		result += `import project${i} from './${project.name}.mdx';\n`;
+		i++;
+	}
 
-	asyncForEach(projects, (project: string) => {
-		fetchProject(project, main.includes(project) ? 'main' : 'master')
-			.then((data: string) => {
-				const name = project.split('/').pop();
-				const path = `projects/${name}.md`;
+	result += '\nexport const openSourceProjectsList = [\n';
 
-				saveProject(data, path, 'atanas.info: Saved project ' + name);
-			})
-			.catch((err: Error) => {
-				console.log('atanas.info: Failed to fetch project ' + project + '. Error is: ' + err);
-			});
-	});
-}
+	for (const project of projects) {
+		result += `{
+	url: '/portfolio/open-source/${project.name}',
+	title: '${project.full_name}',
+	image: 'https://source.unsplash.com/random/${1280 + j}x${840 + j}/?code',
+	content: project${j}
+},\n`;
+		j++;
+	}
+
+	result += ']';
+
+	return result;
+};
+
+(async () => {
+	try {
+		const projects: Project[] = (await getGithubRepositories())
+			.filter(repo => !repo.private)
+			.filter(repo => ['scriptex', 'three11'].includes(repo.owner.login))
+			.filter(repo => !['uptime'].includes(repo.name))
+			.map(repo => ({
+				name: repo.name,
+				branch: repo.default_branch,
+				full_name: repo.full_name
+			}));
+
+		saveProject(
+			createProjectsIndex(projects),
+			`${folder}/index.ts`,
+			'atanas.info: Saved open source projects list.'
+		);
+
+		for (const project of projects) {
+			await fetchProject(project.full_name, project.branch)
+				.then((data: string) => {
+					const name = project.name.split('/').pop();
+					const path = `${folder}/${name}.mdx`;
+
+					saveProject(data, path, 'atanas.info: Saved open source project ' + name);
+				})
+				.catch((err: Error) => {
+					console.log('atanas.info: Failed fetching open source project ' + project + '. Error is: ' + err);
+				});
+		}
+	} catch (e: any) {
+		saveProject(
+			JSON.stringify([], null, 2),
+			`${folder}/list.json`,
+			'atanas.info: Failed fetching open source projects. Error is ' + e
+		);
+	}
+
+	process.exit();
+})();
