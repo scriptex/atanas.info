@@ -2,9 +2,9 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 import { Routes } from '../../data/routes';
-import { openSourceProjects } from '../../data/projects';
 import { Section, SectionGrid } from '..';
 import { portfolioSectionProps } from '.';
+import { openSourceProjectsList } from '../../data/open-source';
 
 export const PortfolioOpenSourceProjects: React.FC = () => (
 	<Section
@@ -17,7 +17,13 @@ export const PortfolioOpenSourceProjects: React.FC = () => (
 	>
 		<h3>Open-source projects</h3>
 
-		<SectionGrid data={openSourceProjects} />
+		<SectionGrid
+			data={openSourceProjectsList.map((repo, index) => ({
+				url: repo.url,
+				text: repo.title,
+				image: `https://source.unsplash.com/random/${1280 + index}x${840 + index}/?code`
+			}))}
+		/>
 	</Section>
 );
 

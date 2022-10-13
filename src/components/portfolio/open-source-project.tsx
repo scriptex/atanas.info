@@ -7,7 +7,6 @@ import { openSourceProjectsList } from '../../data/open-source';
 
 export const BlogPost: React.FC = () => {
 	const { slug } = useParams();
-
 	const project = openSourceProjectsList.find(item => item.title.split('/')[1] === slug);
 
 	return (

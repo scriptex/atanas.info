@@ -1,5 +1,4 @@
 import { Routes } from './routes';
-import { openSourceProjectsList } from './open-source';
 
 export interface Project {
 	readonly url: string;
@@ -655,9 +654,3 @@ export const personalProjects: SubPage[] = [
 		text: 'TS Helpers'
 	}
 ];
-
-export const openSourceProjects: SubPage[] = openSourceProjectsList.map((repo, index) => ({
-	url: repo.url,
-	text: repo.title,
-	image: `https://source.unsplash.com/random/${1280 + index}x${840 + index}/?code`
-}));

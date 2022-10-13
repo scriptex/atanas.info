@@ -36,7 +36,7 @@
 		"parcel-start": "parcel ./src/index.html --open",
 		"parcel-build": "rm -rf dist && parcel build ./src/index.html --public-url '/' --no-source-maps",
 		"pre": "yarn time && yarn deduplicate && yarn fetch-projects && yarn screenshots && yarn insights && yarn npm-stats && yarn fetch-music && yarn localga && yarn svg",
-		"post": "yarn css && yarn tsc && yarn houdini && yarn parcel-build && yarn build-projects",
+		"post": "yarn css && yarn tsc && yarn houdini && yarn parcel-build",
 		"start": "yarn time && concurrently -r \"yarn css:watch\" \"yarn tsc:watch\" \"yarn houdini:watch\" \"yarn parcel-start\"",
 		"start-dist": "http-server ./dist -p=1234 -P=http://localhost:1234/? -o",
 		"build": "yarn pre && yarn post",
