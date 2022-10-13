@@ -16,7 +16,7 @@ export const BlogPost: React.FC = () => {
 			back={Routes.PORTFOLIO_OPEN_SOURCE_PROJECTS}
 			title={project?.title || 'Error fetching data from Github'}
 			image={project?.image || 'https://source.unsplash.com/random/1280x840/?code'}
-			content={project?.content!}
+			content={project?.content || (() => <h1 className="text-center">Please try again later.</h1>)}
 		/>
 	);
 };
