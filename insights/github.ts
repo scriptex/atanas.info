@@ -3,7 +3,7 @@ import { writeFileSync } from 'fs';
 import { github } from './client';
 import { getCalendar, asyncForEach, getContributions, saveInsights } from './utils';
 
-export const getGithubRepositories = async () => {
+export const getGithubRepositories = async (): Promise<any[]> => {
 	const reposToSkip = ['three11/code-of-conduct'];
 	const repos1 = await github.get({ path: '/user/repos?per_page=100' });
 	const repos2 = await github.get({ path: '/user/repos?page=2&per_page=100' });

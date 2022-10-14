@@ -6,6 +6,13 @@ import { Section, SectionGrid } from '..';
 import { portfolioSectionProps } from '.';
 import { openSourceProjectsList } from '../../data/open-source';
 
+export const openSourceProjects = openSourceProjectsList.map((repo, index) => ({
+	url: repo.url,
+	text: repo.title,
+	image: `https://source.unsplash.com/random/${1280 + index}x${840 + index}/?code`,
+	content: repo.content
+}));
+
 export const PortfolioOpenSourceProjects: React.FC = () => (
 	<Section
 		{...portfolioSectionProps}
@@ -17,13 +24,7 @@ export const PortfolioOpenSourceProjects: React.FC = () => (
 	>
 		<h3>Open-source projects</h3>
 
-		<SectionGrid
-			data={openSourceProjectsList.map((repo, index) => ({
-				url: repo.url,
-				text: repo.title,
-				image: `https://source.unsplash.com/random/${1280 + index}x${840 + index}/?code`
-			}))}
-		/>
+		<SectionGrid data={openSourceProjects} />
 	</Section>
 );
 
