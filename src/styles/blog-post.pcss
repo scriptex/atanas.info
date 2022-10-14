@@ -26,19 +26,20 @@
 
 	& table {
 		width: 100%;
+		border: 0;
 		border-collapse: collapse;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
 	}
 
 	& th {
 		background-color: rgba(0, 0, 0, 0.7);
 	}
 
-	& table,
 	& th,
 	& td {
 		padding: 0.3125rem;
 		border: 1px solid rgba(0, 0, 0, 0.7);
-		border-radius: 0.4em;
 	}
 
 	& tr:nth-child(even) {
@@ -130,6 +131,25 @@
 @media (--mobile) {
 	.c-blog-post {
 		padding: 1rem;
+
+		& td,
+		& th,
+		& thead,
+		& tbody,
+		& tfoot,
+		& table {
+			display: block;
+		}
+
+		& tr {
+			min-width: 48rem;
+			@mixin flex-row wrap;
+		}
+
+		& td,
+		& th {
+			flex: 1;
+		}
 	}
 }
 

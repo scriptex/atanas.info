@@ -38,10 +38,6 @@ declare namespace JSX {
 	}
 }
 
-declare module 'react-twitter-embed' {
-	export const TwitterTimelineEmbed: any;
-}
-
 declare module '@codersrank/activity/codersrank-activity.min' {
 	const content: any;
 	export default content;

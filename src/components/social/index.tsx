@@ -6,6 +6,7 @@ import { SocialItem, socialItems } from '../../data/social';
 import { Lines, Section, Animation, SocialMusic, LinkedInBadge } from '..';
 
 export const Social: React.FC = () => {
+	useScript('//platform.twitter.com/widgets.js');
 	useScript('//profile.codersrank.io/widget/widget.js');
 
 	return (
@@ -39,7 +40,6 @@ export const Social: React.FC = () => {
 					</div>
 				</div>
 			</div>
-
 			<SocialMusic />
 		</Section>
 	);

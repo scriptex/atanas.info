@@ -179,7 +179,14 @@ exports[`Social component Should render the Social component 1`] = `
               <h3>
                 Twitter Profile
               </h3>
-              <div />
+              <a
+                class="twitter-timeline"
+                data-dnt="true"
+                data-theme="dark"
+                href="//twitter.com/scriptexbg"
+              >
+                Tweets by scriptexbg
+              </a>
             </div>
             <div
               class="o-grid__item xs-12 sm-6"

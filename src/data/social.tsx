@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 import { ExternalLink } from '../components';
 
@@ -31,12 +30,9 @@ export const socialItems: SocialItem[] = [
 	{
 		title: 'Twitter Profile',
 		element: (
-			<TwitterTimelineEmbed
-				theme="dark"
-				options={{ height: '25rem' }}
-				sourceType="profile"
-				screenName="scriptexbg"
-			/>
+			<a href="//twitter.com/scriptexbg" className="twitter-timeline" data-dnt="true" data-theme="dark">
+				Tweets by scriptexbg
+			</a>
 		)
 	},
 	{
