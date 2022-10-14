@@ -518,7 +518,7 @@ export const portfolioItems: SubPage[] = [
 		image: '/images/temp/personal-apps.jpg'
 	},
 	{
-		url: Routes.PROJECTS,
+		url: Routes.PORTFOLIO_OPEN_SOURCE_PROJECTS,
 		text: 'Open source',
 		image: '/images/temp/open-source.jpg'
 	}

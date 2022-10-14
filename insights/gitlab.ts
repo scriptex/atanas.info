@@ -36,9 +36,6 @@ export const getGitlabInsights = async (): Promise<void> => {
 			...groupProjects.map((project: any) => setOwner(project, 'three11'))
 		];
 		const repositories: any[] = [];
-		const reposSSHUrls = userProjects.map((repo: any) => `git@gitlab.com:scriptex/${repo.name}`).join('\n');
-
-		writeFileSync('bin/gitlab.list', reposSSHUrls);
 
 		console.log('Getting projects data from Gitlab...');
 		await asyncForEach(projects, async (project: any) => {
@@ -70,9 +67,9 @@ export const getGitlabInsights = async (): Promise<void> => {
 			{
 				error: false,
 				general,
+				updated: new Date(),
 				calendar,
-				repositories,
-				updated: new Date()
+				repositories
 			},
 			'Gitlab'
 		);
@@ -82,9 +79,9 @@ export const getGitlabInsights = async (): Promise<void> => {
 			{
 				error: true,
 				general: null,
+				updated: new Date(),
 				calendar: null,
-				repositories: null,
-				updated: null
+				repositories: null
 			},
 			'Gitlab'
 		);

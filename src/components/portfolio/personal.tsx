@@ -10,11 +10,9 @@ export const PortfolioPersonalProjects: React.FC = () => (
 	<Section
 		{...portfolioSectionProps}
 		actions={
-			<>
-				<Link to={Routes.PORTFOLIO} className="c-btn">
-					Go back
-				</Link>
-			</>
+			<Link to={Routes.PORTFOLIO} className="c-btn">
+				Go back
+			</Link>
 		}
 	>
 		<h3>Personal projects</h3>

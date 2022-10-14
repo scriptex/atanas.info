@@ -66,10 +66,8 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 				content: 'Personal'
 			},
 			{
-				rel: 'noopener noreferrer',
-				href: Routes.PROJECTS,
+				href: Routes.PORTFOLIO_OPEN_SOURCE_PROJECTS,
 				title: 'My open source projects',
-				target: '_blank',
 				content: 'Open source'
 			}
 		]

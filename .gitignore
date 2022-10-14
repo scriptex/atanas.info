@@ -28,7 +28,6 @@ Thumbs.db
 .env
 .codacy-coverage
 .type-coverage
-/bin/*.list
 /coverage
 /dist
 /src/index.css
@@ -52,6 +51,6 @@ Thumbs.db
 /static/houdini
 
 # Open source projects
-/projects/*.md
-/projects/.vuepress/.cache
-/projects/.vuepress/.temp
+src/data/open-source/*.mdx
+src/data/open-source/*.ts
+

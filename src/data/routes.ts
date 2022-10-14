@@ -8,6 +8,7 @@ export enum Routes {
 	PORTFOLIO_MOBILE_APPS = '/portfolio/mobile-applications',
 	PORTFOLIO_AUTOMOTIVE_APPS = '/portfolio/automotive-applications',
 	PORTFOLIO_PERSONAL_PROJECTS = '/portfolio/personal-projects',
+	PORTFOLIO_OPEN_SOURCE_PROJECTS = '/portfolio/open-source',
 	STATS = '/stats',
 	STATS_GITHUB = '/stats/github',
 	STATS_GITLAB = '/stats/gitlab',
@@ -20,6 +21,5 @@ export enum Routes {
 	BLOG = '/blog',
 	MUSIC = '/music',
 	RESUME = '/resume',
-	PROJECTS = '/projects',
 	INTERACTIVE_RESUME = '/interactive-resume'
 }
