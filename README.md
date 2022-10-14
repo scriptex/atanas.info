@@ -15,9 +15,7 @@
 
 > My personal website
 
-Built with TypeScript, PostCSS, React, D3, BabylonJS, Vuepress, NodeJS, Parcel, Vercel, Puppeteer, Cloudinary, Houdini and more.
-
-Installable as a Progressive Web App and available offline.
+A PWA built with TypeScript, PostCSS, React, D3, BabylonJS, NodeJS, Parcel, Vercel, Puppeteer, Cloudinary, Houdini and more.
 
 ## Visitor stats
 
@@ -139,7 +137,6 @@ Support and sponsor my work:
 <a href="https://liberapay.com/scriptex/donate" title="Donate on Liberapay">
 	<img src="https://img.shields.io/liberapay/receives/scriptex?label=Donate%20on%20Liberapay&logo=liberapay" />
 </a>
-
 <a href="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/scriptex/scriptex/master/badges/bitcoin.json" title="Donate Bitcoin">
 	<img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/scriptex/scriptex/master/badges/bitcoin.json" />
 </a>
