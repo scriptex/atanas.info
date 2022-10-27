@@ -110,7 +110,7 @@ export const projects: WebProject[] = [
 	},
 	{
 		url: 'https://www.sod.bg/',
-		image: '/images/temp/SOD-64-(СОД-64).png',
+		image: '/images/temp/SOD-64-(СОД-64).jpg',
 		title: 'SOD 64 (СОД 64)',
 		description: 'HTML5, CSS3, JavaScript, jQuery, PHP',
 		skip: false
@@ -271,7 +271,7 @@ export const projects: WebProject[] = [
 	},
 	{
 		url: 'https://onelogic.de/',
-		image: '/images/temp/one-logic.png',
+		image: '/images/temp/one-logic.jpg',
 		title: 'One Logic',
 		description: 'HTML5, CSS3, JavaScript, PHP, WordPress',
 		skip: true
