@@ -1,15 +1,14 @@
-// @ts-ignore
-const paintName = 'parallelowow';
+const paintNameParallelOwOw = 'parallelowow';
 
 registerPaint(
-	paintName,
+	paintNameParallelOwOw,
 	class {
 		public static get inputProperties(): string[] {
 			return [
-				`--${paintName}-tile-width`,
-				`--${paintName}-base-colors`,
-				`--${paintName}-probability`,
-				`--${paintName}-stroke-weight`
+				`--${paintNameParallelOwOw}-tile-width`,
+				`--${paintNameParallelOwOw}-base-colors`,
+				`--${paintNameParallelOwOw}-probability`,
+				`--${paintNameParallelOwOw}-stroke-weight`
 			];
 		}
 
@@ -18,12 +17,12 @@ registerPaint(
 			{ width, height }: Record<string, number>,
 			props: Map<string, any>
 		): void {
-			const tileWidth = parseInt(props.get(`--${paintName}-tile-width`), 10);
-			const probability = parseFloat(props.get(`--${paintName}-probability`));
-			const strokeWeight = parseFloat(props.get(`--${paintName}-stroke-weight`));
+			const tileWidth = parseInt(props.get(`--${paintNameParallelOwOw}-tile-width`), 10);
+			const probability = parseFloat(props.get(`--${paintNameParallelOwOw}-probability`));
+			const strokeWeight = parseFloat(props.get(`--${paintNameParallelOwOw}-stroke-weight`));
 
 			const baseColors = props
-				.get(`--${paintName}-base-colors`)
+				.get(`--${paintNameParallelOwOw}-base-colors`)
 				.toString()
 				.split(',')
 				.map((item: string) => item.trim());

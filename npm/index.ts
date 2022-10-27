@@ -1,9 +1,7 @@
 import { resolve } from 'path';
 import { writeFileSync } from 'fs';
 
-// @ts-ignore
 import * as info from 'package-info';
-// @ts-ignore
 import * as npmtotal from 'npmtotal';
 
 (async () => {
@@ -14,7 +12,7 @@ import * as npmtotal from 'npmtotal';
 
 		const { sum, stats } = await npmtotal('scriptex', { startDate: '2017-01-01' });
 
-		const packages = stats.sort(([a]: [string], [b]: [string]) => (a > b ? 1 : a < b ? -1 : 0));
+		const packages = stats.sort(([a]: [string, number], [b]: [string, number]) => (a > b ? 1 : a < b ? -1 : 0));
 
 		result.sum = sum;
 

@@ -5,11 +5,6 @@ import { asyncForEach } from './utils';
 
 export const getLastFMInsights = async (): Promise<void> => {
 	const file = 'src/data/last.fm-insights.json';
-	const defaultArguments: Record<string, string | number> = {
-		autocorrect: 1,
-		lang: 'en',
-		username: 'scriptex'
-	};
 
 	console.log('Getting insights data from Last.FM...');
 
@@ -22,9 +17,11 @@ export const getLastFMInsights = async (): Promise<void> => {
 
 		await asyncForEach(weeklyAlbumChart, async ({ name, artist }: any, index: number) => {
 			weeklyAlbumChart[index].apiDetails = await lastFm.albumGetInfo({
-				artist: artist['#text'],
+				lang: 'en',
 				album: name,
-				...defaultArguments
+				artist: artist['#text'],
+				username: 'scriptex',
+				autocorrect: 1
 			});
 		});
 
