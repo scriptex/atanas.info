@@ -1,16 +1,15 @@
-// @ts-ignore
-const paintName = 'blotto';
+const paintNameBlotto = 'blotto';
 
 registerPaint(
-	paintName,
+	paintNameBlotto,
 	class {
 		public static get inputProperties(): string[] {
 			return [
-				`--${paintName}-tile-size`,
-				`--${paintName}-color`,
-				`--${paintName}-amplitude`,
-				`--${paintName}-max-opacity`,
-				`--${paintName}-blend-mode`
+				`--${paintNameBlotto}-tile-size`,
+				`--${paintNameBlotto}-color`,
+				`--${paintNameBlotto}-amplitude`,
+				`--${paintNameBlotto}-max-opacity`,
+				`--${paintNameBlotto}-blend-mode`
 			];
 		}
 
@@ -19,16 +18,16 @@ registerPaint(
 			{ width, height }: Record<string, number>,
 			props: Map<string, any>
 		) {
-			const tileSize = parseInt(props.get(`--${paintName}-tile-size`));
-			const amplitude = parseFloat(props.get(`--${paintName}-amplitude`));
-			const maxOpacity = parseFloat(props.get(`--${paintName}-max-opacity`));
+			const tileSize = parseInt(props.get(`--${paintNameBlotto}-tile-size`));
+			const amplitude = parseFloat(props.get(`--${paintNameBlotto}-amplitude`));
+			const maxOpacity = parseFloat(props.get(`--${paintNameBlotto}-max-opacity`));
 
 			const xTiles = Math.round(width / tileSize);
 			const yTiles = Math.round(height / tileSize);
 			const fullCircle = Math.PI * 2;
 
-			ctx.fillStyle = props.get(`--${paintName}-color`).toString();
-			ctx.globalCompositeOperation = props.get(`--${paintName}-blend-mode`).toString();
+			ctx.fillStyle = props.get(`--${paintNameBlotto}-color`).toString();
+			ctx.globalCompositeOperation = props.get(`--${paintNameBlotto}-blend-mode`).toString();
 
 			for (let y = 0; y < yTiles; y++) {
 				const yOffset = y * tileSize;

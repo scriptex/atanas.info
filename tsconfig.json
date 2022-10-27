@@ -31,8 +31,9 @@
 		"strictNullChecks": true,
 		"pretty": true,
 		"removeComments": false,
+		"resolveJsonModule": true,
 		"sourceMap": true,
-		"resolveJsonModule": true
+		"typeRoots": ["./@types", "node_modules/@types"]
 	},
 	"compileOnSave": false,
 	"include": [

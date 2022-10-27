@@ -1,8 +1,7 @@
-// @ts-ignore
-const paintName = 'bytemare';
+const paintNameBytemare = 'bytemare';
 
 registerPaint(
-	paintName,
+	paintNameBytemare,
 	class {
 		private radians: number;
 
@@ -12,10 +11,10 @@ registerPaint(
 
 		public static get inputProperties(): string[] {
 			return [
-				`--${paintName}-gap`,
-				`--${paintName}-colors`,
-				`--${paintName}-tile-size`,
-				`--${paintName}-probability`
+				`--${paintNameBytemare}-gap`,
+				`--${paintNameBytemare}-colors`,
+				`--${paintNameBytemare}-tile-size`,
+				`--${paintNameBytemare}-probability`
 			];
 		}
 
@@ -24,12 +23,12 @@ registerPaint(
 			{ width, height }: Record<string, number>,
 			props: Map<string, any>
 		): void {
-			const gap = parseInt(props.get(`--${paintName}-gap`));
-			const tileSize = parseInt(props.get(`--${paintName}-tile-size`));
-			const probability = parseFloat(props.get(`--${paintName}-probability`));
+			const gap = parseInt(props.get(`--${paintNameBytemare}-gap`));
+			const tileSize = parseInt(props.get(`--${paintNameBytemare}-tile-size`));
+			const probability = parseFloat(props.get(`--${paintNameBytemare}-probability`));
 
 			const colors = props
-				.get(`--${paintName}-colors`)
+				.get(`--${paintNameBytemare}-colors`)
 				.toString()
 				.split(',')
 				.map((item: string) => item.trim());

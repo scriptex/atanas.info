@@ -36,13 +36,12 @@ export const snapshotTest = (
 
 	describe(`${name} component`, () => {
 		it(`Should render the ${name} component`, async () => {
-			let result: RenderResult;
+			let result!: RenderResult;
 
 			await act(async () => {
 				result = await waitFor(() => render(<Component />));
 			});
 
-			// @ts-ignore
 			const { asFragment, container } = result;
 
 			expect(asFragment()).toMatchSnapshot();
@@ -61,13 +60,12 @@ export const snapshotTest = (
 		});
 
 		it(`Should unmount the ${name} component`, async () => {
-			let result: RenderResult;
+			let result!: RenderResult;
 
 			await act(async () => {
 				result = await waitFor(() => render(<Component />));
 			});
 
-			// @ts-ignore
 			const { unmount, asFragment } = result;
 
 			unmount();
