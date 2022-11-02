@@ -333,6 +333,13 @@ export const projects: WebProject[] = [
 		skip: true
 	},
 	{
+		url: 'https://galaktika.bg/',
+		image: '/images/temp/galaktika.jpg',
+		title: 'Galaktika',
+		description: 'HTML, SVG, SCSS, PostCSS, WebComponents, Vite',
+		skip: true
+	},
+	{
 		url: '',
 		image: '/images/temp/atelier-coolinar.png',
 		title: 'Atelier Coolinar (Ателие Кулинар)',
