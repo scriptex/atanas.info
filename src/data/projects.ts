@@ -333,6 +333,13 @@ export const projects: WebProject[] = [
 		skip: true
 	},
 	{
+		url: 'https://galaktika.bg/',
+		image: '/images/temp/galaktika.jpg',
+		title: 'Galaktika',
+		description: 'HTML, SVG, SCSS, PostCSS, WebComponents, Vite',
+		skip: true
+	},
+	{
 		url: '',
 		image: '/images/temp/atelier-coolinar.png',
 		title: 'Atelier Coolinar (Ателие Кулинар)',
@@ -498,6 +505,11 @@ export const statsItems: SubPage[] = [
 
 export const portfolioItems: SubPage[] = [
 	{
+		url: Routes.PORTFOLIO_WEB_APPS,
+		text: 'Web',
+		image: '/images/temp/web-apps.jpg'
+	},
+	{
 		url: Routes.PORTFOLIO_MOBILE_APPS,
 		text: 'Mobile',
 		image: '/images/temp/mobile-apps.jpg'
@@ -506,11 +518,6 @@ export const portfolioItems: SubPage[] = [
 		url: Routes.PORTFOLIO_AUTOMOTIVE_APPS,
 		text: 'Automotive',
 		image: '/images/temp/automotive-apps.jpg'
-	},
-	{
-		url: Routes.PORTFOLIO_WEB_APPS,
-		text: 'Web',
-		image: '/images/temp/web-apps.jpg'
 	},
 	{
 		url: Routes.PORTFOLIO_PERSONAL_PROJECTS,
