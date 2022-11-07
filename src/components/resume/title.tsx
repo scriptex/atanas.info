@@ -8,7 +8,7 @@ export const ResumeTitle: React.FC = () => (
 
 		<h1>Atanas Atanasov</h1>
 
-		<h3>Senior Front-End Engineer</h3>
+		<h3>Frontend Team Lead</h3>
 
 		<ul className="c-resume__list">
 			{resumeLinks.map((item: ResumeLinkItem, i: number) => (

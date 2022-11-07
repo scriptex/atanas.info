@@ -40,7 +40,7 @@ export type ResumeExperienceItem = {
 
 export const resumeExperience: ResumeExperienceItem[] = [
 	{
-		position: 'Lead Frontend Developer',
+		position: 'Frontend Team Lead',
 		project: (
 			<>
 				E.ON, E.ON Home project, <em>contract</em>
@@ -57,7 +57,7 @@ export const resumeExperience: ResumeExperienceItem[] = [
 		]
 	},
 	{
-		position: 'Senior JavaScript Developer',
+		position: 'Senior Frontend Developer',
 		project: (
 			<>
 				3-11, <em>full-time</em>
@@ -75,7 +75,7 @@ export const resumeExperience: ResumeExperienceItem[] = [
 		]
 	},
 	{
-		position: 'Senior Software Developer',
+		position: 'Senior UI Developer',
 		project: (
 			<>
 				Toptal, <em>freelance</em>
@@ -91,7 +91,7 @@ export const resumeExperience: ResumeExperienceItem[] = [
 		]
 	},
 	{
-		position: 'Senior JavaScript Developer',
+		position: 'Senior Frontend Developer',
 		project: (
 			<>
 				2create, <em>full-time</em>
