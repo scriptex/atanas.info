@@ -6214,12 +6214,12 @@ hosted-git-info@^4.0.1:
   dependencies:
     lru-cache "^6.0.0"
 
-hover-media-query@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/hover-media-query/-/hover-media-query-1.2.0.tgz#a439953816a370beb90708c610eb0d4c22efa04f"
-  integrity sha512-jQ3ndLC92fcu74uXwmsLFEHl4dMK5RKnaEZeC93oSSSjVE6KImrRDk/WGOP/mF+kweJ9Az4PLCcK2qg+PHlZiA==
+hover-media-query@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/hover-media-query/-/hover-media-query-1.2.1.tgz#7aeba296d0de687b46a4b23e91733f8b910a1bff"
+  integrity sha512-FSvrl9iPuwjkS8kYEzDlm+WqjpSCj8jsSnkWpWn2GP0upDO6/kKpmCkvfg2OTwov/XqLiakmKNH7qF0m06rc8Q==
   dependencies:
-    postcss "8.4.16"
+    postcss "8.4.18"
     postcss-custom-media "8.0.2"
 
 html-encoding-sniffer@^3.0.0:
@@ -9184,15 +9184,6 @@ postcss-watch-folder@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/postcss-watch-folder/-/postcss-watch-folder-2.0.0.tgz#0f0b22da8add6cc626be2fd86d099cc7c970b75f"
   integrity sha512-afXH6ow2TFIyCKmQiTjCbjzLOpc1cN4Tsr5J5hctLyQYfIo05pVIiADoKWOaHU8k3Axx/smL6x99Y4dDQyx7fA==
-
-postcss@8.4.16:
-  version "8.4.16"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.16.tgz#33a1d675fac39941f5f445db0de4db2b6e01d43c"
-  integrity sha512-ipHE1XBvKzm5xI7hiHCZJCSugxvsdq2mPnsq5+UF+VHCjiBvtDrlxJfMBToWaP9D5XlgNmcFGqoHmUn0EYEaRQ==
-  dependencies:
-    nanoid "^3.3.4"
-    picocolors "^1.0.0"
-    source-map-js "^1.0.2"
 
 postcss@8.4.18, postcss@^8.2.4, postcss@^8.4.16, postcss@^8.4.18:
   version "8.4.18"
