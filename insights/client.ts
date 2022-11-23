@@ -1,4 +1,3 @@
-import fetch from 'node-fetch';
 // @ts-ignore
 import * as LastFm from 'lastfm-node-client';
 import { GitHubClient } from 'universal-github-client';

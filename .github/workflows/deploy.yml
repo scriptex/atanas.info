@@ -7,6 +7,7 @@ on:
 jobs:
     deploy:
         runs-on: ubuntu-latest
+
         steps:
             - uses: actions/checkout@v3
             - uses: amondnet/vercel-action@v25

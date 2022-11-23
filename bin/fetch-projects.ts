@@ -1,7 +1,5 @@
 #!/usr/bin/env ts-node-script
 
-import fetch, { Response } from 'node-fetch';
-
 import { writeFileSync, unlinkSync, existsSync } from 'fs';
 
 import { getGithubRepositories } from '../insights/github';
