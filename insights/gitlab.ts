@@ -1,5 +1,3 @@
-import fetch from 'node-fetch';
-
 import { writeFileSync } from 'fs';
 
 import { gitlab } from './client';

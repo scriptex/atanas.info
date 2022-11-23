@@ -3,7 +3,6 @@
 import { writeFileSync } from 'fs';
 
 import * as puppeteer from 'puppeteer';
-import fetch, { Response, RequestInit } from 'node-fetch';
 
 interface EndpointConfig {
 	readonly url: string;

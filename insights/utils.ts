@@ -1,6 +1,5 @@
 import { writeFileSync } from 'fs';
 
-import fetch from 'node-fetch';
 import { load } from 'cheerio';
 import * as puppeteer from 'puppeteer';
 
