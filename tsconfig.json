@@ -44,7 +44,8 @@
 		"screenshots/**/*",
 		"server/**/*",
 		"src/**/*",
-		"test-config/**/*.ts"
+		"test-config/**/*.ts",
+		"vite.config.ts"
 	],
 	"exclude": ["node_modules", "src/scripts/analytics.js", "src/scripts/google-analytics-local.js"],
 	"ts-node": {

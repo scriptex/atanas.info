@@ -58,15 +58,15 @@ export const MDX: React.FC<Readonly<Props>> = ({ id, back, title, image, content
 					components={{
 						br: props => <br {...props} />,
 						img: props => <img {...props} />,
-						code: ({ className, ...props }: Record<string, 'className' | 'children'>) => {
-							const match = /language-(\w+)/.exec(className || '');
+						code: (props: any) => {
+							const match = /language-(\w+)/.exec(props.className || '');
 
 							return match ? (
 								<SyntaxHighlighter language={match[1]} {...props} style={dracula}>
 									{props.children}
 								</SyntaxHighlighter>
 							) : (
-								<code className={className} {...props} />
+								<code className={props.className} {...props} />
 							);
 						}
 					}}
