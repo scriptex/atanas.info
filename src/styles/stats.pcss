@@ -199,24 +199,10 @@
 	}
 
 	& rect {
-		&[data-level='0'] {
-			fill: #ededed;
-		}
-
-		&[data-level='1'] {
-			fill: #acd5f2;
-		}
-
-		&[data-level='2'] {
-			fill: #7fa8c9;
-		}
-
-		&[data-level='3'] {
-			fill: #527ba0;
-		}
-
-		&[data-level='4'] {
-			fill: #254e77;
+		@for $i from 0 to 4 {
+			&[data-level='$(i)'] {
+				fill: var(--color-calendar-graph-day-L$(i)-bg);
+			}
 		}
 	}
 }
