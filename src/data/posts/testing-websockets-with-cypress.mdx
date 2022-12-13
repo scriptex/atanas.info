@@ -6,7 +6,7 @@ The automation framework which I am using to test the end-to-end implementation 
 
 My application is using Azure DevOps as CI/CD environment and the 403s from the live data sources result in premature closing of the Cypress process when executed in the CI environment (latest Ubuntu, and NodeJS LTS) - the error is `This socket has been ended by the other party`. There are plenty of issues in the Cypress' Github repository related to this and all of them are saying that this is caused by the multiple failing WebSockets requests.
 
-Some prerequisite: My application is built using React and Redux and is written in TypeScript. I am exposing the application's Redux store to the global `Window` namespace when the application is being opened via Cypress. In order to do so, I am checking if the `Cypress` object exists in the Global namespace. Exposing the Redux store allows me to use the `dispatch` and `getState` methods in order to perform end-to-end testing:
+Some prerequisite: My application is built using React and Redux and is written in Typescript. I am exposing the application's Redux store to the global `Window` namespace when the application is being opened via Cypress. In order to do so, I am checking if the `Cypress` object exists in the Global namespace. Exposing the Redux store allows me to use the `dispatch` and `getState` methods in order to perform end-to-end testing:
 
 ```typescript
 /**

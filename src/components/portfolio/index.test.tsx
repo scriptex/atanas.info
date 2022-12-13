@@ -13,7 +13,7 @@ jest.mock('../../data/projects-list.json', () => ({
 			url: 'https://example.com/',
 			image: 'images/temp/example.png',
 			title: 'Example',
-			description: 'TypeScript, SCSS, React, Redux, MS Azure, NodeJS'
+			description: 'Typescript, SCSS, React, Redux, MS Azure, NodeJS'
 		}
 	]
 }));
