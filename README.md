@@ -15,7 +15,7 @@
 
 > My personal website
 
-A PWA built with TypeScript, PostCSS, React, D3, BabylonJS, NodeJS, Parcel, Vercel, Puppeteer, Cloudinary, Houdini and more.
+A PWA built with Typescript, PostCSS, React, D3, BabylonJS, NodeJS, Parcel, Vercel, Puppeteer, Cloudinary, Houdini and more.
 
 ## Visitor stats
 

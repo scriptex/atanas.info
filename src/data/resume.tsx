@@ -51,8 +51,8 @@ export const resumeExperience: ResumeExperienceItem[] = [
 			period: 'Jul 2018 - Present'
 		},
 		details: [
-			'Implementing and maintaining the frontend of E.ON Home. Technologies used: React, React Native, Redux, TypeScript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.',
-			'Designing, implementing and maintaining the frontend of E.ON H.E.M.S. Technologies used: Angular, Redux, TypeScript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.',
+			'Implementing and maintaining the frontend of E.ON Home. Technologies used: React, React Native, Redux, Typescript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.',
+			'Designing, implementing and maintaining the frontend of E.ON H.E.M.S. Technologies used: Angular, Redux, Typescript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.',
 			'Leading a team of four front-end developers'
 		]
 	},
@@ -68,7 +68,7 @@ export const resumeExperience: ResumeExperienceItem[] = [
 			period: 'Jan 2018 - Present'
 		},
 		details: [
-			'Leading a team of several senior front-end and full-stack developers in delivering high-end enterprise applications such as Emailio, XPND, Mbrella and others. Technologies used: React, Redux, TypeScript, SCSS, WordPress, NodeJS and many more.',
+			'Leading a team of several senior front-end and full-stack developers in delivering high-end enterprise applications such as Emailio, XPND, Mbrella and others. Technologies used: React, Redux, Typescript, SCSS, WordPress, NodeJS and many more.',
 			'Implementing and maintaining the website for the first bulgarian electric sports car - Kinetik 07.',
 			'Implementing the dashboard of the first bulgarian electric kart - Kinetik Model 27',
 			'Implementing the dashboard of the hybrid Volvo P1800'
@@ -86,7 +86,7 @@ export const resumeExperience: ResumeExperienceItem[] = [
 			period: 'Jun 2018 - Present'
 		},
 		details: [
-			'Working on closed-source client applications for companies from around the globe. Technologies used: Vue, React, Redux, TypeScript, SCSS, NodeJS,',
+			'Working on closed-source client applications for companies from around the globe. Technologies used: Vue, React, Redux, Typescript, SCSS, NodeJS,',
 			'Part of the top 3% in the world.'
 		]
 	},
@@ -112,7 +112,7 @@ export const resumeExperience: ResumeExperienceItem[] = [
 ];
 
 export const resumeSkills: Array<string[]> = [
-	['JavaScript', 'TypeScript', 'CSS', 'SCSS', 'HTML', 'SVG', 'MJML'],
+	['Javascript', 'Typescript', 'CSS', 'SCSS', 'HTML', 'SVG', 'MJML'],
 	['React', 'Redux', 'Angular', 'Vue', 'NodeJS', 'D3', 'Chart JS', 'Highcharts'],
 	['NPM / Yarn', 'Webpack', 'Rollup', 'Parcel', 'Vite'],
 	['Jest', 'Cypress', 'React Testing Library', 'Mocha', 'Tape', 'Chai'],

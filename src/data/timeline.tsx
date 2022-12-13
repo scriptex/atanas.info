@@ -85,11 +85,11 @@ export const timelineItems: TimelineItem[] = [
 	{
 		date: 'April 2013',
 		icon: <WorkIcon />,
-		title: <>👨‍💻 Enter JavaScript</>,
+		title: <>👨‍💻 Enter Javascript</>,
 		location: '📍 Varna, Bulgaria',
 		content: (
 			<>
-				After one year of simple HTML/CSS web development I started learning and mastering the JavaScript
+				After one year of simple HTML/CSS web development I started learning and mastering the Javascript
 				programming language. It is my preferred language ever since and I love using and experimenting with it.
 			</>
 		)

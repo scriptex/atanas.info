@@ -41,7 +41,7 @@ jest.mock('../../data/github-insights.json', () => ({
 				size: 2042,
 				stargazers: 4,
 				watchers: 4,
-				language: 'JavaScript',
+				language: 'Javascript',
 				issues: 1,
 				contributions: [
 					{
@@ -59,7 +59,7 @@ jest.mock('../../data/github-insights.json', () => ({
 				size: 1024,
 				stargazers: 0,
 				watchers: 0,
-				language: 'TypeScript',
+				language: 'Typescript',
 				issues: 2,
 				contributions: [
 					{
@@ -97,7 +97,7 @@ jest.mock('../../data/gitlab-insights.json', () => ({
 				size: 18926796,
 				stargazers: 0,
 				languages: {
-					JavaScript: 47.72,
+					Javascript: 47.72,
 					HTML: 26.07,
 					CSS: 25.79,
 					PHP: 0.41,

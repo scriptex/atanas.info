@@ -75,7 +75,7 @@ export const skills: Skill[] = [
 	{ text: 'HTML5', icon: 'html5', fill: '#E34F26', since: 2010, ...defaultSize },
 	{ text: 'i18next', icon: 'i18next', fill: '#26A69A', since: 2018, ...defaultSize },
 	{ text: 'Ionic', icon: 'ionic', fill: '#3880FF', since: 2014, ...defaultSize },
-	{ text: 'JavaScript', icon: 'javascript', fill: '#F7DF1E', since: 2011, iconFill: '#000', ...defaultSize },
+	{ text: 'Javascript', icon: 'javascript', fill: '#F7DF1E', since: 2011, iconFill: '#000', ...defaultSize },
 	{ text: 'Jest', icon: 'jest', fill: '#C21325', since: 2017, ...defaultSize },
 	{ text: 'Jira', icon: 'jira', fill: '#0052CC', since: 2017, ...defaultSize },
 	{ text: 'jQuery', icon: 'jquery', fill: '#0769AD', since: 2011, ...defaultSize },

@@ -8,7 +8,7 @@ export const LastAbout: React.FC = () => (
 
 		<ul>
 			<li>
-				A Senior JavaScript/TypeScript engineer and front-end mentor at{' '}
+				A Senior Javascript/Typescript engineer and front-end mentor at{' '}
 				<strong>
 					<ExternalLink href="https://github.com/three11">Three 11</ExternalLink>{' '}
 				</strong>
@@ -16,7 +16,7 @@ export const LastAbout: React.FC = () => (
 			</li>
 
 			<li>
-				A Lead front-end developer at E.ON working on the{' '}
+				A Lead front-end engineer at E.ON working on the{' '}
 				<strong>
 					<ExternalLink href="https://www.red-dot.org/project/eon-home-49256">award winning</ExternalLink>
 				</strong>{' '}
@@ -31,14 +31,14 @@ export const LastAbout: React.FC = () => (
 			</li>
 
 			<li>
-				A Founding member and Senior JavaScript/TypeScript engineer at{' '}
+				A Founding member and Senior Javascript/Typescript engineer at{' '}
 				<strong>
 					<ExternalLink href="https://app.usebraintrust.com/talent/782/">Braintrust</ExternalLink>
 				</strong>
 			</li>
 
 			<li>
-				A Senior JavaScript/TypeScript engineer at{' '}
+				A Senior Javascript/Typescript engineer at{' '}
 				<strong>
 					<ExternalLink href="https://andela.com/">Andela</ExternalLink>
 				</strong>
