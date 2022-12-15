@@ -10,10 +10,6 @@ import { v2 as cloudinary, UploadApiOptions, UploadApiResponse } from 'cloudinar
 import * as pckg from '../package.json';
 import { WebProject, projects } from '../src/data/projects';
 
-// TODO: Re-enable the screenshots when the Cloudinary credits reset.
-writeFileSync(resolve(__dirname, '../src/data/projects-list.json'), JSON.stringify(projects, null, 2));
-process.exit();
-
 if (!projects || !projects.length) {
 	console.log('No projects found.');
 	process.exit();

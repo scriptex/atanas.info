@@ -1,5 +1,4 @@
 import * as React from 'react';
-import 'lite-youtube-embed';
 
 import videoCamera from '../../data/lotties/video-camera.json';
 import { composeClassName } from '../../scripts/shared';
@@ -31,11 +30,11 @@ export const Videos: React.FC = () => {
 					>
 						<Loader />
 
-						<lite-youtube
+						<iframe
+							src={`${presentation.url}/embed?start=false&loop=false&delayms=3000`}
 							title={presentation.description}
-							params="autoplay=0"
-							videoid={`${presentation.id}`}
-							playlabel={presentation.title}
+							loading="lazy"
+							allowFullScreen
 						/>
 					</div>
 				))}

@@ -26,6 +26,7 @@ Thumbs.db
 
 # Project specific
 .env
+.env.local
 .codacy-coverage
 .type-coverage
 /coverage
@@ -46,11 +47,11 @@ Thumbs.db
 /src/data/sourcerer.json
 /src/data/updated-at.ts
 /src/scripts/google-analytics-local.js
-/static/github-calendar.svg
-/static/gitlab-calendar.svg
-/static/houdini
+/public/github-calendar.svg
+/public/gitlab-calendar.svg
+/public/houdini
 
 # Open source projects
-src/data/open-source/*.mdx
+src/data/open-source/*.md
 src/data/open-source/*.ts
 

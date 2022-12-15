@@ -3,14 +3,10 @@ import * as React from 'react';
 import TagManager from 'react-gtm-module';
 import { createRoot } from 'react-dom/client';
 import 'html-head-component';
-import 'regenerator-runtime/runtime';
 
 import { App } from './components';
 
-interface IWorker {
-	name: string;
-	action?: (registration: ServiceWorkerRegistration) => void;
-}
+import './index.pcss';
 
 if (CSS && CSS.paintWorklet && CSS.paintWorklet.addModule && typeof CSS.paintWorklet.addModule === 'function') {
 	CSS.paintWorklet.addModule(new URL('./houdini/avatar-polygon.ts', import.meta.url));
@@ -30,22 +26,3 @@ createRoot(node).render(<App />);
 TagManager.initialize({
 	gtmId: process.env.GTM_ID as string
 });
-
-if ('serviceWorker' in navigator && process.env.NODE_ENV !== 'development') {
-	const workers: IWorker[] = [
-		{
-			name: `/offline-worker.js`
-		}
-	];
-
-	window.addEventListener('load', () => {
-		workers.forEach((worker: IWorker) => {
-			navigator.serviceWorker
-				.register(worker.name)
-				.then(worker.action || null)
-				.catch(error => {
-					console.error('Error during service worker registration: ', error);
-				});
-		});
-	});
-}

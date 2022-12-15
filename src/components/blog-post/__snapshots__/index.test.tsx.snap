@@ -53,8 +53,12 @@ exports[`BlogPostComponent component Should render the BlogPostComponent compone
         <div
           class="c-blog-post"
         >
-          <div>
-            Content
+          <div
+            class="c-blog-post__content"
+          >
+            <div>
+              Content
+            </div>
           </div>
           <div
             id="disqus_thread"

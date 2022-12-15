@@ -17,7 +17,7 @@ export const getGithubInsights = async (): Promise<void> => {
 	const file = 'src/data/github-insights.json';
 
 	try {
-		writeFileSync('static/github-calendar.svg', (await getCalendar()) || '');
+		writeFileSync('public/github-calendar.svg', (await getCalendar()) || '');
 
 		const user = await github.get({ path: '/users/scriptex' });
 

@@ -25,4 +25,4 @@ export const BlogPost = React.lazy(() => import('./components/blog-post'));
 export const Music = React.lazy(() => import('./components/music'));
 export const Resume = React.lazy(() => import('./components/resume'));
 export const InteractiveResume = React.lazy(() => import('./components/interactive-resume'));
-export const ErrorPage = React.lazy(() => import('../src/components/404'));
+export const ErrorPage = React.lazy(() => import('./components/404'));

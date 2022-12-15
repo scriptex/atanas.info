@@ -1,6 +1,6 @@
-import testingWebSocketsWithCypress from './posts/testing-websockets-with-cypress.mdx';
-import bulkImageWatermarkWithNodejsAndJimp from './posts/bulk-image-watermark-with-nodejs-and-jimp.mdx';
-import runningMultipleWebpackBasedApplicationsSimultaneously from './posts/running-multiple-webpack-based-applications-simultaneously.mdx';
+import { html as testingWebSocketsWithCypress } from './posts/testing-websockets-with-cypress.md';
+import { html as bulkImageWatermarkWithNodejsAndJimp } from './posts/bulk-image-watermark-with-nodejs-and-jimp.md';
+import { html as runningMultipleWebpackBasedApplicationsSimultaneously } from './posts/running-multiple-webpack-based-applications-simultaneously.md';
 
 export interface Article {
 	readonly url: string;
