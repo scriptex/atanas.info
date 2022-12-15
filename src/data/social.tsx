@@ -45,8 +45,6 @@ export const socialItems: SocialItem[] = [
 				height={400}
 				loading="lazy"
 				className="youtube-frame"
-				frameBorder={0}
-				allowFullScreen
 			/>
 		)
 	},

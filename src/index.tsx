@@ -23,6 +23,8 @@ const node = document.getElementById('root') || document.createElement('div');
 
 createRoot(node).render(<App />);
 
-TagManager.initialize({
-	gtmId: process.env.GTM_ID as string
-});
+if (process.env.GTM_ID) {
+	TagManager.initialize({
+		gtmId: process.env.GTM_ID
+	});
+}

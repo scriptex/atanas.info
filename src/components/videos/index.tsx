@@ -34,7 +34,6 @@ export const Videos: React.FC = () => {
 							src={`${presentation.url}/embed?start=false&loop=false&delayms=3000`}
 							title={presentation.description}
 							loading="lazy"
-							allowFullScreen
 						/>
 					</div>
 				))}

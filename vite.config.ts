@@ -9,7 +9,15 @@ import markdownItPrism from 'markdown-it-prism';
 import { defineConfig } from 'vite';
 import { VitePWA as pwa } from 'vite-plugin-pwa';
 
-const env = dotenv.parse(readFileSync(resolve(__dirname, '.env')));
+let localConfig = '';
+
+try {
+	localConfig = readFileSync(resolve(__dirname, '.env'), 'utf-8');
+} catch (e) {
+	localConfig = '';
+}
+
+const env = dotenv.parse(localConfig);
 
 const markdownPlugin = md({
 	mode: [Mode.HTML],

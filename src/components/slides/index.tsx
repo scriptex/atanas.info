@@ -33,7 +33,6 @@ export const Slides: React.FC = () => {
 							src={`${slide.url}/embed?start=false&loop=false&delayms=3000`}
 							title={slide.description}
 							loading="lazy"
-							allowFullScreen
 						/>
 					</div>
 				))}
