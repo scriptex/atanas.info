@@ -36,7 +36,7 @@
 		"typeRoots": ["./@types", "node_modules/@types"]
 	},
 	"compileOnSave": false,
-	"include": ["**/*.ts", "**/*.tsx", "vite.config.ts"],
+	"include": ["**/*.ts", "**/*.tsx"],
 	"exclude": ["node_modules", "**/*.js"],
 	"ts-node": {
 		"compilerOptions": {

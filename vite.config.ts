@@ -8,6 +8,7 @@ import md, { Mode } from 'vite-plugin-markdown';
 import markdownItPrism from 'markdown-it-prism';
 import { defineConfig } from 'vite';
 import { VitePWA as pwa } from 'vite-plugin-pwa';
+import { chunkSplitPlugin } from 'vite-plugin-chunk-split';
 
 let localConfig = '';
 
@@ -19,25 +20,11 @@ try {
 
 const env = dotenv.parse(localConfig);
 
-const markdownPlugin = md({
-	mode: [Mode.HTML],
-	markdownIt: markdownIt({
-		html: true
-	}).use(markdownItPrism)
-});
-
 export default defineConfig({
 	css: {
 		postcss: resolve(__dirname, 'config')
 	},
-	build: {
-		rollupOptions: {
-			plugins: [markdownPlugin],
-			output: {
-				experimentalMinChunkSize: 500000
-			}
-		}
-	},
+
 	define: {
 		'process.env': {
 			...process.env,
@@ -45,7 +32,12 @@ export default defineConfig({
 		}
 	},
 	plugins: [
-		markdownPlugin,
+		md({
+			mode: [Mode.HTML],
+			markdownIt: markdownIt({
+				html: true
+			}).use(markdownItPrism)
+		}),
 		react(),
 		pwa({
 			registerType: 'autoUpdate',
@@ -105,7 +97,8 @@ export default defineConfig({
 					}
 				]
 			}
-		})
+		}),
+		chunkSplitPlugin()
 	],
 	server: {
 		port: 1234,
