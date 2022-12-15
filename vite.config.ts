@@ -3,7 +3,7 @@ import { join, resolve } from 'node:path';
 
 import react from '@vitejs/plugin-react';
 import dotenv from 'dotenv';
-import prerender from 'vite-plugin-prerender';
+// import prerender from 'vite-plugin-prerender';
 import markdownIt from 'markdown-it';
 import md, { Mode } from 'vite-plugin-markdown';
 import markdownItPrism from 'markdown-it-prism';
@@ -11,7 +11,7 @@ import { defineConfig } from 'vite';
 import { VitePWA as pwa } from 'vite-plugin-pwa';
 import { chunkSplitPlugin } from 'vite-plugin-chunk-split';
 
-import { Routes } from './src/data/routes';
+// import { Routes } from './src/data/routes';
 
 let localConfig = '';
 
