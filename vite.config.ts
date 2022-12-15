@@ -1,8 +1,9 @@
-import { resolve } from 'node:path';
 import { readFileSync } from 'node:fs';
+import { join, resolve } from 'node:path';
 
 import react from '@vitejs/plugin-react';
 import dotenv from 'dotenv';
+import prerender from 'vite-plugin-prerender';
 import markdownIt from 'markdown-it';
 import md, { Mode } from 'vite-plugin-markdown';
 import markdownItPrism from 'markdown-it-prism';
@@ -10,10 +11,12 @@ import { defineConfig } from 'vite';
 import { VitePWA as pwa } from 'vite-plugin-pwa';
 import { chunkSplitPlugin } from 'vite-plugin-chunk-split';
 
+import { Routes } from './src/data/routes';
+
 let localConfig = '';
 
 try {
-	localConfig = readFileSync(resolve(__dirname, '.env'), 'utf-8');
+	localConfig = readFileSync(join(__dirname, '.env'), 'utf-8');
 } catch (e) {
 	localConfig = '';
 }
@@ -99,6 +102,10 @@ export default defineConfig({
 			}
 		}),
 		chunkSplitPlugin()
+		// prerender({
+		// 	staticDir: join(__dirname, 'dist'),
+		// 	routes: Object.values(Routes)
+		// })
 	],
 	server: {
 		port: 1234,

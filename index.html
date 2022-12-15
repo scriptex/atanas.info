@@ -299,6 +299,24 @@
 	<body>
 		<div id="root"></div>
 
+		<script type="module">
+			if (
+				CSS &&
+				CSS.paintWorklet &&
+				CSS.paintWorklet.addModule &&
+				typeof CSS.paintWorklet.addModule === 'function'
+			) {
+				CSS.paintWorklet.addModule(new URL('/houdini/avatar-polygon.js', import.meta.url));
+				CSS.paintWorklet.addModule(new URL('/houdini/blotto.js', import.meta.url));
+				CSS.paintWorklet.addModule(new URL('/houdini/bubbles.js', import.meta.url));
+				CSS.paintWorklet.addModule(new URL('/houdini/bytemare.js', import.meta.url));
+				CSS.paintWorklet.addModule(new URL('/houdini/circles.js', import.meta.url));
+				CSS.paintWorklet.addModule(new URL('/houdini/confetti.js', import.meta.url));
+				CSS.paintWorklet.addModule(new URL('/houdini/parallelwow.js', import.meta.url));
+				CSS.paintWorklet.addModule(new URL('/houdini/slanted-backgrounds.js', import.meta.url));
+			}
+		</script>
+
 		<script async type="module" src="./src/index.tsx"></script>
 	</body>
 </html>

@@ -1,6 +1,6 @@
 const paintNameBlotto = 'blotto';
 
-registerPaint(
+export default registerPaint(
 	paintNameBlotto,
 	class {
 		public static get inputProperties(): string[] {
