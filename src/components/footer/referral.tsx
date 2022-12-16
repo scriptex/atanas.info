@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ExternalLink } from '..';
+import { ExternalLink } from '@components';
 
 export const FooterReferral: React.FC = () => (
 	<div className="c-footer__referral">

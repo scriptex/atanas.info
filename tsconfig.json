@@ -1,7 +1,13 @@
 {
 	"compilerOptions": {
-		"baseUrl": "./",
-		"paths": {},
+		"baseUrl": ".",
+		"paths": {
+			"@data/*": ["src/data/*"],
+			"@scripts/*": ["src/scripts/*"],
+			"@insights/*": ["insights/*"],
+			"@components": ["src/components"],
+			"@src/*": ["src/*"]
+		},
 		"alwaysStrict": true,
 		"allowSyntheticDefaultImports": true,
 		"allowJs": false,
@@ -36,20 +42,12 @@
 		"typeRoots": ["./@types", "node_modules/@types"]
 	},
 	"compileOnSave": false,
-	"include": [
-		"bin/**/*.ts",
-		"config/**/*.ts",
-		"insights/**/*",
-		"npm/**/*",
-		"screenshots/**/*",
-		"server/**/*",
-		"src/**/*",
-		"test-config/**/*.ts"
-	],
-	"exclude": ["node_modules", "src/scripts/analytics.js", "src/scripts/google-analytics-local.js"],
+	"include": ["**/*.ts", "**/*.tsx"],
+	"exclude": ["node_modules", "**/*.js"],
 	"ts-node": {
 		"compilerOptions": {
 			"module": "CommonJS"
-		}
+		},
+		"require": ["tsconfig-paths/register"]
 	}
 }

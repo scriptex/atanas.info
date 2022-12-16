@@ -1,10 +1,10 @@
 import 'isomorphic-fetch';
+import { act } from 'react-dom/test-utils';
 import * as React from 'react';
 import { render, waitFor } from '@testing-library/react';
 
 import { Contact } from '.';
 import { snapshotTest } from '../test-helpers';
-import { act } from 'react-dom/test-utils';
 
 jest.mock('../../scripts/shared.ts', () => ({
 	...jest.requireActual('../../scripts/shared.ts'),

@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import portfolio from '../../data/lotties/portfolio.json';
-import { portfolioItems } from '../../data/projects';
-import { Section, Animation, SectionGrid } from '..';
+import portfolio from '@data/lotties/portfolio.json';
+import { portfolioItems } from '@data/projects';
+import { Section, Animation, SectionGrid } from '@components';
 
 export const portfolioSectionProps = {
 	id: 'portfolio',

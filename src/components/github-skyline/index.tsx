@@ -5,8 +5,8 @@ import { Vector3 } from '@babylonjs/core';
 import { Scene, Engine, SceneEventArgs } from 'react-babylonjs';
 
 import { SIZE } from './constants';
-import { Button, Loader } from '..';
-import { composeClassName } from '../../scripts/shared';
+import { Button, Loader } from '@components';
+import { composeClassName } from '@scripts/shared';
 import { onSceneMount, GithubSkylineProps } from './utils';
 
 export const GithubSkyline: React.FC<GithubSkylineProps> = (props: GithubSkylineProps) => {

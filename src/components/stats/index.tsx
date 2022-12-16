@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { format } from 'date-fns';
 
-import { Ref } from '../../scripts/shared';
-import statistics from '../../data/lotties/statistics.json';
+import { Ref } from '@scripts/shared';
+import statistics from '@data/lotties/statistics.json';
 import { addTitles } from './utils';
-import { statsItems } from '../../data/projects';
-import { Section, Animation, SectionGrid } from '..';
+import { statsItems } from '@data/projects';
+import { Section, Animation, SectionGrid } from '@components';
 
 export const sectionStatsProps = {
 	id: 'stats',

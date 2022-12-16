@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Icon } from '..';
+import { Icon } from '@components';
 
 interface Props {
 	href: string;

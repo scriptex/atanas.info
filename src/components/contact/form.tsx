@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { useScript, waitForElement } from '../../scripts/shared';
+import { useScript, waitForElement } from '@scripts/shared';
 
 export const ContactForm: React.FC = () => {
 	useScript('https://www.google.com/recaptcha/api.js', (script: HTMLScriptElement) => {

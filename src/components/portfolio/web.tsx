@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import webApps from '../../data/projects-list.json';
-import { Routes } from '../../data/routes';
-import { WebProject } from '../../data/projects';
-import { composeClassName } from '../../scripts/shared';
+import webApps from '@data/projects-list.json';
+import { Routes } from '@data/routes';
+import { WebProject } from '@data/projects';
+import { composeClassName } from '@scripts/shared';
 import { portfolioSectionProps } from '.';
-import { Button, Loader, Section, ExternalLink } from '..';
+import { Button, Loader, Section, ExternalLink } from '@components';
 
 export const PortfolioWebApps: React.FC = () => {
 	const [itemsToShow, setItemsToShow] = React.useState(7);

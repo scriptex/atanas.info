@@ -1,7 +1,7 @@
 import * as React from 'react';
 import SVG from 'react-inlinesvg';
 
-import { composeClassName } from '../../scripts/shared';
+import { composeClassName } from '@scripts/shared';
 
 interface Props {
 	src: string;

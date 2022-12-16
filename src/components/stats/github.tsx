@@ -2,14 +2,13 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import ReactGitHubCalendar from 'react-ts-github-calendar';
 
-import github from '../../data/github-insights.json';
-
-import { Routes } from '../../data/routes';
-import { formatDate } from '../../scripts/shared';
-import { GithubInsights, GithubRepository } from '../../scripts/types';
+import github from '@data/github-insights.json';
+import { Routes } from '@data/routes';
+import { formatDate } from '@scripts/shared';
+import { GithubInsights, GithubRepository } from '@scripts/types';
 import { sectionStatsProps } from '.';
 import { GeneralInsight, YEARS } from './utils';
-import { Button, Section, StatsEntry, StatsError, GithubSkyline } from '..';
+import { Button, Section, StatsEntry, StatsError, GithubSkyline } from '@components';
 
 export const extractGithubData = ({
 	general,

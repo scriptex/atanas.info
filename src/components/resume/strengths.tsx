@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ResumeStrengthItem, resumeStrengths } from '../../data/resume';
+import { ResumeStrengthItem, resumeStrengths } from '@data/resume';
 
 export const ResumeStrengths: React.FC = () => (
 	<div className="c-resume__block">

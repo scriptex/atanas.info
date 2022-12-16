@@ -1,9 +1,9 @@
 import * as React from 'react';
 import useInterval from 'use-interval';
 
-import hello from '../../data/lotties/hello.json';
-import { titles } from '../../data/titles';
-import { Animation } from '../';
+import hello from '@data/lotties/hello.json';
+import { titles } from '@data/titles';
+import { Animation } from '@components';
 
 export const Slider: React.FC = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);

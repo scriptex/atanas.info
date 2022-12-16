@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Slider from 'react-slick';
 
-import { ExtendedProject } from '../../data/projects';
-import { composeClassName } from '../../scripts/shared';
-import { Loader, ExternalLink } from '..';
+import { ExtendedProject } from '@data/projects';
+import { composeClassName } from '@scripts/shared';
+import { Loader, ExternalLink } from '@components';
 
 interface Props {
 	data: ExtendedProject[];

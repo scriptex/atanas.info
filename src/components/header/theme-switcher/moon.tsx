@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Crater } from '../..';
+import { Crater } from '@components';
 import { moonData } from './data';
 
 export const Moon: React.FC = () => (

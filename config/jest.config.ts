@@ -7,7 +7,12 @@ const config: Config.InitialOptions = {
 	moduleNameMapper: {
 		'\\.(css|less|sass|scss)$': '<rootDir>/test-config/style-mock.ts',
 		'\\.(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-			'<rootDir>/test-config/file-mock.ts'
+			'<rootDir>/test-config/file-mock.ts',
+		'@src(.*)': '<rootDir>/src/$1',
+		'@data(.*)': '<rootDir>/src/data/$1',
+		'@scripts(.*)': '<rootDir>/src/scripts/$1',
+		'@insights(.*)': '<rootDir>/insights/$1',
+		'@components': '<rootDir>/src/components'
 	},
 	setupFiles: ['jest-canvas-mock', '<rootDir>/test-config/index.ts'],
 	transform: {

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ExternalLink } from '../components';
+import { ExternalLink } from '@components';
 
 export type SocialItem = {
 	title: string;
@@ -45,8 +45,6 @@ export const socialItems: SocialItem[] = [
 				height={400}
 				loading="lazy"
 				className="youtube-frame"
-				frameBorder={0}
-				allowFullScreen
 			/>
 		)
 	},

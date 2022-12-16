@@ -1,6 +1,6 @@
 const paintNameBytemare = 'bytemare';
 
-registerPaint(
+export default registerPaint(
 	paintNameBytemare,
 	class {
 		private radians: number;

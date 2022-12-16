@@ -2,9 +2,9 @@ import * as React from 'react';
 import gsap from 'gsap';
 import Draggable from 'gsap/Draggable';
 
-import { composeClassName } from '../../scripts/shared';
-import { FundingNetworkData, fundingNetworks } from '../../data/funding';
-import { Button, FundingCrypto, FundingNetwork } from '..';
+import { composeClassName } from '@scripts/shared';
+import { FundingNetworkData, fundingNetworks } from '@data/funding';
+import { Button, FundingCrypto, FundingNetwork } from '@components';
 
 gsap.registerPlugin(Draggable);
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import resume from '../../data/lotties/resume.json';
+import resume from '@data/lotties/resume.json';
 import {
 	Lines,
 	Button,
@@ -12,7 +12,7 @@ import {
 	ResumeEducation,
 	ResumeStrengths,
 	ResumeExperience
-} from '..';
+} from '@components';
 
 export const Resume: React.FC = () => (
 	<Section

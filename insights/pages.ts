@@ -2,7 +2,7 @@
 
 import { writeFileSync } from 'fs';
 
-import * as githubInsights from '../src/data/github-insights.json';
+import * as githubInsights from '@data/github-insights.json';
 
 interface Insights {
 	error?: boolean;

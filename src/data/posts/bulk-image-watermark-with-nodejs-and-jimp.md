@@ -246,7 +246,7 @@ async function waterMark(src) {
 
 Let's explain what this does:
 
-First I import the `resolve` method from the NodeJS' built-in `fs` module. Then I import the 3rd party modules which were previously installed - `jimp`, `glob` and `dotenv`. Then I configure my environment by calling the `dotenv.config()` method. This reads the `.env` file which I created and allows me to read the variables using the NodeJS' `process.env` object.
+First I import the `resolve` method from the NodeJS' built-in `fs` module. Then I import the 3rd party modules which were previously installed - `jimp`, `glob` and `dotenv`. Then I configure my environment by calling the `dotenv.config()` method. This reads the `.env` file which I created and allows me to read the variables using the NodeJS' `process env` object.
 
 Then I define the `useEnvNumber` function which essentially reads an environment variable defined in the `.env` file and returns it's number representation. The function also uses a default value if the environmental variable is missing and limits the value of the variable between a `min` and `max` values.
 

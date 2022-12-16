@@ -1,6 +1,6 @@
 const paintNameParallelOwOw = 'parallelowow';
 
-registerPaint(
+export default registerPaint(
 	paintNameParallelOwOw,
 	class {
 		public static get inputProperties(): string[] {

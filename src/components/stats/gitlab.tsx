@@ -2,15 +2,14 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import GitlabCalendar from 'gitlab-calendar';
 
-import gitlab from '../../data/gitlab-insights.json';
-import gitlabCalendarData from '../../data/gitlab-calendar.json';
-
-import { Routes } from '../../data/routes';
+import gitlab from '@data/gitlab-insights.json';
+import { Routes } from '@data/routes';
+import gitlabCalendarData from '@data/gitlab-calendar.json';
 import { GeneralInsight } from './utils';
-import { Ref, formatDate } from '../../scripts/shared';
+import { Ref, formatDate } from '@scripts/shared';
 import { sectionStatsProps } from '.';
-import { Section, StatsEntry, StatsError } from '..';
-import { GitlabInsights, GitlabRepository } from '../../scripts/types';
+import { Section, StatsEntry, StatsError } from '@components';
+import { GitlabInsights, GitlabRepository } from '@scripts/types';
 
 export const extractGitlabData = ({ general, calendar, repositories }: GitlabInsights): GeneralInsight[] => {
 	if (!repositories || !general || !calendar) {

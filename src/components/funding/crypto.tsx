@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-import { Icon } from '..';
-import { composeClassName } from '../../scripts/shared';
+import { Icon } from '@components';
+import { composeClassName } from '@scripts/shared';
 
 interface Props {
 	name: string;

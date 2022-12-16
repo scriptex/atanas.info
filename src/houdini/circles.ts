@@ -6,7 +6,7 @@ type Circle = {
 	alpha: number;
 };
 
-registerPaint(
+export default registerPaint(
 	'circles',
 	class {
 		public static get inputProperties(): string[] {

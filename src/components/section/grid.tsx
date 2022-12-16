@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import { SubPage } from '../../data/projects';
-import { Loader, ExternalLink } from '..';
+import { SubPage } from '@data/projects';
+import { Loader, ExternalLink } from '@components';
 
 export interface Props {
 	data: SubPage[];

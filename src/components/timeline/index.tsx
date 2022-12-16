@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 
-import timeline from '../../data/lotties/timeline.json';
-import { Section, Animation } from '..';
-import { TimelineItem, timelineItems } from '../../data/timeline';
+import timeline from '@data/lotties/timeline.json';
+import { Section, Animation } from '@components';
+import { TimelineItem, timelineItems } from '@data/timeline';
 
 export const Timeline: React.FC = () => (
 	<Section

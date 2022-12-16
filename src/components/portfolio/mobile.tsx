@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Routes } from '../../data/routes';
-import { mobileApps } from '../../data/projects';
+import { Routes } from '@data/routes';
+import { mobileApps } from '@data/projects';
 import { portfolioSectionProps } from '.';
-import { Section, PortfolioSliders } from '..';
+import { Section, PortfolioSliders } from '@components';
 
 export const PortfolioMobileApps: React.FC = () => (
 	<Section

@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import presentation from '../../data/lotties/presentation.json';
-import { Slide, slides } from '../../data/slides';
-import { composeClassName } from '../../scripts/shared';
-import { Loader, Section, Animation, SectionNav } from '..';
+import presentation from '@data/lotties/presentation.json';
+import { Slide, slides } from '@data/slides';
+import { composeClassName } from '@scripts/shared';
+import { Loader, Section, Animation, SectionNav } from '@components';
 
 export const Slides: React.FC = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);
@@ -33,7 +33,6 @@ export const Slides: React.FC = () => {
 							src={`${slide.url}/embed?start=false&loop=false&delayms=3000`}
 							title={slide.description}
 							loading="lazy"
-							allowFullScreen
 						/>
 					</div>
 				))}

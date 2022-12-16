@@ -8,7 +8,7 @@ import { config as dotenvConfig } from 'dotenv';
 import { v2 as cloudinary, UploadApiOptions, UploadApiResponse } from 'cloudinary';
 
 import * as pckg from '../package.json';
-import { WebProject, projects } from '../src/data/projects';
+import { WebProject, projects } from '@data/projects';
 
 // TODO: Re-enable the screenshots when the Cloudinary credits reset.
 writeFileSync(resolve(__dirname, '../src/data/projects-list.json'), JSON.stringify(projects, null, 2));

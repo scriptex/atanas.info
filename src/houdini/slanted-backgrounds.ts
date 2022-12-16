@@ -1,4 +1,4 @@
-registerPaint(
+export default registerPaint(
 	'slanted-background',
 	class {
 		public static get inputProperties(): string[] {

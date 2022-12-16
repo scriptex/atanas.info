@@ -1,4 +1,4 @@
-registerPaint(
+export default registerPaint(
 	'avatar-polygon',
 	class {
 		public static get inputProperties(): string[] {

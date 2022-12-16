@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import book from '../../data/lotties/book.json';
-import { articles, Article } from '../../data/articles';
-import { Loader, Section, Animation } from '..';
+import book from '@data/lotties/book.json';
+import { articles, Article } from '@data/articles';
+import { Loader, Section, Animation } from '@components';
 
 export const blogProps = {
 	style: { backgroundImage: 'url(images/temp/articles.jpg)' },

@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Carousel from 'react-round-carousel';
 
-import lastFm from '../../data/last.fm-insights.json';
-import { formatDate } from '../../scripts/shared';
-import { ExternalLink } from '..';
+import lastFm from '@data/last.fm-insights.json';
+import { formatDate } from '@scripts/shared';
+import { ExternalLink } from '@components';
 import { filteredData } from './utils';
 
 interface Props {

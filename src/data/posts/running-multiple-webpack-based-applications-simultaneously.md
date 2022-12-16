@@ -106,7 +106,7 @@ Now let's take some time to explain the content of the `index.js` file:
 4. Then I imported the `execSync` method from the NodeJS's built-in `child_process` module.
 5. Then I ran the `dotenv.config()` method which configures `dotenv` and makes all environmental variables defined in the `.env` file available to the current script.
 6. Then I defined the variable `isDefault` which basically stores a boolean value showing if the the `BRAND_ONE` assets repostitory should be served.
-7. Then I obtained all environmental variables by destructuring the `process.env` object. Here I have access to the variables defined in the `.env` file.
+7. Then I obtained all environmental variables by destructuring the `process env` object. Here I have access to the variables defined in the `.env` file.
 8. Then I defined a `run` function which accepts an array of paths and executes a shell script which does the following:
     - changes the current working directory to the directory matching the provided path: `cd ${dir}`
     - executes the start NPM script in the directory matching the provided path

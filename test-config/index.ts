@@ -29,22 +29,6 @@ window.scrollTo = jest.fn();
 	}));
 });
 
-[
-	'react-syntax-highlighter/dist/esm/languages/hljs/javascript',
-	'react-syntax-highlighter/dist/esm/languages/hljs/typescript',
-	'react-syntax-highlighter/dist/esm/languages/hljs/css',
-	'react-syntax-highlighter/dist/esm/languages/hljs/scss',
-	'react-syntax-highlighter/dist/esm/languages/hljs/json',
-	'react-syntax-highlighter/dist/esm/languages/hljs/shell'
-].forEach(module => {
-	jest.mock(module, () => ({
-		__esModule: true,
-		default: jest.fn(() => ({
-			name: 'mocked language'
-		}))
-	}));
-});
-
 jest.mock('gsap/Draggable', () => ({
 	__esModule: true,
 	default: {
@@ -56,12 +40,6 @@ jest.mock('react-ts-github-calendar', () => ({
 	__esModule: true,
 	default: 'GitHubCalendar'
 }));
-
-jest.mock('react-syntax-highlighter/dist/esm/styles/prism', () =>
-	jest.fn(() => ({
-		dark: {}
-	}))
-);
 
 jest.mock('simplex-noise', () => ({
 	createNoise2D: () => jest.fn()

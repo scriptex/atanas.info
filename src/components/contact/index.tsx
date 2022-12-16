@@ -1,9 +1,8 @@
 import * as React from 'react';
 
-import { AppContext } from '../app';
-import { composeClassName } from '../../scripts/shared';
 import { onSubmit, Status } from './utils';
-import { Button, ContactForm } from '..';
+import { composeClassName } from '@scripts/shared';
+import { Button, AppContext, ContactForm } from '@components';
 
 export const Contact: React.FC = () => {
 	const [status, setStatus] = React.useState(Status.DEFAULT);

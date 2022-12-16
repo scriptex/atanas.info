@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import socialMedia from '../../data/lotties/social-media.json';
-import { useScript } from '../../scripts/shared';
-import { SocialItem, socialItems } from '../../data/social';
-import { Lines, Section, Animation, SocialMusic, LinkedInBadge } from '..';
+import socialMedia from '@data/lotties/social-media.json';
+import { useScript } from '@scripts/shared';
+import { SocialItem, socialItems } from '@data/social';
+import { Lines, Section, Animation, SocialMusic, LinkedInBadge } from '@components';
 
 export const Social: React.FC = () => {
 	useScript('//platform.twitter.com/widgets.js');

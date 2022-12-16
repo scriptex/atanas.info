@@ -6,7 +6,7 @@ type Bubble = {
 	color: string;
 };
 
-registerPaint(
+export default registerPaint(
 	'bubbles',
 	class {
 		public static get inputProperties(): string[] {

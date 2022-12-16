@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import * as React from 'react';
 
-import { composeClassName } from '../../scripts/shared';
+import { composeClassName } from '@scripts/shared';
 
 interface Props {
 	rel?: string;

@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import book from '../../data/lotties/book.json';
-import { bio, BioEntry } from '../../data/bio';
-import { Section, Animation, LastAbout, FeaturedAbout } from '..';
+import book from '@data/lotties/book.json';
+import { bio, BioEntry } from '@data/bio';
+import { Section, Animation, LastAbout, FeaturedAbout } from '@components';
 
 export const About: React.FC = () => (
 	<Section

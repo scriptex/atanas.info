@@ -88,24 +88,11 @@ exports[`Videos component Should render the Videos component 1`] = `
                 class="c-loader"
               />
             </div>
-            <lite-youtube
-              params="autoplay=0"
-              playlabel="Do more with Sublime Text"
-              style="background-image: url(https://i.ytimg.com/vi/5xcqprI17FQ/hqdefault.jpg);"
+            <iframe
+              loading="lazy"
+              src="https://www.youtube.com/embed/5xcqprI17FQ/embed?start=false&loop=false&delayms=3000"
               title="Presentation about optimizing the web development workflow using Sublime Text editor"
-              videoid="5xcqprI17FQ"
-            >
-              <button
-                class="lty-playbtn"
-                type="button"
-              >
-                <span
-                  class="lyt-visually-hidden"
-                >
-                  Do more with Sublime Text
-                </span>
-              </button>
-            </lite-youtube>
+            />
           </div>
           <div
             class="c-section__frame"
@@ -117,24 +104,11 @@ exports[`Videos component Should render the Videos component 1`] = `
                 class="c-loader"
               />
             </div>
-            <lite-youtube
-              params="autoplay=0"
-              playlabel="Jarvis: Frontend project setup"
-              style="background-image: url(https://i.ytimg.com/vi/s-klXHLIZyY/hqdefault.jpg);"
+            <iframe
+              loading="lazy"
+              src="https://www.youtube.com/embed/s-klXHLIZyY/embed?start=false&loop=false&delayms=3000"
               title="Presentation about the new and optimized frontend projects setup"
-              videoid="s-klXHLIZyY"
-            >
-              <button
-                class="lty-playbtn"
-                type="button"
-              >
-                <span
-                  class="lyt-visually-hidden"
-                >
-                  Jarvis: Frontend project setup
-                </span>
-              </button>
-            </lite-youtube>
+            />
           </div>
         </div>
         <div

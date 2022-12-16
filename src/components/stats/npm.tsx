@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import npmStats from '../../data/npm-stats.json';
-import { Routes } from '../../data/routes';
+import npmStats from '@data/npm-stats.json';
+import { Routes } from '@data/routes';
 import { sectionStatsProps } from '.';
-import { Section, ExternalLink } from '..';
+import { Section, ExternalLink } from '@components';
 
 interface Package {
 	name: string;

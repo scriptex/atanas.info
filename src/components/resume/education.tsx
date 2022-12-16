@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ResumeEntry } from '..';
+import { ResumeEntry } from '@components';
 
 export const ResumeEducation: React.FC = () => (
 	<div className="c-resume__block">

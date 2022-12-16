@@ -26,7 +26,6 @@ declare module '*.json' {
 declare namespace JSX {
 	interface IntrinsicElements {
 		'social-links': any;
-		'lite-youtube': any;
 		'codersrank-widget': any;
 		'codersrank-summary': any;
 		'codersrank-timeline': any;
@@ -91,4 +90,27 @@ declare namespace CSS {
 	namespace paintWorklet {
 		export function addModule(url: URL): void;
 	}
+}
+
+declare module '*.md' {
+	const attributes: Record<string, unknown>;
+
+	const toc: { level: string; content: string }[];
+
+	const html: string;
+
+	import React from 'react';
+
+	const ReactComponent: React.FC;
+
+	export { attributes, toc, html, ReactComponent };
+}
+
+interface ImportMetaEnv {
+	readonly GTM_ID: string;
+	readonly MODE: 'development' | 'production';
+}
+
+interface ImportMeta {
+	readonly env: ImportMetaEnv;
 }

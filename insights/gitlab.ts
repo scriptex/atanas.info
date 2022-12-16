@@ -12,7 +12,7 @@ export const getGitlabInsights = async (): Promise<void> => {
 
 	try {
 		writeFileSync(
-			'static/gitlab-calendar.svg',
+			'public/gitlab-calendar.svg',
 			(await getCalendarWithBrowser('https://gitlab.com/scriptex', '.js-contrib-calendar', 5000)) || ''
 		);
 

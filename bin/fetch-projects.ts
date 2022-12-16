@@ -2,7 +2,7 @@
 
 import { writeFileSync, unlinkSync, existsSync } from 'fs';
 
-import { getGithubRepositories } from '../insights/github';
+import { getGithubRepositories } from '@insights/github';
 
 type Project = {
 	name: string;
@@ -40,7 +40,7 @@ const createProjectsIndex = (projects: Project[]) => {
 	let result = '';
 
 	for (const project of projects) {
-		result += `import project${i} from './${project.name}.mdx';\n`;
+		result += `import { html as project${i} } from './${project.name}.md';\n`;
 		i++;
 	}
 
@@ -83,7 +83,7 @@ const createProjectsIndex = (projects: Project[]) => {
 			await fetchProject(project.full_name, project.branch)
 				.then((data: string) => {
 					const name = project.name.split('/').pop();
-					const path = `${folder}/${name}.mdx`;
+					const path = `${folder}/${name}.md`;
 
 					saveProject(data, path, 'atanas.info: Saved open source project ' + name);
 				})

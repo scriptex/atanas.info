@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Icon, ExternalLink } from '../components';
+import { Icon, ExternalLink } from '@components';
 
 export type TimelineItem = {
 	date: string;
