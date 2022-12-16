@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { Slider, Section } from '..';
-import { initCanvas, createDots, destroyDots } from '../../scripts/canvas';
+import { Slider, Section } from '@components';
+import { initCanvas, createDots, destroyDots } from '@scripts/canvas';
 
 export const Hello: React.FC = () => {
 	React.useEffect(() => {

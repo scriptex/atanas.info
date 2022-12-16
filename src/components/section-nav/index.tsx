@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import { Slide } from '../../data/slides';
-import { Button } from '..';
-import { Article } from '../../data/articles';
-import { Presentation } from '../../data/presentations';
+import { Slide } from '@data/slides';
+import { Button } from '@components';
+import { Article } from '@data/articles';
+import { Presentation } from '@data/presentations';
 
 interface Props {
 	name: 'title';

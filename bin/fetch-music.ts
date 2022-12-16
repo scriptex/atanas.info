@@ -2,7 +2,7 @@
 
 import { writeFileSync, unlinkSync, existsSync } from 'fs';
 
-import { Track, music as tracks } from '../src/data/music';
+import { Track, music as tracks } from '@data/music';
 
 if (!tracks.length) {
 	console.log('atanas.info: No tracks specified.');

@@ -1,6 +1,6 @@
 import * as d3 from 'd3';
 
-import { random } from '../scripts/shared';
+import { random } from '@scripts/shared';
 
 export type Dots = d3.Selection<SVGCircleElement, any, SVGSVGElement, any>;
 export type Canvas = d3.Selection<SVGSVGElement, unknown, HTMLElement, any>;

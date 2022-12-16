@@ -560,6 +560,10 @@ export const personalProjects: SubPage[] = [
 		text: '(Vali) Dator'
 	},
 	{
+		url: 'https://salary.atanas.info',
+		text: 'Freelance Salary Calculator'
+	},
+	{
 		url: 'https://github-insights.atanas.info',
 		text: 'Github Insights (beta)'
 	},

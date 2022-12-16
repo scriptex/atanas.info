@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { useParams } from 'react-router-dom';
 
-import { MDX } from '..';
-import { Routes } from '../../data/routes';
+import { MDX } from '@components';
+import { Routes } from '@data/routes';
 import { openSourceProjects } from './open-source';
 
 export const BlogPost: React.FC = () => {

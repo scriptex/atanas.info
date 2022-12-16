@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import certificate from '../../data/lotties/certificate.json';
-import { Certificate, certificates } from '../../data/certificates';
-import { Loader, Section, Animation, ExternalLink } from '..';
+import certificate from '@data/lotties/certificate.json';
+import { Certificate, certificates } from '@data/certificates';
+import { Loader, Section, Animation, ExternalLink } from '@components';
 
 export const Certificates: React.FC = () => (
 	<Section

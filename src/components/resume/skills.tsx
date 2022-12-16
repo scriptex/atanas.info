@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { resumeSkills } from '../../data/resume';
+import { resumeSkills } from '@data/resume';
 
 export const ResumeSkills: React.FC = () => (
 	<div className="c-resume__block">

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ExternalLink } from '..';
+import { ExternalLink } from '@components';
 
 export const LinkedInBadge: React.FC = () => (
 	<div className="linkedin-badge bubbles">

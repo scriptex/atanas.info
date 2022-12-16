@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Routes } from '../../data/routes';
-import { composeClassName } from '../../scripts/shared';
-import { Nav, Icon, ThemeSwitcher } from '..';
+import { Routes } from '@data/routes';
+import { composeClassName } from '@scripts/shared';
+import { Nav, Icon, ThemeSwitcher } from '@components';
 
 export const Header: React.FC = () => {
 	const [open, setOpen] = React.useState(false);

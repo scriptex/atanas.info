@@ -2,7 +2,7 @@
 
 import { writeFileSync, unlinkSync, existsSync } from 'fs';
 
-import { getGithubRepositories } from '../insights/github';
+import { getGithubRepositories } from '@insights/github';
 
 type Project = {
 	name: string;

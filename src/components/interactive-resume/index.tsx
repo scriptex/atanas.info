@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import resume from '../../data/lotties/resume.json';
-import { Lines, Section, Animation } from '..';
-import { interactiveResumeItems, InteractiveResumeItem } from '../../data/interactive-resume';
+import resume from '@data/lotties/resume.json';
+import { Lines, Section, Animation } from '@components';
+import { interactiveResumeItems, InteractiveResumeItem } from '@data/interactive-resume';
 
 export const InteractiveResume: React.FC = () => (
 	<Section

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Sun, Moon } from '../..';
+import { Sun, Moon } from '@components';
 
 export const ThemeSwitcher: React.FC = () => {
 	const width = 189;

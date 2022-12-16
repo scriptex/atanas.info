@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
-import { Icon } from '..';
-import { composeClassName } from '../../scripts/shared';
-import { MenuItem, menuItems } from '../../data/menu';
+import { Icon } from '@components';
+import { composeClassName } from '@scripts/shared';
+import { MenuItem, menuItems } from '@data/menu';
 
 interface Props {
 	onClick?: () => void;

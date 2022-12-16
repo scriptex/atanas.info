@@ -2,7 +2,7 @@ import * as React from 'react';
 import { act } from 'react-dom/test-utils';
 import { render, RenderResult, waitFor } from '@testing-library/react';
 
-import * as shared from '../../scripts/shared';
+import * as shared from '@scripts/shared';
 
 export const mockUseEffect = (): void => {
 	let useEffect: jest.Mock<React.EffectCallback>;

@@ -1,8 +1,7 @@
 import * as React from 'react';
 
-import { blogProps } from '../blog';
-import { articles, Article } from '../../data/articles';
-import { Loader, Section, ExternalLink } from '..';
+import { articles, Article } from '@data/articles';
+import { Loader, Section, blogProps, ExternalLink } from '@components';
 
 export const Articles: React.FC = () => (
 	<Section id="articles" title="Articles" {...blogProps}>

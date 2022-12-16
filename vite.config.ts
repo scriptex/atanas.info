@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 
 import react from '@vitejs/plugin-react';
+import alias from '@rollup/plugin-alias';
 import dotenv from 'dotenv';
 // import prerender from 'vite-plugin-prerender';
 import markdownIt from 'markdown-it';
@@ -101,11 +102,21 @@ export default defineConfig({
 				]
 			}
 		}),
-		chunkSplitPlugin()
+		chunkSplitPlugin(),
 		// prerender({
 		// 	staticDir: join(__dirname, 'dist'),
 		// 	routes: Object.values(Routes)
-		// })
+		// }),
+		// @ts-ignore
+		alias({
+			entries: {
+				'@src': '/src',
+				'@data': '/src/data',
+				'@scripts': '/src/scripts',
+				'@insights': '/src/insights',
+				'@components': '/src/components'
+			}
+		})
 	],
 	server: {
 		port: 1234,

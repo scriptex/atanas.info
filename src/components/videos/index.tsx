@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import videoCamera from '../../data/lotties/video-camera.json';
-import { composeClassName } from '../../scripts/shared';
-import { presentations, Presentation } from '../../data/presentations';
-import { Lines, Loader, Section, Animation, SectionNav } from '..';
+import videoCamera from '@data/lotties/video-camera.json';
+import { composeClassName } from '@scripts/shared';
+import { presentations, Presentation } from '@data/presentations';
+import { Lines, Loader, Section, Animation, SectionNav } from '@components';
 
 export const Videos: React.FC = () => {
 	const [activeIndex, setActiveIndex] = React.useState(0);

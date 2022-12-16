@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Routes } from '../../data/routes';
-import { useScript } from '../../scripts/shared';
-import { Lines, Section } from '..';
+import { Routes } from '@data/routes';
+import { useScript } from '@scripts/shared';
+import { Lines, Section } from '@components';
 
 interface Props {
 	id: string;

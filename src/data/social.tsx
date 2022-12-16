@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ExternalLink } from '../components';
+import { ExternalLink } from '@components';
 
 export type SocialItem = {
 	title: string;

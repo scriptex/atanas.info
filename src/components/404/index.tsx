@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Routes } from '../../data/routes';
-import { errorIcon } from '../../data/error-icon';
+import { Routes } from '@data/routes';
+import { errorIcon } from '@data/error-icon';
 
 export const ErrorPage: React.FC = () => (
 	<div className="c-error-page">

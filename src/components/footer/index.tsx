@@ -1,9 +1,9 @@
-import * as React from 'react';
 import 'scriptex-socials';
+import * as React from 'react';
 
-import { updatedAt } from '../../data/updated-at';
-import { formatDate } from '../../scripts/shared';
-import { Funding, ExternalLink, FooterReferral } from '..';
+import { updatedAt } from '@data/updated-at';
+import { formatDate } from '@scripts/shared';
+import { Funding, ExternalLink, FooterReferral } from '@components';
 
 export const Footer: React.FC = () => (
 	<footer className="c-footer">

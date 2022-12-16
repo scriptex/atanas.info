@@ -1,10 +1,10 @@
 /* eslint-disable compat/compat */
+import 'html-head-component';
 import * as React from 'react';
 import TagManager from 'react-gtm-module';
 import { createRoot } from 'react-dom/client';
-import 'html-head-component';
 
-import { App } from './components';
+import { App } from '@components';
 
 import './index.pcss';
 

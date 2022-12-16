@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import { Routes as AppRoutes } from '../../data/routes';
-import { Theme, onThemeChange, setThemeClassName } from '../../scripts/shared';
-import { Svg, Nav, Head, Header, Footer, Loader, Contact, ScrollToTop } from '..';
+import { Routes as AppRoutes } from '@data/routes';
+import { Theme, onThemeChange, setThemeClassName } from '@scripts/shared';
+import { Svg, Nav, Head, Header, Footer, Loader, Contact, ScrollToTop } from '@components';
 import {
 	Home,
 	Blog,
@@ -31,7 +31,7 @@ import {
 	MobileApplications,
 	OpenSourceProjects,
 	AutomotiveApplications
-} from '../../loadables';
+} from '@src/loadables';
 
 export const AppContext = React.createContext({
 	contactVisible: false,

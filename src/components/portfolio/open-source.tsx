@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Routes } from '../../data/routes';
-import { Section, SectionGrid } from '..';
+import { Routes } from '@data/routes';
+import { Section, SectionGrid } from '@components';
 import { portfolioSectionProps } from '.';
-import { openSourceProjectsList } from '../../data/open-source';
+import { openSourceProjectsList } from '@data/open-source';
 
 export const openSourceProjects = openSourceProjectsList.map((repo, index) => ({
 	url: repo.url,

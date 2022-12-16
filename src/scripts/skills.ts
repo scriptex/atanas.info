@@ -13,7 +13,7 @@ import {
 	forceSimulation
 } from 'd3-force';
 
-import { Skill } from '../data/skills-list';
+import { Skill } from '@data/skills-list';
 import { Canvas, createSVG } from './canvas';
 
 interface Node extends Skill {

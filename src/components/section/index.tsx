@@ -1,8 +1,7 @@
 import * as React from 'react';
 
-import { AppContext } from '../app';
-import { composeClassName } from '../../scripts/shared';
-import { Icon, Button, ExternalLink } from '../../components';
+import { composeClassName } from '@scripts/shared';
+import { Icon, Button, AppContext, ExternalLink } from '@components';
 
 export interface Props {
 	id: string;

@@ -1,7 +1,13 @@
 {
 	"compilerOptions": {
 		"baseUrl": ".",
-		"paths": {},
+		"paths": {
+			"@data/*": ["src/data/*"],
+			"@scripts/*": ["src/scripts/*"],
+			"@insights/*": ["insights/*"],
+			"@components": ["src/components"],
+			"@src/*": ["src/*"]
+		},
 		"alwaysStrict": true,
 		"allowSyntheticDefaultImports": true,
 		"allowJs": false,

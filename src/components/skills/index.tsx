@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import { drawSkills } from '../../scripts/skills';
-import { Skill, skills } from '../../data/skills-list';
-import { composeClassName } from '../../scripts/shared';
-import { Icon, Lines, Button, Section } from '..';
+import { drawSkills } from '@scripts/skills';
+import { Skill, skills } from '@data/skills-list';
+import { composeClassName } from '@scripts/shared';
+import { Icon, Lines, Button, Section } from '@components';
 
 export const Skills: React.FC = () => {
 	const [showTable, setShowTable] = React.useState(false);

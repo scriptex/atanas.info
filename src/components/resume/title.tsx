@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { resumeLinks, ResumeLinkItem } from '../../data/resume';
+import { resumeLinks, ResumeLinkItem } from '@data/resume';
 
 export const ResumeTitle: React.FC = () => (
 	<div className="c-resume__title">

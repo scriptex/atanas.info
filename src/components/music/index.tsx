@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import { tracks } from '../../data/tracks';
-import { Section } from '..';
-import { music, MusicFunctions } from '../../scripts/music';
-import { Ref, composeClassName } from '../../scripts/shared';
+import { tracks } from '@data/tracks';
+import { Section } from '@components';
+import { music, MusicFunctions } from '@scripts/music';
+import { Ref, composeClassName } from '@scripts/shared';
 
 export const Music: React.FC = () => {
 	const [source, setSource] = React.useState(tracks[0]);
