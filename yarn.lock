@@ -5563,13 +5563,13 @@ hosted-git-info@^5.0.0:
   dependencies:
     lru-cache "^7.5.1"
 
-hover-media-query@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/hover-media-query/-/hover-media-query-1.2.1.tgz#7aeba296d0de687b46a4b23e91733f8b910a1bff"
-  integrity sha512-FSvrl9iPuwjkS8kYEzDlm+WqjpSCj8jsSnkWpWn2GP0upDO6/kKpmCkvfg2OTwov/XqLiakmKNH7qF0m06rc8Q==
+hover-media-query@1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/hover-media-query/-/hover-media-query-1.2.2.tgz#8599395666728d14c4ae083425e23f5f694ed829"
+  integrity sha512-m6tJTZbmwdAaAJPdc1q2DDjATUF/eiLy6ZYa7wZZ3rSzfuKyWRfn2UinprrfOeTuEcLeCiIl/bJdc+P6Y3YDuw==
   dependencies:
-    postcss "8.4.18"
-    postcss-custom-media "8.0.2"
+    postcss "8.4.20"
+    postcss-custom-media "9.0.1"
 
 html-encoding-sniffer@^3.0.0:
   version "3.0.0"
@@ -8038,13 +8038,6 @@ postcss-color-rebeccapurple@^7.1.1:
   dependencies:
     postcss-value-parser "^4.2.0"
 
-postcss-custom-media@8.0.2, postcss-custom-media@^8.0.2:
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/postcss-custom-media/-/postcss-custom-media-8.0.2.tgz#c8f9637edf45fef761b014c024cee013f80529ea"
-  integrity sha512-7yi25vDAoHAkbhAzX9dHx2yc6ntS4jQvejrNcC+csQJAXjj15e7VcWfMgLqBNAbOvqi5uIa9huOVwdHbf+sKqg==
-  dependencies:
-    postcss-value-parser "^4.2.0"
-
 postcss-custom-media@9.0.1:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/postcss-custom-media/-/postcss-custom-media-9.0.1.tgz#b59ecc762cf5ba4b540434e0043f5b3ce8c80bce"
@@ -8053,6 +8046,13 @@ postcss-custom-media@9.0.1:
     "@csstools/css-parser-algorithms" "^1.0.0"
     "@csstools/css-tokenizer" "^1.0.0"
     "@csstools/media-query-list-parser" "^1.0.0"
+
+postcss-custom-media@^8.0.2:
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-custom-media/-/postcss-custom-media-8.0.2.tgz#c8f9637edf45fef761b014c024cee013f80529ea"
+  integrity sha512-7yi25vDAoHAkbhAzX9dHx2yc6ntS4jQvejrNcC+csQJAXjj15e7VcWfMgLqBNAbOvqi5uIa9huOVwdHbf+sKqg==
+  dependencies:
+    postcss-value-parser "^4.2.0"
 
 postcss-custom-properties@^12.1.10:
   version "12.1.11"
@@ -8441,15 +8441,6 @@ postcss-watch-folder@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/postcss-watch-folder/-/postcss-watch-folder-2.0.0.tgz#0f0b22da8add6cc626be2fd86d099cc7c970b75f"
   integrity sha512-afXH6ow2TFIyCKmQiTjCbjzLOpc1cN4Tsr5J5hctLyQYfIo05pVIiADoKWOaHU8k3Axx/smL6x99Y4dDQyx7fA==
-
-postcss@8.4.18:
-  version "8.4.18"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.18.tgz#6d50046ea7d3d66a85e0e782074e7203bc7fbca2"
-  integrity sha512-Wi8mWhncLJm11GATDaQKobXSNEYGUHeQLiQqDFG1qQ5UTDPTEvKw0Xt5NsTpktGTwLps3ByrWsBrG0rB8YQ9oA==
-  dependencies:
-    nanoid "^3.3.4"
-    picocolors "^1.0.0"
-    source-map-js "^1.0.2"
 
 postcss@8.4.20, postcss@^8.2.4, postcss@^8.4.16, postcss@^8.4.19, postcss@^8.4.20:
   version "8.4.20"
