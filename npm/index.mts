@@ -1,8 +1,8 @@
 import { resolve } from 'path';
 import { writeFileSync } from 'fs';
 
-import * as info from 'package-info';
-import * as npmtotal from 'npmtotal';
+import info from 'package-info';
+import npmtotal from 'npmtotal';
 
 (async () => {
 	const result: Record<string, any> = {};
@@ -32,5 +32,5 @@ import * as npmtotal from 'npmtotal';
 		console.log(e);
 	}
 
-	await writeFileSync(resolve(__dirname, '../src/data/npm-stats.json'), JSON.stringify(result, null, 2));
+	await writeFileSync(resolve('src/data/npm-stats.json'), JSON.stringify(result, null, 2));
 })();

@@ -42,7 +42,7 @@
 		"typeRoots": ["./@types", "node_modules/@types"]
 	},
 	"compileOnSave": false,
-	"include": ["**/*.ts", "**/*.tsx"],
+	"include": ["**/*.ts", "**/*.mts", "**/*.tsx"],
 	"exclude": ["node_modules", "**/*.js"],
 	"ts-node": {
 		"compilerOptions": {
