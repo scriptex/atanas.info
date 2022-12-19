@@ -1,4 +1,4 @@
-import { writeFileSync } from 'fs';
+import { writeFileSync } from 'node:fs';
 
 import { github } from './client';
 import { getCalendar, asyncForEach, getContributions, saveInsights } from './utils';

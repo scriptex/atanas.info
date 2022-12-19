@@ -1,4 +1,4 @@
-import { writeFileSync } from 'fs';
+import { writeFileSync } from 'node:fs';
 
 import { load } from 'cheerio';
 import * as puppeteer from 'puppeteer';

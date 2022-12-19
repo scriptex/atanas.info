@@ -1,5 +1,5 @@
-import { resolve } from 'path';
-import { writeFileSync } from 'fs';
+import { resolve } from 'node:path';
+import { writeFileSync } from 'node:fs';
 
 import info from 'package-info';
 import npmtotal from 'npmtotal';

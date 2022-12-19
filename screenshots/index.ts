@@ -1,7 +1,7 @@
 #!/usr/bin/env ts-node-script
 
-import { resolve } from 'path';
-import { writeFileSync } from 'fs';
+import { resolve } from 'node:path';
+import { writeFileSync } from 'node:fs';
 
 import * as puppeteer from 'puppeteer';
 import { config as dotenvConfig } from 'dotenv';
@@ -11,8 +11,8 @@ import * as pckg from '../package.json';
 import { WebProject, projects } from '@data/projects';
 
 // TODO: Re-enable the screenshots when the Cloudinary credits reset.
-writeFileSync(resolve(__dirname, '../src/data/projects-list.json'), JSON.stringify(projects, null, 2));
-process.exit();
+// writeFileSync(resolve(__dirname, '../src/data/projects-list.json'), JSON.stringify(projects, null, 2));
+// process.exit();
 
 if (!projects || !projects.length) {
 	console.log('No projects found.');

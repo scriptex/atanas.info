@@ -4,7 +4,7 @@ import { join, resolve } from 'node:path';
 import react from '@vitejs/plugin-react';
 import alias from '@rollup/plugin-alias';
 import dotenv from 'dotenv';
-// import prerender from 'vite-plugin-prerender';
+import prerender from 'vite-plugin-prerender';
 import markdownIt from 'markdown-it';
 import md, { Mode } from 'vite-plugin-markdown';
 import markdownItPrism from 'markdown-it-prism';
@@ -12,7 +12,8 @@ import { defineConfig } from 'vite';
 import { VitePWA as pwa } from 'vite-plugin-pwa';
 import { chunkSplitPlugin } from 'vite-plugin-chunk-split';
 
-// import { Routes } from './src/data/routes';
+import { Routes } from './src/data/routes';
+import dynamicRoutes from './src/data/dynamic-routes.json';
 
 let localConfig = '';
 
@@ -23,6 +24,7 @@ try {
 }
 
 const env = dotenv.parse(localConfig);
+const prerenderRoutes = [...dynamicRoutes, ...Object.values(Routes)];
 
 export default defineConfig({
 	css: {
@@ -103,10 +105,25 @@ export default defineConfig({
 			}
 		}),
 		chunkSplitPlugin(),
-		// prerender({
-		// 	staticDir: join(__dirname, 'dist'),
-		// 	routes: Object.values(Routes)
-		// }),
+		prerender({
+			routes: prerenderRoutes,
+			minify: {
+				decodeEntities: true,
+				sortAttributes: true,
+				keepClosingSlash: true,
+				collapseWhitespace: true,
+				collapseBooleanAttributes: true
+			},
+			renderer: new prerender.PuppeteerRenderer({
+				args: ['-no-sandbox', '-disable-setuid-sandbox', '--window-size=1920,1080'],
+				inject: {
+					isPrerendering: true
+				},
+				injectProperty: '__ATANAS_INFO_PRERENDERING',
+				maxConcurrentRoutes: 1
+			}),
+			staticDir: join(__dirname, 'dist')
+		}),
 		// @ts-ignore
 		alias({
 			entries: {
