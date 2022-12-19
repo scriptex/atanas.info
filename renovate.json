@@ -1,5 +1,12 @@
 {
-	"extends": ["config:base", ":automergePatch", ":automergeMinor", ":automergeBranch", ":disableDependencyDashboard"],
+	"extends": [
+		"config:base",
+		":automergePatch",
+		":automergeMinor",
+		":automergeBranch",
+		"schedule:weekly",
+		":disableDependencyDashboard"
+	],
 	"assignees": ["@scriptex"],
 	"labels": ["dependencies"],
 	"rebaseWhen": "conflicted",
