@@ -1,4 +1,4 @@
-import { writeFileSync } from 'fs';
+import { writeFileSync } from 'node:fs';
 
 import { gitlab } from './client';
 import { asyncForEach, getCalendarWithBrowser, saveInsights } from './utils';

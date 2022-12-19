@@ -1,6 +1,6 @@
 #!/usr/bin/env ts-node-script
 
-import { writeFileSync } from 'fs';
+import { writeFileSync } from 'node:fs';
 
 import * as githubInsights from '@data/github-insights.json';
 

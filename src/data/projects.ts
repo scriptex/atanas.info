@@ -291,7 +291,7 @@ export const projects: WebProject[] = [
 		skip: true
 	},
 	{
-		url: 'https://social-header.tk/',
+		url: 'https://social-header.atanas.info/',
 		image: '/images/temp/social-header.png',
 		title: 'Social Header',
 		description: 'React, SCSS, Parcel',

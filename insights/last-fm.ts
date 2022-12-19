@@ -1,4 +1,4 @@
-import { writeFileSync } from 'fs';
+import { writeFileSync } from 'node:fs';
 
 import { lastFm } from './client';
 import { asyncForEach } from './utils';

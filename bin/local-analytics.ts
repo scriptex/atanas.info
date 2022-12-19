@@ -2,8 +2,8 @@
 
 import { config as dotenvConfig } from 'dotenv';
 
-import { exec } from 'child_process';
-import { resolve } from 'path';
+import { exec } from 'node:child_process';
+import { resolve } from 'node:path';
 
 dotenvConfig({
 	path: resolve(process.cwd(), '../.env')

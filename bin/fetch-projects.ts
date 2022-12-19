@@ -1,6 +1,6 @@
 #!/usr/bin/env ts-node-script
 
-import { writeFileSync, unlinkSync, existsSync } from 'fs';
+import { existsSync, unlinkSync, readdirSync, writeFileSync } from 'node:fs';
 
 import { getGithubRepositories } from '@insights/github';
 
@@ -72,6 +72,14 @@ const createProjectsIndex = (projects: Project[]) => {
 				branch: repo.default_branch,
 				full_name: repo.full_name
 			}));
+
+		const blogPosts = readdirSync('src/data/posts').map(file => `/blog/${file.split('.')[0]}`);
+		const openSourceProjectsRoutes = projects.map(project => `/portfolio/open-source/${project.name}`);
+
+		writeFileSync(
+			'src/data/dynamic-routes.json',
+			JSON.stringify([...blogPosts, ...openSourceProjectsRoutes], null, 2)
+		);
 
 		saveProject(
 			createProjectsIndex(projects),

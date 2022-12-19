@@ -1,6 +1,6 @@
 #!/usr/bin/env ts-node-script
 
-import { writeFileSync, unlinkSync, existsSync } from 'fs';
+import { writeFileSync, unlinkSync, existsSync } from 'node:fs';
 
 import { Track, music as tracks } from '@data/music';
 
