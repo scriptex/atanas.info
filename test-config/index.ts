@@ -64,3 +64,15 @@ jest.mock('lottie-web', () => ({
 		loadAnimation: jest.fn()
 	}
 }));
+
+jest.mock(
+	'virtual:pwa-register/react',
+	() => ({
+		useRegisterSW: jest.fn(() => ({
+			needRefresh: [],
+			offlineReady: [],
+			updateServiceWorker: jest.fn()
+		}))
+	}),
+	{ virtual: true }
+);

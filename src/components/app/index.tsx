@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import { Routes as AppRoutes } from '@data/routes';
 import { Theme, onThemeChange, setThemeClassName } from '@scripts/shared';
-import { Svg, Nav, Head, Header, Footer, Loader, Contact, ScrollToTop } from '@components';
+import { Svg, Nav, Head, Header, Footer, Loader, Contact, ReloadPrompt, ScrollToTop } from '@components';
 import {
 	Home,
 	Blog,
@@ -184,6 +184,8 @@ export const App: React.FC = () => {
 					<Nav hasShell className="c-nav--inline" />
 
 					<Footer />
+
+					<ReloadPrompt />
 				</AppContext.Provider>
 			</React.Suspense>
 		</Router>

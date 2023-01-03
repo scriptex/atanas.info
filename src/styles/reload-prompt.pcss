@@ -1,0 +1,25 @@
+.c-reload-prompt {
+	color: var(--color-secondary);
+	max-width: 20rem;
+	position: fixed;
+	bottom: 0.5rem;
+	left: 0.5rem;
+	z-index: 60;
+	padding: 0.5rem;
+	background-color: var(--color-primary);
+
+	& p {
+		font-weight: 700;
+		margin: 0 0 0.5rem;
+	}
+
+	& .c-btn {
+		text-transform: none;
+		letter-spacing: 0;
+		padding: 0.375rem;
+	}
+}
+
+.c-reload-prompt__actions {
+	@mixin flex-row nowrap, center, space-around;
+}

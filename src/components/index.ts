@@ -41,6 +41,7 @@ export { default as PortfolioOpenSourceProjects } from './portfolio/open-source'
 export { default as PortfolioPersonalProjects } from './portfolio/personal';
 export { default as PortfolioSliders } from './portfolio/sliders';
 export { default as PortfolioWebApps } from './portfolio/web';
+export { default as ReloadPrompt } from './reload-prompt';
 export { default as Resume } from './resume';
 export { default as ResumeEducation } from './resume/education';
 export { default as ResumeEntry } from './resume/entry';

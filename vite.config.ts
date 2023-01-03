@@ -52,8 +52,8 @@ export default defineConfig({
 				dir: 'ltr',
 				name: 'Atanas Atanasov',
 				short_name: 'Atanas',
-				description:
-					'Atanas Atanasov - Senior Javascript/Typescript Engineer: Single Page Applications, Vue, React, Angular, NodeJS',
+				// prettier-ignore
+				description: 'Atanas Atanasov - Senior Javascript/Typescript Engineer: Single Page Applications, Vue, React, Angular, NodeJS',
 				theme_color: '#ef4c23',
 				background_color: '#ef4c23',
 				display: 'standalone',
@@ -120,7 +120,8 @@ export default defineConfig({
 					isPrerendering: true
 				},
 				injectProperty: '__ATANAS_INFO_PRERENDERING',
-				maxConcurrentRoutes: 1
+				maxConcurrentRoutes: 1,
+				renderAfterElementExists: '.c-footer'
 			}),
 			staticDir: join(__dirname, 'dist')
 		}),
