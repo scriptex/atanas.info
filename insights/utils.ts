@@ -46,7 +46,7 @@ export const getContributions = async (url = 'https://github.com/scriptex'): Pro
 					return {
 						...data,
 						[date]: {
-							count: $(rect).data('count'),
+							count: parseInt($(rect).text()[0], 10),
 							color: $(rect).attr('fill')
 						}
 					};
