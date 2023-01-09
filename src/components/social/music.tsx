@@ -7,7 +7,7 @@ import { ExternalLink } from '@components';
 import { filteredData } from './utils';
 
 interface Props {
-	data: typeof lastFm['weeklyAlbumChart'] | typeof lastFm['topAlbums'];
+	data: (typeof lastFm)['weeklyAlbumChart'] | (typeof lastFm)['topAlbums'];
 	period: 'week' | 'month';
 	condition: boolean;
 }

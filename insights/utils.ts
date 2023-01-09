@@ -10,7 +10,7 @@ export interface Project {
 
 export interface Contribution {
 	[x: string]: {
-		count: number;
+		count: number | null;
 		color: string;
 	};
 }
