@@ -1,7 +1,7 @@
 export type Nullable<T> = T | null;
 
 export interface GithubCount {
-	count: number;
+	count: number | null;
 }
 
 export interface GithubContribution extends GithubCount {

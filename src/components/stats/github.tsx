@@ -66,7 +66,7 @@ export const extractGithubData = ({
 					return result;
 				}
 
-				return result + contributor.count;
+				return result + (contributor.count || 0);
 			}, 0)
 		},
 		{
