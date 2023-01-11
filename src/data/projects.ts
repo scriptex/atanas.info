@@ -151,7 +151,7 @@ export const projects: WebProject[] = [
 		skip: false
 	},
 	{
-		url: 'https://scriptex.js.org/2048',
+		url: 'https://2048.atanas.info',
 		image: '/images/temp/2048.png',
 		title: '2048',
 		description: 'Typescript, HTML, CSS3',
@@ -560,8 +560,8 @@ export const personalProjects: SubPage[] = [
 		text: '(Vali) Dator'
 	},
 	{
-		url: 'https://salary.atanas.info',
-		text: 'Freelance Salary Calculator'
+		url: 'https://eonhome.atanas.info',
+		text: 'Combined API Docs Gateway for E.ON Home'
 	},
 	{
 		url: 'https://github-insights.atanas.info',
@@ -628,7 +628,11 @@ export const personalProjects: SubPage[] = [
 		text: 'Round Carousel Component'
 	},
 	{
-		url: 'https://scriptex.tk',
+		url: 'https://salary.atanas.info',
+		text: 'Freelance Salary Calculator'
+	},
+	{
+		url: 'https://scriptex.js.org',
 		text: 'Scriptex'
 	},
 	{
