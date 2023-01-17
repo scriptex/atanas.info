@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { FC, useState } from 'react';
@@ -93,6 +94,10 @@ export const GithubStats: FC = () => {
 
 	return (
 		<Layout>
+			<Head>
+				<title>Github Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+			</Head>
+
 			<Section
 				{...sectionStatsProps}
 				actions={

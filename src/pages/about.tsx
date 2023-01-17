@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import type { FC } from 'react';
 
@@ -7,6 +8,10 @@ import { Layout, Section, Animation, ExternalLink } from '@components';
 
 export const About: FC = () => (
 	<Layout>
+		<Head>
+			<title>About | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+		</Head>
+
 		<Section
 			id="about"
 			style={{ backgroundImage: 'url(/images/temp/desktop.jpg)' }}

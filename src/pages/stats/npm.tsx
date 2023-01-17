@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import type { FC } from 'react';
 
@@ -70,6 +71,10 @@ export const NPMStats: FC = () => {
 
 	return (
 		<Layout>
+			<Head>
+				<title>NPM Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+			</Head>
+
 			<Section
 				{...sectionStatsProps}
 				actions={

@@ -1,8 +1,10 @@
+import Head from 'next/head';
+import { FC, useRef, useState, useEffect } from 'react';
+
 import { tracks } from '@data/tracks';
 import { Layout, Section } from '@components';
 import { music, MusicFunctions } from '@scripts/music';
 import { Ref, composeClassName } from '@scripts/shared';
-import { FC, useEffect, useRef, useState } from 'react';
 
 export const Music: FC = () => {
 	const [source, setSource] = useState(tracks[0]);
@@ -22,6 +24,10 @@ export const Music: FC = () => {
 
 	return (
 		<Layout main="o-main--high">
+			<Head>
+				<title>Music | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+			</Head>
+
 			<Section id="music" hasButton>
 				<div
 					ref={container}

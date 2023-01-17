@@ -39,7 +39,7 @@ export const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
 
 		import('react-gtm-module').then(({ default: TagManager }) => {
 			TagManager.initialize({
-				gtmId: process.env.GTM_ID || ''
+				gtmId: process.env.NEXT_PUBLIC_GTM_ID || ''
 			});
 		});
 	}, []);

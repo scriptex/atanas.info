@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import type { FC } from 'react';
 
 import resume from '@data/lotties/resume.json';
@@ -17,6 +18,10 @@ import {
 
 export const Resume: FC = () => (
 	<Layout>
+		<Head>
+			<title>Resume | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+		</Head>
+
 		<Section
 			id="resume"
 			title="Resume"

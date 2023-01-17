@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { FC, useState } from 'react';
 
 import presentation from '@data/lotties/presentation.json';
@@ -10,6 +11,10 @@ export const Slides: FC = () => {
 
 	return (
 		<Layout>
+			<Head>
+				<title>Slides | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+			</Head>
+
 			<Section
 				id="slides"
 				style={{ backgroundImage: 'url(images/temp/presentation.jpg)' }}

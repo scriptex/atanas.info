@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import type { FC } from 'react';
 
@@ -14,6 +15,10 @@ export const blogProps = {
 
 export const Blog: FC = () => (
 	<Layout>
+		<Head>
+			<title>Blog | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+		</Head>
+
 		<Section id="blog" title="Blog" {...blogProps}>
 			<div className="c-section__body o-grid">
 				{articles

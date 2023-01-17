@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import type { FC } from 'react';
 
 import portfolio from '@data/lotties/portfolio.json';
@@ -13,6 +14,10 @@ export const portfolioSectionProps = {
 
 export const Portfolio: FC = () => (
 	<Layout>
+		<Head>
+			<title>Portfolio | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+		</Head>
+
 		<Section {...portfolioSectionProps}>
 			<SectionGrid data={portfolioItems} />
 		</Section>

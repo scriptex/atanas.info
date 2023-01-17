@@ -1,5 +1,6 @@
-import type { FC } from 'react';
+import Head from 'next/head';
 import Image from 'next/image';
+import type { FC } from 'react';
 
 import certificate from '@data/lotties/certificate.json';
 import { Certificate, certificates } from '@data/certificates';
@@ -7,6 +8,10 @@ import { Layout, Loader, Section, Animation, ExternalLink } from '@components';
 
 export const Certificates: FC = () => (
 	<Layout>
+		<Head>
+			<title>Certificates | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+		</Head>
+
 		<Section
 			id="certificates"
 			title="Certificates"

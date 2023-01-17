@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import useInterval from 'use-interval';
 import { FC, useEffect, useState } from 'react';
 
@@ -26,6 +27,10 @@ export const Home: FC = () => {
 
 	return (
 		<Layout main="o-main--high">
+			<Head>
+				<title>Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+			</Head>
+
 			<Section id="hello" hasShell={false} hasButton={false}>
 				<div className="c-canvas" id="canvas" />
 

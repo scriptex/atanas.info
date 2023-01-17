@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import type { FC } from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 
@@ -7,6 +8,10 @@ import { TimelineItem, timelineItems } from '@data/timeline';
 
 export const Timeline: FC = () => (
 	<Layout>
+		<Head>
+			<title>Timeline | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+		</Head>
+
 		<Section
 			id="timeline"
 			title="Timeline"

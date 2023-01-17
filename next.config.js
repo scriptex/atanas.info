@@ -1,4 +1,8 @@
-module.exports = {
+const withPWA = require('next-pwa')({
+	dest: 'public'
+});
+
+module.exports = withPWA({
 	webpack(config) {
 		config.module.rules = [
 			...config.module.rules,
@@ -31,4 +35,4 @@ module.exports = {
 
 		return config;
 	}
-};
+});

@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import type { FC } from 'react';
 
@@ -14,6 +15,10 @@ export const openSourceProjects = openSourceProjectsList.map((repo, index) => ({
 
 export const PortfolioOpenSourceProjects: FC = () => (
 	<Layout>
+		<Head>
+			<title>Open Source | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+		</Head>
+
 		<Section
 			{...portfolioSectionProps}
 			actions={

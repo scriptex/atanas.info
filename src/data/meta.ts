@@ -8,10 +8,6 @@ export type MetaTag = {
 
 export const metaTags: MetaTag[] = [
 	{
-		tag: 'title',
-		content: 'Atanas Atanasov | Senior Javascript/Typescript Engineer'
-	},
-	{
 		tag: 'meta',
 		name: 'description',
 		content:
@@ -21,7 +17,7 @@ export const metaTags: MetaTag[] = [
 		tag: 'meta',
 		name: 'keywords',
 		content:
-			'React Development, NodeJS Devrlopment, Typescript Development, Web Development, WordPress Development, HTML Development, Website Development, Javascript Development, WordPress, WP, JS, Javascript, Vue, Vue.js, VueJS, Nuxt, React, ReactJS, React JS, Node, NodeJS, Single Page Apps, Single Page Application, CSS, CSS3, ES5, ES6, ES7, Website, Development'
+			'React Development, NodeJS Development, Typescript Development, Web Development, WordPress Development, HTML Development, Website Development, Javascript Development, WordPress, WP, JS, Javascript, Vue, Vue.js, VueJS, Nuxt, React, ReactJS, React JS, Node, NodeJS, Single Page Apps, Single Page Application, CSS, CSS3, ES5, ES6, ES7, Website, Development'
 	},
 	{ tag: 'meta', name: 'copyright', content: 'Atanas Atanasov' },
 	{ tag: 'meta', name: 'language', content: 'EN' },
@@ -45,9 +41,12 @@ export const metaTags: MetaTag[] = [
 		content:
 			'Single Page Applications: Vue, React, Angular, NodeJS, PHP. Frontend master: HTML, SVG, CSS, SCSS, PostCSS, Javascript, Typescript, etc.'
 	},
-	{ tag: 'meta', name: 'apple-mobile-web-app-capable', content: 'yes' },
-	{ tag: 'meta', name: 'mobile-web-app-capable', content: 'yes' },
 	{ tag: 'meta', name: 'application-name', content: 'Atanas Atanasov' },
+	{ tag: 'meta', name: 'mobile-web-app-capable', content: 'yes' },
+	{ tag: 'meta', name: 'apple-mobile-web-app-capable', content: 'yes' },
+	{ tag: 'meta', name: 'apple-mobile-web-app-title', content: 'Atanas Atanasov' },
+	{ tag: 'meta', name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
+	{ tag: 'meta', name: 'format-detection', content: 'telephone=no' },
 	{ tag: 'meta', name: 'msapplication-config', content: 'config.xml' },
 	{ tag: 'meta', name: 'msapplication-TileColor', content: '#ef4c23' },
 	{ tag: 'meta', name: 'msapplication-TileImage', content: '/images/favicon/ms-tile-144x144.png' },
@@ -55,7 +54,28 @@ export const metaTags: MetaTag[] = [
 	{ tag: 'meta', name: 'msapplication-square150x150logo', content: '/images/favicon/ms-tile-150x150.png' },
 	{ tag: 'meta', name: 'msapplication-wide310x150logo', content: '/images/favicon/ms-tile-310x150.png' },
 	{ tag: 'meta', name: 'msapplication-square310x310logo', content: '/images/favicon/ms-tile-310x310.png' },
-	{ tag: 'meta', name: 'theme-color', content: '#ef4c23' }
+	{ tag: 'meta', name: 'theme-color', content: '#ef4c23' },
+
+	{ tag: 'meta', name: 'twitter:card', content: 'summary' },
+	{ tag: 'meta', name: 'twitter:url', content: 'https://atanas.info' },
+	{ tag: 'meta', name: 'twitter:title', content: 'Atanas Atanasov' },
+	{
+		tag: 'meta',
+		name: 'twitter:description',
+		content: 'Senior Javascript/Typescript Engineer: Single Page Applications, Vue, React, Angular, NodeJS'
+	},
+	{ tag: 'meta', name: 'twitter:image', content: 'https://atanas.info/images/temp/atanas.jpg' },
+	{ tag: 'meta', name: 'twitter:creator', content: '@scriptexbg' },
+	{ tag: 'meta', property: 'og:type', content: 'website' },
+	{ tag: 'meta', property: 'og:title', content: 'Atanas Atanasov' },
+	{
+		tag: 'meta',
+		property: 'og:description',
+		content: 'Senior Javascript/Typescript Engineer: Single Page Applications, Vue, React, Angular, NodeJS'
+	},
+	{ tag: 'meta', property: 'og:site_name', content: 'Atanas Atanasov' },
+	{ tag: 'meta', property: 'og:url', content: 'https://atanas.info' },
+	{ tag: 'meta', property: 'og:image', content: 'https://atanas.info/images/temp/atanas.jpg' }
 ];
 
 export type LinkTag = {
@@ -343,5 +363,10 @@ export const linkTags: LinkTag[] = [
 		rel: 'apple-touch-startup-image',
 		href: '/images/launch-screens/launch-screen-1136x640.png',
 		media: '(device-width: 1136px) and (device-height: 640px) and  (orientation: landscape)'
+	},
+	{
+		tag: 'link',
+		rel: 'manifest',
+		href: '/manifest.json'
 	}
 ];

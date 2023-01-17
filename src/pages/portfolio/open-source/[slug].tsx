@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import ErrorPage from 'next/error';
 import type { FC } from 'react';
 import { useRouter } from 'next/router';
@@ -36,6 +37,10 @@ export const OpenSourceProject: FC<Readonly<Props>> = ({ post }: Props) => {
 
 	return (
 		<Layout>
+			<Head>
+				<title>Open Source | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+			</Head>
+
 			<MDX
 				id="blog-post"
 				back={Routes.PORTFOLIO_OPEN_SOURCE_PROJECTS}

@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import type { FC } from 'react';
 
@@ -10,6 +11,10 @@ import { Layout, Loader, Section, ExternalLink } from '@components';
 
 export const PortfolioWebApps: FC = () => (
 	<Layout>
+		<Head>
+			<title>Web Applications | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+		</Head>
+
 		<Section
 			{...portfolioSectionProps}
 			actions={

@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { FC, useState } from 'react';
 
 import videoCamera from '@data/lotties/video-camera.json';
@@ -10,6 +11,10 @@ export const Videos: FC = () => {
 
 	return (
 		<Layout>
+			<Head>
+				<title>Videos | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+			</Head>
+
 			<Section
 				id="videos"
 				title="Videos"

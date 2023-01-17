@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import type { FC } from 'react';
 
@@ -8,6 +9,10 @@ import { Layout, Section, SectionGrid } from '@components';
 
 export const PortfolioPersonalProjects: FC = () => (
 	<Layout>
+		<Head>
+			<title>Personal Projects | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+		</Head>
+
 		<Section
 			{...portfolioSectionProps}
 			actions={

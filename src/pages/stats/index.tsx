@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { format } from 'date-fns';
 import { FC, useEffect, useRef } from 'react';
 
@@ -35,6 +36,10 @@ export const Stats: FC = () => {
 
 	return (
 		<Layout>
+			<Head>
+				<title>Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+			</Head>
+
 			<Section {...sectionStatsProps} hasShell={true}>
 				<SectionGrid data={statsItems} />
 			</Section>

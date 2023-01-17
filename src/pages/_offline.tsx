@@ -1,12 +1,10 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import type { FC } from 'react';
 
-import { Routes } from '@data/routes';
 import { errorIcon } from '@data/error-icon';
 import { Lines, Layout } from '@components';
 
-export const ErrorPage: FC = () => (
+export const OfflinePage: FC = () => (
 	<Layout main="o-main--high">
 		<Head>
 			<title>Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
@@ -25,17 +23,15 @@ export const ErrorPage: FC = () => (
 				</svg>
 
 				<div className="c-error-page__content">
-					<h1>404</h1>
+					<h1>No internet</h1>
 
-					<p>Page not found</p>
+					<p>It looks like you&apos;re offline...</p>
 
-					<Link href={Routes.HOME} className="c-btn">
-						Go to Home page
-					</Link>
+					<p>Please connect to the internet and try again.</p>
 				</div>
 			</div>
 		</div>
 	</Layout>
 );
 
-export default ErrorPage;
+export default OfflinePage;

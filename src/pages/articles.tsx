@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import type { FC } from 'react';
 
 import { blogProps } from './blog';
@@ -6,6 +7,10 @@ import { Layout, Loader, Section, ExternalLink } from '@components';
 
 export const Articles: FC = () => (
 	<Layout>
+		<Head>
+			<title>Articles | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+		</Head>
+
 		<Section id="articles" title="Articles" {...blogProps}>
 			<div className="c-section__body o-grid">
 				{articles

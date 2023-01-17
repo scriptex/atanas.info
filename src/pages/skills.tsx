@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { FC, useState, useEffect } from 'react';
 
 import { Skill, skills } from '@data/skills-list';
@@ -13,6 +14,10 @@ export const Skills: FC = () => {
 
 	return (
 		<Layout>
+			<Head>
+				<title>Skills | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+			</Head>
+
 			<Section
 				id="skills"
 				title="Skills"

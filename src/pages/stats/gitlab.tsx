@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import { FC, useRef, useEffect } from 'react';
 
@@ -85,6 +86,10 @@ export const GitlabStats: FC = () => {
 
 	return (
 		<Layout>
+			<Head>
+				<title>Gitlab Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+			</Head>
+
 			<Section
 				{...sectionStatsProps}
 				actions={

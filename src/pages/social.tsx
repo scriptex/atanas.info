@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Script from 'next/script';
 import type { FC } from 'react';
 
@@ -7,6 +8,10 @@ import { Lines, Layout, Section, Animation, SocialMusic, LinkedInBadge } from '@
 
 export const Social: FC = () => (
 	<Layout>
+		<Head>
+			<title>Social | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+		</Head>
+
 		<Section
 			id="social"
 			title="Social"

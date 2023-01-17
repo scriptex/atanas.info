@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
@@ -25,6 +26,10 @@ export const OpenSourceProject: FC<Readonly<Props>> = ({ post }: Props) => {
 
 	return (
 		<Layout>
+			<Head>
+				<title>{match?.title || post.slug} | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+			</Head>
+
 			<MDX
 				id="blog-post"
 				back={Routes.BLOG}
