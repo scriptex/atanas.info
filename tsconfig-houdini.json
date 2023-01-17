@@ -1,8 +1,6 @@
 {
 	"compilerOptions": {
-		"outDir": "./public/houdini",
-		"target": "esNext",
-		"sourceMap": false
+		"outDir": "./public/houdini"
 	},
 	"extends": "./tsconfig.json",
 	"include": ["src/houdini/*", "src/custom.d.ts"]

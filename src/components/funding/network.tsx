@@ -1,4 +1,4 @@
-import * as React from 'react';
+import type { FC } from 'react';
 
 interface Props {
 	url: string;
@@ -7,7 +7,7 @@ interface Props {
 	matrix: string;
 }
 
-export const FundingNetwork: React.FC<Props> = ({ url, icon, name, matrix }: Props) => (
+export const FundingNetwork: FC<Props> = ({ url, icon, name, matrix }: Props) => (
 	<g transform={matrix} className="c-funding__item">
 		<path fill="none" d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z" />
 

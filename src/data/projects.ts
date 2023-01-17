@@ -20,7 +20,7 @@ export interface ExtendedProject extends Project {
 export interface SubPage {
 	readonly url: Routes | string;
 	readonly text: string;
-	readonly image?: string;
+	readonly image: string;
 }
 
 export const projects: WebProject[] = [
@@ -541,138 +541,172 @@ export const portfolioItems: SubPage[] = [
 export const personalProjects: SubPage[] = [
 	{
 		url: 'https://2048.atanas.info',
-		text: '2048 Game'
+		text: '2048 Game',
+		image: '/images/unsplash/1.jpeg'
 	},
 	{
 		url: 'https://animate-me.atanas.info',
-		text: 'AnimateMe'
+		text: 'AnimateMe',
+		image: '/images/unsplash/2.jpeg'
 	},
 	{
 		url: 'https://at-the-wall.atanas.info',
-		text: 'At the Wall'
+		text: 'At the Wall',
+		image: '/images/unsplash/3.jpeg'
 	},
 	{
 		url: 'https://calendar-widget.atanas.info',
-		text: 'Calendar Widget'
+		text: 'Calendar Widget',
+		image: '/images/unsplash/4.jpeg'
 	},
 	{
 		url: 'https://dator.atanas.info',
-		text: '(Vali) Dator'
+		text: '(Vali) Dator',
+		image: '/images/unsplash/5.jpeg'
 	},
 	{
 		url: 'https://eonhome.atanas.info',
-		text: 'Combined API Docs Gateway for E.ON Home'
+		text: 'Combined API Docs Gateway for E.ON Home',
+		image: '/images/unsplash/6.jpeg'
 	},
 	{
 		url: 'https://github-insights.atanas.info',
-		text: 'Github Insights (beta)'
+		text: 'Github Insights (beta)',
+		image: '/images/unsplash/7.jpeg'
 	},
 	{
 		url: 'https://gitlab-calendar.atanas.info',
-		text: 'Gitlab Calendar'
+		text: 'Gitlab Calendar',
+		image: '/images/unsplash/8.jpeg'
 	},
 	{
 		url: 'https://html5-form-validator.atanas.info',
-		text: 'HTML5 Form Validator'
+		text: 'HTML5 Form Validator',
+		image: '/images/unsplash/9.jpeg'
 	},
 	{
 		url: 'https://intro-scroll.atanas.info',
-		text: 'Intro Scroll'
+		text: 'Intro Scroll',
+		image: '/images/unsplash/10.jpeg'
 	},
 	{
 		url: 'https://itcss.atanas.info',
-		text: 'ITCSS'
+		text: 'ITCSS',
+		image: '/images/unsplash/11.jpeg'
 	},
 	{
 		url: 'https://itscss.atanas.info',
-		text: 'ITSCSS'
+		text: 'ITSCSS',
+		image: '/images/unsplash/12.jpeg'
 	},
 	{
 		url: 'https://kinetik.atanas.info',
-		text: 'Kinetik'
+		text: 'Kinetik',
+		image: '/images/unsplash/13.jpeg'
 	},
 	{
 		url: 'https://no-html.atanas.info',
-		text: 'No HTML'
+		text: 'No HTML',
+		image: '/images/unsplash/14.jpeg'
 	},
 	{
 		url: 'https://npm-maintainer.atanas.info',
-		text: 'NPM Maintainer'
+		text: 'NPM Maintainer',
+		image: '/images/unsplash/15.jpeg'
 	},
 	{
 		url: 'https://pass-score.atanas.info',
-		text: 'Pass Score'
+		text: 'Pass Score',
+		image: '/images/unsplash/16.jpeg'
 	},
 	{
 		url: 'https://react-accordion-ts.atanas.info',
-		text: 'React Accordion TS'
+		text: 'React Accordion TS',
+		image: '/images/unsplash/17.jpeg'
 	},
 	{
 		url: 'https://react-carousel.atanas.info',
-		text: 'React Carousel'
+		text: 'React Carousel',
+		image: '/images/unsplash/18.jpeg'
 	},
 	{
 		url: 'https://react-dropper.atanas.info',
-		text: 'React Dropper'
+		text: 'React Dropper',
+		image: '/images/unsplash/19.jpeg'
 	},
 	{
 		url: 'https://react-round-carousel.atanas.info',
-		text: 'React Round Carousel'
+		text: 'React Round Carousel',
+		image: '/images/unsplash/20.jpeg'
 	},
 	{
 		url: 'https://react-svg-donuts.atanas.info',
-		text: 'React SVG Donuts'
+		text: 'React SVG Donuts',
+		image: '/images/unsplash/21.jpeg'
 	},
 	{
 		url: 'https://round-carousel-component.atanas.info',
-		text: 'Round Carousel Component'
+		text: 'Round Carousel Component',
+		image: '/images/unsplash/22.jpeg'
 	},
 	{
 		url: 'https://salary.atanas.info',
-		text: 'Freelance Salary Calculator'
+		text: 'Freelance Salary Calculator',
+		image: '/images/unsplash/23.jpeg'
 	},
 	{
 		url: 'https://scriptex.js.org',
-		text: 'Scriptex'
+		text: 'Scriptex',
+		image: '/images/unsplash/24.jpeg'
 	},
 	{
 		url: 'https://scss-goodies.atanas.info',
-		text: 'SCSS Goodies'
+		text: 'SCSS Goodies',
+		image: '/images/unsplash/25.jpeg'
 	},
 	{
 		url: 'https://shortener.atanas.info',
-		text: 'URL Shortener'
+		text: 'URL Shortener',
+		image: '/images/unsplash/1.jpeg'
 	},
 	{
 		url: 'https://snake.atanas.info',
-		text: 'Snake Game'
+		text: 'Snake Game',
+		image: '/images/unsplash/2.jpeg'
 	},
 	{
-		url: 'https://socialheader.tk',
-		text: 'Social Header'
+		url: 'https://social-header.atanas.info',
+		text: 'Social Header',
+		image: '/images/unsplash/3.jpeg'
 	},
 	{
 		url: 'https://socials.atanas.info',
-		text: "Scriptex's Socials"
+		text: "Scriptex's Socials",
+		image: '/images/unsplash/4.jpeg'
 	},
 	{
 		url: 'https://sod.atanas.info',
-		text: 'SOD64'
+		text: 'SOD64',
+		image: '/images/unsplash/5.jpeg'
 	},
 	{
 		url: 'https://svg64.atanas.info',
-		text: 'SVG64'
+		text: 'SVG64',
+		image: '/images/unsplash/6.jpeg'
 	},
 	{
 		url: 'https://tetris.atanas.info',
-		text: 'Tetris Game'
+		text: 'Tetris Game',
+		image: '/images/unsplash/7.jpeg'
 	},
 	{
 		url: 'https://touchsweep.atanas.info',
-		text: 'Touchsweep'
+		text: 'Touchsweep',
+		image: '/images/unsplash/8.jpeg'
 	},
 	{
 		url: 'https://ts-helpers.atanas.info',
-		text: 'TS Helpers'
+		text: 'TS Helpers',
+		image: '/images/unsplash/9.jpeg'
 	}
 ];

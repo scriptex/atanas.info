@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-import * as React from 'react';
+import type { FC, ReactNode } from 'react';
 
 import { composeClassName } from '@scripts/shared';
 
@@ -8,14 +7,14 @@ interface Props {
 	href?: string;
 	type?: 'submit' | 'reset' | 'button' | 'link';
 	target?: string;
-	children?: React.ReactNode | string | Array<React.ReactNode | string>;
+	children?: ReactNode | string | Array<ReactNode | string>;
 	download?: boolean;
 	className?: string;
 	ariaLabel?: string;
 	onClick?: (...args: unknown[]) => unknown;
 }
 
-export const Button: React.FC<Readonly<Props>> = ({
+export const Button: FC<Readonly<Props>> = ({
 	rel,
 	href,
 	type,

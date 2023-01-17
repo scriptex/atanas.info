@@ -1,4 +1,5 @@
-export default registerPaint(
+// @ts-ignore
+registerPaint(
 	'slanted-background',
 	class {
 		public static get inputProperties(): string[] {

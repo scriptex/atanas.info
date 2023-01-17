@@ -2,4 +2,4 @@
 
 eslint '**/*.{ts,tsx}'
 
-stylelint './src/**/*.pcss' --config .stylelintrc
+stylelint './src/**/*.css' --config .stylelintrc

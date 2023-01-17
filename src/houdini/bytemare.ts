@@ -1,6 +1,8 @@
+// @ts-ignore
 const paintNameBytemare = 'bytemare';
 
-export default registerPaint(
+// @ts-ignore
+registerPaint(
 	paintNameBytemare,
 	class {
 		private radians: number;

@@ -1,13 +1,10 @@
-import * as React from 'react';
+import Script from 'next/script';
+import { FC, useEffect } from 'react';
 
-import { useScript, waitForElement } from '@scripts/shared';
+import { waitForElement } from '@scripts/shared';
 
-export const ContactForm: React.FC = () => {
-	useScript('https://www.google.com/recaptcha/api.js', (script: HTMLScriptElement) => {
-		script.defer = true;
-	});
-
-	React.useEffect(() => {
+export const ContactForm: FC = () => {
+	useEffect(() => {
 		waitForElement('#g-recaptcha-response').then((el: Element | null) => {
 			el?.setAttribute('required', 'required');
 		});
@@ -15,6 +12,8 @@ export const ContactForm: React.FC = () => {
 
 	return (
 		<>
+			<Script src="https://www.google.com/recaptcha/api.js" async defer />
+
 			<h2>Send me your message</h2>
 
 			<div className="c-contact__field">

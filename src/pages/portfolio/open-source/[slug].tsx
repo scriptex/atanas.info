@@ -1,0 +1,65 @@
+import ErrorPage from 'next/error';
+import type { FC } from 'react';
+import { useRouter } from 'next/router';
+
+import { Routes } from '@data/routes';
+import { MDX, Layout } from '@components';
+import { openSourceProjects } from '.';
+import { getPostBySlug, getAllPosts } from '@lib/markdown';
+
+type Props = {
+	post: {
+		slug: string;
+		content: string;
+	};
+};
+
+type Params = {
+	params: {
+		slug: string;
+	};
+};
+
+export const OpenSourceProject: FC<Readonly<Props>> = ({ post }: Props) => {
+	const router = useRouter();
+
+	if (!router.isFallback && !post?.slug) {
+		return (
+			<Layout>
+				{/* TODO: Create a custom error page */}
+				<ErrorPage statusCode={404} />
+			</Layout>
+		);
+	}
+
+	const match = openSourceProjects.find(item => item.url === `/portfolio/open-source/${post.slug}`);
+
+	return (
+		<Layout>
+			<MDX
+				id="blog-post"
+				back={Routes.PORTFOLIO_OPEN_SOURCE_PROJECTS}
+				title={post.slug}
+				image={match?.image}
+				content={post.content}
+			/>
+		</Layout>
+	);
+};
+
+export async function getStaticProps({ params }: Params) {
+	const post = getPostBySlug('src/data/open-source-projects', params.slug, ['slug', 'content']);
+
+	return { props: { post } };
+}
+
+export async function getStaticPaths() {
+	const posts = getAllPosts('src/data/open-source-projects', ['slug']);
+
+	return {
+		paths: posts.map(({ slug }) => ({ params: { slug } })),
+		fallback: false
+	};
+}
+
+export default OpenSourceProject;

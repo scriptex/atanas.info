@@ -6,6 +6,7 @@
 	},
 	"extends": [
 		"prettier",
+		"next/core-web-vitals",
 		"plugin:react/recommended",
 		"plugin:compat/recommended",
 		"plugin:@typescript-eslint/recommended"
@@ -16,10 +17,16 @@
 		"sourceType": "module"
 	},
 	"plugins": ["@typescript-eslint", "jest"],
-	"ignorePatterns": ["src/scripts/analytics.js", "src/scripts/google-analytics-local.js"],
+	"ignorePatterns": [
+		"next.config.js",
+		"postcss.config.js",
+		"src/scripts/analytics.js",
+		"src/scripts/google-analytics-local.js"
+	],
 	"rules": {
 		"compat/compat": "off",
 		"react/display-name": "off",
+		"react/react-in-jsx-scope": "off",
 		"@typescript-eslint/ban-ts-comment": "off",
 		"@typescript-eslint/no-explicit-any": "off",
 		"@typescript-eslint/no-var-requires": "off",

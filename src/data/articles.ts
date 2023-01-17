@@ -1,12 +1,7 @@
-import { html as testingWebSocketsWithCypress } from './posts/testing-websockets-with-cypress.md';
-import { html as bulkImageWatermarkWithNodejsAndJimp } from './posts/bulk-image-watermark-with-nodejs-and-jimp.md';
-import { html as runningMultipleWebpackBasedApplicationsSimultaneously } from './posts/running-multiple-webpack-based-applications-simultaneously.md';
-
 export interface Article {
 	readonly url: string;
 	readonly title: string;
 	readonly image: string;
-	readonly content?: any;
 	readonly external: boolean;
 }
 
@@ -27,21 +22,18 @@ export const articles: Article[] = [
 		url: '/blog/bulk-image-watermark-with-nodejs-and-jimp',
 		title: 'Bulk image watermark with NodeJS and Jimp',
 		image: '/images/temp/bulk-image-watermark-with-nodejs-and-jimp.jpg',
-		content: bulkImageWatermarkWithNodejsAndJimp,
 		external: false
 	},
 	{
 		url: '/blog/running-multiple-webpack-based-applications-simultaneously',
 		title: 'Running multiple Webpack based applications simultaneously',
 		image: '/images/temp/running-multiple-webpack-based-applications-simultaneously.png',
-		content: runningMultipleWebpackBasedApplicationsSimultaneously,
 		external: false
 	},
 	{
 		url: '/blog/testing-websockets-with-cypress',
 		title: 'Testing WebSockets with Cypress',
 		image: '/images/temp/testing-websockets-with-cypress.png',
-		content: testingWebSocketsWithCypress,
 		external: false
 	}
 ];

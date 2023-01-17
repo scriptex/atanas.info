@@ -1,27 +1,8 @@
-import * as React from 'react';
 import { format } from 'date-fns';
+import { MutableRefObject } from 'react';
 
 export type Theme = 'dark' | 'light';
-export type Ref<T> = React.MutableRefObject<T | null>;
-
-export const useScript = (url: string, callback?: (script: HTMLScriptElement) => void): void => {
-	React.useEffect(() => {
-		const script = document.createElement('script');
-
-		script.src = url;
-		script.async = true;
-
-		if (callback && typeof callback === 'function') {
-			callback(script);
-		}
-
-		document.body.appendChild(script);
-
-		return () => {
-			document.body.removeChild(script);
-		};
-	}, [url]);
-};
+export type Ref<T> = MutableRefObject<T | null>;
 
 export const random = (): number => {
 	const crypto = window.crypto || window.msCrypto;

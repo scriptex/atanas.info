@@ -1,11 +1,4 @@
 import * as React from 'react';
-import '@codersrank/summary/codersrank-summary.min';
-import '@codersrank/activity/codersrank-activity.min';
-import '@codersrank/timeline/codersrank-timeline.min';
-import '@codersrank/education/codersrank-education.min';
-import '@codersrank/portfolio/codersrank-portfolio.min';
-import '@codersrank/skills-chart/codersrank-skills-chart.min';
-import '@codersrank/work-experience/codersrank-work-experience.min';
 
 export type InteractiveResumeItem = {
 	title: string;

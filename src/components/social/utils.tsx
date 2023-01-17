@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { CarouselItem } from 'react-round-carousel';
 
 type LastFMAlbum = {

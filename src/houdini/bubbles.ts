@@ -1,4 +1,4 @@
-/* eslint-disable prefer-const */
+// @ts-ignore
 type Bubble = {
 	x: number;
 	y: number;
@@ -6,7 +6,8 @@ type Bubble = {
 	color: string;
 };
 
-export default registerPaint(
+// @ts-ignore
+registerPaint(
 	'bubbles',
 	class {
 		public static get inputProperties(): string[] {
@@ -25,12 +26,14 @@ export default registerPaint(
 			props: Map<string, any>
 		) {
 			let [
+				// eslint-disable-next-line prefer-const
 				colors = ['#ef4c23', '#ff8d71'],
 				minRadius = 10,
 				maxRadius = 60,
 				numCircles = 50,
+				// eslint-disable-next-line prefer-const
 				background = '#000'
-			]: any = this.parseProps(props);
+			] = this.parseProps(props);
 
 			c.beginPath();
 
@@ -40,9 +43,9 @@ export default registerPaint(
 
 			c.closePath();
 
-			minRadius = this.normalize(minRadius, 10);
-			maxRadius = this.normalize(maxRadius, 60);
-			numCircles = this.normalize(numCircles, 20);
+			minRadius = this.normalize(minRadius as number, 10);
+			maxRadius = this.normalize(maxRadius as number, 60);
+			numCircles = this.normalize(numCircles as number, 20);
 
 			for (let i = 0, max = numCircles; i < max; i++) {
 				this.drawCircle(c, {

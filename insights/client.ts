@@ -1,5 +1,4 @@
-// @ts-ignore
-import * as LastFm from 'lastfm-node-client';
+import LastFm from 'lastfm-node-client';
 import { GitHubClient } from 'universal-github-client';
 import { config as dotenvConfig } from 'dotenv';
 

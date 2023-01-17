@@ -1,4 +1,5 @@
 // prettier-ignore
+// @ts-ignore
 window.matchMedia = window.matchMedia || (() => ({
 	matches: false,
 	addListener: () => 'mocked matchMedia addListener',
@@ -9,6 +10,7 @@ window.matchMedia = window.matchMedia || (() => ({
 
 window.crypto = {
 	...require('crypto'),
+	// @ts-ignore
 	getRandomValues: buffer => require('crypto').randomFillSync(buffer)
 };
 

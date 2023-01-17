@@ -1,4 +1,4 @@
-import * as React from 'react';
+import type { FC } from 'react';
 import Carousel from 'react-round-carousel';
 
 import lastFm from '@data/last.fm-insights.json';
@@ -12,7 +12,7 @@ interface Props {
 	condition: boolean;
 }
 
-export const SocialMusicCarousel: React.FC<Readonly<Props>> = ({ data, period, condition }: Props) =>
+export const SocialMusicCarousel: FC<Readonly<Props>> = ({ data, period, condition }: Props) =>
 	condition ? (
 		<div className="o-grid__item xs-12">
 			<h3>Top albums for last {period}:</h3>
@@ -21,7 +21,7 @@ export const SocialMusicCarousel: React.FC<Readonly<Props>> = ({ data, period, c
 		</div>
 	) : null;
 
-export const SocialMusic: React.FC = () => {
+export const SocialMusic: FC = () => {
 	const { error, updated, topAlbums, weeklyAlbumChart } = lastFm;
 	const topAlbumsLength = topAlbums.length;
 	const weeklyAlbumChartLength = weeklyAlbumChart.length;
