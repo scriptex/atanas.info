@@ -1,6 +1,6 @@
-import * as React from 'react';
+import type { FC } from 'react';
 
-export const ResumeSummary: React.FC = () => (
+export const ResumeSummary: FC = () => (
 	<div className="c-resume__block">
 		<h2>Summary</h2>
 

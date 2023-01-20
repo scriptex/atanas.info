@@ -1,6 +1,8 @@
+// @ts-ignore
 const paintNameBlotto = 'blotto';
 
-export default registerPaint(
+// @ts-ignore
+registerPaint(
 	paintNameBlotto,
 	class {
 		public static get inputProperties(): string[] {

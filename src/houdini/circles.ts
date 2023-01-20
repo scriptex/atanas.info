@@ -1,3 +1,4 @@
+// @ts-ignore
 type Circle = {
 	x: number;
 	y: number;
@@ -6,7 +7,8 @@ type Circle = {
 	alpha: number;
 };
 
-export default registerPaint(
+// @ts-ignore
+registerPaint(
 	'circles',
 	class {
 		public static get inputProperties(): string[] {

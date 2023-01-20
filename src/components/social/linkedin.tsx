@@ -1,11 +1,12 @@
-import * as React from 'react';
+import Image from 'next/image';
+import type { FC } from 'react';
 
 import { ExternalLink } from '@components';
 
-export const LinkedInBadge: React.FC = () => (
+export const LinkedInBadge: FC = () => (
 	<div className="linkedin-badge bubbles">
 		<div className="linkedin-badge__content">
-			<img
+			<Image
 				src="/images/temp/atanas.jpg"
 				alt="Atanas Atanasov smiling dressed in a green t-shirt"
 				width={240}

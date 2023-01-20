@@ -1,4 +1,4 @@
-import * as React from 'react';
+import type { FC } from 'react';
 
 import { Icon, ExternalLink } from '@components';
 
@@ -10,9 +10,9 @@ export type TimelineItem = {
 	content: JSX.Element;
 };
 
-export const WorkIcon: React.FC = () => <Icon name="svg-work" className="vertical-timeline__icon" />;
-export const PersonalIcon: React.FC = () => <Icon name="svg-personal" className="vertical-timeline__icon" />;
-export const EducationIcon: React.FC = () => <Icon name="svg-education" className="vertical-timeline__icon" />;
+export const WorkIcon: FC = () => <Icon name="svg-work" className="vertical-timeline__icon" />;
+export const PersonalIcon: FC = () => <Icon name="svg-personal" className="vertical-timeline__icon" />;
+export const EducationIcon: FC = () => <Icon name="svg-education" className="vertical-timeline__icon" />;
 
 export const timelineItems: TimelineItem[] = [
 	{

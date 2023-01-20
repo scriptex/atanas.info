@@ -1,6 +1,6 @@
-import * as React from 'react';
+import type { FC } from 'react';
 
-export const Lines: React.FC = () => (
+export const Lines: FC = () => (
 	<>
 		<div className="lines">
 			{Array(3)

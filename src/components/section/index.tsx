@@ -1,37 +1,37 @@
-import * as React from 'react';
+import { FC, ReactNode, useContext, useState, CSSProperties } from 'react';
 
+import { AppContext } from '@pages/_app';
 import { composeClassName } from '@scripts/shared';
-import { Icon, Button, AppContext, ExternalLink } from '@components';
+import { Icon, Button, ExternalLink } from '@components';
 
 export interface Props {
 	id: string;
 	title?: string;
-	style?: React.CSSProperties;
-	actions?: React.ReactNode;
-	children: React.ReactNode | string | Array<React.ReactNode | string>;
+	style?: CSSProperties;
+	actions?: ReactNode;
+	children: ReactNode | string | Array<ReactNode | string>;
 	subtitle?: string;
 	hasShell?: boolean;
 	hasButton: boolean;
 	className?: string;
 	shellClass?: string;
-	wrapperClassName?: string;
-	additionalElements?: React.ReactNode;
+	additionalElements?: ReactNode;
 }
 
-export const SectionElements: React.FC<Readonly<Props>> = ({
+export const SectionElements: FC<Readonly<Props>> = ({
 	title,
 	actions,
 	children,
 	subtitle,
-	hasShell,
-	hasButton,
+	hasShell = true,
+	hasButton = true,
 	additionalElements
 }: Props) => {
-	const [open, setOpen] = React.useState(false);
-	const { setContactVisible } = React.useContext(AppContext);
+	const [open, setOpen] = useState(false);
+	const { setContactVisible } = useContext(AppContext);
 	const onClose = () => setOpen(false);
 
-	const HeaderWrapper: React.FC<Pick<Props, 'children'>> = ({ children }) => {
+	const HeaderWrapper: FC<Pick<Props, 'children'>> = ({ children }) => {
 		return hasShell ? <>{children}</> : <div className="o-shell">{children}</div>;
 	};
 
@@ -116,27 +116,20 @@ export const SectionElements: React.FC<Readonly<Props>> = ({
 	);
 };
 
-export const Section: React.FC<Readonly<Props>> = (props: Props) => {
-	const { id, style, hasShell, className, shellClass, wrapperClassName } = props;
+export const Section: FC<Readonly<Props>> = (props: Props) => {
+	const { id, style, hasShell = true, className, shellClass } = props;
 
 	return (
-		<main className={composeClassName('o-main', [], [wrapperClassName])}>
-			<section id={id} style={style} className={composeClassName('c-section', [id], [className])}>
-				{hasShell ? (
-					<div className={composeClassName('o-shell', [], [shellClass])}>
-						<SectionElements {...props} />
-					</div>
-				) : (
+		<section id={id} style={style} className={composeClassName('c-section', [id], [className])}>
+			{hasShell ? (
+				<div className={composeClassName('o-shell', [], [shellClass])}>
 					<SectionElements {...props} />
-				)}
-			</section>
-		</main>
+				</div>
+			) : (
+				<SectionElements {...props} />
+			)}
+		</section>
 	);
-};
-
-Section.defaultProps = {
-	hasShell: true,
-	hasButton: true
 };
 
 export default Section;

@@ -1,11 +1,11 @@
-import * as React from 'react';
+import type { FC } from 'react';
 
-interface ResumeEntryProps {
+interface Props {
 	place: string;
 	period: string;
 }
 
-export const ResumeEntry: React.FC<Readonly<ResumeEntryProps>> = ({ place, period }: ResumeEntryProps) => (
+export const ResumeEntry: FC<Readonly<Props>> = ({ place, period }: Props) => (
 	<ul className="c-resume__list">
 		<li>
 			<i className="icon-calendar"></i>

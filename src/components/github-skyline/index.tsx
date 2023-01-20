@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unknown-property */
-import * as React from 'react';
 import '@babylonjs/loaders';
 import { Vector3 } from '@babylonjs/core';
+import { FC, useEffect, useState } from 'react';
 import { Scene, Engine, SceneEventArgs } from 'react-babylonjs';
 
 import { SIZE } from './constants';
@@ -9,11 +9,11 @@ import { Button, Loader } from '@components';
 import { composeClassName } from '@scripts/shared';
 import { onSceneMount, GithubSkylineProps } from './utils';
 
-export const GithubSkyline: React.FC<GithubSkylineProps> = (props: GithubSkylineProps) => {
-	const [loading, setLoading] = React.useState(true);
-	const [expanded, setExpanded] = React.useState(false);
+export const GithubSkyline: FC<GithubSkylineProps> = (props: GithubSkylineProps) => {
+	const [loading, setLoading] = useState(true);
+	const [expanded, setExpanded] = useState(false);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		document.documentElement.classList[expanded ? 'add' : 'remove']('has-expanded');
 
 		return () => {

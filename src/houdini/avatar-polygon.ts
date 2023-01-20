@@ -1,4 +1,5 @@
-export default registerPaint(
+// @ts-ignore
+registerPaint(
 	'avatar-polygon',
 	class {
 		public static get inputProperties(): string[] {

@@ -1,8 +1,8 @@
-import * as React from 'react';
+import type { FC } from 'react';
 
 import { resumeSkills } from '@data/resume';
 
-export const ResumeSkills: React.FC = () => (
+export const ResumeSkills: FC = () => (
 	<div className="c-resume__block">
 		<h2>INDUSTRY SKILLS</h2>
 

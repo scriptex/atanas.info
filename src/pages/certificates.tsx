@@ -1,0 +1,44 @@
+import Head from 'next/head';
+import Image from 'next/image';
+import type { FC } from 'react';
+
+import certificate from '@data/lotties/certificate.json';
+import { Certificate, certificates } from '@data/certificates';
+import { Layout, Loader, Section, Animation, ExternalLink } from '@components';
+
+export const Certificates: FC = () => (
+	<Layout>
+		<Head>
+			<title>Certificates | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
+		</Head>
+
+		<Section
+			id="certificates"
+			title="Certificates"
+			hasButton
+			additionalElements={
+				<Animation data={certificate} width={150} height={150} className="c-section__animation" />
+			}
+		>
+			<div className="c-section__body o-grid">
+				{certificates.map((certificate: Certificate, index: number) => (
+					<div className="o-grid__item xs-12 sm-6" key={index}>
+						<ExternalLink href={`/cert/${certificate.type}.pdf`} className="c-certificate">
+							<Loader />
+
+							<Image
+								src={`/cert/${certificate.type}.jpg`}
+								alt={certificate.name}
+								width="818"
+								height="578"
+								loading="lazy"
+							/>
+						</ExternalLink>
+					</div>
+				))}
+			</div>
+		</Section>
+	</Layout>
+);
+
+export default Certificates;

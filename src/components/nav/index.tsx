@@ -1,32 +1,31 @@
-import * as React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { FC, ReactNode, useMemo } from 'react';
 
 import { Icon } from '@components';
 import { composeClassName } from '@scripts/shared';
 import { MenuItem, menuItems } from '@data/menu';
+import { Routes } from '@data/routes';
 
 interface Props {
 	onClick?: () => void;
 	hasShell?: boolean;
-	children?: React.ReactNode | string | Array<React.ReactNode | string>;
+	children?: ReactNode | string | Array<ReactNode | string>;
 	className?: string;
 }
 
 type AnchorProps = Omit<MenuItem, 'children'> & Pick<Props, 'onClick'>;
 
-export const NavInner: React.FC<Readonly<Props>> = ({ hasShell, children }: Props) => {
+export const NavInner: FC<Readonly<Props>> = ({ hasShell, children }: Props) => {
 	return hasShell ? <div className="o-shell">{children}</div> : <>{children}</>;
 };
 
-export const Anchor: React.FC<Readonly<AnchorProps>> = ({
-	rel,
-	href,
-	title,
-	content,
-	onClick,
-	...rest
-}: AnchorProps) => {
-	const { pathname } = useLocation();
+export const Anchor: FC<Readonly<AnchorProps>> = ({ rel, href, title, content, onClick, ...rest }: AnchorProps) => {
+	const { pathname } = useRouter();
+	const isActive = useMemo(
+		() => (href === Routes.HOME ? pathname === href : pathname.includes(href)),
+		[href, pathname]
+	);
 
 	return rel ? (
 		<a href={href} title={title} {...rest} onClick={onClick}>
@@ -35,24 +34,13 @@ export const Anchor: React.FC<Readonly<AnchorProps>> = ({
 			<Icon name="svg-external-link" className="c-svg-external-link" />
 		</a>
 	) : (
-		<NavLink
-			to={href}
-			title={title}
-			onClick={onClick}
-			className={() => {
-				if (pathname === href) {
-					return 'active';
-				}
-
-				return pathname.includes(href) ? 'has-active' : '';
-			}}
-		>
+		<Link href={href} title={title} onClick={onClick} className={isActive ? 'active' : undefined}>
 			{content}
-		</NavLink>
+		</Link>
 	);
 };
 
-export const Nav: React.FC<Readonly<Props>> = ({ onClick, hasShell, className }: Props) => (
+export const Nav: FC<Readonly<Props>> = ({ onClick, hasShell, className }: Props) => (
 	<nav className={composeClassName('c-nav', [], [className])}>
 		<NavInner hasShell={hasShell}>
 			<ul>

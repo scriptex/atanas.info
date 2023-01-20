@@ -1,3 +1,4 @@
+// @ts-ignore
 module.exports = {
 	// @ts-ignore
 	process(_, filename) {

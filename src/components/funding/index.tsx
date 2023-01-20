@@ -1,22 +1,25 @@
-import * as React from 'react';
 import gsap from 'gsap';
-import Draggable from 'gsap/Draggable';
+import { FC, useRef, useState, useEffect } from 'react';
 
+import { Button } from '@components';
+import { FundingCrypto } from './crypto';
+import { FundingNetwork } from './network';
 import { composeClassName } from '@scripts/shared';
-import { FundingNetworkData, fundingNetworks } from '@data/funding';
-import { Button, FundingCrypto, FundingNetwork } from '@components';
+import { fundingNetworks, FundingNetworkData } from '@data/funding';
 
-gsap.registerPlugin(Draggable);
+export const Funding: FC = () => {
+	const knob = useRef(null);
+	const [open, setOpen] = useState(false);
 
-export const Funding: React.FC = () => {
-	const knob = React.useRef(null);
-	const [open, setOpen] = React.useState(false);
+	useEffect(() => {
+		import('gsap/Draggable').then(({ default: Draggable }) => {
+			gsap.registerPlugin(Draggable);
 
-	React.useEffect(() => {
-		if (knob.current) {
-			Draggable.create(knob.current, { type: 'rotation' });
-		}
-	}, [knob.current]);
+			if (knob.current) {
+				Draggable.create(knob.current, { type: 'rotation' });
+			}
+		});
+	}, []);
 
 	return (
 		<div className={composeClassName('c-funding', open ? ['open'] : [])}>

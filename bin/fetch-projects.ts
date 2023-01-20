@@ -1,6 +1,6 @@
 #!/usr/bin/env ts-node-script
 
-import { existsSync, unlinkSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, unlinkSync, writeFileSync } from 'node:fs';
 
 import { getGithubRepositories } from '@insights/github';
 
@@ -9,8 +9,6 @@ type Project = {
 	branch: string;
 	full_name: string;
 };
-
-const folder = 'src/data/open-source';
 
 const fetchProject = async (repo: string, branch = 'master', file = 'README.md'): Promise<string> => {
 	const rootURL = 'https://raw.githubusercontent.com';
@@ -35,25 +33,13 @@ const saveProject = (data: string, path: string, message: string): void => {
 };
 
 const createProjectsIndex = (projects: Project[]) => {
-	let i = 0;
-	let j = 0;
-	let result = '';
-
-	for (const project of projects) {
-		result += `import { html as project${i} } from './${project.name}.md';\n`;
-		i++;
-	}
-
-	result += '\nexport const openSourceProjectsList = [\n';
+	let result = 'export const openSourceProjectsList = [\n';
 
 	for (const project of projects) {
 		result += `{
-	url: '/portfolio/open-source/${project.name}',
-	title: '${project.full_name}',
-	image: 'https://source.unsplash.com/random/${1280 + j}x${840 + j}/?code',
-	content: project${j}
-},\n`;
-		j++;
+		url: '/portfolio/open-source/${project.name}',
+		title: '${project.full_name}'
+	},\n`;
 	}
 
 	result += ']';
@@ -73,17 +59,9 @@ const createProjectsIndex = (projects: Project[]) => {
 				full_name: repo.full_name
 			}));
 
-		const blogPosts = readdirSync('src/data/posts').map(file => `/blog/${file.split('.')[0]}`);
-		const openSourceProjectsRoutes = projects.map(project => `/portfolio/open-source/${project.name}`);
-
-		writeFileSync(
-			'src/data/dynamic-routes.json',
-			JSON.stringify([...blogPosts, ...openSourceProjectsRoutes], null, 2)
-		);
-
 		saveProject(
 			createProjectsIndex(projects),
-			`${folder}/index.ts`,
+			'src/data/open-source.ts',
 			'atanas.info: Saved open source projects list.'
 		);
 
@@ -91,7 +69,7 @@ const createProjectsIndex = (projects: Project[]) => {
 			await fetchProject(project.full_name, project.branch)
 				.then((data: string) => {
 					const name = project.name.split('/').pop();
-					const path = `${folder}/${name}.md`;
+					const path = `src/data/open-source-projects/${name}.md`;
 
 					saveProject(data, path, 'atanas.info: Saved open source project ' + name);
 				})
@@ -101,8 +79,8 @@ const createProjectsIndex = (projects: Project[]) => {
 		}
 	} catch (e: any) {
 		saveProject(
-			JSON.stringify([], null, 2),
-			`${folder}/list.json`,
+			createProjectsIndex([]),
+			`src/data/open-source.ts`,
 			'atanas.info: Failed fetching open source projects. Error is ' + e
 		);
 	}

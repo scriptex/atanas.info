@@ -1,10 +1,10 @@
-import * as React from 'react';
+import type { FC } from 'react';
 
 interface Props {
 	network: 'Github' | 'Gitlab';
 }
 
-export const StatsError: React.FC<Readonly<Props>> = ({ network }: Props) => (
+export const StatsError: FC<Readonly<Props>> = ({ network }: Props) => (
 	<div className="c-section__entry c-section__entry--no-background">
 		<div className="o-shell">
 			<h3>{network} profile statistics</h3>

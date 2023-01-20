@@ -1,17 +1,16 @@
-import * as React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import { FC, useState } from 'react';
 
 import { Routes } from '@data/routes';
 import { composeClassName } from '@scripts/shared';
 import { Nav, Icon, ThemeSwitcher } from '@components';
 
-export const Header: React.FC = () => {
-	const [open, setOpen] = React.useState(false);
+export const Header: FC = () => {
+	const [open, setOpen] = useState(false);
 
 	return (
 		<header className={composeClassName('c-header', open ? ['open'] : [])}>
-			<Link to={Routes.HOME} className="c-logo" title="Back to homepage">
-				<img src="/images/icons/logo-alt.svg" alt="" loading="lazy" />
+			<Link href={Routes.HOME} className="c-logo" title="Back to homepage">
 				<Icon name="svg-logo" className="c-svg-logo" />
 			</Link>
 

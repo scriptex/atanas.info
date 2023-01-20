@@ -1,9 +1,9 @@
-import * as React from 'react';
+import type { FC } from 'react';
 
 import { ResumeEntry } from '@components';
 import { resumeExperience, ResumeExperienceItem } from '@data/resume';
 
-export const ResumeExperience: React.FC = () => (
+export const ResumeExperience: FC = () => (
 	<div className="c-resume__block">
 		<h2>Experience</h2>
 

@@ -1,0 +1,83 @@
+html,
+body,
+#root,
+#__next,
+.c-music,
+.o-main--high,
+.c-section--hello,
+.c-section--music,
+.c-section--music .o-shell {
+	height: 100%;
+}
+
+body {
+	color: var(--color-primary);
+	background-color: var(--color-secondary);
+}
+
+@media (--hover) {
+	a:hover {
+		text-decoration: none;
+	}
+}
+
+.o-grid {
+	justify-content: flex-start;
+}
+
+.o-grid__item {
+	padding-bottom: 1rem;
+}
+
+@media (--mobile) {
+	.o-grid__item + .o-grid__item {
+		padding-top: 1rem;
+	}
+}
+
+.bubbles,
+.circles {
+	background-attachment: initial;
+}
+
+@supports (background-image: paint(bubbles)) {
+	.bubbles {
+		background-image: paint(bubbles);
+		--bubbles-background: var(--color-secondary);
+	}
+}
+
+@supports (background-image: paint(circles)) {
+	.circles {
+		background-image: paint(circles);
+	}
+}
+
+@supports (background-image: paint(parallelowow)) {
+	.parallelowow {
+		background-color: var(--color-action);
+		background-image: paint(parallelowow);
+	}
+}
+
+@supports (background-image: paint(bytemare)) {
+	.bytemare {
+		background-color: var(--color-action);
+		background-image: paint(bytemare);
+	}
+}
+
+@supports (background-image: paint(blotto)) {
+	.blotto {
+		background-image: paint(blotto);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

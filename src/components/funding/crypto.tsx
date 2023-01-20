@@ -1,19 +1,20 @@
-import * as React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { FC, useEffect, useState } from 'react';
 
 import { Icon } from '@components';
 import { composeClassName } from '@scripts/shared';
 
 interface Props {
 	name: string;
+
 	title: string;
 	wallet: string;
 }
 
-export const FundingCrypto: React.FC<Readonly<Props>> = ({ name, title, wallet }: Props) => {
-	const [copied, setCopied] = React.useState(false);
+export const FundingCrypto: FC<Readonly<Props>> = ({ name, title, wallet }: Props) => {
+	const [copied, setCopied] = useState(false);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		let timeout: NodeJS.Timeout | null = null;
 
 		if (copied) {

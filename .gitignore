@@ -21,6 +21,7 @@ Thumbs.db
 .parcel-cache
 
 # Vercel
+.next
 .now
 .vercel
 
@@ -29,16 +30,13 @@ Thumbs.db
 .env.local
 .codacy-coverage
 .type-coverage
+tsconfig.tsbuildinfo
 /coverage
 /dist
 /public/houdini
 /src/index.css
 /src/scripts/analytics.js
 /src/data/cloudinary-data.json
-/src/data/codersrank-activity-widget.json
-/src/data/codersrank-chart-widget.json
-/src/data/codersrank-work-experience.json
-/src/data/dynamic-routes.json
 /src/data/github-insights.json
 /src/data/gitlab-insights.json
 /src/data/last.fm-insights.json
@@ -46,12 +44,15 @@ Thumbs.db
 /src/data/npm-stats.json
 /src/data/pages.json
 /src/data/projects-list.json
-/src/data/sourcerer.json
 /src/data/updated-at.ts
 /src/scripts/google-analytics-local.js
 /public/github-calendar.svg
 /public/gitlab-calendar.svg
+/public/sw.js
+/public/sw.js.map
+/public/workbox-*.js
+/public/workbox-*.js.map
+/public/fallback-*.js
 
 # Open source projects
-src/data/open-source/*.md
-src/data/open-source/*.ts
+src/data/open-source-projects/*.md

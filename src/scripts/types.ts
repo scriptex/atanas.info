@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react';
+
 export type Nullable<T> = T | null;
 
 export interface GithubCount {
@@ -64,3 +66,7 @@ export interface GitlabInsights {
 	calendar: Nullable<Record<string, number>>;
 	repositories: Nullable<GitlabRepository[]>;
 }
+
+export type ReactChild = string | ReactNode | ReactNode[];
+
+export type ReactChildren = ReactChild | ReactChild[];

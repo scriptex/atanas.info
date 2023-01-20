@@ -1,4 +1,4 @@
-import * as React from 'react';
+import type { FC } from 'react';
 
 interface Props {
 	name: string;
@@ -8,7 +8,7 @@ interface Props {
 	className: string;
 }
 
-export const Icon: React.FC<Readonly<Props>> = ({ name, fill, width, height, className }: Props) => (
+export const Icon: FC<Readonly<Props>> = ({ name, fill, width, height, className }: Props) => (
 	<svg width={width} height={height} className={className}>
 		<use fill={fill} xlinkHref={`#${name}`} />
 	</svg>

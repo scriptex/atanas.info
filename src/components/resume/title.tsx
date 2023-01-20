@@ -1,10 +1,17 @@
-import * as React from 'react';
+import Image from 'next/image';
+import type { FC } from 'react';
 
 import { resumeLinks, ResumeLinkItem } from '@data/resume';
 
-export const ResumeTitle: React.FC = () => (
+export const ResumeTitle: FC = () => (
 	<div className="c-resume__title">
-		<img src="images/temp/atanas.jpg" alt="Atanas Atanasov's profile picture" loading="lazy" />
+		<Image
+			src="/images/temp/atanas.jpg"
+			alt="Atanas Atanasov's profile picture"
+			width={240}
+			height={240}
+			loading="lazy"
+		/>
 
 		<h1>Atanas Atanasov</h1>
 

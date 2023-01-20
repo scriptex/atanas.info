@@ -1,3 +1,5 @@
+import type { FormEvent } from 'react';
+
 export enum Status {
 	ERROR = 'ERROR',
 	SUCCESS = 'SUCCESS',
@@ -5,7 +7,7 @@ export enum Status {
 }
 
 export const onSubmit = (
-	e: React.FormEvent<HTMLFormElement>,
+	e: FormEvent<HTMLFormElement>,
 	setStatus: (status: Status) => void,
 	setErrorMessage: (message: string) => void
 ): void => {

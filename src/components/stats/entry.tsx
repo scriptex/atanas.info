@@ -1,13 +1,13 @@
-import * as React from 'react';
+import type { FC } from 'react';
 
-import { GeneralInsight } from './utils';
+import { GeneralInsight } from '@scripts/stats';
 
 interface Props {
 	data: GeneralInsight[];
 	title: string;
 }
 
-export const StatsEntry: React.FC<Readonly<Props>> = ({ title, data }: Props) => (
+export const StatsEntry: FC<Readonly<Props>> = ({ title, data }: Props) => (
 	<div className="c-section__entry c-section__entry--no-background">
 		<div className="o-shell">
 			<h3>{title}</h3>

@@ -1,4 +1,3 @@
-import '@babylonjs/loaders';
 import { GridMaterial } from '@babylonjs/materials';
 import { SceneEventArgs } from 'react-babylonjs';
 import {

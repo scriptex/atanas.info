@@ -1,8 +1,8 @@
-import * as React from 'react';
+import type { FC } from 'react';
 
 import { ResumeStrengthItem, resumeStrengths } from '@data/resume';
 
-export const ResumeStrengths: React.FC = () => (
+export const ResumeStrengths: FC = () => (
 	<div className="c-resume__block">
 		<h2>Strengths</h2>
 

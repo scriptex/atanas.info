@@ -1,6 +1,6 @@
-import * as React from 'react';
+import type { FC } from 'react';
 
-export const Loader: React.FC = () => (
+export const Loader: FC = () => (
 	<div className="c-loading">
 		<div className="c-loader"></div>
 	</div>

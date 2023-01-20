@@ -1,19 +1,21 @@
-import * as React from 'react';
+import { FC, useState, useContext, FormEvent } from 'react';
 
+import { Button } from '@components';
+import { AppContext } from '@pages/_app';
+import { ContactForm } from './form';
 import { onSubmit, Status } from './utils';
 import { composeClassName } from '@scripts/shared';
-import { Button, AppContext, ContactForm } from '@components';
 
-export const Contact: React.FC = () => {
-	const [status, setStatus] = React.useState(Status.DEFAULT);
-	const [errorMessage, setErrorMessage] = React.useState('');
-	const { contactVisible, setContactVisible } = React.useContext(AppContext);
+export const Contact: FC = () => {
+	const [status, setStatus] = useState(Status.DEFAULT);
+	const [errorMessage, setErrorMessage] = useState('');
+	const { contactVisible, setContactVisible } = useContext(AppContext);
 
 	return (
 		<form
 			action="https://formspree.io/meqrwbvd"
 			method="POST"
-			onSubmit={(e: React.FormEvent<HTMLFormElement>) => onSubmit(e, setStatus, setErrorMessage)}
+			onSubmit={(e: FormEvent<HTMLFormElement>) => onSubmit(e, setStatus, setErrorMessage)}
 			className={composeClassName('c-contact', contactVisible ? ['visible'] : [])}
 		>
 			<button
