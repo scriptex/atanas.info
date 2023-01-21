@@ -9,7 +9,7 @@ export const StatsError: FC<Readonly<Props>> = ({ network }: Props) => (
 		<div className="o-shell">
 			<h3>{network} profile statistics</h3>
 
-			<p>Failed fetching data from {network}. Please check again in 4 hours.</p>
+			<p>Failed fetching data from {network}. Please check again in 8 hours.</p>
 		</div>
 	</div>
 );

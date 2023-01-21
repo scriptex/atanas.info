@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import type { AppProps } from 'next/app';
 import { FC, useState, useEffect, createContext } from 'react';
 
@@ -51,6 +52,8 @@ export const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
 			<AppContext.Provider value={value}>
 				<Component {...pageProps} />
 			</AppContext.Provider>
+
+			<Analytics />
 		</>
 	);
 };
