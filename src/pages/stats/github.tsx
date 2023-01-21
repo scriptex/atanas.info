@@ -85,12 +85,50 @@ export const extractGithubData = ({
 export const GithubStats: FC = () => {
 	const [current, setCurrent] = useState(-1);
 	const { error, updated, ...rest }: GithubInsights = github;
+	const blocks: GeneralInsight[] = error ? [] : extractGithubData(rest);
 
-	if (error) {
-		return <StatsError network="Github" />;
-	}
+	const Content: FC = () => (
+		<>
+			<StatsEntry data={blocks} title="Github profile statistics" />
 
-	const blocks: GeneralInsight[] = extractGithubData(rest);
+			<div className="c-section__entry">
+				<small className="c-section__stamp">Last updated: {formatDate(updated, 'dd MMM yyyy HH:mm:ss')}</small>
+
+				<div className="o-shell">
+					<h3>Github contributions calendar</h3>
+
+					<div className="c-calendar__outer">
+						<div className="c-calendar c-calendar--github">
+							<ReactGitHubCalendar tooltips userName="scriptex" />
+						</div>
+					</div>
+
+					<div className="c-skyline">
+						<nav className="c-skyline__nav">
+							<h4>
+								Previous years Github contributions <br />
+								<small>(requires WebGL)</small>
+							</h4>
+
+							<ul>
+								{YEARS.map((year: string, index: number) => (
+									<li key={index} className={current === index ? 'current' : undefined}>
+										<Button onClick={() => setCurrent(index)} className="c-btn--small">
+											{year}
+										</Button>
+									</li>
+								))}
+							</ul>
+						</nav>
+
+						{YEARS.map((year: string, index: number) =>
+							index === current ? <GithubSkyline key={index} file={`${year}.stl`} index={index} /> : null
+						)}
+					</div>
+				</div>
+			</div>
+		</>
+	);
 
 	return (
 		<Layout>
@@ -107,48 +145,7 @@ export const GithubStats: FC = () => {
 				}
 				hasShell={false}
 			>
-				<StatsEntry data={blocks} title="Github profile statistics" />
-
-				<div className="c-section__entry">
-					<small className="c-section__stamp">
-						Last updated: {formatDate(updated, 'dd MMM yyyy HH:mm:ss')}
-					</small>
-
-					<div className="o-shell">
-						<h3>Github contributions calendar</h3>
-
-						<div className="c-calendar__outer">
-							<div className="c-calendar c-calendar--github">
-								<ReactGitHubCalendar tooltips userName="scriptex" />
-							</div>
-						</div>
-
-						<div className="c-skyline">
-							<nav className="c-skyline__nav">
-								<h4>
-									Previous years Github contributions <br />
-									<small>(requires WebGL)</small>
-								</h4>
-
-								<ul>
-									{YEARS.map((year: string, index: number) => (
-										<li key={index} className={current === index ? 'current' : undefined}>
-											<Button onClick={() => setCurrent(index)} className="c-btn--small">
-												{year}
-											</Button>
-										</li>
-									))}
-								</ul>
-							</nav>
-
-							{YEARS.map((year: string, index: number) =>
-								index === current ? (
-									<GithubSkyline key={index} file={`${year}.stl`} index={index} />
-								) : null
-							)}
-						</div>
-					</div>
-				</div>
+				{error ? <StatsError network="Github" /> : <Content />}
 			</Section>
 		</Layout>
 	);
