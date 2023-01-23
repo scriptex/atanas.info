@@ -32,6 +32,11 @@
 		@mixin slanted;
 	}
 
+	& > svg {
+		display: block;
+		margin: auto;
+	}
+
 	& codersrank-portfolio,
 	& codersrank-work-experience {
 		--grid-columns: 2;

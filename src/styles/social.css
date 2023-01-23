@@ -30,6 +30,11 @@
 		display: block;
 	}
 
+	& .svg-disconnected {
+		display: block;
+		margin: auto;
+	}
+
 	& .o-grid__item,
 	& .c-section__entry {
 		padding-bottom: 2rem;

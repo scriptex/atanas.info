@@ -1,5 +1,5 @@
 import { format } from 'date-fns';
-import { MutableRefObject } from 'react';
+import { useState, useEffect, MutableRefObject } from 'react';
 
 export type Theme = 'dark' | 'light';
 export type Ref<T> = MutableRefObject<T | null>;
@@ -50,3 +50,13 @@ export const composeClassName = (main: string, modifiers: string[], optional: Ar
 	[main, ...modifiers.filter(Boolean).map((modifier: string) => `${main}--${modifier}`), ...optional]
 		.filter(Boolean)
 		.join(' ');
+
+export const useNetworkState = () => {
+	const [online, setOnline] = useState(true);
+
+	useEffect(() => {
+		setOnline(navigator.onLine);
+	}, []);
+
+	return online;
+};

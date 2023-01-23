@@ -37,6 +37,16 @@
 				transition: all var(--timing) var(--easing);
 			}
 
+			& .svg-disconnected {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 2;
+				margin: auto;
+			}
+
 			&.disabled {
 				cursor: default;
 			}

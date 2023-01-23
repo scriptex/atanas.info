@@ -19,7 +19,9 @@ if (!projects || !projects.length) {
 	process.exit();
 }
 
-dotenvConfig();
+dotenvConfig({
+	path: '.env.local'
+});
 
 cloudinary.config({
 	cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
