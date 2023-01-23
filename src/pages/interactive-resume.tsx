@@ -2,10 +2,13 @@ import Head from 'next/head';
 import { FC, useEffect } from 'react';
 
 import resume from '@data/lotties/resume.json';
-import { Lines, Layout, Section, Animation } from '@components';
+import { useNetworkState } from '@scripts/shared';
+import { Icon, Lines, Layout, Section, Animation } from '@components';
 import { interactiveResumeItems, InteractiveResumeItem } from '@data/interactive-resume';
 
 export const InteractiveResume: FC = () => {
+	const online = useNetworkState();
+
 	useEffect(() => {
 		import('@codersrank/summary/codersrank-summary.min');
 		import('@codersrank/activity/codersrank-activity.min');
@@ -37,7 +40,7 @@ export const InteractiveResume: FC = () => {
 						<div key={i} className="c-interactive-resume__widget">
 							<h3>{item.title}</h3>
 
-							{item.element}
+							{online ? item.element : <Icon name="svg-disconnected " className="svg-disconnected" />}
 						</div>
 					))}
 				</div>
