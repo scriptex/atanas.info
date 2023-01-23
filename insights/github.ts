@@ -8,7 +8,9 @@ export const getGithubRepositories = async (): Promise<any[]> => {
 	const repos1 = await github.get({ path: '/user/repos?per_page=100' });
 	const repos2 = await github.get({ path: '/user/repos?page=2&per_page=100' });
 
-	return [...repos1, ...repos2].filter(repo => !reposToSkip.includes(repo.full_name));
+	return [...repos1, ...repos2]
+		.filter(repo => !reposToSkip.includes(repo.full_name))
+		.filter(repo => !['magin', 'VarnaLab', 'rashkopetrov', 'Kinetik-automotive-ltd'].includes(repo.owner.login));
 };
 
 export const getGithubInsights = async (): Promise<void> => {

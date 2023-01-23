@@ -2,7 +2,9 @@ import LastFm from 'lastfm-node-client';
 import { GitHubClient } from 'universal-github-client';
 import { config as dotenvConfig } from 'dotenv';
 
-dotenvConfig();
+dotenvConfig({
+	path: '.env.local'
+});
 
 export const github = new GitHubClient({
 	base: 'https://api.github.com',
