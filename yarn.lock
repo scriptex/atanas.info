@@ -1117,6 +1117,11 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
+"@csstools/cascade-layer-name-parser@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@csstools/cascade-layer-name-parser/-/cascade-layer-name-parser-1.0.0.tgz#cc899fbfd2206a1b8f0a939b14ed8d42643d1758"
+  integrity sha512-JxdLxJMDximX1vxCFJdwC7MD4aXNSFbOxBZuYKg2FEz4MLR0UFVmamPtzthzqzxAcU0K6ShvEFfMBrEEb16U+A==
+
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
@@ -1127,15 +1132,30 @@
   resolved "https://registry.yarnpkg.com/@csstools/css-parser-algorithms/-/css-parser-algorithms-1.0.0.tgz#63f0ecbb926abf92d6cd8d076663650ad340db8c"
   integrity sha512-lPphY34yfV15tEXiz/SYaU8hwqAhbAwqiTExv5tOfc7QZxT70VVYrsiPBaX1osdWZFowrDEAhHe4H3JnyzbjhA==
 
+"@csstools/css-parser-algorithms@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@csstools/css-parser-algorithms/-/css-parser-algorithms-2.0.0.tgz#2f27a1f2aef94f5d009d3d83f08f1e095dff2b30"
+  integrity sha512-RbukP8OjQvuH85veuzOq8abPjsvqvleZaQC6W0GJFGpwLUh8XmFMQjvtuIM9bQ589YFx4lwwAcSwN4nfcvxIEw==
+
 "@csstools/css-tokenizer@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@csstools/css-tokenizer/-/css-tokenizer-1.0.0.tgz#161c0c9b632952ee8c2f0a62eb479d736a5627ff"
   integrity sha512-xdFjdQ+zqqkOsmee+kYRieZD9Cqh4hr01YBQ2/8NtTkMMxbtRX18MC50LX6cMrtaLryqmIdZHN9e16/l0QqnQw==
 
+"@csstools/css-tokenizer@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@csstools/css-tokenizer/-/css-tokenizer-2.0.0.tgz#fa2a7e8f4ed965e73ba30ee80c00fa64980fd11e"
+  integrity sha512-IB6EFP0Hc/YEz1sJVD47oFqJP6TXMB+OW1jXSYnOk5g+6wpk2/zkuBa0gm5edIMM9nVUZ3hF0xCBnyFbK5OIyg==
+
 "@csstools/media-query-list-parser@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@csstools/media-query-list-parser/-/media-query-list-parser-1.0.0.tgz#17d08bfbcca677fc018e3dc3f54172a38c2fdca5"
   integrity sha512-HsTj5ejI8NKKZ4IEd6kK2kQZA/JmIVlUV8+XvO/YS9ntrlYPnbmFT3rkqtbxOVfEafblYCNOpeNw1c+fKGkAqw==
+
+"@csstools/media-query-list-parser@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@csstools/media-query-list-parser/-/media-query-list-parser-2.0.0.tgz#06c6dce65656e4970927a603e910c6f949c5c07f"
+  integrity sha512-84kEbyJjh2T4Lnz8EkVQrwNANP+dtNb0SDkI3P7kqKnGorPknQUuq8Iqf2v5UsaH08XzPp3ouVJNsyPOdI2B/Q==
 
 "@csstools/normalize.css@*":
   version "12.0.0"
@@ -7973,6 +7993,16 @@ postcss-custom-media@9.0.1:
     "@csstools/css-parser-algorithms" "^1.0.0"
     "@csstools/css-tokenizer" "^1.0.0"
     "@csstools/media-query-list-parser" "^1.0.0"
+
+postcss-custom-media@9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-custom-media/-/postcss-custom-media-9.1.0.tgz#09afcf2aef4ae931ab3e594e20eab0dd2eacf3f2"
+  integrity sha512-K9sIQhdsXazHyhHaMIL/wztFV6ABHi6NwxNPO3q0o0T2zkI4oEqI1TjeoncBKIY6xPrqnWTV40KF8AJ7yd0W6g==
+  dependencies:
+    "@csstools/cascade-layer-name-parser" "^1.0.0"
+    "@csstools/css-parser-algorithms" "^2.0.0"
+    "@csstools/css-tokenizer" "^2.0.0"
+    "@csstools/media-query-list-parser" "^2.0.0"
 
 postcss-custom-media@^8.0.2:
   version "8.0.2"
