@@ -49,7 +49,7 @@
 		"type-coverage": "type-coverage --ignore-catch --detail",
 		"test:coverage:watch": "yarn test --coverage --watchAll",
 		"pre": "yarn time && yarn deduplicate && yarn fetch-projects && yarn screenshots && yarn insights && yarn npm-stats && yarn fetch-music && yarn localga && yarn svg",
-		"post": "yarn tsc && yarn houdini && yarn next:build",
+		"post": "yarn tsc && yarn houdini && yarn next:build && next-sitemap",
 		"build": "yarn pre && yarn post"
 	},
 	"dependencies": {
@@ -83,6 +83,7 @@
 		"lottie-web": "5.10.2",
 		"next": "13.1.5",
 		"next-pwa": "5.6.0",
+		"next-sitemap": "3.1.47",
 		"npm-maintainer": "1.0.2",
 		"pass-score": "2.0.0",
 		"prismjs": "1.29.0",
