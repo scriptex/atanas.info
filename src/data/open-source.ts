@@ -24,6 +24,10 @@ export const openSourceProjectsList = [
 		title: 'scriptex/atanas.info'
 	},
 	{
+		url: '/portfolio/open-source/attr-i18n',
+		title: 'scriptex/attr-i18n'
+	},
+	{
 		url: '/portfolio/open-source/awesome-useless-websites',
 		title: 'scriptex/awesome-useless-websites'
 	},
