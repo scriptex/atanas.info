@@ -2,8 +2,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import type { FC } from 'react';
 
-import npmStats from '@data/npm-stats.json';
 import { Routes } from '@data/routes';
+import { getData, queryNPM } from '@lib/mongodb';
 import { sectionStatsProps } from '@scripts/stats';
 import { Layout, Section, ExternalLink } from '@components';
 
@@ -56,14 +56,18 @@ export const Packages: FC<Readonly<Props>> = ({ data }: Props) => (
 	</div>
 );
 
-export const NPMStats: FC = () => {
-	const error: boolean = (npmStats as any)?.error;
+interface NPMProps extends Props {
+	sum: number;
+}
 
-	if (!npmStats || Object.keys(npmStats).length === 0 || error) {
+export const NPMStats: FC<Readonly<NPMProps>> = ({ data }: NPMProps) => {
+	const error: boolean = (data as any)?.error;
+
+	if (!data || Object.keys(data).length === 0 || error) {
 		return null;
 	}
 
-	const { sum = null, ...packages } = npmStats;
+	const { sum = null, ...packages } = data;
 
 	if (sum === null) {
 		return null;
@@ -89,7 +93,7 @@ export const NPMStats: FC = () => {
 						<h3>Statistics for NPM packages</h3>
 
 						<h6>
-							Total downloads: <strong>{sum}</strong>
+							Total downloads: <strong>{sum as unknown as number}</strong>
 						</h6>
 
 						<Packages data={packages} />
@@ -99,5 +103,7 @@ export const NPMStats: FC = () => {
 		</Layout>
 	);
 };
+
+export const getStaticProps = async () => getData('Insights', queryNPM);
 
 export default NPMStats;

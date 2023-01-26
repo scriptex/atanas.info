@@ -37,7 +37,7 @@ export interface GithubInsights {
 		createdAt: string;
 		updatedAt: string;
 	}>;
-	updated: Nullable<string>;
+	updated: Nullable<number>;
 	calendar: Nullable<Record<string, GithubCount>>;
 	repositories: Nullable<GithubRepository[]>;
 }
@@ -62,7 +62,7 @@ export interface GitlabInsights {
 		createdAt: string;
 		updatedAt: string;
 	}>;
-	updated: Nullable<string>;
+	updated: Nullable<number>;
 	calendar: Nullable<Record<string, number>>;
 	repositories: Nullable<GitlabRepository[]>;
 }

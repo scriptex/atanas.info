@@ -6,7 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Dependency directory
-node_modules/
+node_modules
 
 # Misc
 .DS_Store
@@ -17,32 +17,20 @@ node_modules/
 ehthumbs.db
 Thumbs.db
 
-# Parcel
-.parcel-cache
-
 # Vercel
 .next
 .now
 .vercel
 
 # Project specific
+.codacy-coverage
 .env
 .env.local
-.codacy-coverage
 .type-coverage
 tsconfig.tsbuildinfo
 /coverage
 /dist
 /public/houdini
-/src/index.css
-/src/scripts/analytics.js
-/src/data/gitlab-insights.json
-/src/data/last.fm-insights.json
-/src/data/npm.json
-/src/data/npm-stats.json
-/src/data/pages.json
-/src/data/updated-at.ts
-/src/scripts/google-analytics-local.js
 /public/github-calendar.svg
 /public/gitlab-calendar.svg
 /public/sitemap*.xml
@@ -51,6 +39,11 @@ tsconfig.tsbuildinfo
 /public/workbox-*.js
 /public/workbox-*.js.map
 /public/fallback-*.js
+/src/index.css
+/src/scripts/analytics.js
+/src/data/updated-at.ts
+/src/scripts/google-analytics-local.js
+
 
 # Open source projects
 src/data/open-source-projects/*.md

@@ -31,7 +31,7 @@ export const getLastFMInsights = async (): Promise<void> => {
 		await saveInsights(
 			{
 				error: false,
-				updated: new Date(),
+				updated: new Date().getTime(),
 				topAlbums: topAlbums.map((item: any) => ({
 					name: item.name,
 					images: item.image,
@@ -49,7 +49,7 @@ export const getLastFMInsights = async (): Promise<void> => {
 		await saveInsights(
 			{
 				error: true,
-				updated: new Date(),
+				updated: new Date().getTime(),
 				topAlbums: [],
 				weeklyAlbumChart: []
 			},

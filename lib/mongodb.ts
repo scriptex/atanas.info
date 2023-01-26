@@ -1,5 +1,5 @@
 import { config as dotenvConfig } from 'dotenv';
-import { MongoClient, MongoClientOptions, ServerApiVersion } from 'mongodb';
+import { Filter, Document, MongoClient, MongoClientOptions, ServerApiVersion } from 'mongodb';
 
 declare global {
 	// eslint-disable-next-line no-var
@@ -35,11 +35,24 @@ if (process.env.NODE_ENV === 'development') {
 	clientPromise = client.connect();
 }
 
-export const queryNPM = { name: 'atanas-info-npm' };
-export const queryGithub = { name: 'atanas-info-github' };
-export const queryGitlab = { name: 'atanas-info-gitlab' };
-export const queryLastFM = { name: 'atanas-info-last-fm' };
-export const queryCloudinary = { name: 'atanas-info-cloudinary' };
-export const queryScreenshots = { name: 'atanas-info-screenshots' };
+export const queryNPM: Filter<Document> = { name: 'atanas-info-npm' };
+export const queryGithub: Filter<Document> = { name: 'atanas-info-github' };
+export const queryGitlab: Filter<Document> = { name: 'atanas-info-gitlab' };
+export const queryLastFM: Filter<Document> = { name: 'atanas-info-last-fm' };
+export const queryCloudinary: Filter<Document> = { name: 'atanas-info-cloudinary' };
+export const queryScreenshots: Filter<Document> = { name: 'atanas-info-screenshots' };
+
+export const getData = async (name: string, query: Filter<Document>) => {
+	const client = await clientPromise;
+	const db = client.db('All');
+	const collection = db.collection(name);
+	const webApps = await collection.findOne(query);
+
+	return {
+		props: {
+			data: webApps?.data
+		}
+	};
+};
 
 export default clientPromise;

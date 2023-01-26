@@ -69,7 +69,7 @@ export const getGithubInsights = async (): Promise<void> => {
 				general,
 				calendar,
 				repositories,
-				updated: new Date()
+				updated: new Date().getTime()
 			},
 			'Github'
 		);
@@ -80,7 +80,7 @@ export const getGithubInsights = async (): Promise<void> => {
 				general: null,
 				calendar: null,
 				repositories: null,
-				updated: new Date()
+				updated: new Date().getTime()
 			},
 			'Github'
 		);

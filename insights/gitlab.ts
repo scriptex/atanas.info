@@ -62,7 +62,7 @@ export const getGitlabInsights = async (): Promise<void> => {
 			{
 				error: false,
 				general,
-				updated: new Date(),
+				updated: new Date().getTime(),
 				calendar,
 				repositories
 			},
@@ -73,7 +73,7 @@ export const getGitlabInsights = async (): Promise<void> => {
 			{
 				error: true,
 				general: null,
-				updated: new Date(),
+				updated: new Date().getTime(),
 				calendar: null,
 				repositories: null
 			},

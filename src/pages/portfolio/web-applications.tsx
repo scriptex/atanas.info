@@ -6,7 +6,7 @@ import { FC } from 'react';
 import { Routes } from '@data/routes';
 import { WebProject } from '@data/projects';
 import { portfolioSectionProps } from '.';
-import clientPromise, { queryScreenshots } from '@lib/mongodb';
+import { getData, queryScreenshots } from '@lib/mongodb';
 import { useNetworkState, composeClassName } from '@scripts/shared';
 import { Icon, Layout, Loader, Section, ExternalLink } from '@components';
 
@@ -65,17 +65,6 @@ export const PortfolioWebApps: FC<Readonly<Props>> = ({ data = [] }: Props) => {
 	);
 };
 
-export async function getStaticProps() {
-	const client = await clientPromise;
-	const db = client.db('All');
-	const collection = db.collection('Screenshots');
-	const webApps = await collection.findOne(queryScreenshots);
-
-	return {
-		props: {
-			data: webApps?.data
-		}
-	};
-}
+export const getStaticProps = async () => getData('Screenshots', queryScreenshots);
 
 export default PortfolioWebApps;
