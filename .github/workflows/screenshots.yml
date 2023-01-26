@@ -18,6 +18,7 @@ jobs:
                   yarn
                   yarn screenshots
               env:
+                  MONGODB_URI: ${{ secrets.MONGODB_URI }}
                   NODE_OPTIONS: '--max_old_space_size=8192'
                   CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
                   CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
