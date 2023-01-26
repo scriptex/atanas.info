@@ -1,18 +1,12 @@
 #!/usr/bin/env ts-node-script
 
-import { resolve } from 'node:path';
-import { writeFileSync } from 'node:fs';
-
 import * as puppeteer from 'puppeteer';
 import { config as dotenvConfig } from 'dotenv';
 import { v2 as cloudinary, UploadApiOptions, UploadApiResponse } from 'cloudinary';
 
 import * as pckg from '../package.json';
 import { WebProject, projects } from '@data/projects';
-
-// TODO: Re-enable the screenshots when the Cloudinary credits reset.
-// writeFileSync(resolve(__dirname, '../src/data/projects-list.json'), JSON.stringify(projects, null, 2));
-// process.exit();
+import clientPromise, { queryCloudinary, queryScreenshots } from '@lib/mongodb';
 
 if (!projects || !projects.length) {
 	console.log('No projects found.');
@@ -128,9 +122,14 @@ async function createScreenshots(allPages: WebProject[]): Promise<void> {
 		}
 	}
 
-	Promise.all(results).then(() => {
-		writeFileSync(resolve(__dirname, '../src/data/projects-list.json'), JSON.stringify(newProjects, null, 2));
-		writeFileSync(resolve(__dirname, '../src/data/cloudinary-data.json'), JSON.stringify(results, null, 2));
+	Promise.all(results).then(async () => {
+		const client = await clientPromise;
+		const db = client.db('All');
+		const options = { upsert: true };
+		const collection = db.collection('Screenshots');
+
+		await collection.updateOne(queryCloudinary, { $set: { ...queryCloudinary, data: results } }, options);
+		await collection.updateOne(queryScreenshots, { $set: { ...queryScreenshots, data: newProjects } }, options);
 
 		process.exit();
 	});

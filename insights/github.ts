@@ -1,7 +1,7 @@
 import { writeFileSync } from 'node:fs';
 
 import { github } from './client';
-import { getCalendar, asyncForEach, getContributions, saveInsights } from './utils';
+import { getCalendar, asyncForEach, saveInsights, getContributions } from './utils';
 
 export const getGithubRepositories = async (): Promise<any[]> => {
 	const reposToSkip = ['three11/code-of-conduct'];
@@ -15,8 +15,6 @@ export const getGithubRepositories = async (): Promise<any[]> => {
 
 export const getGithubInsights = async (): Promise<void> => {
 	console.log('Getting insights data from Github...');
-
-	const file = 'src/data/github-insights.json';
 
 	try {
 		writeFileSync('public/github-calendar.svg', (await getCalendar()) || '');
@@ -65,8 +63,7 @@ export const getGithubInsights = async (): Promise<void> => {
 			updatedAt: user.updated_at
 		};
 
-		saveInsights(
-			file,
+		await saveInsights(
 			{
 				error: false,
 				general,
@@ -77,8 +74,7 @@ export const getGithubInsights = async (): Promise<void> => {
 			'Github'
 		);
 	} catch (e) {
-		saveInsights(
-			file,
+		await saveInsights(
 			{
 				error: true,
 				general: null,

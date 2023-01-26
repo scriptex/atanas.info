@@ -1,8 +1,6 @@
-import { resolve } from 'node:path';
-import { writeFileSync } from 'node:fs';
-
 import info from 'package-info';
 import npmtotal from 'npmtotal';
+import { saveInsights } from '@insights/utils';
 
 (async () => {
 	const result: Record<string, any> = {};
@@ -32,5 +30,7 @@ import npmtotal from 'npmtotal';
 		console.log(e);
 	}
 
-	await writeFileSync(resolve('src/data/npm-stats.json'), JSON.stringify(result, null, 2));
+	await saveInsights(result, 'NPM');
+
+	process.exit();
 })();

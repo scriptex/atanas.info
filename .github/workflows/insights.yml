@@ -1,0 +1,25 @@
+name: Screenshots
+
+on:
+    schedule:
+        - cron: '0 0/6 * * *'
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+            - name: Build
+              run: |
+                  yarn
+                  yarn insights
+                  yarn npm-stats
+              env:
+                  NODE_OPTIONS: '--max_old_space_size=8192'
+                  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+                  GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+                  LAST_FM_API_KEY: ${{ secrets.LAST_FM_API_KEY }}

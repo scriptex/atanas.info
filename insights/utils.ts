@@ -1,7 +1,6 @@
-import { writeFileSync } from 'node:fs';
-
 import { load } from 'cheerio';
 import * as puppeteer from 'puppeteer';
+import clientPromise, { queryGithub, queryGitlab, queryLastFM, queryNPM } from '@lib/mongodb';
 
 export interface Project {
 	readonly url: string;
@@ -14,6 +13,8 @@ export interface Contribution {
 		color: string;
 	};
 }
+
+export type InsightsType = 'Github' | 'Gitlab' | 'NPM' | 'LastFM';
 
 export const asyncForEach = async <T>(
 	array: T[],
@@ -80,8 +81,29 @@ export const getCalendarWithBrowser = async (url: string, selector: string, time
 	return await page.$eval(selector, (element: Element) => element.innerHTML);
 };
 
-export const saveInsights = (file: string, data: unknown, network: 'Github' | 'Gitlab'): void => {
-	writeFileSync(file, JSON.stringify(data, null, 2));
+export const getQuery = (type: InsightsType) => {
+	switch (type) {
+		case 'Github':
+			return queryGithub;
+		case 'Gitlab':
+			return queryGitlab;
+		case 'NPM':
+			return queryNPM;
+		case 'LastFM':
+			return queryLastFM;
+		default:
+			return {};
+	}
+};
 
-	console.log(`Successfully wrote insights data from ${network} in ${file}`);
+export const saveInsights = async <T>(data: T, type: InsightsType): Promise<void> => {
+	const client = await clientPromise;
+	const db = client.db('All');
+	const query = getQuery(type);
+	const options = { upsert: true };
+	const collection = db.collection('Insights');
+
+	await collection.updateOne(query, { $set: { ...query, data } }, options).catch(e => e);
+
+	console.log(`Successfully saved insights data from ${type}.`);
 };

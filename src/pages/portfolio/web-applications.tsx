@@ -1,16 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
 import Link from 'next/link';
-import type { FC } from 'react';
+import { FC } from 'react';
 
-import webApps from '@data/projects-list.json';
 import { Routes } from '@data/routes';
 import { WebProject } from '@data/projects';
 import { portfolioSectionProps } from '.';
+import clientPromise, { queryScreenshots } from '@lib/mongodb';
 import { useNetworkState, composeClassName } from '@scripts/shared';
 import { Icon, Layout, Loader, Section, ExternalLink } from '@components';
 
-export const PortfolioWebApps: FC = () => {
+type Props = {
+	data: WebProject[];
+};
+
+export const PortfolioWebApps: FC<Readonly<Props>> = ({ data = [] }: Props) => {
 	const online = useNetworkState();
 
 	return (
@@ -30,7 +34,7 @@ export const PortfolioWebApps: FC = () => {
 				<h3>Web applications</h3>
 
 				<div className="c-section__body">
-					{webApps.map((project: WebProject, index: number) => (
+					{data.map((project: WebProject, index: number) => (
 						<ExternalLink
 							key={index}
 							href={project.url}
@@ -60,5 +64,18 @@ export const PortfolioWebApps: FC = () => {
 		</Layout>
 	);
 };
+
+export async function getStaticProps() {
+	const client = await clientPromise;
+	const db = client.db('All');
+	const collection = db.collection('Screenshots');
+	const webApps = await collection.findOne(queryScreenshots);
+
+	return {
+		props: {
+			data: webApps?.data
+		}
+	};
+}
 
 export default PortfolioWebApps;
