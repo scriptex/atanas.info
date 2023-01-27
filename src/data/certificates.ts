@@ -1,8 +1,8 @@
-export interface Certificate {
+export type Certificate = {
 	readonly type: string;
 	readonly name: string;
 	readonly date: string;
-}
+};
 
 export const certificates: Certificate[] = [
 	{ type: 'html', name: 'HTML', date: '24th August 2020' },

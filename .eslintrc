@@ -17,13 +17,7 @@
 		"sourceType": "module"
 	},
 	"plugins": ["@typescript-eslint", "jest"],
-	"ignorePatterns": [
-		"next.config.js",
-		"postcss.config.js",
-		"next-sitemap.config.js",
-		"src/scripts/analytics.js",
-		"src/scripts/google-analytics-local.js"
-	],
+	"ignorePatterns": ["*.config.js"],
 	"rules": {
 		"compat/compat": "off",
 		"react/display-name": "off",

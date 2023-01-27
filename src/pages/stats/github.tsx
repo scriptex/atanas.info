@@ -3,9 +3,9 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { FC, useState } from 'react';
 
-import github from '@data/github-insights.json';
 import { Routes } from '@data/routes';
 import { formatDate } from '@scripts/shared';
+import { getData, queryGithub } from '@lib/mongodb';
 import { GithubInsights, GithubRepository } from '@scripts/types';
 import { YEARS, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import { Button, Layout, Section, StatsEntry, StatsError, GithubSkyline } from '@components';
@@ -82,9 +82,13 @@ export const extractGithubData = ({
 	];
 };
 
-export const GithubStats: FC = () => {
+type Props = {
+	data: GithubInsights;
+};
+
+export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
 	const [current, setCurrent] = useState(-1);
-	const { error, updated, ...rest }: GithubInsights = github;
+	const { error, updated, ...rest }: GithubInsights = data;
 	const blocks: GeneralInsight[] = error ? [] : extractGithubData(rest);
 
 	const Content: FC = () => (
@@ -92,14 +96,16 @@ export const GithubStats: FC = () => {
 			<StatsEntry data={blocks} title="Github profile statistics" />
 
 			<div className="c-section__entry">
-				<small className="c-section__stamp">Last updated: {formatDate(updated, 'dd MMM yyyy HH:mm:ss')}</small>
+				<small className="c-section__stamp">
+					Last updated: {formatDate(updated || new Date().getTime(), 'dd MMM yyyy HH:mm:ss')}
+				</small>
 
 				<div className="o-shell">
 					<h3>Github contributions calendar</h3>
 
 					<div className="c-calendar__outer">
 						<div className="c-calendar c-calendar--github">
-							<ReactGitHubCalendar tooltips userName="scriptex" />
+							<ReactGitHubCalendar tooltips userName="scriptex" global_stats={false} />
 						</div>
 					</div>
 
@@ -150,5 +156,7 @@ export const GithubStats: FC = () => {
 		</Layout>
 	);
 };
+
+export const getStaticProps = async () => getData('Insights', queryGithub);
 
 export default GithubStats;

@@ -5,13 +5,13 @@ import type { FC } from 'react';
 import { Routes } from '@data/routes';
 import { Lines, Section } from '@components';
 
-interface Props {
+type Props = {
 	id: string;
 	back: Routes;
 	title: string;
 	image?: string;
 	content: string;
-}
+};
 
 export const MDX: FC<Readonly<Props>> = ({ id, back, title, image, content }: Props) => (
 	<Section

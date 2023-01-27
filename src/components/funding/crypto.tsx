@@ -4,12 +4,11 @@ import { FC, useEffect, useState } from 'react';
 import { Icon } from '@components';
 import { composeClassName } from '@scripts/shared';
 
-interface Props {
+type Props = {
 	name: string;
-
 	title: string;
 	wallet: string;
-}
+};
 
 export const FundingCrypto: FC<Readonly<Props>> = ({ name, title, wallet }: Props) => {
 	const [copied, setCopied] = useState(false);

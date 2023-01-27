@@ -5,12 +5,12 @@ import { Button } from '@components';
 import { Article } from '@data/articles';
 import { Presentation } from '@data/presentations';
 
-interface Props {
+type Props = {
 	name: 'title';
 	data: Array<Presentation | Slide | Article>;
 	active: number;
 	onClick: (index: number) => void;
-}
+};
 
 export const SectionNav: FC<Readonly<Props>> = ({ name, data, active, onClick }: Props) => (
 	<nav className="c-section__nav">

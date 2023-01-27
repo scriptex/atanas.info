@@ -2,15 +2,15 @@ import type { ReactNode } from 'react';
 
 export type Nullable<T> = T | null;
 
-export interface GithubCount {
+export type GithubCount = {
 	count: number | null;
-}
+};
 
-export interface GithubContribution extends GithubCount {
+export type GithubContribution = GithubCount & {
 	user: string;
-}
+};
 
-export interface GithubRepository {
+export type GithubRepository = {
 	name: string;
 	private: boolean;
 	fork: boolean;
@@ -23,9 +23,9 @@ export interface GithubRepository {
 	issues: number;
 	contributions: GithubContribution[];
 	has_pages: boolean;
-}
+};
 
-export interface GithubInsights {
+export type GithubInsights = {
 	error: boolean;
 	general: Nullable<{
 		publicRepos: number;
@@ -37,12 +37,12 @@ export interface GithubInsights {
 		createdAt: string;
 		updatedAt: string;
 	}>;
-	updated: Nullable<string>;
+	updated: Nullable<number>;
 	calendar: Nullable<Record<string, GithubCount>>;
 	repositories: Nullable<GithubRepository[]>;
-}
+};
 
-export interface GitlabRepository {
+export type GitlabRepository = {
 	name: string;
 	private: boolean;
 	fork: number;
@@ -53,19 +53,19 @@ export interface GitlabRepository {
 	languages: Record<string, number | void>;
 	issues?: number;
 	owner: string;
-}
+};
 
-export interface GitlabInsights {
+export type GitlabInsights = {
 	error: boolean;
 	general: Nullable<{
 		repos: number;
 		createdAt: string;
 		updatedAt: string;
 	}>;
-	updated: Nullable<string>;
+	updated: Nullable<number>;
 	calendar: Nullable<Record<string, number>>;
 	repositories: Nullable<GitlabRepository[]>;
-}
+};
 
 export type ReactChild = string | ReactNode | ReactNode[];
 

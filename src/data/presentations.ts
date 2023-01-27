@@ -1,9 +1,9 @@
-export interface Presentation {
+export type Presentation = {
 	readonly id: string;
 	readonly url: string;
 	readonly title: string;
 	readonly description: string;
-}
+};
 
 export const presentations: Presentation[] = [
 	{

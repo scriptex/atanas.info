@@ -4,10 +4,10 @@ import SVGSprite from '@src/sprite.svg';
 import { ReactChildren } from '@scripts/types';
 import { Nav, Contact, Header, Footer } from '@components';
 
-interface Props {
+type Props = {
 	main?: string;
 	children: ReactChildren;
-}
+};
 
 export const Layout: FC<Readonly<Props>> = ({ main, children }: Props) => (
 	<>

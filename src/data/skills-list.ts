@@ -1,4 +1,4 @@
-export interface Skill {
+export type Skill = {
 	readonly text: string;
 	readonly icon: string;
 	readonly width: number;
@@ -6,7 +6,7 @@ export interface Skill {
 	readonly fill: string;
 	readonly since: number;
 	readonly iconFill?: string;
-}
+};
 
 const defaultSize: Pick<Skill, 'width' | 'height'> = {
 	width: 34,

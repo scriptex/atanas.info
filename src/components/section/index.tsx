@@ -4,7 +4,7 @@ import { AppContext } from '@pages/_app';
 import { composeClassName } from '@scripts/shared';
 import { Icon, Button, ExternalLink } from '@components';
 
-export interface Props {
+export type Props = {
 	id: string;
 	title?: string;
 	style?: CSSProperties;
@@ -16,7 +16,7 @@ export interface Props {
 	className?: string;
 	shellClass?: string;
 	additionalElements?: ReactNode;
-}
+};
 
 export const SectionElements: FC<Readonly<Props>> = ({
 	title,

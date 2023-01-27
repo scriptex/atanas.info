@@ -1,13 +1,13 @@
 import { FC, useEffect, useRef } from 'react';
 import lottie, { AnimationConfig } from 'lottie-web';
 
-interface Props {
+type Props = {
 	data: any;
 	width: number;
 	height: number;
 	options?: Omit<AnimationConfig, 'animationData'>;
 	className: string;
-}
+};
 
 const defaultOptions = {
 	loop: true,
