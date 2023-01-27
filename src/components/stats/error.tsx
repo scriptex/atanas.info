@@ -1,8 +1,8 @@
 import type { FC } from 'react';
 
-interface Props {
+type Props = {
 	network: 'Github' | 'Gitlab';
-}
+};
 
 export const StatsError: FC<Readonly<Props>> = ({ network }: Props) => (
 	<div className="c-section__entry c-section__entry--no-background">

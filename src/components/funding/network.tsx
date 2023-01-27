@@ -1,11 +1,11 @@
 import type { FC } from 'react';
 
-interface Props {
+type Props = {
 	url: string;
 	icon: string;
 	name: string;
 	matrix: string;
-}
+};
 
 export const FundingNetwork: FC<Props> = ({ url, icon, name, matrix }: Props) => (
 	<g transform={matrix} className="c-funding__item">

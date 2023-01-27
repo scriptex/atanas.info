@@ -2,17 +2,17 @@ import { load } from 'cheerio';
 import * as puppeteer from 'puppeteer';
 import clientPromise, { queryGithub, queryGitlab, queryLastFM, queryNPM } from '@lib/mongodb';
 
-export interface Project {
+export type Project = {
 	readonly url: string;
 	readonly name: string;
-}
+};
 
-export interface Contribution {
+export type Contribution = {
 	[x: string]: {
 		count: number | null;
 		color: string;
 	};
-}
+};
 
 export type InsightsType = 'Github' | 'Gitlab' | 'NPM' | 'LastFM';
 
@@ -105,5 +105,5 @@ export const saveInsights = async <T>(data: T, type: InsightsType): Promise<void
 
 	await collection.updateOne(query, { $set: { ...query, data } }, options).catch(e => e);
 
-	console.log(`Successfully saved insights data from ${type}.`);
+	console.log(`atanas.info: Successfully saved insights data from ${type}.`);
 };

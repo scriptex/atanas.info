@@ -2,10 +2,10 @@ import type { FC } from 'react';
 
 import { GeneralInsight } from '@scripts/stats';
 
-interface Props {
+type Props = {
 	data: GeneralInsight[];
 	title: string;
-}
+};
 
 export const StatsEntry: FC<Readonly<Props>> = ({ title, data }: Props) => (
 	<div className="c-section__entry c-section__entry--no-background">

@@ -2,7 +2,7 @@ import { lastFm } from './client';
 import { asyncForEach, saveInsights } from './utils';
 
 export const getLastFMInsights = async (): Promise<void> => {
-	console.log('Getting insights data from Last.FM...');
+	console.log('atanas.info: Getting insights data from Last.FM...');
 
 	try {
 		const weeklyAlbumChart = await lastFm

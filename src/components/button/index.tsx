@@ -2,7 +2,7 @@ import type { FC, ReactNode } from 'react';
 
 import { composeClassName } from '@scripts/shared';
 
-interface Props {
+type Props = {
 	rel?: string;
 	href?: string;
 	type?: 'submit' | 'reset' | 'button' | 'link';
@@ -12,7 +12,7 @@ interface Props {
 	className?: string;
 	ariaLabel?: string;
 	onClick?: (...args: unknown[]) => unknown;
-}
+};
 
 export const Button: FC<Readonly<Props>> = ({
 	rel,

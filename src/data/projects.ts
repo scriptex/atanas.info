@@ -1,27 +1,27 @@
 import { Routes } from './routes';
 
-export interface Project {
+export type Project = {
 	readonly url: string;
 	readonly title: string;
 	readonly description: string;
-}
+};
 
-export interface WebProject extends Project {
+export type WebProject = Project & {
 	readonly skip: boolean;
 	readonly image: string;
-}
+};
 
-export interface ExtendedProject extends Project {
+export type ExtendedProject = Project & {
 	readonly details: string;
 	readonly images: string[];
 	readonly adjustable?: boolean;
-}
+};
 
-export interface SubPage {
+export type SubPage = {
 	readonly url: Routes | string;
 	readonly text: string;
 	readonly image: string;
-}
+};
 
 export const projects: WebProject[] = [
 	{

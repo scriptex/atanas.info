@@ -7,7 +7,7 @@ import { getData, queryNPM } from '@lib/mongodb';
 import { sectionStatsProps } from '@scripts/stats';
 import { Layout, Section, ExternalLink } from '@components';
 
-interface Package {
+type Package = {
 	name: string;
 	version: string;
 	description: string;
@@ -15,11 +15,11 @@ interface Package {
 	homepage: string;
 	author: string;
 	downloads: number;
-}
+};
 
-interface Props {
+type Props = {
 	data: Record<string, Package>;
-}
+};
 
 export const Packages: FC<Readonly<Props>> = ({ data }: Props) => (
 	<div className="o-grid c-packages">
@@ -56,9 +56,9 @@ export const Packages: FC<Readonly<Props>> = ({ data }: Props) => (
 	</div>
 );
 
-interface NPMProps extends Props {
+type NPMProps = Props & {
 	sum: number;
-}
+};
 
 export const NPMStats: FC<Readonly<NPMProps>> = ({ data }: NPMProps) => {
 	const error: boolean = (data as any)?.error;

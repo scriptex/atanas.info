@@ -26,7 +26,6 @@
 		"pwa": "create-pwa --icon public/images/icons/icon.png --launch public/images/icons/splash.png",
 		"svg": "./bin/svg.sh",
 		"time": "./bin/time.sh",
-		"localga": "ts-node ./bin/local-analytics.ts",
 		"insights": "ts-node ./insights/index.ts",
 		"npm-stats": "ts-node ./npm/index.ts ",
 		"screenshots": "ts-node ./screenshots/index.ts",
@@ -47,7 +46,7 @@
 		"test:coverage": "yarn test --coverage",
 		"type-coverage": "type-coverage --ignore-catch --detail",
 		"test:coverage:watch": "yarn test --coverage --watchAll",
-		"pre": "yarn time && yarn deduplicate && yarn fetch-projects && yarn fetch-music && yarn localga && yarn svg",
+		"pre": "yarn time && yarn deduplicate && yarn fetch-projects && yarn svg",
 		"post": "yarn tsc && yarn houdini && yarn next:build && next-sitemap",
 		"build": "yarn pre && yarn post"
 	},

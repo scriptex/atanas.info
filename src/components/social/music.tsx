@@ -5,11 +5,11 @@ import { formatDate } from '@scripts/shared';
 import { ExternalLink } from '@components';
 import { filteredData } from './utils';
 
-interface Props {
+type Props = {
 	data: any;
 	period: 'week' | 'month';
 	condition: boolean;
-}
+};
 
 export const SocialMusicCarousel: FC<Readonly<Props>> = ({ data, period, condition }: Props) =>
 	condition ? (

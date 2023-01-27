@@ -6,7 +6,7 @@ import { asyncForEach, saveInsights, getCalendarWithBrowser } from './utils';
 const setOwner = (repo: any, owner: string): any => ({ ...repo, owner });
 
 export const getGitlabInsights = async (): Promise<void> => {
-	console.log('Getting insights data from Gitlab...');
+	console.log('atanas.info: Getting insights data from Gitlab...');
 
 	try {
 		writeFileSync(
@@ -14,16 +14,16 @@ export const getGitlabInsights = async (): Promise<void> => {
 			(await getCalendarWithBrowser('https://gitlab.com/scriptex', '.js-contrib-calendar', 5000)) || ''
 		);
 
-		console.log('Getting data for user Scriptex from Gitlab...');
+		console.log('atanas.info: Getting data for user Scriptex from Gitlab...');
 		const user = await gitlab('users/1896847');
 
-		console.log('Getting data for organization Three11 from Gitlab...');
+		console.log('atanas.info: Getting data for organization Three11 from Gitlab...');
 		const group = await gitlab('groups/2344434');
 
-		console.log('Getting projects for user Scriptex from Gitlab...');
+		console.log('atanas.info: Getting projects for user Scriptex from Gitlab...');
 		const userProjects = await gitlab(`users/${user.id}/projects?per_page=100&statistics=true`);
 
-		console.log('Getting projects for organization Three11 from Gitlab...');
+		console.log('atanas.info: Getting projects for organization Three11 from Gitlab...');
 		const groupProjects = await gitlab(`groups/${group.id}/projects?per_page=100&statistics=true`);
 
 		const calendar = await fetch('https://gitlab.com/users/scriptex/calendar.json').then((res: any) => res.json());
@@ -33,10 +33,10 @@ export const getGitlabInsights = async (): Promise<void> => {
 		];
 		const repositories: any[] = [];
 
-		console.log('Getting projects data from Gitlab...');
+		console.log('atanas.info: Getting projects data from Gitlab...');
 		await asyncForEach(projects, async (project: any) => {
 			console.log('-----');
-			console.log(`Getting data for project ${project.name}`);
+			console.log(`atanas.info: Getting data for project ${project.name}`);
 			repositories.push({
 				name: project.name,
 				private: project.visibility === 'private',

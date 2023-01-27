@@ -1,8 +1,8 @@
-export interface Track {
+export type Track = {
 	readonly name: string;
 	readonly artist: string;
 	readonly url: string;
-}
+};
 
 export const music: Track[] = [
 	{

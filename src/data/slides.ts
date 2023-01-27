@@ -1,8 +1,8 @@
-export interface Slide {
+export type Slide = {
 	readonly url: string;
 	readonly title: string;
 	readonly description: string;
-}
+};
 
 export const slides: Slide[] = [
 	{

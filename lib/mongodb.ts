@@ -6,6 +6,8 @@ declare global {
 	var _mongoClientPromise: Promise<MongoClient>;
 }
 
+type Query = Filter<Document>;
+
 dotenvConfig({
 	path: '.env.local'
 });
@@ -35,22 +37,23 @@ if (process.env.NODE_ENV === 'development') {
 	clientPromise = client.connect();
 }
 
-export const queryNPM: Filter<Document> = { name: 'atanas-info-npm' };
-export const queryGithub: Filter<Document> = { name: 'atanas-info-github' };
-export const queryGitlab: Filter<Document> = { name: 'atanas-info-gitlab' };
-export const queryLastFM: Filter<Document> = { name: 'atanas-info-last-fm' };
-export const queryCloudinary: Filter<Document> = { name: 'atanas-info-cloudinary' };
-export const queryScreenshots: Filter<Document> = { name: 'atanas-info-screenshots' };
+export const queryNPM: Query = { name: 'atanas-info-npm' };
+export const queryMusic: Query = { name: 'atanas-info-music' };
+export const queryGithub: Query = { name: 'atanas-info-github' };
+export const queryGitlab: Query = { name: 'atanas-info-gitlab' };
+export const queryLastFM: Query = { name: 'atanas-info-last-fm' };
+export const queryCloudinary: Query = { name: 'atanas-info-cloudinary' };
+export const queryScreenshots: Query = { name: 'atanas-info-screenshots' };
 
-export const getData = async (name: string, query: Filter<Document>) => {
+export const getData = async (name: string, query: Query) => {
 	const client = await clientPromise;
 	const db = client.db('All');
 	const collection = db.collection(name);
-	const webApps = await collection.findOne(query);
+	const result = await collection.findOne(query);
 
 	return {
 		props: {
-			data: webApps?.data
+			data: result?.data
 		}
 	};
 };

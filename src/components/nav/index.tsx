@@ -7,12 +7,12 @@ import { composeClassName } from '@scripts/shared';
 import { MenuItem, menuItems } from '@data/menu';
 import { Routes } from '@data/routes';
 
-interface Props {
+type Props = {
 	onClick?: () => void;
 	hasShell?: boolean;
 	children?: ReactNode | string | Array<ReactNode | string>;
 	className?: string;
-}
+};
 
 type AnchorProps = Omit<MenuItem, 'children'> & Pick<Props, 'onClick'>;
 

@@ -1,9 +1,9 @@
 import type { FC } from 'react';
 
-interface Props {
+type Props = {
 	place: string;
 	period: string;
-}
+};
 
 export const ResumeEntry: FC<Readonly<Props>> = ({ place, period }: Props) => (
 	<ul className="c-resume__list">

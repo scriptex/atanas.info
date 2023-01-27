@@ -17,6 +17,7 @@ jobs:
               run: |
                   yarn
                   yarn screenshots
+                  yarn fetch-music
               env:
                   MONGODB_URI: ${{ secrets.MONGODB_URI }}
                   NODE_OPTIONS: '--max_old_space_size=8192'

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
 import Link from 'next/link';
-import { FC } from 'react';
+import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
 import { WebProject } from '@data/projects';

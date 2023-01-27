@@ -16,17 +16,17 @@ import {
 import { Skill } from '@data/skills-list';
 import { Canvas, createSVG } from './canvas';
 
-interface Node extends Skill {
+type Node = Skill & {
 	readonly r: number;
-}
+};
 
-interface Data {
+type Data = {
 	nodes: Node[];
 	links: Array<{
 		target: number;
 		source: number;
 	}>;
-}
+};
 
 export const drawSkills = (words: Skill[]): void => {
 	const all = words.length;

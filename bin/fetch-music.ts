@@ -1,13 +1,9 @@
 #!/usr/bin/env ts-node-script
 
-import { writeFileSync, unlinkSync, existsSync } from 'node:fs';
-
 import { Track, music as tracks } from '@data/music';
+import clientPromise, { queryMusic } from '@lib/mongodb';
 
-if (!tracks.length) {
-	console.log('atanas.info: No tracks specified.');
-} else {
-	const file = 'src/data/tracks.ts';
+(async () => {
 	const data = tracks.map((track: Track) => {
 		const url = track.url.replace('www', 'dl');
 
@@ -20,11 +16,13 @@ if (!tracks.length) {
 		};
 	});
 
-	if (existsSync(file)) {
-		unlinkSync(file);
-	}
+	const client = await clientPromise;
+	const db = client.db('All');
+	const collection = db.collection('Music');
 
-	writeFileSync(file, `export const tracks = ${JSON.stringify(data, null, 2)};`);
+	await collection.updateOne(queryMusic, { $set: { ...queryMusic, data } }, { upsert: true }).catch(e => e);
 
-	console.log('atanas.info: Successfully saved tracks metadata in ' + file);
-}
+	console.log('atanas.info: Successfully saved tracks metadata in MongoDB.');
+
+	process.exit();
+})();

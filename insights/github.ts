@@ -14,7 +14,7 @@ export const getGithubRepositories = async (): Promise<any[]> => {
 };
 
 export const getGithubInsights = async (): Promise<void> => {
-	console.log('Getting insights data from Github...');
+	console.log('atanas.info: Getting insights data from Github...');
 
 	try {
 		writeFileSync('public/github-calendar.svg', (await getCalendar()) || '');
@@ -27,10 +27,10 @@ export const getGithubInsights = async (): Promise<void> => {
 
 		await asyncForEach(repos, async ({ full_name }: { full_name: string }): Promise<void> => {
 			console.log('-----');
-			console.log(`Getting insights data for ${full_name}...`);
+			console.log(`atanas.info: Getting insights data for ${full_name}...`);
 			const repo = await github.get({ path: `/repos/${full_name}` });
 
-			console.log(`Getting contributions data for ${full_name}...`);
+			console.log(`atanas.info: Getting contributions data for ${full_name}...`);
 			const contributions = await github.get({ path: `/repos/${full_name}/contributors` });
 
 			repositories.push({
