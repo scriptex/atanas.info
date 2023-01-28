@@ -61,6 +61,11 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 				content: 'Automotive'
 			},
 			{
+				href: Routes.PORTFOLIO_EMAIL_TEMPLATES,
+				title: 'Email templates portfolio',
+				content: 'Email templates'
+			},
+			{
 				href: Routes.PORTFOLIO_PERSONAL_PROJECTS,
 				title: 'My personal projects',
 				content: 'Personal'

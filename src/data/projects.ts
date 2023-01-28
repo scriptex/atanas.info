@@ -715,3 +715,14 @@ export const personalProjects: SubPage[] = [
 		image: '/images/unsplash/10.jpeg'
 	}
 ];
+
+export const emailTemplates = [
+	'/images/email-templates/eon1.png',
+	'/images/email-templates/eon2.png',
+	'/images/email-templates/eon3.png',
+	'/images/email-templates/eon4.png',
+	'/images/email-templates/eon5.png',
+	'/images/email-templates/eon6.png',
+	'/images/email-templates/foton1.png',
+	'/images/email-templates/foton2.png'
+];
