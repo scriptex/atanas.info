@@ -513,22 +513,27 @@ export const statsItems: SubPage[] = [
 export const portfolioItems: SubPage[] = [
 	{
 		url: Routes.PORTFOLIO_WEB_APPS,
-		text: 'Web',
+		text: 'Web applications',
 		image: '/images/temp/web-apps.jpg'
 	},
 	{
 		url: Routes.PORTFOLIO_MOBILE_APPS,
-		text: 'Mobile',
+		text: 'Mobile applications',
 		image: '/images/temp/mobile-apps.jpg'
 	},
 	{
 		url: Routes.PORTFOLIO_AUTOMOTIVE_APPS,
-		text: 'Automotive',
+		text: 'Automotive applications',
 		image: '/images/temp/automotive-apps.jpg'
 	},
 	{
+		url: Routes.PORTFOLIO_EMAIL_TEMPLATES,
+		text: 'Email templates',
+		image: '/images/temp/email-templates.jpeg'
+	},
+	{
 		url: Routes.PORTFOLIO_PERSONAL_PROJECTS,
-		text: 'Personal',
+		text: 'Personal projects',
 		image: '/images/temp/personal-apps.jpg'
 	},
 	{
@@ -714,4 +719,15 @@ export const personalProjects: SubPage[] = [
 		text: 'TS Helpers',
 		image: '/images/unsplash/10.jpeg'
 	}
+];
+
+export const emailTemplates = [
+	'/images/email-templates/eon1.jpg',
+	'/images/email-templates/eon3.jpg',
+	'/images/email-templates/foton2.jpg',
+	'/images/email-templates/eon2.jpg',
+	'/images/email-templates/eon4.jpg',
+	'/images/email-templates/eon5.jpg',
+	'/images/email-templates/eon6.jpg',
+	'/images/email-templates/foton1.jpg'
 ];
