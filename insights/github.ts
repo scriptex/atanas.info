@@ -1,7 +1,7 @@
 import { writeFileSync } from 'node:fs';
 
 import { github } from './client';
-import { getCalendar, asyncForEach, getContributions, saveInsights } from './utils';
+import { getCalendar, asyncForEach, saveInsights, getContributions } from './utils';
 
 export const getGithubRepositories = async (): Promise<any[]> => {
 	const reposToSkip = ['three11/code-of-conduct'];
@@ -14,9 +14,7 @@ export const getGithubRepositories = async (): Promise<any[]> => {
 };
 
 export const getGithubInsights = async (): Promise<void> => {
-	console.log('Getting insights data from Github...');
-
-	const file = 'src/data/github-insights.json';
+	console.log('atanas.info: Getting insights data from Github...');
 
 	try {
 		writeFileSync('public/github-calendar.svg', (await getCalendar()) || '');
@@ -29,10 +27,10 @@ export const getGithubInsights = async (): Promise<void> => {
 
 		await asyncForEach(repos, async ({ full_name }: { full_name: string }): Promise<void> => {
 			console.log('-----');
-			console.log(`Getting insights data for ${full_name}...`);
+			console.log(`atanas.info: Getting insights data for ${full_name}...`);
 			const repo = await github.get({ path: `/repos/${full_name}` });
 
-			console.log(`Getting contributions data for ${full_name}...`);
+			console.log(`atanas.info: Getting contributions data for ${full_name}...`);
 			const contributions = await github.get({ path: `/repos/${full_name}/contributors` });
 
 			repositories.push({
@@ -65,26 +63,24 @@ export const getGithubInsights = async (): Promise<void> => {
 			updatedAt: user.updated_at
 		};
 
-		saveInsights(
-			file,
+		await saveInsights(
 			{
 				error: false,
 				general,
 				calendar,
 				repositories,
-				updated: new Date()
+				updated: new Date().getTime()
 			},
 			'Github'
 		);
 	} catch (e) {
-		saveInsights(
-			file,
+		await saveInsights(
 			{
 				error: true,
 				general: null,
 				calendar: null,
 				repositories: null,
-				updated: new Date()
+				updated: new Date().getTime()
 			},
 			'Github'
 		);

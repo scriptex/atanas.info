@@ -3,10 +3,10 @@ import { intervalToDuration } from 'date-fns';
 import statistics from '@data/lotties/statistics.json';
 import { Animation } from '@components';
 
-export interface GeneralInsight {
+export type GeneralInsight = {
 	readonly title: string;
 	readonly value: any;
-}
+};
 
 export const START_YEAR = 2013;
 

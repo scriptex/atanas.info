@@ -1,27 +1,27 @@
 import { Routes } from './routes';
 
-export interface Project {
+export type Project = {
 	readonly url: string;
 	readonly title: string;
 	readonly description: string;
-}
+};
 
-export interface WebProject extends Project {
+export type WebProject = Project & {
 	readonly skip: boolean;
 	readonly image: string;
-}
+};
 
-export interface ExtendedProject extends Project {
+export type ExtendedProject = Project & {
 	readonly details: string;
 	readonly images: string[];
 	readonly adjustable?: boolean;
-}
+};
 
-export interface SubPage {
+export type SubPage = {
 	readonly url: Routes | string;
 	readonly text: string;
 	readonly image: string;
-}
+};
 
 export const projects: WebProject[] = [
 	{
@@ -513,22 +513,27 @@ export const statsItems: SubPage[] = [
 export const portfolioItems: SubPage[] = [
 	{
 		url: Routes.PORTFOLIO_WEB_APPS,
-		text: 'Web',
+		text: 'Web applications',
 		image: '/images/temp/web-apps.jpg'
 	},
 	{
 		url: Routes.PORTFOLIO_MOBILE_APPS,
-		text: 'Mobile',
+		text: 'Mobile applications',
 		image: '/images/temp/mobile-apps.jpg'
 	},
 	{
 		url: Routes.PORTFOLIO_AUTOMOTIVE_APPS,
-		text: 'Automotive',
+		text: 'Automotive applications',
 		image: '/images/temp/automotive-apps.jpg'
 	},
 	{
+		url: Routes.PORTFOLIO_EMAIL_TEMPLATES,
+		text: 'Email templates',
+		image: '/images/temp/email-templates.jpeg'
+	},
+	{
 		url: Routes.PORTFOLIO_PERSONAL_PROJECTS,
-		text: 'Personal',
+		text: 'Personal projects',
 		image: '/images/temp/personal-apps.jpg'
 	},
 	{
@@ -717,12 +722,12 @@ export const personalProjects: SubPage[] = [
 ];
 
 export const emailTemplates = [
-	'/images/email-templates/eon1.png',
-	'/images/email-templates/eon2.png',
-	'/images/email-templates/eon3.png',
-	'/images/email-templates/eon4.png',
-	'/images/email-templates/eon5.png',
-	'/images/email-templates/eon6.png',
-	'/images/email-templates/foton1.png',
-	'/images/email-templates/foton2.png'
+	'/images/email-templates/eon1.jpg',
+	'/images/email-templates/eon3.jpg',
+	'/images/email-templates/foton2.jpg',
+	'/images/email-templates/eon2.jpg',
+	'/images/email-templates/eon4.jpg',
+	'/images/email-templates/eon5.jpg',
+	'/images/email-templates/eon6.jpg',
+	'/images/email-templates/foton1.jpg'
 ];

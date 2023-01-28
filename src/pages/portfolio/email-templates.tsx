@@ -1,14 +1,37 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
 import Link from 'next/link';
-import type { FC } from 'react';
+import Modal from 'react-modal';
+import { FC, useState } from 'react';
 
 import { Routes } from '@data/routes';
 import { emailTemplates } from '@data/projects';
 import { Layout, Section } from '@components';
 import { portfolioSectionProps } from '.';
 
-export const PortfolioMobileApps: FC = () => (
+type Props = {
+	img: string;
+};
+
+export const PortfolioEmailTemplate: FC<Readonly<Props>> = ({ img }: Props) => {
+	const [open, setOpen] = useState(false);
+
+	const toggle = () => setOpen(!open);
+
+	return (
+		<>
+			<button onClick={toggle}>
+				<img src={img} alt="" />
+			</button>
+
+			<Modal isOpen={open} onRequestClose={toggle}>
+				<img src={img} alt="" />
+			</Modal>
+		</>
+	);
+};
+
+export const PortfolioEmailTemplates: FC = () => (
 	<Layout>
 		<Head>
 			<title>Email Templates | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
@@ -22,15 +45,15 @@ export const PortfolioMobileApps: FC = () => (
 				</Link>
 			}
 		>
-			<h3>Mobile applications</h3>
+			<h3>Email Templates</h3>
 
-			{emailTemplates.map(img => (
-				<a href={img} key={img}>
-					<img src={img} alt="" />
-				</a>
-			))}
+			<div className="c-email-templates">
+				{emailTemplates.map(img => (
+					<PortfolioEmailTemplate img={img} key={img} />
+				))}
+			</div>
 		</Section>
 	</Layout>
 );
 
-export default PortfolioMobileApps;
+export default PortfolioEmailTemplates;

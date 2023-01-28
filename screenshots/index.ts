@@ -1,21 +1,15 @@
 #!/usr/bin/env ts-node-script
 
-import { resolve } from 'node:path';
-import { writeFileSync } from 'node:fs';
-
 import * as puppeteer from 'puppeteer';
 import { config as dotenvConfig } from 'dotenv';
 import { v2 as cloudinary, UploadApiOptions, UploadApiResponse } from 'cloudinary';
 
 import * as pckg from '../package.json';
 import { WebProject, projects } from '@data/projects';
-
-// TODO: Re-enable the screenshots when the Cloudinary credits reset.
-// writeFileSync(resolve(__dirname, '../src/data/projects-list.json'), JSON.stringify(projects, null, 2));
-// process.exit();
+import clientPromise, { queryCloudinary, queryScreenshots } from '@lib/mongodb';
 
 if (!projects || !projects.length) {
-	console.log('No projects found.');
+	console.log('atanas.info: No web projects found.');
 	process.exit();
 }
 
@@ -37,13 +31,13 @@ const uploadOptions = (name: string): UploadApiOptions => ({
 });
 
 async function createScreenshot(url: string, name: string, timeout = 2000): Promise<UploadApiResponse | null> {
-	console.log(`Launching new browser for ${name}...`);
+	console.log(`atanas.info: Launching new browser for ${name}...`);
 	const browser = await puppeteer.launch({
 		headless: true,
 		args: ['--no-sandbox']
 	});
 
-	console.log(`Opening new browser page for ${name}...`);
+	console.log(`atanas.info: Opening new browser page for ${name}...`);
 	const page = await browser.newPage();
 
 	await page.setViewport({
@@ -51,24 +45,24 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 		height: 1000
 	});
 
-	console.log(`Navigating to ${url} for ${name}...`);
+	console.log(`atanas.info: Navigating to ${url} for ${name}...`);
 	await page.goto(url, { waitUntil: 'networkidle0' });
 	await page.waitForTimeout(timeout);
 
-	console.log(`Taking screenshot for ${name}...`);
+	console.log(`atanas.info: Taking screenshot for ${name}...`);
 	const shotResult = await page
 		.screenshot({ fullPage: false })
 		.then(res => res)
 		.catch(e => {
-			console.error(`Error capturing screenshot for ${name}`, e);
+			console.error(`atanas.info: Error capturing screenshot for ${name}`, e);
 			return null;
 		});
 
-	console.log(`Closing browser for ${name}...`);
+	console.log(`atanas.info: Closing browser for ${name}...`);
 	await browser.close();
 
 	if (shotResult) {
-		console.log(`Uploading screenshot for ${name}...`);
+		console.log(`atanas.info: Uploading screenshot for ${name}...`);
 
 		return upload(shotResult as Buffer, uploadOptions(name), name);
 	} else {
@@ -81,11 +75,11 @@ function upload(shotResult: Buffer, options: UploadApiOptions, name: string): Pr
 		cloudinary.uploader
 			.upload_stream(options, (error, result) => {
 				if (error) {
-					console.error('Upload to cloudinary failed: ', error);
+					console.error('atanas.info: Upload to cloudinary failed: ', error);
 					fail(error);
 				}
 
-				console.log(`Uploaded screenshot for ${name}...`);
+				console.log(`atanas.info: Uploaded screenshot for ${name}...`);
 
 				success(result!);
 			})
@@ -103,7 +97,7 @@ async function createScreenshots(allPages: WebProject[]): Promise<void> {
 	for (const page of pages) {
 		console.log('-----');
 		if (!page.url) {
-			console.log(`${page.title} does not have a valid URL.`);
+			console.log(`atanas.info: ${page.title} does not have a valid URL.`);
 		} else {
 			try {
 				const result = await createScreenshot(page.url, page.title.replace(/\s/g, '-'));
@@ -123,14 +117,19 @@ async function createScreenshots(allPages: WebProject[]): Promise<void> {
 					results.push(result);
 				}
 			} catch (e) {
-				console.error(`Error capturing screenshot for page ${page.title}`, e);
+				console.error(`atanas.info: Error capturing screenshot for page ${page.title}`, e);
 			}
 		}
 	}
 
-	Promise.all(results).then(() => {
-		writeFileSync(resolve(__dirname, '../src/data/projects-list.json'), JSON.stringify(newProjects, null, 2));
-		writeFileSync(resolve(__dirname, '../src/data/cloudinary-data.json'), JSON.stringify(results, null, 2));
+	Promise.all(results).then(async () => {
+		const client = await clientPromise;
+		const db = client.db('All');
+		const options = { upsert: true };
+		const collection = db.collection('Screenshots');
+
+		await collection.updateOne(queryCloudinary, { $set: { ...queryCloudinary, data: results } }, options);
+		await collection.updateOne(queryScreenshots, { $set: { ...queryScreenshots, data: newProjects } }, options);
 
 		process.exit();
 	});

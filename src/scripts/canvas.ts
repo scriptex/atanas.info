@@ -5,13 +5,13 @@ import { random } from '@scripts/shared';
 export type Dots = d3.Selection<SVGCircleElement, any, SVGSVGElement, any>;
 export type Canvas = d3.Selection<SVGSVGElement, unknown, HTMLElement, any>;
 
-interface Data {
+type Data = {
 	r?: number;
 	cx: number;
 	cy: number;
 	op?: number;
 	color: d3.HSLColor | string;
-}
+};
 
 let circleIndex = 0;
 

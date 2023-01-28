@@ -1,7 +1,7 @@
-export interface BioEntry {
+export type BioEntry = {
 	readonly title: string;
 	readonly content: string[];
-}
+};
 
 export const bio: BioEntry[] = [
 	{

@@ -1,13 +1,13 @@
 import { Routes } from './routes';
 
-export interface MenuItem {
+export type MenuItem = {
 	rel?: string;
 	href: string;
 	title: string;
 	links?: MenuItem[];
 	target?: string;
 	content: string;
-}
+};
 
 export const menuItems: Array<Readonly<MenuItem>> = [
 	{

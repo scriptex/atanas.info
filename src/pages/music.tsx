@@ -1,13 +1,25 @@
 import Head from 'next/head';
 import { FC, useRef, useState, useEffect } from 'react';
 
-import { tracks } from '@data/tracks';
 import { Layout, Section } from '@components';
+import { getData, queryMusic } from '@lib/mongodb';
 import { music, MusicFunctions } from '@scripts/music';
 import { Ref, composeClassName } from '@scripts/shared';
 
-export const Music: FC = () => {
-	const [source, setSource] = useState(tracks[0]);
+type Track = {
+	url: string;
+	metaData: {
+		title: string;
+		artist: string;
+	};
+};
+
+type Props = {
+	data: Track[];
+};
+
+export const Music: FC<Readonly<Props>> = ({ data }: Props) => {
+	const [source, setSource] = useState(data[0]);
 	const [playing, setPlaying] = useState(false);
 	const [visible, setVisible] = useState(false);
 	const [functions, setFunctions] = useState<MusicFunctions>();
@@ -72,7 +84,7 @@ export const Music: FC = () => {
 					</button>
 
 					<div className="c-music__tracks">
-						{tracks.map((track, index) => (
+						{data.map((track, index) => (
 							<button
 								key={index}
 								onClick={async () => {
@@ -98,5 +110,7 @@ export const Music: FC = () => {
 		</Layout>
 	);
 };
+
+export const getStaticProps = async () => getData('Music', queryMusic);
 
 export default Music;

@@ -5,11 +5,11 @@ import { ExtendedProject } from '@data/projects';
 import { composeClassName } from '@scripts/shared';
 import { Loader, ExternalLink } from '@components';
 
-interface Props {
+type Props = {
 	data: ExtendedProject[];
 	className?: string;
 	slidesToShow: number;
-}
+};
 
 export const PortfolioSliders: FC<Readonly<Props>> = ({ data, className, slidesToShow }: Props) => (
 	<div className="c-section__sliders">

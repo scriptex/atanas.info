@@ -1,0 +1,26 @@
+name: Screenshots
+
+on:
+    schedule:
+        - cron: '0 0 * * 0'
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+            - name: Build
+              run: |
+                  yarn
+                  yarn screenshots
+                  yarn fetch-music
+              env:
+                  MONGODB_URI: ${{ secrets.MONGODB_URI }}
+                  NODE_OPTIONS: '--max_old_space_size=8192'
+                  CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+                  CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+                  CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}

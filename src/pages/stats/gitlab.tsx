@@ -2,10 +2,10 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { FC, useRef, useEffect } from 'react';
 
-import gitlab from '@data/gitlab-insights.json';
 import { Routes } from '@data/routes';
 import gitlabCalendarData from '@data/gitlab-calendar.json';
 import { Ref, formatDate } from '@scripts/shared';
+import { getData, queryGitlab } from '@lib/mongodb';
 import { GitlabInsights, GitlabRepository } from '@scripts/types';
 import { GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import { Layout, Section, StatsEntry, StatsError } from '@components';
@@ -62,11 +62,15 @@ export const extractGitlabData = ({ general, calendar, repositories }: GitlabIns
 	];
 };
 
-export const GitlabStats: FC = () => {
-	const { error, calendar, updated }: GitlabInsights = gitlab;
+type Props = {
+	data: GitlabInsights;
+};
+
+export const GitlabStats: FC<Readonly<Props>> = ({ data }: Props) => {
+	const { error, calendar, updated }: GitlabInsights = data;
 	const calendarPlaceholder1: Ref<HTMLDivElement> = useRef(null);
 	const calendarPlaceholder2: Ref<HTMLDivElement> = useRef(null);
-	const blocks = extractGitlabData(gitlab);
+	const blocks = extractGitlabData(data);
 
 	useEffect(() => {
 		import('gitlab-calendar').then(({ GitlabCalendar }) => {
@@ -85,7 +89,9 @@ export const GitlabStats: FC = () => {
 			<StatsEntry data={blocks} title="Gitlab profile statistics" />
 
 			<div className="c-section__entry">
-				<small className="c-section__stamp">Last updated: {formatDate(updated, 'dd MMM yyyy HH:mm:ss')}</small>
+				<small className="c-section__stamp">
+					Last updated: {formatDate(updated || new Date().getTime(), 'dd MMM yyyy HH:mm:ss')}
+				</small>
 
 				<div className="o-shell">
 					<h3>Gitlab contributions calendars</h3>
@@ -130,5 +136,7 @@ export const GitlabStats: FC = () => {
 		</Layout>
 	);
 };
+
+export const getStaticProps = async () => getData('Insights', queryGitlab);
 
 export default GitlabStats;

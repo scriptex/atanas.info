@@ -4,10 +4,15 @@ import type { FC } from 'react';
 
 import socialMedia from '@data/lotties/social-media.json';
 import { useNetworkState } from '@scripts/shared';
+import { getData, queryLastFM } from '@lib/mongodb';
 import { SocialItem, socialItems } from '@data/social';
 import { Icon, Lines, Layout, Section, Animation, SocialMusic, LinkedInBadge } from '@components';
 
-export const Social: FC = () => {
+type Props = {
+	data: any;
+};
+
+export const Social: FC<Readonly<Props>> = ({ data }: Props) => {
 	const online = useNetworkState();
 
 	return (
@@ -55,10 +60,12 @@ export const Social: FC = () => {
 					</div>
 				</div>
 
-				{online && <SocialMusic />}
+				{online && <SocialMusic data={data} />}
 			</Section>
 		</Layout>
 	);
 };
+
+export const getStaticProps = async () => getData('Insights', queryLastFM);
 
 export default Social;

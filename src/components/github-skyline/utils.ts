@@ -15,10 +15,10 @@ import {
 
 import { SIZE, ROOT } from './constants';
 
-export interface GithubSkylineProps {
+export type GithubSkylineProps = {
 	readonly file: string;
 	readonly index: number;
-}
+};
 
 export const onSceneMount = (args: SceneEventArgs, props: GithubSkylineProps, onLoad: () => void): void => {
 	SceneLoader.Append(`${ROOT}/`, props.file, args.scene, (scene: SceneCore) => {

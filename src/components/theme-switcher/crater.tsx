@@ -1,10 +1,10 @@
 import type { FC } from 'react';
 
-interface Props {
+type Props = {
 	path: string;
 	circle: number;
 	translate: string;
-}
+};
 
 export const Crater: FC<Readonly<Props>> = ({ path, circle, translate }: Props) => (
 	<g transform={`translate(${translate})`}>

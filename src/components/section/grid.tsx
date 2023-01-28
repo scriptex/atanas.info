@@ -4,10 +4,10 @@ import type { FC } from 'react';
 import { SubPage } from '@data/projects';
 import { Loader, ExternalLink } from '@components';
 
-export interface Props {
+export type Props = {
 	data: SubPage[];
 	linkType?: 'external' | 'internal';
-}
+};
 
 const getCommonProps = (img: string) => ({
 	style: { backgroundImage: `url(${img})` },

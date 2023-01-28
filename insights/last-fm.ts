@@ -1,12 +1,8 @@
-import { writeFileSync } from 'node:fs';
-
 import { lastFm } from './client';
-import { asyncForEach } from './utils';
+import { asyncForEach, saveInsights } from './utils';
 
 export const getLastFMInsights = async (): Promise<void> => {
-	const file = 'src/data/last.fm-insights.json';
-
-	console.log('Getting insights data from Last.FM...');
+	console.log('atanas.info: Getting insights data from Last.FM...');
 
 	try {
 		const weeklyAlbumChart = await lastFm
@@ -32,44 +28,32 @@ export const getLastFMInsights = async (): Promise<void> => {
 			})
 			.then((r: any) => r.topalbums.album.slice(0, 20));
 
-		writeFileSync(
-			file,
-			JSON.stringify(
-				{
-					error: false,
-					updated: new Date(),
-					topAlbums: topAlbums.map((item: any) => ({
-						name: item.name,
-						images: item.image,
-						artist: item.artist.name
-					})),
-					weeklyAlbumChart: weeklyAlbumChart.map((item: any) => ({
-						name: item.name,
-						images: item.apiDetails.album.image,
-						artist: item.artist['#text']
-					}))
-				},
-				null,
-				2
-			)
+		await saveInsights(
+			{
+				error: false,
+				updated: new Date().getTime(),
+				topAlbums: topAlbums.map((item: any) => ({
+					name: item.name,
+					images: item.image,
+					artist: item.artist.name
+				})),
+				weeklyAlbumChart: weeklyAlbumChart.map((item: any) => ({
+					name: item.name,
+					images: item.apiDetails.album.image,
+					artist: item.artist['#text']
+				}))
+			},
+			'LastFM'
 		);
-
-		console.log(`Successfully wrote insights data from Last.FM in ${file}`);
 	} catch (e) {
-		writeFileSync(
-			file,
-			JSON.stringify(
-				{
-					error: true,
-					updated: new Date(),
-					topAlbums: [],
-					weeklyAlbumChart: []
-				},
-				null,
-				2
-			)
+		await saveInsights(
+			{
+				error: true,
+				updated: new Date().getTime(),
+				topAlbums: [],
+				weeklyAlbumChart: []
+			},
+			'LastFM'
 		);
-
-		console.log('Error getting data from Last.FM.', e);
 	}
 };

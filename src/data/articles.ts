@@ -1,9 +1,9 @@
-export interface Article {
+export type Article = {
 	readonly url: string;
 	readonly title: string;
 	readonly image: string;
 	readonly external: boolean;
-}
+};
 
 export const articles: Article[] = [
 	{
