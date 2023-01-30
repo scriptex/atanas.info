@@ -65,6 +65,7 @@
 		"@vercel/analytics": "0.1.8",
 		"animateme": "2.4.2",
 		"async-array-prototype": "1.1.1",
+		"attr-i18n": "1.0.0",
 		"babylonjs-gltf2interface": "5.44.0",
 		"d3": "7.8.2",
 		"date-fns": "2.29.3",
@@ -113,6 +114,8 @@
 		"use-interval": "1.4.0"
 	},
 	"devDependencies": {
+		"@babel/core": "7.20.12",
+		"@next/env": "13.1.6",
 		"@svgr/webpack": "6.5.1",
 		"@testing-library/jest-dom": "5.16.5",
 		"@testing-library/react": "13.4.0",
@@ -190,6 +193,7 @@
 		"type-coverage": "2.24.1",
 		"typescript": "4.9.4",
 		"universal-github-client": "1.0.3",
+		"webpack": "5.75.0",
 		"yarn-deduplicate": "6.0.1"
 	},
 	"resolutions": {
