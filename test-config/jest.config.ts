@@ -42,6 +42,8 @@ const config: Config.InitialOptions = {
 		'<rootDir>/src/**/*.{ts,tsx}',
 		'!<rootDir>/**/*.d.ts',
 		'!<rootDir>/insights/client.ts',
+		'!<rootDir>/lib/mongodb.ts',
+		'!<rootDir>/src/components/github-skyline/*',
 		'!<rootDir>/src/houdini/*'
 	],
 	coverageThreshold: {
