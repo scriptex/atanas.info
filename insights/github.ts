@@ -1,7 +1,7 @@
-import { writeFileSync } from 'node:fs';
-
+import { log } from '@scripts/shared';
 import { github } from './client';
-import { getCalendar, asyncForEach, saveInsights, getContributions } from './utils';
+import { GithubInsights } from '@scripts/types';
+import { asyncForEach, saveInsights, getContributions } from './utils';
 
 export const getGithubRepositories = async (): Promise<any[]> => {
 	const reposToSkip = ['three11/code-of-conduct'];
@@ -13,24 +13,21 @@ export const getGithubRepositories = async (): Promise<any[]> => {
 		.filter(repo => !['magin', 'VarnaLab', 'rashkopetrov', 'Kinetik-automotive-ltd'].includes(repo.owner.login));
 };
 
-export const getGithubInsights = async (): Promise<void> => {
-	console.log('atanas.info: Getting insights data from Github...');
+export const getGithubInsights = async (): Promise<GithubInsights> => {
+	log('atanas.info: Getting insights data from Github...');
 
 	try {
-		writeFileSync('public/github-calendar.svg', (await getCalendar()) || '');
-
 		const user = await github.get({ path: '/users/scriptex' });
-
 		const calendar = await getContributions();
 		const repositories: any[] = [];
 		const repos = await getGithubRepositories();
 
 		await asyncForEach(repos, async ({ full_name }: { full_name: string }): Promise<void> => {
-			console.log('-----');
-			console.log(`atanas.info: Getting insights data for ${full_name}...`);
+			log('-----');
+			log(`atanas.info: Getting insights data for ${full_name}...`);
 			const repo = await github.get({ path: `/repos/${full_name}` });
 
-			console.log(`atanas.info: Getting contributions data for ${full_name}...`);
+			log(`atanas.info: Getting contributions data for ${full_name}...`);
 			const contributions = await github.get({ path: `/repos/${full_name}/contributors` });
 
 			repositories.push({
@@ -63,26 +60,28 @@ export const getGithubInsights = async (): Promise<void> => {
 			updatedAt: user.updated_at
 		};
 
-		await saveInsights(
-			{
-				error: false,
-				general,
-				calendar,
-				repositories,
-				updated: new Date().getTime()
-			},
-			'Github'
-		);
+		const result = {
+			error: false,
+			general,
+			calendar,
+			repositories,
+			updated: new Date().getTime()
+		};
+
+		await saveInsights(result, 'Github');
+
+		return result;
 	} catch (e) {
-		await saveInsights(
-			{
-				error: true,
-				general: null,
-				calendar: null,
-				repositories: null,
-				updated: new Date().getTime()
-			},
-			'Github'
-		);
+		const result = {
+			error: true,
+			general: null,
+			calendar: null,
+			repositories: null,
+			updated: new Date().getTime()
+		};
+
+		await saveInsights(result, 'Github');
+
+		return result;
 	}
 };

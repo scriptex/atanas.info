@@ -39,7 +39,8 @@ const config: Config.InitialOptions = {
 		'<rootDir>/lib/**/*.{ts,tsx}',
 		'<rootDir>/npm/**/*.{ts,tsx}',
 		'<rootDir>/screenshots/**/*.{ts,tsx}',
-		'<rootDir>/src/**/*.{ts,tsx}'
+		'<rootDir>/src/**/*.{ts,tsx}',
+		'!<rootDir>/insights/client.ts'
 	],
 	coverageThreshold: {
 		global: {

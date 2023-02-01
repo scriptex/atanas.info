@@ -1,19 +1,25 @@
 #!/usr/bin/env ts-node-script
 
+import { log } from '@scripts/shared';
 import { getGithubInsights } from './github';
 import { getGitlabInsights } from './gitlab';
 import { getLastFMInsights } from './last-fm';
 
-(async (): Promise<void> => {
+export const run = async () => {
 	await getGithubInsights();
 
-	console.log('-----');
+	log('-----');
 
 	await getGitlabInsights();
 
-	console.log('-----');
+	log('-----');
 
 	await getLastFMInsights();
+};
 
-	process.exit();
-})();
+if (!process.env.JEST_WORKER_ID) {
+	(async () => {
+		await run();
+		process.exit();
+	})();
+}

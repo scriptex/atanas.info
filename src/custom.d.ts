@@ -59,7 +59,6 @@ declare namespace CSS {
 }
 
 interface Window {
-	msCrypto: any;
 	dataLayer: {
 		push: (...args: any[]) => void;
 	};

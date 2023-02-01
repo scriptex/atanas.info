@@ -1,6 +1,7 @@
 import { load } from 'cheerio';
-import * as puppeteer from 'puppeteer';
 import clientPromise, { queryGithub, queryGitlab, queryLastFM, queryNPM } from '@lib/mongodb';
+
+import { log } from '@scripts/shared';
 
 export type Project = {
 	readonly url: string;
@@ -8,10 +9,8 @@ export type Project = {
 };
 
 export type Contribution = {
-	[x: string]: {
-		count: number | null;
-		color: string;
-	};
+	count: number | null;
+	color: string;
 };
 
 export type InsightsType = 'Github' | 'Gitlab' | 'NPM' | 'LastFM';
@@ -54,33 +53,6 @@ export const getContributions = async (url = 'https://github.com/scriptex'): Pro
 				}, {});
 		});
 
-export const getCalendar = async (
-	url = 'https://github.com/scriptex',
-	selector = '.js-calendar-graph'
-): Promise<string | null> =>
-	await fetch(url)
-		.then(res => res.text())
-		.then((markup: string) => load(markup)(selector).html());
-
-export const getCalendarWithBrowser = async (url: string, selector: string, timeout: number): Promise<string> => {
-	const browser = await puppeteer.launch({
-		headless: true,
-		args: ['--no-sandbox']
-	});
-
-	const page = await browser.newPage();
-
-	await page.setViewport({
-		width: 1440,
-		height: 1000
-	});
-
-	await page.goto(url, { waitUntil: 'networkidle2' });
-	await page.waitForTimeout(timeout);
-
-	return await page.$eval(selector, (element: Element) => element.innerHTML);
-};
-
 export const getQuery = (type: InsightsType) => {
 	switch (type) {
 		case 'Github':
@@ -105,5 +77,5 @@ export const saveInsights = async <T>(data: T, type: InsightsType): Promise<void
 
 	await collection.updateOne(query, { $set: { ...query, data } }, options).catch(e => e);
 
-	console.log(`atanas.info: Successfully saved insights data from ${type}.`);
+	log(`atanas.info: Successfully saved insights data from ${type}.`);
 };
