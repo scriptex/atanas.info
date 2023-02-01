@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Resume component Should render the Resume component 1`] = `
+exports[` component Should render the  component 1`] = `
 <DocumentFragment>
   <svg />
   <header
@@ -520,646 +520,491 @@ exports[`Resume component Should render the Resume component 1`] = `
     class="o-main "
   >
     <section
-      class="c-section c-section--resume"
-      id="resume"
+      class="c-section c-section--social"
+      id="social"
     >
-      <div
-        class="o-shell"
+      <header
+        class="c-section__header"
       >
-        <header
-          class="c-section__header"
+        <div
+          class="o-shell"
         >
           <div
             class="c-section__animation"
             style="width: 150px; height: 150px; margin-left: auto; margin-right: auto;"
           />
           <h2>
-            Resume
+            Social
           </h2>
-        </header>
-        <div
-          class="lines"
-        >
-          <div
-            class="line line--vertical"
-          />
-          <div
-            class="line line--vertical"
-          />
-          <div
-            class="line line--vertical"
-          />
         </div>
+      </header>
+      <div
+        class="lines"
+      >
         <div
-          class="lines"
+          class="line line--vertical"
+        />
+        <div
+          class="line line--vertical"
+        />
+        <div
+          class="line line--vertical"
+        />
+      </div>
+      <div
+        class="lines"
+      >
+        <div
+          class="line line--horizontal"
+        />
+        <div
+          class="line line--horizontal"
+        />
+        <div
+          class="line line--horizontal"
+        />
+      </div>
+      <div
+        class="c-section__entry c-section__entry--primary"
+      >
+        <div
+          class="o-shell"
         >
           <div
-            class="line line--horizontal"
-          />
-          <div
-            class="line line--horizontal"
-          />
-          <div
-            class="line line--horizontal"
-          />
-        </div>
-        <div
-          class="c-resume"
-        >
-          <div
-            class="c-resume__title"
-          >
-            <img
-              alt="Atanas Atanasov's profile picture"
-              data-nimg="1"
-              decoding="async"
-              height="240"
-              loading="lazy"
-              src="/_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=640&q=75"
-              srcset="/_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=256&q=75 1x, /_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=640&q=75 2x"
-              style="color: transparent;"
-              width="240"
-            />
-            <h1>
-              Atanas Atanasov
-            </h1>
-            <h3>
-              Frontend Team Lead
-            </h3>
-            <ul
-              class="c-resume__list"
-            >
-              <li>
-                <i
-                  class="icon-mail"
-                />
-                hi@atanas.info
-              </li>
-              <li>
-                <i
-                  class="icon-link"
-                />
-                https://atanas.info
-              </li>
-              <li>
-                <i
-                  class="icon-link"
-                />
-                https://linkedin.com/in/scriptex
-              </li>
-              <li>
-                <i
-                  class="icon-link"
-                />
-                https://github.com/scriptex
-              </li>
-              <li>
-                <i
-                  class="icon-location"
-                />
-                Varna, Bulgaria
-              </li>
-            </ul>
-          </div>
-          <div
-            class="c-resume__content"
+            class="o-grid"
           >
             <div
-              class="c-resume__block"
+              class="o-grid__item xs-12 sm-6"
             >
-              <h2>
-                Summary
-              </h2>
-              <p>
-                A senior front-end engineer with more than 10 years of professional experience, striving to provide well tested and maintainable code, pixel-perfect user interfaces and the best user experience utilizing the latest and most recent technologies.
-              </p>
-            </div>
-            <div
-              class="c-resume__block"
-            >
-              <h2>
-                Education
-              </h2>
-              <p>
-                <strong>
-                  Master in Marketing
-                </strong>
-              </p>
-              <ul
-                class="c-resume__list"
+              <h3>
+                LinkedIn Profile
+              </h3>
+              <div
+                class="linkedin-badge bubbles"
               >
-                <li>
-                  <i
-                    class="icon-calendar"
+                <div
+                  class="linkedin-badge__content"
+                >
+                  <img
+                    alt="Atanas Atanasov smiling dressed in a green t-shirt"
+                    data-nimg="1"
+                    decoding="async"
+                    height="240"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=640&q=75"
+                    srcset="/_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=256&q=75 1x, /_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=640&q=75 2x"
+                    style="color: transparent;"
+                    width="240"
                   />
-                  2003 - 2009
-                </li>
-                <li>
-                  <i
-                    class="icon-location"
-                  />
-                  University of Economics Varna
-                </li>
-              </ul>
+                  <h4>
+                    <a
+                      href="https://linkedin.com/in/scriptex"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      👨💻 Atanas Atanasov
+                      <svg
+                        class="c-svg-external-link"
+                      >
+                        <use
+                          xlink:href="#svg-external-link"
+                        />
+                      </svg>
+                    </a>
+                  </h4>
+                  <h5>
+                    Lead Front-end Engineer / E.ON Home Project @E.ON
+                  </h5>
+                  <h5>
+                    <a
+                      href="https://www.linkedin.com/company/e-on"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      E.ON
+                      <svg
+                        class="c-svg-external-link"
+                      >
+                        <use
+                          xlink:href="#svg-external-link"
+                        />
+                      </svg>
+                    </a>
+                     |
+                    <a
+                      href="https://www.linkedin.com/school/university-of-economics-varna"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      University of Economics - Varna
+                      <svg
+                        class="c-svg-external-link"
+                      >
+                        <use
+                          xlink:href="#svg-external-link"
+                        />
+                      </svg>
+                    </a>
+                  </h5>
+                  <a
+                    class="c-btn c-btn--small"
+                    href="https://linkedin.com/in/scriptex"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    View profile
+                    <svg
+                      class="c-svg-external-link"
+                    >
+                      <use
+                        xlink:href="#svg-external-link"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
             <div
-              class="c-resume__block"
+              class="o-grid__item xs-12 sm-6"
             >
-              <h2>
-                Experience
-              </h2>
-              <div
-                class="c-resume__experience"
-              >
-                <h3>
-                  Frontend Team Lead
-                </h3>
-                <h4>
-                  E.ON, E.ON Home project, 
-                  <em>
-                    contract
-                  </em>
-                </h4>
-                <ul
-                  class="c-resume__list"
-                >
-                  <li>
-                    <i
-                      class="icon-calendar"
-                    />
-                    Jul 2018 - Present
-                  </li>
-                  <li>
-                    <i
-                      class="icon-location"
-                    />
-                    Remote
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    Implementing and maintaining the frontend of E.ON Home. Technologies used: React, React Native, Redux, Typescript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.
-                  </li>
-                  <li>
-                    Designing, implementing and maintaining the frontend of E.ON H.E.M.S. Technologies used: Angular, Redux, Typescript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.
-                  </li>
-                  <li>
-                    Leading a team of four front-end developers
-                  </li>
-                </ul>
-              </div>
-              <div
-                class="c-resume__experience"
-              >
-                <h3>
-                  Senior Frontend Developer
-                </h3>
-                <h4>
-                  3-11, 
-                  <em>
-                    full-time
-                  </em>
-                </h4>
-                <ul
-                  class="c-resume__list"
-                >
-                  <li>
-                    <i
-                      class="icon-calendar"
-                    />
-                    Jan 2018 - Present
-                  </li>
-                  <li>
-                    <i
-                      class="icon-location"
-                    />
-                    Varna, Bulgaria
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    Leading a team of several senior front-end and full-stack developers in delivering high-end enterprise applications such as Emailio, XPND, Mbrella and others. Technologies used: React, Redux, Typescript, SCSS, WordPress, NodeJS and many more.
-                  </li>
-                  <li>
-                    Implementing and maintaining the website for the first bulgarian electric sports car - Kinetik 07.
-                  </li>
-                  <li>
-                    Implementing the dashboard of the first bulgarian electric kart - Kinetik Model 27
-                  </li>
-                  <li>
-                    Implementing the dashboard of the hybrid Volvo P1800
-                  </li>
-                </ul>
-              </div>
-              <div
-                class="c-resume__experience"
-              >
-                <h3>
-                  Senior UI Developer
-                </h3>
-                <h4>
-                  Toptal, 
-                  <em>
-                    freelance
-                  </em>
-                </h4>
-                <ul
-                  class="c-resume__list"
-                >
-                  <li>
-                    <i
-                      class="icon-calendar"
-                    />
-                    Jun 2018 - Present
-                  </li>
-                  <li>
-                    <i
-                      class="icon-location"
-                    />
-                    Remote
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    Working on closed-source client applications for companies from around the globe. Technologies used: Vue, React, Redux, Typescript, SCSS, NodeJS,
-                  </li>
-                  <li>
-                    Part of the top 3% in the world.
-                  </li>
-                </ul>
-              </div>
-              <div
-                class="c-resume__experience"
-              >
-                <h3>
-                  Senior Frontend Developer
-                </h3>
-                <h4>
-                  2create, 
-                  <em>
-                    full-time
-                  </em>
-                </h4>
-                <ul
-                  class="c-resume__list"
-                >
-                  <li>
-                    <i
-                      class="icon-calendar"
-                    />
-                    May 2012 - Jan 2018
-                  </li>
-                  <li>
-                    <i
-                      class="icon-location"
-                    />
-                    Varna, Bulgaria
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    Worked for brands such as htmlBurger and htmlBoutique.
-                  </li>
-                  <li>
-                    Designed, implemented, maintained and taught the internal coding standards used in tens of thousands of projects.
-                  </li>
-                  <li>
-                    Designed, implemented and maintained the internal frontend build system used in tens of thousands of projects.
-                  </li>
-                  <li>
-                    Mentored and led several front-end developer teams throughout the years.
-                  </li>
-                  <li>
-                    Published several articles.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div
-            class="c-resume__aside"
-          >
-            <div
-              class="c-resume__block"
-            >
-              <h2>
-                INDUSTRY SKILLS
-              </h2>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  Javascript
-                </li>
-                <li>
-                  Typescript
-                </li>
-                <li>
-                  CSS
-                </li>
-                <li>
-                  SCSS
-                </li>
-                <li>
-                  HTML
-                </li>
-                <li>
-                  SVG
-                </li>
-                <li>
-                  MJML
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  React
-                </li>
-                <li>
-                  Redux
-                </li>
-                <li>
-                  Angular
-                </li>
-                <li>
-                  Vue
-                </li>
-                <li>
-                  NodeJS
-                </li>
-                <li>
-                  D3
-                </li>
-                <li>
-                  Chart JS
-                </li>
-                <li>
-                  Highcharts
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  NPM / Yarn
-                </li>
-                <li>
-                  Webpack
-                </li>
-                <li>
-                  Rollup
-                </li>
-                <li>
-                  Parcel
-                </li>
-                <li>
-                  Vite
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  Jest
-                </li>
-                <li>
-                  Cypress
-                </li>
-                <li>
-                  React Testing Library
-                </li>
-                <li>
-                  Mocha
-                </li>
-                <li>
-                  Tape
-                </li>
-                <li>
-                  Chai
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  UI/UX
-                </li>
-                <li>
-                  SEO
-                </li>
-                <li>
-                  Accessibility (a11y)
-                </li>
-                <li>
-                  Internationalization (i18n)
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  Azure DevOps
-                </li>
-                <li>
-                  Github Actions
-                </li>
-                <li>
-                  Gitlab CI
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  Scrum
-                </li>
-                <li>
-                  Agile
-                </li>
-                <li>
-                  Git
-                </li>
-              </ul>
+              <h3>
+                Codersrank Profile
+              </h3>
+              <codersrank-widget
+                branding="false"
+                username="scriptex"
+              />
             </div>
             <div
-              class="c-resume__block"
+              class="o-grid__item xs-12 sm-6"
             >
-              <h2>
-                Strengths
-              </h2>
-              <ul
-                class="c-resume__strengths"
-              >
-                <li>
-                  <h4>
-                    <i
-                      class="icon-share"
-                    />
-                    Collaborative
-                  </h4>
-                  <p>
-                    I am always keen to share knowledge, help, discuss, teach and learn from others. I am able to collaborate with cross-functional teams to create a high-quality end product.
-                  </p>
-                </li>
-                <li>
-                  <h4>
-                    <i
-                      class="icon-star"
-                    />
-                    Result-oriented
-                  </h4>
-                  <p>
-                    Many confuse progress with moving in the right direction. I always make sure to check if the team is on the right path.
-                  </p>
-                </li>
-                <li>
-                  <h4>
-                    <i
-                      class="icon-brush"
-                    />
-                    Detail-oriented
-                  </h4>
-                  <p>
-                    Continuously focused on how to improve my work and do it the best way I can.
-                  </p>
-                </li>
-                <li>
-                  <h4>
-                    <i
-                      class="icon-clock"
-                    />
-                    Project management and prioritization
-                  </h4>
-                  <p>
-                    I am always making sure that project deadlines are met and the required results are delivered on time.
-                  </p>
-                </li>
-              </ul>
+              <h3>
+                Github Profile
+              </h3>
+              <iframe
+                class="github-frame"
+                frameborder="0"
+                height="400"
+                loading="lazy"
+                src="https://github.com/sponsors/scriptex/card"
+                title="Sponsor scriptex"
+                width="600"
+              />
             </div>
-          </div>
-        </div>
-        <div
-          class="c-section__actions"
-        >
-          <button
-            class="c-btn"
-            type="button"
-          >
-            Get in touch
-          </button>
-          <ul
-            class="c-section__actions-list"
-          >
-            <li>
-              <button
-                class="c-btn c-section__actions-close"
-                type="button"
-              >
-                Close
-              </button>
-            </li>
-            <li>
-              <button
-                class="c-btn"
-                type="button"
-              >
-                <svg
-                  class="c-section__actions-icon"
-                >
-                  <use
-                    xlink:href="#svg-email"
-                  />
-                </svg>
-                <span>
-                  Contact me
-                </span>
-                <strong>
-                  directly
-                </strong>
-              </button>
-            </li>
-            <li>
+            <div
+              class="o-grid__item xs-12 sm-6"
+            >
+              <h3>
+                Twitter Profile
+              </h3>
               <a
-                class="c-btn"
-                href="https://app.usebraintrust.com/talent/782/"
-                rel="noopener noreferrer"
-                target="_blank"
+                class="twitter-timeline"
+                data-dnt="true"
+                data-theme="dark"
+                href="//twitter.com/scriptexbg"
               >
-                <svg
-                  class="c-section__actions-icon"
-                >
-                  <use
-                    xlink:href="#svg-braintrust"
-                  />
-                </svg>
-                <span>
-                  Hire me on
-                </span>
-                <strong>
-                  Braintrust
-                </strong>
-                <svg
-                  class="c-svg-external-link"
-                >
-                  <use
-                    xlink:href="#svg-external-link"
-                  />
-                </svg>
+                Tweets by scriptexbg
               </a>
-            </li>
-            <li>
-              <a
-                class="c-btn"
-                href="https://www.toptal.com/resume/atanas-atanasov"
-                rel="noopener noreferrer"
-                target="_blank"
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6"
+            >
+              <h3>
+                YouTube Channel
+              </h3>
+              <iframe
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                class="youtube-frame"
+                height="400"
+                loading="lazy"
+                src="https://www.youtube.com/embed/?list=PLgLu3XOevO8_G7n5n9Mmoe-xPwuwpGDYr"
+                title="YouTube video player"
+              />
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6"
+            >
+              <h3>
+                Spotify playlist
+              </h3>
+              <iframe
+                allow="encrypted-media"
+                class="spotify-frame"
+                frameborder="0"
+                height="400"
+                loading="lazy"
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1EpzZomgLqaOnp?theme=0"
+                width="100%"
+              />
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6"
+            >
+              <h3>
+                Stackoverflow flair
+              </h3>
+              <div
+                class="stackoverflow-frame"
               >
-                <svg
-                  class="c-section__actions-icon"
+                <a
+                  href="https://stackoverflow.com/users/4140082/atanas-atanasov"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
-                  <use
-                    xlink:href="#svg-toptal"
+                  <img
+                    alt="profile for Atanas Atanasov at Stack Overflow, Q&A for professional and enthusiast programmers"
+                    height="58"
+                    loading="lazy"
+                    src="https://stackoverflow.com/users/flair/4140082.png"
+                    title="profile for Atanas Atanasov at Stack Overflow, Q&A for professional and enthusiast programmers"
+                    width="208"
                   />
-                </svg>
-                <span>
-                  Hire me on
-                </span>
-                <strong>
-                  Toptal
-                </strong>
-                <svg
-                  class="c-svg-external-link"
-                >
-                  <use
-                    xlink:href="#svg-external-link"
-                  />
-                </svg>
-              </a>
-            </li>
-          </ul>
-          <br
-            class="visible-xs-block"
-          />
-          <button
-            class="c-btn c-btn--print"
-          >
-            <i
-              class="icon-print"
-            />
-             Print
-          </button>
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <header
+        class="c-section__header"
+      >
+        <h2>
           <a
-            class="c-btn"
-            download=""
-            href="/resume.pdf"
+            href="https://www.last.fm/user/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            <i
-              class="icon-download"
-            />
-             Download
+            Last.FM
+            <svg
+              class="c-svg-external-link"
+            >
+              <use
+                xlink:href="#svg-external-link"
+              />
+            </svg>
           </a>
+           statistics
+          <small>
+            Updated at Mock date
+          </small>
+        </h2>
+      </header>
+      <div
+        class="c-section__entry"
+      >
+        <div
+          class="o-shell"
+        >
+          <div
+            class="o-grid"
+          >
+            <div
+              class="o-grid__item xs-12"
+            >
+              <h3>
+                Top albums for last week:
+              </h3>
+              <div
+                class="carousel"
+              >
+                <div
+                  class="carousel__container"
+                  style="transform: translateZ(857390066042756900px) rotateY(0deg);"
+                >
+                  <div
+                    class="carousel__slide"
+                    style="opacity: 1; transform: rotateY(0deg) translateZ(-857390066042756900px);"
+                  >
+                    <img
+                      alt="chillhop beat tapes: El Train"
+                      src="https://lastfm.freetls.fastly.net/i/u/174s/3924084c27953af323253adffa658150.jpg"
+                    />
+                    <div
+                      class="carousel__slide-overlay"
+                    >
+                      <strong>
+                        chillhop beat tapes: El Train
+                      </strong>
+                      <span>
+                        El Train
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="carousel__controls"
+              >
+                <button
+                  class="carousel__control carousel__control--prev"
+                >
+                  Previous
+                </button>
+                <button
+                  class="carousel__control carousel__control--next"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+            <div
+              class="o-grid__item xs-12"
+            >
+              <h3>
+                Top albums for last month:
+              </h3>
+              <div
+                class="carousel"
+              >
+                <div
+                  class="carousel__container"
+                  style="transform: translateZ(857390066042756900px) rotateY(0deg);"
+                >
+                  <div
+                    class="carousel__slide"
+                    style="opacity: 1; transform: rotateY(0deg) translateZ(-857390066042756900px);"
+                  >
+                    <img
+                      alt="Chillhop Essentials Winter 2022"
+                      src="https://lastfm.freetls.fastly.net/i/u/174s/a81e499c7e83f8f5b9350b5d597fbafe.jpg"
+                    />
+                    <div
+                      class="carousel__slide-overlay"
+                    >
+                      <strong>
+                        Chillhop Essentials Winter 2022
+                      </strong>
+                      <span>
+                        ChillHop Music
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="carousel__controls"
+              >
+                <button
+                  class="carousel__control carousel__control--prev"
+                >
+                  Previous
+                </button>
+                <button
+                  class="carousel__control carousel__control--next"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div
+        class="c-section__actions"
+      >
+        <button
+          class="c-btn"
+          type="button"
+        >
+          Get in touch
+        </button>
+        <ul
+          class="c-section__actions-list"
+        >
+          <li>
+            <button
+              class="c-btn c-section__actions-close"
+              type="button"
+            >
+              Close
+            </button>
+          </li>
+          <li>
+            <button
+              class="c-btn"
+              type="button"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  xlink:href="#svg-email"
+                />
+              </svg>
+              <span>
+                Contact me
+              </span>
+              <strong>
+                directly
+              </strong>
+            </button>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://app.usebraintrust.com/talent/782/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  xlink:href="#svg-braintrust"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Braintrust
+              </strong>
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://www.toptal.com/resume/atanas-atanasov"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  xlink:href="#svg-toptal"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Toptal
+              </strong>
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -1806,7 +1651,9 @@ exports[`Resume component Should render the Resume component 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Resume component Should render the Resume component 2`] = `
+exports[` component Should unmount the  component 1`] = `<DocumentFragment />`;
+
+exports[`Tests the Social page when offline 1`] = `
 <DocumentFragment>
   <svg />
   <header
@@ -2326,646 +2173,336 @@ exports[`Resume component Should render the Resume component 2`] = `
     class="o-main "
   >
     <section
-      class="c-section c-section--resume"
-      id="resume"
+      class="c-section c-section--social"
+      id="social"
     >
-      <div
-        class="o-shell"
+      <header
+        class="c-section__header"
       >
-        <header
-          class="c-section__header"
+        <div
+          class="o-shell"
         >
           <div
             class="c-section__animation"
             style="width: 150px; height: 150px; margin-left: auto; margin-right: auto;"
           />
           <h2>
-            Resume
+            Social
           </h2>
-        </header>
-        <div
-          class="lines"
-        >
-          <div
-            class="line line--vertical"
-          />
-          <div
-            class="line line--vertical"
-          />
-          <div
-            class="line line--vertical"
-          />
         </div>
+      </header>
+      <div
+        class="lines"
+      >
         <div
-          class="lines"
+          class="line line--vertical"
+        />
+        <div
+          class="line line--vertical"
+        />
+        <div
+          class="line line--vertical"
+        />
+      </div>
+      <div
+        class="lines"
+      >
+        <div
+          class="line line--horizontal"
+        />
+        <div
+          class="line line--horizontal"
+        />
+        <div
+          class="line line--horizontal"
+        />
+      </div>
+      <div
+        class="c-section__entry c-section__entry--primary"
+      >
+        <div
+          class="o-shell"
         >
           <div
-            class="line line--horizontal"
-          />
-          <div
-            class="line line--horizontal"
-          />
-          <div
-            class="line line--horizontal"
-          />
-        </div>
-        <div
-          class="c-resume"
-        >
-          <div
-            class="c-resume__title"
-          >
-            <img
-              alt="Atanas Atanasov's profile picture"
-              data-nimg="1"
-              decoding="async"
-              height="240"
-              loading="lazy"
-              src="/_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=640&q=75"
-              srcset="/_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=256&q=75 1x, /_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=640&q=75 2x"
-              style="color: transparent;"
-              width="240"
-            />
-            <h1>
-              Atanas Atanasov
-            </h1>
-            <h3>
-              Frontend Team Lead
-            </h3>
-            <ul
-              class="c-resume__list"
-            >
-              <li>
-                <i
-                  class="icon-mail"
-                />
-                hi@atanas.info
-              </li>
-              <li>
-                <i
-                  class="icon-link"
-                />
-                https://atanas.info
-              </li>
-              <li>
-                <i
-                  class="icon-link"
-                />
-                https://linkedin.com/in/scriptex
-              </li>
-              <li>
-                <i
-                  class="icon-link"
-                />
-                https://github.com/scriptex
-              </li>
-              <li>
-                <i
-                  class="icon-location"
-                />
-                Varna, Bulgaria
-              </li>
-            </ul>
-          </div>
-          <div
-            class="c-resume__content"
+            class="o-grid"
           >
             <div
-              class="c-resume__block"
+              class="o-grid__item xs-12 sm-6"
             >
-              <h2>
-                Summary
-              </h2>
-              <p>
-                A senior front-end engineer with more than 10 years of professional experience, striving to provide well tested and maintainable code, pixel-perfect user interfaces and the best user experience utilizing the latest and most recent technologies.
-              </p>
-            </div>
-            <div
-              class="c-resume__block"
-            >
-              <h2>
-                Education
-              </h2>
-              <p>
-                <strong>
-                  Master in Marketing
-                </strong>
-              </p>
-              <ul
-                class="c-resume__list"
+              <h3>
+                LinkedIn Profile
+              </h3>
+              <div
+                class="linkedin-badge bubbles"
               >
-                <li>
-                  <i
-                    class="icon-calendar"
+                <div
+                  class="linkedin-badge__content"
+                >
+                  <img
+                    alt="Atanas Atanasov smiling dressed in a green t-shirt"
+                    data-nimg="1"
+                    decoding="async"
+                    height="240"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=640&q=75"
+                    srcset="/_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=256&q=75 1x, /_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=640&q=75 2x"
+                    style="color: transparent;"
+                    width="240"
                   />
-                  2003 - 2009
-                </li>
-                <li>
-                  <i
-                    class="icon-location"
-                  />
-                  University of Economics Varna
-                </li>
-              </ul>
-            </div>
-            <div
-              class="c-resume__block"
-            >
-              <h2>
-                Experience
-              </h2>
-              <div
-                class="c-resume__experience"
-              >
-                <h3>
-                  Frontend Team Lead
-                </h3>
-                <h4>
-                  E.ON, E.ON Home project, 
-                  <em>
-                    contract
-                  </em>
-                </h4>
-                <ul
-                  class="c-resume__list"
-                >
-                  <li>
-                    <i
-                      class="icon-calendar"
-                    />
-                    Jul 2018 - Present
-                  </li>
-                  <li>
-                    <i
-                      class="icon-location"
-                    />
-                    Remote
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    Implementing and maintaining the frontend of E.ON Home. Technologies used: React, React Native, Redux, Typescript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.
-                  </li>
-                  <li>
-                    Designing, implementing and maintaining the frontend of E.ON H.E.M.S. Technologies used: Angular, Redux, Typescript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.
-                  </li>
-                  <li>
-                    Leading a team of four front-end developers
-                  </li>
-                </ul>
-              </div>
-              <div
-                class="c-resume__experience"
-              >
-                <h3>
-                  Senior Frontend Developer
-                </h3>
-                <h4>
-                  3-11, 
-                  <em>
-                    full-time
-                  </em>
-                </h4>
-                <ul
-                  class="c-resume__list"
-                >
-                  <li>
-                    <i
-                      class="icon-calendar"
-                    />
-                    Jan 2018 - Present
-                  </li>
-                  <li>
-                    <i
-                      class="icon-location"
-                    />
-                    Varna, Bulgaria
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    Leading a team of several senior front-end and full-stack developers in delivering high-end enterprise applications such as Emailio, XPND, Mbrella and others. Technologies used: React, Redux, Typescript, SCSS, WordPress, NodeJS and many more.
-                  </li>
-                  <li>
-                    Implementing and maintaining the website for the first bulgarian electric sports car - Kinetik 07.
-                  </li>
-                  <li>
-                    Implementing the dashboard of the first bulgarian electric kart - Kinetik Model 27
-                  </li>
-                  <li>
-                    Implementing the dashboard of the hybrid Volvo P1800
-                  </li>
-                </ul>
-              </div>
-              <div
-                class="c-resume__experience"
-              >
-                <h3>
-                  Senior UI Developer
-                </h3>
-                <h4>
-                  Toptal, 
-                  <em>
-                    freelance
-                  </em>
-                </h4>
-                <ul
-                  class="c-resume__list"
-                >
-                  <li>
-                    <i
-                      class="icon-calendar"
-                    />
-                    Jun 2018 - Present
-                  </li>
-                  <li>
-                    <i
-                      class="icon-location"
-                    />
-                    Remote
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    Working on closed-source client applications for companies from around the globe. Technologies used: Vue, React, Redux, Typescript, SCSS, NodeJS,
-                  </li>
-                  <li>
-                    Part of the top 3% in the world.
-                  </li>
-                </ul>
-              </div>
-              <div
-                class="c-resume__experience"
-              >
-                <h3>
-                  Senior Frontend Developer
-                </h3>
-                <h4>
-                  2create, 
-                  <em>
-                    full-time
-                  </em>
-                </h4>
-                <ul
-                  class="c-resume__list"
-                >
-                  <li>
-                    <i
-                      class="icon-calendar"
-                    />
-                    May 2012 - Jan 2018
-                  </li>
-                  <li>
-                    <i
-                      class="icon-location"
-                    />
-                    Varna, Bulgaria
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    Worked for brands such as htmlBurger and htmlBoutique.
-                  </li>
-                  <li>
-                    Designed, implemented, maintained and taught the internal coding standards used in tens of thousands of projects.
-                  </li>
-                  <li>
-                    Designed, implemented and maintained the internal frontend build system used in tens of thousands of projects.
-                  </li>
-                  <li>
-                    Mentored and led several front-end developer teams throughout the years.
-                  </li>
-                  <li>
-                    Published several articles.
-                  </li>
-                </ul>
+                  <h4>
+                    <a
+                      href="https://linkedin.com/in/scriptex"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      👨💻 Atanas Atanasov
+                      <svg
+                        class="c-svg-external-link"
+                      >
+                        <use
+                          xlink:href="#svg-external-link"
+                        />
+                      </svg>
+                    </a>
+                  </h4>
+                  <h5>
+                    Lead Front-end Engineer / E.ON Home Project @E.ON
+                  </h5>
+                  <h5>
+                    <a
+                      href="https://www.linkedin.com/company/e-on"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      E.ON
+                      <svg
+                        class="c-svg-external-link"
+                      >
+                        <use
+                          xlink:href="#svg-external-link"
+                        />
+                      </svg>
+                    </a>
+                     |
+                    <a
+                      href="https://www.linkedin.com/school/university-of-economics-varna"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      University of Economics - Varna
+                      <svg
+                        class="c-svg-external-link"
+                      >
+                        <use
+                          xlink:href="#svg-external-link"
+                        />
+                      </svg>
+                    </a>
+                  </h5>
+                  <a
+                    class="c-btn c-btn--small"
+                    href="https://linkedin.com/in/scriptex"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    View profile
+                    <svg
+                      class="c-svg-external-link"
+                    >
+                      <use
+                        xlink:href="#svg-external-link"
+                      />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            class="c-resume__aside"
-          >
             <div
-              class="c-resume__block"
+              class="o-grid__item xs-12 sm-6"
             >
-              <h2>
-                INDUSTRY SKILLS
-              </h2>
-              <ul
-                class="c-resume__skills"
+              <h3>
+                Codersrank Profile
+              </h3>
+              <svg
+                class="svg-disconnected"
               >
-                <li>
-                  Javascript
-                </li>
-                <li>
-                  Typescript
-                </li>
-                <li>
-                  CSS
-                </li>
-                <li>
-                  SCSS
-                </li>
-                <li>
-                  HTML
-                </li>
-                <li>
-                  SVG
-                </li>
-                <li>
-                  MJML
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  React
-                </li>
-                <li>
-                  Redux
-                </li>
-                <li>
-                  Angular
-                </li>
-                <li>
-                  Vue
-                </li>
-                <li>
-                  NodeJS
-                </li>
-                <li>
-                  D3
-                </li>
-                <li>
-                  Chart JS
-                </li>
-                <li>
-                  Highcharts
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  NPM / Yarn
-                </li>
-                <li>
-                  Webpack
-                </li>
-                <li>
-                  Rollup
-                </li>
-                <li>
-                  Parcel
-                </li>
-                <li>
-                  Vite
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  Jest
-                </li>
-                <li>
-                  Cypress
-                </li>
-                <li>
-                  React Testing Library
-                </li>
-                <li>
-                  Mocha
-                </li>
-                <li>
-                  Tape
-                </li>
-                <li>
-                  Chai
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  UI/UX
-                </li>
-                <li>
-                  SEO
-                </li>
-                <li>
-                  Accessibility (a11y)
-                </li>
-                <li>
-                  Internationalization (i18n)
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  Azure DevOps
-                </li>
-                <li>
-                  Github Actions
-                </li>
-                <li>
-                  Gitlab CI
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  Scrum
-                </li>
-                <li>
-                  Agile
-                </li>
-                <li>
-                  Git
-                </li>
-              </ul>
+                <use
+                  xlink:href="#svg-disconnected "
+                />
+              </svg>
             </div>
             <div
-              class="c-resume__block"
+              class="o-grid__item xs-12 sm-6"
             >
-              <h2>
-                Strengths
-              </h2>
-              <ul
-                class="c-resume__strengths"
+              <h3>
+                Github Profile
+              </h3>
+              <svg
+                class="svg-disconnected"
               >
-                <li>
-                  <h4>
-                    <i
-                      class="icon-share"
-                    />
-                    Collaborative
-                  </h4>
-                  <p>
-                    I am always keen to share knowledge, help, discuss, teach and learn from others. I am able to collaborate with cross-functional teams to create a high-quality end product.
-                  </p>
-                </li>
-                <li>
-                  <h4>
-                    <i
-                      class="icon-star"
-                    />
-                    Result-oriented
-                  </h4>
-                  <p>
-                    Many confuse progress with moving in the right direction. I always make sure to check if the team is on the right path.
-                  </p>
-                </li>
-                <li>
-                  <h4>
-                    <i
-                      class="icon-brush"
-                    />
-                    Detail-oriented
-                  </h4>
-                  <p>
-                    Continuously focused on how to improve my work and do it the best way I can.
-                  </p>
-                </li>
-                <li>
-                  <h4>
-                    <i
-                      class="icon-clock"
-                    />
-                    Project management and prioritization
-                  </h4>
-                  <p>
-                    I am always making sure that project deadlines are met and the required results are delivered on time.
-                  </p>
-                </li>
-              </ul>
+                <use
+                  xlink:href="#svg-disconnected "
+                />
+              </svg>
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6"
+            >
+              <h3>
+                Twitter Profile
+              </h3>
+              <svg
+                class="svg-disconnected"
+              >
+                <use
+                  xlink:href="#svg-disconnected "
+                />
+              </svg>
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6"
+            >
+              <h3>
+                YouTube Channel
+              </h3>
+              <svg
+                class="svg-disconnected"
+              >
+                <use
+                  xlink:href="#svg-disconnected "
+                />
+              </svg>
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6"
+            >
+              <h3>
+                Spotify playlist
+              </h3>
+              <svg
+                class="svg-disconnected"
+              >
+                <use
+                  xlink:href="#svg-disconnected "
+                />
+              </svg>
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6"
+            >
+              <h3>
+                Stackoverflow flair
+              </h3>
+              <svg
+                class="svg-disconnected"
+              >
+                <use
+                  xlink:href="#svg-disconnected "
+                />
+              </svg>
             </div>
           </div>
         </div>
-        <div
-          class="c-section__actions"
+      </div>
+      <div
+        class="c-section__actions"
+      >
+        <button
+          class="c-btn"
+          type="button"
         >
-          <button
-            class="c-btn"
-            type="button"
-          >
-            Get in touch
-          </button>
-          <ul
-            class="c-section__actions-list"
-          >
-            <li>
-              <button
-                class="c-btn c-section__actions-close"
-                type="button"
+          Get in touch
+        </button>
+        <ul
+          class="c-section__actions-list"
+        >
+          <li>
+            <button
+              class="c-btn c-section__actions-close"
+              type="button"
+            >
+              Close
+            </button>
+          </li>
+          <li>
+            <button
+              class="c-btn"
+              type="button"
+            >
+              <svg
+                class="c-section__actions-icon"
               >
-                Close
-              </button>
-            </li>
-            <li>
-              <button
-                class="c-btn"
-                type="button"
+                <use
+                  xlink:href="#svg-email"
+                />
+              </svg>
+              <span>
+                Contact me
+              </span>
+              <strong>
+                directly
+              </strong>
+            </button>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://app.usebraintrust.com/talent/782/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
               >
-                <svg
-                  class="c-section__actions-icon"
-                >
-                  <use
-                    xlink:href="#svg-email"
-                  />
-                </svg>
-                <span>
-                  Contact me
-                </span>
-                <strong>
-                  directly
-                </strong>
-              </button>
-            </li>
-            <li>
-              <a
-                class="c-btn"
-                href="https://app.usebraintrust.com/talent/782/"
-                rel="noopener noreferrer"
-                target="_blank"
+                <use
+                  xlink:href="#svg-braintrust"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Braintrust
+              </strong>
+              <svg
+                class="c-svg-external-link"
               >
-                <svg
-                  class="c-section__actions-icon"
-                >
-                  <use
-                    xlink:href="#svg-braintrust"
-                  />
-                </svg>
-                <span>
-                  Hire me on
-                </span>
-                <strong>
-                  Braintrust
-                </strong>
-                <svg
-                  class="c-svg-external-link"
-                >
-                  <use
-                    xlink:href="#svg-external-link"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a
-                class="c-btn"
-                href="https://www.toptal.com/resume/atanas-atanasov"
-                rel="noopener noreferrer"
-                target="_blank"
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://www.toptal.com/resume/atanas-atanasov"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
               >
-                <svg
-                  class="c-section__actions-icon"
-                >
-                  <use
-                    xlink:href="#svg-toptal"
-                  />
-                </svg>
-                <span>
-                  Hire me on
-                </span>
-                <strong>
-                  Toptal
-                </strong>
-                <svg
-                  class="c-svg-external-link"
-                >
-                  <use
-                    xlink:href="#svg-external-link"
-                  />
-                </svg>
-              </a>
-            </li>
-          </ul>
-          <br
-            class="visible-xs-block"
-          />
-          <button
-            class="c-btn c-btn--print"
-          >
-            <i
-              class="icon-print"
-            />
-             Print
-          </button>
-          <a
-            class="c-btn"
-            download=""
-            href="/resume.pdf"
-          >
-            <i
-              class="icon-download"
-            />
-             Download
-          </a>
-        </div>
+                <use
+                  xlink:href="#svg-toptal"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Toptal
+              </strong>
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -3611,5 +3148,3 @@ exports[`Resume component Should render the Resume component 2`] = `
   </footer>
 </DocumentFragment>
 `;
-
-exports[`Resume component Should unmount the Resume component 1`] = `<DocumentFragment />`;

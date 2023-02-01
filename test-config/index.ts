@@ -17,6 +17,32 @@ window.HTMLMediaElement.prototype.pause = () => {
 	/* do nothing */
 };
 
+global.IntersectionObserver = class IntersectionObserver {
+	root = null;
+	rootMargin = '';
+	thresholds = [0];
+
+	constructor() {
+		return this;
+	}
+
+	disconnect() {
+		return null;
+	}
+
+	observe() {
+		return null;
+	}
+
+	takeRecords() {
+		return [];
+	}
+
+	unobserve() {
+		return null;
+	}
+};
+
 // prettier-ignore
 // @ts-ignore
 window.matchMedia = window.matchMedia || (() => ({

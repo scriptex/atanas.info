@@ -40,7 +40,9 @@ const config: Config.InitialOptions = {
 		'<rootDir>/npm/**/*.{ts,tsx}',
 		'<rootDir>/screenshots/**/*.{ts,tsx}',
 		'<rootDir>/src/**/*.{ts,tsx}',
-		'!<rootDir>/insights/client.ts'
+		'!<rootDir>/**/*.d.ts',
+		'!<rootDir>/insights/client.ts',
+		'!<rootDir>/src/houdini/*'
 	],
 	coverageThreshold: {
 		global: {
