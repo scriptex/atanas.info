@@ -8,6 +8,7 @@ const config: Config.InitialOptions = {
 		'\\.svg': '<rootDir>/test-config/svg.ts',
 		'\\.(css|scss)$': '<rootDir>/test-config/style-mock.ts',
 		'@lib(.*)': '<rootDir>/lib/$1',
+		'@npm': '<rootDir>/npm',
 		'@src(.*)': '<rootDir>/src/$1',
 		'@svg(.*)': '<rootDir>/src/svg/$1',
 		'@data(.*)': '<rootDir>/src/data/$1',
