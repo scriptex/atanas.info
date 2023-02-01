@@ -1,0 +1,782 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` component Should render the  component 1`] = `
+<DocumentFragment>
+  <div
+    class="c-section__sliders"
+  >
+    <div
+      class="c-section__slider test"
+    >
+      <div
+        class="c-loading"
+      >
+        <div
+          class="c-loader"
+        />
+      </div>
+      <a
+        href="https://kinetik-infotainment.netlify.app/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <h4>
+          Kinetik Infotainment
+        </h4>
+        <p>
+          Dashboard and infotainment system for the Kinetik Model 27 electric kart
+        </p>
+        <code>
+          Technologies used:
+          <br />
+          Typescript, SCSS, SVG, React, Redux, NodeJS, Express, WebSocket
+        </code>
+        <svg
+          class="c-svg-external-link"
+        >
+          <use
+            xlink:href="#svg-external-link"
+          />
+        </svg>
+      </a>
+      <div
+        class="slick-slider slick-initialized"
+        dir="ltr"
+      >
+        <button
+          class="slick-arrow slick-prev"
+          data-role="none"
+          style="display: block;"
+          type="button"
+        >
+           Previous
+        </button>
+        <div
+          class="slick-list"
+        >
+          <div
+            class="slick-track"
+            style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
+          >
+            <div
+              aria-hidden="true"
+              class="slick-slide slick-cloned"
+              data-index="-2"
+              style="width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 8"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-8.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide slick-cloned"
+              data-index="-1"
+              style="width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 9"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-9.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="false"
+              class="slick-slide slick-active slick-current"
+              data-index="0"
+              style="outline: none; width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 1"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-1.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="false"
+              class="slick-slide slick-active"
+              data-index="1"
+              style="outline: none; width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 2"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-2.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide"
+              data-index="2"
+              style="outline: none; width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 3"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-3.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide"
+              data-index="3"
+              style="outline: none; width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 4"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-4.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide"
+              data-index="4"
+              style="outline: none; width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 5"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-5.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide"
+              data-index="5"
+              style="outline: none; width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 6"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-6.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide"
+              data-index="6"
+              style="outline: none; width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 7"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-7.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide"
+              data-index="7"
+              style="outline: none; width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 8"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-8.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide"
+              data-index="8"
+              style="outline: none; width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 9"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-9.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide slick-cloned"
+              data-index="9"
+              style="width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 1"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-1.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide slick-cloned"
+              data-index="10"
+              style="width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 2"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-2.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide slick-cloned"
+              data-index="11"
+              style="width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 3"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-3.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide slick-cloned"
+              data-index="12"
+              style="width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 4"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-4.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide slick-cloned"
+              data-index="13"
+              style="width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 5"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-5.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide slick-cloned"
+              data-index="14"
+              style="width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 6"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-6.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide slick-cloned"
+              data-index="15"
+              style="width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 7"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-7.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide slick-cloned"
+              data-index="16"
+              style="width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 8"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-8.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide slick-cloned"
+              data-index="17"
+              style="width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Kinetik Infotainment screenshot 9"
+                    loading="lazy"
+                    src="/images/temp/kinetik-infotainment-9.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="slick-arrow slick-next"
+          data-role="none"
+          style="display: block;"
+          type="button"
+        >
+           Next
+        </button>
+      </div>
+    </div>
+    <div
+      class="c-section__slider test"
+    >
+      <div
+        class="c-loading"
+      >
+        <div
+          class="c-loader"
+        />
+      </div>
+      <a
+        href="https://volvo-dashboard.netlify.app/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <h4>
+          Volvo Dashboard
+        </h4>
+        <p>
+          Dashboard system for the Volvo P1800 custom hybrid automobile
+        </p>
+        <code>
+          Technologies used:
+          <br />
+          Typescript, SCSS, SVG, React, Redux, NodeJS, Express, WebSocket
+        </code>
+        <svg
+          class="c-svg-external-link"
+        >
+          <use
+            xlink:href="#svg-external-link"
+          />
+        </svg>
+      </a>
+      <div
+        class="slick-slider slick-initialized"
+        dir="ltr"
+      >
+        <button
+          class="slick-arrow slick-prev"
+          data-role="none"
+          style="display: block;"
+          type="button"
+        >
+           Previous
+        </button>
+        <div
+          class="slick-list"
+        >
+          <div
+            class="slick-track"
+            style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
+          >
+            <div
+              aria-hidden="true"
+              class="slick-slide slick-cloned"
+              data-index="-2"
+              style="width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Volvo Dashboard screenshot 4"
+                    loading="lazy"
+                    src="/images/temp/volvo-dashboard-4.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide slick-cloned"
+              data-index="-1"
+              style="width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Volvo Dashboard screenshot 5"
+                    loading="lazy"
+                    src="/images/temp/volvo-dashboard-5.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="false"
+              class="slick-slide slick-active slick-current"
+              data-index="0"
+              style="outline: none; width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Volvo Dashboard screenshot 1"
+                    loading="lazy"
+                    src="/images/temp/volvo-dashboard-1.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="false"
+              class="slick-slide slick-active"
+              data-index="1"
+              style="outline: none; width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Volvo Dashboard screenshot 2"
+                    loading="lazy"
+                    src="/images/temp/volvo-dashboard-2.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide"
+              data-index="2"
+              style="outline: none; width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Volvo Dashboard screenshot 3"
+                    loading="lazy"
+                    src="/images/temp/volvo-dashboard-3.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide"
+              data-index="3"
+              style="outline: none; width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Volvo Dashboard screenshot 4"
+                    loading="lazy"
+                    src="/images/temp/volvo-dashboard-4.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide"
+              data-index="4"
+              style="outline: none; width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Volvo Dashboard screenshot 5"
+                    loading="lazy"
+                    src="/images/temp/volvo-dashboard-5.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide slick-cloned"
+              data-index="5"
+              style="width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Volvo Dashboard screenshot 1"
+                    loading="lazy"
+                    src="/images/temp/volvo-dashboard-1.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide slick-cloned"
+              data-index="6"
+              style="width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Volvo Dashboard screenshot 2"
+                    loading="lazy"
+                    src="/images/temp/volvo-dashboard-2.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide slick-cloned"
+              data-index="7"
+              style="width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Volvo Dashboard screenshot 3"
+                    loading="lazy"
+                    src="/images/temp/volvo-dashboard-3.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide slick-cloned"
+              data-index="8"
+              style="width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Volvo Dashboard screenshot 4"
+                    loading="lazy"
+                    src="/images/temp/volvo-dashboard-4.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide slick-cloned"
+              data-index="9"
+              style="width: 0px;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  <img
+                    alt="Volvo Dashboard screenshot 5"
+                    loading="lazy"
+                    src="/images/temp/volvo-dashboard-5.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="slick-arrow slick-next"
+          data-role="none"
+          style="display: block;"
+          type="button"
+        >
+           Next
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[` component Should unmount the  component 1`] = `<DocumentFragment />`;

@@ -6,8 +6,12 @@ import { ContactForm } from './form';
 import { onSubmit, Status } from './utils';
 import { composeClassName } from '@scripts/shared';
 
-export const Contact: FC = () => {
-	const [status, setStatus] = useState(Status.DEFAULT);
+type Props = {
+	initialStatus?: Status;
+};
+
+export const Contact: FC<Readonly<Props>> = ({ initialStatus = Status.DEFAULT }) => {
+	const [status, setStatus] = useState(initialStatus);
 	const [errorMessage, setErrorMessage] = useState('');
 	const { contactVisible, setContactVisible } = useContext(AppContext);
 

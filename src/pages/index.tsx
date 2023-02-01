@@ -1,12 +1,13 @@
 import Head from 'next/head';
 import useInterval from 'use-interval';
-import { FC, useEffect, useState } from 'react';
+import { FC, useRef, useState, useEffect } from 'react';
 
 import hello from '@data/lotties/hello.json';
 import { titles } from '@data/titles';
 import { Layout, Section, Animation } from '@components';
 
 export const Home: FC = () => {
+	const canvasRef = useRef<HTMLDivElement>(null);
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	useInterval(() => {
@@ -14,13 +15,15 @@ export const Home: FC = () => {
 	}, 5000);
 
 	useEffect(() => {
+		const canvas = canvasRef.current;
+
 		import('@scripts/canvas').then(({ initCanvas, createDots }) => {
 			createDots(initCanvas('canvas'));
 		});
 
 		return () => {
-			if (document.getElementById('canvas')) {
-				document.getElementById('canvas')!.innerHTML = '';
+			if (canvas) {
+				canvas.innerHTML = '';
 			}
 		};
 	}, []);
@@ -32,7 +35,7 @@ export const Home: FC = () => {
 			</Head>
 
 			<Section id="hello" hasShell={false} hasButton={false}>
-				<div className="c-canvas" id="canvas" />
+				<div className="c-canvas" id="canvas" ref={canvasRef} />
 
 				<div className="c-slider">
 					<h1>

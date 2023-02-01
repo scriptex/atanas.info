@@ -39,7 +39,7 @@
 		"start": "yarn time && yarn houdini && yarn next:dev",
 		"start-dist": "http-server ./dist -p=1234 -P=http://localhost:1234/? -o",
 		"lint": "./bin/lint.sh",
-		"test": "jest --runInBand --config=./config/jest.config.ts --rootDir=./ --env=jsdom --passWithNoTests",
+		"test": "jest --runInBand --config=./test-config/jest.config.ts --rootDir=./ --env=jsdom --passWithNoTests",
 		"prettier": "./bin/prettier.sh",
 		"test:watch": "yarn test --watch",
 		"deduplicate": "yarn-deduplicate --packages @types/react yarn.lock",

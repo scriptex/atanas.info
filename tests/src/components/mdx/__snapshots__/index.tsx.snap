@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` component Should render the  component 1`] = `
+<DocumentFragment>
+  <section
+    class="c-section c-section--test"
+    id="test"
+  >
+    <div
+      class="o-shell"
+    >
+      <header
+        class="c-section__header"
+      >
+        <h2>
+          Test
+        </h2>
+      </header>
+      <div
+        class="lines"
+      >
+        <div
+          class="line line--vertical"
+        />
+        <div
+          class="line line--vertical"
+        />
+        <div
+          class="line line--vertical"
+        />
+      </div>
+      <div
+        class="lines"
+      >
+        <div
+          class="line line--horizontal"
+        />
+        <div
+          class="line line--horizontal"
+        />
+        <div
+          class="line line--horizontal"
+        />
+      </div>
+      <img
+        alt=""
+        loading="lazy"
+        src="/images/test.jpg"
+      />
+      <div
+        class="c-blog-post"
+      >
+        <div
+          class="c-blog-post__content"
+        >
+          Test content
+        </div>
+        <div
+          id="disqus_thread"
+        />
+      </div>
+      <div
+        class="c-section__actions"
+      >
+        <button
+          class="c-btn"
+          type="button"
+        >
+          Get in touch
+        </button>
+        <ul
+          class="c-section__actions-list"
+        >
+          <li>
+            <button
+              class="c-btn c-section__actions-close"
+              type="button"
+            >
+              Close
+            </button>
+          </li>
+          <li>
+            <button
+              class="c-btn"
+              type="button"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  xlink:href="#svg-email"
+                />
+              </svg>
+              <span>
+                Contact me
+              </span>
+              <strong>
+                directly
+              </strong>
+            </button>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://app.usebraintrust.com/talent/782/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  xlink:href="#svg-braintrust"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Braintrust
+              </strong>
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://www.toptal.com/resume/atanas-atanasov"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  xlink:href="#svg-toptal"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Toptal
+              </strong>
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <br
+          class="visible-xs-block"
+        />
+        <a
+          class="c-btn"
+          href="/blog"
+        >
+          Go back
+        </a>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[` component Should unmount the  component 1`] = `<DocumentFragment />`;

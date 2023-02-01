@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` component Should render the  component 1`] = `
+<DocumentFragment>
+  <div
+    class="c-section__entry c-section__entry--no-background"
+  >
+    <div
+      class="o-shell"
+    >
+      <h3>
+        Github profile statistics
+      </h3>
+      <p>
+        Failed fetching data from Github. Please check again in 8 hours.
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[` component Should render the  component 2`] = `
+<DocumentFragment>
+  <div
+    class="c-section__entry c-section__entry--no-background"
+  >
+    <div
+      class="o-shell"
+    >
+      <h3>
+        Test title
+      </h3>
+      <ul
+        class="c-section__list"
+      >
+        <li>
+          <span>
+            Test title:
+          </span>
+          <strong>
+            Test value
+          </strong>
+        </li>
+      </ul>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[` component Should unmount the  component 1`] = `<DocumentFragment />`;
+
+exports[` component Should unmount the  component 2`] = `<DocumentFragment />`;

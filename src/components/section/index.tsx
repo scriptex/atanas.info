@@ -12,7 +12,7 @@ export type Props = {
 	children: ReactNode | string | Array<ReactNode | string>;
 	subtitle?: string;
 	hasShell?: boolean;
-	hasButton: boolean;
+	hasButton?: boolean;
 	className?: string;
 	shellClass?: string;
 	additionalElements?: ReactNode;

@@ -1,3 +1,22 @@
+import { TextEncoder, TextDecoder } from 'util';
+
+import * as shared from '@scripts/shared';
+
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder as (typeof global)['TextDecoder'];
+
+window.HTMLMediaElement.prototype.load = () => {
+	/* do nothing */
+};
+
+window.HTMLMediaElement.prototype.play = async () => {
+	/* do nothing */
+};
+
+window.HTMLMediaElement.prototype.pause = () => {
+	/* do nothing */
+};
+
 // prettier-ignore
 // @ts-ignore
 window.matchMedia = window.matchMedia || (() => ({
@@ -66,3 +85,11 @@ jest.mock('lottie-web', () => ({
 		loadAnimation: jest.fn()
 	}
 }));
+
+jest.mock('next/router', () => ({
+	useRouter: jest.fn(() => ({
+		pathname: '/'
+	}))
+}));
+
+jest.spyOn(shared, 'waitForElement').mockReturnValue(Promise.resolve(null));

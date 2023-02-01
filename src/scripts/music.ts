@@ -132,11 +132,11 @@ export const music = (container: HTMLDivElement): MusicFunctions => {
 			if (3 === this.index) {
 				TweenMax.to(this, 2, {
 					ease: Power4.easeOut,
-					value: dataArray[this.index]
+					value: dataArray?.[this.index]
 				});
 			} else {
 				this.cachedValue = this.value;
-				this.value = dataArray[this.index];
+				this.value = dataArray?.[this.index];
 			}
 
 			if (this.value !== this.cachedValue) {
