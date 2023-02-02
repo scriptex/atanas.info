@@ -5,8 +5,8 @@ import { FC, useRef, useEffect } from 'react';
 import { Routes } from '@data/routes';
 import gitlabCalendarData from '@data/gitlab-calendar.json';
 import { Ref, formatDate } from '@scripts/shared';
-import { getData, queryGitlab } from '@lib/mongodb';
 import { GitlabInsights, GitlabRepository } from '@scripts/types';
+import { getData, queryGitlab, MongoDBProps } from '@lib/mongodb';
 import { Layout, Section, StatsEntry, StatsError } from '@components';
 import { addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 
@@ -150,6 +150,6 @@ export const GitlabStats: FC<Readonly<Props>> = ({ data }: Props) => {
 	);
 };
 
-export const getStaticProps = async () => getData('Insights', queryGitlab);
+export const getStaticProps = async (): Promise<MongoDBProps<unknown>> => getData('Insights', queryGitlab);
 
 export default GitlabStats;

@@ -3,9 +3,9 @@ import Link from 'next/link';
 import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
-import { getData, queryNPM } from '@lib/mongodb';
 import { sectionStatsProps } from '@scripts/stats';
 import { Layout, Section, ExternalLink } from '@components';
+import { getData, queryNPM, MongoDBProps } from '@lib/mongodb';
 
 type Package = {
 	name: string;
@@ -108,6 +108,6 @@ export const NPMStats: FC<Readonly<Props>> = ({ data }: Props) => {
 	);
 };
 
-export const getStaticProps = async () => getData('Insights', queryNPM);
+export const getStaticProps = async (): Promise<MongoDBProps<unknown>> => getData('Insights', queryNPM);
 
 export default NPMStats;

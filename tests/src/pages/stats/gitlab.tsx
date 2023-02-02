@@ -72,5 +72,5 @@ it('Test the `getStaticProps` function', async () => {
 	expect(result.props).toBeDefined();
 	expect(result.props.data).toBeDefined();
 	expect(Array.isArray(result.props.data)).toEqual(true);
-	expect(result.props.data.length).toEqual(0);
+	expect((result.props.data as []).length).toEqual(0);
 });

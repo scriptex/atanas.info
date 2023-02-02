@@ -51,7 +51,7 @@ export const composeClassName = (main: string, modifiers: string[], optional: Ar
 		.filter(Boolean)
 		.join(' ');
 
-export const useNetworkState = () => {
+export const useNetworkState = (): boolean => {
 	const [online, setOnline] = useState(true);
 
 	useEffect(() => {

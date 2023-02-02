@@ -5,8 +5,8 @@ import { FC, useRef, useState, useEffect } from 'react';
 
 import { Routes } from '@data/routes';
 import { Ref, formatDate } from '@scripts/shared';
-import { getData, queryGithub } from '@lib/mongodb';
 import { GithubInsights, GithubRepository } from '@scripts/types';
+import { getData, queryGithub, MongoDBProps } from '@lib/mongodb';
 import { YEARS, addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import { Button, Layout, Section, StatsEntry, StatsError, GithubSkyline } from '@components';
 
@@ -172,6 +172,6 @@ export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
 	);
 };
 
-export const getStaticProps = async () => getData('Insights', queryGithub);
+export const getStaticProps = async (): Promise<MongoDBProps<unknown>> => getData('Insights', queryGithub);
 
 export default GithubStats;

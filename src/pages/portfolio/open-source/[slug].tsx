@@ -21,6 +21,17 @@ type Params = {
 	};
 };
 
+type StaticProps = {
+	props: {
+		post: Record<string, string>;
+	};
+};
+
+type StaticPaths = {
+	paths: Params[];
+	fallback: boolean;
+};
+
 export const OpenSourceProject: FC<Readonly<Props>> = ({ post }: Props) => {
 	const router = useRouter();
 
@@ -51,13 +62,13 @@ export const OpenSourceProject: FC<Readonly<Props>> = ({ post }: Props) => {
 	);
 };
 
-export async function getStaticProps({ params }: Params) {
+export async function getStaticProps({ params }: Params): Promise<StaticProps> {
 	const post = getPostBySlug('src/data/open-source-projects', params.slug, ['slug', 'content']);
 
 	return { props: { post } };
 }
 
-export async function getStaticPaths() {
+export async function getStaticPaths(): Promise<StaticPaths> {
 	const posts = getAllPosts('src/data/open-source-projects', ['slug']);
 
 	return {

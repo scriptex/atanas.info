@@ -45,7 +45,13 @@ export const queryLastFM: Query = { name: 'atanas-info-last-fm' };
 export const queryCloudinary: Query = { name: 'atanas-info-cloudinary' };
 export const queryScreenshots: Query = { name: 'atanas-info-screenshots' };
 
-export const getData = async (name: string, query: Query) => {
+export type MongoDBProps<T> = {
+	props: {
+		data: T;
+	};
+};
+
+export const getData = async <T>(name: string, query: Query): Promise<MongoDBProps<T>> => {
 	const client = await clientPromise;
 	const db = client.db('All');
 	const collection = db.collection(name);
@@ -53,7 +59,7 @@ export const getData = async (name: string, query: Query) => {
 
 	return {
 		props: {
-			data: result?.data
+			data: result?.data as T
 		}
 	};
 };
