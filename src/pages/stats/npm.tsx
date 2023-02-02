@@ -67,9 +67,13 @@ export const Packages: FC<Readonly<Packages>> = ({ data }: Packages) => (
 );
 
 export const NPMStats: FC<Readonly<Props>> = ({ data }: Props) => {
+	if (!data || Object.keys(data).length === 0) {
+		return null;
+	}
+
 	const { sum = null, error, ...packages } = data;
 
-	if (!data || Object.keys(data).length === 0 || error || sum === null) {
+	if (error || sum === null) {
 		return null;
 	}
 

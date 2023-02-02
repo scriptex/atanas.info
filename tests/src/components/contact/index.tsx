@@ -6,6 +6,7 @@ import { AppContext } from '@pages/_app';
 import { test, snapshotTest } from '@test-config/helpers';
 
 const fetch = global.fetch;
+const context = { contactVisible: true, setContactVisible: jest.fn() };
 
 afterAll(() => {
 	global.fetch = fetch;
@@ -14,7 +15,7 @@ afterAll(() => {
 
 snapshotTest(Contact, '.c-contact__close');
 snapshotTest(() => (
-	<AppContext.Provider value={{ contactVisible: true, setContactVisible: jest.fn() }}>
+	<AppContext.Provider value={context}>
 		<Contact />
 	</AppContext.Provider>
 ));

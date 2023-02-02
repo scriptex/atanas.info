@@ -1,9 +1,8 @@
-import { TextEncoder, TextDecoder } from 'util';
+import { TextEncoder } from 'util';
 
 import * as shared from '@scripts/shared';
 
 global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder as (typeof global)['TextDecoder'];
 
 window.HTMLMediaElement.prototype.load = () => {
 	/* do nothing */
