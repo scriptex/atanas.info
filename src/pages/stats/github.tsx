@@ -159,7 +159,7 @@ export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
 
 									{YEARS.map((year: string, index: number) =>
 										index === current ? (
-											<GithubSkyline key={index} file={`${year}.stl`} index={index} />
+											<GithubSkyline key={year} file={`${year}.stl`} index={index} />
 										) : null
 									)}
 								</div>
