@@ -1,5 +1,6 @@
 #!/usr/bin/env ts-node-script
 
+import { log } from '@scripts/shared';
 import { Track, music as tracks } from '@data/music';
 import clientPromise, { queryMusic } from '@lib/mongodb';
 
@@ -20,9 +21,9 @@ import clientPromise, { queryMusic } from '@lib/mongodb';
 	const db = client.db('All');
 	const collection = db.collection('Music');
 
-	await collection.updateOne(queryMusic, { $set: { ...queryMusic, data } }, { upsert: true }).catch(e => e);
+	await collection.updateOne(queryMusic, { $set: { ...queryMusic, data } }, { upsert: true });
 
-	console.log('atanas.info: Successfully saved tracks metadata in MongoDB.');
+	log('atanas.info: Successfully saved tracks metadata in MongoDB.');
 
 	process.exit();
 })();

@@ -85,7 +85,13 @@ jest.mock('gsap/Draggable', () => ({
 
 jest.mock('react-ts-github-calendar', () => ({
 	__esModule: true,
-	default: 'GitHubCalendar'
+	default: jest.fn(() => 'Github Calendar')
+}));
+
+jest.mock('gitlab-calendar', () => ({
+	__esModule: true,
+	default: jest.fn(() => 'Gitlab Calendar'),
+	GitlabCalendar: jest.fn(() => 'Gitlab Calendar')
 }));
 
 jest.mock('simplex-noise', () => ({

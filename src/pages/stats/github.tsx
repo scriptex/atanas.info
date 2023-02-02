@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import { FC, useState } from 'react';
+import { FC, useRef, useState, useEffect } from 'react';
 
 import { Routes } from '@data/routes';
-import { formatDate } from '@scripts/shared';
+import { Ref, formatDate } from '@scripts/shared';
 import { getData, queryGithub } from '@lib/mongodb';
 import { GithubInsights, GithubRepository } from '@scripts/types';
-import { YEARS, GeneralInsight, sectionStatsProps } from '@scripts/stats';
+import { YEARS, addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import { Button, Layout, Section, StatsEntry, StatsError, GithubSkyline } from '@components';
 
 const ReactGitHubCalendar = dynamic(() => import('react-ts-github-calendar'), { ssr: false });
@@ -87,9 +87,22 @@ type Props = {
 };
 
 export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
+	const timeout: Ref<NodeJS.Timeout> = useRef(null);
 	const [current, setCurrent] = useState(-1);
 	const { error, updated, ...rest }: GithubInsights = data;
 	const blocks: GeneralInsight[] = error ? [] : extractGithubData(rest);
+
+	useEffect(() => {
+		timeout.current = setTimeout(() => {
+			addTitles('.c-calendar--github', (rect: SVGRectElement) => rect.innerHTML);
+		}, 3000);
+
+		return () => {
+			if (timeout.current !== null) {
+				clearTimeout(timeout.current);
+			}
+		};
+	}, []);
 
 	const Content: FC = () => (
 		<>

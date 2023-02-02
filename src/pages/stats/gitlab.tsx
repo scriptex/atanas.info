@@ -7,8 +7,8 @@ import gitlabCalendarData from '@data/gitlab-calendar.json';
 import { Ref, formatDate } from '@scripts/shared';
 import { getData, queryGitlab } from '@lib/mongodb';
 import { GitlabInsights, GitlabRepository } from '@scripts/types';
-import { GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import { Layout, Section, StatsEntry, StatsError } from '@components';
+import { addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 
 export const extractGitlabData = ({ general, calendar, repositories }: GitlabInsights): GeneralInsight[] => {
 	if (!repositories || !general || !calendar) {
@@ -68,9 +68,10 @@ type Props = {
 
 export const GitlabStats: FC<Readonly<Props>> = ({ data }: Props) => {
 	const { error, calendar, updated }: GitlabInsights = data;
+	const blocks = extractGitlabData(data);
+	const timeout: Ref<NodeJS.Timeout> = useRef(null);
 	const calendarPlaceholder1: Ref<HTMLDivElement> = useRef(null);
 	const calendarPlaceholder2: Ref<HTMLDivElement> = useRef(null);
-	const blocks = extractGitlabData(data);
 
 	useEffect(() => {
 		import('gitlab-calendar').then(({ GitlabCalendar }) => {
@@ -83,6 +84,18 @@ export const GitlabStats: FC<Readonly<Props>> = ({ data }: Props) => {
 			}
 		});
 	}, [calendar]);
+
+	useEffect(() => {
+		timeout.current = setTimeout(() => {
+			addTitles('.c-calendar--gitlab', (rect: SVGRectElement) => rect.getAttribute('title') || '');
+		}, 3000);
+
+		return () => {
+			if (timeout.current !== null) {
+				clearTimeout(timeout.current);
+			}
+		};
+	}, []);
 
 	const Content: FC = () => (
 		<>

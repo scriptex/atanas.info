@@ -2,6 +2,7 @@
 
 import { existsSync, unlinkSync, writeFileSync } from 'node:fs';
 
+import { log } from '@scripts/shared';
 import { getGithubRepositories } from '@insights/github';
 
 type Project = {
@@ -29,7 +30,7 @@ const saveProject = (data: string, path: string, message: string): void => {
 
 	writeFileSync(path, data);
 
-	console.log(message);
+	log(message);
 };
 
 const createProjectsIndex = (projects: Project[]) => {
@@ -74,7 +75,7 @@ const createProjectsIndex = (projects: Project[]) => {
 					saveProject(data, path, 'atanas.info: Saved open source project ' + name);
 				})
 				.catch((err: Error) => {
-					console.log('atanas.info: Failed fetching open source project ' + project + '. Error is: ' + err);
+					log('atanas.info: Failed fetching open source project ' + project + '. Error is: ' + err);
 				});
 		}
 	} catch (e: any) {

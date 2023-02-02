@@ -75,7 +75,7 @@ export const saveInsights = async <T>(data: T, type: InsightsType): Promise<void
 	const options = { upsert: true };
 	const collection = db.collection('Insights');
 
-	await collection.updateOne(query, { $set: { ...query, data } }, options).catch(e => e);
+	await collection.updateOne(query, { $set: { ...query, data } }, options);
 
 	log(`atanas.info: Successfully saved insights data from ${type}.`);
 };

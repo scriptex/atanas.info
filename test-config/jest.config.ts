@@ -47,7 +47,8 @@ const config: Config.InitialOptions = {
 		'!<rootDir>/screenshots/*',
 		'!<rootDir>/src/components/github-skyline/*',
 		'!<rootDir>/src/houdini/*',
-		'!<rootDir>/src/pages/api/*'
+		'!<rootDir>/src/pages/api/*',
+		'!<rootDir>/src/scripts/*'
 	],
 	coverageThreshold: {
 		global: {

@@ -4,12 +4,13 @@ import * as puppeteer from 'puppeteer';
 import { config as dotenvConfig } from 'dotenv';
 import { v2 as cloudinary, UploadApiOptions, UploadApiResponse } from 'cloudinary';
 
+import { log } from '@scripts/shared';
 import * as pckg from '../package.json';
 import { WebProject, projects } from '@data/projects';
 import clientPromise, { queryCloudinary, queryScreenshots } from '@lib/mongodb';
 
 if (!projects || !projects.length) {
-	console.log('atanas.info: No web projects found.');
+	log('atanas.info: No web projects found.');
 	process.exit();
 }
 
@@ -31,13 +32,13 @@ const uploadOptions = (name: string): UploadApiOptions => ({
 });
 
 async function createScreenshot(url: string, name: string, timeout = 2000): Promise<UploadApiResponse | null> {
-	console.log(`atanas.info: Launching new browser for ${name}...`);
+	log(`atanas.info: Launching new browser for ${name}...`);
 	const browser = await puppeteer.launch({
 		headless: true,
 		args: ['--no-sandbox']
 	});
 
-	console.log(`atanas.info: Opening new browser page for ${name}...`);
+	log(`atanas.info: Opening new browser page for ${name}...`);
 	const page = await browser.newPage();
 
 	await page.setViewport({
@@ -45,11 +46,11 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 		height: 1000
 	});
 
-	console.log(`atanas.info: Navigating to ${url} for ${name}...`);
+	log(`atanas.info: Navigating to ${url} for ${name}...`);
 	await page.goto(url, { waitUntil: 'networkidle0' });
 	await page.waitForTimeout(timeout);
 
-	console.log(`atanas.info: Taking screenshot for ${name}...`);
+	log(`atanas.info: Taking screenshot for ${name}...`);
 	const shotResult = await page
 		.screenshot({ fullPage: false })
 		.then(res => res)
@@ -58,11 +59,11 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 			return null;
 		});
 
-	console.log(`atanas.info: Closing browser for ${name}...`);
+	log(`atanas.info: Closing browser for ${name}...`);
 	await browser.close();
 
 	if (shotResult) {
-		console.log(`atanas.info: Uploading screenshot for ${name}...`);
+		log(`atanas.info: Uploading screenshot for ${name}...`);
 
 		return upload(shotResult as Buffer, uploadOptions(name), name);
 	} else {
@@ -79,7 +80,7 @@ function upload(shotResult: Buffer, options: UploadApiOptions, name: string): Pr
 					fail(error);
 				}
 
-				console.log(`atanas.info: Uploaded screenshot for ${name}...`);
+				log(`atanas.info: Uploaded screenshot for ${name}...`);
 
 				success(result!);
 			})
@@ -95,9 +96,9 @@ async function createScreenshots(allPages: WebProject[]): Promise<void> {
 	const pages: WebProject[] = allPages.filter((page: WebProject) => !page.skip);
 
 	for (const page of pages) {
-		console.log('-----');
+		log('-----');
 		if (!page.url) {
-			console.log(`atanas.info: ${page.title} does not have a valid URL.`);
+			log(`atanas.info: ${page.title} does not have a valid URL.`);
 		} else {
 			try {
 				const result = await createScreenshot(page.url, page.title.replace(/\s/g, '-'));
