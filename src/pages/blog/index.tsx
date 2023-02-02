@@ -23,8 +23,8 @@ export const Blog: FC = () => (
 			<div className="c-section__body o-grid">
 				{articles
 					.filter((article: Article) => !article.external)
-					.map((article: Article, index: number) => (
-						<div key={index} className="o-grid__item xs-12 sm-6">
+					.map((article: Article) => (
+						<div key={article.title} className="o-grid__item xs-12 sm-6">
 							<Link
 								href={article.url}
 								style={{ backgroundImage: `url(${article.image})` }}

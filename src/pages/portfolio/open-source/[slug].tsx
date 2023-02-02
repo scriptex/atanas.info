@@ -27,7 +27,6 @@ export const OpenSourceProject: FC<Readonly<Props>> = ({ post }: Props) => {
 	if (!router.isFallback && !post?.slug) {
 		return (
 			<Layout>
-				{/* TODO: Create a custom error page */}
 				<ErrorPage statusCode={404} />
 			</Layout>
 		);

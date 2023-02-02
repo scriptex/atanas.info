@@ -45,7 +45,7 @@ export const Home: FC = () => {
 
 					<h2>
 						{titles.map((title: string, index: number) => (
-							<span key={index} className={index === activeIndex ? 'current' : undefined}>
+							<span key={title} className={index === activeIndex ? 'current' : undefined}>
 								{title}
 							</span>
 						))}

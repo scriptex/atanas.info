@@ -73,12 +73,12 @@ export const About: FC = () => {
 					<span className="c-article__block-emoji">🎉 🎉 🎉</span>
 				</div>
 
-				{bio.map((item: BioEntry, i: number) => (
-					<div className="c-article__block" key={i}>
+				{bio.map((item: BioEntry) => (
+					<div className="c-article__block" key={item.title}>
 						<h3>{item.title}</h3>
 
-						{item.content.map((paragraph: string, j: number) => (
-							<p key={j}>{paragraph}</p>
+						{item.content.map((text: string) => (
+							<p key={text}>{text}</p>
 						))}
 					</div>
 				))}

@@ -30,7 +30,7 @@ export const Slides: FC = () => {
 				<div className="c-section__body">
 					{slides.map((slide: Slide, index: number) => (
 						<div
-							key={index}
+							key={slide.title}
 							className={composeClassName(
 								'c-section__frame',
 								[],

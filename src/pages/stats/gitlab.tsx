@@ -97,38 +97,6 @@ export const GitlabStats: FC<Readonly<Props>> = ({ data }: Props) => {
 		};
 	}, []);
 
-	const Content: FC = () => (
-		<>
-			<StatsEntry data={blocks} title="Gitlab profile statistics" />
-
-			<div className="c-section__entry">
-				<small className="c-section__stamp">
-					Last updated: {formatDate(updated || new Date().getTime(), 'dd MMM yyyy HH:mm:ss')}
-				</small>
-
-				<div className="o-shell">
-					<h3>Gitlab contributions calendars</h3>
-
-					<div className="c-calendar__outer">
-						<div className="c-calendar c-calendar--gitlab">
-							<div className="c-calendar__entry">
-								<h4>Public Gitlab profile</h4>
-
-								<div ref={calendarPlaceholder1} />
-							</div>
-
-							<div className="c-calendar__entry">
-								<h4>Private Gitlab profile</h4>
-
-								<div ref={calendarPlaceholder2} />
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</>
-	);
-
 	return (
 		<Layout>
 			<Head>
@@ -144,7 +112,39 @@ export const GitlabStats: FC<Readonly<Props>> = ({ data }: Props) => {
 				}
 				hasShell={false}
 			>
-				{error || blocks.length === 0 ? <StatsError network="Gitlab" /> : <Content />}
+				{error || blocks.length === 0 ? (
+					<StatsError network="Gitlab" />
+				) : (
+					<>
+						<StatsEntry data={blocks} title="Gitlab profile statistics" />
+
+						<div className="c-section__entry">
+							<small className="c-section__stamp">
+								Last updated: {formatDate(updated || new Date().getTime(), 'dd MMM yyyy HH:mm:ss')}
+							</small>
+
+							<div className="o-shell">
+								<h3>Gitlab contributions calendars</h3>
+
+								<div className="c-calendar__outer">
+									<div className="c-calendar c-calendar--gitlab">
+										<div className="c-calendar__entry">
+											<h4>Public Gitlab profile</h4>
+
+											<div ref={calendarPlaceholder1} />
+										</div>
+
+										<div className="c-calendar__entry">
+											<h4>Private Gitlab profile</h4>
+
+											<div ref={calendarPlaceholder2} />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</>
+				)}
 			</Section>
 		</Layout>
 	);

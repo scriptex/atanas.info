@@ -31,7 +31,7 @@ export const Videos: FC = () => {
 				<div className="c-section__body">
 					{presentations.map((presentation: Presentation, index: number) => (
 						<div
-							key={index}
+							key={presentation.id}
 							className={composeClassName(
 								'c-section__frame',
 								[],

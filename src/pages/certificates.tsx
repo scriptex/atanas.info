@@ -21,8 +21,8 @@ export const Certificates: FC = () => (
 			}
 		>
 			<div className="c-section__body o-grid">
-				{certificates.map((certificate: Certificate, index: number) => (
-					<div className="o-grid__item xs-12 sm-6" key={index}>
+				{certificates.map((certificate: Certificate) => (
+					<div className="o-grid__item xs-12 sm-6" key={certificate.name}>
 						<ExternalLink href={`/cert/${certificate.type}.pdf`} className="c-certificate">
 							<Loader />
 

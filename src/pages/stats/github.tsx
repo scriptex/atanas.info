@@ -104,51 +104,6 @@ export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
 		};
 	}, []);
 
-	const Content: FC = () => (
-		<>
-			<StatsEntry data={blocks} title="Github profile statistics" />
-
-			<div className="c-section__entry">
-				<small className="c-section__stamp">
-					Last updated: {formatDate(updated || new Date().getTime(), 'dd MMM yyyy HH:mm:ss')}
-				</small>
-
-				<div className="o-shell">
-					<h3>Github contributions calendar</h3>
-
-					<div className="c-calendar__outer">
-						<div className="c-calendar c-calendar--github">
-							<ReactGitHubCalendar tooltips userName="scriptex" global_stats={false} />
-						</div>
-					</div>
-
-					<div className="c-skyline">
-						<nav className="c-skyline__nav">
-							<h4>
-								Previous years Github contributions <br />
-								<small>(requires WebGL)</small>
-							</h4>
-
-							<ul>
-								{YEARS.map((year: string, index: number) => (
-									<li key={index} className={current === index ? 'current' : undefined}>
-										<Button onClick={() => setCurrent(index)} className="c-btn--small">
-											{year}
-										</Button>
-									</li>
-								))}
-							</ul>
-						</nav>
-
-						{YEARS.map((year: string, index: number) =>
-							index === current ? <GithubSkyline key={index} file={`${year}.stl`} index={index} /> : null
-						)}
-					</div>
-				</div>
-			</div>
-		</>
-	);
-
 	return (
 		<Layout>
 			<Head>
@@ -164,7 +119,54 @@ export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
 				}
 				hasShell={false}
 			>
-				{error ? <StatsError network="Github" /> : <Content />}
+				{error ? (
+					<StatsError network="Github" />
+				) : (
+					<>
+						<StatsEntry data={blocks} title="Github profile statistics" />
+
+						<div className="c-section__entry">
+							<small className="c-section__stamp">
+								Last updated: {formatDate(updated || new Date().getTime(), 'dd MMM yyyy HH:mm:ss')}
+							</small>
+
+							<div className="o-shell">
+								<h3>Github contributions calendar</h3>
+
+								<div className="c-calendar__outer">
+									<div className="c-calendar c-calendar--github">
+										<ReactGitHubCalendar tooltips userName="scriptex" global_stats={false} />
+									</div>
+								</div>
+
+								<div className="c-skyline">
+									<nav className="c-skyline__nav">
+										<h4>
+											Previous years Github contributions <br />
+											<small>(requires WebGL)</small>
+										</h4>
+
+										<ul>
+											{YEARS.map((year: string, index: number) => (
+												<li key={year} className={current === index ? 'current' : undefined}>
+													<Button onClick={() => setCurrent(index)} className="c-btn--small">
+														{year}
+													</Button>
+												</li>
+											))}
+										</ul>
+									</nav>
+
+									{YEARS.map((year: string, index: number) =>
+										index === current ? (
+											<GithubSkyline key={index} file={`${year}.stl`} index={index} />
+										) : null
+									)}
+								</div>
+							</div>
+						</div>
+					</>
+				)}
 			</Section>
 		</Layout>
 	);
