@@ -1,6 +1,6 @@
 import { Analytics } from '@vercel/analytics/react';
 import type { AppProps } from 'next/app';
-import { FC, useState, useEffect, createContext } from 'react';
+import { FC, useMemo, useState, useEffect, createContext } from 'react';
 
 import { Head } from '@components';
 import { Theme, onThemeChange, setThemeClassName } from '@scripts/shared';
@@ -14,7 +14,7 @@ export const AppContext = createContext({
 
 export const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
 	const [contactVisible, setContactVisible] = useState(false);
-	const value: any = { contactVisible, setContactVisible };
+	const value: any = useMemo(() => ({ contactVisible, setContactVisible }), [contactVisible]);
 
 	useEffect(() => {
 		setThemeClassName(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');

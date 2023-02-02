@@ -84,9 +84,9 @@ export const Music: FC<Readonly<Props>> = ({ data }: Props) => {
 					</button>
 
 					<div className="c-music__tracks">
-						{data.map((track, index) => (
+						{data.map(track => (
 							<button
-								key={index}
+								key={track.url}
 								onClick={async () => {
 									await setSource(track);
 

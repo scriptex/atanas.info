@@ -5,10 +5,10 @@ const config: Config.InitialOptions = {
 	moduleDirectories: ['node_modules', 'insights', 'lib', 'npm', 'screenshots', 'src', 'test-config', 'tests'],
 	moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 	moduleNameMapper: {
-		'\\.(css|less|sass|scss)$': '<rootDir>/test-config/style-mock.ts',
-		'\\.(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-			'<rootDir>/test-config/file-mock.ts',
+		'\\.svg': '<rootDir>/test-config/svg.ts',
+		'\\.(css|scss)$': '<rootDir>/test-config/style-mock.ts',
 		'@lib(.*)': '<rootDir>/lib/$1',
+		'@npm': '<rootDir>/npm',
 		'@src(.*)': '<rootDir>/src/$1',
 		'@svg(.*)': '<rootDir>/src/svg/$1',
 		'@data(.*)': '<rootDir>/src/data/$1',
@@ -30,21 +30,32 @@ const config: Config.InitialOptions = {
 					jsx: 'react-jsx'
 				}
 			}
-		],
-		'\\.(css|less|sass|scss)$': '<rootDir>/test-config/style-mock.ts',
-		'\\.(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|md|mdx)$':
-			'<rootDir>/test-config/file-mock.ts'
+		]
 	},
 	verbose: false,
 	testRegex: '(/tests/.*|(\\.|/)(test|spec))\\.[jt]sx?$',
 	testPathIgnorePatterns: [],
-	collectCoverageFrom: ['<rootDir>/src/**/*.{ts,tsx}'],
+	collectCoverageFrom: [
+		'<rootDir>/insights/**/*.{ts,tsx}',
+		'<rootDir>/lib/**/*.{ts,tsx}',
+		'<rootDir>/npm/**/*.{ts,tsx}',
+		'<rootDir>/screenshots/**/*.{ts,tsx}',
+		'<rootDir>/src/**/*.{ts,tsx}',
+		'!<rootDir>/**/*.d.ts',
+		'!<rootDir>/insights/client.ts',
+		'!<rootDir>/lib/mongodb.ts',
+		'!<rootDir>/screenshots/*',
+		'!<rootDir>/src/components/github-skyline/*',
+		'!<rootDir>/src/houdini/*',
+		'!<rootDir>/src/pages/api/*',
+		'!<rootDir>/src/scripts/*'
+	],
 	coverageThreshold: {
 		global: {
-			branches: 0,
-			functions: 0,
-			lines: 0,
-			statements: 0
+			lines: 98,
+			branches: 89,
+			functions: 97,
+			statements: 98
 		}
 	},
 	coverageReporters: ['lcov', 'html', 'cobertura'],

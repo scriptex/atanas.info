@@ -36,8 +36,8 @@ export const InteractiveResume: FC = () => {
 				<Lines />
 
 				<div className="c-interactive-resume">
-					{interactiveResumeItems.map((item: InteractiveResumeItem, i: number) => (
-						<div key={i} className="c-interactive-resume__widget">
+					{interactiveResumeItems.map((item: InteractiveResumeItem) => (
+						<div key={item.title} className="c-interactive-resume__widget">
 							<h3>{item.title}</h3>
 
 							{online ? item.element : <Icon name="svg-disconnected " className="svg-disconnected" />}

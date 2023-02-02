@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExternalLink component Should render the ExternalLink component 1`] = `
+<DocumentFragment>
+  <a
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <svg
+      class="c-svg-external-link"
+    >
+      <use
+        xlink:href="#svg-external-link"
+      />
+    </svg>
+  </a>
+</DocumentFragment>
+`;
+
+exports[`ExternalLink component Should unmount the ExternalLink component 1`] = `<DocumentFragment />`;

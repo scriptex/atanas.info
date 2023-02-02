@@ -1,12 +1,14 @@
 import info from 'package-info';
 import npmtotal from 'npmtotal';
+
+import { log } from '@scripts/shared';
 import { saveInsights } from '@insights/utils';
 
-(async () => {
+export const run = async (): Promise<Record<string, any>> => {
 	const result: Record<string, any> = {};
 
 	try {
-		console.log('atanas.info: Fetching data from NPM. Please wait...');
+		log('atanas.info: Fetching data from NPM. Please wait...');
 
 		const { sum, stats } = await npmtotal('scriptex', { startDate: '2017-01-01' });
 
@@ -17,19 +19,26 @@ import { saveInsights } from '@insights/utils';
 		for (const entry of packages) {
 			const [name, downloads] = entry;
 
-			console.log(`atanas.info: Fetching data for the ${name} package. Please wait...`);
+			log(`atanas.info: Fetching data for the ${name} package. Please wait...`);
 
 			const packageInfo = await info(name);
 
 			result[name] = { ...packageInfo, downloads, homepage: `https://www.npmjs.com/package/${name}` };
 		}
 
-		console.log('atanas.info: Successfully saved stats for NPM packages');
+		log('atanas.info: Successfully saved stats for NPM packages');
 	} catch (e) {
-		console.log('atanas.info: Error saving stats for NPM packages', e);
+		log(`atanas.info: Error saving stats for NPM packages: ${e}`);
 	}
 
 	await saveInsights(result, 'NPM');
 
-	process.exit();
-})();
+	return result;
+};
+
+if (!process.env.JEST_WORKER_ID) {
+	(async () => {
+		await run();
+		process.exit();
+	})();
+}

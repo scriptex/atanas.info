@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav component Should render the Nav component 1`] = `
+<DocumentFragment>
+  <nav
+    class="c-nav"
+  >
+    <ul>
+      <li>
+        <a
+          class="active"
+          href="/"
+          title="Home"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          href="mailto:someone@example.com"
+          title="Send mail"
+        >
+          Send mail
+          <svg
+            class="c-svg-external-link"
+          >
+            <use
+              xlink:href="#svg-external-link"
+            />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;
+
+exports[`Nav component Should unmount the Nav component 1`] = `<DocumentFragment />`;

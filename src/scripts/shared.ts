@@ -5,7 +5,7 @@ export type Theme = 'dark' | 'light';
 export type Ref<T> = MutableRefObject<T | null>;
 
 export const random = (): number => {
-	const crypto = window.crypto || window.msCrypto;
+	const crypto = window.crypto;
 	const array = new Uint32Array(1);
 
 	return crypto.getRandomValues(array)[0] / (Math.pow(2, 32) - 1);
@@ -51,7 +51,7 @@ export const composeClassName = (main: string, modifiers: string[], optional: Ar
 		.filter(Boolean)
 		.join(' ');
 
-export const useNetworkState = () => {
+export const useNetworkState = (): boolean => {
 	const [online, setOnline] = useState(true);
 
 	useEffect(() => {
@@ -59,4 +59,12 @@ export const useNetworkState = () => {
 	}, []);
 
 	return online;
+};
+
+export const log = (message: string): void => {
+	if (process.env.JEST_WORKER_ID) {
+		return;
+	}
+
+	console.log(message);
 };

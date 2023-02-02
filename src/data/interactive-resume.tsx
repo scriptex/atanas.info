@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 export type InteractiveResumeItem = {
 	title: string;
 	element: JSX.Element;

@@ -24,7 +24,7 @@ export const PortfolioEmailTemplate: FC<Readonly<Props>> = ({ img }: Props) => {
 				<img src={img} alt="" />
 			</button>
 
-			<Modal isOpen={open} onRequestClose={toggle}>
+			<Modal isOpen={open} onRequestClose={toggle} ariaHideApp={false}>
 				<img src={img} alt="" />
 			</Modal>
 		</>

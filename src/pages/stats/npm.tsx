@@ -3,9 +3,9 @@ import Link from 'next/link';
 import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
-import { getData, queryNPM } from '@lib/mongodb';
 import { sectionStatsProps } from '@scripts/stats';
 import { Layout, Section, ExternalLink } from '@components';
+import { getData, queryNPM, MongoDBProps } from '@lib/mongodb';
 
 type Package = {
 	name: string;
@@ -17,11 +17,21 @@ type Package = {
 	downloads: number;
 };
 
-type Props = {
-	data: Record<string, Package>;
+type Packages<T = Record<string, Package>> = {
+	data: Record<string, Package> & T;
 };
 
-export const Packages: FC<Readonly<Props>> = ({ data }: Props) => (
+type WithSum = {
+	sum: number;
+};
+
+type WithError = {
+	error?: boolean;
+};
+
+type Props = Packages<WithSum & WithError>;
+
+export const Packages: FC<Readonly<Packages>> = ({ data }: Packages) => (
 	<div className="o-grid c-packages">
 		{Object.keys(data).map((key: string, index: number) => {
 			const item = data[key];
@@ -56,20 +66,14 @@ export const Packages: FC<Readonly<Props>> = ({ data }: Props) => (
 	</div>
 );
 
-type NPMProps = Props & {
-	sum: number;
-};
-
-export const NPMStats: FC<Readonly<NPMProps>> = ({ data }: NPMProps) => {
-	const error: boolean = (data as any)?.error;
-
-	if (!data || Object.keys(data).length === 0 || error) {
+export const NPMStats: FC<Readonly<Props>> = ({ data }: Props) => {
+	if (!data || Object.keys(data).length === 0) {
 		return null;
 	}
 
-	const { sum = null, ...packages } = data;
+	const { sum = null, error, ...packages } = data;
 
-	if (sum === null) {
+	if (error || sum === null) {
 		return null;
 	}
 
@@ -104,6 +108,6 @@ export const NPMStats: FC<Readonly<NPMProps>> = ({ data }: NPMProps) => {
 	);
 };
 
-export const getStaticProps = async () => getData('Insights', queryNPM);
+export const getStaticProps = async (): Promise<MongoDBProps<unknown>> => getData('Insights', queryNPM);
 
 export default NPMStats;

@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import { ExternalLink } from '@components';
 
 export type SocialItem = {

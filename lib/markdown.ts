@@ -10,12 +10,12 @@ const MarkdownIt = new markdownIt({
 
 export const markdownToHtml = (markdown: string): string => MarkdownIt.render(markdown);
 
-export const postsDirectory = (folder: string) => join(process.cwd(), folder);
+export const postsDirectory = (folder: string): string => join(process.cwd(), folder);
 
 // prettier-ignore
-export const getPostSlugs = (folder: string) => fs.readdirSync(postsDirectory(folder)).filter(file => !file.startsWith('.'));
+export const getPostSlugs = (folder: string): string[] => fs.readdirSync(postsDirectory(folder)).filter(file => !file.startsWith('.'));
 
-export const getPostBySlug = (folder: string, slug: string, fields: string[] = []) => {
+export const getPostBySlug = (folder: string, slug: string, fields: string[] = []): Record<string, string> => {
 	const items: Record<string, string> = {};
 	const realSlug = slug.replace(/\.md$/, '');
 	const fullPath = join(postsDirectory(folder), `${realSlug}.md`);

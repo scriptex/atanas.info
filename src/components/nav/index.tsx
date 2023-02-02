@@ -3,9 +3,9 @@ import { useRouter } from 'next/router';
 import { FC, ReactNode, useMemo } from 'react';
 
 import { Icon } from '@components';
+import { Routes } from '@data/routes';
 import { composeClassName } from '@scripts/shared';
 import { MenuItem, menuItems } from '@data/menu';
-import { Routes } from '@data/routes';
 
 type Props = {
 	onClick?: () => void;

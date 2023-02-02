@@ -6,8 +6,8 @@ import type { FC } from 'react';
 import { Routes } from '@data/routes';
 import { WebProject } from '@data/projects';
 import { portfolioSectionProps } from '.';
-import { getData, queryScreenshots } from '@lib/mongodb';
 import { useNetworkState, composeClassName } from '@scripts/shared';
+import { getData, MongoDBProps, queryScreenshots } from '@lib/mongodb';
 import { Icon, Layout, Loader, Section, ExternalLink } from '@components';
 
 type Props = {
@@ -34,9 +34,9 @@ export const PortfolioWebApps: FC<Readonly<Props>> = ({ data = [] }: Props) => {
 				<h3>Web applications</h3>
 
 				<div className="c-section__body">
-					{data.map((project: WebProject, index: number) => (
+					{data.map((project: WebProject) => (
 						<ExternalLink
-							key={index}
+							key={project.url}
 							href={project.url}
 							className={composeClassName('', [], [!project.url ? 'disabled' : ''])}
 						>
@@ -65,6 +65,6 @@ export const PortfolioWebApps: FC<Readonly<Props>> = ({ data = [] }: Props) => {
 	);
 };
 
-export const getStaticProps = async () => getData('Screenshots', queryScreenshots);
+export const getStaticProps = async (): Promise<MongoDBProps<unknown>> => getData('Screenshots', queryScreenshots);
 
 export default PortfolioWebApps;

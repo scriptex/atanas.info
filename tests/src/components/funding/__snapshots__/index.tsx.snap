@@ -1,0 +1,2299 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Funding component Should render the Funding component 1`] = `
+<DocumentFragment>
+  <div
+    class="c-funding"
+  >
+    <button
+      class="c-btn c-btn--small"
+    >
+      Sponsor me
+    </button>
+    <div
+      class="c-funding__backdrop"
+    />
+    <svg
+      class="c-funding__knob"
+      viewBox="-100 -100 700 700"
+    >
+      <g>
+        <g
+          class="c-funding__item"
+          transform="matrix(1,0,0,1,0,0)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://github.com/sponsors/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Github
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-github"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(0.5,-0.86602,0.86602,0.5,-91.5063509461097,341.5063509461096)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://www.patreon.com/atanas"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Patreon
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-patreon"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-0.49999,-0.86602,0.86602,-0.49999,158.49364905389024,591.5063509461097)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://paypal.me/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              PayPal
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-paypal"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-1,0,0,-1,500,500)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://ko-fi.com/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Ko-fi
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-ko-fi"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-0.5,0.86602,-0.86602,-0.5,591.5063509461097,158.49364905389052)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://liberapay.com/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Liberapay
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-liberapay"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(0.5,0.86602,-0.86602,0.5,341.50635094610965,-91.50635094610965)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://revolut.me/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              revolut
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-revolut"
+              y="145"
+            />
+          </a>
+        </g>
+      </g>
+      <g
+        class="c-funding__trigger"
+        role="button"
+      >
+        <circle
+          cx="250"
+          cy="250"
+          r="30"
+        />
+        <text
+          fill="var(--color-primary)"
+          font-size="2.5em"
+          text-anchor="middle"
+          x="250"
+          y="260"
+        >
+          +
+        </text>
+      </g>
+    </svg>
+    <div
+      class="c-funding__crypto c-funding__crypto--bitcoin"
+    >
+      <h6>
+        Donate Bitcoin
+      </h6>
+      <button
+        title="Donate Bitcoin"
+      >
+        <svg
+          class="c-funding__crypto-icon"
+        >
+          <use
+            xlink:href="#svg-bitcoin"
+          />
+        </svg>
+      </button>
+      <small>
+        <em>
+          Click to copy wallet address
+        </em>
+      </small>
+    </div>
+    <div
+      class="c-funding__crypto c-funding__crypto--shiba-inu"
+    >
+      <h6>
+        Donate Shiba Inu
+      </h6>
+      <button
+        title="Donate Shiba Inu"
+      >
+        <svg
+          class="c-funding__crypto-icon"
+        >
+          <use
+            xlink:href="#svg-shiba-inu"
+          />
+        </svg>
+      </button>
+      <small>
+        <em>
+          Click to copy wallet address
+        </em>
+      </small>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Funding component Should unmount the Funding component 1`] = `<DocumentFragment />`;
+
+exports[`Should test the Funding lifecycle 1`] = `
+<DocumentFragment>
+  <div
+    class="c-funding"
+  >
+    <button
+      class="c-btn c-btn--small"
+    >
+      Sponsor me
+    </button>
+    <div
+      class="c-funding__backdrop"
+    />
+    <svg
+      class="c-funding__knob"
+      viewBox="-100 -100 700 700"
+    >
+      <g>
+        <g
+          class="c-funding__item"
+          transform="matrix(1,0,0,1,0,0)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://github.com/sponsors/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Github
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-github"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(0.5,-0.86602,0.86602,0.5,-91.5063509461097,341.5063509461096)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://www.patreon.com/atanas"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Patreon
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-patreon"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-0.49999,-0.86602,0.86602,-0.49999,158.49364905389024,591.5063509461097)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://paypal.me/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              PayPal
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-paypal"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-1,0,0,-1,500,500)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://ko-fi.com/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Ko-fi
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-ko-fi"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-0.5,0.86602,-0.86602,-0.5,591.5063509461097,158.49364905389052)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://liberapay.com/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Liberapay
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-liberapay"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(0.5,0.86602,-0.86602,0.5,341.50635094610965,-91.50635094610965)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://revolut.me/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              revolut
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-revolut"
+              y="145"
+            />
+          </a>
+        </g>
+      </g>
+      <g
+        class="c-funding__trigger"
+        role="button"
+      >
+        <circle
+          cx="250"
+          cy="250"
+          r="30"
+        />
+        <text
+          fill="var(--color-primary)"
+          font-size="2.5em"
+          text-anchor="middle"
+          x="250"
+          y="260"
+        >
+          +
+        </text>
+      </g>
+    </svg>
+    <div
+      class="c-funding__crypto c-funding__crypto--bitcoin"
+    >
+      <h6>
+        Donate Bitcoin
+      </h6>
+      <button
+        title="Donate Bitcoin"
+      >
+        <svg
+          class="c-funding__crypto-icon"
+        >
+          <use
+            xlink:href="#svg-bitcoin"
+          />
+        </svg>
+      </button>
+      <small>
+        <em>
+          Click to copy wallet address
+        </em>
+      </small>
+    </div>
+    <div
+      class="c-funding__crypto c-funding__crypto--shiba-inu"
+    >
+      <h6>
+        Donate Shiba Inu
+      </h6>
+      <button
+        title="Donate Shiba Inu"
+      >
+        <svg
+          class="c-funding__crypto-icon"
+        >
+          <use
+            xlink:href="#svg-shiba-inu"
+          />
+        </svg>
+      </button>
+      <small>
+        <em>
+          Click to copy wallet address
+        </em>
+      </small>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Should test the Funding lifecycle 2`] = `
+<DocumentFragment>
+  <div
+    class="c-funding c-funding--open"
+  >
+    <button
+      class="c-btn c-btn--small"
+    >
+      Sponsor me
+    </button>
+    <div
+      class="c-funding__backdrop"
+    />
+    <svg
+      class="c-funding__knob"
+      viewBox="-100 -100 700 700"
+    >
+      <g>
+        <g
+          class="c-funding__item"
+          transform="matrix(1,0,0,1,0,0)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://github.com/sponsors/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Github
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-github"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(0.5,-0.86602,0.86602,0.5,-91.5063509461097,341.5063509461096)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://www.patreon.com/atanas"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Patreon
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-patreon"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-0.49999,-0.86602,0.86602,-0.49999,158.49364905389024,591.5063509461097)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://paypal.me/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              PayPal
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-paypal"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-1,0,0,-1,500,500)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://ko-fi.com/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Ko-fi
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-ko-fi"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-0.5,0.86602,-0.86602,-0.5,591.5063509461097,158.49364905389052)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://liberapay.com/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Liberapay
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-liberapay"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(0.5,0.86602,-0.86602,0.5,341.50635094610965,-91.50635094610965)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://revolut.me/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              revolut
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-revolut"
+              y="145"
+            />
+          </a>
+        </g>
+      </g>
+      <g
+        class="c-funding__trigger"
+        role="button"
+      >
+        <circle
+          cx="250"
+          cy="250"
+          r="30"
+        />
+        <text
+          fill="var(--color-primary)"
+          font-size="2.5em"
+          text-anchor="middle"
+          x="250"
+          y="260"
+        >
+          -
+        </text>
+      </g>
+    </svg>
+    <div
+      class="c-funding__crypto c-funding__crypto--bitcoin"
+    >
+      <h6>
+        Donate Bitcoin
+      </h6>
+      <button
+        title="Donate Bitcoin"
+      >
+        <svg
+          class="c-funding__crypto-icon"
+        >
+          <use
+            xlink:href="#svg-bitcoin"
+          />
+        </svg>
+      </button>
+      <small>
+        <em>
+          Click to copy wallet address
+        </em>
+      </small>
+    </div>
+    <div
+      class="c-funding__crypto c-funding__crypto--shiba-inu"
+    >
+      <h6>
+        Donate Shiba Inu
+      </h6>
+      <button
+        title="Donate Shiba Inu"
+      >
+        <svg
+          class="c-funding__crypto-icon"
+        >
+          <use
+            xlink:href="#svg-shiba-inu"
+          />
+        </svg>
+      </button>
+      <small>
+        <em>
+          Click to copy wallet address
+        </em>
+      </small>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Should test the Funding lifecycle 3`] = `
+<DocumentFragment>
+  <div
+    class="c-funding"
+  >
+    <button
+      class="c-btn c-btn--small"
+    >
+      Sponsor me
+    </button>
+    <div
+      class="c-funding__backdrop"
+    />
+    <svg
+      class="c-funding__knob"
+      viewBox="-100 -100 700 700"
+    >
+      <g>
+        <g
+          class="c-funding__item"
+          transform="matrix(1,0,0,1,0,0)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://github.com/sponsors/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Github
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-github"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(0.5,-0.86602,0.86602,0.5,-91.5063509461097,341.5063509461096)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://www.patreon.com/atanas"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Patreon
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-patreon"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-0.49999,-0.86602,0.86602,-0.49999,158.49364905389024,591.5063509461097)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://paypal.me/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              PayPal
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-paypal"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-1,0,0,-1,500,500)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://ko-fi.com/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Ko-fi
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-ko-fi"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-0.5,0.86602,-0.86602,-0.5,591.5063509461097,158.49364905389052)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://liberapay.com/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Liberapay
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-liberapay"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(0.5,0.86602,-0.86602,0.5,341.50635094610965,-91.50635094610965)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://revolut.me/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              revolut
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-revolut"
+              y="145"
+            />
+          </a>
+        </g>
+      </g>
+      <g
+        class="c-funding__trigger"
+        role="button"
+      >
+        <circle
+          cx="250"
+          cy="250"
+          r="30"
+        />
+        <text
+          fill="var(--color-primary)"
+          font-size="2.5em"
+          text-anchor="middle"
+          x="250"
+          y="260"
+        >
+          +
+        </text>
+      </g>
+    </svg>
+    <div
+      class="c-funding__crypto c-funding__crypto--bitcoin"
+    >
+      <h6>
+        Donate Bitcoin
+      </h6>
+      <button
+        title="Donate Bitcoin"
+      >
+        <svg
+          class="c-funding__crypto-icon"
+        >
+          <use
+            xlink:href="#svg-bitcoin"
+          />
+        </svg>
+      </button>
+      <small>
+        <em>
+          Click to copy wallet address
+        </em>
+      </small>
+    </div>
+    <div
+      class="c-funding__crypto c-funding__crypto--shiba-inu"
+    >
+      <h6>
+        Donate Shiba Inu
+      </h6>
+      <button
+        title="Donate Shiba Inu"
+      >
+        <svg
+          class="c-funding__crypto-icon"
+        >
+          <use
+            xlink:href="#svg-shiba-inu"
+          />
+        </svg>
+      </button>
+      <small>
+        <em>
+          Click to copy wallet address
+        </em>
+      </small>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Should test the Funding lifecycle 4`] = `
+<DocumentFragment>
+  <div
+    class="c-funding c-funding--open"
+  >
+    <button
+      class="c-btn c-btn--small"
+    >
+      Sponsor me
+    </button>
+    <div
+      class="c-funding__backdrop"
+    />
+    <svg
+      class="c-funding__knob"
+      viewBox="-100 -100 700 700"
+    >
+      <g>
+        <g
+          class="c-funding__item"
+          transform="matrix(1,0,0,1,0,0)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://github.com/sponsors/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Github
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-github"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(0.5,-0.86602,0.86602,0.5,-91.5063509461097,341.5063509461096)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://www.patreon.com/atanas"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Patreon
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-patreon"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-0.49999,-0.86602,0.86602,-0.49999,158.49364905389024,591.5063509461097)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://paypal.me/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              PayPal
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-paypal"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-1,0,0,-1,500,500)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://ko-fi.com/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Ko-fi
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-ko-fi"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-0.5,0.86602,-0.86602,-0.5,591.5063509461097,158.49364905389052)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://liberapay.com/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Liberapay
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-liberapay"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(0.5,0.86602,-0.86602,0.5,341.50635094610965,-91.50635094610965)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://revolut.me/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              revolut
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-revolut"
+              y="145"
+            />
+          </a>
+        </g>
+      </g>
+      <g
+        class="c-funding__trigger"
+        role="button"
+      >
+        <circle
+          cx="250"
+          cy="250"
+          r="30"
+        />
+        <text
+          fill="var(--color-primary)"
+          font-size="2.5em"
+          text-anchor="middle"
+          x="250"
+          y="260"
+        >
+          -
+        </text>
+      </g>
+    </svg>
+    <div
+      class="c-funding__crypto c-funding__crypto--bitcoin"
+    >
+      <h6>
+        Donate Bitcoin
+      </h6>
+      <button
+        title="Donate Bitcoin"
+      >
+        <svg
+          class="c-funding__crypto-icon"
+        >
+          <use
+            xlink:href="#svg-bitcoin"
+          />
+        </svg>
+      </button>
+      <small>
+        <em>
+          Click to copy wallet address
+        </em>
+      </small>
+    </div>
+    <div
+      class="c-funding__crypto c-funding__crypto--shiba-inu"
+    >
+      <h6>
+        Donate Shiba Inu
+      </h6>
+      <button
+        title="Donate Shiba Inu"
+      >
+        <svg
+          class="c-funding__crypto-icon"
+        >
+          <use
+            xlink:href="#svg-shiba-inu"
+          />
+        </svg>
+      </button>
+      <small>
+        <em>
+          Click to copy wallet address
+        </em>
+      </small>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Should test the Funding lifecycle 5`] = `
+<DocumentFragment>
+  <div
+    class="c-funding"
+  >
+    <button
+      class="c-btn c-btn--small"
+    >
+      Sponsor me
+    </button>
+    <div
+      class="c-funding__backdrop"
+    />
+    <svg
+      class="c-funding__knob"
+      viewBox="-100 -100 700 700"
+    >
+      <g>
+        <g
+          class="c-funding__item"
+          transform="matrix(1,0,0,1,0,0)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://github.com/sponsors/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Github
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-github"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(0.5,-0.86602,0.86602,0.5,-91.5063509461097,341.5063509461096)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://www.patreon.com/atanas"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Patreon
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-patreon"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-0.49999,-0.86602,0.86602,-0.49999,158.49364905389024,591.5063509461097)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://paypal.me/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              PayPal
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-paypal"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-1,0,0,-1,500,500)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://ko-fi.com/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Ko-fi
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-ko-fi"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-0.5,0.86602,-0.86602,-0.5,591.5063509461097,158.49364905389052)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://liberapay.com/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Liberapay
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-liberapay"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(0.5,0.86602,-0.86602,0.5,341.50635094610965,-91.50635094610965)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://revolut.me/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              revolut
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-revolut"
+              y="145"
+            />
+          </a>
+        </g>
+      </g>
+      <g
+        class="c-funding__trigger"
+        role="button"
+      >
+        <circle
+          cx="250"
+          cy="250"
+          r="30"
+        />
+        <text
+          fill="var(--color-primary)"
+          font-size="2.5em"
+          text-anchor="middle"
+          x="250"
+          y="260"
+        >
+          +
+        </text>
+      </g>
+    </svg>
+    <div
+      class="c-funding__crypto c-funding__crypto--bitcoin"
+    >
+      <h6>
+        Donate Bitcoin
+      </h6>
+      <button
+        title="Donate Bitcoin"
+      >
+        <svg
+          class="c-funding__crypto-icon"
+        >
+          <use
+            xlink:href="#svg-bitcoin"
+          />
+        </svg>
+      </button>
+      <small>
+        <em>
+          Click to copy wallet address
+        </em>
+      </small>
+    </div>
+    <div
+      class="c-funding__crypto c-funding__crypto--shiba-inu"
+    >
+      <h6>
+        Donate Shiba Inu
+      </h6>
+      <button
+        title="Donate Shiba Inu"
+      >
+        <svg
+          class="c-funding__crypto-icon"
+        >
+          <use
+            xlink:href="#svg-shiba-inu"
+          />
+        </svg>
+      </button>
+      <small>
+        <em>
+          Click to copy wallet address
+        </em>
+      </small>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Should test the Funding lifecycle 6`] = `
+<DocumentFragment>
+  <div
+    class="c-funding c-funding--open"
+  >
+    <button
+      class="c-btn c-btn--small"
+    >
+      Sponsor me
+    </button>
+    <div
+      class="c-funding__backdrop"
+    />
+    <svg
+      class="c-funding__knob"
+      viewBox="-100 -100 700 700"
+    >
+      <g>
+        <g
+          class="c-funding__item"
+          transform="matrix(1,0,0,1,0,0)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://github.com/sponsors/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Github
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-github"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(0.5,-0.86602,0.86602,0.5,-91.5063509461097,341.5063509461096)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://www.patreon.com/atanas"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Patreon
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-patreon"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-0.49999,-0.86602,0.86602,-0.49999,158.49364905389024,591.5063509461097)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://paypal.me/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              PayPal
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-paypal"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-1,0,0,-1,500,500)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://ko-fi.com/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Ko-fi
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-ko-fi"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-0.5,0.86602,-0.86602,-0.5,591.5063509461097,158.49364905389052)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://liberapay.com/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Liberapay
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-liberapay"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(0.5,0.86602,-0.86602,0.5,341.50635094610965,-91.50635094610965)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://revolut.me/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              revolut
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-revolut"
+              y="145"
+            />
+          </a>
+        </g>
+      </g>
+      <g
+        class="c-funding__trigger"
+        role="button"
+      >
+        <circle
+          cx="250"
+          cy="250"
+          r="30"
+        />
+        <text
+          fill="var(--color-primary)"
+          font-size="2.5em"
+          text-anchor="middle"
+          x="250"
+          y="260"
+        >
+          -
+        </text>
+      </g>
+    </svg>
+    <div
+      class="c-funding__crypto c-funding__crypto--bitcoin"
+    >
+      <h6>
+        Donate Bitcoin
+      </h6>
+      <button
+        title="Donate Bitcoin"
+      >
+        <svg
+          class="c-funding__crypto-icon"
+        >
+          <use
+            xlink:href="#svg-bitcoin"
+          />
+        </svg>
+      </button>
+      <small>
+        <em>
+          Click to copy wallet address
+        </em>
+      </small>
+    </div>
+    <div
+      class="c-funding__crypto c-funding__crypto--shiba-inu"
+    >
+      <h6>
+        Donate Shiba Inu
+      </h6>
+      <button
+        title="Donate Shiba Inu"
+      >
+        <svg
+          class="c-funding__crypto-icon"
+        >
+          <use
+            xlink:href="#svg-shiba-inu"
+          />
+        </svg>
+      </button>
+      <small>
+        <em>
+          Click to copy wallet address
+        </em>
+      </small>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Should test the Funding lifecycle 7`] = `
+<DocumentFragment>
+  <div
+    class="c-funding c-funding--open"
+  >
+    <button
+      class="c-btn c-btn--small"
+    >
+      Sponsor me
+    </button>
+    <div
+      class="c-funding__backdrop"
+    />
+    <svg
+      class="c-funding__knob"
+      viewBox="-100 -100 700 700"
+    >
+      <g>
+        <g
+          class="c-funding__item"
+          transform="matrix(1,0,0,1,0,0)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://github.com/sponsors/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Github
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-github"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(0.5,-0.86602,0.86602,0.5,-91.5063509461097,341.5063509461096)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://www.patreon.com/atanas"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Patreon
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-patreon"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-0.49999,-0.86602,0.86602,-0.49999,158.49364905389024,591.5063509461097)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://paypal.me/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              PayPal
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-paypal"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-1,0,0,-1,500,500)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://ko-fi.com/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Ko-fi
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-ko-fi"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(-0.5,0.86602,-0.86602,-0.5,591.5063509461097,158.49364905389052)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://liberapay.com/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              Liberapay
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-liberapay"
+              y="145"
+            />
+          </a>
+        </g>
+        <g
+          class="c-funding__item"
+          transform="matrix(0.5,0.86602,-0.86602,0.5,341.50635094610965,-91.50635094610965)"
+        >
+          <path
+            d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z"
+            fill="none"
+          />
+          <a
+            href="https://revolut.me/scriptex"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <text
+              fill="var(--color-secondary)"
+              font-size="1em"
+              text-anchor="middle"
+              transform="rotate(60 397.2243347167969 165)"
+              x="398"
+              y="200"
+            >
+              revolut
+            </text>
+            <use
+              height="40"
+              transform="rotate(60 397.2243347167969 165)"
+              width="40"
+              x="377.2243347167969"
+              xlink:href="#svg-revolut"
+              y="145"
+            />
+          </a>
+        </g>
+      </g>
+      <g
+        class="c-funding__trigger"
+        role="button"
+      >
+        <circle
+          cx="250"
+          cy="250"
+          r="30"
+        />
+        <text
+          fill="var(--color-primary)"
+          font-size="2.5em"
+          text-anchor="middle"
+          x="250"
+          y="260"
+        >
+          -
+        </text>
+      </g>
+    </svg>
+    <div
+      class="c-funding__crypto c-funding__crypto--bitcoin"
+    >
+      <h6>
+        Donate Bitcoin
+      </h6>
+      <button
+        title="Donate Bitcoin"
+      >
+        <svg
+          class="c-funding__crypto-icon"
+        >
+          <use
+            xlink:href="#svg-bitcoin"
+          />
+        </svg>
+      </button>
+      <small>
+        <em>
+          Click to copy wallet address
+        </em>
+      </small>
+    </div>
+    <div
+      class="c-funding__crypto c-funding__crypto--shiba-inu"
+    >
+      <h6>
+        Donate Shiba Inu
+      </h6>
+      <button
+        title="Donate Shiba Inu"
+      >
+        <svg
+          class="c-funding__crypto-icon"
+        >
+          <use
+            xlink:href="#svg-shiba-inu"
+          />
+        </svg>
+      </button>
+      <small>
+        <em>
+          Click to copy wallet address
+        </em>
+      </small>
+    </div>
+  </div>
+</DocumentFragment>
+`;

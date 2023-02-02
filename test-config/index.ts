@@ -1,3 +1,47 @@
+import { TextEncoder } from 'util';
+
+import * as shared from '@scripts/shared';
+
+global.TextEncoder = TextEncoder;
+
+window.HTMLMediaElement.prototype.load = () => {
+	/* do nothing */
+};
+
+window.HTMLMediaElement.prototype.play = async () => {
+	/* do nothing */
+};
+
+window.HTMLMediaElement.prototype.pause = () => {
+	/* do nothing */
+};
+
+global.IntersectionObserver = class IntersectionObserver {
+	root = null;
+	rootMargin = '';
+	thresholds = [0];
+
+	constructor() {
+		return this;
+	}
+
+	disconnect() {
+		return null;
+	}
+
+	observe() {
+		return null;
+	}
+
+	takeRecords() {
+		return [];
+	}
+
+	unobserve() {
+		return null;
+	}
+};
+
 // prettier-ignore
 // @ts-ignore
 window.matchMedia = window.matchMedia || (() => ({
@@ -40,7 +84,13 @@ jest.mock('gsap/Draggable', () => ({
 
 jest.mock('react-ts-github-calendar', () => ({
 	__esModule: true,
-	default: 'GitHubCalendar'
+	default: jest.fn(() => 'Github Calendar')
+}));
+
+jest.mock('gitlab-calendar', () => ({
+	__esModule: true,
+	default: jest.fn(() => 'Gitlab Calendar'),
+	GitlabCalendar: jest.fn(() => 'Gitlab Calendar')
 }));
 
 jest.mock('simplex-noise', () => ({
@@ -66,3 +116,11 @@ jest.mock('lottie-web', () => ({
 		loadAnimation: jest.fn()
 	}
 }));
+
+jest.mock('next/router', () => ({
+	useRouter: jest.fn(() => ({
+		pathname: '/'
+	}))
+}));
+
+jest.spyOn(shared, 'waitForElement').mockReturnValue(Promise.resolve(null));

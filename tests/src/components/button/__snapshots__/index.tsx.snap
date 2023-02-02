@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` component Should render the  component 1`] = `
+<DocumentFragment>
+  <a
+    class="c-btn"
+    href="https://atanas.info"
+    rel="noopener noreferrer"
+    target="_blank"
+  />
+</DocumentFragment>
+`;
+
+exports[` component Should unmount the  component 1`] = `<DocumentFragment />`;
+
+exports[`Button component Should render the Button component 1`] = `
+<DocumentFragment>
+  <button
+    class="c-btn"
+  />
+</DocumentFragment>
+`;
+
+exports[`Button component Should unmount the Button component 1`] = `<DocumentFragment />`;

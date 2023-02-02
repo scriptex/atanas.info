@@ -5,10 +5,10 @@ import { FC, useRef, useEffect } from 'react';
 import { Routes } from '@data/routes';
 import gitlabCalendarData from '@data/gitlab-calendar.json';
 import { Ref, formatDate } from '@scripts/shared';
-import { getData, queryGitlab } from '@lib/mongodb';
 import { GitlabInsights, GitlabRepository } from '@scripts/types';
-import { GeneralInsight, sectionStatsProps } from '@scripts/stats';
+import { getData, queryGitlab, MongoDBProps } from '@lib/mongodb';
 import { Layout, Section, StatsEntry, StatsError } from '@components';
+import { addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 
 export const extractGitlabData = ({ general, calendar, repositories }: GitlabInsights): GeneralInsight[] => {
 	if (!repositories || !general || !calendar) {
@@ -68,9 +68,10 @@ type Props = {
 
 export const GitlabStats: FC<Readonly<Props>> = ({ data }: Props) => {
 	const { error, calendar, updated }: GitlabInsights = data;
+	const blocks = extractGitlabData(data);
+	const timeout: Ref<NodeJS.Timeout> = useRef(null);
 	const calendarPlaceholder1: Ref<HTMLDivElement> = useRef(null);
 	const calendarPlaceholder2: Ref<HTMLDivElement> = useRef(null);
-	const blocks = extractGitlabData(data);
 
 	useEffect(() => {
 		import('gitlab-calendar').then(({ GitlabCalendar }) => {
@@ -84,37 +85,17 @@ export const GitlabStats: FC<Readonly<Props>> = ({ data }: Props) => {
 		});
 	}, [calendar]);
 
-	const Content: FC = () => (
-		<>
-			<StatsEntry data={blocks} title="Gitlab profile statistics" />
+	useEffect(() => {
+		timeout.current = setTimeout(() => {
+			addTitles('.c-calendar--gitlab', (rect: SVGRectElement) => rect.getAttribute('title') || '');
+		}, 3000);
 
-			<div className="c-section__entry">
-				<small className="c-section__stamp">
-					Last updated: {formatDate(updated || new Date().getTime(), 'dd MMM yyyy HH:mm:ss')}
-				</small>
-
-				<div className="o-shell">
-					<h3>Gitlab contributions calendars</h3>
-
-					<div className="c-calendar__outer">
-						<div className="c-calendar c-calendar--gitlab">
-							<div className="c-calendar__entry">
-								<h4>Public Gitlab profile</h4>
-
-								<div ref={calendarPlaceholder1} />
-							</div>
-
-							<div className="c-calendar__entry">
-								<h4>Private Gitlab profile</h4>
-
-								<div ref={calendarPlaceholder2} />
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</>
-	);
+		return () => {
+			if (timeout.current !== null) {
+				clearTimeout(timeout.current);
+			}
+		};
+	}, []);
 
 	return (
 		<Layout>
@@ -131,12 +112,44 @@ export const GitlabStats: FC<Readonly<Props>> = ({ data }: Props) => {
 				}
 				hasShell={false}
 			>
-				{error || blocks.length === 0 ? <StatsError network="Gitlab" /> : <Content />}
+				{error || blocks.length === 0 ? (
+					<StatsError network="Gitlab" />
+				) : (
+					<>
+						<StatsEntry data={blocks} title="Gitlab profile statistics" />
+
+						<div className="c-section__entry">
+							<small className="c-section__stamp">
+								Last updated: {formatDate(updated || new Date().getTime(), 'dd MMM yyyy HH:mm:ss')}
+							</small>
+
+							<div className="o-shell">
+								<h3>Gitlab contributions calendars</h3>
+
+								<div className="c-calendar__outer">
+									<div className="c-calendar c-calendar--gitlab">
+										<div className="c-calendar__entry">
+											<h4>Public Gitlab profile</h4>
+
+											<div ref={calendarPlaceholder1} />
+										</div>
+
+										<div className="c-calendar__entry">
+											<h4>Private Gitlab profile</h4>
+
+											<div ref={calendarPlaceholder2} />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</>
+				)}
 			</Section>
 		</Layout>
 	);
 };
 
-export const getStaticProps = async () => getData('Insights', queryGitlab);
+export const getStaticProps = async (): Promise<MongoDBProps<unknown>> => getData('Insights', queryGitlab);
 
 export default GitlabStats;

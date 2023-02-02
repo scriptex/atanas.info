@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import { FC, useState } from 'react';
+import { FC, useRef, useState, useEffect } from 'react';
 
 import { Routes } from '@data/routes';
-import { formatDate } from '@scripts/shared';
-import { getData, queryGithub } from '@lib/mongodb';
+import { Ref, formatDate } from '@scripts/shared';
 import { GithubInsights, GithubRepository } from '@scripts/types';
-import { YEARS, GeneralInsight, sectionStatsProps } from '@scripts/stats';
+import { getData, queryGithub, MongoDBProps } from '@lib/mongodb';
+import { YEARS, addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import { Button, Layout, Section, StatsEntry, StatsError, GithubSkyline } from '@components';
 
 const ReactGitHubCalendar = dynamic(() => import('react-ts-github-calendar'), { ssr: false });
@@ -87,54 +87,22 @@ type Props = {
 };
 
 export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
+	const timeout: Ref<NodeJS.Timeout> = useRef(null);
 	const [current, setCurrent] = useState(-1);
 	const { error, updated, ...rest }: GithubInsights = data;
 	const blocks: GeneralInsight[] = error ? [] : extractGithubData(rest);
 
-	const Content: FC = () => (
-		<>
-			<StatsEntry data={blocks} title="Github profile statistics" />
+	useEffect(() => {
+		timeout.current = setTimeout(() => {
+			addTitles('.c-calendar--github', (rect: SVGRectElement) => rect.innerHTML);
+		}, 3000);
 
-			<div className="c-section__entry">
-				<small className="c-section__stamp">
-					Last updated: {formatDate(updated || new Date().getTime(), 'dd MMM yyyy HH:mm:ss')}
-				</small>
-
-				<div className="o-shell">
-					<h3>Github contributions calendar</h3>
-
-					<div className="c-calendar__outer">
-						<div className="c-calendar c-calendar--github">
-							<ReactGitHubCalendar tooltips userName="scriptex" global_stats={false} />
-						</div>
-					</div>
-
-					<div className="c-skyline">
-						<nav className="c-skyline__nav">
-							<h4>
-								Previous years Github contributions <br />
-								<small>(requires WebGL)</small>
-							</h4>
-
-							<ul>
-								{YEARS.map((year: string, index: number) => (
-									<li key={index} className={current === index ? 'current' : undefined}>
-										<Button onClick={() => setCurrent(index)} className="c-btn--small">
-											{year}
-										</Button>
-									</li>
-								))}
-							</ul>
-						</nav>
-
-						{YEARS.map((year: string, index: number) =>
-							index === current ? <GithubSkyline key={index} file={`${year}.stl`} index={index} /> : null
-						)}
-					</div>
-				</div>
-			</div>
-		</>
-	);
+		return () => {
+			if (timeout.current !== null) {
+				clearTimeout(timeout.current);
+			}
+		};
+	}, []);
 
 	return (
 		<Layout>
@@ -151,12 +119,59 @@ export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
 				}
 				hasShell={false}
 			>
-				{error ? <StatsError network="Github" /> : <Content />}
+				{error ? (
+					<StatsError network="Github" />
+				) : (
+					<>
+						<StatsEntry data={blocks} title="Github profile statistics" />
+
+						<div className="c-section__entry">
+							<small className="c-section__stamp">
+								Last updated: {formatDate(updated || new Date().getTime(), 'dd MMM yyyy HH:mm:ss')}
+							</small>
+
+							<div className="o-shell">
+								<h3>Github contributions calendar</h3>
+
+								<div className="c-calendar__outer">
+									<div className="c-calendar c-calendar--github">
+										<ReactGitHubCalendar tooltips userName="scriptex" global_stats={false} />
+									</div>
+								</div>
+
+								<div className="c-skyline">
+									<nav className="c-skyline__nav">
+										<h4>
+											Previous years Github contributions <br />
+											<small>(requires WebGL)</small>
+										</h4>
+
+										<ul>
+											{YEARS.map((year: string, index: number) => (
+												<li key={year} className={current === index ? 'current' : undefined}>
+													<Button onClick={() => setCurrent(index)} className="c-btn--small">
+														{year}
+													</Button>
+												</li>
+											))}
+										</ul>
+									</nav>
+
+									{YEARS.map((year: string, index: number) =>
+										index === current ? (
+											<GithubSkyline key={year} file={`${year}.stl`} index={index} />
+										) : null
+									)}
+								</div>
+							</div>
+						</div>
+					</>
+				)}
 			</Section>
 		</Layout>
 	);
 };
 
-export const getStaticProps = async () => getData('Insights', queryGithub);
+export const getStaticProps = async (): Promise<MongoDBProps<unknown>> => getData('Insights', queryGithub);
 
 export default GithubStats;
