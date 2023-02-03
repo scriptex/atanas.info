@@ -12,8 +12,9 @@ export const markdownToHtml = (markdown: string): string => MarkdownIt.render(ma
 
 export const postsDirectory = (folder: string): string => join(process.cwd(), folder);
 
-// prettier-ignore
-export const getPostSlugs = (folder: string): string[] => fs.readdirSync(postsDirectory(folder)).filter(file => !file.startsWith('.'));
+export const getPostSlugs = (folder: string): string[] => {
+	return fs.readdirSync(postsDirectory(folder)).filter(file => !file.startsWith('.'));
+};
 
 export const getPostBySlug = (folder: string, slug: string, fields: string[] = []): Record<string, string> => {
 	const items: Record<string, string> = {};
@@ -38,5 +39,6 @@ export const getPostBySlug = (folder: string, slug: string, fields: string[] = [
 	return items;
 };
 
-// prettier-ignore
-export const getAllPosts = (folder: string, fields: string[] = []) => getPostSlugs(folder).map(slug => getPostBySlug(folder, slug, fields));
+export const getAllPosts = (folder: string, fields: string[] = []): Array<Record<string, string>> => {
+	return getPostSlugs(folder).map(slug => getPostBySlug(folder, slug, fields));
+};

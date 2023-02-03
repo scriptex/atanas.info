@@ -2,9 +2,9 @@ import Head from 'next/head';
 import { FC, useRef, useState, useEffect } from 'react';
 
 import { Layout, Section } from '@components';
-import { getData, queryMusic } from '@lib/mongodb';
 import { music, MusicFunctions } from '@scripts/music';
 import { Ref, composeClassName } from '@scripts/shared';
+import { getData, queryMusic, MongoDBProps } from '@lib/mongodb';
 
 type Track = {
 	url: string;
@@ -111,6 +111,6 @@ export const Music: FC<Readonly<Props>> = ({ data }: Props) => {
 	);
 };
 
-export const getStaticProps = async () => getData('Music', queryMusic);
+export const getStaticProps = async (): Promise<MongoDBProps<unknown>> => getData('Music', queryMusic);
 
 export default Music;

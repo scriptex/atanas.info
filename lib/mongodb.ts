@@ -6,7 +6,7 @@ declare global {
 	var _mongoClientPromise: Promise<MongoClient>;
 }
 
-type Query = Filter<Document>;
+export type Query = Filter<Document>;
 
 dotenvConfig({
 	path: '.env.local'
