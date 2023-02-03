@@ -55,7 +55,7 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 		.screenshot({ fullPage: false })
 		.then(res => res)
 		.catch(e => {
-			console.error(`atanas.info: Error capturing screenshot for ${name}`, e);
+			log(`atanas.info: Error capturing screenshot for ${name}: ${e}`);
 			return null;
 		});
 
@@ -76,8 +76,8 @@ function upload(shotResult: Buffer, options: UploadApiOptions, name: string): Pr
 		cloudinary.uploader
 			.upload_stream(options, (error, result) => {
 				if (error) {
-					console.error('atanas.info: Upload to cloudinary failed: ', error);
-					fail(error);
+					log(`atanas.info: Upload to cloudinary failed: ${error}`);
+					return fail(error);
 				}
 
 				log(`atanas.info: Uploaded screenshot for ${name}...`);
@@ -118,7 +118,7 @@ async function createScreenshots(allPages: WebProject[]): Promise<void> {
 					results.push(result);
 				}
 			} catch (e) {
-				console.error(`atanas.info: Error capturing screenshot for page ${page.title}`, e);
+				log(`atanas.info: Error capturing screenshot for page ${page.title}: ${e}`);
 			}
 		}
 	}
