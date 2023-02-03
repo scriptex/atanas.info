@@ -1,5 +1,5 @@
 import { load } from 'cheerio';
-import clientPromise, { queryGithub, queryGitlab, queryLastFM, queryNPM } from '@lib/mongodb';
+import clientPromise, { Query, queryNPM, queryGithub, queryGitlab, queryLastFM } from '@lib/mongodb';
 
 import { log } from '@scripts/shared';
 
@@ -53,7 +53,7 @@ export const getContributions = async (url = 'https://github.com/scriptex'): Pro
 				}, {});
 		});
 
-export const getQuery = (type: InsightsType) => {
+export const getQuery = (type: InsightsType): Query => {
 	switch (type) {
 		case 'Github':
 			return queryGithub;

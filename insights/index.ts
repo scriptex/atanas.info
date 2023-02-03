@@ -5,7 +5,7 @@ import { getGithubInsights } from './github';
 import { getGitlabInsights } from './gitlab';
 import { getLastFMInsights } from './last-fm';
 
-export const run = async () => {
+export const run = async (): Promise<void> => {
 	await getGithubInsights();
 
 	log('-----');

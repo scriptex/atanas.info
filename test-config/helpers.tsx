@@ -56,7 +56,7 @@ export const snapshotTest = (Component: ComponentType, buttonSelector?: string):
 	});
 };
 
-export const mockAudioContext = () => {
+export const mockAudioContext = (): jest.Mock => {
 	const mockConnect = jest.fn();
 
 	const mockgetByteFrequencyData = jest.fn();
@@ -81,12 +81,12 @@ export const mockAudioContext = () => {
 		connect: mockChannelSplitterConnect
 	}));
 
-	const mockAudioContext = jest.fn(() => ({
+	const mockedAudioContext = jest.fn(() => ({
 		createAnalyser: mockcreateAnalyser,
 		createOscillator: mockcreateOscillator,
 		createChannelSplitter: mockcreateChannelSplitter,
 		createMediaElementSource: mockcreateMediaElementSource
 	}));
 
-	return mockAudioContext;
+	return mockedAudioContext;
 };
