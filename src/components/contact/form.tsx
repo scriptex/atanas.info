@@ -12,7 +12,7 @@ export const ContactForm: FC = () => {
 
 	return (
 		<>
-			<Script src="https://www.google.com/recaptcha/api.js" async defer />
+			<Script src="https://www.google.com/recaptcha/api.js" />
 
 			<h2>Send me your message</h2>
 
@@ -28,7 +28,7 @@ export const ContactForm: FC = () => {
 				<textarea name="message" id="message" cols={30} rows={10} required />
 			</div>
 
-			<div className="g-recaptcha" data-sitekey="6LeBnpkhAAAAAC-CeFw7NoOJMDifWeCeTulUuieB" />
+			<div className="g-recaptcha" data-sitekey="6LdYTk0kAAAAALhR23W9CoNliT4pQgQOLV4YcJbm" />
 		</>
 	);
 };
