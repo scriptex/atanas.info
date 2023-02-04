@@ -1,4 +1,4 @@
-# https://atanas.info
+# [atanas.info](https://atanas.info)
 
 [![Travis CI](https://travis-ci.com/scriptex/atanas.info.svg?branch=master)](https://travis-ci.com/scriptex/atanas.info)
 [![Circle CI](https://circleci.com/gh/scriptex/atanas.info.svg?style=svg)](https://circleci.com/gh/scriptex/atanas.info)
@@ -15,7 +15,30 @@
 
 > My personal website
 
-A PWA built with Typescript, PostCSS, React, D3, BabylonJS, NodeJS, NextJS, Vercel, Puppeteer, Cloudinary, Houdini and more.
+A fullstack progressive web app built with
+
+-   Typescript
+-   PostCSS
+-   Markdown/MDX
+-   Javascript
+-   Bash
+-   MJML
+-   Vercel
+-   NodeJS
+-   TS Node
+-   NextJS
+-   Cloudinary
+-   Puppeteer
+-   MongoDB
+-   React
+-   D3
+-   BabylonJS
+-   Houdini
+-   ITCSS
+-   ESLint
+-   Stylelint
+-   Prettier
+-   Jest
 
 ## Visitor stats
 
