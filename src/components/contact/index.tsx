@@ -1,9 +1,9 @@
 import { FC, useState, useContext, ChangeEvent, FormEvent, useCallback } from 'react';
 
 import { Button } from '@components';
+import { Status } from '@scripts/types';
 import { AppContext } from '@pages/_app';
 import { composeClassName } from '@scripts/shared';
-import { Status, FormData } from '@scripts/types';
 
 type Props = {
 	initialStatus?: Status;
@@ -12,57 +12,49 @@ type Props = {
 const honeypot = process.env.NEXT_PUBLIC_HONEYPOT_VALUE!;
 
 export const Contact: FC<Readonly<Props>> = ({ initialStatus = Status.DEFAULT }) => {
+	const [email, setEmail] = useState('');
 	const [status, setStatus] = useState(initialStatus);
+	const [message, setMessage] = useState('');
 	const [errorMessage, setErrorMessage] = useState('');
 	const { contactVisible, setContactVisible } = useContext(AppContext);
 
-	const [email, setEmail] = useState('');
-	const [message, setMessage] = useState('');
-
 	const onSubmit = useCallback(
-		async (
-			data: FormData,
-			setStatus: (status: Status) => void,
-			setErrorMessage: (message: string) => void
-		): Promise<void> => {
+		async (e: FormEvent): Promise<void> => {
+			e.preventDefault();
+
 			const genericErrorMessage = 'Something went wrong. Please try again.';
 
-			await fetch('/api/mail', {
-				method: 'POST',
-				body: JSON.stringify(data)
-			})
-				.then((r: Response) => r.json())
-				.then(result => {
-					if (result.error) {
-						setStatus(Status.ERROR);
-						setErrorMessage(result.error?.response?.body?.message || genericErrorMessage);
-					} else {
-						setStatus(Status.SUCCESS);
-					}
-				})
-				.catch(() => {
-					setStatus(Status.ERROR);
-					setErrorMessage(genericErrorMessage);
+			try {
+				const response = await fetch('/api/mail', {
+					method: 'POST',
+					body: JSON.stringify({ email, message, honeypot })
 				});
+				const result = await response.json();
+
+				if (result.error) {
+					setStatus(Status.ERROR);
+					setErrorMessage(result.error.response?.body?.message || genericErrorMessage);
+				} else {
+					setStatus(Status.SUCCESS);
+				}
+			} catch (e) {
+				setStatus(Status.ERROR);
+				setErrorMessage(genericErrorMessage);
+			}
 		},
-		[]
+		[email, message]
 	);
 
 	return (
-		<form
-			onSubmit={async (e: FormEvent): Promise<void> => {
-				e.preventDefault();
-
-				await onSubmit({ email, message, honeypot }, setStatus, setErrorMessage);
-			}}
-			className={composeClassName('c-contact', contactVisible ? ['visible'] : [])}
-		>
+		<form onSubmit={onSubmit} className={composeClassName('c-contact', contactVisible ? ['visible'] : [])}>
 			<button
 				type="button"
 				onClick={() => {
+					setEmail('');
+					setMessage('');
+					setErrorMessage('');
 					setStatus(Status.DEFAULT);
 					setContactVisible(false);
-					setErrorMessage('');
 				}}
 				className="c-contact__close"
 			>
@@ -91,10 +83,10 @@ export const Contact: FC<Readonly<Props>> = ({ initialStatus = Status.DEFAULT })
 							<label htmlFor="message">Message:</label>
 
 							<textarea
-								name="message"
 								id="message"
 								cols={30}
 								rows={10}
+								name="message"
 								value={message}
 								required
 								onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setMessage(e.target.value)}
