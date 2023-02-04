@@ -1,6 +1,6 @@
 import { act } from '@testing-library/react';
 
-import { Status } from '@src/components/contact/utils';
+import { Status } from '@scripts/types';
 import { Contact } from '@components';
 import { AppContext } from '@pages/_app';
 import { test, snapshotTest } from '@test-config/helpers';

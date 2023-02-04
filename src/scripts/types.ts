@@ -70,3 +70,15 @@ export type GitlabInsights = {
 export type ReactChild = string | ReactNode | ReactNode[];
 
 export type ReactChildren = ReactChild | ReactChild[];
+
+export enum Status {
+	ERROR = 'ERROR',
+	SUCCESS = 'SUCCESS',
+	DEFAULT = 'DEFAULT'
+}
+
+export type FormData = {
+	email: string;
+	message: string;
+	honeypot: string;
+};

@@ -692,9 +692,7 @@ exports[` component Should render the  component 1`] = `
     </section>
   </main>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact"
-    method="POST"
   >
     <button
       class="c-contact__close"
@@ -721,6 +719,7 @@ exports[` component Should render the  component 1`] = `
           name="email"
           required=""
           type="email"
+          value=""
         />
       </div>
       <div
@@ -739,9 +738,10 @@ exports[` component Should render the  component 1`] = `
           rows="10"
         />
       </div>
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdYTk0kAAAAALhR23W9CoNliT4pQgQOLV4YcJbm"
+      <input
+        name="field"
+        type="hidden"
+        value=""
       />
       <div
         class="c-contact__actions"
@@ -2026,9 +2026,7 @@ exports[` component Should render the  component 2`] = `
     </section>
   </main>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact"
-    method="POST"
   >
     <button
       class="c-contact__close"
@@ -2055,6 +2053,7 @@ exports[` component Should render the  component 2`] = `
           name="email"
           required=""
           type="email"
+          value=""
         />
       </div>
       <div
@@ -2073,9 +2072,10 @@ exports[` component Should render the  component 2`] = `
           rows="10"
         />
       </div>
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdYTk0kAAAAALhR23W9CoNliT4pQgQOLV4YcJbm"
+      <input
+        name="field"
+        type="hidden"
+        value=""
       />
       <div
         class="c-contact__actions"
@@ -3360,9 +3360,7 @@ exports[` component Should render the  component 3`] = `
     </section>
   </main>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact"
-    method="POST"
   >
     <button
       class="c-contact__close"
@@ -3389,6 +3387,7 @@ exports[` component Should render the  component 3`] = `
           name="email"
           required=""
           type="email"
+          value=""
         />
       </div>
       <div
@@ -3407,9 +3406,10 @@ exports[` component Should render the  component 3`] = `
           rows="10"
         />
       </div>
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdYTk0kAAAAALhR23W9CoNliT4pQgQOLV4YcJbm"
+      <input
+        name="field"
+        type="hidden"
+        value=""
       />
       <div
         class="c-contact__actions"
@@ -4694,9 +4694,7 @@ exports[` component Should render the  component 4`] = `
     </section>
   </main>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact"
-    method="POST"
   >
     <button
       class="c-contact__close"
@@ -4723,6 +4721,7 @@ exports[` component Should render the  component 4`] = `
           name="email"
           required=""
           type="email"
+          value=""
         />
       </div>
       <div
@@ -4741,9 +4740,10 @@ exports[` component Should render the  component 4`] = `
           rows="10"
         />
       </div>
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdYTk0kAAAAALhR23W9CoNliT4pQgQOLV4YcJbm"
+      <input
+        name="field"
+        type="hidden"
+        value=""
       />
       <div
         class="c-contact__actions"
@@ -6028,9 +6028,7 @@ exports[` component Should render the  component 5`] = `
     </section>
   </main>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact"
-    method="POST"
   >
     <button
       class="c-contact__close"
@@ -6057,6 +6055,7 @@ exports[` component Should render the  component 5`] = `
           name="email"
           required=""
           type="email"
+          value=""
         />
       </div>
       <div
@@ -6075,9 +6074,10 @@ exports[` component Should render the  component 5`] = `
           rows="10"
         />
       </div>
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdYTk0kAAAAALhR23W9CoNliT4pQgQOLV4YcJbm"
+      <input
+        name="field"
+        type="hidden"
+        value=""
       />
       <div
         class="c-contact__actions"
@@ -7362,9 +7362,7 @@ exports[` component Should render the  component 6`] = `
     </section>
   </main>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact"
-    method="POST"
   >
     <button
       class="c-contact__close"
@@ -7391,6 +7389,7 @@ exports[` component Should render the  component 6`] = `
           name="email"
           required=""
           type="email"
+          value=""
         />
       </div>
       <div
@@ -7409,9 +7408,10 @@ exports[` component Should render the  component 6`] = `
           rows="10"
         />
       </div>
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdYTk0kAAAAALhR23W9CoNliT4pQgQOLV4YcJbm"
+      <input
+        name="field"
+        type="hidden"
+        value=""
       />
       <div
         class="c-contact__actions"
@@ -8696,9 +8696,7 @@ exports[` component Should render the  component 7`] = `
     </section>
   </main>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact"
-    method="POST"
   >
     <button
       class="c-contact__close"
@@ -8725,6 +8723,7 @@ exports[` component Should render the  component 7`] = `
           name="email"
           required=""
           type="email"
+          value=""
         />
       </div>
       <div
@@ -8743,9 +8742,10 @@ exports[` component Should render the  component 7`] = `
           rows="10"
         />
       </div>
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdYTk0kAAAAALhR23W9CoNliT4pQgQOLV4YcJbm"
+      <input
+        name="field"
+        type="hidden"
+        value=""
       />
       <div
         class="c-contact__actions"
@@ -10030,9 +10030,7 @@ exports[` component Should render the  component 8`] = `
     </section>
   </main>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact"
-    method="POST"
   >
     <button
       class="c-contact__close"
@@ -10059,6 +10057,7 @@ exports[` component Should render the  component 8`] = `
           name="email"
           required=""
           type="email"
+          value=""
         />
       </div>
       <div
@@ -10077,9 +10076,10 @@ exports[` component Should render the  component 8`] = `
           rows="10"
         />
       </div>
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdYTk0kAAAAALhR23W9CoNliT4pQgQOLV4YcJbm"
+      <input
+        name="field"
+        type="hidden"
+        value=""
       />
       <div
         class="c-contact__actions"

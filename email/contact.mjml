@@ -1,0 +1,15 @@
+<mjml>
+	<mj-body>
+		<mj-section>
+			<mj-column>
+				<mj-image width="100px" src="https://atanas.info/images/icons/icon.png"></mj-image>
+				<mj-divider border-color="#ef4c23"></mj-divider>
+				<mj-text font-size="24px" color="#ef4c23" font-family="helvetica">
+					A new email received from {{ email }}
+				</mj-text>
+				<mj-divider border-color="#ef4c23"></mj-divider>
+				<mj-text font-size="20px" color="#ef4c23" font-family="helvetica"> {{ message }} </mj-text>
+			</mj-column>
+		</mj-section>
+	</mj-body>
+</mjml>

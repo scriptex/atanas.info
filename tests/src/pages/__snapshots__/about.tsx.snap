@@ -1018,9 +1018,7 @@ exports[`About component Should render the About component 1`] = `
     </section>
   </main>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact"
-    method="POST"
   >
     <button
       class="c-contact__close"
@@ -1047,6 +1045,7 @@ exports[`About component Should render the About component 1`] = `
           name="email"
           required=""
           type="email"
+          value=""
         />
       </div>
       <div
@@ -1065,9 +1064,10 @@ exports[`About component Should render the About component 1`] = `
           rows="10"
         />
       </div>
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdYTk0kAAAAALhR23W9CoNliT4pQgQOLV4YcJbm"
+      <input
+        name="field"
+        type="hidden"
+        value=""
       />
       <div
         class="c-contact__actions"
@@ -2678,9 +2678,7 @@ exports[`Tests the About page when offline 1`] = `
     </section>
   </main>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact"
-    method="POST"
   >
     <button
       class="c-contact__close"
@@ -2707,6 +2705,7 @@ exports[`Tests the About page when offline 1`] = `
           name="email"
           required=""
           type="email"
+          value=""
         />
       </div>
       <div
@@ -2725,9 +2724,10 @@ exports[`Tests the About page when offline 1`] = `
           rows="10"
         />
       </div>
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdYTk0kAAAAALhR23W9CoNliT4pQgQOLV4YcJbm"
+      <input
+        name="field"
+        type="hidden"
+        value=""
       />
       <div
         class="c-contact__actions"
