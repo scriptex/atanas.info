@@ -1,4 +1,4 @@
-# https://atanas.info
+# [atanas.info](https://atanas.info)
 
 [![Travis CI](https://travis-ci.com/scriptex/atanas.info.svg?branch=master)](https://travis-ci.com/scriptex/atanas.info)
 [![Circle CI](https://circleci.com/gh/scriptex/atanas.info.svg?style=svg)](https://circleci.com/gh/scriptex/atanas.info)
@@ -15,7 +15,31 @@
 
 > My personal website
 
-A PWA built with Typescript, PostCSS, React, D3, BabylonJS, NodeJS, NextJS, Vercel, Puppeteer, Cloudinary, Houdini and more.
+A fullstack progressive web app built with
+
+-   [Typescript](https://www.typescriptlang.org/)
+-   [PostCSS](https://postcss.org/)
+-   [Markdown](https://www.markdownguide.org/)/[MDX](https://mdxjs.com/)
+-   [Javascript](https://www.javascript.com/)
+-   [Bash](https://www.gnu.org/software/bash/)
+-   [MJML](https://mjml.io/)
+-   [Vercel](https://vercel.com/)
+-   [NodeJS](https://nodejs.org/)
+-   [TS Node](https://typestrong.org/ts-node/)
+-   [NextJS](https://nextjs.org/)
+-   [Cloudinary](https://cloudinary.com/)
+-   [Puppeteer](https://pptr.dev/)
+-   [MongoDB](https://www.mongodb.com/)
+-   [React](https://reactjs.org/)
+-   [D3](https://d3js.org/)
+-   [BabylonJS](https://www.babylonjs.com/)
+-   [Houdini](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Houdini)
+-   [ITCSS](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)
+-   [ESLint](https://eslint.org/)
+-   [Stylelint](https://stylelint.io/)
+-   [Prettier](https://prettier.io/)
+-   [Jest](https://jestjs.io/)
+-   [Husky](https://typicode.github.io/husky/)
 
 ## Visitor stats
 

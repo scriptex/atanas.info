@@ -2533,9 +2533,7 @@ exports[`PortfolioMobileApps component Should render the PortfolioMobileApps com
     </section>
   </main>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact"
-    method="POST"
   >
     <button
       class="c-contact__close"
@@ -2562,6 +2560,7 @@ exports[`PortfolioMobileApps component Should render the PortfolioMobileApps com
           name="email"
           required=""
           type="email"
+          value=""
         />
       </div>
       <div
@@ -2580,9 +2579,10 @@ exports[`PortfolioMobileApps component Should render the PortfolioMobileApps com
           rows="10"
         />
       </div>
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdYTk0kAAAAALhR23W9CoNliT4pQgQOLV4YcJbm"
+      <input
+        name="field"
+        type="hidden"
+        value=""
       />
       <div
         class="c-contact__actions"

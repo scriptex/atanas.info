@@ -3,9 +3,7 @@
 exports[` component Should render the  component 1`] = `
 <DocumentFragment>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact c-contact--visible"
-    method="POST"
   >
     <button
       class="c-contact__close"
@@ -32,6 +30,7 @@ exports[` component Should render the  component 1`] = `
           name="email"
           required=""
           type="email"
+          value=""
         />
       </div>
       <div
@@ -50,9 +49,10 @@ exports[` component Should render the  component 1`] = `
           rows="10"
         />
       </div>
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdYTk0kAAAAALhR23W9CoNliT4pQgQOLV4YcJbm"
+      <input
+        name="field"
+        type="hidden"
+        value=""
       />
       <div
         class="c-contact__actions"
@@ -72,9 +72,7 @@ exports[` component Should render the  component 1`] = `
 exports[` component Should render the  component 2`] = `
 <DocumentFragment>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact"
-    method="POST"
   >
     <button
       class="c-contact__close"
@@ -101,6 +99,7 @@ exports[` component Should render the  component 2`] = `
           name="email"
           required=""
           type="email"
+          value=""
         />
       </div>
       <div
@@ -119,9 +118,10 @@ exports[` component Should render the  component 2`] = `
           rows="10"
         />
       </div>
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdYTk0kAAAAALhR23W9CoNliT4pQgQOLV4YcJbm"
+      <input
+        name="field"
+        type="hidden"
+        value=""
       />
       <div
         class="c-contact__actions"
@@ -144,9 +144,7 @@ exports[` component Should render the  component 2`] = `
 exports[` component Should render the  component 3`] = `
 <DocumentFragment>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact"
-    method="POST"
   >
     <button
       class="c-contact__close"
@@ -180,9 +178,7 @@ exports[` component Should unmount the  component 3`] = `<DocumentFragment />`;
 exports[`Contact component Should render the Contact component 1`] = `
 <DocumentFragment>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact"
-    method="POST"
   >
     <button
       class="c-contact__close"
@@ -209,6 +205,7 @@ exports[`Contact component Should render the Contact component 1`] = `
           name="email"
           required=""
           type="email"
+          value=""
         />
       </div>
       <div
@@ -227,9 +224,10 @@ exports[`Contact component Should render the Contact component 1`] = `
           rows="10"
         />
       </div>
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdYTk0kAAAAALhR23W9CoNliT4pQgQOLV4YcJbm"
+      <input
+        name="field"
+        type="hidden"
+        value=""
       />
       <div
         class="c-contact__actions"
@@ -249,9 +247,7 @@ exports[`Contact component Should render the Contact component 1`] = `
 exports[`Contact component Should render the Contact component 2`] = `
 <DocumentFragment>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact"
-    method="POST"
   >
     <button
       class="c-contact__close"
@@ -278,6 +274,7 @@ exports[`Contact component Should render the Contact component 2`] = `
           name="email"
           required=""
           type="email"
+          value=""
         />
       </div>
       <div
@@ -296,9 +293,10 @@ exports[`Contact component Should render the Contact component 2`] = `
           rows="10"
         />
       </div>
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdYTk0kAAAAALhR23W9CoNliT4pQgQOLV4YcJbm"
+      <input
+        name="field"
+        type="hidden"
+        value=""
       />
       <div
         class="c-contact__actions"
@@ -320,9 +318,7 @@ exports[`Contact component Should unmount the Contact component 1`] = `<Document
 exports[`Tests Contact submission 1`] = `
 <DocumentFragment>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact"
-    method="POST"
   >
     <button
       class="c-contact__close"
@@ -349,6 +345,7 @@ exports[`Tests Contact submission 1`] = `
           name="email"
           required=""
           type="email"
+          value=""
         />
       </div>
       <div
@@ -367,9 +364,10 @@ exports[`Tests Contact submission 1`] = `
           rows="10"
         />
       </div>
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdYTk0kAAAAALhR23W9CoNliT4pQgQOLV4YcJbm"
+      <input
+        name="field"
+        type="hidden"
+        value=""
       />
       <div
         class="c-contact__actions"
@@ -389,9 +387,7 @@ exports[`Tests Contact submission 1`] = `
 exports[`Tests Contact submission 2`] = `
 <DocumentFragment>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact"
-    method="POST"
   >
     <button
       class="c-contact__close"
@@ -418,6 +414,7 @@ exports[`Tests Contact submission 2`] = `
           name="email"
           required=""
           type="email"
+          value=""
         />
       </div>
       <div
@@ -436,9 +433,10 @@ exports[`Tests Contact submission 2`] = `
           rows="10"
         />
       </div>
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LdYTk0kAAAAALhR23W9CoNliT4pQgQOLV4YcJbm"
+      <input
+        name="field"
+        type="hidden"
+        value=""
       />
       <div
         class="c-contact__actions"
@@ -452,7 +450,7 @@ exports[`Tests Contact submission 2`] = `
         <p
           class="c-contact__error"
         >
-          Something went wrong!
+          Something went wrong. Please try again.
         </p>
       </div>
     </div>
@@ -463,9 +461,7 @@ exports[`Tests Contact submission 2`] = `
 exports[`Tests Contact submission 3`] = `
 <DocumentFragment>
   <form
-    action="https://formspree.io/meqrwbvd"
     class="c-contact"
-    method="POST"
   >
     <button
       class="c-contact__close"

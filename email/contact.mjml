@@ -1,0 +1,33 @@
+<mjml>
+	<mj-head>
+		<mj-attributes>
+			<mj-all font-family="Arial, Helvetica" />
+
+			<mj-text color="#000" padding="0" />
+
+			<mj-divider border-color="#ef4c23" padding="20px 0"></mj-divider>
+		</mj-attributes>
+	</mj-head>
+
+	<mj-body>
+		<mj-section background-color="#fff">
+			<mj-column padding="20px">
+				<mj-image width="100px" src="https://atanas.info/images/icons/icon.png"></mj-image>
+
+				<mj-divider></mj-divider>
+
+				<mj-text font-size="24px" >
+					A new email received from {{ email }}
+				</mj-text>
+
+				<mj-divider></mj-divider>
+
+				<mj-text font-size="20px" >{{ message }}</mj-text>
+
+				<mj-divider></mj-divider>
+
+				<mj-text font-size="16px" >This email was sent from the contact form in Atanas Atanasov's portfolio website (https://atanas.info).</mj-text>
+			</mj-column>
+		</mj-section>
+	</mj-body>
+</mjml>
