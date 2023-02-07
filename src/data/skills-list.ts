@@ -105,6 +105,7 @@ export const skills: Skill[] = [
 	{ text: 'PostHTML', icon: 'posthtml', fill: '#fff', since: 2016, ...defaultSize },
 	{ text: 'Postman', icon: 'postman', fill: '#FF6C37', since: 2019, ...defaultSize },
 	{ text: 'Prettier', icon: 'prettier', fill: '#F7B93E', since: 2014, ...defaultSize },
+	{ text: 'Preact', icon: 'preact', fill: '#673AB8', since: 2022, ...defaultSize },
 	{ text: 'Puppeteer', icon: 'puppeteer', fill: '#40B5A4', since: 2019, ...defaultSize },
 	{ text: 'React', icon: 'react', fill: '#61DAFB', since: 2016, ...defaultSize },
 	{ text: 'React Router', icon: 'reactrouter', fill: '#CA4245', since: 2016, ...defaultSize },

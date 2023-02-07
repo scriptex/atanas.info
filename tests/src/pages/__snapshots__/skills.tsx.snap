@@ -2854,6 +2854,33 @@ exports[`Skills component Should render the Skills component 1`] = `
                 class="c-skill"
               >
                 <figure
+                  style="background-color: rgb(103, 58, 184);"
+                >
+                  <svg
+                    class="c-skill__icon"
+                    height="34"
+                    width="34"
+                  >
+                    <use
+                      xlink:href="#svg-preact"
+                    />
+                  </svg>
+                </figure>
+                <p>
+                  <strong>
+                    Preact
+                  </strong>
+                  Since 2022
+                </p>
+              </div>
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6 md-4 lg-3"
+            >
+              <div
+                class="c-skill"
+              >
+                <figure
                   style="background-color: rgb(64, 181, 164);"
                 >
                   <svg
@@ -7341,6 +7368,33 @@ exports[`Skills component Should render the Skills component 2`] = `
                     Prettier
                   </strong>
                   Since 2014
+                </p>
+              </div>
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6 md-4 lg-3"
+            >
+              <div
+                class="c-skill"
+              >
+                <figure
+                  style="background-color: rgb(103, 58, 184);"
+                >
+                  <svg
+                    class="c-skill__icon"
+                    height="34"
+                    width="34"
+                  >
+                    <use
+                      xlink:href="#svg-preact"
+                    />
+                  </svg>
+                </figure>
+                <p>
+                  <strong>
+                    Preact
+                  </strong>
+                  Since 2022
                 </p>
               </div>
             </div>
