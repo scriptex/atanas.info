@@ -3,6 +3,25 @@ import NextHead from 'next/head';
 
 import { MetaTag, metaTags, LinkTag, linkTags } from '@data/meta';
 
+const customStyle = `
+@font-face {
+	font-family: 'fontello';
+	src: url('/fonts/fontello.eot?73938081');
+	src: url('/fonts/fontello.eot?73938081#iefix') format('embedded-opentype'),
+		url('/fonts/fontello.woff2?73938081') format('woff2'), url('/fonts/fontello.woff?73938081') format('woff'),
+		url('/fonts/fontello.ttf?73938081') format('truetype'),
+		url('/fonts/fontello.svg?73938081#fontello') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+	@font-face {
+		font-family: 'fontello';
+		src: url('/fonts/fontello.svg?73938081#fontello') format('svg');
+	}
+}`;
+
 export const Head: FC = () => (
 	<NextHead>
 		<meta
@@ -17,6 +36,8 @@ export const Head: FC = () => (
 		{linkTags.map((data: LinkTag, i: number) => (
 			<link {...data} key={i} />
 		))}
+
+		<style id="icon-font" type="text/css" dangerouslySetInnerHTML={{ __html: customStyle }} />
 	</NextHead>
 );
 

@@ -3,6 +3,11 @@ declare module '*.svg?url' {
 	export default content;
 }
 
+declare module '*.woff2' {
+	const content: string;
+	export default content;
+}
+
 declare module '@codersrank/activity/codersrank-activity.min' {
 	const content: any;
 	export default content;

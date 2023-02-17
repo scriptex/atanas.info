@@ -15,6 +15,7 @@
 		"isolatedModules": true,
 		"noEmitHelpers": true,
 		"jsx": "preserve",
+		"jsxImportSource": "@emotion/react",
 		"lib": ["DOM", "DOM.Iterable", "ESNext"],
 		"module": "ESNext",
 		"moduleResolution": "Node",

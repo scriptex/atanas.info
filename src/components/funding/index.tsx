@@ -23,7 +23,7 @@ export const Funding: FC = () => {
 
 	return (
 		<div className={composeClassName('c-funding', open ? ['open'] : [])}>
-			<Button onClick={() => setOpen(true)} className="c-btn--small">
+			<Button onClick={() => setOpen(true)} variant="small">
 				Sponsor me
 			</Button>
 

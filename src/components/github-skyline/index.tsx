@@ -25,7 +25,7 @@ export const GithubSkyline: FC<Readonly<GithubSkylineProps>> = (props: GithubSky
 		<div className={composeClassName('c-skyline__item', expanded ? ['expanded'] : [])}>
 			{loading && <Loader />}
 
-			<Button type="button" onClick={() => setExpanded(!expanded)} className="c-btn--small">
+			<Button type="button" onClick={() => setExpanded(!expanded)} variant="small">
 				{expanded ? 'Collapse' : 'Expand'}
 			</Button>
 

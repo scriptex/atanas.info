@@ -9,7 +9,9 @@ module.exports = {
 		'postcss-each': true,
 		'postcss-for': true,
 		'postcss-mixins': true,
-		'postcss-color-mod-function': true,
+		'postcss-color-mod-function': {
+			importFrom: './src/styles/variables.css'
+		},
 		'postcss-extend': true,
 		'postcss-utilities': true,
 		'postcss-flexbugs-fixes': true,

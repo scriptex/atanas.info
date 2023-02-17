@@ -1,9 +1,17 @@
+import { Global } from '@emotion/react';
 import { Analytics } from '@vercel/analytics/react';
 import type { AppProps } from 'next/app';
 import { FC, useMemo, useState, useEffect, createContext } from 'react';
 
 import { Head } from '@components';
+import { globalStyles } from '@scripts/styles';
 import { Theme, onThemeChange, setThemeClassName } from '@scripts/shared';
+
+import 'itcss/main.css';
+import 'slick-carousel/slick/slick.css';
+import 'react-vertical-timeline-component/style.min.css';
+import 'react-round-carousel/dist/index.css';
+import 'prismjs/themes/prism-tomorrow.css';
 
 import '@styles/index.css';
 
@@ -48,6 +56,8 @@ export const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
 	return (
 		<>
 			<Head />
+
+			<Global styles={globalStyles} />
 
 			<AppContext.Provider value={value}>
 				<Component {...pageProps} />

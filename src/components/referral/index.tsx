@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
 import Infographic from '@svg/braintrust-referral.svg';
-import { ExternalLink } from '@components';
+import { Button } from '@components';
 
 export const FooterReferral: FC = () => (
 	<div className="c-footer__referral">
@@ -12,9 +12,15 @@ export const FooterReferral: FC = () => (
 
 			<p>Your work. Your network. Your future.</p>
 
-			<ExternalLink href="https://app.usebraintrust.com/r/atanas1/" className="c-btn c-btn--small">
+			<Button
+				rel="noopener noreferrer"
+				type="link"
+				href="https://app.usebraintrust.com/r/atanas1/"
+				target="_blank"
+				variant="small"
+			>
 				Apply to Braintrust
-			</ExternalLink>
+			</Button>
 		</div>
 	</div>
 );
