@@ -1,11 +1,10 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
 import { mobileApps } from '@data/projects';
 import { portfolioSectionProps } from '.';
-import { Layout, Section, PortfolioSliders } from '@components';
+import { Button, Layout, Section, PortfolioSliders } from '@components';
 
 export const PortfolioMobileApps: FC = () => (
 	<Layout>
@@ -16,9 +15,9 @@ export const PortfolioMobileApps: FC = () => (
 		<Section
 			{...portfolioSectionProps}
 			actions={
-				<Link href={Routes.PORTFOLIO} className="c-btn">
+				<Button href={Routes.PORTFOLIO} type="link">
 					Go back
-				</Link>
+				</Button>
 			}
 		>
 			<h3>Mobile applications</h3>

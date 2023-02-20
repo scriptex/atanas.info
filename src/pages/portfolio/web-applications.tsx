@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
-import Link from 'next/link';
 import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
@@ -8,7 +7,7 @@ import { WebProject } from '@data/projects';
 import { portfolioSectionProps } from '.';
 import { useNetworkState, composeClassName } from '@scripts/shared';
 import { getData, MongoDBProps, queryScreenshots } from '@lib/mongodb';
-import { Icon, Layout, Loader, Section, ExternalLink } from '@components';
+import { Icon, Button, Layout, Loader, Section, ExternalLink } from '@components';
 
 type Props = {
 	data: WebProject[];
@@ -26,9 +25,9 @@ export const PortfolioWebApps: FC<Readonly<Props>> = ({ data = [] }: Props) => {
 			<Section
 				{...portfolioSectionProps}
 				actions={
-					<Link href={Routes.PORTFOLIO} className="c-btn">
+					<Button href={Routes.PORTFOLIO} type="link">
 						Go back
-					</Link>
+					</Button>
 				}
 			>
 				<h3>Web applications</h3>

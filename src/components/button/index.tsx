@@ -1,11 +1,13 @@
+import Link from 'next/link';
 import type { FC, ReactNode } from 'react';
 
 import { css } from '@emotion/react';
+import { onHover } from '@scripts/styles';
 
 type Props = {
 	rel?: string;
 	href?: string;
-	type?: 'submit' | 'reset' | 'button' | 'link';
+	type?: 'submit' | 'reset' | 'button' | 'link' | 'anchor';
 	target?: string;
 	variant?: 'small' | 'large';
 	children?: ReactNode | string | Array<ReactNode | string>;
@@ -30,11 +32,15 @@ export const Button: FC<Readonly<Props>> = ({
 	};
 
 	return type === 'link' ? (
+		<Link {...commonProps} css={styles(variant)} href={href!} onClick={onClick}>
+			{children}
+		</Link>
+	) : type === 'anchor' ? (
 		<a {...commonProps} css={styles(variant)} rel={rel} href={href} target={target} download={download}>
 			{children}
 		</a>
 	) : (
-		<button {...commonProps} type={type} onClick={onClick}>
+		<button {...commonProps} css={styles(variant)} type={type} onClick={onClick}>
 			{children}
 		</button>
 	);
@@ -58,7 +64,7 @@ const styles = (variant: Props['variant']) => css`
 	box-shadow: none;
 	appearance: none;
 
-	& .c-svg-external-link {
+	.c-svg-external-link {
 		margin-top: -0.1875em;
 		transition: none;
 	}
@@ -67,16 +73,16 @@ const styles = (variant: Props['variant']) => css`
 		color: var(--color-secondary);
 	}
 
-	@media (--hover) {
-		.c-btn:hover {
+	${onHover(css`
+		&:hover {
 			color: var(--color-action);
 			background-color: var(--color-primary);
 		}
 
-		.theme-light .c-btn:hover {
+		.theme-light &:hover {
 			background-color: var(--color-secondary);
 		}
-	}
+	`)}
 `;
 
 export default Button;

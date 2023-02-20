@@ -1,13 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
-import Link from 'next/link';
 import Modal from 'react-modal';
 import { FC, useState } from 'react';
 
 import { Routes } from '@data/routes';
 import { emailTemplates } from '@data/projects';
-import { Layout, Section } from '@components';
 import { portfolioSectionProps } from '.';
+import { Button, Layout, Section } from '@components';
 
 type Props = {
 	img: string;
@@ -40,9 +39,9 @@ export const PortfolioEmailTemplates: FC = () => (
 		<Section
 			{...portfolioSectionProps}
 			actions={
-				<Link href={Routes.PORTFOLIO} className="c-btn">
+				<Button href={Routes.PORTFOLIO} type="link">
 					Go back
-				</Link>
+				</Button>
 			}
 		>
 			<h3>Email Templates</h3>

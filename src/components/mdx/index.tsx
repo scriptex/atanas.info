@@ -1,9 +1,8 @@
-import Link from 'next/link';
 import Script from 'next/script';
 import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
-import { Lines, Section } from '@components';
+import { Lines, Button, Section } from '@components';
 
 type Props = {
 	id: string;
@@ -18,9 +17,9 @@ export const MDX: FC<Readonly<Props>> = ({ id, back, title, image, content }: Pr
 		id={id}
 		title={title}
 		actions={
-			<Link href={back} className="c-btn">
+			<Button href={back} type="link">
 				Go back
-			</Link>
+			</Button>
 		}
 		hasButton
 	>

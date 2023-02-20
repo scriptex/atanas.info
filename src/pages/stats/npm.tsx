@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import Link from 'next/link';
+
 import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
 import { sectionStatsProps } from '@scripts/stats';
-import { Layout, Section, ExternalLink } from '@components';
 import { getData, queryNPM, MongoDBProps } from '@lib/mongodb';
+import { Button, Layout, Section, ExternalLink } from '@components';
 
 type Package = {
 	name: string;
@@ -86,9 +86,9 @@ export const NPMStats: FC<Readonly<Props>> = ({ data }: Props) => {
 			<Section
 				{...sectionStatsProps}
 				actions={
-					<Link href={Routes.STATS} className="c-btn">
+					<Button href={Routes.PORTFOLIO} type="link">
 						Go back
-					</Link>
+					</Button>
 				}
 				hasShell={false}
 			>

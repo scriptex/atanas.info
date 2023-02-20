@@ -1,8 +1,8 @@
 import { FC, ReactNode, useContext, useState, CSSProperties } from 'react';
 
 import { AppContext } from '@pages/_app';
+import { Icon, Button } from '@components';
 import { composeClassName } from '@scripts/shared';
-import { Icon, Button, ExternalLink } from '@components';
 
 export type Props = {
 	id: string;
@@ -59,7 +59,7 @@ export const SectionElements: FC<Readonly<Props>> = ({
 
 					<ul className={composeClassName('c-section__actions-list', open ? ['open'] : [])}>
 						<li>
-							<Button type="button" onClick={onClose} className="c-section__actions-close">
+							<Button type="button" onClick={onClose}>
 								Close
 							</Button>
 						</li>
@@ -79,27 +79,23 @@ export const SectionElements: FC<Readonly<Props>> = ({
 						</li>
 
 						<li>
-							<ExternalLink
-								href="https://app.usebraintrust.com/talent/782/"
-								className="c-btn"
-								onClick={onClose}
-							>
+							<Button href="https://app.usebraintrust.com/talent/782/" type="anchor" onClick={onClose}>
 								<Icon name="svg-braintrust" className="c-section__actions-icon" />
 								<span>Hire me on</span>
 								<strong>Braintrust</strong>
-							</ExternalLink>
+							</Button>
 						</li>
 
 						<li>
-							<ExternalLink
+							<Button
 								href="https://www.toptal.com/resume/atanas-atanasov"
-								className="c-btn"
+								type="anchor"
 								onClick={onClose}
 							>
 								<Icon name="svg-toptal" className="c-section__actions-icon" />
 								<span>Hire me on</span>
 								<strong>Toptal</strong>
-							</ExternalLink>
+							</Button>
 						</li>
 					</ul>
 

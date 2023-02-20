@@ -1,8 +1,7 @@
-import Link from 'next/link';
 import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
-import { EmptyPage } from '@components';
+import { Button, EmptyPage } from '@components';
 
 export const ErrorPage: FC = () => (
 	<EmptyPage>
@@ -11,9 +10,9 @@ export const ErrorPage: FC = () => (
 
 			<p>Page not found</p>
 
-			<Link href={Routes.HOME} className="c-btn">
+			<Button href={Routes.HOME} type="link">
 				Go to Home page
-			</Link>
+			</Button>
 		</div>
 	</EmptyPage>
 );

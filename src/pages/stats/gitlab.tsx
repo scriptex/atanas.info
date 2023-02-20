@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import { FC, useRef, useEffect } from 'react';
 
 import { Routes } from '@data/routes';
@@ -7,8 +6,8 @@ import gitlabCalendarData from '@data/gitlab-calendar.json';
 import { Ref, formatDate } from '@scripts/shared';
 import { GitlabInsights, GitlabRepository } from '@scripts/types';
 import { getData, queryGitlab, MongoDBProps } from '@lib/mongodb';
-import { Layout, Section, StatsEntry, StatsError } from '@components';
 import { addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
+import { Button, Layout, Section, StatsEntry, StatsError } from '@components';
 
 export const extractGitlabData = ({ general, calendar, repositories }: GitlabInsights): GeneralInsight[] => {
 	if (!repositories || !general || !calendar) {
@@ -106,9 +105,9 @@ export const GitlabStats: FC<Readonly<Props>> = ({ data }: Props) => {
 			<Section
 				{...sectionStatsProps}
 				actions={
-					<Link href={Routes.STATS} className="c-btn">
+					<Button href={Routes.STATS} type="link">
 						Go back
-					</Link>
+					</Button>
 				}
 				hasShell={false}
 			>

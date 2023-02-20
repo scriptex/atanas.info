@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { FC, useRef, useState, useEffect } from 'react';
 
@@ -113,9 +112,9 @@ export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
 			<Section
 				{...sectionStatsProps}
 				actions={
-					<Link href={Routes.STATS} className="c-btn">
+					<Button href={Routes.STATS} type="link">
 						Go back
-					</Link>
+					</Button>
 				}
 				hasShell={false}
 			>
@@ -149,7 +148,7 @@ export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
 										<ul>
 											{YEARS.map((year: string, index: number) => (
 												<li key={year} className={current === index ? 'current' : undefined}>
-													<Button onClick={() => setCurrent(index)} className="c-btn--small">
+													<Button onClick={() => setCurrent(index)} variant="small">
 														{year}
 													</Button>
 												</li>

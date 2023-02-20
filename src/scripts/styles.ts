@@ -1,5 +1,5 @@
-import { css } from '@emotion/react';
 import { Property } from 'csstype';
+import { css, SerializedStyles } from '@emotion/react';
 
 type FlexOptions = {
 	wrap: Property.FlexWrap;
@@ -58,10 +58,10 @@ export const cssCustomProperties = css`
 	}
 
 	.theme-light {
-		--color-base: var(--base);
-		--color-primary: var(--secondary);
-		--color-secondary: var(--primary);
-		--color-action: var(--action);
+		--color-base: rgb(var(--base));
+		--color-primary: rgb(var(--secondary));
+		--color-secondary: rgb(var(--primary));
+		--color-action: rgb(var(--action));
 		--color-calendar-graph-day-border: rgba(27, 31, 35, 0.3);
 	}
 `;
@@ -376,4 +376,55 @@ export const globalStyles = css`
 	${fontStyles};
 	${keyframes};
 	${mainStyles}
+`;
+
+export const onHover = (style: SerializedStyles) => css`
+	@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover) {
+		${style};
+	}
+`;
+
+export const slanted = (): SerializedStyles => css`
+	color: var(--color-primary);
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	background: var(--color-action);
+
+	@supports (background: paint(slanted-background)) {
+		--slanted-background-color: var(--color-action);
+		--slanted-background-opacity: 0.35;
+		padding: 0.5rem 2rem 0.5rem 1rem;
+		background: paint(slanted-background);
+	}
+`;
+
+export const polygon = (sides: number): SerializedStyles => css`
+	--avatar-sides: ${sides};
+	--avatar-angle: 0deg;
+	border-radius: 0;
+	mask-image: paint(avatar-polygon);
+`;
+
+export const centered = css`
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+`;
+
+export const overlay = css`
+	content: '';
+	${centered};
+	z-index: 1;
+`;
+
+export const withLoader = css`
+	position: relative;
+
+	& > div {
+		${centered};
+		z-index: 1;
+	}
 `;

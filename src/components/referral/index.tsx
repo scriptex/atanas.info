@@ -14,7 +14,7 @@ export const FooterReferral: FC = () => (
 
 			<Button
 				rel="noopener noreferrer"
-				type="link"
+				type="anchor"
 				href="https://app.usebraintrust.com/r/atanas1/"
 				target="_blank"
 				variant="small"

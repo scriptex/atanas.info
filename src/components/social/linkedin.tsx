@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import type { FC } from 'react';
 
-import { ExternalLink } from '@components';
+import { Button, ExternalLink } from '@components';
 
 export const LinkedInBadge: FC = () => (
 	<div className="linkedin-badge bubbles">
@@ -27,9 +27,9 @@ export const LinkedInBadge: FC = () => (
 				</ExternalLink>
 			</h5>
 
-			<ExternalLink href="https://linkedin.com/in/scriptex" className="c-btn c-btn--small">
+			<Button href="https://linkedin.com/in/scriptex" type="anchor" variant="small">
 				View profile
-			</ExternalLink>
+			</Button>
 		</div>
 	</div>
 );
