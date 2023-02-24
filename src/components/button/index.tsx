@@ -73,7 +73,7 @@ const styles = (variant: Props['variant']) => css`
 		color: var(--color-secondary);
 	}
 
-	${onHover(css`
+	${onHover`
 		&:hover {
 			color: var(--color-action);
 			background-color: var(--color-primary);
@@ -82,7 +82,7 @@ const styles = (variant: Props['variant']) => css`
 		.theme-light &:hover {
 			background-color: var(--color-secondary);
 		}
-	`)}
+	`}
 `;
 
 export default Button;

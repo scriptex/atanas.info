@@ -63,7 +63,7 @@ export const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
 				<Component {...pageProps} />
 			</AppContext.Provider>
 
-			<Analytics />
+			<Analytics debug={false} />
 		</>
 	);
 };

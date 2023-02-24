@@ -1,13 +1,15 @@
 import { Property } from 'csstype';
 import { css, SerializedStyles } from '@emotion/react';
 
-type FlexOptions = {
+export type FlexOptions = {
 	wrap: Property.FlexWrap;
 	display: 'flex' | 'inline-flex';
 	direction: Property.FlexDirection;
 	alignItems: Property.AlignItems;
 	justifyContent: Property.JustifyContent;
 };
+
+export type HoudiniPaints = 'bubbles' | 'circles' | 'parallelowow' | 'bytemare' | 'blotto';
 
 export const flex = ({
 	wrap = 'nowrap',
@@ -21,6 +23,45 @@ export const flex = ({
 	align-items: ${alignItems};
 	justify-content: ${justifyContent};
 `;
+
+export const onHover = (style: TemplateStringsArray) => css`
+	@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover) {
+		${css(style)};
+	}
+`;
+
+export const onTabletLandscape = (style: TemplateStringsArray) => css`
+	@media (max-width: 1279px) {
+		${css(style)};
+	}
+`;
+
+export const onTabletPortrait = (style: TemplateStringsArray) => css`
+	@media (max-width: 1023px) {
+		${css(style)};
+	}
+`;
+
+export const onMobile = (style: TemplateStringsArray) => css`
+	@media (max-width: 767px) {
+		${css(style)};
+	}
+`;
+
+export const prefersReducedMotion = (style: TemplateStringsArray) => css`
+	@media (prefers-reduced-motion: reduce) {
+		${css(style)};
+	}
+`;
+
+export const withHoudiniSupport = (paint: HoudiniPaints) => (style: TemplateStringsArray) =>
+	css`
+		@supports (background-image: paint(${paint})) {
+			.${paint} {
+				${css(style)};
+			}
+		}
+	`;
 
 export const cssCustomProperties = css`
 	:root {
@@ -327,47 +368,37 @@ export const mainStyles = css`
 		background-attachment: initial;
 	}
 
-	@supports (background-image: paint(bubbles)) {
-		.bubbles {
-			background-image: paint(bubbles);
-			--bubbles-background: var(--color-secondary);
-		}
-	}
+	${withHoudiniSupport('bubbles')`
+		background-image: paint(bubbles);
+		--bubbles-background: var(--color-secondary);
+	`};
 
-	@supports (background-image: paint(circles)) {
-		.circles {
-			background-image: paint(circles);
-		}
-	}
+	${withHoudiniSupport('circles')`
+		background-image: paint(circles);
+	`};
 
-	@supports (background-image: paint(parallelowow)) {
-		.parallelowow {
-			background-color: var(--color-action);
-			background-image: paint(parallelowow);
-		}
-	}
+	${withHoudiniSupport('parallelowow')`wow {
+		background-color: var(--color-action);
+		background-image: paint(parallelowow);
+	`};
 
-	@supports (background-image: paint(bytemare)) {
-		.bytemare {
-			background-color: var(--color-action);
-			background-image: paint(bytemare);
-		}
-	}
+	${withHoudiniSupport('bytemare')`{
+		background-color: var(--color-action);
+		background-image: paint(bytemare);
+	`};
 
-	@supports (background-image: paint(blotto)) {
-		.blotto {
-			background-image: paint(blotto);
-		}
-	}
+	${withHoudiniSupport('blotto')`
+		background-image: paint(blotto);
+	`};
 
-	@media (prefers-reduced-motion: reduce) {
+	${prefersReducedMotion`
 		* {
 			animation-duration: 0.01ms !important;
 			animation-iteration-count: 1 !important;
 			transition-duration: 0.01ms !important;
 			scroll-behavior: auto !important;
 		}
-	}
+	`}
 `;
 
 export const globalStyles = css`
@@ -376,12 +407,6 @@ export const globalStyles = css`
 	${fontStyles};
 	${keyframes};
 	${mainStyles}
-`;
-
-export const onHover = (style: SerializedStyles) => css`
-	@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover) {
-		${style};
-	}
 `;
 
 export const slanted = (): SerializedStyles => css`
