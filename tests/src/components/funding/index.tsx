@@ -6,27 +6,27 @@ import { test, snapshotTest } from '@test-config/helpers';
 snapshotTest(Funding);
 
 it('Should test the Funding lifecycle', async () => {
-	const { asFragment, container } = await test(Funding);
+	const { asFragment, container, getByTestId } = await test(Funding);
 
 	expect(asFragment()).toMatchSnapshot();
 
-	const testOnClick = async (selector: string) => {
+	const testOnClick = async (element: Element | Node | Document | Window) => {
 		await waitFor(() => {
-			fireEvent.click(container.querySelector(selector)!);
+			fireEvent.click(element);
 		});
 
 		expect(asFragment()).toMatchSnapshot();
 	};
 
-	await testOnClick('.c-btn--small');
+	await testOnClick(getByTestId('funding-toggle'));
 
-	await testOnClick('.c-funding__backdrop');
+	await testOnClick(getByTestId('funding-backdrop'));
 
-	await testOnClick('.c-btn--small');
+	await testOnClick(getByTestId('funding-toggle'));
 
-	await testOnClick('.c-funding__trigger');
+	await testOnClick(getByTestId('funding-trigger'));
 
-	await testOnClick('.c-btn--small');
+	await testOnClick(getByTestId('funding-toggle'));
 
 	window.prompt = jest.fn();
 

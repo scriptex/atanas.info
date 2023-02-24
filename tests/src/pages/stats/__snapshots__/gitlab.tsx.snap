@@ -4,10 +4,9 @@ exports[` component Should render the  component 1`] = `
 <DocumentFragment>
   <svg />
   <header
-    class="c-header"
+    class="css-fkx1w5-Header"
   >
     <a
-      class="c-logo"
       href="/"
       title="Back to homepage"
     >
@@ -20,20 +19,23 @@ exports[` component Should render the  component 1`] = `
       </svg>
     </a>
     <div
-      class="c-header__actions"
+      class="css-r7evta-Header"
     >
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
         name="menu-toggle"
       >
-        <span />
+        <span
+          style="flex-direction: row;"
+        />
         <span />
         <span />
       </button>
       <button
         aria-label="Toggle theme"
-        class="c-theme-switcher"
+        class="css-w09wyy-ThemeSwitcher"
+        data-testid="c-theme-switcher"
         name="theme-toggle"
       >
         <svg
@@ -685,7 +687,7 @@ exports[` component Should render the  component 1`] = `
         class="c-section__actions"
       >
         <button
-          class="c-btn"
+          class="css-8n53dr-Button"
           type="button"
         >
           Get in touch
@@ -695,7 +697,7 @@ exports[` component Should render the  component 1`] = `
         >
           <li>
             <button
-              class="c-btn c-section__actions-close"
+              class="css-8n53dr-Button"
               type="button"
             >
               Close
@@ -703,7 +705,7 @@ exports[` component Should render the  component 1`] = `
           </li>
           <li>
             <button
-              class="c-btn"
+              class="css-8n53dr-Button"
               type="button"
             >
               <svg
@@ -723,10 +725,8 @@ exports[` component Should render the  component 1`] = `
           </li>
           <li>
             <a
-              class="c-btn"
+              class="css-8n53dr-Button"
               href="https://app.usebraintrust.com/talent/782/"
-              rel="noopener noreferrer"
-              target="_blank"
             >
               <svg
                 class="c-section__actions-icon"
@@ -741,21 +741,12 @@ exports[` component Should render the  component 1`] = `
               <strong>
                 Braintrust
               </strong>
-              <svg
-                class="c-svg-external-link"
-              >
-                <use
-                  xlink:href="#svg-external-link"
-                />
-              </svg>
             </a>
           </li>
           <li>
             <a
-              class="c-btn"
+              class="css-8n53dr-Button"
               href="https://www.toptal.com/resume/atanas-atanasov"
-              rel="noopener noreferrer"
-              target="_blank"
             >
               <svg
                 class="c-section__actions-icon"
@@ -770,13 +761,6 @@ exports[` component Should render the  component 1`] = `
               <strong>
                 Toptal
               </strong>
-              <svg
-                class="c-svg-external-link"
-              >
-                <use
-                  xlink:href="#svg-external-link"
-                />
-              </svg>
             </a>
           </li>
         </ul>
@@ -784,7 +768,7 @@ exports[` component Should render the  component 1`] = `
           class="visible-xs-block"
         />
         <a
-          class="c-btn"
+          class="css-8n53dr-Button"
           href="/stats"
         >
           Go back
@@ -848,7 +832,7 @@ exports[` component Should render the  component 1`] = `
         class="c-contact__actions"
       >
         <button
-          class="c-btn"
+          class="css-8n53dr-Button"
           type="submit"
         >
           Send message
@@ -1064,10 +1048,10 @@ exports[` component Should render the  component 1`] = `
     </div>
   </nav>
   <footer
-    class="c-footer"
+    class="css-utvn03-Footer"
   >
     <div
-      class="o-shell o-shell--flex"
+      class="o-shell o-shell--flex css-lvdrk3-Footer"
     >
       <p>
         © 2023 Atanas Atanasov. 
@@ -1124,12 +1108,14 @@ exports[` component Should render the  component 1`] = `
         class="c-funding"
       >
         <button
-          class="c-btn c-btn--small"
+          class="css-1njbmdj-Button"
+          data-testid="funding-toggle"
         >
           Sponsor me
         </button>
         <div
           class="c-funding__backdrop"
+          data-testid="funding-backdrop"
         />
         <svg
           class="c-funding__knob"
@@ -1337,6 +1323,7 @@ exports[` component Should render the  component 1`] = `
           </g>
           <g
             class="c-funding__trigger"
+            data-testid="funding-trigger"
             role="button"
           >
             <circle
@@ -1403,7 +1390,7 @@ exports[` component Should render the  component 1`] = `
         </div>
       </div>
       <div
-        class="c-footer__referral"
+        class="css-dj343e-FooterReferral"
       >
         <svg />
         <div>
@@ -1414,19 +1401,12 @@ exports[` component Should render the  component 1`] = `
             Your work. Your network. Your future.
           </p>
           <a
-            class="c-btn c-btn--small"
+            class="css-1njbmdj-Button"
             href="https://app.usebraintrust.com/r/atanas1/"
             rel="noopener noreferrer"
             target="_blank"
           >
             Apply to Braintrust
-            <svg
-              class="c-svg-external-link"
-            >
-              <use
-                xlink:href="#svg-external-link"
-              />
-            </svg>
           </a>
         </div>
       </div>
@@ -1439,10 +1419,9 @@ exports[` component Should render the  component 2`] = `
 <DocumentFragment>
   <svg />
   <header
-    class="c-header"
+    class="css-fkx1w5-Header"
   >
     <a
-      class="c-logo"
       href="/"
       title="Back to homepage"
     >
@@ -1455,20 +1434,23 @@ exports[` component Should render the  component 2`] = `
       </svg>
     </a>
     <div
-      class="c-header__actions"
+      class="css-r7evta-Header"
     >
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
         name="menu-toggle"
       >
-        <span />
+        <span
+          style="flex-direction: row;"
+        />
         <span />
         <span />
       </button>
       <button
         aria-label="Toggle theme"
-        class="c-theme-switcher"
+        class="css-w09wyy-ThemeSwitcher"
+        data-testid="c-theme-switcher"
         name="theme-toggle"
       >
         <svg
@@ -2120,7 +2102,7 @@ exports[` component Should render the  component 2`] = `
         class="c-section__actions"
       >
         <button
-          class="c-btn"
+          class="css-8n53dr-Button"
           type="button"
         >
           Get in touch
@@ -2130,7 +2112,7 @@ exports[` component Should render the  component 2`] = `
         >
           <li>
             <button
-              class="c-btn c-section__actions-close"
+              class="css-8n53dr-Button"
               type="button"
             >
               Close
@@ -2138,7 +2120,7 @@ exports[` component Should render the  component 2`] = `
           </li>
           <li>
             <button
-              class="c-btn"
+              class="css-8n53dr-Button"
               type="button"
             >
               <svg
@@ -2158,10 +2140,8 @@ exports[` component Should render the  component 2`] = `
           </li>
           <li>
             <a
-              class="c-btn"
+              class="css-8n53dr-Button"
               href="https://app.usebraintrust.com/talent/782/"
-              rel="noopener noreferrer"
-              target="_blank"
             >
               <svg
                 class="c-section__actions-icon"
@@ -2176,21 +2156,12 @@ exports[` component Should render the  component 2`] = `
               <strong>
                 Braintrust
               </strong>
-              <svg
-                class="c-svg-external-link"
-              >
-                <use
-                  xlink:href="#svg-external-link"
-                />
-              </svg>
             </a>
           </li>
           <li>
             <a
-              class="c-btn"
+              class="css-8n53dr-Button"
               href="https://www.toptal.com/resume/atanas-atanasov"
-              rel="noopener noreferrer"
-              target="_blank"
             >
               <svg
                 class="c-section__actions-icon"
@@ -2205,13 +2176,6 @@ exports[` component Should render the  component 2`] = `
               <strong>
                 Toptal
               </strong>
-              <svg
-                class="c-svg-external-link"
-              >
-                <use
-                  xlink:href="#svg-external-link"
-                />
-              </svg>
             </a>
           </li>
         </ul>
@@ -2219,7 +2183,7 @@ exports[` component Should render the  component 2`] = `
           class="visible-xs-block"
         />
         <a
-          class="c-btn"
+          class="css-8n53dr-Button"
           href="/stats"
         >
           Go back
@@ -2283,7 +2247,7 @@ exports[` component Should render the  component 2`] = `
         class="c-contact__actions"
       >
         <button
-          class="c-btn"
+          class="css-8n53dr-Button"
           type="submit"
         >
           Send message
@@ -2499,10 +2463,10 @@ exports[` component Should render the  component 2`] = `
     </div>
   </nav>
   <footer
-    class="c-footer"
+    class="css-utvn03-Footer"
   >
     <div
-      class="o-shell o-shell--flex"
+      class="o-shell o-shell--flex css-lvdrk3-Footer"
     >
       <p>
         © 2023 Atanas Atanasov. 
@@ -2559,12 +2523,14 @@ exports[` component Should render the  component 2`] = `
         class="c-funding"
       >
         <button
-          class="c-btn c-btn--small"
+          class="css-1njbmdj-Button"
+          data-testid="funding-toggle"
         >
           Sponsor me
         </button>
         <div
           class="c-funding__backdrop"
+          data-testid="funding-backdrop"
         />
         <svg
           class="c-funding__knob"
@@ -2772,6 +2738,7 @@ exports[` component Should render the  component 2`] = `
           </g>
           <g
             class="c-funding__trigger"
+            data-testid="funding-trigger"
             role="button"
           >
             <circle
@@ -2838,7 +2805,7 @@ exports[` component Should render the  component 2`] = `
         </div>
       </div>
       <div
-        class="c-footer__referral"
+        class="css-dj343e-FooterReferral"
       >
         <svg />
         <div>
@@ -2849,19 +2816,12 @@ exports[` component Should render the  component 2`] = `
             Your work. Your network. Your future.
           </p>
           <a
-            class="c-btn c-btn--small"
+            class="css-1njbmdj-Button"
             href="https://app.usebraintrust.com/r/atanas1/"
             rel="noopener noreferrer"
             target="_blank"
           >
             Apply to Braintrust
-            <svg
-              class="c-svg-external-link"
-            >
-              <use
-                xlink:href="#svg-external-link"
-              />
-            </svg>
           </a>
         </div>
       </div>
@@ -2874,10 +2834,9 @@ exports[` component Should render the  component 3`] = `
 <DocumentFragment>
   <svg />
   <header
-    class="c-header"
+    class="css-fkx1w5-Header"
   >
     <a
-      class="c-logo"
       href="/"
       title="Back to homepage"
     >
@@ -2890,20 +2849,23 @@ exports[` component Should render the  component 3`] = `
       </svg>
     </a>
     <div
-      class="c-header__actions"
+      class="css-r7evta-Header"
     >
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
         name="menu-toggle"
       >
-        <span />
+        <span
+          style="flex-direction: row;"
+        />
         <span />
         <span />
       </button>
       <button
         aria-label="Toggle theme"
-        class="c-theme-switcher"
+        class="css-w09wyy-ThemeSwitcher"
+        data-testid="c-theme-switcher"
         name="theme-toggle"
       >
         <svg
@@ -3426,7 +3388,7 @@ exports[` component Should render the  component 3`] = `
         class="c-section__actions"
       >
         <button
-          class="c-btn"
+          class="css-8n53dr-Button"
           type="button"
         >
           Get in touch
@@ -3436,7 +3398,7 @@ exports[` component Should render the  component 3`] = `
         >
           <li>
             <button
-              class="c-btn c-section__actions-close"
+              class="css-8n53dr-Button"
               type="button"
             >
               Close
@@ -3444,7 +3406,7 @@ exports[` component Should render the  component 3`] = `
           </li>
           <li>
             <button
-              class="c-btn"
+              class="css-8n53dr-Button"
               type="button"
             >
               <svg
@@ -3464,10 +3426,8 @@ exports[` component Should render the  component 3`] = `
           </li>
           <li>
             <a
-              class="c-btn"
+              class="css-8n53dr-Button"
               href="https://app.usebraintrust.com/talent/782/"
-              rel="noopener noreferrer"
-              target="_blank"
             >
               <svg
                 class="c-section__actions-icon"
@@ -3482,21 +3442,12 @@ exports[` component Should render the  component 3`] = `
               <strong>
                 Braintrust
               </strong>
-              <svg
-                class="c-svg-external-link"
-              >
-                <use
-                  xlink:href="#svg-external-link"
-                />
-              </svg>
             </a>
           </li>
           <li>
             <a
-              class="c-btn"
+              class="css-8n53dr-Button"
               href="https://www.toptal.com/resume/atanas-atanasov"
-              rel="noopener noreferrer"
-              target="_blank"
             >
               <svg
                 class="c-section__actions-icon"
@@ -3511,13 +3462,6 @@ exports[` component Should render the  component 3`] = `
               <strong>
                 Toptal
               </strong>
-              <svg
-                class="c-svg-external-link"
-              >
-                <use
-                  xlink:href="#svg-external-link"
-                />
-              </svg>
             </a>
           </li>
         </ul>
@@ -3525,7 +3469,7 @@ exports[` component Should render the  component 3`] = `
           class="visible-xs-block"
         />
         <a
-          class="c-btn"
+          class="css-8n53dr-Button"
           href="/stats"
         >
           Go back
@@ -3589,7 +3533,7 @@ exports[` component Should render the  component 3`] = `
         class="c-contact__actions"
       >
         <button
-          class="c-btn"
+          class="css-8n53dr-Button"
           type="submit"
         >
           Send message
@@ -3805,10 +3749,10 @@ exports[` component Should render the  component 3`] = `
     </div>
   </nav>
   <footer
-    class="c-footer"
+    class="css-utvn03-Footer"
   >
     <div
-      class="o-shell o-shell--flex"
+      class="o-shell o-shell--flex css-lvdrk3-Footer"
     >
       <p>
         © 2023 Atanas Atanasov. 
@@ -3865,12 +3809,14 @@ exports[` component Should render the  component 3`] = `
         class="c-funding"
       >
         <button
-          class="c-btn c-btn--small"
+          class="css-1njbmdj-Button"
+          data-testid="funding-toggle"
         >
           Sponsor me
         </button>
         <div
           class="c-funding__backdrop"
+          data-testid="funding-backdrop"
         />
         <svg
           class="c-funding__knob"
@@ -4078,6 +4024,7 @@ exports[` component Should render the  component 3`] = `
           </g>
           <g
             class="c-funding__trigger"
+            data-testid="funding-trigger"
             role="button"
           >
             <circle
@@ -4144,7 +4091,7 @@ exports[` component Should render the  component 3`] = `
         </div>
       </div>
       <div
-        class="c-footer__referral"
+        class="css-dj343e-FooterReferral"
       >
         <svg />
         <div>
@@ -4155,19 +4102,12 @@ exports[` component Should render the  component 3`] = `
             Your work. Your network. Your future.
           </p>
           <a
-            class="c-btn c-btn--small"
+            class="css-1njbmdj-Button"
             href="https://app.usebraintrust.com/r/atanas1/"
             rel="noopener noreferrer"
             target="_blank"
           >
             Apply to Braintrust
-            <svg
-              class="c-svg-external-link"
-            >
-              <use
-                xlink:href="#svg-external-link"
-              />
-            </svg>
           </a>
         </div>
       </div>
@@ -4186,10 +4126,9 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
 <DocumentFragment>
   <svg />
   <header
-    class="c-header"
+    class="css-fkx1w5-Header"
   >
     <a
-      class="c-logo"
       href="/"
       title="Back to homepage"
     >
@@ -4202,20 +4141,23 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
       </svg>
     </a>
     <div
-      class="c-header__actions"
+      class="css-r7evta-Header"
     >
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
         name="menu-toggle"
       >
-        <span />
+        <span
+          style="flex-direction: row;"
+        />
         <span />
         <span />
       </button>
       <button
         aria-label="Toggle theme"
-        class="c-theme-switcher"
+        class="css-w09wyy-ThemeSwitcher"
+        data-testid="c-theme-switcher"
         name="theme-toggle"
       >
         <svg
@@ -4867,7 +4809,7 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
         class="c-section__actions"
       >
         <button
-          class="c-btn"
+          class="css-8n53dr-Button"
           type="button"
         >
           Get in touch
@@ -4877,7 +4819,7 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
         >
           <li>
             <button
-              class="c-btn c-section__actions-close"
+              class="css-8n53dr-Button"
               type="button"
             >
               Close
@@ -4885,7 +4827,7 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
           </li>
           <li>
             <button
-              class="c-btn"
+              class="css-8n53dr-Button"
               type="button"
             >
               <svg
@@ -4905,10 +4847,8 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
           </li>
           <li>
             <a
-              class="c-btn"
+              class="css-8n53dr-Button"
               href="https://app.usebraintrust.com/talent/782/"
-              rel="noopener noreferrer"
-              target="_blank"
             >
               <svg
                 class="c-section__actions-icon"
@@ -4923,21 +4863,12 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
               <strong>
                 Braintrust
               </strong>
-              <svg
-                class="c-svg-external-link"
-              >
-                <use
-                  xlink:href="#svg-external-link"
-                />
-              </svg>
             </a>
           </li>
           <li>
             <a
-              class="c-btn"
+              class="css-8n53dr-Button"
               href="https://www.toptal.com/resume/atanas-atanasov"
-              rel="noopener noreferrer"
-              target="_blank"
             >
               <svg
                 class="c-section__actions-icon"
@@ -4952,13 +4883,6 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
               <strong>
                 Toptal
               </strong>
-              <svg
-                class="c-svg-external-link"
-              >
-                <use
-                  xlink:href="#svg-external-link"
-                />
-              </svg>
             </a>
           </li>
         </ul>
@@ -4966,7 +4890,7 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
           class="visible-xs-block"
         />
         <a
-          class="c-btn"
+          class="css-8n53dr-Button"
           href="/stats"
         >
           Go back
@@ -5030,7 +4954,7 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
         class="c-contact__actions"
       >
         <button
-          class="c-btn"
+          class="css-8n53dr-Button"
           type="submit"
         >
           Send message
@@ -5246,10 +5170,10 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
     </div>
   </nav>
   <footer
-    class="c-footer"
+    class="css-utvn03-Footer"
   >
     <div
-      class="o-shell o-shell--flex"
+      class="o-shell o-shell--flex css-lvdrk3-Footer"
     >
       <p>
         © 2023 Atanas Atanasov. 
@@ -5306,12 +5230,14 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
         class="c-funding"
       >
         <button
-          class="c-btn c-btn--small"
+          class="css-1njbmdj-Button"
+          data-testid="funding-toggle"
         >
           Sponsor me
         </button>
         <div
           class="c-funding__backdrop"
+          data-testid="funding-backdrop"
         />
         <svg
           class="c-funding__knob"
@@ -5519,6 +5445,7 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
           </g>
           <g
             class="c-funding__trigger"
+            data-testid="funding-trigger"
             role="button"
           >
             <circle
@@ -5585,7 +5512,7 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
         </div>
       </div>
       <div
-        class="c-footer__referral"
+        class="css-dj343e-FooterReferral"
       >
         <svg />
         <div>
@@ -5596,19 +5523,12 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
             Your work. Your network. Your future.
           </p>
           <a
-            class="c-btn c-btn--small"
+            class="css-1njbmdj-Button"
             href="https://app.usebraintrust.com/r/atanas1/"
             rel="noopener noreferrer"
             target="_blank"
           >
             Apply to Braintrust
-            <svg
-              class="c-svg-external-link"
-            >
-              <use
-                xlink:href="#svg-external-link"
-              />
-            </svg>
           </a>
         </div>
       </div>

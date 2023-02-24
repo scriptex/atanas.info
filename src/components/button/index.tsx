@@ -8,6 +8,7 @@ type Props = {
 	rel?: string;
 	href?: string;
 	type?: 'submit' | 'reset' | 'button' | 'link' | 'anchor';
+	testId?: string;
 	target?: string;
 	variant?: 'small' | 'large';
 	children?: ReactNode | string | Array<ReactNode | string>;
@@ -21,6 +22,7 @@ export const Button: FC<Readonly<Props>> = ({
 	href,
 	type,
 	target,
+	testId,
 	variant,
 	children,
 	download,
@@ -28,7 +30,8 @@ export const Button: FC<Readonly<Props>> = ({
 	onClick
 }: Props) => {
 	const commonProps = {
-		'aria-label': ariaLabel
+		'aria-label': ariaLabel,
+		...(testId ? { 'data-testid': testId } : {})
 	};
 
 	return type === 'link' ? (

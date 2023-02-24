@@ -123,4 +123,8 @@ jest.mock('next/router', () => ({
 	}))
 }));
 
+jest.mock('@vercel/analytics/react', () => ({
+	Analytics: jest.fn(() => 'Vercel Analytics')
+}));
+
 jest.spyOn(shared, 'waitForElement').mockReturnValue(Promise.resolve(null));

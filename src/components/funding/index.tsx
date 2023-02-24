@@ -23,11 +23,11 @@ export const Funding: FC = () => {
 
 	return (
 		<div className={composeClassName('c-funding', open ? ['open'] : [])}>
-			<Button onClick={() => setOpen(true)} variant="small">
+			<Button onClick={() => setOpen(true)} variant="small" testId="funding-toggle">
 				Sponsor me
 			</Button>
 
-			<div className="c-funding__backdrop" onClick={() => setOpen(false)} />
+			<div className="c-funding__backdrop" onClick={() => setOpen(false)} data-testid="funding-backdrop" />
 
 			<svg viewBox="-100 -100 700 700" ref={knob} className="c-funding__knob">
 				<g>
@@ -36,7 +36,12 @@ export const Funding: FC = () => {
 					))}
 				</g>
 
-				<g className="c-funding__trigger" role="button" onClick={() => setOpen(false)}>
+				<g
+					className="c-funding__trigger"
+					role="button"
+					onClick={() => setOpen(false)}
+					data-testid="funding-trigger"
+				>
 					<circle cx="250" cy="250" r="30" />
 
 					<text textAnchor="middle" x="250" y="260" fill="var(--color-primary)" fontSize="2.5em">

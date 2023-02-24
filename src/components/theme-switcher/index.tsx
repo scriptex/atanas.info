@@ -16,6 +16,7 @@ export const ThemeSwitcher: FC = () => (
 			html.classList.toggle('theme-light');
 		}}
 		aria-label="Toggle theme"
+		data-testid="c-theme-switcher"
 	>
 		<svg xmlns="http://www.w3.org/2000/svg" width={189} height={144} viewBox="0 0 189 144">
 			<g fill="none" transform="translate(3.576 .35)">

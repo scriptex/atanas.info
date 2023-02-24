@@ -63,7 +63,7 @@ exports[` component Should render the  component 1`] = `
         class="c-section__actions"
       >
         <button
-          class="c-btn"
+          class="css-8n53dr-Button"
           type="button"
         >
           Get in touch
@@ -73,7 +73,7 @@ exports[` component Should render the  component 1`] = `
         >
           <li>
             <button
-              class="c-btn c-section__actions-close"
+              class="css-8n53dr-Button"
               type="button"
             >
               Close
@@ -81,7 +81,7 @@ exports[` component Should render the  component 1`] = `
           </li>
           <li>
             <button
-              class="c-btn"
+              class="css-8n53dr-Button"
               type="button"
             >
               <svg
@@ -101,10 +101,8 @@ exports[` component Should render the  component 1`] = `
           </li>
           <li>
             <a
-              class="c-btn"
+              class="css-8n53dr-Button"
               href="https://app.usebraintrust.com/talent/782/"
-              rel="noopener noreferrer"
-              target="_blank"
             >
               <svg
                 class="c-section__actions-icon"
@@ -119,21 +117,12 @@ exports[` component Should render the  component 1`] = `
               <strong>
                 Braintrust
               </strong>
-              <svg
-                class="c-svg-external-link"
-              >
-                <use
-                  xlink:href="#svg-external-link"
-                />
-              </svg>
             </a>
           </li>
           <li>
             <a
-              class="c-btn"
+              class="css-8n53dr-Button"
               href="https://www.toptal.com/resume/atanas-atanasov"
-              rel="noopener noreferrer"
-              target="_blank"
             >
               <svg
                 class="c-section__actions-icon"
@@ -148,13 +137,6 @@ exports[` component Should render the  component 1`] = `
               <strong>
                 Toptal
               </strong>
-              <svg
-                class="c-svg-external-link"
-              >
-                <use
-                  xlink:href="#svg-external-link"
-                />
-              </svg>
             </a>
           </li>
         </ul>
@@ -162,7 +144,7 @@ exports[` component Should render the  component 1`] = `
           class="visible-xs-block"
         />
         <a
-          class="c-btn"
+          class="css-8n53dr-Button"
           href="/blog"
         >
           Go back

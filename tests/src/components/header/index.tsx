@@ -6,7 +6,7 @@ import { test, snapshotTest } from '@test-config/helpers';
 snapshotTest(Header);
 
 it('Should test the menu toggling', async () => {
-	const { asFragment, container } = await test(Header);
+	const { asFragment, container, getByTestId } = await test(Header);
 
 	expect(asFragment()).toMatchSnapshot();
 
@@ -18,7 +18,7 @@ it('Should test the menu toggling', async () => {
 
 	expect(asFragment()).toMatchSnapshot();
 
-	fireEvent.click(container.querySelector('.c-theme-switcher')!);
+	fireEvent.click(getByTestId('c-theme-switcher')!);
 
 	expect(asFragment()).toMatchSnapshot();
 });

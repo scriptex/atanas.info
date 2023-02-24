@@ -3,10 +3,9 @@
 exports[`Header component Should render the Header component 1`] = `
 <DocumentFragment>
   <header
-    class="c-header"
+    class="css-fkx1w5-Header"
   >
     <a
-      class="c-logo"
       href="/"
       title="Back to homepage"
     >
@@ -19,20 +18,23 @@ exports[`Header component Should render the Header component 1`] = `
       </svg>
     </a>
     <div
-      class="c-header__actions"
+      class="css-r7evta-Header"
     >
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
         name="menu-toggle"
       >
-        <span />
+        <span
+          style="flex-direction: row;"
+        />
         <span />
         <span />
       </button>
       <button
         aria-label="Toggle theme"
-        class="c-theme-switcher"
+        class="css-w09wyy-ThemeSwitcher"
+        data-testid="c-theme-switcher"
         name="theme-toggle"
       >
         <svg
@@ -523,10 +525,9 @@ exports[`Header component Should unmount the Header component 1`] = `<DocumentFr
 exports[`Should test the menu toggling 1`] = `
 <DocumentFragment>
   <header
-    class="c-header"
+    class="css-fkx1w5-Header"
   >
     <a
-      class="c-logo"
       href="/"
       title="Back to homepage"
     >
@@ -539,20 +540,23 @@ exports[`Should test the menu toggling 1`] = `
       </svg>
     </a>
     <div
-      class="c-header__actions"
+      class="css-r7evta-Header"
     >
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
         name="menu-toggle"
       >
-        <span />
+        <span
+          style="flex-direction: row;"
+        />
         <span />
         <span />
       </button>
       <button
         aria-label="Toggle theme"
-        class="c-theme-switcher"
+        class="css-w09wyy-ThemeSwitcher"
+        data-testid="c-theme-switcher"
         name="theme-toggle"
       >
         <svg
@@ -1041,10 +1045,9 @@ exports[`Should test the menu toggling 1`] = `
 exports[`Should test the menu toggling 2`] = `
 <DocumentFragment>
   <header
-    class="c-header c-header--open"
+    class="css-fkx1w5-Header"
   >
     <a
-      class="c-logo"
       href="/"
       title="Back to homepage"
     >
@@ -1057,20 +1060,23 @@ exports[`Should test the menu toggling 2`] = `
       </svg>
     </a>
     <div
-      class="c-header__actions"
+      class="css-r7evta-Header"
     >
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
         name="menu-toggle"
       >
-        <span />
+        <span
+          style="flex-direction: row;"
+        />
         <span />
         <span />
       </button>
       <button
         aria-label="Toggle theme"
-        class="c-theme-switcher"
+        class="css-w09wyy-ThemeSwitcher"
+        data-testid="c-theme-switcher"
         name="theme-toggle"
       >
         <svg
@@ -1559,10 +1565,9 @@ exports[`Should test the menu toggling 2`] = `
 exports[`Should test the menu toggling 3`] = `
 <DocumentFragment>
   <header
-    class="c-header"
+    class="css-fkx1w5-Header"
   >
     <a
-      class="c-logo"
       href="/"
       title="Back to homepage"
     >
@@ -1575,20 +1580,23 @@ exports[`Should test the menu toggling 3`] = `
       </svg>
     </a>
     <div
-      class="c-header__actions"
+      class="css-r7evta-Header"
     >
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
         name="menu-toggle"
       >
-        <span />
+        <span
+          style="flex-direction: row;"
+        />
         <span />
         <span />
       </button>
       <button
         aria-label="Toggle theme"
-        class="c-theme-switcher"
+        class="css-w09wyy-ThemeSwitcher"
+        data-testid="c-theme-switcher"
         name="theme-toggle"
       >
         <svg
@@ -2077,10 +2085,9 @@ exports[`Should test the menu toggling 3`] = `
 exports[`Should test the menu toggling 4`] = `
 <DocumentFragment>
   <header
-    class="c-header"
+    class="css-fkx1w5-Header"
   >
     <a
-      class="c-logo"
       href="/"
       title="Back to homepage"
     >
@@ -2093,20 +2100,23 @@ exports[`Should test the menu toggling 4`] = `
       </svg>
     </a>
     <div
-      class="c-header__actions"
+      class="css-r7evta-Header"
     >
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
         name="menu-toggle"
       >
-        <span />
+        <span
+          style="flex-direction: row;"
+        />
         <span />
         <span />
       </button>
       <button
         aria-label="Toggle theme"
-        class="c-theme-switcher"
+        class="css-w09wyy-ThemeSwitcher"
+        data-testid="c-theme-switcher"
         name="theme-toggle"
       >
         <svg

@@ -4,10 +4,9 @@ exports[`PortfolioAutomotiveApps component Should render the PortfolioAutomotive
 <DocumentFragment>
   <svg />
   <header
-    class="c-header"
+    class="css-fkx1w5-Header"
   >
     <a
-      class="c-logo"
       href="/"
       title="Back to homepage"
     >
@@ -20,20 +19,23 @@ exports[`PortfolioAutomotiveApps component Should render the PortfolioAutomotive
       </svg>
     </a>
     <div
-      class="c-header__actions"
+      class="css-r7evta-Header"
     >
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
         name="menu-toggle"
       >
-        <span />
+        <span
+          style="flex-direction: row;"
+        />
         <span />
         <span />
       </button>
       <button
         aria-label="Toggle theme"
-        class="c-theme-switcher"
+        class="css-w09wyy-ThemeSwitcher"
+        data-testid="c-theme-switcher"
         name="theme-toggle"
       >
         <svg
@@ -547,10 +549,10 @@ exports[`PortfolioAutomotiveApps component Should render the PortfolioAutomotive
             class="c-section__slider c-section__slider--fullwidth"
           >
             <div
-              class="c-loading"
+              class="css-9g2z7l-Loader"
             >
               <div
-                class="c-loader"
+                class="css-1o0ykwt-Loader"
               />
             </div>
             <a
@@ -992,10 +994,10 @@ exports[`PortfolioAutomotiveApps component Should render the PortfolioAutomotive
             class="c-section__slider c-section__slider--fullwidth"
           >
             <div
-              class="c-loading"
+              class="css-9g2z7l-Loader"
             >
               <div
-                class="c-loader"
+                class="css-1o0ykwt-Loader"
               />
             </div>
             <a
@@ -1278,7 +1280,7 @@ exports[`PortfolioAutomotiveApps component Should render the PortfolioAutomotive
           class="c-section__actions"
         >
           <button
-            class="c-btn"
+            class="css-8n53dr-Button"
             type="button"
           >
             Get in touch
@@ -1288,7 +1290,7 @@ exports[`PortfolioAutomotiveApps component Should render the PortfolioAutomotive
           >
             <li>
               <button
-                class="c-btn c-section__actions-close"
+                class="css-8n53dr-Button"
                 type="button"
               >
                 Close
@@ -1296,7 +1298,7 @@ exports[`PortfolioAutomotiveApps component Should render the PortfolioAutomotive
             </li>
             <li>
               <button
-                class="c-btn"
+                class="css-8n53dr-Button"
                 type="button"
               >
                 <svg
@@ -1316,10 +1318,8 @@ exports[`PortfolioAutomotiveApps component Should render the PortfolioAutomotive
             </li>
             <li>
               <a
-                class="c-btn"
+                class="css-8n53dr-Button"
                 href="https://app.usebraintrust.com/talent/782/"
-                rel="noopener noreferrer"
-                target="_blank"
               >
                 <svg
                   class="c-section__actions-icon"
@@ -1334,21 +1334,12 @@ exports[`PortfolioAutomotiveApps component Should render the PortfolioAutomotive
                 <strong>
                   Braintrust
                 </strong>
-                <svg
-                  class="c-svg-external-link"
-                >
-                  <use
-                    xlink:href="#svg-external-link"
-                  />
-                </svg>
               </a>
             </li>
             <li>
               <a
-                class="c-btn"
+                class="css-8n53dr-Button"
                 href="https://www.toptal.com/resume/atanas-atanasov"
-                rel="noopener noreferrer"
-                target="_blank"
               >
                 <svg
                   class="c-section__actions-icon"
@@ -1363,13 +1354,6 @@ exports[`PortfolioAutomotiveApps component Should render the PortfolioAutomotive
                 <strong>
                   Toptal
                 </strong>
-                <svg
-                  class="c-svg-external-link"
-                >
-                  <use
-                    xlink:href="#svg-external-link"
-                  />
-                </svg>
               </a>
             </li>
           </ul>
@@ -1377,7 +1361,7 @@ exports[`PortfolioAutomotiveApps component Should render the PortfolioAutomotive
             class="visible-xs-block"
           />
           <a
-            class="c-btn"
+            class="css-8n53dr-Button"
             href="/portfolio"
           >
             Go back
@@ -1442,7 +1426,7 @@ exports[`PortfolioAutomotiveApps component Should render the PortfolioAutomotive
         class="c-contact__actions"
       >
         <button
-          class="c-btn"
+          class="css-8n53dr-Button"
           type="submit"
         >
           Send message
@@ -1658,10 +1642,10 @@ exports[`PortfolioAutomotiveApps component Should render the PortfolioAutomotive
     </div>
   </nav>
   <footer
-    class="c-footer"
+    class="css-utvn03-Footer"
   >
     <div
-      class="o-shell o-shell--flex"
+      class="o-shell o-shell--flex css-lvdrk3-Footer"
     >
       <p>
         © 2023 Atanas Atanasov. 
@@ -1718,12 +1702,14 @@ exports[`PortfolioAutomotiveApps component Should render the PortfolioAutomotive
         class="c-funding"
       >
         <button
-          class="c-btn c-btn--small"
+          class="css-1njbmdj-Button"
+          data-testid="funding-toggle"
         >
           Sponsor me
         </button>
         <div
           class="c-funding__backdrop"
+          data-testid="funding-backdrop"
         />
         <svg
           class="c-funding__knob"
@@ -1931,6 +1917,7 @@ exports[`PortfolioAutomotiveApps component Should render the PortfolioAutomotive
           </g>
           <g
             class="c-funding__trigger"
+            data-testid="funding-trigger"
             role="button"
           >
             <circle
@@ -1997,7 +1984,7 @@ exports[`PortfolioAutomotiveApps component Should render the PortfolioAutomotive
         </div>
       </div>
       <div
-        class="c-footer__referral"
+        class="css-dj343e-FooterReferral"
       >
         <svg />
         <div>
@@ -2008,19 +1995,12 @@ exports[`PortfolioAutomotiveApps component Should render the PortfolioAutomotive
             Your work. Your network. Your future.
           </p>
           <a
-            class="c-btn c-btn--small"
+            class="css-1njbmdj-Button"
             href="https://app.usebraintrust.com/r/atanas1/"
             rel="noopener noreferrer"
             target="_blank"
           >
             Apply to Braintrust
-            <svg
-              class="c-svg-external-link"
-            >
-              <use
-                xlink:href="#svg-external-link"
-              />
-            </svg>
           </a>
         </div>
       </div>

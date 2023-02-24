@@ -3,10 +3,10 @@
 exports[`Footer component Should render the Footer component 1`] = `
 <DocumentFragment>
   <footer
-    class="c-footer"
+    class="css-utvn03-Footer"
   >
     <div
-      class="o-shell o-shell--flex"
+      class="o-shell o-shell--flex css-lvdrk3-Footer"
     >
       <p>
         © 2023 Atanas Atanasov. 
@@ -63,12 +63,14 @@ exports[`Footer component Should render the Footer component 1`] = `
         class="c-funding"
       >
         <button
-          class="c-btn c-btn--small"
+          class="css-1njbmdj-Button"
+          data-testid="funding-toggle"
         >
           Sponsor me
         </button>
         <div
           class="c-funding__backdrop"
+          data-testid="funding-backdrop"
         />
         <svg
           class="c-funding__knob"
@@ -276,6 +278,7 @@ exports[`Footer component Should render the Footer component 1`] = `
           </g>
           <g
             class="c-funding__trigger"
+            data-testid="funding-trigger"
             role="button"
           >
             <circle
@@ -342,7 +345,7 @@ exports[`Footer component Should render the Footer component 1`] = `
         </div>
       </div>
       <div
-        class="c-footer__referral"
+        class="css-dj343e-FooterReferral"
       >
         <svg />
         <div>
@@ -353,19 +356,12 @@ exports[`Footer component Should render the Footer component 1`] = `
             Your work. Your network. Your future.
           </p>
           <a
-            class="c-btn c-btn--small"
+            class="css-1njbmdj-Button"
             href="https://app.usebraintrust.com/r/atanas1/"
             rel="noopener noreferrer"
             target="_blank"
           >
             Apply to Braintrust
-            <svg
-              class="c-svg-external-link"
-            >
-              <use
-                xlink:href="#svg-external-link"
-              />
-            </svg>
           </a>
         </div>
       </div>

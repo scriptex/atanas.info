@@ -6,12 +6,14 @@ exports[`Funding component Should render the Funding component 1`] = `
     class="c-funding"
   >
     <button
-      class="c-btn c-btn--small"
+      class="css-1njbmdj-Button"
+      data-testid="funding-toggle"
     >
       Sponsor me
     </button>
     <div
       class="c-funding__backdrop"
+      data-testid="funding-backdrop"
     />
     <svg
       class="c-funding__knob"
@@ -219,6 +221,7 @@ exports[`Funding component Should render the Funding component 1`] = `
       </g>
       <g
         class="c-funding__trigger"
+        data-testid="funding-trigger"
         role="button"
       >
         <circle
@@ -295,12 +298,14 @@ exports[`Should test the Funding lifecycle 1`] = `
     class="c-funding"
   >
     <button
-      class="c-btn c-btn--small"
+      class="css-1njbmdj-Button"
+      data-testid="funding-toggle"
     >
       Sponsor me
     </button>
     <div
       class="c-funding__backdrop"
+      data-testid="funding-backdrop"
     />
     <svg
       class="c-funding__knob"
@@ -508,6 +513,7 @@ exports[`Should test the Funding lifecycle 1`] = `
       </g>
       <g
         class="c-funding__trigger"
+        data-testid="funding-trigger"
         role="button"
       >
         <circle
@@ -582,12 +588,14 @@ exports[`Should test the Funding lifecycle 2`] = `
     class="c-funding c-funding--open"
   >
     <button
-      class="c-btn c-btn--small"
+      class="css-1njbmdj-Button"
+      data-testid="funding-toggle"
     >
       Sponsor me
     </button>
     <div
       class="c-funding__backdrop"
+      data-testid="funding-backdrop"
     />
     <svg
       class="c-funding__knob"
@@ -795,6 +803,7 @@ exports[`Should test the Funding lifecycle 2`] = `
       </g>
       <g
         class="c-funding__trigger"
+        data-testid="funding-trigger"
         role="button"
       >
         <circle
@@ -869,12 +878,14 @@ exports[`Should test the Funding lifecycle 3`] = `
     class="c-funding"
   >
     <button
-      class="c-btn c-btn--small"
+      class="css-1njbmdj-Button"
+      data-testid="funding-toggle"
     >
       Sponsor me
     </button>
     <div
       class="c-funding__backdrop"
+      data-testid="funding-backdrop"
     />
     <svg
       class="c-funding__knob"
@@ -1082,6 +1093,7 @@ exports[`Should test the Funding lifecycle 3`] = `
       </g>
       <g
         class="c-funding__trigger"
+        data-testid="funding-trigger"
         role="button"
       >
         <circle
@@ -1156,12 +1168,14 @@ exports[`Should test the Funding lifecycle 4`] = `
     class="c-funding c-funding--open"
   >
     <button
-      class="c-btn c-btn--small"
+      class="css-1njbmdj-Button"
+      data-testid="funding-toggle"
     >
       Sponsor me
     </button>
     <div
       class="c-funding__backdrop"
+      data-testid="funding-backdrop"
     />
     <svg
       class="c-funding__knob"
@@ -1369,6 +1383,7 @@ exports[`Should test the Funding lifecycle 4`] = `
       </g>
       <g
         class="c-funding__trigger"
+        data-testid="funding-trigger"
         role="button"
       >
         <circle
@@ -1443,12 +1458,14 @@ exports[`Should test the Funding lifecycle 5`] = `
     class="c-funding"
   >
     <button
-      class="c-btn c-btn--small"
+      class="css-1njbmdj-Button"
+      data-testid="funding-toggle"
     >
       Sponsor me
     </button>
     <div
       class="c-funding__backdrop"
+      data-testid="funding-backdrop"
     />
     <svg
       class="c-funding__knob"
@@ -1656,6 +1673,7 @@ exports[`Should test the Funding lifecycle 5`] = `
       </g>
       <g
         class="c-funding__trigger"
+        data-testid="funding-trigger"
         role="button"
       >
         <circle
@@ -1730,12 +1748,14 @@ exports[`Should test the Funding lifecycle 6`] = `
     class="c-funding c-funding--open"
   >
     <button
-      class="c-btn c-btn--small"
+      class="css-1njbmdj-Button"
+      data-testid="funding-toggle"
     >
       Sponsor me
     </button>
     <div
       class="c-funding__backdrop"
+      data-testid="funding-backdrop"
     />
     <svg
       class="c-funding__knob"
@@ -1943,6 +1963,7 @@ exports[`Should test the Funding lifecycle 6`] = `
       </g>
       <g
         class="c-funding__trigger"
+        data-testid="funding-trigger"
         role="button"
       >
         <circle
@@ -2017,12 +2038,14 @@ exports[`Should test the Funding lifecycle 7`] = `
     class="c-funding c-funding--open"
   >
     <button
-      class="c-btn c-btn--small"
+      class="css-1njbmdj-Button"
+      data-testid="funding-toggle"
     >
       Sponsor me
     </button>
     <div
       class="c-funding__backdrop"
+      data-testid="funding-backdrop"
     />
     <svg
       class="c-funding__knob"
@@ -2230,6 +2253,7 @@ exports[`Should test the Funding lifecycle 7`] = `
       </g>
       <g
         class="c-funding__trigger"
+        data-testid="funding-trigger"
         role="button"
       >
         <circle
