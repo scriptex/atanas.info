@@ -17,53 +17,55 @@ export const flex = ({
 	direction = 'row',
 	alignItems = 'center',
 	justifyContent = 'space-between'
-}: Partial<FlexOptions> = {}) => css`
+}: Partial<FlexOptions> = {}): SerializedStyles => css`
 	display: ${display};
 	flex-flow: ${direction} ${wrap};
 	align-items: ${alignItems};
 	justify-content: ${justifyContent};
 `;
 
-export const onHover = (style: TemplateStringsArray) => css`
+export const onHover = (style: TemplateStringsArray): SerializedStyles => css`
 	@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover) {
 		${css(style)};
 	}
 `;
 
-export const onTabletLandscape = (style: TemplateStringsArray) => css`
+export const onTabletLandscape = (style: TemplateStringsArray): SerializedStyles => css`
 	@media (max-width: 1279px) {
 		${css(style)};
 	}
 `;
 
-export const onTabletPortrait = (style: TemplateStringsArray) => css`
+export const onTabletPortrait = (style: TemplateStringsArray): SerializedStyles => css`
 	@media (max-width: 1023px) {
 		${css(style)};
 	}
 `;
 
-export const onMobile = (style: TemplateStringsArray) => css`
+export const onMobile = (style: TemplateStringsArray): SerializedStyles => css`
 	@media (max-width: 767px) {
 		${css(style)};
 	}
 `;
 
-export const prefersReducedMotion = (style: TemplateStringsArray) => css`
+export const prefersReducedMotion = (style: TemplateStringsArray): SerializedStyles => css`
 	@media (prefers-reduced-motion: reduce) {
 		${css(style)};
 	}
 `;
 
-export const withHoudiniSupport = (paint: HoudiniPaints) => (style: TemplateStringsArray) =>
-	css`
-		@supports (background-image: paint(${paint})) {
-			.${paint} {
-				${css(style)};
+export const withHoudiniSupport =
+	(paint: HoudiniPaints): ((style: TemplateStringsArray) => SerializedStyles) =>
+	(style: TemplateStringsArray): SerializedStyles =>
+		css`
+			@supports (background-image: paint(${paint})) {
+				.${paint} {
+					${css(style)};
+				}
 			}
-		}
-	`;
+		`;
 
-export const cssCustomProperties = css`
+export const cssCustomProperties: SerializedStyles = css`
 	:root {
 		--base: 51, 51, 51;
 		--primary: 255, 255, 255;
@@ -107,7 +109,7 @@ export const cssCustomProperties = css`
 	}
 `;
 
-export const svgIconsStyles = css`
+export const svgIconsStyles: SerializedStyles = css`
 	[class^='svg-'] {
 		display: inline-block;
 		vertical-align: middle;
@@ -204,7 +206,7 @@ export const svgIconsStyles = css`
 	}
 `;
 
-export const fontStyles = css`
+export const fontStyles: SerializedStyles = css`
 	[class^='icon-']:before,
 	[class*=' icon-']:before {
 		font-family: 'fontello', fantasy;
@@ -268,7 +270,7 @@ export const fontStyles = css`
 	}
 `;
 
-export const keyframes = css`
+export const keyframes: SerializedStyles = css`
 	@keyframes float {
 		0%,
 		100% {
@@ -325,7 +327,7 @@ export const keyframes = css`
 	}
 `;
 
-export const mainStyles = css`
+export const mainStyles: SerializedStyles = css`
 	html,
 	body,
 	#root,
@@ -401,7 +403,7 @@ export const mainStyles = css`
 	`}
 `;
 
-export const globalStyles = css`
+export const globalStyles: SerializedStyles = css`
 	${cssCustomProperties};
 	${svgIconsStyles};
 	${fontStyles};
@@ -430,7 +432,7 @@ export const polygon = (sides: number): SerializedStyles => css`
 	mask-image: paint(avatar-polygon);
 `;
 
-export const centered = css`
+export const centered: SerializedStyles = css`
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -439,13 +441,13 @@ export const centered = css`
 	margin: auto;
 `;
 
-export const overlay = css`
+export const overlay: SerializedStyles = css`
 	content: '';
 	${centered};
 	z-index: 1;
 `;
 
-export const withLoader = css`
+export const withLoader: SerializedStyles = css`
 	position: relative;
 
 	& > div {
