@@ -354,6 +354,27 @@ export const projects: WebProject[] = [
 		skip: true
 	},
 	{
+		url: 'https://irrationallyyours.com/he/',
+		image: '/images/temp/Irrationally-Yours-(Hebrew-version).jpg',
+		title: 'Irrationally Yours (Hebrew version)',
+		description: 'HTML, SVG, SCSS, PostCSS, Javascript, Swiper, ShuffleJS, Webpack',
+		skip: false
+	},
+	{
+		url: 'https://www.predictablyirrational.com/he/',
+		image: '/images/temp/Predictably-Irrational-(Hebrew-version).jpg',
+		title: 'Predictably Irrational (Hebrew version)',
+		description: 'HTML, Advanced CSS, SCSS, PostCSS, Javascript, Webpack',
+		skip: false
+	},
+	{
+		url: 'https://amazingdecisionsbook.com/he/',
+		image: '/images/temp/Amazing-Decisions-(Hebrew-version).jpg',
+		title: 'Amazing Decisions (Hebrew version)',
+		description: 'HTML, SVG, SCSS, PostCSS, Javascript, Swiper, Webpack',
+		skip: false
+	},
+	{
 		url: '',
 		image: '/images/temp/atelier-coolinar.png',
 		title: 'Atelier Coolinar (Ателие Кулинар)',
