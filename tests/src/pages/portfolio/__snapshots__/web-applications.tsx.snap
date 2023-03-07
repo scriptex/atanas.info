@@ -623,6 +623,23 @@ exports[` component Should render the  component 1`] = `
             </svg>
           </a>
         </div>
+        <nav
+          class="c-section__nav c-section__nav--small"
+        >
+          <ul>
+            <li
+              class="current"
+            >
+              <button
+                aria-label="Switch to 1"
+                class="c-btn c-btn--small"
+                type="button"
+              >
+                1
+              </button>
+            </li>
+          </ul>
+        </nav>
         <div
           class="c-section__actions"
         >
@@ -2001,6 +2018,23 @@ exports[` component Should render the  component 2`] = `
             </svg>
           </a>
         </div>
+        <nav
+          class="c-section__nav c-section__nav--small"
+        >
+          <ul>
+            <li
+              class="current"
+            >
+              <button
+                aria-label="Switch to 1"
+                class="c-btn c-btn--small"
+                type="button"
+              >
+                1
+              </button>
+            </li>
+          </ul>
+        </nav>
         <div
           class="c-section__actions"
         >
@@ -3299,6 +3333,11 @@ exports[` component Should render the  component 3`] = `
         <div
           class="c-section__body"
         />
+        <nav
+          class="c-section__nav c-section__nav--small"
+        >
+          <ul />
+        </nav>
         <div
           class="c-section__actions"
         >
@@ -4597,6 +4636,11 @@ exports[` component Should render the  component 4`] = `
         <div
           class="c-section__body"
         />
+        <nav
+          class="c-section__nav c-section__nav--small"
+        >
+          <ul />
+        </nav>
         <div
           class="c-section__actions"
         >

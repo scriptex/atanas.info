@@ -113,6 +113,10 @@
 			opacity: 0.7;
 		}
 	}
+
+	& .c-section__nav {
+		padding-top: 3rem;
+	}
 }
 
 .c-section__sliders {
@@ -315,6 +319,10 @@
 		& .c-section__animation {
 			top: auto;
 			margin-bottom: 2rem;
+		}
+
+		& .c-section__nav {
+			padding-top: 1rem;
 		}
 	}
 }
