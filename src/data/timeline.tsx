@@ -202,16 +202,13 @@ export const timelineItems: TimelineItem[] = [
 	{
 		date: 'Jan 2023',
 		icon: <WorkIcon />,
-		title: <>✔️ I joined Kinetik Automotive as a part-time frontend developer!</>,
+		title: <>✔️ I joined Kinetik Automotive!</>,
 		location: '📍 Varna, Bulgaria',
 		content: (
 			<>
-				I started working with the automotive industry and participated in building dashboards and infotainment
-				systems for electric vehicles as well as a variety of web applications. Some of them are the first
-				Bulgarian electric car (
-				<ExternalLink href="https://kinetikautomotive.com/kinetik-07-prototype/">Kinetik Model 07</ExternalLink>
-				) and the <ExternalLink href="https://kinetikautomotive.com/kes/">Kinetik Model 27</ExternalLink>{' '}
-				electric kart.
+				I started working as a part-time frontend developer with <strong>Kinetik Automotive</strong> - a
+				boutique manufacturer within the automotive industry which crafts ultra-limited edition electric
+				vehicles.
 			</>
 		)
 	}
