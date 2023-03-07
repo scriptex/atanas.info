@@ -1296,6 +1296,51 @@ exports[`Timeline component Should render the Timeline component 1`] = `
               </span>
             </div>
           </div>
+          <div
+            class="vertical-timeline-element"
+            id=""
+          >
+            <span
+              class="vertical-timeline-element-icon is-hidden"
+            >
+              <svg
+                class="vertical-timeline__icon"
+              >
+                <use
+                  xlink:href="#svg-work"
+                />
+              </svg>
+            </span>
+            <div
+              class="vertical-timeline-element-content is-hidden"
+            >
+              <div
+                class="vertical-timeline-element-content-arrow"
+              />
+              <h3
+                class="vertical-timeline-element-title"
+              >
+                ✔️ I joined Kinetik Automotive!
+              </h3>
+              <h4
+                class="vertical-timeline-element-subtitle"
+              >
+                📍 Varna, Bulgaria
+              </h4>
+              <p>
+                I started working as a part-time frontend developer with 
+                <strong>
+                  Kinetik Automotive
+                </strong>
+                 - a boutique manufacturer within the automotive industry which crafts ultra-limited edition electric vehicles.
+              </p>
+              <span
+                class="vertical-timeline-element-date"
+              >
+                Jan 2023
+              </span>
+            </div>
+          </div>
         </div>
         <div
           class="c-section__actions"
