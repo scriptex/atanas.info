@@ -354,6 +354,13 @@ export const projects: WebProject[] = [
 		skip: true
 	},
 	{
+		url: 'https://danariely.co.il/',
+		image: '/images/temp/Dan-Ariely-(Hebrew-version).jpg',
+		title: 'Dan Ariely (Hebrew version)',
+		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
+		skip: false
+	},
+	{
 		url: 'https://irrationallyyours.com/he/',
 		image: '/images/temp/Irrationally-Yours-(Hebrew-version).jpg',
 		title: 'Irrationally Yours (Hebrew version)',
@@ -372,6 +379,13 @@ export const projects: WebProject[] = [
 		image: '/images/temp/Amazing-Decisions-(Hebrew-version).jpg',
 		title: 'Amazing Decisions (Hebrew version)',
 		description: 'HTML, SVG, SCSS, PostCSS, Javascript, Swiper, Webpack',
+		skip: false
+	},
+	{
+		url: 'https://hala.film/',
+		image: '/images/temp/Hàla.jpg',
+		title: 'Hàla',
+		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
 		skip: false
 	},
 	{
