@@ -198,5 +198,18 @@ export const timelineItems: TimelineItem[] = [
 				them seamlessly tap into global brilliance.
 			</>
 		)
+	},
+	{
+		date: 'Jan 2023',
+		icon: <WorkIcon />,
+		title: <>✔️ I joined Kinetik Automotive!</>,
+		location: '📍 Varna, Bulgaria',
+		content: (
+			<>
+				I started working as a part-time frontend developer with <strong>Kinetik Automotive</strong> - a
+				boutique manufacturer within the automotive industry which crafts ultra-limited edition electric
+				vehicles.
+			</>
+		)
 	}
 ];
