@@ -22,7 +22,7 @@ export const PortfolioPersonalProjects: FC = () => (
 		>
 			<h3>Personal projects</h3>
 
-			<SectionGrid data={personalProjects} linkType="external" />
+			<SectionGrid data={personalProjects} linkType="external" pagination />
 		</Section>
 	</Layout>
 );

@@ -28,7 +28,7 @@ export const PortfolioOpenSourceProjects: FC = () => (
 		>
 			<h3>Open-source projects</h3>
 
-			<SectionGrid data={openSourceProjects} />
+			<SectionGrid data={openSourceProjects} pagination />
 		</Section>
 	</Layout>
 );
