@@ -1,8 +1,16 @@
 import { format } from 'date-fns';
 import { useState, useEffect, MutableRefObject } from 'react';
 
+import type { Project } from '@data/projects';
+
 export type Theme = 'dark' | 'light';
 export type Ref<T> = MutableRefObject<T | null>;
+export type PaginationData<T> = {
+	menu: Project[] | undefined;
+	items: T[][] | undefined;
+	current: number;
+	setCurrent: (value: number) => void;
+};
 
 export const random = (): number => {
 	const crypto = window.crypto;
@@ -67,4 +75,25 @@ export const log = (message: string): void => {
 	}
 
 	console.log(message);
+};
+
+export const usePagination = <T>(data: T[], size = 10): PaginationData<T> => {
+	const [items, setItems] = useState<T[][] | undefined>();
+	const [current, setCurrent] = useState(0);
+
+	useEffect(() => {
+		setItems([...Array(Math.ceil(data.length / size))].map((_, i) => data.slice(size * i, size + size * i)));
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
+
+	return {
+		menu: items?.map((_, i) => ({
+			url: '',
+			title: (i + 1).toString(),
+			description: ''
+		})),
+		items,
+		current,
+		setCurrent
+	};
 };

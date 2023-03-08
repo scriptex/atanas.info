@@ -15,10 +15,15 @@
 }
 
 .c-section__nav--small {
-	padding-bottom: 1rem;
+	padding-bottom: 0.5rem;
 
 	& li {
-		padding: 0 0.25rem;
+		padding: 0 0.25rem 0.5rem;
+	}
+
+	& .c-btn--small {
+		min-width: 2rem;
+		padding: 0.5rem 0.25rem;
 	}
 }
 
