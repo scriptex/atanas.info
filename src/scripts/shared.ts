@@ -1,8 +1,16 @@
 import { format } from 'date-fns';
 import { useState, useEffect, MutableRefObject } from 'react';
 
+import type { Project } from '@data/projects';
+
 export type Theme = 'dark' | 'light';
 export type Ref<T> = MutableRefObject<T | null>;
+export type PaginationData<T> = {
+	menu: Project[] | undefined;
+	items: T[][] | undefined;
+	current: number;
+	setCurrent: (value: number) => void;
+};
 
 export const random = (): number => {
 	const crypto = window.crypto;
@@ -69,7 +77,7 @@ export const log = (message: string): void => {
 	console.log(message);
 };
 
-export const usePagination = <T>(data: T[], size = 10) => {
+export const usePagination = <T>(data: T[], size = 10): PaginationData<T> => {
 	const [items, setItems] = useState<T[][] | undefined>();
 	const [current, setCurrent] = useState(0);
 
