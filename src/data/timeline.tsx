@@ -188,19 +188,7 @@ export const timelineItems: TimelineItem[] = [
 		)
 	},
 	{
-		date: 'September 2021',
-		icon: <WorkIcon />,
-		title: <>✔️ I joined Andela as a contactor!</>,
-		location: '📍 remote',
-		content: (
-			<>
-				I became part of Andela - the talent network trusted by hundreds of the world’s top companies to help
-				them seamlessly tap into global brilliance.
-			</>
-		)
-	},
-	{
-		date: 'Jan 2023',
+		date: 'November 2020',
 		icon: <WorkIcon />,
 		title: <>✔️ I joined Kinetik Automotive!</>,
 		location: '📍 Varna, Bulgaria',
@@ -209,6 +197,18 @@ export const timelineItems: TimelineItem[] = [
 				I started working as a part-time frontend developer with <strong>Kinetik Automotive</strong> - a
 				boutique manufacturer within the automotive industry which crafts ultra-limited edition electric
 				vehicles.
+			</>
+		)
+	},
+	{
+		date: 'September 2021',
+		icon: <WorkIcon />,
+		title: <>✔️ I joined Andela as a contactor!</>,
+		location: '📍 remote',
+		content: (
+			<>
+				I became part of Andela - the talent network trusted by hundreds of the world’s top companies to help
+				them seamlessly tap into global brilliance.
 			</>
 		)
 	}
