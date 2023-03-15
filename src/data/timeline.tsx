@@ -194,9 +194,8 @@ export const timelineItems: TimelineItem[] = [
 		location: '📍 Varna, Bulgaria',
 		content: (
 			<>
-				I started working as a part-time frontend developer with <strong>Kinetik Automotive</strong> - a
-				boutique manufacturer within the automotive industry which crafts ultra-limited edition electric
-				vehicles.
+				I started working as a part-time web developer with <strong>Kinetik Automotive</strong> - a boutique
+				manufacturer within the automotive industry which crafts ultra-limited edition electric vehicles.
 			</>
 		)
 	},
