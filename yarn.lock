@@ -7848,10 +7848,10 @@ min-indent@^1.0.0, min-indent@^1.0.1:
   resolved "https://registry.yarnpkg.com/min-indent/-/min-indent-1.0.1.tgz#a63f681673b30571fbe8bc25686ae746eefa9869"
   integrity sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
 
-"minimatch@3 || 4 || 5", minimatch@^5.0.1:
-  version "5.1.6"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-5.1.6.tgz#1cfcb8cf5522ea69952cd2af95ae09477f122a96"
-  integrity sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==
+"minimatch@3 || 4 || 5 || 6 || 7", minimatch@^7.4.1:
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-7.4.2.tgz#157e847d79ca671054253b840656720cb733f10f"
+  integrity sha512-xy4q7wou3vUoC9k1xGTXc+awNdGaGVHtFUaey8tiX4H1QRc04DZ/rmDFwNm2EBsuYEhAZ6SgMmYf3InGY6OauA==
   dependencies:
     brace-expansion "^2.0.1"
 
@@ -7862,10 +7862,10 @@ minimatch@^3.0.4, minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimatch@^7.4.1:
-  version "7.4.2"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-7.4.2.tgz#157e847d79ca671054253b840656720cb733f10f"
-  integrity sha512-xy4q7wou3vUoC9k1xGTXc+awNdGaGVHtFUaey8tiX4H1QRc04DZ/rmDFwNm2EBsuYEhAZ6SgMmYf3InGY6OauA==
+minimatch@^5.0.1:
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-5.1.6.tgz#1cfcb8cf5522ea69952cd2af95ae09477f122a96"
+  integrity sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==
   dependencies:
     brace-expansion "^2.0.1"
 
@@ -11307,24 +11307,24 @@ type-check@~0.3.2:
   dependencies:
     prelude-ls "~1.1.2"
 
-type-coverage-core@^2.24.1:
-  version "2.24.1"
-  resolved "https://registry.yarnpkg.com/type-coverage-core/-/type-coverage-core-2.24.1.tgz#32b6acc30c35df8f27da12fae71cc4a41c63e6f7"
-  integrity sha512-HZCiVINVnrekaEQuq/lKEerAZO/L7rR9vMDs+QRhTfb7HrD2OO6JDQKxJiKLJGAoGhjjQY5248mmX3t/+zLXxg==
+type-coverage-core@^2.25.0:
+  version "2.25.0"
+  resolved "https://registry.yarnpkg.com/type-coverage-core/-/type-coverage-core-2.25.0.tgz#87c1697fdcbc6f3e35b808da7d1f3b252fa6b13d"
+  integrity sha512-+ROv68mmveRCpYKq4kLEPDerCqj2YGzR8tSPXH2LLMxY5xk3zJM23Ztv/cAGoHEge4CI3S4xrcTJoWlwlhEKYA==
   dependencies:
     fast-glob "3"
-    minimatch "3 || 4 || 5"
+    minimatch "3 || 4 || 5 || 6 || 7"
     normalize-path "3"
     tslib "1 || 2"
     tsutils "3"
 
-type-coverage@2.24.1:
-  version "2.24.1"
-  resolved "https://registry.yarnpkg.com/type-coverage/-/type-coverage-2.24.1.tgz#d3b59f5a14d74c89d97c2a0e3924e83c463085bf"
-  integrity sha512-+9M6+aiiBEQZECinVLBvQUnmPrHXbI7edcdrPKxhvnLYIobvvPtpywbD3Q32vn8Y1XJHiaCSurN7T16C88htBg==
+type-coverage@2.25.0:
+  version "2.25.0"
+  resolved "https://registry.yarnpkg.com/type-coverage/-/type-coverage-2.25.0.tgz#f2afc16809a6ec72a7df929c70ccd6915ae8f815"
+  integrity sha512-Zp4x/yQlv5Le8nNR3vXlaZRtPUvtbqSXFpGhcEvocbMxVD359GsQctCUlHgHmT42CURnvRJL0PHIaFlewL64aw==
   dependencies:
     minimist "1"
-    type-coverage-core "^2.24.1"
+    type-coverage-core "^2.25.0"
 
 type-detect@4.0.8:
   version "4.0.8"
