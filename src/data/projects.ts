@@ -273,7 +273,7 @@ export const projects: WebProject[] = [
 		url: 'https://housez-bg.com/',
 		image: '/images/temp/housez.jpg',
 		title: 'The House Z',
-		description: 'HTML5, PostHTML, SCSS, Typescript, ShuffleJS, Swiper, Vite',
+		description: 'Typescript, SCSS, React, Next.js, ShuffleJS, Swiper',
 		skip: false
 	},
 	{
