@@ -389,6 +389,13 @@ export const projects: WebProject[] = [
 		skip: false
 	},
 	{
+		url: 'https://dan-vs-chatgpt.vercel.app/',
+		image: '/images/temp/dan-vs-chatgpt.jpeg',
+		title: 'Dan vs ChatGPT',
+		description: 'Typescript, React, SCSS, Next.js, React Query',
+		skip: false
+	},
+	{
 		url: '',
 		image: '/images/temp/atelier-coolinar.png',
 		title: 'Atelier Coolinar (Ателие Кулинар)',
