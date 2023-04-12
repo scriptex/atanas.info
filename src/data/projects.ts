@@ -743,12 +743,17 @@ export const personalProjects: SubPage[] = [
 }));
 
 export const emailTemplates = [
-	'/images/email-templates/eon1.jpg',
-	'/images/email-templates/eon3.jpg',
-	'/images/email-templates/foton2.jpg',
-	'/images/email-templates/eon2.jpg',
-	'/images/email-templates/eon4.jpg',
-	'/images/email-templates/eon5.jpg',
-	'/images/email-templates/eon6.jpg',
-	'/images/email-templates/foton1.jpg'
+	'/email-templates/template1.html',
+	'/email-templates/template2.html',
+	'/email-templates/template3.html',
+	'/email-templates/template4.html',
+	'/email-templates/template5.html',
+	'/email-templates/template6.html',
+	'/email-templates/template7.html',
+	'/email-templates/template8.html',
+	'/email-templates/template9.html',
+	'/email-templates/template10.html',
+	'/email-templates/template11.html',
+	'/email-templates/template12.html',
+	'/email-templates/template13.html'
 ];

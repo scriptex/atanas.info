@@ -10,10 +10,10 @@ import { Layout, Section } from '@components';
 import { portfolioSectionProps } from '.';
 
 type Props = {
-	img: string;
+	template: string;
 };
 
-export const PortfolioEmailTemplate: FC<Readonly<Props>> = ({ img }: Props) => {
+export const PortfolioEmailTemplate: FC<Readonly<Props>> = ({ template }: Props) => {
 	const [open, setOpen] = useState(false);
 
 	const toggle = () => setOpen(!open);
@@ -21,11 +21,15 @@ export const PortfolioEmailTemplate: FC<Readonly<Props>> = ({ img }: Props) => {
 	return (
 		<>
 			<button onClick={toggle}>
-				<img src={img} alt="" />
+				<iframe src={template} style={{ pointerEvents: 'none' }} />
 			</button>
 
 			<Modal isOpen={open} onRequestClose={toggle} ariaHideApp={false}>
-				<img src={img} alt="" />
+				<div className="o-shell">
+					<button onClick={toggle}>&times;</button>
+
+					<iframe src={template} />
+				</div>
 			</Modal>
 		</>
 	);
@@ -48,8 +52,8 @@ export const PortfolioEmailTemplates: FC = () => (
 			<h3>Email Templates</h3>
 
 			<div className="c-email-templates">
-				{emailTemplates.map(img => (
-					<PortfolioEmailTemplate img={img} key={img} />
+				{emailTemplates.map(template => (
+					<PortfolioEmailTemplate template={template} key={template} />
 				))}
 			</div>
 		</Section>
