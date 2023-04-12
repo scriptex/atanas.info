@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import SVGSprite from '@src/sprite.svg';
 import { ReactChildren } from '@scripts/types';
-import { Nav, Contact, Header, Footer } from '@components';
+import { Nav, Contact, Header, Footer, Partners } from '@components';
 
 type Props = {
 	main?: string;
@@ -18,6 +18,8 @@ export const Layout: FC<Readonly<Props>> = ({ main, children }: Props) => (
 		<main className={['o-main', main].join(' ')}>{children}</main>
 
 		<Contact />
+
+		<Partners />
 
 		<Nav hasShell className="c-nav--inline" />
 

@@ -14,6 +14,7 @@ export { default as Lines } from './lines';
 export { default as Loader } from './loader';
 export { default as MDX } from './mdx';
 export { default as Nav } from './nav';
+export { default as Partners } from './partners';
 export * from './portfolio';
 export { default as Referral } from './referral';
 export * from './resume';
