@@ -546,51 +546,81 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
           class="c-email-templates"
         >
           <button>
-            <img
-              alt=""
-              src="/images/email-templates/eon1.jpg"
+            <iframe
+              src="/email-templates/template1.html"
+              style="pointer-events: none;"
             />
           </button>
           <button>
-            <img
-              alt=""
-              src="/images/email-templates/eon3.jpg"
+            <iframe
+              src="/email-templates/template2.html"
+              style="pointer-events: none;"
             />
           </button>
           <button>
-            <img
-              alt=""
-              src="/images/email-templates/foton2.jpg"
+            <iframe
+              src="/email-templates/template3.html"
+              style="pointer-events: none;"
             />
           </button>
           <button>
-            <img
-              alt=""
-              src="/images/email-templates/eon2.jpg"
+            <iframe
+              src="/email-templates/template4.html"
+              style="pointer-events: none;"
             />
           </button>
           <button>
-            <img
-              alt=""
-              src="/images/email-templates/eon4.jpg"
+            <iframe
+              src="/email-templates/template5.html"
+              style="pointer-events: none;"
             />
           </button>
           <button>
-            <img
-              alt=""
-              src="/images/email-templates/eon5.jpg"
+            <iframe
+              src="/email-templates/template6.html"
+              style="pointer-events: none;"
             />
           </button>
           <button>
-            <img
-              alt=""
-              src="/images/email-templates/eon6.jpg"
+            <iframe
+              src="/email-templates/template7.html"
+              style="pointer-events: none;"
             />
           </button>
           <button>
-            <img
-              alt=""
-              src="/images/email-templates/foton1.jpg"
+            <iframe
+              src="/email-templates/template8.html"
+              style="pointer-events: none;"
+            />
+          </button>
+          <button>
+            <iframe
+              src="/email-templates/template9.html"
+              style="pointer-events: none;"
+            />
+          </button>
+          <button>
+            <iframe
+              src="/email-templates/template10.html"
+              style="pointer-events: none;"
+            />
+          </button>
+          <button>
+            <iframe
+              src="/email-templates/template11.html"
+              style="pointer-events: none;"
+            />
+          </button>
+          <button>
+            <iframe
+              src="/email-templates/template12.html"
+              style="pointer-events: none;"
+            />
+          </button>
+          <button>
+            <iframe
+              src="/email-templates/template13.html"
+              style="pointer-events: none;"
             />
           </button>
         </div>
@@ -752,6 +782,97 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
       </div>
     </div>
   </form>
+  <div
+    class="c-partners"
+  >
+    <div
+      class="o-shell"
+    >
+      <h2>
+        Trusted by
+      </h2>
+      <ul>
+        <li>
+          <img
+            alt="Duke University brand image"
+            data-nimg="1"
+            decoding="async"
+            height="200"
+            loading="lazy"
+            src="/images/clients/duke-university.svg"
+            style="color: transparent;"
+            title="Duke University"
+            width="200"
+          />
+        </li>
+        <li>
+          <img
+            alt="Emailio brand image"
+            data-nimg="1"
+            decoding="async"
+            height="200"
+            loading="lazy"
+            src="/images/clients/emailio.svg"
+            style="color: transparent;"
+            title="Emailio"
+            width="200"
+          />
+        </li>
+        <li>
+          <img
+            alt="EON brand image"
+            data-nimg="1"
+            decoding="async"
+            height="200"
+            loading="lazy"
+            src="/images/clients/eon.svg"
+            style="color: transparent;"
+            title="EON"
+            width="200"
+          />
+        </li>
+        <li>
+          <img
+            alt="Kinetik Automotive brand image"
+            data-nimg="1"
+            decoding="async"
+            height="200"
+            loading="lazy"
+            src="/images/clients/kinetik.svg"
+            style="color: transparent;"
+            title="Kinetik Automotive"
+            width="200"
+          />
+        </li>
+        <li>
+          <img
+            alt="Robert Ladkani brand image"
+            data-nimg="1"
+            decoding="async"
+            height="200"
+            loading="lazy"
+            src="/images/clients/robert-ladkani.svg"
+            style="color: transparent;"
+            title="Robert Ladkani"
+            width="200"
+          />
+        </li>
+        <li>
+          <img
+            alt="SOD 64 brand image"
+            data-nimg="1"
+            decoding="async"
+            height="200"
+            loading="lazy"
+            src="/images/clients/sod-64.svg"
+            style="color: transparent;"
+            title="SOD 64"
+            width="200"
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
   <nav
     class="c-nav c-nav--inline"
   >
@@ -1873,51 +1994,81 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
           class="c-email-templates"
         >
           <button>
-            <img
-              alt=""
-              src="/images/email-templates/eon1.jpg"
+            <iframe
+              src="/email-templates/template1.html"
+              style="pointer-events: none;"
             />
           </button>
           <button>
-            <img
-              alt=""
-              src="/images/email-templates/eon3.jpg"
+            <iframe
+              src="/email-templates/template2.html"
+              style="pointer-events: none;"
             />
           </button>
           <button>
-            <img
-              alt=""
-              src="/images/email-templates/foton2.jpg"
+            <iframe
+              src="/email-templates/template3.html"
+              style="pointer-events: none;"
             />
           </button>
           <button>
-            <img
-              alt=""
-              src="/images/email-templates/eon2.jpg"
+            <iframe
+              src="/email-templates/template4.html"
+              style="pointer-events: none;"
             />
           </button>
           <button>
-            <img
-              alt=""
-              src="/images/email-templates/eon4.jpg"
+            <iframe
+              src="/email-templates/template5.html"
+              style="pointer-events: none;"
             />
           </button>
           <button>
-            <img
-              alt=""
-              src="/images/email-templates/eon5.jpg"
+            <iframe
+              src="/email-templates/template6.html"
+              style="pointer-events: none;"
             />
           </button>
           <button>
-            <img
-              alt=""
-              src="/images/email-templates/eon6.jpg"
+            <iframe
+              src="/email-templates/template7.html"
+              style="pointer-events: none;"
             />
           </button>
           <button>
-            <img
-              alt=""
-              src="/images/email-templates/foton1.jpg"
+            <iframe
+              src="/email-templates/template8.html"
+              style="pointer-events: none;"
+            />
+          </button>
+          <button>
+            <iframe
+              src="/email-templates/template9.html"
+              style="pointer-events: none;"
+            />
+          </button>
+          <button>
+            <iframe
+              src="/email-templates/template10.html"
+              style="pointer-events: none;"
+            />
+          </button>
+          <button>
+            <iframe
+              src="/email-templates/template11.html"
+              style="pointer-events: none;"
+            />
+          </button>
+          <button>
+            <iframe
+              src="/email-templates/template12.html"
+              style="pointer-events: none;"
+            />
+          </button>
+          <button>
+            <iframe
+              src="/email-templates/template13.html"
+              style="pointer-events: none;"
             />
           </button>
         </div>
@@ -2079,6 +2230,97 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
       </div>
     </div>
   </form>
+  <div
+    class="c-partners"
+  >
+    <div
+      class="o-shell"
+    >
+      <h2>
+        Trusted by
+      </h2>
+      <ul>
+        <li>
+          <img
+            alt="Duke University brand image"
+            data-nimg="1"
+            decoding="async"
+            height="200"
+            loading="lazy"
+            src="/images/clients/duke-university.svg"
+            style="color: transparent;"
+            title="Duke University"
+            width="200"
+          />
+        </li>
+        <li>
+          <img
+            alt="Emailio brand image"
+            data-nimg="1"
+            decoding="async"
+            height="200"
+            loading="lazy"
+            src="/images/clients/emailio.svg"
+            style="color: transparent;"
+            title="Emailio"
+            width="200"
+          />
+        </li>
+        <li>
+          <img
+            alt="EON brand image"
+            data-nimg="1"
+            decoding="async"
+            height="200"
+            loading="lazy"
+            src="/images/clients/eon.svg"
+            style="color: transparent;"
+            title="EON"
+            width="200"
+          />
+        </li>
+        <li>
+          <img
+            alt="Kinetik Automotive brand image"
+            data-nimg="1"
+            decoding="async"
+            height="200"
+            loading="lazy"
+            src="/images/clients/kinetik.svg"
+            style="color: transparent;"
+            title="Kinetik Automotive"
+            width="200"
+          />
+        </li>
+        <li>
+          <img
+            alt="Robert Ladkani brand image"
+            data-nimg="1"
+            decoding="async"
+            height="200"
+            loading="lazy"
+            src="/images/clients/robert-ladkani.svg"
+            style="color: transparent;"
+            title="Robert Ladkani"
+            width="200"
+          />
+        </li>
+        <li>
+          <img
+            alt="SOD 64 brand image"
+            data-nimg="1"
+            decoding="async"
+            height="200"
+            loading="lazy"
+            src="/images/clients/sod-64.svg"
+            style="color: transparent;"
+            title="SOD 64"
+            width="200"
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
   <nav
     class="c-nav c-nav--inline"
   >
