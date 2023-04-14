@@ -7490,7 +7490,7 @@ meow@11.0.0:
     type-fest "^3.1.0"
     yargs-parser "^21.1.1"
 
-meow@^9.0.0:
+meow@9.0.0, meow@^9.0.0:
   version "9.0.0"
   resolved "https://registry.yarnpkg.com/meow/-/meow-9.0.0.tgz#cd9510bc5cac9dee7d03c73ee1f9ad959f4ea364"
   integrity sha512-+obSblOQmRhcyBt62furQqRAQpNyWXo8BuQ5bN7dG8wmwQ+vwHKp/rCFD4CrTP8CsDQD1sjoZ94K417XEUk8IQ==
@@ -10648,12 +10648,12 @@ svgo-add-viewbox@2.0.1:
   resolved "https://registry.yarnpkg.com/svgo-add-viewbox/-/svgo-add-viewbox-2.0.1.tgz#88cec3d0993b6ff772276d473156418caa075d47"
   integrity sha512-icibLNuMpgh74S3bODyPizTa4wQX+iNSfhwH+2REtacHTuKKycvLHc0Uci5NslAf6PcakOztJGCCTSsC2jp7vA==
 
-svgo-viewbox@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/svgo-viewbox/-/svgo-viewbox-2.2.0.tgz#c841ec072ab30a67259d08db058cb766d924d982"
-  integrity sha512-FlGA9arBvOtaxCoLxf0wBxeiSUBksesjSlrnAtrnWg/ImA3U+J+kJG9lKY5/zKo/dXsd48yzPEiF0PZZjZHAxw==
+svgo-viewbox@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/svgo-viewbox/-/svgo-viewbox-2.2.1.tgz#f51585544d4c32c10606858d5ea641bc603970db"
+  integrity sha512-pdcktzCxuJ4m1tF3xo08FV1lQmlqAlZeVslcLr53oIrmTa81T4zM09nn9U+QJpLxmZ47tnIKYreHoubOdGh0cQ==
   dependencies:
-    meow "11.0.0"
+    meow "9.0.0"
     svgo "3.0.2"
 
 svgo@3.0.1:
