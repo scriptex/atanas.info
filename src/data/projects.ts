@@ -99,7 +99,7 @@ export const projects: WebProject[] = [
 		image: '/images/temp/Nulla-TV.png',
 		title: 'Nulla TV',
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://kinetikautomotive.com/',
@@ -338,14 +338,14 @@ export const projects: WebProject[] = [
 		image: '/images/temp/kinetik-nuxt.jpg',
 		title: 'Kinetik',
 		description: 'Vue, SVG, SCSS, PostCSS, Javascript, Swiper, Nuxt',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://galaktika.bg/',
 		image: '/images/temp/galaktika.jpg',
 		title: 'Galaktika',
 		description: 'HTML, SVG, SCSS, PostCSS, WebComponents, Vite',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://danariely.co.il/',
@@ -443,7 +443,7 @@ export const projects: WebProject[] = [
 		image: '/images/temp/Issta.png',
 		title: 'Issta',
 		description: 'HTML5, CSS3, Javascript, jQuery, AngularJS',
-		skip: true
+		skip: false
 	}
 ];
 
