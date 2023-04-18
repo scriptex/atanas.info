@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Slider from 'react-slick';
 import type { FC } from 'react';
 
@@ -7,11 +8,12 @@ import { Loader, ExternalLink } from '@components';
 
 type Props = {
 	data: ExtendedProject[];
+	folder: string;
 	className?: string;
 	slidesToShow: number;
 };
 
-export const PortfolioSliders: FC<Readonly<Props>> = ({ data, className, slidesToShow }: Props) => (
+export const PortfolioSliders: FC<Readonly<Props>> = ({ data, folder, className, slidesToShow }: Props) => (
 	<div className="c-section__sliders">
 		{data.map((app: ExtendedProject, i: number) => (
 			<div className={composeClassName('c-section__slider', [], [className])} key={i}>
@@ -51,8 +53,13 @@ export const PortfolioSliders: FC<Readonly<Props>> = ({ data, className, slidesT
 				>
 					{app.images.map((img: string, j: number) => (
 						<div key={j}>
-							{/* eslint-disable-next-line @next/next/no-img-element */}
-							<img src={`/images/temp/${img}`} alt={`${app.title} screenshot ${j + 1}`} loading="lazy" />
+							<Image
+								src={`/images/${folder}/${img}`}
+								alt={`${app.title} screenshot ${j + 1}`}
+								width={app.imageWidth}
+								height={app.imageHeight}
+								loading="lazy"
+							/>
 						</div>
 					))}
 				</Slider>
