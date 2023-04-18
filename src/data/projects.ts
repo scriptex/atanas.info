@@ -33,56 +33,56 @@ export const projects: WebProject[] = [
 	},
 	{
 		url: 'https://admin.eonhome.eu/',
-		image: '/images/temp/E.ON-H.E.M.S-(Home-Energy-Management-System).jpg',
+		image: '/images/temp/E.ON-H.E.M.S-(Home-Energy-Management-System).png',
 		title: 'E.ON H.E.M.S (Home Energy Management System)',
 		description: 'Typescript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS, Cypress',
 		skip: false
 	},
 	{
 		url: 'https://mama-culinar.com/',
-		image: '/images/temp/mama-culinar.jpg',
+		image: '/images/temp/Mama-Culinar.png',
 		title: 'Mama Culinar',
 		description: 'PHP, Javascript, CSS, HTML, WordPress',
 		skip: false
 	},
 	{
 		url: 'https://app.home.eonfoton.pl/',
-		image: '/images/temp/foton-home.png',
+		image: '/images/temp/Foton-Home.png',
 		title: 'Foton Home',
 		description: 'Typescript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS, Jest, React Testing Library',
 		skip: false
 	},
 	{
 		url: 'https://xpndnow.com/',
-		image: '/images/temp/xpnd.jpg',
+		image: '/images/temp/XPND.png',
 		title: 'XPND',
 		description: 'Typescript, SCSS, React, Redux, NodeJS, Jest, Enzyme',
 		skip: false
 	},
 	{
 		url: 'https://xpndnow.com/ebook',
-		image: '/images/temp/xpnd-ebook.jpg',
+		image: '/images/temp/XPND-Ebook.png',
 		title: 'XPND Ebook',
 		description: 'Typescript, SCSS, React, Redux, NodeJS',
 		skip: false
 	},
 	{
 		url: 'https://demo.xpndnow.com/',
-		image: '/images/temp/XPND-demo-application.jpg',
+		image: '/images/temp/XPND-demo-application.png',
 		title: 'XPND demo application',
 		description: 'Typescript, SCSS, React, Redux, NodeJS',
 		skip: false
 	},
 	{
 		url: 'https://salary.atanas.info/',
-		image: '/images/temp/salary-calculator.png',
+		image: '/images/temp/Freelance-Salary-Calculator.png',
 		title: 'Freelance Salary Calculator',
 		description: 'Typescript, React, Next.js, MongoDB, MUI',
 		skip: false
 	},
 	{
 		url: 'https://emailio.com/',
-		image: '/images/temp/Emailio-Landing.jpg',
+		image: '/images/temp/Emailio-Landing.png',
 		title: 'Emailio Landing',
 		description: 'CSS, Javascript, HTML',
 		skip: false
@@ -96,42 +96,43 @@ export const projects: WebProject[] = [
 	},
 	{
 		url: 'https://www.nulla.tv/',
-		image: '/images/temp/nulla-tv.jpg',
+		image: '/images/temp/Nulla-TV.png',
 		title: 'Nulla TV',
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
-		skip: false
+		skip: true
 	},
 	{
 		url: 'https://kinetikautomotive.com/',
-		image: '/images/temp/kinetik-automotive.jpg',
+		image: '/images/temp/Kinetik-Automotive.png',
 		title: 'Kinetik Automotive',
 		description: 'HTML5, CSS3, Javascript, Fullpage JS, Vue, Nuxt, PHP, WordPress',
 		skip: false
 	},
 	{
 		url: 'https://kinetik-e.com/',
+		// url: https://kinetik-championship.com/,
 		image: '/images/temp/Kinetik-Electric-Karting-Championship.jpg',
 		title: 'Kinetik Electric Karting Championship',
 		description: 'HTML5, SVG, CSS3, Javascript, React, Styled Components',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://www.sod.bg/',
-		image: '/images/temp/SOD-64-(СОД-64).jpg',
+		image: '/images/temp/SOD-64-(СОД-64).png',
 		title: 'SOD 64 (СОД 64)',
 		description: 'HTML5, CSS3, Javascript, jQuery, PHP',
 		skip: false
 	},
 	{
 		url: 'https://at-the-wall.atanas.info',
-		image: '/images/temp/at-the-wall.jpg',
+		image: '/images/temp/At-the-Wall.png',
 		title: 'At the Wall',
 		description: 'CSS3, PHP',
 		skip: false
 	},
 	{
 		url: 'https://snake.atanas.info',
-		image: '/images/temp/material-snake.png',
+		image: '/images/temp/Material-Snake.png',
 		title: 'Material Snake',
 		description: 'Typescript, HTML, CSS3',
 		skip: false
@@ -145,7 +146,7 @@ export const projects: WebProject[] = [
 	},
 	{
 		url: 'https://tetris.atanas.info',
-		image: '/images/temp/material-tetris.png',
+		image: '/images/temp/Material-Tetris.png',
 		title: 'Material Tetris',
 		description: 'Typescript, HTML, CSS3',
 		skip: false
@@ -159,7 +160,7 @@ export const projects: WebProject[] = [
 	},
 	{
 		url: 'https://retirement-calc.vercel.app/',
-		image: '/images/temp/retirement-calculator.jpg',
+		image: '/images/temp/Retirement-calculator.png',
 		title: 'Retirement calculator',
 		description: 'Javascript, SCSS, Vue, Vuex, Chart JS',
 		skip: false
@@ -173,21 +174,21 @@ export const projects: WebProject[] = [
 	},
 	{
 		url: 'https://fertility-tool.vercel.app/',
-		image: '/images/temp/fertility-tool.png',
+		image: '/images/temp/Fertility-tool.png',
 		title: 'Fertility tool',
 		description: 'Typescript, SCSS, React, Redux, Redux Saga',
 		skip: false
 	},
 	{
 		url: 'https://imgn.vercel.app/',
-		image: '/images/temp/imgn.png',
+		image: '/images/temp/IMGN.png',
 		title: 'IMGN',
 		description: 'Typescript, SCSS, React, Redux, Redux Saga',
 		skip: false
 	},
 	{
 		url: 'https://three-11.com/',
-		image: '/images/temp/three-11.png',
+		image: '/images/temp/Three-11.png',
 		title: 'Three 11',
 		description: 'HTML5, CSS3, SVG, Javascript, D3',
 		skip: false
@@ -201,21 +202,21 @@ export const projects: WebProject[] = [
 	},
 	{
 		url: 'https://html-lab.com/',
-		image: '/images/temp/html-lab.jpg',
+		image: '/images/temp/HTML-Lab.png',
 		title: 'HTML Lab',
 		description: 'HTML5, CSS3, Javascript',
 		skip: false
 	},
 	{
 		url: 'https://malaikapictures.com/',
-		image: '/images/temp/malaika-pictures.jpg',
+		image: '/images/temp/Malaika-Pictures.png',
 		title: 'Malaika Pictures',
 		description: 'HTML5, CSS3, Javascript, Fullpage JS, Shuffle JS, PHP, WordPress',
 		skip: false
 	},
 	{
 		url: 'https://pascoe.cn/',
-		image: '/images/temp/pascoe.jpg',
+		image: '/images/temp/Pascoe.png',
 		title: 'Pascoe',
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
 		skip: false
@@ -225,116 +226,109 @@ export const projects: WebProject[] = [
 		image: '/images/temp/Varna-Food-Tours.jpg',
 		title: 'Varna Food Tours',
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://ftypeforsale.com/',
-		image: '/images/temp/F-Type-For-Sale.jpg',
+		image: '/images/temp/F-Type-For-Sale.png',
 		title: 'F Type For Sale',
 		description: 'HTML5, CSS3, Javascript',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://www.zeevan.com/',
 		image: '/images/temp/zeevan.jpg',
 		title: 'Zeevan',
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://www.mariopricken.com/',
 		image: '/images/temp/mario-pricken.jpg',
 		title: 'Mario Pricken',
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://sqillinehealth.com/',
 		image: '/images/temp/sqillinehealth.jpg',
 		title: 'Sqillinehealth',
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://kinetik.bg/',
 		image: '/images/temp/kinetik.jpg',
 		title: 'Kinetik',
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://danariely.com/',
-		image: '/images/temp/Dan-Ariely.jpg',
+		image: '/images/temp/Dan-Ariely.png',
 		title: 'Dan Ariely',
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
 		skip: false
 	},
 	{
 		url: 'https://housez-bg.com/',
-		image: '/images/temp/housez.jpg',
+		image: '/images/temp/The-House-Z.png',
 		title: 'The House Z',
 		description: 'Typescript, SCSS, React, Next.js, ShuffleJS, Swiper',
 		skip: false
-	},
-	{
-		url: 'https://shortwhale.com/',
-		image: '/images/temp/shortwhale.jpg',
-		title: 'Shortwhale',
-		description: 'Typescript, SCSS, React, Redux, Redux Saga, NodeJS, PostgreSQL',
-		skip: true
 	},
 	{
 		url: 'https://onelogic.de/',
 		image: '/images/temp/one-logic.jpg',
 		title: 'One Logic',
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://hochzeitskiste.info/',
 		image: '/images/temp/hochzeitskiste.jpg',
 		title: 'Hochzeitskiste',
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
-		skip: true
+		skip: false
 	},
 	{
 		url: 'https://social-header.atanas.info/',
-		image: '/images/temp/social-header.png',
+		image: '/images/temp/Social-Header.png',
 		title: 'Social Header',
 		description: 'React, SCSS, Parcel',
 		skip: false
 	},
 	{
 		url: 'https://www.predictablyirrational.com/',
-		image: '/images/temp/Predictably-Irrational.jpg',
+		image: '/images/temp/Predictably-Irrational.png',
 		title: 'Predictably Irrational',
 		description: 'HTML, Advanced CSS, SCSS, PostCSS, Javascript, Webpack',
 		skip: false
 	},
 	{
 		url: 'https://payoffbook.com/',
-		image: '/images/temp/Payoff.jpg',
+		image: '/images/temp/Payoff.png',
 		title: 'Payoff',
 		description: 'HTML, SVG, Sketch, SCSS, PostCSS, Javascript, Swiper, Webpack',
 		skip: false
 	},
 	{
 		url: 'https://thehonesttruthaboutdishonesty.com/',
-		image: '/images/temp/The-(Honest)-Truth-About-Dishonesty.jpg',
+		image: '/images/temp/The-(Honest)-Truth-About-Dishonesty.png',
 		title: 'The (Honest) Truth About Dishonesty',
 		description: 'HTML, SVG, SCSS, PostCSS, Webpack',
 		skip: false
 	},
 	{
 		url: 'https://irrationallyyours.com/',
-		image: '/images/temp/Irrationally-Yours.jpg',
+		image: '/images/temp/Irrationally-Yours.png',
 		title: 'Irrationally Yours',
 		description: 'HTML, SVG, SCSS, PostCSS, Javascript, Swiper, ShuffleJS, Webpack',
 		skip: false
 	},
 	{
 		url: 'https://amazingdecisionsbook.com/',
-		image: '/images/temp/Amazing-Decisions.jpg',
+		image: '/images/temp/Amazing-Decisions.png',
 		title: 'Amazing Decisions',
 		description: 'HTML, SVG, SCSS, PostCSS, Javascript, Swiper, Webpack',
 		skip: false
@@ -355,42 +349,49 @@ export const projects: WebProject[] = [
 	},
 	{
 		url: 'https://danariely.co.il/',
-		image: '/images/temp/Dan-Ariely-(Hebrew-version).jpg',
+		image: '/images/temp/Dan-Ariely-(Hebrew-version).png',
 		title: 'Dan Ariely (Hebrew version)',
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
 		skip: false
 	},
 	{
 		url: 'https://irrationallyyours.com/he/',
-		image: '/images/temp/Irrationally-Yours-(Hebrew-version).jpg',
+		image: '/images/temp/Irrationally-Yours-(Hebrew-version).png',
 		title: 'Irrationally Yours (Hebrew version)',
 		description: 'HTML, SVG, SCSS, PostCSS, Javascript, Swiper, ShuffleJS, Webpack',
 		skip: false
 	},
 	{
 		url: 'https://www.predictablyirrational.com/he/',
-		image: '/images/temp/Predictably-Irrational-(Hebrew-version).jpg',
+		image: '/images/temp/Predictably-Irrational-(Hebrew-version).png',
 		title: 'Predictably Irrational (Hebrew version)',
 		description: 'HTML, Advanced CSS, SCSS, PostCSS, Javascript, Webpack',
 		skip: false
 	},
 	{
 		url: 'https://amazingdecisionsbook.com/he/',
-		image: '/images/temp/Amazing-Decisions-(Hebrew-version).jpg',
+		image: '/images/temp/Amazing-Decisions-(Hebrew-version).png',
 		title: 'Amazing Decisions (Hebrew version)',
 		description: 'HTML, SVG, SCSS, PostCSS, Javascript, Swiper, Webpack',
 		skip: false
 	},
 	{
+		url: 'https://payoffbook.com/he/',
+		image: '/images/temp/Payoff-(Hebrew-version).png',
+		title: 'Payoff (Hebrew version)',
+		description: 'HTML, SVG, SCSS, PostCSS, Javascript, Swiper, Webpack',
+		skip: false
+	},
+	{
 		url: 'https://hala.film/',
-		image: '/images/temp/Hàla.jpg',
+		image: '/images/temp/Hàla.png',
 		title: 'Hàla',
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
 		skip: false
 	},
 	{
 		url: 'https://dan-vs-chatgpt.vercel.app/',
-		image: '/images/temp/dan-vs-chatgpt.jpeg',
+		image: '/images/temp/Dan-vs-ChatGPT.png',
 		title: 'Dan vs ChatGPT',
 		description: 'Typescript, React, SCSS, Next.js, React Query',
 		skip: false
@@ -422,6 +423,27 @@ export const projects: WebProject[] = [
 		title: 'Sirius Real Estate',
 		description: 'HTML5, CSS3, Javascript, jQuery, PHP, WordPress',
 		skip: false
+	},
+	{
+		url: 'https://www.roomgo.com.ar/blog/',
+		image: '/images/temp/RoomGo-Blog.png',
+		title: 'RoomGo Blog',
+		description: 'HTML5, CSS3, Javascript, jQuery, PHP, WordPress',
+		skip: false
+	},
+	{
+		url: 'https://bmmc.at/',
+		image: '/images/temp/BMMC.png',
+		title: 'BMMC',
+		description: 'HTML5, CSS3, Javascript, jQuery, PHP, WordPress',
+		skip: false
+	},
+	{
+		url: 'https://www.issta.co.il/',
+		image: '/images/temp/Issta.png',
+		title: 'Issta',
+		description: 'HTML5, CSS3, Javascript, jQuery, AngularJS',
+		skip: true
 	}
 ];
 
