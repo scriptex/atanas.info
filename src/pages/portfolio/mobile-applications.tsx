@@ -22,7 +22,7 @@ export const PortfolioMobileApps: FC = () => (
 		>
 			<h3>Mobile applications</h3>
 
-			<PortfolioSliders data={mobileApps} slidesToShow={2} />
+			<PortfolioSliders data={mobileApps} folder="mobile-apps" slidesToShow={2} />
 		</Section>
 	</Layout>
 );

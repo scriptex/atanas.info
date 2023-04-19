@@ -746,9 +746,13 @@ exports[` component Should render the  component 1`] = `
                 >
                   <img
                     alt="profile for Atanas Atanasov at Stack Overflow, Q&A for professional and enthusiast programmers"
+                    data-nimg="1"
+                    decoding="async"
                     height="58"
                     loading="lazy"
-                    src="https://stackoverflow.com/users/flair/4140082.png"
+                    src="/_next/image?url=https%3A%2F%2Fstackoverflow.com%2Fusers%2Fflair%2F4140082.png&w=640&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fstackoverflow.com%2Fusers%2Fflair%2F4140082.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fstackoverflow.com%2Fusers%2Fflair%2F4140082.png&w=640&q=75 2x"
+                    style="color: transparent;"
                     title="profile for Atanas Atanasov at Stack Overflow, Q&A for professional and enthusiast programmers"
                     width="208"
                   />

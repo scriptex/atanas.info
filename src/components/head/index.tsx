@@ -1,5 +1,6 @@
-import type { FC } from 'react';
 import NextHead from 'next/head';
+import type { FC } from 'react';
+import { Fira_Sans } from 'next/font/google';
 
 import { MetaTag, metaTags, LinkTag, linkTags } from '@data/meta';
 
@@ -22,6 +23,11 @@ const customStyle = `
 	}
 }`;
 
+export const titleFont = Fira_Sans({
+	weight: ['400', '700'],
+	subsets: ['latin', 'cyrillic']
+});
+
 export const Head: FC = () => (
 	<NextHead>
 		<meta
@@ -38,6 +44,12 @@ export const Head: FC = () => (
 		))}
 
 		<style id="icon-font" type="text/css" dangerouslySetInnerHTML={{ __html: customStyle }} />
+
+		<style>{`
+			:root {
+				--font-pt-sans-narrow: ${titleFont.style.fontFamily};
+			}
+		`}</style>
 	</NextHead>
 );
 

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { ExternalLink } from '@components';
 
 export type SocialItem = {
@@ -65,8 +66,7 @@ export const socialItems: SocialItem[] = [
 		element: (
 			<div className="stackoverflow-frame">
 				<ExternalLink href="https://stackoverflow.com/users/4140082/atanas-atanasov">
-					{/* eslint-disable-next-line @next/next/no-img-element */}
-					<img
+					<Image
 						src="https://stackoverflow.com/users/flair/4140082.png"
 						alt="profile for Atanas Atanasov at Stack Overflow, Q&amp;A for professional and enthusiast programmers"
 						title="profile for Atanas Atanasov at Stack Overflow, Q&amp;A for professional and enthusiast programmers"

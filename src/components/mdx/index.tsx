@@ -24,12 +24,10 @@ export const MDX: FC<Readonly<Props>> = ({ id, back, title, image, content }: Pr
 		hasButton
 	>
 		<Script src="https://atanas-info.disqus.com/embed.js" async defer />
-
 		<Lines />
 
 		{/* eslint-disable-next-line @next/next/no-img-element */}
 		{!!image && <img src={image} alt="" loading="lazy" />}
-
 		<div className="c-blog-post">
 			<div className="c-blog-post__content" dangerouslySetInnerHTML={{ __html: content }} />
 

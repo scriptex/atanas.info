@@ -22,7 +22,12 @@ export const PortfolioAutomotiveApps: FC = () => (
 		>
 			<h3>Automotive projects</h3>
 
-			<PortfolioSliders data={automotiveProjects} slidesToShow={1} className="c-section__slider--fullwidth" />
+			<PortfolioSliders
+				data={automotiveProjects}
+				folder="automotive-apps"
+				slidesToShow={1}
+				className="c-section__slider--fullwidth"
+			/>
 		</Section>
 	</Layout>
 );
