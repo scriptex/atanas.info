@@ -128,3 +128,11 @@ jest.mock('@vercel/analytics/react', () => ({
 }));
 
 jest.spyOn(shared, 'waitForElement').mockReturnValue(Promise.resolve(null));
+
+jest.mock('next/font/google', () => ({
+	Fira_Sans: jest.fn(() => ({
+		style: {
+			fontFamily: 'Fira Sans'
+		}
+	}))
+}));

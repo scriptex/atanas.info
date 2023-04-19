@@ -1,6 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
@@ -44,7 +44,13 @@ export const PortfolioWebApps: FC<Readonly<Props>> = ({ data = [] }: Props) => {
 							<Loader />
 
 							{online || !project.url ? (
-								<img width="600" loading="lazy" src={project.image} alt={project.title} />
+								<Image
+									src={project.image}
+									alt={project.title}
+									width="1280"
+									height="1000"
+									loading="lazy"
+								/>
 							) : (
 								<Icon name="svg-disconnected " className="svg-disconnected" />
 							)}

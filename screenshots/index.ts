@@ -52,7 +52,10 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 
 	log(`atanas.info: Taking screenshot for ${name}...`);
 	const shotResult = await page
-		.screenshot({ fullPage: false })
+		.screenshot({
+			type: 'jpeg',
+			fullPage: false
+		})
 		.then(res => res)
 		.catch(e => {
 			log(`atanas.info: Error capturing screenshot for ${name}: ${e}`);

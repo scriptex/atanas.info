@@ -598,9 +598,14 @@ exports[` component Should render the  component 1`] = `
             </div>
             <img
               alt="Test web app 2"
+              data-nimg="1"
+              decoding="async"
+              height="1000"
               loading="lazy"
-              src="/images/test.png"
-              width="600"
+              src="/_next/image?url=%2Fimages%2Ftest.png&w=3840&q=75"
+              srcset="/_next/image?url=%2Fimages%2Ftest.png&w=1920&q=75 1x, /_next/image?url=%2Fimages%2Ftest.png&w=3840&q=75 2x"
+              style="color: transparent;"
+              width="1280"
             />
             <section>
               <strong>
@@ -2084,9 +2089,14 @@ exports[` component Should render the  component 2`] = `
             </div>
             <img
               alt="Test web app 2"
+              data-nimg="1"
+              decoding="async"
+              height="1000"
               loading="lazy"
-              src="/images/test.png"
-              width="600"
+              src="/_next/image?url=%2Fimages%2Ftest.png&w=3840&q=75"
+              srcset="/_next/image?url=%2Fimages%2Ftest.png&w=1920&q=75 1x, /_next/image?url=%2Fimages%2Ftest.png&w=3840&q=75 2x"
+              style="color: transparent;"
+              width="1280"
             />
             <section>
               <strong>
