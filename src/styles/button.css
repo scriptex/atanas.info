@@ -9,7 +9,7 @@
 	letter-spacing: 0.04em;
 	display: inline-block;
 	vertical-align: middle;
-	padding: 1rem 3rem;
+	padding: 1rem 3rem 0.875rem;
 	border: 1px solid var(--color-action);
 	background-color: var(--color-action);
 	border-radius: 0.25rem;
@@ -25,7 +25,7 @@
 .c-btn--small {
 	font-size: 0.875rem;
 	line-height: 1;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 1rem 0.375rem;
 }
 
 .theme-light {
