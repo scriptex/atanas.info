@@ -38,8 +38,8 @@
 		right: 0;
 		left: 0;
 		z-index: 2;
-		margin-top: -0.625rem;
-		transform: scale(1);
+		padding: 2rem;
+		transform: scale(1) translateY(-50%);
 		transition: transform var(--timing) var(--easing);
 	}
 
@@ -67,7 +67,7 @@
 			}
 
 			& strong {
-				transform: scale(1.1);
+				transform: scale(1.1) translateY(-50%);
 			}
 		}
 	}

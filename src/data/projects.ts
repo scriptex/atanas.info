@@ -446,6 +446,13 @@ export const projects: WebProject[] = [
 		title: 'Issta',
 		description: 'HTML5, CSS3, Javascript, jQuery, AngularJS',
 		skip: false
+	},
+	{
+		url: 'https://social-capital.vercel.app/',
+		image: '/images/web-apps/Social-Capital.png',
+		title: 'Social Capital',
+		description: 'Typescript, MJML, SCSS, SVG, React, Next.js, Auth.JS, MongoDB, NodeJS, Nodemailer',
+		skip: false
 	}
 ];
 
