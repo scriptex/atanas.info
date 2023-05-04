@@ -42,6 +42,11 @@ export const resumeExperience: ResumeExperienceItem[] = [
 		project: (
 			<>
 				E.ON, E.ON Home project, <em>contract</em>
+				<br />
+				<small>
+					Highlights: <strong>Typescript</strong>, <strong>React</strong>, <strong>React Native</strong>,{' '}
+					<strong>TDD</strong>
+				</small>
 			</>
 		),
 		meta: {
@@ -49,9 +54,10 @@ export const resumeExperience: ResumeExperienceItem[] = [
 			period: 'Jul 2018 - Present'
 		},
 		details: [
-			'Implementing and maintaining the frontend of E.ON Home. Technologies used: React, React Native, Redux, Typescript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.',
+			'Implementing and maintaining the frontend of E.ON Home. Technologies used: React, React Native, Redux, Typescript, SCSS, SVG, MJML, NodeJS, MS Azure, AWS, Jest, Cypress, Sketch and many more.',
 			'Designing, implementing and maintaining the frontend of E.ON H.E.M.S. Technologies used: Angular, Redux, Typescript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.',
-			'Leading a team of four front-end developers'
+			'Leading a team of several front-end developers working on all aspects of the front-end',
+			'Participating in the hiring process and evaluation of candidates'
 		]
 	},
 	{
@@ -59,6 +65,11 @@ export const resumeExperience: ResumeExperienceItem[] = [
 		project: (
 			<>
 				3-11, <em>full-time</em>
+				<br />
+				<small>
+					Highlights: <strong>React</strong>, <strong>Redux</strong>, <strong>NodeJS</strong>,{' '}
+					<strong>NextJS</strong>, <strong>TDD</strong>
+				</small>
 			</>
 		),
 		meta: {
@@ -66,26 +77,33 @@ export const resumeExperience: ResumeExperienceItem[] = [
 			period: 'Jan 2018 - Present'
 		},
 		details: [
-			'Leading a team of several senior front-end and full-stack developers in delivering high-end enterprise applications such as Emailio, XPND, Mbrella and others. Technologies used: React, Redux, Typescript, SCSS, WordPress, NodeJS and many more.',
-			'Implementing and maintaining the website for the first bulgarian electric sports car - Kinetik 07.',
-			'Implementing the dashboard of the first bulgarian electric kart - Kinetik Model 27',
-			'Implementing the dashboard of the hybrid Volvo P1800'
+			'Leading a team of several senior front-end and full-stack developers in delivering high-end closed-source enterprise applications',
+			'Working with clients such as Kinetik Automotive, Duke University, E.ON and many more',
+			'Utilizing technologies used: Javascript, Typescript, SCSS, MJML, NodeJS, React, Redux, Angular, MongoDB and many many more.'
 		]
 	},
 	{
-		position: 'Senior UI Developer',
+		position: 'Senior Web Developer',
 		project: (
 			<>
-				Toptal, <em>freelance</em>
+				Kinetik Automotive, <em>part-time</em>
+				<br />
+				<small>
+					Highlights: <strong>React</strong>, <strong>Redux</strong>, <strong>NodeJS</strong>,{' '}
+					<strong>MS Azure</strong>, <strong>CosmosDB</strong>, <strong>WebSockets</strong>
+				</small>
 			</>
 		),
 		meta: {
-			place: 'Remote',
-			period: 'Jun 2018 - Present'
+			place: 'Varna, Bulgaria',
+			period: 'Nov 2019 - Present'
 		},
 		details: [
-			'Working on closed-source client applications for companies from around the globe. Technologies used: Vue, React, Redux, Typescript, SCSS, NodeJS,',
-			'Part of the top 3% in the world.'
+			'Implementing and maintaining of the website of the company',
+			'Implementing and maintaining of several web apps related to e-go-kart championships',
+			'Implemeting the dashboard of the first bulgarian eKart',
+			'Implemeting the dashboard of the inhouse-customized hybrid Volvo P1800',
+			'Working closely with embedded developers to produce the web application for the Telemetry service - complex telemetry system that offers drivers, mechanics, engineers and coaches all the information they may need to perform their duties'
 		]
 	},
 	{
@@ -93,6 +111,11 @@ export const resumeExperience: ResumeExperienceItem[] = [
 		project: (
 			<>
 				2create, <em>full-time</em>
+				<br />
+				<small>
+					Highlights: <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>Javascript</strong>,{' '}
+					<strong>NodeJS</strong>, <strong>Webpack</strong>
+				</small>
 			</>
 		),
 		meta: {
@@ -100,7 +123,7 @@ export const resumeExperience: ResumeExperienceItem[] = [
 			period: 'May 2012 - Jan 2018'
 		},
 		details: [
-			'Worked for brands such as htmlBurger and htmlBoutique.',
+			'Worked for brands such as htmlBurger, htmlBoutique and Mail Bakery.',
 			'Designed, implemented, maintained and taught the internal coding standards used in tens of thousands of projects.',
 			'Designed, implemented and maintained the internal frontend build system used in tens of thousands of projects.',
 			'Mentored and led several front-end developer teams throughout the years.',
@@ -149,4 +172,9 @@ export const resumeStrengths: ResumeStrengthItem[] = [
 		content:
 			'I am always making sure that project deadlines are met and the required results are delivered on time.'
 	}
+];
+
+export const resumeMore: string[] = [
+	'I am an open-source software maintainer. My open-source projects are available on NPM. They have been downloaded more than a million times and can be seen on my Github profile.',
+	'I have published several articles including guides on how to use Cypress to test authenticated Websockets, how to run multiple Webpack-based applications simultaneously, and how to put a watermark on multiple images using NodeJS. All of my articles and blog posts are available on my personal website.'
 ];

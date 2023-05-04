@@ -733,16 +733,19 @@ exports[`About component Should render the About component 1`] = `
           <h3>
             Current occupation
           </h3>
+          <p>
+            I am a Javascript/Typescript engineer with more than 10 years of professional experience who is currently working as:
+          </p>
           <ul>
             <li>
-              A Senior Javascript/Typescript engineer and front-end mentor at 
+              Lead front-end engineer in 
               <strong>
                 <a
-                  href="https://github.com/three11"
+                  href="https://www.eonenergy.com/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  Three 11
+                  E.ON
                   <svg
                     class="c-svg-external-link"
                   >
@@ -751,12 +754,8 @@ exports[`About component Should render the About component 1`] = `
                     />
                   </svg>
                 </a>
-                 
               </strong>
-              working on various boutique web applications including XPND, Kinetik Automotive and many more.
-            </li>
-            <li>
-              A Lead front-end engineer at E.ON working on the 
+               working on the 
               <strong>
                 <a
                   href="https://www.red-dot.org/project/eon-home-49256"
@@ -773,10 +772,47 @@ exports[`About component Should render the About component 1`] = `
                   </svg>
                 </a>
               </strong>
-               web and mobile smart energy management application E.ON Home.
+               
+              <strong>
+                <a
+                  href="https://www.eonenergy.com/energy-management.html"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  E.ON Home
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </strong>
+              project.
             </li>
             <li>
-              A Senior software developer at 
+              Senior software developer at 
+              <strong>
+                <a
+                  href="https://three-11.com/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Three11
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </strong>
+              working with various clients such as Kinetik Automotive and Duke University.
+            </li>
+            <li>
+              Part of "the top 3% in the world" at 
               <strong>
                 <a
                   href="https://www.toptal.com/resume/atanas-atanasov"
@@ -795,7 +831,7 @@ exports[`About component Should render the About component 1`] = `
               </strong>
             </li>
             <li>
-              A Founding member and Senior Javascript/Typescript engineer at 
+              Founding talent member at 
               <strong>
                 <a
                   href="https://app.usebraintrust.com/talent/782/"
@@ -814,7 +850,7 @@ exports[`About component Should render the About component 1`] = `
               </strong>
             </li>
             <li>
-              A Senior Javascript/Typescript engineer at 
+              Senior front-end engineer at 
               <strong>
                 <a
                   href="https://andela.com/"
@@ -833,14 +869,109 @@ exports[`About component Should render the About component 1`] = `
               </strong>
             </li>
             <li>
-              A Senior Frontend engineer at 
+              Freelance Javascript/Typescript Engineer at 
               <strong>
                 <a
-                  href="https://app.9am.works/hire/atanas-atanasov"
+                  href="https://www.upwork.com/freelancers/~01736096283e1b5690"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  9AM
+                  Upwork
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </strong>
+            </li>
+            <li>
+              Freelance Javascript/Typescript Engineer at 
+              <strong>
+                <a
+                  href="https://www.freelancer.com/u/scriptexbg"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Freelancer
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </strong>
+            </li>
+            <li>
+              Freelance front-end engineer at 
+              <strong>
+                <a
+                  href="https://app.9am.works/talent/atanas-atanasov"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  9am
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </strong>
+            </li>
+            <li>
+              Freelance front-end engineer at 
+              <strong>
+                <a
+                  href="https://wellfound.com/u/scriptex"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Wellfound
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </strong>
+            </li>
+            <li>
+              Senior front-end enginner at 
+              <strong>
+                <a
+                  href="https://pph.me/scriptex"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  People Per Hour
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </strong>
+            </li>
+            <li>
+              Freelance front-end developer at 
+              <strong>
+                <a
+                  href="https://www.flexworkweb.com/@66374b3b"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  FlexWork
                   <svg
                     class="c-svg-external-link"
                   >
@@ -895,6 +1026,25 @@ exports[`About component Should render the About component 1`] = `
               </a>
             </strong>
             .
+          </p>
+          <p>
+            Last but not least, I have developed several Web Components all of which are published to 
+            <strong>
+              <a
+                href="https://www.webcomponents.org/author/scriptex"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                WebComponents.org
+                <svg
+                  class="c-svg-external-link"
+                >
+                  <use
+                    xlink:href="#svg-external-link"
+                  />
+                </svg>
+              </a>
+            </strong>
           </p>
         </div>
         <div
@@ -2467,16 +2617,19 @@ exports[`Tests the About page when offline 1`] = `
           <h3>
             Current occupation
           </h3>
+          <p>
+            I am a Javascript/Typescript engineer with more than 10 years of professional experience who is currently working as:
+          </p>
           <ul>
             <li>
-              A Senior Javascript/Typescript engineer and front-end mentor at 
+              Lead front-end engineer in 
               <strong>
                 <a
-                  href="https://github.com/three11"
+                  href="https://www.eonenergy.com/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  Three 11
+                  E.ON
                   <svg
                     class="c-svg-external-link"
                   >
@@ -2485,12 +2638,8 @@ exports[`Tests the About page when offline 1`] = `
                     />
                   </svg>
                 </a>
-                 
               </strong>
-              working on various boutique web applications including XPND, Kinetik Automotive and many more.
-            </li>
-            <li>
-              A Lead front-end engineer at E.ON working on the 
+               working on the 
               <strong>
                 <a
                   href="https://www.red-dot.org/project/eon-home-49256"
@@ -2507,10 +2656,47 @@ exports[`Tests the About page when offline 1`] = `
                   </svg>
                 </a>
               </strong>
-               web and mobile smart energy management application E.ON Home.
+               
+              <strong>
+                <a
+                  href="https://www.eonenergy.com/energy-management.html"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  E.ON Home
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </strong>
+              project.
             </li>
             <li>
-              A Senior software developer at 
+              Senior software developer at 
+              <strong>
+                <a
+                  href="https://three-11.com/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Three11
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </strong>
+              working with various clients such as Kinetik Automotive and Duke University.
+            </li>
+            <li>
+              Part of "the top 3% in the world" at 
               <strong>
                 <a
                   href="https://www.toptal.com/resume/atanas-atanasov"
@@ -2529,7 +2715,7 @@ exports[`Tests the About page when offline 1`] = `
               </strong>
             </li>
             <li>
-              A Founding member and Senior Javascript/Typescript engineer at 
+              Founding talent member at 
               <strong>
                 <a
                   href="https://app.usebraintrust.com/talent/782/"
@@ -2548,7 +2734,7 @@ exports[`Tests the About page when offline 1`] = `
               </strong>
             </li>
             <li>
-              A Senior Javascript/Typescript engineer at 
+              Senior front-end engineer at 
               <strong>
                 <a
                   href="https://andela.com/"
@@ -2567,14 +2753,109 @@ exports[`Tests the About page when offline 1`] = `
               </strong>
             </li>
             <li>
-              A Senior Frontend engineer at 
+              Freelance Javascript/Typescript Engineer at 
               <strong>
                 <a
-                  href="https://app.9am.works/hire/atanas-atanasov"
+                  href="https://www.upwork.com/freelancers/~01736096283e1b5690"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  9AM
+                  Upwork
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </strong>
+            </li>
+            <li>
+              Freelance Javascript/Typescript Engineer at 
+              <strong>
+                <a
+                  href="https://www.freelancer.com/u/scriptexbg"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Freelancer
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </strong>
+            </li>
+            <li>
+              Freelance front-end engineer at 
+              <strong>
+                <a
+                  href="https://app.9am.works/talent/atanas-atanasov"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  9am
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </strong>
+            </li>
+            <li>
+              Freelance front-end engineer at 
+              <strong>
+                <a
+                  href="https://wellfound.com/u/scriptex"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Wellfound
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </strong>
+            </li>
+            <li>
+              Senior front-end enginner at 
+              <strong>
+                <a
+                  href="https://pph.me/scriptex"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  People Per Hour
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </strong>
+            </li>
+            <li>
+              Freelance front-end developer at 
+              <strong>
+                <a
+                  href="https://www.flexworkweb.com/@66374b3b"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  FlexWork
                   <svg
                     class="c-svg-external-link"
                   >
@@ -2629,6 +2910,25 @@ exports[`Tests the About page when offline 1`] = `
               </a>
             </strong>
             .
+          </p>
+          <p>
+            Last but not least, I have developed several Web Components all of which are published to 
+            <strong>
+              <a
+                href="https://www.webcomponents.org/author/scriptex"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                WebComponents.org
+                <svg
+                  class="c-svg-external-link"
+                >
+                  <use
+                    xlink:href="#svg-external-link"
+                  />
+                </svg>
+              </a>
+            </strong>
           </p>
         </div>
         <div
