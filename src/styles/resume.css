@@ -35,6 +35,12 @@
 	padding: 2rem 2rem 1rem;
 	margin-bottom: 1rem;
 	background-color: color-mod(var(--color-primary) a(30%));
+
+	& .o-grid {
+		& .c-resume__list {
+			display: block;
+		}
+	}
 }
 
 .c-resume__title {
@@ -223,6 +229,7 @@
 
 @media print {
 	body {
+		font-family: Helvetica, Arial, sans-serif;
 		color: black;
 		background: white;
 	}
@@ -295,10 +302,14 @@
 		padding-top: 1rem;
 	}
 
-	.c-resume__experience,
-	.c-resume__aside .c-resume__block {
+	.c-resume__block,
+	.c-resume__experience {
 		break-inside: avoid;
 		page-break-inside: avoid;
+	}
+
+	.c-resume__aside {
+		padding-top: 1rem;
 	}
 
 	.theme-light {

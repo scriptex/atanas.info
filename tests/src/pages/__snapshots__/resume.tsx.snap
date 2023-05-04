@@ -637,30 +637,65 @@ exports[`Resume component Should render the Resume component 1`] = `
             <div
               class="c-resume__block"
             >
-              <h2>
-                Education
-              </h2>
-              <p>
-                <strong>
-                  Master in Marketing
-                </strong>
-              </p>
-              <ul
-                class="c-resume__list"
+              <div
+                class="o-grid"
               >
-                <li>
-                  <i
-                    class="icon-calendar"
-                  />
-                  2003 - 2009
-                </li>
-                <li>
-                  <i
-                    class="icon-location"
-                  />
-                  University of Economics Varna
-                </li>
-              </ul>
+                <div
+                  class="o-grid__item xs-12 sm-6"
+                >
+                  <h2>
+                    Education
+                  </h2>
+                  <p>
+                    <strong>
+                      Master in Marketing
+                    </strong>
+                  </p>
+                  <ul
+                    class="c-resume__list"
+                  >
+                    <li>
+                      <i
+                        class="icon-calendar"
+                      />
+                      2003 - 2009
+                    </li>
+                    <li>
+                      <i
+                        class="icon-location"
+                      />
+                      University of Economics Varna
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="o-grid__item xs-12 sm-6"
+                >
+                  <h2>
+                    Certificates
+                  </h2>
+                  <ul>
+                    <li>
+                      HTML Certification, 2021
+                    </li>
+                    <li>
+                      CSS Certification, 2021
+                    </li>
+                    <li>
+                      Javascript Certification, 2020
+                    </li>
+                    <li>
+                      React Development Certification, 2020
+                    </li>
+                    <li>
+                      Deno Certification, 2020
+                    </li>
+                    <li>
+                      Python Certification, 2020
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div
               class="c-resume__block"
@@ -679,6 +714,25 @@ exports[`Resume component Should render the Resume component 1`] = `
                   <em>
                     contract
                   </em>
+                  <br />
+                  <small>
+                    Highlights: 
+                    <strong>
+                      Typescript
+                    </strong>
+                    , 
+                    <strong>
+                      React
+                    </strong>
+                    , 
+                    <strong>
+                      React Native
+                    </strong>
+                    , 
+                    <strong>
+                      TDD
+                    </strong>
+                  </small>
                 </h4>
                 <ul
                   class="c-resume__list"
@@ -698,13 +752,16 @@ exports[`Resume component Should render the Resume component 1`] = `
                 </ul>
                 <ul>
                   <li>
-                    Implementing and maintaining the frontend of E.ON Home. Technologies used: React, React Native, Redux, Typescript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.
+                    Implementing and maintaining the frontend of E.ON Home. Technologies used: React, React Native, Redux, Typescript, SCSS, SVG, MJML, NodeJS, MS Azure, AWS, Jest, Cypress, Sketch and many more.
                   </li>
                   <li>
                     Designing, implementing and maintaining the frontend of E.ON H.E.M.S. Technologies used: Angular, Redux, Typescript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.
                   </li>
                   <li>
-                    Leading a team of four front-end developers
+                    Leading a team of several front-end developers working on all aspects of the front-end
+                  </li>
+                  <li>
+                    Participating in the hiring process and evaluation of candidates
                   </li>
                 </ul>
               </div>
@@ -719,6 +776,29 @@ exports[`Resume component Should render the Resume component 1`] = `
                   <em>
                     full-time
                   </em>
+                  <br />
+                  <small>
+                    Highlights: 
+                    <strong>
+                      React
+                    </strong>
+                    , 
+                    <strong>
+                      Redux
+                    </strong>
+                    , 
+                    <strong>
+                      NodeJS
+                    </strong>
+                    , 
+                    <strong>
+                      NextJS
+                    </strong>
+                    , 
+                    <strong>
+                      TDD
+                    </strong>
+                  </small>
                 </h4>
                 <ul
                   class="c-resume__list"
@@ -738,16 +818,13 @@ exports[`Resume component Should render the Resume component 1`] = `
                 </ul>
                 <ul>
                   <li>
-                    Leading a team of several senior front-end and full-stack developers in delivering high-end enterprise applications such as Emailio, XPND, Mbrella and others. Technologies used: React, Redux, Typescript, SCSS, WordPress, NodeJS and many more.
+                    Leading a team of several senior front-end and full-stack developers in delivering high-end closed-source enterprise applications
                   </li>
                   <li>
-                    Implementing and maintaining the website for the first bulgarian electric sports car - Kinetik 07.
+                    Working with clients such as Kinetik Automotive, Duke University, E.ON and many more
                   </li>
                   <li>
-                    Implementing the dashboard of the first bulgarian electric kart - Kinetik Model 27
-                  </li>
-                  <li>
-                    Implementing the dashboard of the hybrid Volvo P1800
+                    Utilizing technologies used: Javascript, Typescript, SCSS, MJML, NodeJS, React, Redux, Angular, MongoDB and many many more.
                   </li>
                 </ul>
               </div>
@@ -755,13 +832,40 @@ exports[`Resume component Should render the Resume component 1`] = `
                 class="c-resume__experience"
               >
                 <h3>
-                  Senior UI Developer
+                  Senior Web Developer
                 </h3>
                 <h4>
-                  Toptal, 
+                  Kinetik Automotive, 
                   <em>
-                    freelance
+                    part-time
                   </em>
+                  <br />
+                  <small>
+                    Highlights: 
+                    <strong>
+                      React
+                    </strong>
+                    , 
+                    <strong>
+                      Redux
+                    </strong>
+                    , 
+                    <strong>
+                      NodeJS
+                    </strong>
+                    , 
+                    <strong>
+                      MS Azure
+                    </strong>
+                    , 
+                    <strong>
+                      CosmosDB
+                    </strong>
+                    , 
+                    <strong>
+                      WebSockets
+                    </strong>
+                  </small>
                 </h4>
                 <ul
                   class="c-resume__list"
@@ -770,21 +874,30 @@ exports[`Resume component Should render the Resume component 1`] = `
                     <i
                       class="icon-calendar"
                     />
-                    Jun 2018 - Present
+                    Nov 2019 - Present
                   </li>
                   <li>
                     <i
                       class="icon-location"
                     />
-                    Remote
+                    Varna, Bulgaria
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    Working on closed-source client applications for companies from around the globe. Technologies used: Vue, React, Redux, Typescript, SCSS, NodeJS,
+                    Implementing and maintaining of the website of the company
                   </li>
                   <li>
-                    Part of the top 3% in the world.
+                    Implementing and maintaining of several web apps related to e-go-kart championships
+                  </li>
+                  <li>
+                    Implemeting the dashboard of the first bulgarian eKart
+                  </li>
+                  <li>
+                    Implemeting the dashboard of the inhouse-customized hybrid Volvo P1800
+                  </li>
+                  <li>
+                    Working closely with embedded developers to produce the web application for the Telemetry service - complex telemetry system that offers drivers, mechanics, engineers and coaches all the information they may need to perform their duties
                   </li>
                 </ul>
               </div>
@@ -799,6 +912,29 @@ exports[`Resume component Should render the Resume component 1`] = `
                   <em>
                     full-time
                   </em>
+                  <br />
+                  <small>
+                    Highlights: 
+                    <strong>
+                      HTML5
+                    </strong>
+                    , 
+                    <strong>
+                      CSS3
+                    </strong>
+                    , 
+                    <strong>
+                      Javascript
+                    </strong>
+                    , 
+                    <strong>
+                      NodeJS
+                    </strong>
+                    , 
+                    <strong>
+                      Webpack
+                    </strong>
+                  </small>
                 </h4>
                 <ul
                   class="c-resume__list"
@@ -818,7 +954,7 @@ exports[`Resume component Should render the Resume component 1`] = `
                 </ul>
                 <ul>
                   <li>
-                    Worked for brands such as htmlBurger and htmlBoutique.
+                    Worked for brands such as htmlBurger, htmlBoutique and Mail Bakery.
                   </li>
                   <li>
                     Designed, implemented, maintained and taught the internal coding standards used in tens of thousands of projects.
@@ -1035,6 +1171,23 @@ exports[`Resume component Should render the Resume component 1`] = `
                     I am always making sure that project deadlines are met and the required results are delivered on time.
                   </p>
                 </li>
+              </ul>
+            </div>
+            <div
+              class="c-resume__block"
+            >
+              <h2>
+                More
+              </h2>
+              <ul
+                class="c-resume__strengths"
+              >
+                <p>
+                  I am an open-source software maintainer. My open-source projects are available on NPM. They have been downloaded more than a million times and can be seen on my Github profile.
+                </p>
+                <p>
+                  I have published several articles including guides on how to use Cypress to test authenticated Websockets, how to run multiple Webpack-based applications simultaneously, and how to put a watermark on multiple images using NodeJS. All of my articles and blog posts are available on my personal website.
+                </p>
               </ul>
             </div>
           </div>
@@ -2534,30 +2687,65 @@ exports[`Resume component Should render the Resume component 2`] = `
             <div
               class="c-resume__block"
             >
-              <h2>
-                Education
-              </h2>
-              <p>
-                <strong>
-                  Master in Marketing
-                </strong>
-              </p>
-              <ul
-                class="c-resume__list"
+              <div
+                class="o-grid"
               >
-                <li>
-                  <i
-                    class="icon-calendar"
-                  />
-                  2003 - 2009
-                </li>
-                <li>
-                  <i
-                    class="icon-location"
-                  />
-                  University of Economics Varna
-                </li>
-              </ul>
+                <div
+                  class="o-grid__item xs-12 sm-6"
+                >
+                  <h2>
+                    Education
+                  </h2>
+                  <p>
+                    <strong>
+                      Master in Marketing
+                    </strong>
+                  </p>
+                  <ul
+                    class="c-resume__list"
+                  >
+                    <li>
+                      <i
+                        class="icon-calendar"
+                      />
+                      2003 - 2009
+                    </li>
+                    <li>
+                      <i
+                        class="icon-location"
+                      />
+                      University of Economics Varna
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="o-grid__item xs-12 sm-6"
+                >
+                  <h2>
+                    Certificates
+                  </h2>
+                  <ul>
+                    <li>
+                      HTML Certification, 2021
+                    </li>
+                    <li>
+                      CSS Certification, 2021
+                    </li>
+                    <li>
+                      Javascript Certification, 2020
+                    </li>
+                    <li>
+                      React Development Certification, 2020
+                    </li>
+                    <li>
+                      Deno Certification, 2020
+                    </li>
+                    <li>
+                      Python Certification, 2020
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div
               class="c-resume__block"
@@ -2576,6 +2764,25 @@ exports[`Resume component Should render the Resume component 2`] = `
                   <em>
                     contract
                   </em>
+                  <br />
+                  <small>
+                    Highlights: 
+                    <strong>
+                      Typescript
+                    </strong>
+                    , 
+                    <strong>
+                      React
+                    </strong>
+                    , 
+                    <strong>
+                      React Native
+                    </strong>
+                    , 
+                    <strong>
+                      TDD
+                    </strong>
+                  </small>
                 </h4>
                 <ul
                   class="c-resume__list"
@@ -2595,13 +2802,16 @@ exports[`Resume component Should render the Resume component 2`] = `
                 </ul>
                 <ul>
                   <li>
-                    Implementing and maintaining the frontend of E.ON Home. Technologies used: React, React Native, Redux, Typescript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.
+                    Implementing and maintaining the frontend of E.ON Home. Technologies used: React, React Native, Redux, Typescript, SCSS, SVG, MJML, NodeJS, MS Azure, AWS, Jest, Cypress, Sketch and many more.
                   </li>
                   <li>
                     Designing, implementing and maintaining the frontend of E.ON H.E.M.S. Technologies used: Angular, Redux, Typescript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.
                   </li>
                   <li>
-                    Leading a team of four front-end developers
+                    Leading a team of several front-end developers working on all aspects of the front-end
+                  </li>
+                  <li>
+                    Participating in the hiring process and evaluation of candidates
                   </li>
                 </ul>
               </div>
@@ -2616,6 +2826,29 @@ exports[`Resume component Should render the Resume component 2`] = `
                   <em>
                     full-time
                   </em>
+                  <br />
+                  <small>
+                    Highlights: 
+                    <strong>
+                      React
+                    </strong>
+                    , 
+                    <strong>
+                      Redux
+                    </strong>
+                    , 
+                    <strong>
+                      NodeJS
+                    </strong>
+                    , 
+                    <strong>
+                      NextJS
+                    </strong>
+                    , 
+                    <strong>
+                      TDD
+                    </strong>
+                  </small>
                 </h4>
                 <ul
                   class="c-resume__list"
@@ -2635,16 +2868,13 @@ exports[`Resume component Should render the Resume component 2`] = `
                 </ul>
                 <ul>
                   <li>
-                    Leading a team of several senior front-end and full-stack developers in delivering high-end enterprise applications such as Emailio, XPND, Mbrella and others. Technologies used: React, Redux, Typescript, SCSS, WordPress, NodeJS and many more.
+                    Leading a team of several senior front-end and full-stack developers in delivering high-end closed-source enterprise applications
                   </li>
                   <li>
-                    Implementing and maintaining the website for the first bulgarian electric sports car - Kinetik 07.
+                    Working with clients such as Kinetik Automotive, Duke University, E.ON and many more
                   </li>
                   <li>
-                    Implementing the dashboard of the first bulgarian electric kart - Kinetik Model 27
-                  </li>
-                  <li>
-                    Implementing the dashboard of the hybrid Volvo P1800
+                    Utilizing technologies used: Javascript, Typescript, SCSS, MJML, NodeJS, React, Redux, Angular, MongoDB and many many more.
                   </li>
                 </ul>
               </div>
@@ -2652,13 +2882,40 @@ exports[`Resume component Should render the Resume component 2`] = `
                 class="c-resume__experience"
               >
                 <h3>
-                  Senior UI Developer
+                  Senior Web Developer
                 </h3>
                 <h4>
-                  Toptal, 
+                  Kinetik Automotive, 
                   <em>
-                    freelance
+                    part-time
                   </em>
+                  <br />
+                  <small>
+                    Highlights: 
+                    <strong>
+                      React
+                    </strong>
+                    , 
+                    <strong>
+                      Redux
+                    </strong>
+                    , 
+                    <strong>
+                      NodeJS
+                    </strong>
+                    , 
+                    <strong>
+                      MS Azure
+                    </strong>
+                    , 
+                    <strong>
+                      CosmosDB
+                    </strong>
+                    , 
+                    <strong>
+                      WebSockets
+                    </strong>
+                  </small>
                 </h4>
                 <ul
                   class="c-resume__list"
@@ -2667,21 +2924,30 @@ exports[`Resume component Should render the Resume component 2`] = `
                     <i
                       class="icon-calendar"
                     />
-                    Jun 2018 - Present
+                    Nov 2019 - Present
                   </li>
                   <li>
                     <i
                       class="icon-location"
                     />
-                    Remote
+                    Varna, Bulgaria
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    Working on closed-source client applications for companies from around the globe. Technologies used: Vue, React, Redux, Typescript, SCSS, NodeJS,
+                    Implementing and maintaining of the website of the company
                   </li>
                   <li>
-                    Part of the top 3% in the world.
+                    Implementing and maintaining of several web apps related to e-go-kart championships
+                  </li>
+                  <li>
+                    Implemeting the dashboard of the first bulgarian eKart
+                  </li>
+                  <li>
+                    Implemeting the dashboard of the inhouse-customized hybrid Volvo P1800
+                  </li>
+                  <li>
+                    Working closely with embedded developers to produce the web application for the Telemetry service - complex telemetry system that offers drivers, mechanics, engineers and coaches all the information they may need to perform their duties
                   </li>
                 </ul>
               </div>
@@ -2696,6 +2962,29 @@ exports[`Resume component Should render the Resume component 2`] = `
                   <em>
                     full-time
                   </em>
+                  <br />
+                  <small>
+                    Highlights: 
+                    <strong>
+                      HTML5
+                    </strong>
+                    , 
+                    <strong>
+                      CSS3
+                    </strong>
+                    , 
+                    <strong>
+                      Javascript
+                    </strong>
+                    , 
+                    <strong>
+                      NodeJS
+                    </strong>
+                    , 
+                    <strong>
+                      Webpack
+                    </strong>
+                  </small>
                 </h4>
                 <ul
                   class="c-resume__list"
@@ -2715,7 +3004,7 @@ exports[`Resume component Should render the Resume component 2`] = `
                 </ul>
                 <ul>
                   <li>
-                    Worked for brands such as htmlBurger and htmlBoutique.
+                    Worked for brands such as htmlBurger, htmlBoutique and Mail Bakery.
                   </li>
                   <li>
                     Designed, implemented, maintained and taught the internal coding standards used in tens of thousands of projects.
@@ -2932,6 +3221,23 @@ exports[`Resume component Should render the Resume component 2`] = `
                     I am always making sure that project deadlines are met and the required results are delivered on time.
                   </p>
                 </li>
+              </ul>
+            </div>
+            <div
+              class="c-resume__block"
+            >
+              <h2>
+                More
+              </h2>
+              <ul
+                class="c-resume__strengths"
+              >
+                <p>
+                  I am an open-source software maintainer. My open-source projects are available on NPM. They have been downloaded more than a million times and can be seen on my Github profile.
+                </p>
+                <p>
+                  I have published several articles including guides on how to use Cypress to test authenticated Websockets, how to run multiple Webpack-based applications simultaneously, and how to put a watermark on multiple images using NodeJS. All of my articles and blog posts are available on my personal website.
+                </p>
               </ul>
             </div>
           </div>
