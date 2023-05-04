@@ -80,51 +80,101 @@ export const About: FC = () => {
 				<div className="c-article__block">
 					<h3>Current occupation</h3>
 
+					<p>
+						I am a Javascript/Typescript engineer with more than 10 years of professional experience who is
+						currently working as:
+					</p>
+
 					<ul>
 						<li>
-							A Senior Javascript/Typescript engineer and front-end mentor at{' '}
+							Lead front-end engineer in{' '}
 							<strong>
-								<ExternalLink href="https://github.com/three11">Three 11</ExternalLink>{' '}
-							</strong>
-							working on various boutique web applications including XPND, Kinetik Automotive and many
-							more.
-						</li>
-
-						<li>
-							A Lead front-end engineer at E.ON working on the{' '}
+								<ExternalLink href="https://www.eonenergy.com/">E.ON</ExternalLink>
+							</strong>{' '}
+							working on the{' '}
 							<strong>
 								<ExternalLink href="https://www.red-dot.org/project/eon-home-49256">
 									award winning
 								</ExternalLink>
 							</strong>{' '}
-							web and mobile smart energy management application E.ON Home.
+							<strong>
+								<ExternalLink href="https://www.eonenergy.com/energy-management.html">
+									E.ON Home
+								</ExternalLink>
+							</strong>
+							project.
 						</li>
 
 						<li>
-							A Senior software developer at{' '}
+							Senior software developer at{' '}
+							<strong>
+								<ExternalLink href="https://three-11.com/">Three11</ExternalLink>
+							</strong>
+							working with various clients such as Kinetik Automotive and Duke University.
+						</li>
+
+						<li>
+							Part of &quot;the top 3% in the world&quot; at{' '}
 							<strong>
 								<ExternalLink href="https://www.toptal.com/resume/atanas-atanasov">Toptal</ExternalLink>
 							</strong>
 						</li>
 
 						<li>
-							A Founding member and Senior Javascript/Typescript engineer at{' '}
+							Founding talent member at{' '}
 							<strong>
 								<ExternalLink href="https://app.usebraintrust.com/talent/782/">Braintrust</ExternalLink>
 							</strong>
 						</li>
 
 						<li>
-							A Senior Javascript/Typescript engineer at{' '}
+							Senior front-end engineer at{' '}
 							<strong>
 								<ExternalLink href="https://andela.com/">Andela</ExternalLink>
 							</strong>
 						</li>
 
 						<li>
-							A Senior Frontend engineer at{' '}
+							Freelance Javascript/Typescript Engineer at{' '}
 							<strong>
-								<ExternalLink href="https://app.9am.works/hire/atanas-atanasov">9AM</ExternalLink>
+								<ExternalLink href="https://www.upwork.com/freelancers/~01736096283e1b5690">
+									Upwork
+								</ExternalLink>
+							</strong>
+						</li>
+
+						<li>
+							Freelance Javascript/Typescript Engineer at{' '}
+							<strong>
+								<ExternalLink href="https://www.freelancer.com/u/scriptexbg">Freelancer</ExternalLink>
+							</strong>
+						</li>
+
+						<li>
+							Freelance front-end engineer at{' '}
+							<strong>
+								<ExternalLink href="https://app.9am.works/talent/atanas-atanasov">9am</ExternalLink>
+							</strong>
+						</li>
+
+						<li>
+							Freelance front-end engineer at{' '}
+							<strong>
+								<ExternalLink href="https://wellfound.com/u/scriptex">Wellfound</ExternalLink>
+							</strong>
+						</li>
+
+						<li>
+							Senior front-end enginner at{' '}
+							<strong>
+								<ExternalLink href="https://pph.me/scriptex">People Per Hour</ExternalLink>
+							</strong>
+						</li>
+
+						<li>
+							Freelance front-end developer at{' '}
+							<strong>
+								<ExternalLink href="https://www.flexworkweb.com/@66374b3b">FlexWork</ExternalLink>
 							</strong>
 						</li>
 					</ul>
@@ -149,6 +199,15 @@ export const About: FC = () => {
 							<ExternalLink href="https://github.com/scriptex">mine</ExternalLink>
 						</strong>
 						.
+					</p>
+
+					<p>
+						Last but not least, I have developed several Web Components all of which are published to{' '}
+						<strong>
+							<ExternalLink href="https://www.webcomponents.org/author/scriptex">
+								WebComponents.org
+							</ExternalLink>
+						</strong>
 					</p>
 				</div>
 			</Section>
