@@ -8,6 +8,7 @@ import {
 	Layout,
 	Section,
 	Animation,
+	ResumeMore,
 	ResumeTitle,
 	ResumeSkills,
 	ResumeSummary,
@@ -56,6 +57,8 @@ export const Resume: FC = () => (
 					<ResumeSkills />
 
 					<ResumeStrengths />
+
+					<ResumeMore />
 				</div>
 			</div>
 		</Section>
