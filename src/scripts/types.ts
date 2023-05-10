@@ -82,13 +82,3 @@ export type FormData = {
 	message: string;
 	honeypot: string;
 };
-
-export type ProhibitProperty<T, V> = unknown extends {
-	[K in keyof T]: T[K] extends V ? unknown : never;
-}[keyof T]
-	? never
-	: unknown;
-
-export type Unique<T extends object, V> = {
-	[K in keyof T]: T[K] & (T[K] extends V ? ProhibitProperty<Omit<T, K>, V> : unknown);
-};
