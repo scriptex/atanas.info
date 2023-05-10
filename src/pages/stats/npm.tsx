@@ -31,14 +31,14 @@ type WithError = {
 
 type Props = Packages<WithSum & WithError>;
 
-export const Packages: FC<Readonly<Packages>> = ({ data }: Packages) => (
+export const PackagesList: FC<Readonly<Packages>> = ({ data }: Packages) => (
 	<div className="o-grid c-packages">
-		{Object.keys(data).map((key: string, index: number) => {
+		{Object.keys(data).map((key: string) => {
 			const item = data[key];
 			const authors = item.author.split(',');
 
 			return (
-				<div className="o-grid__item xs-12 sm-6 md-4 lg-4" key={index}>
+				<div className="o-grid__item xs-12 sm-6 md-4 lg-4" key={key}>
 					<ExternalLink href={item.homepage} className="c-package">
 						<h4>{item.name}</h4>
 
@@ -100,7 +100,7 @@ export const NPMStats: FC<Readonly<Props>> = ({ data }: Props) => {
 							Total downloads: <strong>{sum as unknown as number}</strong>
 						</h6>
 
-						<Packages data={packages} />
+						<PackagesList data={packages} />
 					</div>
 				</div>
 			</Section>

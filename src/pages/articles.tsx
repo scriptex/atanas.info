@@ -16,7 +16,7 @@ export const Articles: FC = () => (
 				{articles
 					.filter((article: Article) => article.external)
 					.map((article: Article) => (
-						<div key={article.title} className="o-grid__item xs-12 sm-6">
+						<div key={article.index} className="o-grid__item xs-12 sm-6">
 							<ExternalLink
 								href={article.url}
 								style={{ backgroundImage: `url(${article.image})` }}

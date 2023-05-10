@@ -12,7 +12,17 @@ export const run = async (): Promise<Record<string, any>> => {
 
 		const { sum, stats } = await npmtotal('scriptex', { startDate: '2017-01-01' });
 
-		const packages = stats.sort(([a]: [string, number], [b]: [string, number]) => (a > b ? 1 : a < b ? -1 : 0));
+		const packages = [...stats].sort(([a], [b]) => {
+			if (a > b) {
+				return 1;
+			}
+
+			if (a < b) {
+				return -1;
+			}
+
+			return 0;
+		});
 
 		result.sum = sum;
 

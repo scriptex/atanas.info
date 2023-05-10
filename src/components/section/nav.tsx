@@ -18,7 +18,7 @@ export const SectionNav: FC<Readonly<Props>> = ({ name, data, small = false, act
 	<nav className={composeClassName('c-section__nav', small ? ['small'] : [])}>
 		<ul>
 			{data.map((item: Presentation | Slide | Article, index: number) => (
-				<li key={index} className={active === index ? 'current' : undefined}>
+				<li key={item.index} className={active === index ? 'current' : undefined}>
 					<Button
 						type="button"
 						onClick={() => onClick(index)}

@@ -21,13 +21,15 @@ export const extractGithubData = ({
 		return [];
 	}
 
-	const calendarDates = Object.keys(calendar).reduce((result: string[], key: string) => {
-		if (Object.keys(calendar[key]).length === 0) {
-			return result;
-		}
+	const calendarDates = Object.keys(calendar)
+		.reduce((result: string[], key: string) => {
+			if (Object.keys(calendar[key]).length === 0) {
+				return result;
+			}
 
-		return [...result, key];
-	}, []);
+			return [...result, key];
+		}, [])
+		.reverse();
 
 	return [
 		{
@@ -44,7 +46,7 @@ export const extractGithubData = ({
 		{ title: 'Following', value: general.following },
 		{ title: 'Joined date', value: formatDate(general.createdAt) },
 		{ title: 'Updated at', value: formatDate(general.updatedAt) },
-		{ title: 'Last active', value: formatDate(calendarDates.reverse()[0]) },
+		{ title: 'Last active', value: formatDate(calendarDates[0]) },
 		{ title: 'Total repositories', value: repositories.length },
 		{ title: 'Private repositories', value: general.privateRepos },
 		{ title: 'Public repositories', value: general.publicRepos },
@@ -79,7 +81,7 @@ export const extractGithubData = ({
 			title: 'Total issues',
 			value: repositories.reduce((result: number, repo: GithubRepository) => result + repo.issues, 0)
 		}
-	];
+	].map((item, index) => ({ ...item, index }));
 };
 
 type Props = {

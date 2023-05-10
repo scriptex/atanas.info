@@ -59,7 +59,7 @@ export const extractGitlabData = ({ general, calendar, repositories }: GitlabIns
 			title: 'Total issues',
 			value: repositories.reduce((result: number, repo: GitlabRepository) => result + (repo.issues || 0), 0)
 		}
-	];
+	].map((item, index) => ({ ...item, index }));
 };
 
 type Props = {
@@ -74,15 +74,17 @@ export const GitlabStats: FC<Readonly<Props>> = ({ data }: Props) => {
 	const calendarPlaceholder2: Ref<HTMLDivElement> = useRef(null);
 
 	useEffect(() => {
-		import('gitlab-calendar').then(({ GitlabCalendar }) => {
-			if (calendarPlaceholder1.current && !!calendar) {
-				new GitlabCalendar(calendarPlaceholder1.current, calendar, {});
-			}
+		import('gitlab-calendar')
+			.then(({ GitlabCalendar }) => {
+				if (calendarPlaceholder1.current && !!calendar) {
+					new GitlabCalendar(calendarPlaceholder1.current, calendar, {});
+				}
 
-			if (calendarPlaceholder2.current) {
-				new GitlabCalendar(calendarPlaceholder2.current, gitlabCalendarData, {});
-			}
-		});
+				if (calendarPlaceholder2.current) {
+					new GitlabCalendar(calendarPlaceholder2.current, gitlabCalendarData, {});
+				}
+			})
+			.catch(console.error);
 	}, [calendar]);
 
 	useEffect(() => {

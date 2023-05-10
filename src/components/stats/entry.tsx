@@ -13,8 +13,8 @@ export const StatsEntry: FC<Readonly<Props>> = ({ title, data }: Props) => (
 			<h3>{title}</h3>
 
 			<ul className="c-section__list">
-				{data.map((item: GeneralInsight, i: number) => (
-					<li key={i}>
+				{data.map((item: GeneralInsight) => (
+					<li key={item.index}>
 						<span>{item.title}:</span>
 						<strong>{item.value}</strong>
 					</li>

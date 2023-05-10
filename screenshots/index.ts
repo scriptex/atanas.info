@@ -9,7 +9,7 @@ import * as pckg from '../package.json';
 import { WebProject, projects } from '@data/projects';
 import clientPromise, { queryCloudinary, queryScreenshots } from '@lib/mongodb';
 
-if (!projects || !projects.length) {
+if (!projects?.length) {
 	log('atanas.info: No web projects found.');
 	process.exit();
 }
@@ -126,17 +126,24 @@ async function createScreenshots(allPages: WebProject[]): Promise<void> {
 		}
 	}
 
-	Promise.all(results).then(async () => {
-		const client = await clientPromise;
-		const db = client.db('All');
-		const options = { upsert: true };
-		const collection = db.collection('Screenshots');
+	Promise.all(results)
+		.then(async () => {
+			const client = await clientPromise;
+			const db = client.db('All');
+			const options = { upsert: true };
+			const collection = db.collection('Screenshots');
 
-		await collection.updateOne(queryCloudinary, { $set: { ...queryCloudinary, data: results } }, options);
-		await collection.updateOne(queryScreenshots, { $set: { ...queryScreenshots, data: newProjects } }, options);
+			await collection.updateOne(queryCloudinary, { $set: { ...queryCloudinary, data: results } }, options);
+			await collection.updateOne(queryScreenshots, { $set: { ...queryScreenshots, data: newProjects } }, options);
 
-		process.exit();
-	});
+			process.exit();
+		})
+		.catch(e => {
+			console.error(e);
+			process.exit();
+		});
 }
 
-createScreenshots(projects);
+(async () => {
+	await createScreenshots(projects);
+})();
