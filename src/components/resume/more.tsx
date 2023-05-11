@@ -7,8 +7,8 @@ export const ResumeMore: FC = () => (
 		<h2>More</h2>
 
 		<ul className="c-resume__strengths">
-			{resumeMore.map((item: string, i: number) => (
-				<p key={i}>{item}</p>
+			{resumeMore.map((item: string) => (
+				<p key={item}>{item}</p>
 			))}
 		</ul>
 	</div>

@@ -9,7 +9,7 @@ export const Skills: FC = () => {
 	const [showTable, setShowTable] = useState(false);
 
 	useEffect(() => {
-		import('@scripts/skills').then(({ drawSkills }) => drawSkills(skills));
+		import('@scripts/skills').then(({ drawSkills }) => drawSkills(skills)).catch(console.error);
 	}, []);
 
 	return (

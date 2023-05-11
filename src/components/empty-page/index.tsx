@@ -22,7 +22,7 @@ export const EmptyPage: FC<Readonly<Props>> = ({ children }: Props) => (
 				<svg width={380} height={500} viewBox="0 0 837 1045">
 					<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 						{errorIcon.map(options => (
-							<path key={options.d} {...options} />
+							<path key={options.index} {...options} />
 						))}
 					</g>
 				</svg>

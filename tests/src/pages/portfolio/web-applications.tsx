@@ -14,14 +14,16 @@ snapshotTest(() => (
 				title: 'Test web app 1',
 				description: 'This is just a testing web app',
 				skip: false,
-				image: '/images/test.png'
+				image: '/images/test.png',
+				index: 0
 			},
 			{
 				url: '',
 				title: 'Test web app 2',
 				description: 'This is just a testing web app',
 				skip: false,
-				image: '/images/test.png'
+				image: '/images/test.png',
+				index: 1
 			}
 		]}
 	/>
@@ -37,14 +39,16 @@ snapshotTest(() => (
 				title: 'Test web app 1',
 				description: 'This is just a testing web app',
 				skip: false,
-				image: '/images/test.png'
+				image: '/images/test.png',
+				index: 0
 			},
 			{
 				url: '',
 				title: 'Test web app 2',
 				description: 'This is just a testing web app',
 				skip: false,
-				image: '/images/test.png'
+				image: '/images/test.png',
+				index: 1
 			}
 		]}
 	/>

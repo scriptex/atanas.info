@@ -10,7 +10,7 @@ export const Partners: FC = () => (
 
 			<ul>
 				{partners.map(partner => (
-					<li key={partner.name}>
+					<li key={partner.index}>
 						<Image
 							src={partner.image}
 							alt={`${partner.name} brand image`}

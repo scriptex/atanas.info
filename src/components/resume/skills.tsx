@@ -6,10 +6,10 @@ export const ResumeSkills: FC = () => (
 	<div className="c-resume__block">
 		<h2>INDUSTRY SKILLS</h2>
 
-		{resumeSkills.map((skills: string[], i: number) => (
-			<ul className="c-resume__skills" key={i}>
-				{skills.map((skill: string, j: number) => (
-					<li key={j}>{skill}</li>
+		{resumeSkills.map((skills: string[]) => (
+			<ul className="c-resume__skills" key={skills.join('')}>
+				{skills.map((skill: string) => (
+					<li key={skill}>{skill}</li>
 				))}
 			</ul>
 		))}

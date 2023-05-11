@@ -7,8 +7,8 @@ export const ResumeExperience: FC = () => (
 	<div className="c-resume__block">
 		<h2>Experience</h2>
 
-		{resumeExperience.map((item: ResumeExperienceItem, i: number) => (
-			<div className="c-resume__experience" key={i}>
+		{resumeExperience.map((item: ResumeExperienceItem) => (
+			<div className="c-resume__experience" key={item.index}>
 				<h3>{item.position}</h3>
 
 				<h4>{item.project}</h4>
@@ -16,8 +16,8 @@ export const ResumeExperience: FC = () => (
 				<ResumeEntry {...item.meta} />
 
 				<ul>
-					{item.details.map((detail, j) => (
-						<li key={j}>{detail}</li>
+					{item.details.map(detail => (
+						<li key={detail}>{detail}</li>
 					))}
 				</ul>
 			</div>

@@ -4,6 +4,7 @@ import statistics from '@data/lotties/statistics.json';
 import { Animation } from '@components';
 
 export type GeneralInsight = {
+	readonly index: number;
 	readonly title: string;
 	readonly value: any;
 };

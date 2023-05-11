@@ -16,12 +16,12 @@ export const Head: FC = () => (
 			content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
 		/>
 
-		{metaTags.map((data: MetaTag, i: number) => (
-			<meta {...data} key={i} />
+		{metaTags.map((data: MetaTag) => (
+			<meta {...data} key={data.index} />
 		))}
 
-		{linkTags.map((data: LinkTag, i: number) => (
-			<link {...data} key={i} />
+		{linkTags.map((data: LinkTag) => (
+			<link {...data} key={data.index} />
 		))}
 
 		<style>{`
