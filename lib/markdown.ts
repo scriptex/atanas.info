@@ -23,7 +23,7 @@ export const getPostBySlug = (folder: string, slug: string, fields: string[] = [
 	const fileContents = fs.readFileSync(fullPath, 'utf8');
 	const { data, content } = matter(fileContents);
 
-	fields.forEach(async field => {
+	fields.forEach(field => {
 		if (field === 'slug') {
 			items[field] = realSlug;
 		}

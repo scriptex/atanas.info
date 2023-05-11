@@ -5,8 +5,8 @@ import { moonData } from './data';
 
 export const Moon: FC = () => (
 	<g fill="#A2B5BF" transform="translate(18.407)" className="moon">
-		{moonData.particles.map((points, index) => (
-			<polygon key={index} points={points} />
+		{moonData.particles.map(points => (
+			<polygon key={points} points={points} />
 		))}
 
 		<g transform="translate(23.205)">
@@ -24,11 +24,11 @@ export const Moon: FC = () => (
 				d="M94.176,111.765 C94.176,102.974 87.049,95.849 78.258,95.849 C69.467,95.849 62.34,102.974 62.34,111.765 C62.34,120.558 69.467,127.685 78.258,127.685 C87.049,127.685 94.176,120.558 94.176,111.765 Z"
 			/>
 
-			{moonData.circles.map((props, index) => (
+			{moonData.circles.map(({ index, ...props }) => (
 				<circle key={index} {...props} />
 			))}
 
-			{moonData.craters.map((props, index) => (
+			{moonData.craters.map(({ index, ...props }) => (
 				<Crater key={index} {...props} />
 			))}
 		</g>

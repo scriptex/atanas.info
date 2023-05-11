@@ -7,8 +7,9 @@ import { openSourceProjectsList } from '@data/open-source';
 import { Button, Layout, Section, SectionGrid } from '@components';
 
 export const openSourceProjects = openSourceProjectsList.map((repo, index) => ({
-	url: repo.url,
-	text: repo.title,
+	url: repo?.url,
+	text: repo?.title,
+	index,
 	image: `/images/unsplash/${(index % 25) + 1}.jpeg`
 }));
 

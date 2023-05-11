@@ -1,28 +1,34 @@
 export type ResumeLinkItem = {
 	icon: string;
 	text: string;
+	index: number;
 };
 
 export const resumeLinks: ResumeLinkItem[] = [
 	{
 		icon: 'icon-mail',
-		text: 'hi@atanas.info'
+		text: 'hi@atanas.info',
+		index: 0
 	},
 	{
 		icon: 'icon-link',
-		text: 'https://atanas.info'
+		text: 'https://atanas.info',
+		index: 1
 	},
 	{
 		icon: 'icon-link',
-		text: 'https://linkedin.com/in/scriptex'
+		text: 'https://linkedin.com/in/scriptex',
+		index: 2
 	},
 	{
 		icon: 'icon-link',
-		text: 'https://github.com/scriptex'
+		text: 'https://github.com/scriptex',
+		index: 3
 	},
 	{
 		icon: 'icon-location',
-		text: 'Varna, Bulgaria'
+		text: 'Varna, Bulgaria',
+		index: 4
 	}
 ];
 
@@ -34,6 +40,7 @@ export type ResumeExperienceItem = {
 	details: string[];
 	project: JSX.Element;
 	position: string;
+	index: number;
 };
 
 export const resumeExperience: ResumeExperienceItem[] = [
@@ -58,7 +65,8 @@ export const resumeExperience: ResumeExperienceItem[] = [
 			'Designing, implementing and maintaining the frontend of E.ON H.E.M.S. Technologies used: Angular, Redux, Typescript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.',
 			'Leading a team of several front-end developers working on all aspects of the front-end',
 			'Participating in the hiring process and evaluation of candidates'
-		]
+		],
+		index: 0
 	},
 	{
 		position: 'Senior Frontend Developer',
@@ -80,7 +88,8 @@ export const resumeExperience: ResumeExperienceItem[] = [
 			'Leading a team of several senior front-end and full-stack developers in delivering high-end closed-source enterprise applications',
 			'Working with clients such as Kinetik Automotive, Duke University, E.ON and many more',
 			'Utilizing technologies used: Javascript, Typescript, SCSS, MJML, NodeJS, React, Redux, Angular, MongoDB and many many more.'
-		]
+		],
+		index: 1
 	},
 	{
 		position: 'Senior Web Developer',
@@ -104,7 +113,8 @@ export const resumeExperience: ResumeExperienceItem[] = [
 			'Implemeting the dashboard of the first bulgarian eKart',
 			'Implemeting the dashboard of the inhouse-customized hybrid Volvo P1800',
 			'Working closely with embedded developers to produce the web application for the Telemetry service - complex telemetry system that offers drivers, mechanics, engineers and coaches all the information they may need to perform their duties'
-		]
+		],
+		index: 2
 	},
 	{
 		position: 'Senior Frontend Developer',
@@ -128,7 +138,8 @@ export const resumeExperience: ResumeExperienceItem[] = [
 			'Designed, implemented and maintained the internal frontend build system used in tens of thousands of projects.',
 			'Mentored and led several front-end developer teams throughout the years.',
 			'Published several articles.'
-		]
+		],
+		index: 3
 	}
 ];
 
@@ -144,6 +155,7 @@ export const resumeSkills: Array<string[]> = [
 
 export type ResumeStrengthItem = {
 	icon: string;
+	index: number;
 	title: string;
 	content: string;
 };
@@ -151,23 +163,27 @@ export type ResumeStrengthItem = {
 export const resumeStrengths: ResumeStrengthItem[] = [
 	{
 		icon: 'icon-share',
+		index: 0,
 		title: 'Collaborative',
 		content:
 			'I am always keen to share knowledge, help, discuss, teach and learn from others. I am able to collaborate with cross-functional teams to create a high-quality end product.'
 	},
 	{
 		icon: 'icon-star',
+		index: 1,
 		title: 'Result-oriented',
 		content:
 			'Many confuse progress with moving in the right direction. I always make sure to check if the team is on the right path.'
 	},
 	{
 		icon: 'icon-brush',
+		index: 2,
 		title: 'Detail-oriented',
 		content: 'Continuously focused on how to improve my work and do it the best way I can.'
 	},
 	{
 		icon: 'icon-clock',
+		index: 3,
 		title: 'Project management and prioritization',
 		content:
 			'I am always making sure that project deadlines are met and the required results are delivered on time.'

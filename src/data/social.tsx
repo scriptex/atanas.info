@@ -1,16 +1,19 @@
 import { ExternalLink } from '@components';
 
 export type SocialItem = {
+	index: number;
 	title: string;
 	element: JSX.Element;
 };
 
 export const socialItems: SocialItem[] = [
 	{
+		index: 0,
 		title: 'Codersrank Profile',
 		element: <codersrank-widget username="scriptex" branding={false} />
 	},
 	{
+		index: 1,
 		title: 'Github Profile',
 		element: (
 			<iframe
@@ -24,8 +27,8 @@ export const socialItems: SocialItem[] = [
 			/>
 		)
 	},
-
 	{
+		index: 2,
 		title: 'Twitter Profile',
 		element: (
 			<a href="//twitter.com/scriptexbg" className="twitter-timeline" data-dnt="true" data-theme="dark">
@@ -34,6 +37,7 @@ export const socialItems: SocialItem[] = [
 		)
 	},
 	{
+		index: 3,
 		title: 'YouTube Channel',
 		element: (
 			<iframe
@@ -47,6 +51,7 @@ export const socialItems: SocialItem[] = [
 		)
 	},
 	{
+		index: 4,
 		title: 'Spotify playlist',
 		element: (
 			<iframe
@@ -61,6 +66,7 @@ export const socialItems: SocialItem[] = [
 		)
 	},
 	{
+		index: 5,
 		title: 'Stackoverflow flair',
 		element: (
 			<div className="stackoverflow-frame">

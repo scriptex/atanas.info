@@ -81,6 +81,8 @@ export const usePagination = <T>(data: T[], size = 10): PaginationData<T> => {
 	const [items, setItems] = useState<T[][] | undefined>();
 	const [current, setCurrent] = useState(0);
 
+	data = data.map((item, index) => ({ ...item, index }));
+
 	useEffect(() => {
 		setItems([...Array(Math.ceil(data.length / size))].map((_, i) => data.slice(size * i, size + size * i)));
 		// eslint-disable-next-line react-hooks/exhaustive-deps
@@ -89,6 +91,7 @@ export const usePagination = <T>(data: T[], size = 10): PaginationData<T> => {
 	return {
 		menu: items?.map((_, i) => ({
 			url: '',
+			index: i,
 			title: (i + 1).toString(),
 			description: ''
 		})),

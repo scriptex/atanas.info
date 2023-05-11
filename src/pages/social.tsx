@@ -45,8 +45,8 @@ export const Social: FC<Readonly<Props>> = ({ data }: Props) => {
 								<LinkedInBadge />
 							</div>
 
-							{socialItems.map((item: SocialItem, i) => (
-								<div key={i} className="o-grid__item xs-12 sm-6">
+							{socialItems.map((item: SocialItem) => (
+								<div key={item.index} className="o-grid__item xs-12 sm-6">
 									<h3>{item.title}</h3>
 
 									{online ? (

@@ -22,8 +22,8 @@ export const SectionGrid: FC<Readonly<Props>> = ({ data, linkType = 'internal', 
 	return pagination && (!items || items.length === 0) ? null : (
 		<>
 			<div className="c-section__grid o-grid">
-				{(!pagination ? data : items![current]).map((item: SubPage, index: number) => (
-					<div key={index} className="o-grid__item xs-12 sm-6 md-4 lg-4 xl-4">
+				{(!pagination ? data : items![current]).map((item: SubPage) => (
+					<div key={item.index} className="o-grid__item xs-12 sm-6 md-4 lg-4 xl-4">
 						{linkType === 'external' ? (
 							<ExternalLink href={item.url} {...getCommonProps(item.image)}>
 								<strong>{item.text}</strong>

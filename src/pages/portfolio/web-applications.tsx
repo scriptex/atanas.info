@@ -30,7 +30,7 @@ export const PortfolioWebApps: FC<Readonly<Props>> = ({ data = [] }: Props) => {
 				<div className="c-section__body">
 					{items[current]?.map((project: WebProject) => (
 						<ExternalLink
-							key={project.title}
+							key={project.index}
 							href={project.url}
 							className={composeClassName('', [], [!project.url ? 'disabled' : ''])}
 						>

@@ -17,9 +17,11 @@ export const Home: FC = () => {
 	useEffect(() => {
 		const canvas = canvasRef.current;
 
-		import('@scripts/canvas').then(({ initCanvas, createDots }) => {
-			createDots(initCanvas('canvas'));
-		});
+		import('@scripts/canvas')
+			.then(({ initCanvas, createDots }) => {
+				createDots(initCanvas('canvas'));
+			})
+			.catch(console.error);
 
 		return () => {
 			if (canvas) {

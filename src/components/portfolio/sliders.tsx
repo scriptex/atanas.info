@@ -15,8 +15,8 @@ type Props = {
 
 export const PortfolioSliders: FC<Readonly<Props>> = ({ data, folder, className, slidesToShow }: Props) => (
 	<div className="c-section__sliders">
-		{data.map((app: ExtendedProject, i: number) => (
-			<div className={composeClassName('c-section__slider', [], [className])} key={i}>
+		{data.map((app: ExtendedProject) => (
+			<div className={composeClassName('c-section__slider', [], [className])} key={app.index}>
 				<Loader />
 
 				<ExternalLink href={app.url}>
@@ -52,7 +52,7 @@ export const PortfolioSliders: FC<Readonly<Props>> = ({ data, folder, className,
 					}
 				>
 					{app.images.map((img: string, j: number) => (
-						<div key={j}>
+						<div key={img}>
 							<Image
 								src={`/images/${folder}/${img}`}
 								alt={`${app.title} screenshot ${j + 1}`}

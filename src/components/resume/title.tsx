@@ -18,8 +18,8 @@ export const ResumeTitle: FC = () => (
 		<h3>Frontend Team Lead</h3>
 
 		<ul className="c-resume__list">
-			{resumeLinks.map((item: ResumeLinkItem, i: number) => (
-				<li key={i}>
+			{resumeLinks.map((item: ResumeLinkItem) => (
+				<li key={item.index}>
 					<i className={item.icon} />
 					{item.text}
 				</li>

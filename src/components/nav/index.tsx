@@ -44,14 +44,14 @@ export const Nav: FC<Readonly<Props>> = ({ onClick, hasShell, className }: Props
 	<nav className={composeClassName('c-nav', [], [className])}>
 		<NavInner hasShell={hasShell}>
 			<ul>
-				{menuItems.map(({ links, ...rest }: MenuItem, i: number) => (
-					<li key={i}>
+				{menuItems.map(({ links, ...rest }: MenuItem) => (
+					<li key={rest.index}>
 						<Anchor {...rest} onClick={onClick} />
 
 						{links && links.length > 0 && (
 							<ul>
-								{links.map((link: MenuItem, j: number) => (
-									<li key={j}>
+								{links.map((link: MenuItem) => (
+									<li key={link.index}>
 										<Anchor {...link} onClick={onClick} />
 									</li>
 								))}

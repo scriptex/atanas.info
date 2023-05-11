@@ -10,7 +10,7 @@ declare module 'npmtotal' {
 		stats: Array<[string, number]>;
 	};
 
-	let npmtotal: (name: string, options: Partial<NPMTotalOptions>) => NPMTotalResult;
+	let npmtotal: (name: string, options: Partial<NPMTotalOptions>) => Promise<NPMTotalResult>;
 
 	export = npmtotal;
 }

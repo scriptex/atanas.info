@@ -6,12 +6,14 @@ jest.mock('@data/menu', () => ({
 	menuItems: [
 		{
 			href: '/',
+			index: 0,
 			title: 'Home',
 			content: 'Home'
 		},
 		{
 			rel: 'noopener noreferrer',
 			href: 'mailto:someone@example.com',
+			index: 1,
 			title: 'Send mail',
 			content: 'Send mail'
 		}

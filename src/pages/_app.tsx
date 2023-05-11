@@ -46,11 +46,13 @@ export const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
 			CSS.paintWorklet.addModule(new URL('/houdini/slanted-backgrounds.js', window.location.href));
 		}
 
-		import('react-gtm-module').then(({ default: TagManager }) => {
-			TagManager.initialize({
-				gtmId: process.env.NEXT_PUBLIC_GTM_ID || ''
-			});
-		});
+		import('react-gtm-module')
+			.then(({ default: TagManager }) => {
+				TagManager.initialize({
+					gtmId: process.env.NEXT_PUBLIC_GTM_ID || ''
+				});
+			})
+			.catch(console.error);
 	}, []);
 
 	return (

@@ -12,13 +12,15 @@ export const Funding: FC = () => {
 	const [open, setOpen] = useState(false);
 
 	useEffect(() => {
-		import('gsap/Draggable').then(({ default: Draggable }) => {
-			gsap.registerPlugin(Draggable);
+		import('gsap/Draggable')
+			.then(({ default: Draggable }) => {
+				gsap.registerPlugin(Draggable);
 
-			if (knob.current) {
-				Draggable.create(knob.current, { type: 'rotation' });
-			}
-		});
+				if (knob.current) {
+					Draggable.create(knob.current, { type: 'rotation' });
+				}
+			})
+			.catch(console.error);
 	}, []);
 
 	return (
@@ -31,8 +33,8 @@ export const Funding: FC = () => {
 
 			<svg viewBox="-100 -100 700 700" ref={knob} className="c-funding__knob">
 				<g>
-					{fundingNetworks.map((network: FundingNetworkData, i: number) => (
-						<FundingNetwork key={i} {...network} />
+					{fundingNetworks.map((network: FundingNetworkData) => (
+						<FundingNetwork key={network.name} {...network} />
 					))}
 				</g>
 
