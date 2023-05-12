@@ -12,17 +12,17 @@ export const resumeLinks: ResumeLinkItem[] = [
 	},
 	{
 		icon: 'icon-link',
-		text: 'https://atanas.info',
+		text: 'atanas.info',
 		index: 1
 	},
 	{
 		icon: 'icon-link',
-		text: 'https://linkedin.com/in/scriptex',
+		text: 'linkedin.com/in/scriptex',
 		index: 2
 	},
 	{
 		icon: 'icon-link',
-		text: 'https://github.com/scriptex',
+		text: 'github.com/scriptex',
 		index: 3
 	},
 	{
@@ -50,6 +50,8 @@ export const resumeExperience: ResumeExperienceItem[] = [
 			<>
 				E.ON, E.ON Home project, <em>contract</em>
 				<br />
+				<span>https://app.home.eon.com | https://admin.eonhome.eu</span>
+				<br />
 				<small>
 					Highlights: <strong>Typescript</strong>, <strong>React</strong>, <strong>React Native</strong>,{' '}
 					<strong>TDD</strong>
@@ -61,10 +63,10 @@ export const resumeExperience: ResumeExperienceItem[] = [
 			period: 'Jul 2018 - Present'
 		},
 		details: [
-			'Implementing and maintaining the frontend of E.ON Home. Technologies used: React, React Native, Redux, Typescript, SCSS, SVG, MJML, NodeJS, MS Azure, AWS, Jest, Cypress, Sketch and many more.',
-			'Designing, implementing and maintaining the frontend of E.ON H.E.M.S. Technologies used: Angular, Redux, Typescript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.',
-			'Leading a team of several front-end developers working on all aspects of the front-end',
-			'Participating in the hiring process and evaluation of candidates'
+			'Implementing and maintaining the frontend of E.ON Home - an award winning web and hybrid mobile application. Technologies used: React, React Native, Redux, Typescript, SCSS, SVG, MJML, NodeJS, MS Azure, AWS, Jest, Cypress, Sketch and many more.',
+			'Designing, implementing and maintaining the frontend of E.ON H.E.M.S - the administration application behind E.ON Home. Technologies used: Angular, Redux, Typescript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.',
+			'Leading a team of several front-end developers working on all aspects of the front-end.',
+			'Participating in the hiring process and evaluation of candidates.'
 		],
 		index: 0
 	},
@@ -86,8 +88,9 @@ export const resumeExperience: ResumeExperienceItem[] = [
 		},
 		details: [
 			'Leading a team of several senior front-end and full-stack developers in delivering high-end closed-source enterprise applications',
-			'Working with clients such as Kinetik Automotive, Duke University, E.ON and many more',
-			'Utilizing technologies used: Javascript, Typescript, SCSS, MJML, NodeJS, React, Redux, Angular, MongoDB and many many more.'
+			'Working with clients such as Kinetik Automotive, Duke University, E.ON and many more.',
+			'Utilizing technologies such as: Javascript, Typescript, SCSS, MJML, NodeJS, React, Redux, NextJS, MongoDB, Jest, Cypress, Mocha, Tape, Chai and many many more.',
+			'Participating in the hiring process and evaluation of candidates.'
 		],
 		index: 1
 	},
@@ -96,6 +99,8 @@ export const resumeExperience: ResumeExperienceItem[] = [
 		project: (
 			<>
 				Kinetik Automotive, <em>part-time</em>
+				<br />
+				<span>https://kinetik-automotive.com | https://kinetik-e.com</span>
 				<br />
 				<small>
 					Highlights: <strong>React</strong>, <strong>Redux</strong>, <strong>NodeJS</strong>,{' '}
@@ -108,11 +113,11 @@ export const resumeExperience: ResumeExperienceItem[] = [
 			period: 'Nov 2019 - Present'
 		},
 		details: [
-			'Implementing and maintaining of the website of the company',
-			'Implementing and maintaining of several web apps related to e-go-kart championships',
-			'Implemeting the dashboard of the first bulgarian eKart',
-			'Implemeting the dashboard of the inhouse-customized hybrid Volvo P1800',
-			'Working closely with embedded developers to produce the web application for the Telemetry service - complex telemetry system that offers drivers, mechanics, engineers and coaches all the information they may need to perform their duties'
+			'Implementing and maintaining of the website of the company.',
+			'Implementing and maintaining of several web apps related to eKart championships.',
+			'Implemeting the dashboard of the first bulgarian eKart.',
+			'Implemeting the dashboard of the inhouse-customized hybrid Volvo P1800.',
+			'Working closely with embedded developers to produce the web application for the Telemetry service - complex telemetry system that offers drivers, mechanics, engineers and coaches all the information they may need to perform their duties.'
 		],
 		index: 2
 	},
@@ -122,9 +127,12 @@ export const resumeExperience: ResumeExperienceItem[] = [
 			<>
 				2create, <em>full-time</em>
 				<br />
+				<span>https://htmlburger.com | https://htmlboutique.com | https://mailbakery.com</span>
+				<br />
 				<small>
 					Highlights: <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>Javascript</strong>,{' '}
-					<strong>NodeJS</strong>, <strong>Webpack</strong>
+					<strong>SCSS</strong>, <strong>React</strong>, <strong>Angular</strong>, <strong>NodeJS</strong>,{' '}
+					<strong>Webpack</strong>
 				</small>
 			</>
 		),
@@ -133,7 +141,7 @@ export const resumeExperience: ResumeExperienceItem[] = [
 			period: 'May 2012 - Jan 2018'
 		},
 		details: [
-			'Worked for brands such as htmlBurger, htmlBoutique and Mail Bakery.',
+			'Worked for brands such as "htmlBurger", "htmlBoutique" and "Mail Bakery" - leaders in the outsourced web and mobile development.',
 			'Designed, implemented, maintained and taught the internal coding standards used in tens of thousands of projects.',
 			'Designed, implemented and maintained the internal frontend build system used in tens of thousands of projects.',
 			'Mentored and led several front-end developer teams throughout the years.',
