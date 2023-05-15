@@ -98,6 +98,19 @@
 		border-bottom: 0.25rem solid var(--color-action);
 	}
 
+	& h3 {
+		margin-bottom: 1rem;
+	}
+
+	& h4 {
+		margin-bottom: 1rem;
+
+		& span {
+			font-size: 75%;
+			font-weight: normal;
+		}
+	}
+
 	& ul:not([class]) {
 		padding: 0;
 		margin: 0 0 1.25em 1.25em;
@@ -277,39 +290,101 @@
 		display: block;
 
 		& h1 {
-			font-size: 2rem;
+			font-size: 1.75rem;
 		}
 
 		& h2 {
 			font-size: 1.5rem;
-			padding: 0;
 		}
 
 		& h3 {
 			font-size: 1.25rem;
+			margin-bottom: 0.5rem;
+		}
+
+		& .o-grid__item {
+			max-width: 50%;
+			flex-basis: 50%;
+			padding-bottom: 0;
+
+			& ul:not([class]) {
+				margin-bottom: 0;
+			}
+
+			& + .o-grid__item {
+				padding-top: 0;
+			}
+		}
+	}
+
+	.c-resume__title {
+		margin-bottom: 0.5rem;
+
+		& h1 {
+			padding-bottom: 0.25rem;
+			margin-bottom: 0.625rem;
+		}
+
+		& img {
+			margin-left: 1rem;
+		}
+	}
+
+	.c-resume__experience,
+	.c-resume__aside .c-resume__block {
+		break-inside: avoid;
+		page-break-inside: avoid;
+	}
+
+	.c-resume__experience {
+		&:first-of-type {
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
+
+		&:not(:first-of-type) {
+			margin-bottom: 0.5rem;
+
+			& ul {
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+
+	.c-resume__block {
+		& p:last-child {
+			margin-bottom: 0;
+		}
+
+		& h4 {
+			margin-bottom: 0.75rem;
 		}
 	}
 
 	.c-resume__list {
 		display: block;
+		padding-bottom: 0.25rem;
 
 		& li {
-			padding-bottom: 0.25rem;
+			padding-bottom: 0.125rem;
 		}
 	}
 
-	.c-resume__skills:not(:first-child) {
-		padding-top: 1rem;
-	}
-
-	.c-resume__block,
-	.c-resume__experience {
-		break-inside: avoid;
-		page-break-inside: avoid;
+	.c-resume__skills {
+		&:not(:first-child) {
+			padding-top: 0;
+		}
 	}
 
 	.c-resume__aside {
 		padding-top: 1rem;
+	}
+
+	.c-resume__strengths {
+		& li:not(:first-child) {
+			padding-top: 0.5rem;
+			margin-top: 0.5rem;
+		}
 	}
 
 	.theme-light {
