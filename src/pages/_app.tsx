@@ -15,12 +15,14 @@ import 'prismjs/themes/prism-tomorrow.css';
 
 import '@styles/index.css';
 
+type ExtendedAppProps = AppProps & { Component: any };
+
 export const AppContext = createContext({
 	contactVisible: false,
 	setContactVisible: (state: boolean) => state
 });
 
-export const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
+export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppProps) => {
 	const [contactVisible, setContactVisible] = useState(false);
 	const value: any = useMemo(() => ({ contactVisible, setContactVisible }), [contactVisible]);
 
@@ -35,7 +37,7 @@ export const App: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
 			setThemeClassName(media.replace(/^\(prefers-color-scheme: (.*)\)$/, (_, match) => match) as Theme);
 		});
 
-		if (CSS && CSS.paintWorklet && CSS.paintWorklet.addModule && typeof CSS.paintWorklet.addModule === 'function') {
+		if (CSS?.paintWorklet?.addModule && typeof CSS.paintWorklet.addModule === 'function') {
 			CSS.paintWorklet.addModule(new URL('/houdini/avatar-polygon.js', window.location.href));
 			CSS.paintWorklet.addModule(new URL('/houdini/blotto.js', window.location.href));
 			CSS.paintWorklet.addModule(new URL('/houdini/bubbles.js', window.location.href));

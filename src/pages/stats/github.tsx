@@ -9,7 +9,7 @@ import { getData, queryGithub, MongoDBProps } from '@lib/mongodb';
 import { YEARS, addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import { Button, Layout, Section, StatsEntry, StatsError, GithubSkyline } from '@components';
 
-const ReactGitHubCalendar = dynamic(() => import('react-ts-github-calendar'), { ssr: false });
+const ReactGitHubCalendar = dynamic(() => import('react-ts-github-calendar'), { ssr: false }) as any;
 
 export const extractGithubData = ({
 	general,
