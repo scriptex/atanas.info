@@ -61,7 +61,7 @@ export const projects: WebProject[] = [
 		skip: false
 	},
 	{
-		url: 'https://xpndnow.com/',
+		url: '',
 		image: '/images/web-apps/XPND.jpg',
 		index: 4,
 		title: 'XPND',
@@ -69,7 +69,7 @@ export const projects: WebProject[] = [
 		skip: false
 	},
 	{
-		url: 'https://xpndnow.com/ebook',
+		url: '',
 		image: '/images/web-apps/XPND-Ebook.jpg',
 		index: 5,
 		title: 'XPND Ebook',
@@ -77,7 +77,7 @@ export const projects: WebProject[] = [
 		skip: false
 	},
 	{
-		url: 'https://demo.xpndnow.com/',
+		url: 'https://xpnd.atanas.info/',
 		image: '/images/web-apps/XPND-demo-application.jpg',
 		index: 6,
 		title: 'XPND demo application',
@@ -438,7 +438,7 @@ export const projects: WebProject[] = [
 		skip: false
 	},
 	{
-		url: 'https://hala.film/',
+		url: '',
 		image: '/images/web-apps/Hàla.jpg',
 		index: 51,
 		title: 'Hàla',
