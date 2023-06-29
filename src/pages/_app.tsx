@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/react';
+import { Fira_Sans } from 'next/font/google';
 import type { AppProps } from 'next/app';
 import { FC, useMemo, useState, useEffect, createContext } from 'react';
 
@@ -8,6 +9,11 @@ import { Theme, onThemeChange, setThemeClassName } from '@scripts/shared';
 import '@styles/index.css';
 
 type ExtendedAppProps = AppProps & { Component: any };
+
+export const titleFont = Fira_Sans({
+	weight: ['400', '700'],
+	subsets: ['latin', 'cyrillic']
+});
 
 export const AppContext = createContext({
 	contactVisible: false,
@@ -52,6 +58,12 @@ export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppP
 	return (
 		<>
 			<Head />
+
+			<style jsx global>{`
+				:root {
+					--font-fira-sans: ${titleFont.style.fontFamily};
+				}
+			`}</style>
 
 			<AppContext.Provider value={value}>
 				<Component {...pageProps} />
