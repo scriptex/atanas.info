@@ -79,7 +79,8 @@
 		border-radius: 50%;
 		transform: scale(0);
 		transition: all var(--timing) var(--easing);
-		box-shadow: 0 0 1.5rem color-mod(var(--color-primary) a(30%)) inset,
+		box-shadow:
+			0 0 1.5rem color-mod(var(--color-primary) a(30%)) inset,
 			0 0 1.5rem color-mod(var(--color-primary) a(30%));
 	}
 
