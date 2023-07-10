@@ -22,7 +22,12 @@
 		"compat/compat": "off",
 		"react/display-name": "off",
 		"react/react-in-jsx-scope": "off",
-		"react/no-unknown-property": ["error", { "ignore": ["css"] }],
+		"react/no-unknown-property": [
+			2,
+			{
+				"ignore": ["css", "jsx", "global"]
+			}
+		],
 		"@typescript-eslint/ban-ts-comment": "off",
 		"@typescript-eslint/no-explicit-any": "off",
 		"@typescript-eslint/no-var-requires": "off",

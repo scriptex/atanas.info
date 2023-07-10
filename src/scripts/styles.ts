@@ -56,14 +56,13 @@ export const prefersReducedMotion = (style: TemplateStringsArray): SerializedSty
 
 export const withHoudiniSupport =
 	(paint: HoudiniPaints): ((style: TemplateStringsArray) => SerializedStyles) =>
-	(style: TemplateStringsArray): SerializedStyles =>
-		css`
-			@supports (background-image: paint(${paint})) {
-				.${paint} {
-					${css(style)};
-				}
+	(style: TemplateStringsArray): SerializedStyles => css`
+		@supports (background-image: paint(${paint})) {
+			.${paint} {
+				${css(style)};
 			}
-		`;
+		}
+	`;
 
 export const cssCustomProperties: SerializedStyles = css`
 	:root {

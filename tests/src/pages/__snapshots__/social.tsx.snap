@@ -693,11 +693,10 @@ exports[` component Should render the  component 1`] = `
               <a
                 class="twitter-timeline"
                 data-dnt="true"
+                data-height="400"
                 data-theme="dark"
                 href="//twitter.com/scriptexbg"
-              >
-                Tweets by scriptexbg
-              </a>
+              />
             </div>
             <div
               class="o-grid__item xs-12 sm-6"

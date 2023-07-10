@@ -31,9 +31,13 @@ export const socialItems: SocialItem[] = [
 		index: 2,
 		title: 'Twitter Profile',
 		element: (
-			<a href="//twitter.com/scriptexbg" className="twitter-timeline" data-dnt="true" data-theme="dark">
-				Tweets by scriptexbg
-			</a>
+			<a
+				href="//twitter.com/scriptexbg"
+				data-dnt="true"
+				className="twitter-timeline"
+				data-theme="dark"
+				data-height={400}
+			/>
 		)
 	},
 	{

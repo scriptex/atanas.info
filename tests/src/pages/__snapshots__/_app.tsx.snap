@@ -2,6 +2,36 @@
 
 exports[` component Should render the  component 1`] = `
 <DocumentFragment>
+  <style>
+    
+				:root {
+					--font-fira-sans: Fira Sans;
+				}
+			
+  </style>
+  <style
+    id="icon-font"
+    type="text/css"
+  >
+    
+@font-face {
+	font-family: 'fontello';
+	src: url('/fonts/fontello.eot?73938081');
+	src: url('/fonts/fontello.eot?73938081#iefix') format('embedded-opentype'),
+		url('/fonts/fontello.woff2?73938081') format('woff2'), url('/fonts/fontello.woff?73938081') format('woff'),
+		url('/fonts/fontello.ttf?73938081') format('truetype'),
+		url('/fonts/fontello.svg?73938081#fontello') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+	@font-face {
+		font-family: 'fontello';
+		src: url('/fonts/fontello.svg?73938081#fontello') format('svg');
+	}
+}
+  </style>
   <div />
   Vercel Analytics
 </DocumentFragment>

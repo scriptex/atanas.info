@@ -1,5 +1,6 @@
 import { Global } from '@emotion/react';
 import { Analytics } from '@vercel/analytics/react';
+import { Fira_Sans } from 'next/font/google';
 import type { AppProps } from 'next/app';
 import { FC, useMemo, useState, useEffect, createContext } from 'react';
 
@@ -15,7 +16,31 @@ import 'prismjs/themes/prism-tomorrow.css';
 
 import '@styles/index.css';
 
+const customStyle = `
+@font-face {
+	font-family: 'fontello';
+	src: url('/fonts/fontello.eot?73938081');
+	src: url('/fonts/fontello.eot?73938081#iefix') format('embedded-opentype'),
+		url('/fonts/fontello.woff2?73938081') format('woff2'), url('/fonts/fontello.woff?73938081') format('woff'),
+		url('/fonts/fontello.ttf?73938081') format('truetype'),
+		url('/fonts/fontello.svg?73938081#fontello') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+	@font-face {
+		font-family: 'fontello';
+		src: url('/fonts/fontello.svg?73938081#fontello') format('svg');
+	}
+}`;
+
 type ExtendedAppProps = AppProps & { Component: any };
+
+export const titleFont = Fira_Sans({
+	weight: ['400', '700'],
+	subsets: ['latin', 'cyrillic']
+});
 
 export const AppContext = createContext({
 	contactVisible: false,
@@ -60,6 +85,14 @@ export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppP
 	return (
 		<>
 			<Head />
+
+			<style jsx global>{`
+				:root {
+					--font-fira-sans: ${titleFont.style.fontFamily};
+				}
+			`}</style>
+
+			<style id="icon-font" type="text/css" dangerouslySetInnerHTML={{ __html: customStyle }} />
 
 			<Global styles={globalStyles} />
 
