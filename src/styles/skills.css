@@ -21,7 +21,9 @@
 			text-shadow: 0 0 0.25rem var(--color-secondary);
 			opacity: 0;
 			visibility: hidden;
-			transition: opacity var(--timing) var(--easing), visibility var(--timing) var(--easing);
+			transition:
+				opacity var(--timing) var(--easing),
+				visibility var(--timing) var(--easing);
 			pointer-events: none;
 			user-select: none;
 		}
@@ -34,7 +36,9 @@
 		& use {
 			opacity: 1;
 			visibility: visible;
-			transition: opacity var(--timing) var(--easing), visibility var(--timing) var(--easing);
+			transition:
+				opacity var(--timing) var(--easing),
+				visibility var(--timing) var(--easing);
 			pointer-events: none;
 
 			&:not([fill]) {
@@ -46,7 +50,9 @@
 			stroke: var(--color-primary);
 			stroke-width: 0.1275rem;
 			cursor: all-scroll;
-			transition: fill var(--timing) var(--easing), stroke var(--timing) var(--easing),
+			transition:
+				fill var(--timing) var(--easing),
+				stroke var(--timing) var(--easing),
 				stroke-width var(--timing) var(--easing);
 
 			&:hover {

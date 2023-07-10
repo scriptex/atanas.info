@@ -2,6 +2,13 @@
 
 exports[` component Should render the  component 1`] = `
 <DocumentFragment>
+  <style>
+    
+				:root {
+					--font-fira-sans: Fira Sans;
+				}
+			
+  </style>
   <div />
   Vercel Analytics
 </DocumentFragment>
