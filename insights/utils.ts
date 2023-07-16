@@ -34,7 +34,7 @@ export const getContributions = async (url = 'https://github.com/scriptex'): Pro
 		.then((markup: string) => {
 			const $ = load(markup);
 
-			return $('rect')
+			return $('.ContributionCalendar-day')
 				.get()
 				.reduce((data, rect) => {
 					const date = $(rect).data('date') as string | void;
