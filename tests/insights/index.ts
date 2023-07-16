@@ -170,7 +170,7 @@ it('Test the `getContributions` function', async () => {
 	global.fetch = jest.fn().mockImplementation(() =>
 		Promise.resolve({
 			async text() {
-				return '<g><rect fill="red" data-date="2022-01-30">1 contribution on January 30, 2022</rect><rect fill="red">1 contribution on January 31, 2022</rect></g>';
+				return '<g><rect class="ContributionCalendar-day" fill="red" data-date="2022-01-30">1 contribution on January 30, 2022</rect><rect fill="red">1 contribution on January 31, 2022</rect></g>';
 			}
 		})
 	);
