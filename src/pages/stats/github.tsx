@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import { FC, useRef, useState, useEffect } from 'react';
 
 import { Routes } from '@data/routes';
@@ -10,7 +10,7 @@ import { getData, queryGithub, MongoDBProps } from '@lib/mongodb';
 import { YEARS, addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import { Button, Layout, Section, StatsEntry, StatsError, GithubSkyline } from '@components';
 
-const ReactGitHubCalendar = dynamic(() => import('react-ts-github-calendar'), { ssr: false }) as any;
+// const ReactGitHubCalendar = dynamic(() => import('react-ts-github-calendar'), { ssr: false }) as any;
 
 export const extractGithubData = ({
 	general,
@@ -137,7 +137,8 @@ export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
 
 								<div className="c-calendar__outer">
 									<div className="c-calendar c-calendar--github">
-										<ReactGitHubCalendar tooltips userName="scriptex" global_stats={false} />
+										<p>Temporarily disabled.</p>
+										{/* <ReactGitHubCalendar tooltips userName="scriptex" global_stats={false} /> */}
 									</div>
 								</div>
 
