@@ -519,7 +519,7 @@ export const projects: WebProject[] = [
 	},
 	{
 		url: 'https://misbeliefbook.com/',
-		image: '/images/web-apps/Misbelief.jog',
+		image: '/images/web-apps/Misbelief.jpg',
 		index: 60,
 		title: 'Misbelief',
 		description: 'Typescript, SCSS, SVG, React, Next.js, NodeJS, Swiper',
