@@ -34,7 +34,7 @@ const uploadOptions = (name: string): UploadApiOptions => ({
 async function createScreenshot(url: string, name: string, timeout = 2000): Promise<UploadApiResponse | null> {
 	log(`atanas.info: Launching new browser for ${name}...`);
 	const browser = await puppeteer.launch({
-		headless: true,
+		headless: 'new',
 		args: ['--no-sandbox']
 	});
 
