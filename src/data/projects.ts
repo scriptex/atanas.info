@@ -915,6 +915,11 @@ export const personalProjects: SubPage[] = [
 		url: 'https://ts-helpers.atanas.info',
 		text: 'TS Helpers',
 		index: 35
+	},
+	{
+		url: 'https://vik-varna-alerts.atanas.info',
+		text: 'ViK Varna Alerts',
+		index: 35
 	}
 ].map((item, index) => ({
 	...item,

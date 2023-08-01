@@ -296,6 +296,10 @@ export const openSourceProjectsList = [
 		title: 'scriptex/url-shortener'
 	},
 	{
+		url: '/portfolio/open-source/vik-varna-alerts',
+		title: 'scriptex/vik-varna-alerts'
+	},
+	{
 		url: '/portfolio/open-source/vite-boilerplate',
 		title: 'scriptex/vite-boilerplate'
 	},
