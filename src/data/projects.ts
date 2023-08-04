@@ -516,6 +516,22 @@ export const projects: WebProject[] = [
 		title: 'Social Capital',
 		description: 'Typescript, MJML, SCSS, SVG, React, Next.js, Auth.JS, MongoDB, NodeJS, Nodemailer',
 		skip: false
+	},
+	{
+		url: 'https://misbeliefbook.com/',
+		image: '/images/web-apps/Misbelief.jpg',
+		index: 61,
+		title: 'Misbelief',
+		description: 'Typescript, SCSS, SVG, React, Next.js, NodeJS, Swiper',
+		skip: false
+	},
+	{
+		url: 'https://web.mit.edu/ariely/www/MIT/index.html',
+		image: '/images/web-apps/Dan-Ariely-MIT.jpg',
+		index: 62,
+		title: 'Dan Ariely MIT',
+		description: "Dan Ariely's MIT page - HTML, SVG, SCSS",
+		skip: false
 	}
 ];
 
@@ -898,6 +914,11 @@ export const personalProjects: SubPage[] = [
 	{
 		url: 'https://ts-helpers.atanas.info',
 		text: 'TS Helpers',
+		index: 35
+	},
+	{
+		url: 'https://vik-varna-alerts.atanas.info',
+		text: 'ViK Varna Alerts',
 		index: 35
 	}
 ].map((item, index) => ({
