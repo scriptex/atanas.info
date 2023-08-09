@@ -137,7 +137,7 @@ export const createNodes = (
 		.call(callable);
 
 	nodes.each(function (d: any) {
-		const group = select((this as any).parentNode);
+		const group = select(this.parentNode as unknown as string);
 		const { width, height } = d;
 
 		let link = null;

@@ -1,9 +1,9 @@
-import Head from 'next/head';
 import type { FC } from 'react';
 
 import resume from '@data/lotties/resume.json';
 import {
 	Lines,
+	Title,
 	Button,
 	Layout,
 	Section,
@@ -19,9 +19,7 @@ import {
 
 export const Resume: FC = () => (
 	<Layout>
-		<Head>
-			<title>Resume | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-		</Head>
+		<Title text="Resume | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section
 			id="resume"

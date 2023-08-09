@@ -1,10 +1,9 @@
-import Head from 'next/head';
 import { FC, useEffect } from 'react';
 
 import resume from '@data/lotties/resume.json';
 import { useNetworkState } from '@scripts/shared';
-import { Icon, Lines, Layout, Section, Animation } from '@components';
 import { interactiveResumeItems, InteractiveResumeItem } from '@data/interactive-resume';
+import { Icon, Lines, Layout, Section, Animation, Title } from '@components';
 
 export const InteractiveResume: FC = () => {
 	const online = useNetworkState();
@@ -21,9 +20,7 @@ export const InteractiveResume: FC = () => {
 
 	return (
 		<Layout>
-			<Head>
-				<title>Interactive Resume | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-			</Head>
+			<Title text="Interactive Resume | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
 				id="interactive-resume"

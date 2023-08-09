@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { FC } from 'react';
@@ -8,7 +7,7 @@ import { WebProject } from '@data/projects';
 import { portfolioSectionProps } from '.';
 import { getData, MongoDBProps, queryScreenshots } from '@lib/mongodb';
 import { usePagination, useNetworkState, composeClassName } from '@scripts/shared';
-import { Icon, Layout, Loader, Section, SectionNav, ExternalLink } from '@components';
+import { Icon, Layout, Loader, Section, SectionNav, ExternalLink, Title } from '@components';
 
 type Props = {
 	data: WebProject[];
@@ -20,9 +19,7 @@ export const PortfolioWebApps: FC<Readonly<Props>> = ({ data = [] }: Props) => {
 
 	return !items ? null : (
 		<Layout>
-			<Head>
-				<title>Web Applications | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-			</Head>
+			<Title text="Web Applications | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
 				{...portfolioSectionProps}
@@ -68,7 +65,7 @@ export const PortfolioWebApps: FC<Readonly<Props>> = ({ data = [] }: Props) => {
 					))}
 				</div>
 
-				<SectionNav data={menu || []} name="title" small active={current} onClick={setCurrent} />
+				<SectionNav data={menu ?? []} name="title" small active={current} onClick={setCurrent} />
 			</Section>
 		</Layout>
 	);

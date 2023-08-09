@@ -1,20 +1,17 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import type { FC } from 'react';
 
 import book from '@data/lotties/book.json';
 import { bio, BioEntry } from '@data/bio';
 import { useNetworkState } from '@scripts/shared';
-import { Layout, Section, Animation, ExternalLink, Icon } from '@components';
+import { Layout, Section, Animation, ExternalLink, Icon, Title } from '@components';
 
 export const About: FC = () => {
 	const online = useNetworkState();
 
 	return (
 		<Layout>
-			<Head>
-				<title>About | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-			</Head>
+			<Title text="About | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
 				id="about"

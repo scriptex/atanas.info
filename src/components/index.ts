@@ -24,3 +24,4 @@ export { default as SectionNav } from './section/nav';
 export * from './social';
 export * from './stats';
 export { default as ThemeSwitcher } from './theme-switcher';
+export { default as Title } from './title';

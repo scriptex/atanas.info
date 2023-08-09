@@ -1,16 +1,13 @@
-import Head from 'next/head';
 import type { FC } from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 
 import timeline from '@data/lotties/timeline.json';
-import { Layout, Section, Animation } from '@components';
 import { TimelineItem, timelineItems } from '@data/timeline';
+import { Layout, Section, Animation, Title } from '@components';
 
 export const Timeline: FC = () => (
 	<Layout>
-		<Head>
-			<title>Timeline | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-		</Head>
+		<Title text="Timeline | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section
 			id="timeline"

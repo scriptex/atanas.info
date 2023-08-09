@@ -1,11 +1,10 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
 import { sectionStatsProps } from '@scripts/stats';
-import { Layout, Section, ExternalLink } from '@components';
 import { getData, queryNPM, MongoDBProps } from '@lib/mongodb';
+import { Layout, Section, ExternalLink, Title } from '@components';
 
 type Package = {
 	name: string;
@@ -79,9 +78,7 @@ export const NPMStats: FC<Readonly<Props>> = ({ data }: Props) => {
 
 	return (
 		<Layout>
-			<Head>
-				<title>NPM Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-			</Head>
+			<Title text="NPM Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
 				{...sectionStatsProps}

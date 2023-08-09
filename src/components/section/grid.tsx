@@ -40,7 +40,7 @@ export const SectionGrid: FC<Readonly<Props>> = ({ data, linkType = 'internal', 
 			</div>
 
 			{pagination ? (
-				<SectionNav data={menu || []} name="title" small active={current} onClick={setCurrent} />
+				<SectionNav data={menu ?? []} name="title" small active={current} onClick={setCurrent} />
 			) : null}
 		</>
 	);

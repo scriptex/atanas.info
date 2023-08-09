@@ -21,10 +21,6 @@ global.IntersectionObserver = class IntersectionObserver {
 	rootMargin = '';
 	thresholds = [0];
 
-	constructor() {
-		return this;
-	}
-
 	disconnect() {
 		return null;
 	}

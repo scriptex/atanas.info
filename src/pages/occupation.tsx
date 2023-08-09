@@ -1,11 +1,8 @@
-'use client';
-
-import Head from 'next/head';
 import { useEffect, type FC } from 'react';
 
 import working from '@data/lotties/working.json';
 import { occupation } from '@data/occupation';
-import { Layout, Section, Animation } from '@components';
+import { Layout, Section, Animation, Title } from '@components';
 
 export const Occupation: FC = () => {
 	useEffect(() => {
@@ -18,9 +15,7 @@ export const Occupation: FC = () => {
 
 	return (
 		<Layout>
-			<Head>
-				<title>Occupation | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-			</Head>
+			<Title text="Occupation | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
 				id="occupation"

@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { FC, useRef, useEffect } from 'react';
 
@@ -7,8 +6,8 @@ import gitlabCalendarData from '@data/gitlab-calendar.json';
 import { Ref, formatDate } from '@scripts/shared';
 import { GitlabInsights, GitlabRepository } from '@scripts/types';
 import { getData, queryGitlab, MongoDBProps } from '@lib/mongodb';
-import { Layout, Section, StatsEntry, StatsError } from '@components';
 import { addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
+import { Layout, Section, StatsEntry, StatsError, Title } from '@components';
 
 export const extractGitlabData = ({ general, calendar, repositories }: GitlabInsights): GeneralInsight[] => {
 	if (!repositories || !general || !calendar) {
@@ -57,7 +56,7 @@ export const extractGitlabData = ({ general, calendar, repositories }: GitlabIns
 		},
 		{
 			title: 'Total issues',
-			value: repositories.reduce((result: number, repo: GitlabRepository) => result + (repo.issues || 0), 0)
+			value: repositories.reduce((result: number, repo: GitlabRepository) => result + (repo.issues ?? 0), 0)
 		}
 	].map((item, index) => ({ ...item, index }));
 };
@@ -89,7 +88,7 @@ export const GitlabStats: FC<Readonly<Props>> = ({ data }: Props) => {
 
 	useEffect(() => {
 		timeout.current = setTimeout(() => {
-			addTitles('.c-calendar--gitlab', (rect: SVGRectElement) => rect.getAttribute('title') || '');
+			addTitles('.c-calendar--gitlab', (rect: SVGRectElement) => rect.getAttribute('title') ?? '');
 		}, 3000);
 
 		return () => {
@@ -101,9 +100,7 @@ export const GitlabStats: FC<Readonly<Props>> = ({ data }: Props) => {
 
 	return (
 		<Layout>
-			<Head>
-				<title>Gitlab Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-			</Head>
+			<Title text="Gitlab Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
 				{...sectionStatsProps}
@@ -122,7 +119,7 @@ export const GitlabStats: FC<Readonly<Props>> = ({ data }: Props) => {
 
 						<div className="c-section__entry">
 							<small className="c-section__stamp">
-								Last updated: {formatDate(updated || new Date().getTime(), 'dd MMM yyyy HH:mm:ss')}
+								Last updated: {formatDate(updated ?? new Date().getTime(), 'dd MMM yyyy HH:mm:ss')}
 							</small>
 
 							<div className="o-shell">

@@ -1,10 +1,9 @@
-import Head from 'next/head';
 import ErrorPage from 'next/error';
 import type { FC } from 'react';
 import { useRouter } from 'next/router';
 
 import { Routes } from '@data/routes';
-import { MDX, Layout } from '@components';
+import { MDX, Layout, Title } from '@components';
 import { openSourceProjects } from '.';
 import { getPostBySlug, getAllPosts } from '@lib/markdown';
 
@@ -47,9 +46,7 @@ export const OpenSourceProject: FC<Readonly<Props>> = ({ post }: Props) => {
 
 	return (
 		<Layout>
-			<Head>
-				<title>Open Source | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-			</Head>
+			<Title text="Open Source | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<MDX
 				id="blog-post"

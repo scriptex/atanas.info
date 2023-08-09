@@ -1,10 +1,9 @@
-import Head from 'next/head';
 import useInterval from 'use-interval';
 import { FC, useRef, useState, useEffect } from 'react';
 
 import hello from '@data/lotties/hello.json';
 import { titles } from '@data/titles';
-import { Layout, Section, Animation } from '@components';
+import { Layout, Section, Animation, Title } from '@components';
 
 export const Home: FC = () => {
 	const canvasRef = useRef<HTMLDivElement>(null);
@@ -32,9 +31,7 @@ export const Home: FC = () => {
 
 	return (
 		<Layout main="o-main--high">
-			<Head>
-				<title>Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-			</Head>
+			<Title text="Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section id="hello" hasShell={false} hasButton={false}>
 				<div className="c-canvas" id="canvas" ref={canvasRef} />

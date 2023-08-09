@@ -1,11 +1,10 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
 import { portfolioSectionProps } from '..';
 import { openSourceProjectsList } from '@data/open-source';
-import { Layout, Section, SectionGrid } from '@components';
+import { Layout, Section, SectionGrid, Title } from '@components';
 
 export const openSourceProjects = openSourceProjectsList.map((repo, index) => ({
 	url: repo?.url,
@@ -16,9 +15,7 @@ export const openSourceProjects = openSourceProjectsList.map((repo, index) => ({
 
 export const PortfolioOpenSourceProjects: FC = () => (
 	<Layout>
-		<Head>
-			<title>Open Source | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-		</Head>
+		<Title text="Open Source | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section
 			{...portfolioSectionProps}

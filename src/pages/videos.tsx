@@ -1,19 +1,16 @@
-import Head from 'next/head';
 import { FC, useState } from 'react';
 
 import videoCamera from '@data/lotties/video-camera.json';
 import { composeClassName } from '@scripts/shared';
 import { presentations, Presentation } from '@data/presentations';
-import { Lines, Loader, Layout, Section, Animation, SectionNav } from '@components';
+import { Lines, Loader, Layout, Section, Animation, SectionNav, Title } from '@components';
 
 export const Videos: FC = () => {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	return (
 		<Layout>
-			<Head>
-				<title>Videos | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-			</Head>
+			<Title text="Videos | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
 				id="videos"
