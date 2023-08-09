@@ -1792,10 +1792,10 @@
     picocolors "^1.0.0"
     tslib "^2.6.0"
 
-"@puppeteer/browsers@1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@puppeteer/browsers/-/browsers-1.5.0.tgz#2c445f7e41133d4aa23f776748d70211ea4e98ed"
-  integrity sha512-za318PweGINh5LnHSph7C4xhs0tmRjCD8EPpzcKlw4nzSPhnULj+LTG3+TGefZvW1ti5gjw2JkdQvQsivBeZlg==
+"@puppeteer/browsers@1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@puppeteer/browsers/-/browsers-1.5.1.tgz#90e26741467aad32faf78021a7fc02e98e18dd71"
+  integrity sha512-OY8S5/DIsCSn/jahxw+qhCKa6jYQff6yq1oenzakISLvGcwWpyMzshJ3BIR7iP0vG0RPJjvHRLRxbsWw4kah1w==
   dependencies:
     debug "4.3.4"
     extract-zip "2.0.1"
@@ -2502,10 +2502,10 @@
   dependencies:
     "@types/mjml-core" "*"
 
-"@types/node@*", "@types/node@20.4.8":
-  version "20.4.8"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.4.8.tgz#b5dda19adaa473a9bf0ab5cbd8f30ec7d43f5c85"
-  integrity sha512-0mHckf6D2DiIAzh8fM8f3HQCvMKDpK94YQ0DSVkfWTG9BZleYIWudw9cJxX8oCk9bM+vAkDyujDV6dmKHbvQpg==
+"@types/node@*", "@types/node@20.4.9":
+  version "20.4.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.4.9.tgz#c7164e0f8d3f12dfae336af0b1f7fdec8c6b204f"
+  integrity sha512-8e2HYcg7ohnTUbHk8focoklEQYvemQmu9M/f43DZVx43kHn0tE3BY/6gSDxS7k0SprtS0NHvj+L80cGLnoOUcQ==
 
 "@types/node@^17.0.36":
   version "17.0.45"
@@ -4867,9 +4867,9 @@ ejs@^3.1.6:
     jake "^10.8.5"
 
 electron-to-chromium@^1.4.477:
-  version "1.4.487"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.487.tgz#e2ef8b15f2791bf68fa6f38f2656f1a551d360ae"
-  integrity sha512-XbCRs/34l31np/p33m+5tdBrdXu9jJkZxSbNxj5I0H1KtV2ZMSB+i/HYqDiRzHaFx2T5EdytjoBRe8QRJE2vQg==
+  version "1.4.488"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.488.tgz#442b1855f8c84fb1ed79f518985c65db94f64cc9"
+  integrity sha512-Dv4sTjiW7t/UWGL+H8ZkgIjtUAVZDgb/PwGWvMsCT7jipzUV/u5skbLXPFKb6iV0tiddVi/bcS2/kUrczeWgIQ==
 
 elly@^1.1.11:
   version "1.1.11"
@@ -9473,26 +9473,26 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.3.0.tgz#f67fa67c94da8f4d0cfff981aee4118064199b8f"
   integrity sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==
 
-puppeteer-core@21.0.1:
-  version "21.0.1"
-  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-21.0.1.tgz#bc20f3b2c1ee29936cb3413e560c7ca3cfdb0027"
-  integrity sha512-E8eWLGhaZZpa7dYe/58qGX7SLb4mTg42NP5M7B+ibPrncgNjTOQa9x1sFIlTn1chF/BmoZqOcMIvwuxcb/9XzQ==
+puppeteer-core@21.0.2:
+  version "21.0.2"
+  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-21.0.2.tgz#1ce10a495c7f57a06e3de6e247e2faae4a33c2c2"
+  integrity sha512-6tRjB9RZmPApPhQhzXZxmPUBt+6KM2P/eCp8p2o0DvK3P1V2qYkRi6/EQJEBIFquqZ+kF1zaW9Tg69p0dQlqFg==
   dependencies:
-    "@puppeteer/browsers" "1.5.0"
+    "@puppeteer/browsers" "1.5.1"
     chromium-bidi "0.4.20"
     cross-fetch "4.0.0"
     debug "4.3.4"
     devtools-protocol "0.0.1147663"
     ws "8.13.0"
 
-puppeteer@21.0.1:
-  version "21.0.1"
-  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-21.0.1.tgz#4c842509cea4dd7688bbf023c360969b4eefe52f"
-  integrity sha512-KTjmSdPZ6bMkq3EbAzAUhcB3gMDXvdwd6912rxG9hNtjwRJzHSA568vh6vIbO2WQeNmozRdt1LtiUMLSWfeMrg==
+puppeteer@21.0.2:
+  version "21.0.2"
+  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-21.0.2.tgz#d30b61d5d0c0be2d57677b177108daea376bcd50"
+  integrity sha512-RAgbVjvwLABz8y+83xGdE+v7JLmvvcyGSlhQUX6k3rpBeRIO593E3DCaSY9VRUq3VJPMm7nWzDiZjUaK1tIpQg==
   dependencies:
-    "@puppeteer/browsers" "1.5.0"
+    "@puppeteer/browsers" "1.5.1"
     cosmiconfig "8.2.0"
-    puppeteer-core "21.0.1"
+    puppeteer-core "21.0.2"
 
 puppeteer@^5.4.1:
   version "5.5.0"
