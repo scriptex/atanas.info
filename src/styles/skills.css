@@ -1,4 +1,5 @@
-.c-section--skills {
+.c-section--skills,
+.c-section--occupation {
 	&::before {
 		@mixin overlay;
 		z-index: 1;
@@ -8,6 +9,12 @@
 
 	& .c-section__wrapper,
 	& .c-section__container {
+		& a {
+			color: currentcolor;
+			text-decoration: none;
+			pointer-events: none;
+		}
+
 		& svg {
 			width: 100%;
 			display: block;
@@ -54,18 +61,22 @@
 				fill var(--timing) var(--easing),
 				stroke var(--timing) var(--easing),
 				stroke-width var(--timing) var(--easing);
+		}
 
-			&:hover {
+		& g:hover {
+			& > circle {
 				fill: var(--color-action);
 				stroke: var(--color-action);
 				stroke-width: 1rem;
 
-				& ~ text {
+				& ~ text,
+				& ~ a text {
 					opacity: 1;
 					visibility: visible;
 				}
 
-				& ~ use {
+				& ~ use,
+				& ~ a use {
 					opacity: 0;
 					visibility: hidden;
 				}
@@ -90,7 +101,8 @@
 	}
 }
 
-#skills-graph {
+#skills-graph,
+#occupation-graph {
 	height: 100vh;
 	position: relative;
 	transition: height var(--timing) var(--easing);
@@ -164,6 +176,12 @@
 			max-height: 383.5rem;
 		}
 	}
+
+	#occupation-graph {
+		& svg {
+			height: 100%;
+		}
+	}
 }
 
 @media (--mobile) {
@@ -181,6 +199,13 @@
 		height: 75vh;
 
 		& svg {
+			transform: translate(-50%, -25%);
+		}
+	}
+
+	#occupation-graph {
+		& svg {
+			height: 100%;
 			transform: translate(-50%, -25%);
 		}
 	}

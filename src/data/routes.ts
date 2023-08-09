@@ -14,6 +14,7 @@ export enum Routes {
 	STATS_GITHUB = '/stats/github',
 	STATS_GITLAB = '/stats/gitlab',
 	STATS_NPM = '/stats/npm',
+	OCCUPATION = '/occupation',
 	SLIDES = '/slides',
 	VIDEOS = '/videos',
 	ARTICLES = '/articles',

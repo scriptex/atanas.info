@@ -59,7 +59,7 @@ export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppP
 		<>
 			<Head />
 
-			<style jsx global>{`
+			<style jsx={undefined} global={undefined}>{`
 				:root {
 					--font-fira-sans: ${titleFont.style.fontFamily};
 				}

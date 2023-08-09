@@ -1,15 +1,17 @@
 import Head from 'next/head';
 import { FC, useState, useEffect } from 'react';
 
-import { Skill, skills } from '@data/skills-list';
 import { composeClassName } from '@scripts/shared';
+import { ForceNode, skills } from '@data/skills-list';
 import { Icon, Lines, Button, Section, Layout } from '@components';
 
 export const Skills: FC = () => {
 	const [showTable, setShowTable] = useState(false);
 
 	useEffect(() => {
-		import('@scripts/skills').then(({ drawSkills }) => drawSkills(skills)).catch(console.error);
+		import('@scripts/force')
+			.then(({ renderForceDirectedGraph }) => renderForceDirectedGraph('skills-graph', skills, 'skills'))
+			.catch(console.error);
 	}, []);
 
 	return (
@@ -36,7 +38,7 @@ export const Skills: FC = () => {
 					<div id="skills-graph" className={showTable ? 'is--hidden' : undefined}></div>
 
 					<div className={composeClassName('o-grid', [], showTable ? [] : ['is--hidden'])}>
-						{skills.map((skill: Skill) => (
+						{skills.map((skill: ForceNode) => (
 							<div key={skill.text} className="o-grid__item xs-12 sm-6 md-4 lg-3">
 								<div className="c-skill">
 									<figure style={{ backgroundColor: skill.fill }}>

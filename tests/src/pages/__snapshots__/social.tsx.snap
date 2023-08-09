@@ -475,6 +475,14 @@ exports[` component Should render the  component 1`] = `
         </li>
         <li>
           <a
+            href="/occupation"
+            title="My current occupation"
+          >
+            Occupation
+          </a>
+        </li>
+        <li>
+          <a
             href="/articles"
             title="My published articles"
           >
@@ -1324,6 +1332,14 @@ exports[` component Should render the  component 1`] = `
             title="My video presentations"
           >
             Videos
+          </a>
+        </li>
+        <li>
+          <a
+            href="/occupation"
+            title="My current occupation"
+          >
+            Occupation
           </a>
         </li>
         <li>
@@ -2218,6 +2234,14 @@ exports[`Tests the Social page when offline 1`] = `
         </li>
         <li>
           <a
+            href="/occupation"
+            title="My current occupation"
+          >
+            Occupation
+          </a>
+        </li>
+        <li>
+          <a
             href="/articles"
             title="My published articles"
           >
@@ -2913,6 +2937,14 @@ exports[`Tests the Social page when offline 1`] = `
             title="My video presentations"
           >
             Videos
+          </a>
+        </li>
+        <li>
+          <a
+            href="/occupation"
+            title="My current occupation"
+          >
+            Occupation
           </a>
         </li>
         <li>

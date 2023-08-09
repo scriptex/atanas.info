@@ -1,0 +1,29 @@
+.c-section--occupation {
+	& .c-section__animation {
+		transform: translateY(-35%);
+	}
+
+	& .c-section__container {
+		& text {
+			font-size: 2rem;
+			transform: translateY(1.125rem);
+		}
+
+		& g:hover circle ~ a {
+			pointer-events: auto;
+
+			& use,
+			& text {
+				pointer-events: auto;
+			}
+		}
+	}
+}
+
+@media (--mobile) {
+	.c-section--occupation {
+		& .c-section__animation {
+			transform: none;
+		}
+	}
+}
