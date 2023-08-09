@@ -1,6 +1,5 @@
-import Head from 'next/head';
 import Link from 'next/link';
-// import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic';
 import { FC, useRef, useState, useEffect } from 'react';
 
 import { Routes } from '@data/routes';
@@ -8,9 +7,10 @@ import { Ref, formatDate } from '@scripts/shared';
 import { GithubInsights, GithubRepository } from '@scripts/types';
 import { getData, queryGithub, MongoDBProps } from '@lib/mongodb';
 import { YEARS, addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
-import { Button, Layout, Section, StatsEntry, StatsError, GithubSkyline } from '@components';
+import { Button, Layout, Section, StatsEntry, StatsError, GithubSkyline, Title } from '@components';
 
-// const ReactGitHubCalendar = dynamic(() => import('react-ts-github-calendar'), { ssr: false }) as any;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const ReactGitHubCalendar = dynamic(() => import('react-ts-github-calendar'), { ssr: false }) as any;
 
 export const extractGithubData = ({
 	general,
@@ -36,7 +36,7 @@ export const extractGithubData = ({
 			title: 'Used languages',
 			value: repositories
 				.reduce(
-					(result: string[], repo: GithubRepository) => Array.from(new Set([...result, repo.language || ''])),
+					(result: string[], repo: GithubRepository) => Array.from(new Set([...result, repo.language ?? ''])),
 					[]
 				)
 				.filter(Boolean)
@@ -70,7 +70,7 @@ export const extractGithubData = ({
 					return result;
 				}
 
-				return result + (contributor.count || 0);
+				return result + (contributor.count ?? 0);
 			}, 0)
 		},
 		{
@@ -108,9 +108,7 @@ export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
 
 	return (
 		<Layout>
-			<Head>
-				<title>Github Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-			</Head>
+			<Title text="Github Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
 				{...sectionStatsProps}
@@ -129,7 +127,7 @@ export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
 
 						<div className="c-section__entry">
 							<small className="c-section__stamp">
-								Last updated: {formatDate(updated || new Date().getTime(), 'dd MMM yyyy HH:mm:ss')}
+								Last updated: {formatDate(updated ?? new Date().getTime(), 'dd MMM yyyy HH:mm:ss')}
 							</small>
 
 							<div className="o-shell">

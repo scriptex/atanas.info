@@ -1,15 +1,12 @@
-import Head from 'next/head';
 import type { FC } from 'react';
 
 import { blogProps } from './blog';
 import { articles, Article } from '@data/articles';
-import { Layout, Loader, Section, ExternalLink } from '@components';
+import { Layout, Loader, Section, ExternalLink, Title } from '@components';
 
 export const Articles: FC = () => (
 	<Layout>
-		<Head>
-			<title>Articles | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-		</Head>
+		<Title text="Articles | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section id="articles" title="Articles" {...blogProps}>
 			<div className="c-section__body o-grid">

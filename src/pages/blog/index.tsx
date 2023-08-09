@@ -1,10 +1,9 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import type { FC } from 'react';
 
 import book from '@data/lotties/book.json';
 import { articles, Article } from '@data/articles';
-import { Layout, Loader, Section, Animation } from '@components';
+import { Layout, Loader, Section, Animation, Title } from '@components';
 
 export const blogProps = {
 	style: { backgroundImage: 'url(images/temp/articles.jpg)' },
@@ -15,9 +14,7 @@ export const blogProps = {
 
 export const Blog: FC = () => (
 	<Layout>
-		<Head>
-			<title>Blog | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-		</Head>
+		<Title text="Blog | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section id="blog" title="Blog" {...blogProps}>
 			<div className="c-section__body o-grid">

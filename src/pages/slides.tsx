@@ -1,19 +1,16 @@
-import Head from 'next/head';
 import { FC, useState } from 'react';
 
 import presentation from '@data/lotties/presentation.json';
 import { Slide, slides } from '@data/slides';
 import { composeClassName } from '@scripts/shared';
-import { Loader, Section, Animation, SectionNav, Layout } from '@components';
+import { Loader, Section, Animation, SectionNav, Layout, Title } from '@components';
 
 export const Slides: FC = () => {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	return (
 		<Layout>
-			<Head>
-				<title>Slides | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-			</Head>
+			<Title text="Slides | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
 				id="slides"

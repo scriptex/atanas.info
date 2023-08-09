@@ -1,9 +1,8 @@
-import Head from 'next/head';
 import type { FC } from 'react';
 
 import { errorIcon } from '@data/error-icon';
-import { Lines, Layout } from '@components';
 import { ReactChildren } from '@scripts/types';
+import { Lines, Layout, Title } from '@components';
 
 interface Props {
 	children: ReactChildren;
@@ -11,9 +10,7 @@ interface Props {
 
 export const EmptyPage: FC<Readonly<Props>> = ({ children }: Props) => (
 	<Layout main="o-main--high">
-		<Head>
-			<title>Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-		</Head>
+		<Title text="Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<div className="c-error-page">
 			<Lines />

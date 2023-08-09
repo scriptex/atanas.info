@@ -27,7 +27,7 @@ const interpolateTemplate = (template: string, vars: Record<string, string>): st
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
 	const data: FormData = JSON.parse(req.body);
 
-	if (!data || !data.honeypot || data.honeypot !== process.env.NEXT_PUBLIC_HONEYPOT_VALUE) {
+	if (data?.honeypot !== process.env.NEXT_PUBLIC_HONEYPOT_VALUE) {
 		return res.status(400).json({
 			error: "It looks like you're not a human. Sorry!"
 		});

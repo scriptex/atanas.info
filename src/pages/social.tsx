@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Script from 'next/script';
 import type { FC } from 'react';
 
@@ -6,7 +5,7 @@ import socialMedia from '@data/lotties/social-media.json';
 import { useNetworkState } from '@scripts/shared';
 import { SocialItem, socialItems } from '@data/social';
 import { getData, queryLastFM, MongoDBProps } from '@lib/mongodb';
-import { Icon, Lines, Layout, Section, Animation, SocialMusic, LinkedInBadge } from '@components';
+import { Icon, Lines, Layout, Section, Animation, SocialMusic, LinkedInBadge, Title } from '@components';
 
 type Props = {
 	data: any;
@@ -17,9 +16,7 @@ export const Social: FC<Readonly<Props>> = ({ data }: Props) => {
 
 	return (
 		<Layout>
-			<Head>
-				<title>Social | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-			</Head>
+			<Title text="Social | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
 				id="social"

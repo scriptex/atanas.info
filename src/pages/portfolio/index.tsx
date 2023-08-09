@@ -1,9 +1,8 @@
-import Head from 'next/head';
 import type { FC } from 'react';
 
 import portfolio from '@data/lotties/portfolio.json';
 import { portfolioItems } from '@data/projects';
-import { Layout, Section, Animation, SectionGrid } from '@components';
+import { Layout, Section, Animation, SectionGrid, Title } from '@components';
 
 export const portfolioSectionProps = {
 	id: 'portfolio',
@@ -14,9 +13,7 @@ export const portfolioSectionProps = {
 
 export const Portfolio: FC = () => (
 	<Layout>
-		<Head>
-			<title>Portfolio | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-		</Head>
+		<Title text="Portfolio | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section {...portfolioSectionProps}>
 			<SectionGrid data={portfolioItems} />

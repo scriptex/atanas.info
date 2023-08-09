@@ -1,15 +1,12 @@
-import Head from 'next/head';
 import type { FC } from 'react';
 
 import { statsItems } from '@data/projects';
 import { sectionStatsProps } from '@scripts/stats';
-import { Layout, Section, SectionGrid } from '@components';
+import { Layout, Section, SectionGrid, Title } from '@components';
 
 export const Stats: FC = () => (
 	<Layout>
-		<Head>
-			<title>Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-		</Head>
+		<Title text="Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section {...sectionStatsProps} hasShell={true}>
 			<SectionGrid data={statsItems} />

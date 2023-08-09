@@ -1,13 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
-import Head from 'next/head';
 import Link from 'next/link';
 import Modal from 'react-modal';
 import { FC, useState } from 'react';
 
 import { Routes } from '@data/routes';
 import { emailTemplates } from '@data/projects';
-import { Layout, Section } from '@components';
 import { portfolioSectionProps } from '.';
+import { Layout, Section, Title } from '@components';
 
 type Props = {
 	template: string;
@@ -37,9 +36,7 @@ export const PortfolioEmailTemplate: FC<Readonly<Props>> = ({ template }: Props)
 
 export const PortfolioEmailTemplates: FC = () => (
 	<Layout>
-		<Head>
-			<title>Email Templates | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-		</Head>
+		<Title text="Email Templates | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section
 			{...portfolioSectionProps}

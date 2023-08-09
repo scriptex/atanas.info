@@ -1,9 +1,8 @@
-import Head from 'next/head';
 import { FC, useRef, useState, useEffect } from 'react';
 
-import { Layout, Section } from '@components';
 import { music, MusicFunctions } from '@scripts/music';
 import { Ref, composeClassName } from '@scripts/shared';
+import { Layout, Section, Title } from '@components';
 import { getData, queryMusic, MongoDBProps } from '@lib/mongodb';
 
 type Track = {
@@ -36,9 +35,7 @@ export const Music: FC<Readonly<Props>> = ({ data }: Props) => {
 
 	return (
 		<Layout main="o-main--high">
-			<Head>
-				<title>Music | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-			</Head>
+			<Title text="Music | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section id="music" hasButton>
 				<div

@@ -18,6 +18,10 @@ export type Props = {
 	additionalElements?: ReactNode;
 };
 
+const HeaderWrapper: FC<Pick<Props, 'children' | 'hasShell'>> = ({ children, hasShell }) => {
+	return hasShell ? <>{children}</> : <div className="o-shell">{children}</div>;
+};
+
 export const SectionElements: FC<Readonly<Props>> = ({
 	title,
 	actions,
@@ -31,15 +35,11 @@ export const SectionElements: FC<Readonly<Props>> = ({
 	const { setContactVisible } = useContext(AppContext);
 	const onClose = () => setOpen(false);
 
-	const HeaderWrapper: FC<Pick<Props, 'children'>> = ({ children }) => {
-		return hasShell ? <>{children}</> : <div className="o-shell">{children}</div>;
-	};
-
 	return (
 		<>
 			{!!title || !!subtitle ? (
 				<header className="c-section__header">
-					<HeaderWrapper>
+					<HeaderWrapper hasShell={hasShell}>
 						{additionalElements}
 
 						{!!title && <h2>{title}</h2>}

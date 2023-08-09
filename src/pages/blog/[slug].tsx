@@ -1,9 +1,8 @@
-import Head from 'next/head';
 import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
-import { MDX, Layout } from '@components';
 import { Article, articles } from '@data/articles';
+import { MDX, Layout, Title } from '@components';
 import { getPostBySlug, getAllPosts } from '@lib/markdown';
 
 type Props = {
@@ -37,14 +36,12 @@ export const OpenSourceProject: FC<Readonly<Props>> = ({ post }: Props) => {
 
 	return (
 		<Layout>
-			<Head>
-				<title>{match?.title || post.slug} | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-			</Head>
+			<Title text={`${match?.title ?? post.slug} | Atanas Atanasov | Senior Javascript/Typescript Engineer`} />
 
 			<MDX
 				id="blog-post"
 				back={Routes.BLOG}
-				title={match?.title || post.slug}
+				title={match?.title ?? post.slug}
 				image={match?.image}
 				content={post.content}
 			/>

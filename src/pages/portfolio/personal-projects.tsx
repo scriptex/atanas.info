@@ -1,17 +1,14 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
 import { personalProjects } from '@data/projects';
 import { portfolioSectionProps } from '.';
-import { Layout, Section, SectionGrid } from '@components';
+import { Layout, Section, SectionGrid, Title } from '@components';
 
 export const PortfolioPersonalProjects: FC = () => (
 	<Layout>
-		<Head>
-			<title>Personal Projects | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-		</Head>
+		<Title text="Personal Projects | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section
 			{...portfolioSectionProps}

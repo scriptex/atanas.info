@@ -1,9 +1,8 @@
-import Head from 'next/head';
 import { FC, useState, useEffect } from 'react';
 
 import { composeClassName } from '@scripts/shared';
 import { ForceNode, skills } from '@data/skills-list';
-import { Icon, Lines, Button, Section, Layout } from '@components';
+import { Icon, Lines, Button, Section, Layout, Title } from '@components';
 
 export const Skills: FC = () => {
 	const [showTable, setShowTable] = useState(false);
@@ -16,9 +15,7 @@ export const Skills: FC = () => {
 
 	return (
 		<Layout>
-			<Head>
-				<title>Skills | Atanas Atanasov | Senior Javascript/Typescript Engineer</title>
-			</Head>
+			<Title text="Skills | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
 				id="skills"
