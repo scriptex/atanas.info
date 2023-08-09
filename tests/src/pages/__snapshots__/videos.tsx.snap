@@ -475,6 +475,14 @@ exports[`Videos component Should render the Videos component 1`] = `
         </li>
         <li>
           <a
+            href="/occupation"
+            title="My current occupation"
+          >
+            Occupation
+          </a>
+        </li>
+        <li>
+          <a
             href="/articles"
             title="My published articles"
           >
@@ -1045,6 +1053,14 @@ exports[`Videos component Should render the Videos component 1`] = `
             title="My video presentations"
           >
             Videos
+          </a>
+        </li>
+        <li>
+          <a
+            href="/occupation"
+            title="My current occupation"
+          >
+            Occupation
           </a>
         </li>
         <li>

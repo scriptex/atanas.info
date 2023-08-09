@@ -104,8 +104,8 @@ jest.mock('../src/scripts/canvas', () => ({
 	destroyDots: jest.fn()
 }));
 
-jest.mock('../src/scripts/skills.ts', () => ({
-	drawSkills: jest.fn()
+jest.mock('../src/scripts/force.ts', () => ({
+	renderForceDirectedGraph: jest.fn()
 }));
 
 jest.mock('../src/components/github-skyline', () => jest.fn(() => 'Github Skyline'));
