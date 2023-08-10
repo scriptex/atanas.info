@@ -80,11 +80,7 @@ export const extractGithubData = ({
 	].map((item, index) => ({ ...item, index }));
 };
 
-type Props = {
-	data: GithubInsights;
-};
-
-export const registerMutationObeserer = (element: HTMLDivElement | null) =>
+export const registerMutationObeserer = (element: HTMLDivElement | null): MutationObserver =>
 	new MutationObserver(mutations => {
 		for (const mutation of mutations) {
 			if (mutation.type === 'childList' && !element?.classList.contains('js--titles-added')) {
@@ -101,13 +97,66 @@ export const registerMutationObeserer = (element: HTMLDivElement | null) =>
 		}
 	});
 
-export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
+type GithubCalendarProps = {
+	data: GithubProfileData;
+};
+
+export const GithubCalendar: FC<GithubCalendarProps> = ({ data: { markup, stylesheet } }: GithubCalendarProps) => {
+	if (!markup || !stylesheet) {
+		return null;
+	}
+
+	return (
+		<>
+			<h3>Github contributions calendar</h3>
+
+			<div className="c-calendar__outer">
+				<link rel="stylesheet" href={stylesheet} />
+
+				<div className="c-calendar c-calendar--github" dangerouslySetInnerHTML={{ __html: markup }} />
+			</div>
+		</>
+	);
+};
+
+export const GithubSkylineComponent: FC = () => {
+	const [current, setCurrent] = useState(-1);
+
+	return (
+		<div className="c-skyline">
+			<nav className="c-skyline__nav">
+				<h4>
+					Previous years Github contributions <br />
+					<small>(requires WebGL)</small>
+				</h4>
+
+				<ul>
+					{YEARS.map((year: string, index: number) => (
+						<li key={year} className={current === index ? 'current' : undefined}>
+							<Button onClick={() => setCurrent(index)} className="c-btn--small">
+								{year}
+							</Button>
+						</li>
+					))}
+				</ul>
+			</nav>
+
+			{YEARS.map((year: string, index: number) =>
+				index === current ? <GithubSkyline key={year} file={`${year}.stl`} index={index} /> : null
+			)}
+		</div>
+	);
+};
+
+type GithubStatsProps = {
+	data: GithubInsights;
+};
+
+export const GithubStats: FC<Readonly<GithubStatsProps>> = ({ data }: GithubStatsProps) => {
 	const { error, updated, ...rest }: GithubInsights = data;
 	const blocks: GeneralInsight[] = error ? [] : extractGithubData(rest);
 
 	const calendarRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
-
-	const [current, setCurrent] = useState(-1);
 	const [githubProfileData, setGithubProfileData] = useState<GithubProfileData>({});
 
 	useEffect(() => {
@@ -118,7 +167,7 @@ export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
 
 	useEffect(() => {
 		const { current } = calendarRef;
-		const observer = registerMutationObeserer(current);
+		const observer: MutationObserver = registerMutationObeserer(current);
 
 		if (current) {
 			observer.observe(current, { childList: true, subtree: true });
@@ -154,45 +203,9 @@ export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
 							</small>
 
 							<div className="o-shell" ref={calendarRef}>
-								{githubProfileData.markup && githubProfileData.stylesheet && (
-									<>
-										<h3>Github contributions calendar</h3>
+								<GithubCalendar data={githubProfileData} />
 
-										<div className="c-calendar__outer">
-											<link rel="stylesheet" href={githubProfileData.stylesheet} />
-
-											<div
-												className="c-calendar c-calendar--github"
-												dangerouslySetInnerHTML={{ __html: githubProfileData.markup }}
-											/>
-										</div>
-									</>
-								)}
-
-								<div className="c-skyline">
-									<nav className="c-skyline__nav">
-										<h4>
-											Previous years Github contributions <br />
-											<small>(requires WebGL)</small>
-										</h4>
-
-										<ul>
-											{YEARS.map((year: string, index: number) => (
-												<li key={year} className={current === index ? 'current' : undefined}>
-													<Button onClick={() => setCurrent(index)} className="c-btn--small">
-														{year}
-													</Button>
-												</li>
-											))}
-										</ul>
-									</nav>
-
-									{YEARS.map((year: string, index: number) =>
-										index === current ? (
-											<GithubSkyline key={year} file={`${year}.stl`} index={index} />
-										) : null
-									)}
-								</div>
+								<GithubSkylineComponent />
 							</div>
 						</div>
 					</>
