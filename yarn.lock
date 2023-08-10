@@ -2562,16 +2562,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*":
-  version "18.2.19"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.19.tgz#f77cb2c8307368e624d464a25b9675fa35f95a8b"
-  integrity sha512-e2S8wmY1ePfM517PqCG80CcE48Xs5k0pwJzuDZsfE8IZRRBfOMCF+XqnFxu6mWtyivum1MQm4aco+WIt6Coimw==
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/scheduler" "*"
-    csstype "^3.0.2"
-
-"@types/react@18.2.20":
+"@types/react@*", "@types/react@18.2.20":
   version "18.2.20"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.20.tgz#1605557a83df5c8a2cc4eeb743b3dfc0eb6aaeb2"
   integrity sha512-WKNtmsLWJM/3D5mG4U84cysVY31ivmyw85dE84fOCk5Hx78wezB/XEjVPWl2JTZ5FkEeaTJf+VgUAUn3PE7Isw==
@@ -2980,11 +2971,6 @@ acorn@^8.1.0, acorn@^8.4.1, acorn@^8.7.1, acorn@^8.8.1, acorn@^8.8.2, acorn@^8.9
   version "8.10.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.10.0.tgz#8be5b3907a67221a81ab23c7889c4c5526b62ec5"
   integrity sha512-F0SAmZ8iUtS//m8DmCTA0jlh6TDKkHQyK6xc6V4KDTyZKA9dnvX9/3sRTVQrWm79glUAZbnmmNcdYwUIHWVybw==
-
-add-subtract-date@^1.0.15:
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/add-subtract-date/-/add-subtract-date-1.0.15.tgz#dd81b9236795b3ed113131dc1a325833c856c8bc"
-  integrity sha512-MiL4wnMyM999meyCrSA3LME9uZ/b5ptSd0ACDVUoTfutFwvkMyIN7nG7gjrU56WEk5RlFLBghabcgdYwY8s+nQ==
 
 agent-base@5:
   version "5.1.1"
@@ -4499,11 +4485,6 @@ dator@2.0.0:
   resolved "https://registry.yarnpkg.com/dator/-/dator-2.0.0.tgz#c7c9e15db0940f605ff4c6f97152defb483feeb3"
   integrity sha512-k00WMADWs/Z+nDLN8EpnHA+UgfR3DMaXABRLr+3WDBTnMr4/uCH8GCRj2E+h+OP06WnrTOAEqKV0oTLD60lY2A==
 
-days@^1.0.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/days/-/days-1.1.1.tgz#b039d1e5ad5335ca689401855546f02d4cfcb362"
-  integrity sha512-vzeIwVsEIyA35GH4+mPd4hjVDNI87wYANyZFs0BHjBr5kIBH5zEl7LfD6Wr4SFZca4D3CU9IH1w4DuZLlXzKRw==
-
 debug@4, debug@4.3.4, debug@^4.1.0, debug@^4.1.1, debug@^4.3.2, debug@^4.3.4:
   version "4.3.4"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
@@ -4879,14 +4860,6 @@ electron-to-chromium@^1.4.477:
   version "1.4.488"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.488.tgz#442b1855f8c84fb1ed79f518985c65db94f64cc9"
   integrity sha512-Dv4sTjiW7t/UWGL+H8ZkgIjtUAVZDgb/PwGWvMsCT7jipzUV/u5skbLXPFKb6iV0tiddVi/bcS2/kUrczeWgIQ==
-
-elly@^1.1.11:
-  version "1.1.11"
-  resolved "https://registry.yarnpkg.com/elly/-/elly-1.1.11.tgz#2600ad6b72548e39f9b792d2c4d46955ed59e12a"
-  integrity sha512-WFKVcEKEOjdSOhNYFKWQoJDk0Sb0re6v0fIsGkePn97dmPpKM/YoOKRdYIb34T1R13KPRNzDBDmT/Flb/54NXg==
-  dependencies:
-    iterate-object "^1.3.2"
-    sliced "^1.0.1"
 
 emittery@^0.13.1:
   version "0.13.1"
@@ -5521,11 +5494,6 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
-fillo@^1.0.0:
-  version "1.0.13"
-  resolved "https://registry.yarnpkg.com/fillo/-/fillo-1.0.13.tgz#31ff0dba75f33b04bada715277bd220448d80553"
-  integrity sha512-9LYJ0ww96DUYETd2Bia5NS1b8rj42nEE5zsfcUwDErMopTs6BRBe4dRIVjrZGXSiK4vNSL/Q3u0dyqbmkA2Zdg==
-
 find-cache-dir@^3.3.1:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/find-cache-dir/-/find-cache-dir-3.3.2.tgz#b30c5b6eff0730731aea9bbd9dbecbd80256d64b"
@@ -5620,16 +5588,6 @@ form-data@~2.3.2:
     asynckit "^0.4.0"
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
-
-formatoid@^1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/formatoid/-/formatoid-1.2.4.tgz#924e5328566ad867a3c7658ec12f8b629fcbfe97"
-  integrity sha512-9wWHOPJvbIheSpiHGl0xaBwdszlzPaeh2KqHVexGQnKpO85xrMoKvuf6M3q0B4uC3I9lkXjH6+8ipQC8PQ/7Gw==
-  dependencies:
-    days "^1.0.1"
-    fillo "^1.0.0"
-    months "^1.0.0"
-    parse-it "^1.0.0"
 
 fraction.js@^4.2.0:
   version "4.2.0"
@@ -5777,28 +5735,6 @@ getpass@^0.1.1:
   integrity sha512-0fzj9JxOLfJ+XGLhR8ze3unN0KZCgZwiSSDz168VERjK8Wl8kVSdcu2kspd4s4wtAa1y/qrVRiAA0WclVsu0ng==
   dependencies:
     assert-plus "^1.0.0"
-
-github-calendar-legend@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/github-calendar-legend/-/github-calendar-legend-1.0.11.tgz#0ffca7a893956d0babd4019bcbfbba5be230e3c7"
-  integrity sha512-V7AkszKw2fMeU+g6W5dQ7vDGzJ3giSaukdOUEdUqhcHhQDVYcQf7c0Q3korbQzJsh+Wh3MqyPtN+ZSAuEnHP2A==
-
-github-calendar-parser@^1.1.13:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/github-calendar-parser/-/github-calendar-parser-1.2.2.tgz#49ef6547a89484cac9f49b8cea2bd8d5bc27cfc8"
-  integrity sha512-lA47NHVu5lTH0kZf71W+NXhqr3hvsHLwMRqUxTNsopLDQNCQTAgyhzHwi5iJegq2cTTn4p1ZeqmHyt8RbbhPOw==
-  dependencies:
-    github-calendar-legend "^1.0.11"
-
-github-calendar@2.2.7:
-  version "2.2.7"
-  resolved "https://registry.yarnpkg.com/github-calendar/-/github-calendar-2.2.7.tgz#6bca00167492233a1dd14f610cbb3fd3331aeb26"
-  integrity sha512-9/YY5e9OoXPJP2bEMRKgLtKpHJQY9eotghCUMmxkJNAaXP6OHGy/Pg7FZD21xlG5GGTkTe39W5+66APU0sWMEw==
-  dependencies:
-    add-subtract-date "^1.0.15"
-    elly "^1.1.11"
-    formatoid "^1.2.4"
-    github-calendar-parser "^1.1.13"
 
 github-from-package@0.0.0:
   version "0.0.0"
@@ -6731,11 +6667,6 @@ itcss@2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/itcss/-/itcss-2.1.0.tgz#d88791e214416d776211ee8e2bd9ab5db0a4f787"
   integrity sha512-kjKfktOEG+h4flc7KSXE7bfVkd+n+UaadMWFNGSk6ALGSlcib9KvYt/Jjnsm+8QumOvOcg6TPJgZkVjL9MkUSw==
-
-iterate-object@^1.3.2:
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/iterate-object/-/iterate-object-1.3.4.tgz#fa50b1d9e58e340a7dd6b4c98c8a5e182e790096"
-  integrity sha512-4dG1D1x/7g8PwHS9aK6QV5V94+ZvyP4+d19qDv43EzImmrndysIl4prmJ1hWWIGCqrZHyaHBm6BSEWHOLnpoNw==
 
 itscss@3.1.0:
   version "3.1.0"
@@ -8175,11 +8106,6 @@ mongodb@5.7.0:
   optionalDependencies:
     saslprep "^1.0.3"
 
-months@^1.0.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/months/-/months-1.2.0.tgz#beef54873960334abe0b03f6b38db8adb44a13ac"
-  integrity sha512-zFM7hUpziSYGk2DNObYGWgHdRRxAOgjl8CC1Rbl50p/q0rGDsREfk0nbxxmSIquVi/lEAuUY8nwbwkZ8biNCOQ==
-
 moo-color@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/moo-color/-/moo-color-1.0.3.tgz#d56435f8359c8284d83ac58016df7427febece74"
@@ -8663,13 +8589,6 @@ parent-module@^1.0.0:
   integrity sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==
   dependencies:
     callsites "^3.0.0"
-
-parse-it@^1.0.0:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/parse-it/-/parse-it-1.0.10.tgz#1b54b770e1703f257cee71c234db8f924f9293b8"
-  integrity sha512-VAG4EuoNd2TT2wSRUuKyLEkZR3MhdWc+3UPp5CDQzqSt/FiniG+yJ5RXyJYiuzVAMEKL4d97gx6O3LR5jEB3uQ==
-  dependencies:
-    regex-escape "^3.4.0"
 
 parse-json@^5.0.0, parse-json@^5.2.0:
   version "5.2.0"
@@ -9464,7 +9383,7 @@ proxy-from-env@^1.0.0, proxy-from-env@^1.1.0:
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
   integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
-psl@^1.1.28, psl@^1.1.33:
+psl@^1.1.33:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/psl/-/psl-1.9.0.tgz#d0df2a137f00794565fcaf3b2c00cd09f8d5a5a7"
   integrity sha512-E/ZsdU4HLs/68gYzgGTkMicWTLPdAftJLfJFlLUAAKZGkStNU72sZjT66SnMDVOfOWY/YAoiD7Jxa9iHvngcag==
@@ -9714,13 +9633,6 @@ react-svg-donuts@3.0.0:
   resolved "https://registry.yarnpkg.com/react-svg-donuts/-/react-svg-donuts-3.0.0.tgz#91d9db2fef63a9e7724b80a035be43ce4b93dd48"
   integrity sha512-m9BHoRUAcY8s2WkBgBXvmOyp/MxdS04msA0Db2OnzBns9WEYp3EMyLXGy/UsKd8dsyHJyWgx46KWJfF7o+Vb/g==
 
-react-ts-github-calendar@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/react-ts-github-calendar/-/react-ts-github-calendar-1.0.3.tgz#1b1fca681218607fb5405dd8d3df65d816e4802b"
-  integrity sha512-d58GZr9yrKzAaq7tPxbFvPT7sphAnEiJJnzdJSW9AygtjRO1LWNz9hZf9/OjpmYEP3Tlknbd59jKslNlClPZ5g==
-  dependencies:
-    github-calendar "2.2.7"
-
 react-vertical-timeline-component@3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/react-vertical-timeline-component/-/react-vertical-timeline-component-3.6.0.tgz#aeb4b56be3f397b493c847df79521f3bfb3aab71"
@@ -9883,11 +9795,6 @@ regenerator-transform@^0.15.2:
   integrity sha512-hfMp2BoF0qOk3uc5V20ALGDS2ddjQaLrdl7xrGXvAIow7qeWRM2VA2HuCHkUKk9slq3VwEwLNK3DFBqDfPGYtg==
   dependencies:
     "@babel/runtime" "^7.8.4"
-
-regex-escape@^3.4.0:
-  version "3.4.10"
-  resolved "https://registry.yarnpkg.com/regex-escape/-/regex-escape-3.4.10.tgz#b45afec7a6e793b786ad193dc3d18b46b5ae08e6"
-  integrity sha512-qEqf7uzW+iYcKNLMDFnMkghhQBnGdivT6KqVQyKsyjSWnoFyooXVnxrw9dtv3AFLnD6VBGXxtZGAQNFGFTnCqA==
 
 regexp.prototype.flags@^1.4.3, regexp.prototype.flags@^1.5.0:
   version "1.5.0"
@@ -10371,11 +10278,6 @@ slice-ansi@^4.0.0:
     ansi-styles "^4.0.0"
     astral-regex "^2.0.0"
     is-fullwidth-code-point "^3.0.0"
-
-sliced@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/sliced/-/sliced-1.0.1.tgz#0b3a662b5d04c3177b1926bea82b03f837a2ef41"
-  integrity sha512-VZBmZP8WU3sMOZm1bdgTadsQbcscK0UM8oKxKVBs4XAhUo2Xxzm/OFMGBkPusxw9xL3Uy8LrzEqGqJhclsr0yA==
 
 slick-carousel@1.8.1:
   version "1.8.1"
@@ -11097,7 +10999,7 @@ touchsweep@2.1.0:
   resolved "https://registry.yarnpkg.com/touchsweep/-/touchsweep-2.1.0.tgz#3cf8646cabe0e47466a398580724ec367403a745"
   integrity sha512-lCdHhYs/SCxvz3ggJY/425Y57/xFDsMViOMRam1vhRrKBSb1AjscwkpTPGwgavMrZ19UNs+MuxXuUczn23PQTA==
 
-tough-cookie@^4.1.2:
+tough-cookie@^4.1.2, tough-cookie@^4.1.3, tough-cookie@~2.5.0:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-4.1.3.tgz#97b9adb0728b42280aa3d814b6b999b2ff0318bf"
   integrity sha512-aX/y5pVRkfRnfmuX+OdbSdXvPe6ieKX/G2s7e98f4poJHnqH3281gDPm/metm6E/WRamfx7WC4HUqkWHfQHprw==
@@ -11106,14 +11008,6 @@ tough-cookie@^4.1.2:
     punycode "^2.1.1"
     universalify "^0.2.0"
     url-parse "^1.5.3"
-
-tough-cookie@~2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.5.0.tgz#cd9fb2a0aa1d5a12b473bd9fb96fa3dcff65ade2"
-  integrity sha512-nlLsUzgm1kfLXSXfRZMc1KLAugd4hqJHDTvc2hDIwS3mZAfMEuMbc03SujMF+GEcpaX/qboeycw6iO8JwVv2+g==
-  dependencies:
-    psl "^1.1.28"
-    punycode "^2.1.1"
 
 tr46@^1.0.1:
   version "1.0.1"

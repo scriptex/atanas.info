@@ -1,12 +1,17 @@
 import { act } from '@testing-library/react';
 
-import { test, snapshotTest } from '@test-config/helpers';
 import { GithubStats, getStaticProps } from '@pages/stats/github';
+import { test, mockFetch, snapshotTest } from '@test-config/helpers';
 import { GithubCount, GithubInsights, GithubContribution } from '@scripts/types';
 
 jest.mock('@lib/mongodb', () => ({
 	getData: jest.fn(() => Promise.resolve({ props: { data: [] } }))
 }));
+
+mockFetch({
+	markup: '<div><table><tr><td><span className="sr-only">Github calendar</span></td></tr></table></div>',
+	stylesheet: 'https://google.com/style.css'
+});
 
 const dataFull: GithubInsights = {
 	error: false,

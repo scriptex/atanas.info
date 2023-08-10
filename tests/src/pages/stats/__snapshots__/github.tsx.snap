@@ -698,7 +698,7 @@ exports[` component Should render the  component 1`] = `
           Last updated: Mock date
         </small>
         <div
-          class="o-shell"
+          class="o-shell js--titles-added"
         >
           <h3>
             Github contributions calendar
@@ -706,12 +706,28 @@ exports[` component Should render the  component 1`] = `
           <div
             class="c-calendar__outer"
           >
+            <link
+              href="https://google.com/style.css"
+              rel="stylesheet"
+            />
             <div
               class="c-calendar c-calendar--github"
             >
-              <p>
-                Temporarily disabled.
-              </p>
+              <div>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span
+                          classname="sr-only"
+                        >
+                          Github calendar
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
           <div
@@ -2354,7 +2370,7 @@ exports[` component Should render the  component 2`] = `
           Last updated: Mock date
         </small>
         <div
-          class="o-shell"
+          class="o-shell js--titles-added"
         >
           <h3>
             Github contributions calendar
@@ -2362,12 +2378,28 @@ exports[` component Should render the  component 2`] = `
           <div
             class="c-calendar__outer"
           >
+            <link
+              href="https://google.com/style.css"
+              rel="stylesheet"
+            />
             <div
               class="c-calendar c-calendar--github"
             >
-              <p>
-                Temporarily disabled.
-              </p>
+              <div>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span
+                          classname="sr-only"
+                        >
+                          Github calendar
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
           <div
@@ -3881,7 +3913,7 @@ exports[` component Should render the  component 3`] = `
           Last updated: Mock date
         </small>
         <div
-          class="o-shell"
+          class="o-shell js--titles-added"
         >
           <h3>
             Github contributions calendar
@@ -3889,12 +3921,28 @@ exports[` component Should render the  component 3`] = `
           <div
             class="c-calendar__outer"
           >
+            <link
+              href="https://google.com/style.css"
+              rel="stylesheet"
+            />
             <div
               class="c-calendar c-calendar--github"
             >
-              <p>
-                Temporarily disabled.
-              </p>
+              <div>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span
+                          classname="sr-only"
+                        >
+                          Github calendar
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
           <div
@@ -6950,7 +6998,7 @@ exports[` component Should render the  component 5`] = `
           Last updated: Mock date
         </small>
         <div
-          class="o-shell"
+          class="o-shell js--titles-added"
         >
           <h3>
             Github contributions calendar
@@ -6958,12 +7006,28 @@ exports[` component Should render the  component 5`] = `
           <div
             class="c-calendar__outer"
           >
+            <link
+              href="https://google.com/style.css"
+              rel="stylesheet"
+            />
             <div
               class="c-calendar c-calendar--github"
             >
-              <p>
-                Temporarily disabled.
-              </p>
+              <div>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span
+                          classname="sr-only"
+                        >
+                          Github calendar
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
           <div
@@ -8606,7 +8670,7 @@ exports[` component Should render the  component 6`] = `
           Last updated: Mock date
         </small>
         <div
-          class="o-shell"
+          class="o-shell js--titles-added"
         >
           <h3>
             Github contributions calendar
@@ -8614,12 +8678,28 @@ exports[` component Should render the  component 6`] = `
           <div
             class="c-calendar__outer"
           >
+            <link
+              href="https://google.com/style.css"
+              rel="stylesheet"
+            />
             <div
               class="c-calendar c-calendar--github"
             >
-              <p>
-                Temporarily disabled.
-              </p>
+              <div>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span
+                          classname="sr-only"
+                        >
+                          Github calendar
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
           <div
@@ -10260,7 +10340,7 @@ exports[` component Should render the  component 7`] = `
           Last updated: Mock date
         </small>
         <div
-          class="o-shell"
+          class="o-shell js--titles-added"
         >
           <h3>
             Github contributions calendar
@@ -10268,12 +10348,28 @@ exports[` component Should render the  component 7`] = `
           <div
             class="c-calendar__outer"
           >
+            <link
+              href="https://google.com/style.css"
+              rel="stylesheet"
+            />
             <div
               class="c-calendar c-calendar--github"
             >
-              <p>
-                Temporarily disabled.
-              </p>
+              <div>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span
+                          classname="sr-only"
+                        >
+                          Github calendar
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
           <div
@@ -11928,7 +12024,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
           Last updated: Mock date
         </small>
         <div
-          class="o-shell"
+          class="o-shell js--titles-added"
         >
           <h3>
             Github contributions calendar
@@ -11936,12 +12032,28 @@ exports[`Test the GithubStats page with fake timers 1`] = `
           <div
             class="c-calendar__outer"
           >
+            <link
+              href="https://google.com/style.css"
+              rel="stylesheet"
+            />
             <div
               class="c-calendar c-calendar--github"
             >
-              <p>
-                Temporarily disabled.
-              </p>
+              <div>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span
+                          classname="sr-only"
+                        >
+                          Github calendar
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
           <div

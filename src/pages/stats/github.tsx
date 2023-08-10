@@ -1,16 +1,12 @@
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-import { FC, useRef, useState, useEffect } from 'react';
+import { FC, useRef, useState, useEffect, MutableRefObject } from 'react';
 
 import { Routes } from '@data/routes';
-import { Ref, formatDate } from '@scripts/shared';
-import { GithubInsights, GithubRepository } from '@scripts/types';
+import { formatDate } from '@scripts/shared';
 import { getData, queryGithub, MongoDBProps } from '@lib/mongodb';
-import { YEARS, addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
+import { YEARS, GeneralInsight, sectionStatsProps } from '@scripts/stats';
+import { GithubInsights, GithubProfileData, GithubRepository } from '@scripts/types';
 import { Button, Layout, Section, StatsEntry, StatsError, GithubSkyline, Title } from '@components';
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const ReactGitHubCalendar = dynamic(() => import('react-ts-github-calendar'), { ssr: false }) as any;
 
 export const extractGithubData = ({
 	general,
@@ -84,25 +80,101 @@ export const extractGithubData = ({
 	].map((item, index) => ({ ...item, index }));
 };
 
-type Props = {
+export const registerMutationObeserer = (element: HTMLDivElement | null): MutationObserver =>
+	new MutationObserver(mutations => {
+		for (const mutation of mutations) {
+			if (mutation.type === 'childList' && !element?.classList.contains('js--titles-added')) {
+				const items = Array.from(element?.querySelectorAll('td .sr-only') ?? []);
+
+				for (const item of items) {
+					const parent = item.parentNode as HTMLTableCellElement;
+
+					parent.setAttribute('title', item.textContent ?? '');
+				}
+
+				element?.classList.add('js--titles-added');
+			}
+		}
+	});
+
+type GithubCalendarProps = {
+	data: GithubProfileData;
+};
+
+export const GithubCalendar: FC<GithubCalendarProps> = ({ data: { markup, stylesheet } }: GithubCalendarProps) => {
+	if (!markup || !stylesheet) {
+		return null;
+	}
+
+	return (
+		<>
+			<h3>Github contributions calendar</h3>
+
+			<div className="c-calendar__outer">
+				<link rel="stylesheet" href={stylesheet} />
+
+				<div className="c-calendar c-calendar--github" dangerouslySetInnerHTML={{ __html: markup }} />
+			</div>
+		</>
+	);
+};
+
+export const GithubSkylineComponent: FC = () => {
+	const [current, setCurrent] = useState(-1);
+
+	return (
+		<div className="c-skyline">
+			<nav className="c-skyline__nav">
+				<h4>
+					Previous years Github contributions <br />
+					<small>(requires WebGL)</small>
+				</h4>
+
+				<ul>
+					{YEARS.map((year: string, index: number) => (
+						<li key={year} className={current === index ? 'current' : undefined}>
+							<Button onClick={() => setCurrent(index)} className="c-btn--small">
+								{year}
+							</Button>
+						</li>
+					))}
+				</ul>
+			</nav>
+
+			{YEARS.map((year: string, index: number) =>
+				index === current ? <GithubSkyline key={year} file={`${year}.stl`} index={index} /> : null
+			)}
+		</div>
+	);
+};
+
+type GithubStatsProps = {
 	data: GithubInsights;
 };
 
-export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
-	const timeout: Ref<NodeJS.Timeout> = useRef(null);
-	const [current, setCurrent] = useState(-1);
+export const GithubStats: FC<Readonly<GithubStatsProps>> = ({ data }: GithubStatsProps) => {
 	const { error, updated, ...rest }: GithubInsights = data;
 	const blocks: GeneralInsight[] = error ? [] : extractGithubData(rest);
 
+	const calendarRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
+	const [githubProfileData, setGithubProfileData] = useState<GithubProfileData>({});
+
 	useEffect(() => {
-		timeout.current = setTimeout(() => {
-			addTitles('.c-calendar--github', (rect: SVGRectElement) => rect.innerHTML);
-		}, 3000);
+		fetch('/api/github-calendar')
+			.then(r => r.json())
+			.then(setGithubProfileData);
+	}, []);
+
+	useEffect(() => {
+		const { current } = calendarRef;
+		const observer: MutationObserver = registerMutationObeserer(current);
+
+		if (current) {
+			observer.observe(current, { childList: true, subtree: true });
+		}
 
 		return () => {
-			if (timeout.current !== null) {
-				clearTimeout(timeout.current);
-			}
+			observer.disconnect();
 		};
 	}, []);
 
@@ -130,40 +202,10 @@ export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
 								Last updated: {formatDate(updated ?? new Date().getTime(), 'dd MMM yyyy HH:mm:ss')}
 							</small>
 
-							<div className="o-shell">
-								<h3>Github contributions calendar</h3>
+							<div className="o-shell" ref={calendarRef}>
+								<GithubCalendar data={githubProfileData} />
 
-								<div className="c-calendar__outer">
-									<div className="c-calendar c-calendar--github">
-										<p>Temporarily disabled.</p>
-										{/* <ReactGitHubCalendar tooltips userName="scriptex" global_stats={false} /> */}
-									</div>
-								</div>
-
-								<div className="c-skyline">
-									<nav className="c-skyline__nav">
-										<h4>
-											Previous years Github contributions <br />
-											<small>(requires WebGL)</small>
-										</h4>
-
-										<ul>
-											{YEARS.map((year: string, index: number) => (
-												<li key={year} className={current === index ? 'current' : undefined}>
-													<Button onClick={() => setCurrent(index)} className="c-btn--small">
-														{year}
-													</Button>
-												</li>
-											))}
-										</ul>
-									</nav>
-
-									{YEARS.map((year: string, index: number) =>
-										index === current ? (
-											<GithubSkyline key={year} file={`${year}.stl`} index={index} />
-										) : null
-									)}
-								</div>
+								<GithubSkylineComponent />
 							</div>
 						</div>
 					</>
