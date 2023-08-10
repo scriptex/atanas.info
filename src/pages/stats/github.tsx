@@ -3,9 +3,9 @@ import { FC, useRef, useState, useEffect, MutableRefObject } from 'react';
 
 import { Routes } from '@data/routes';
 import { formatDate } from '@scripts/shared';
-import { GithubInsights, GithubProfileData, GithubRepository } from '@scripts/types';
 import { getData, queryGithub, MongoDBProps } from '@lib/mongodb';
 import { YEARS, GeneralInsight, sectionStatsProps } from '@scripts/stats';
+import { GithubInsights, GithubProfileData, GithubRepository } from '@scripts/types';
 import { Button, Layout, Section, StatsEntry, StatsError, GithubSkyline, Title } from '@components';
 
 export const extractGithubData = ({
@@ -162,7 +162,7 @@ export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
 
 											<div
 												className="c-calendar c-calendar--github"
-												dangerouslySetInnerHTML={{ __html: githubProfileData.markup || '' }}
+												dangerouslySetInnerHTML={{ __html: githubProfileData.markup }}
 											/>
 										</div>
 									</>
