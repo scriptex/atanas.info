@@ -2,16 +2,20 @@ import { run } from '@npm';
 
 jest.mock('npmtotal', () => ({
 	__esModule: true,
-	default: jest.fn(() =>
-		Promise.resolve({
-			stats: [
-				['test', 100],
-				['lest', 100],
-				['zest', 100]
-			],
-			sum: 1873032
-		})
-	)
+	default: jest
+		.fn()
+		.mockImplementationOnce(() =>
+			Promise.resolve({
+				stats: [
+					['test', 100],
+					['lest', 100],
+					['zest', 100],
+					['test', 100]
+				],
+				sum: 1873032
+			})
+		)
+		.mockImplementationOnce(() => Promise.reject(new Error('Failed loading NPM stats.')))
 }));
 
 jest.mock('package-info', () => ({
@@ -41,7 +45,7 @@ jest.mock('@lib/mongodb', () => ({
 	})
 }));
 
-it('Should run the NPM stats from the command line', async () => {
+it('Should run the NPM stats from the command line successfully', async () => {
 	const result = await run();
 
 	expect(result.sum).toBeDefined();
@@ -69,4 +73,11 @@ it('Should run the NPM stats from the command line', async () => {
 
 	expect(result.test.downloads).toBeDefined();
 	expect(typeof result.test.downloads).toEqual('number');
+});
+
+it('Should run the NPM stats from the command line unsuccessfully', async () => {
+	const result = await run();
+
+	expect(result).toEqual({});
+	expect(result.sum).toBeUndefined();
 });

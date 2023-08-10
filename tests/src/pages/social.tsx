@@ -1,6 +1,6 @@
-import { Social } from '@pages/social';
 import * as shared from '@scripts/shared';
 import { snapshotTest, test } from '@test-config/helpers';
+import { Social, getStaticProps } from '@pages/social';
 
 jest.mock('@lib/mongodb', () => ({
 	getData: jest.fn(() => Promise.resolve({ props: { data: [] } }))
@@ -75,4 +75,10 @@ it('Tests the Social page when offline', async () => {
 	const { asFragment } = await test(Social);
 
 	expect(asFragment()).toMatchSnapshot();
+});
+
+it('Should test the `getStaticProps` function', async () => {
+	const result = await getStaticProps();
+
+	expect(result).toEqual({ props: { data: [] } });
 });

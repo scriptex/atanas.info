@@ -1,16 +1,12 @@
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-import { FC, useRef, useState, useEffect } from 'react';
+import { FC, useRef, useState, useEffect, MutableRefObject } from 'react';
 
 import { Routes } from '@data/routes';
-import { Ref, formatDate } from '@scripts/shared';
-import { GithubInsights, GithubRepository } from '@scripts/types';
+import { formatDate } from '@scripts/shared';
+import { GithubInsights, GithubProfileData, GithubRepository } from '@scripts/types';
 import { getData, queryGithub, MongoDBProps } from '@lib/mongodb';
-import { YEARS, addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
+import { YEARS, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import { Button, Layout, Section, StatsEntry, StatsError, GithubSkyline, Title } from '@components';
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const ReactGitHubCalendar = dynamic(() => import('react-ts-github-calendar'), { ssr: false }) as any;
 
 export const extractGithubData = ({
 	general,
@@ -89,20 +85,46 @@ type Props = {
 };
 
 export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
-	const timeout: Ref<NodeJS.Timeout> = useRef(null);
-	const [current, setCurrent] = useState(-1);
 	const { error, updated, ...rest }: GithubInsights = data;
 	const blocks: GeneralInsight[] = error ? [] : extractGithubData(rest);
 
+	const calendarRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
+
+	const [current, setCurrent] = useState(-1);
+	const [githubProfileData, setGithubProfileData] = useState<GithubProfileData>({});
+
 	useEffect(() => {
-		timeout.current = setTimeout(() => {
-			addTitles('.c-calendar--github', (rect: SVGRectElement) => rect.innerHTML);
-		}, 3000);
+		fetch('/api/github-calendar')
+			.then(r => r.json())
+			.then(setGithubProfileData);
+	}, []);
+
+	useEffect(() => {
+		const { current } = calendarRef;
+
+		const observer = new MutationObserver(mutations => {
+			for (const mutation of mutations) {
+				if (mutation.type === 'childList' && !current?.classList.contains('js--titles-added')) {
+					const element = current as HTMLDivElement;
+					const items = Array.from(element?.querySelectorAll('td .sr-only') ?? []);
+
+					for (const item of items) {
+						const parent = item.parentNode as HTMLTableCellElement;
+
+						parent.setAttribute('title', item.textContent ?? '');
+					}
+
+					current?.classList.add('js--titles-added');
+				}
+			}
+		});
+
+		if (current) {
+			observer.observe(current, { childList: true, subtree: true });
+		}
 
 		return () => {
-			if (timeout.current !== null) {
-				clearTimeout(timeout.current);
-			}
+			observer.disconnect();
 		};
 	}, []);
 
@@ -130,15 +152,21 @@ export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
 								Last updated: {formatDate(updated ?? new Date().getTime(), 'dd MMM yyyy HH:mm:ss')}
 							</small>
 
-							<div className="o-shell">
-								<h3>Github contributions calendar</h3>
+							<div className="o-shell" ref={calendarRef}>
+								{githubProfileData.markup && githubProfileData.stylesheet && (
+									<>
+										<h3>Github contributions calendar</h3>
 
-								<div className="c-calendar__outer">
-									<div className="c-calendar c-calendar--github">
-										<p>Temporarily disabled.</p>
-										{/* <ReactGitHubCalendar tooltips userName="scriptex" global_stats={false} /> */}
-									</div>
-								</div>
+										<div className="c-calendar__outer">
+											<link rel="stylesheet" href={githubProfileData.stylesheet} />
+
+											<div
+												className="c-calendar c-calendar--github"
+												dangerouslySetInnerHTML={{ __html: githubProfileData.markup || '' }}
+											/>
+										</div>
+									</>
+								)}
 
 								<div className="c-skyline">
 									<nav className="c-skyline__nav">

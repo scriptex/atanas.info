@@ -82,3 +82,8 @@ export type FormData = {
 	message: string;
 	honeypot: string;
 };
+
+export type GithubProfileData = {
+	markup?: string;
+	stylesheet?: string;
+};

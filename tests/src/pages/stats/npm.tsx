@@ -1,3 +1,5 @@
+import type { ComponentProps } from 'react';
+
 import { snapshotTest } from '@test-config/helpers';
 import { NPMStats, getStaticProps } from '@pages/stats/npm';
 
@@ -29,6 +31,8 @@ jest.mock('@lib/mongodb', () => ({
 snapshotTest(() => <NPMStats data={{ ...data, sum: 1876223 }} />);
 
 snapshotTest(() => <NPMStats data={data} />);
+
+snapshotTest(() => <NPMStats data={{} as ComponentProps<typeof NPMStats>['data']} />);
 
 it('Test the `getStaticProps` function', async () => {
 	const result = await getStaticProps();

@@ -160,6 +160,24 @@
 .c-calendar--github {
 	margin-bottom: 2rem;
 
+	& a {
+		display: none;
+	}
+
+	& > h2 {
+		font-size: 1rem;
+		font-weight: 400;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin: 0;
+	}
+
+	& > div > div > div:last-child {
+		@mixin flex-row nowrap, center, flex-end;
+		padding-top: 0.5rem;
+	}
+
 	& rect {
 		fill: var(--color-calendar-graph-day-bg);
 		outline: 1px solid var(--color-calendar-graph-day-border);
@@ -179,15 +197,6 @@
 		&[data-level='4'] {
 			fill: var(--color-calendar-graph-day-L4-bg);
 		}
-	}
-
-	& .Box-header,
-	& svg + div a {
-		display: none;
-	}
-
-	& .contrib-column {
-		border: 0;
 	}
 }
 
@@ -258,6 +267,10 @@
 		& ul {
 			padding: 0;
 		}
+	}
+
+	.c-calendar--github {
+		margin-bottom: 1rem;
 	}
 
 	.c-calendar__entry:not(:first-child) {
