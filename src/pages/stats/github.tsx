@@ -84,6 +84,23 @@ type Props = {
 	data: GithubInsights;
 };
 
+export const registerMutationObeserer = (element: HTMLDivElement | null) =>
+	new MutationObserver(mutations => {
+		for (const mutation of mutations) {
+			if (mutation.type === 'childList' && !element?.classList.contains('js--titles-added')) {
+				const items = Array.from(element?.querySelectorAll('td .sr-only') ?? []);
+
+				for (const item of items) {
+					const parent = item.parentNode as HTMLTableCellElement;
+
+					parent.setAttribute('title', item.textContent ?? '');
+				}
+
+				element?.classList.add('js--titles-added');
+			}
+		}
+	});
+
 export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
 	const { error, updated, ...rest }: GithubInsights = data;
 	const blocks: GeneralInsight[] = error ? [] : extractGithubData(rest);
@@ -101,23 +118,7 @@ export const GithubStats: FC<Readonly<Props>> = ({ data }: Props) => {
 
 	useEffect(() => {
 		const { current } = calendarRef;
-
-		const observer = new MutationObserver(mutations => {
-			for (const mutation of mutations) {
-				if (mutation.type === 'childList' && !current?.classList.contains('js--titles-added')) {
-					const element = current as HTMLDivElement;
-					const items = Array.from(element?.querySelectorAll('td .sr-only') ?? []);
-
-					for (const item of items) {
-						const parent = item.parentNode as HTMLTableCellElement;
-
-						parent.setAttribute('title', item.textContent ?? '');
-					}
-
-					current?.classList.add('js--titles-added');
-				}
-			}
-		});
+		const observer = registerMutationObeserer(current);
 
 		if (current) {
 			observer.observe(current, { childList: true, subtree: true });
