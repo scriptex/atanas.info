@@ -7,6 +7,14 @@
 		background-color: var(--color-secondary);
 	}
 
+	&::after {
+		z-index: 2;
+	}
+
+	& .o-shell {
+		z-index: 3;
+	}
+
 	& .c-section__wrapper,
 	& .c-section__container {
 		& a {

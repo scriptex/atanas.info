@@ -1,3 +1,5 @@
+.bubbles,
+.circles,
 .c-error-page,
 .c-section--music,
 .c-section--stats,
@@ -10,7 +12,7 @@
 .c-section--interactive-resume,
 .c-section--open-source-project,
 .c-section--videos.c-section--slides {
-	&::before {
+	&::after {
 		content: '';
 		width: 1px;
 		height: 1px;
