@@ -104,6 +104,10 @@
 
 .c-section--videos {
 	background-color: var(--color-secondary);
+
+	&::before {
+		content: none;
+	}
 }
 
 @media (--mobile) {

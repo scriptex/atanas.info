@@ -160,6 +160,7 @@ jest.mock('@insights/client', () => ({
 	}
 }));
 
+const mockedError = Promise.reject(new Error('Mocked error!'));
 const originalFetch = global.fetch;
 
 afterEach(() => {
@@ -220,7 +221,7 @@ it('Test the `getGithubInsights` function', async () => {
 	expect(result1.updated).toBeDefined();
 	expect(typeof result1.updated).toEqual('number');
 
-	jest.spyOn(insightsUtils, 'getContributions').mockReturnValue(Promise.reject('Mocked error!'));
+	jest.spyOn(insightsUtils, 'getContributions').mockReturnValue(mockedError);
 
 	const result2 = await getGithubInsights();
 
@@ -267,7 +268,7 @@ it('Test the `getGitlabInsights` function', async () => {
 	expect(result1.updated).toBeDefined();
 	expect(typeof result1.updated).toEqual('number');
 
-	global.fetch = jest.fn().mockImplementation(() => Promise.reject('Mocked error!'));
+	global.fetch = jest.fn().mockImplementation(() => mockedError);
 
 	const result2 = await getGitlabInsights();
 
@@ -298,7 +299,7 @@ it('Test the `getLastFMInsights` function', async () => {
 	expect(result1.weeklyAlbumChart[0].images).toBeDefined();
 	expect(result1.weeklyAlbumChart[0].artist).toBeDefined();
 
-	jest.spyOn(insightsUtils, 'asyncForEach').mockImplementation(() => Promise.reject('Mocked error!'));
+	jest.spyOn(insightsUtils, 'asyncForEach').mockImplementation(() => mockedError);
 
 	const result2 = await getLastFMInsights();
 

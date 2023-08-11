@@ -45,12 +45,20 @@ body {
 	.bubbles {
 		background-image: paint(bubbles);
 		--bubbles-background: var(--color-secondary);
+
+		&::after {
+			content: none !important;
+		}
 	}
 }
 
 @supports (background-image: paint(circles)) {
 	.circles {
 		background-image: paint(circles);
+
+		&::after {
+			content: none !important;
+		}
 	}
 }
 

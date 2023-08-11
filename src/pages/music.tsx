@@ -17,6 +17,20 @@ type Props = {
 	data: Track[];
 };
 
+export const getTrackArtist = (data: string): string => {
+	const result = data.replace('Scriptex', '').trim();
+
+	if (result === '') {
+		return '';
+	}
+
+	if (result.includes('&')) {
+		return ` (${result.replace('&', 'with')})`;
+	}
+
+	return ` (${result})`;
+};
+
 export const Music: FC<Readonly<Props>> = ({ data }: Props) => {
 	const [source, setSource] = useState(data[0]);
 	const [playing, setPlaying] = useState(false);
@@ -94,7 +108,10 @@ export const Music: FC<Readonly<Props>> = ({ data }: Props) => {
 								}}
 								className={track.url === source.url ? 'active' : undefined}
 							>
-								{track.metaData.artist} - {track.metaData.title}
+								<span>
+									{track.metaData.title}
+									{getTrackArtist(track.metaData.artist)}
+								</span>
 							</button>
 						))}
 					</div>

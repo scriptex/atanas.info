@@ -118,7 +118,11 @@
 	background-color: var(--color-secondary);
 
 	&::before {
-		content: none;
+		opacity: 0.15;
+		visibility: visible;
+		background-color: transparent;
+		background-image: paint(circles);
+		transition: none;
 	}
 
 	& ul {
@@ -184,6 +188,11 @@
 			text-decoration-color: var(--color-action);
 			background-color: transparent;
 		}
+	}
+
+	& .o-shell {
+		position: relative;
+		z-index: 2;
 	}
 }
 
