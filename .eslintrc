@@ -17,7 +17,7 @@
 		"sourceType": "module"
 	},
 	"plugins": ["@typescript-eslint", "jest"],
-	"ignorePatterns": ["*.config.js"],
+	"ignorePatterns": ["*.config.js", "*.config.mjs"],
 	"rules": {
 		"compat/compat": "off",
 		"react/display-name": "off",
