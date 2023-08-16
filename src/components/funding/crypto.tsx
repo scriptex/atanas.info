@@ -1,7 +1,7 @@
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { FC, useEffect, useState } from 'react';
 
-import { Icon } from '@components';
+import { Button, Icon } from '@components';
 import { composeClassName } from '@scripts/shared';
 
 type Props = {
@@ -34,9 +34,9 @@ export const FundingCrypto: FC<Readonly<Props>> = ({ name, title, wallet }: Prop
 			<div className={composeClassName('c-funding__crypto', [name])}>
 				<h6>{title}</h6>
 
-				<button title={title}>
+				<Button type="button" title={title} unstyled>
 					<Icon name={`svg-${name}`} className="c-funding__crypto-icon" />
-				</button>
+				</Button>
 
 				{copied ? (
 					<small>✅ Copied!</small>

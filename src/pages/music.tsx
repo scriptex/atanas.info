@@ -2,7 +2,7 @@ import { FC, useRef, useState, useEffect } from 'react';
 
 import { music, MusicFunctions } from '@scripts/music';
 import { Ref, composeClassName } from '@scripts/shared';
-import { Layout, Section, Title } from '@components';
+import { Button, Layout, Section, Title } from '@components';
 import { getData, queryMusic, MongoDBProps } from '@lib/mongodb';
 
 type Track = {
@@ -60,43 +60,48 @@ export const Music: FC<Readonly<Props>> = ({ data }: Props) => {
 
 					<canvas ref={canvas} />
 
-					<button className="c-music__menu" onClick={() => setVisible(!visible)}>
+					<Button type="button" onClick={() => setVisible(!visible)} unstyled className="c-music__menu">
 						{visible ? 'Close track list' : 'Pick a track'}
-					</button>
+					</Button>
 
-					<button
+					<Button
+						type="button"
 						onClick={() => {
 							setPlaying(false);
 							setVisible(false);
 							audio.current?.pause();
 							functions?.onPause();
 						}}
+						unstyled
 						className="c-music__btn c-music__btn--pause"
 					>
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 							<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
 						</svg>
 						Pause
-					</button>
+					</Button>
 
-					<button
+					<Button
+						type="button"
 						onClick={() => {
 							setPlaying(true);
 							setVisible(false);
 							functions?.onPlay();
 							audio.current?.play();
 						}}
+						unstyled
 						className="c-music__btn c-music__btn--play"
 					>
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 							<path d="M8 5v14l11-7z" />
 						</svg>
 						Play
-					</button>
+					</Button>
 
 					<div className="c-music__tracks">
 						{data.map(track => (
-							<button
+							<Button
+								type="button"
 								key={track.url}
 								onClick={async () => {
 									await setSource(track);
@@ -106,13 +111,14 @@ export const Music: FC<Readonly<Props>> = ({ data }: Props) => {
 									functions?.onPlay();
 									audio.current?.play();
 								}}
+								unstyled
 								className={track.url === source.url ? 'active' : undefined}
 							>
 								<span>
 									{track.metaData.title}
 									{getTrackArtist(track.metaData.artist)}
 								</span>
-							</button>
+							</Button>
 						))}
 					</div>
 

@@ -6,7 +6,7 @@ import { FC, useState } from 'react';
 import { Routes } from '@data/routes';
 import { emailTemplates } from '@data/projects';
 import { portfolioSectionProps } from '.';
-import { Layout, Section, Title } from '@components';
+import { Button, Layout, Section, Title } from '@components';
 
 type Props = {
 	template: string;
@@ -19,13 +19,15 @@ export const PortfolioEmailTemplate: FC<Readonly<Props>> = ({ template }: Props)
 
 	return (
 		<>
-			<button onClick={toggle}>
+			<Button type="button" onClick={toggle} unstyled>
 				<iframe src={template} style={{ pointerEvents: 'none' }} />
-			</button>
+			</Button>
 
 			<Modal isOpen={open} onRequestClose={toggle} ariaHideApp={false}>
 				<div className="o-shell">
-					<button onClick={toggle}>&times;</button>
+					<Button type="button" onClick={toggle} unstyled>
+						&times;
+					</Button>
 
 					<iframe src={template} />
 				</div>

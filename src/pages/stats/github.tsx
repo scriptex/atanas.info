@@ -133,7 +133,7 @@ export const GithubSkylineComponent: FC = () => {
 				<ul>
 					{YEARS.map((year: string, index: number) => (
 						<li key={year} className={current === index ? 'current' : undefined}>
-							<Button onClick={() => setCurrent(index)} className="c-btn--small">
+							<Button type="button" onClick={() => setCurrent(index)} className="c-btn--small">
 								{year}
 							</Button>
 						</li>

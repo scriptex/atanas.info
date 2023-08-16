@@ -25,7 +25,7 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -34,7 +34,7 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -551,79 +551,105 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
         <div
           class="c-email-templates"
         >
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template1.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template2.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template3.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template4.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template5.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template6.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template7.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template8.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template9.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template10.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template11.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template12.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template13.html"
               style="pointer-events: none;"
@@ -1174,6 +1200,7 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -1412,6 +1439,7 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -1435,6 +1463,7 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -1509,7 +1538,7 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -1518,7 +1547,7 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -2035,79 +2064,105 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
         <div
           class="c-email-templates"
         >
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template1.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template2.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template3.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template4.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template5.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template6.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template7.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template8.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template9.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template10.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template11.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template12.html"
               style="pointer-events: none;"
             />
           </button>
-          <button>
+          <button
+            type="button"
+          >
             <iframe
               src="/email-templates/template13.html"
               style="pointer-events: none;"
@@ -2658,6 +2713,7 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -2896,6 +2952,7 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -2919,6 +2976,7 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"

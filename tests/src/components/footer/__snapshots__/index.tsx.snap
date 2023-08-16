@@ -64,6 +64,7 @@ exports[`Footer component Should render the Footer component 1`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -302,6 +303,7 @@ exports[`Footer component Should render the Footer component 1`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -325,6 +327,7 @@ exports[`Footer component Should render the Footer component 1`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"

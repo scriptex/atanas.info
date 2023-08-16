@@ -24,7 +24,7 @@ exports[`Header component Should render the Header component 1`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -33,7 +33,7 @@ exports[`Header component Should render the Header component 1`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -552,7 +552,7 @@ exports[`Should test the menu toggling 1`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -561,7 +561,7 @@ exports[`Should test the menu toggling 1`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -1078,7 +1078,7 @@ exports[`Should test the menu toggling 2`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -1087,7 +1087,7 @@ exports[`Should test the menu toggling 2`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -1604,7 +1604,7 @@ exports[`Should test the menu toggling 3`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -1613,7 +1613,7 @@ exports[`Should test the menu toggling 3`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -2130,7 +2130,7 @@ exports[`Should test the menu toggling 4`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -2139,7 +2139,7 @@ exports[`Should test the menu toggling 4`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"

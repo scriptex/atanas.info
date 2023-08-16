@@ -25,7 +25,7 @@ exports[`Slides component Should render the Slides component 1`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -34,7 +34,7 @@ exports[`Slides component Should render the Slides component 1`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -550,9 +550,7 @@ exports[`Slides component Should render the Slides component 1`] = `
           class="c-section__nav"
         >
           <ul>
-            <li
-              class="current"
-            >
+            <li>
               <button
                 aria-label="Switch to EcmaScript Features"
                 class="c-btn"
@@ -1143,6 +1141,7 @@ exports[`Slides component Should render the Slides component 1`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -1381,6 +1380,7 @@ exports[`Slides component Should render the Slides component 1`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -1404,6 +1404,7 @@ exports[`Slides component Should render the Slides component 1`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"

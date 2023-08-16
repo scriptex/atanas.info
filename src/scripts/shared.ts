@@ -1,5 +1,6 @@
 import { format } from 'date-fns';
-import { useState, useEffect, MutableRefObject } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { useState, useEffect, MutableRefObject, useMemo } from 'react';
 
 import type { Project } from '@data/projects';
 
@@ -8,8 +9,6 @@ export type Ref<T> = MutableRefObject<T | null>;
 export type PaginationData<T> = {
 	menu: Project[] | undefined;
 	items: T[][] | undefined;
-	current: number;
-	setCurrent: (value: number) => void;
 };
 
 export const random = (): number => {
@@ -79,7 +78,6 @@ export const log = (message: string): void => {
 
 export const usePagination = <T>(data: T[], size = 10): PaginationData<T> => {
 	const [items, setItems] = useState<T[][] | undefined>();
-	const [current, setCurrent] = useState(0);
 
 	data = data.map((item, index) => ({ ...item, index }));
 
@@ -95,8 +93,27 @@ export const usePagination = <T>(data: T[], size = 10): PaginationData<T> => {
 			title: (i + 1).toString(),
 			description: ''
 		})),
-		items,
-		current,
-		setCurrent
+		items
 	};
+};
+
+export const useCurrentPageParam = () => {
+	const params = useSearchParams();
+	const page = useMemo(() => {
+		const pageFromParams = params?.get('page');
+
+		if (!pageFromParams) {
+			return 1;
+		}
+
+		const pageToNumber = Number(pageFromParams);
+
+		if (isNaN(Number(pageToNumber))) {
+			return 1;
+		}
+
+		return pageToNumber;
+	}, [params]);
+
+	return page;
 };

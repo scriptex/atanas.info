@@ -1,15 +1,16 @@
 import { FC, ReactNode, useContext, useState, CSSProperties } from 'react';
 
 import { AppContext } from '@pages/_app';
+import { ReactChildren } from '@scripts/types';
 import { composeClassName } from '@scripts/shared';
 import { Icon, Button, ExternalLink } from '@components';
 
-export type Props = {
+type Props = {
 	id: string;
 	title?: string;
 	style?: CSSProperties;
 	actions?: ReactNode;
-	children: ReactNode | string | Array<ReactNode | string>;
+	children: ReactChildren;
 	subtitle?: string;
 	hasShell?: boolean;
 	hasButton?: boolean;

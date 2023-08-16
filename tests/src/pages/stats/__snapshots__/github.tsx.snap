@@ -25,7 +25,7 @@ exports[` component Should render the  component 1`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -34,7 +34,7 @@ exports[` component Should render the  component 1`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -747,6 +747,7 @@ exports[` component Should render the  component 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2013
                   </button>
@@ -754,6 +755,7 @@ exports[` component Should render the  component 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2014
                   </button>
@@ -761,6 +763,7 @@ exports[` component Should render the  component 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2015
                   </button>
@@ -768,6 +771,7 @@ exports[` component Should render the  component 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2016
                   </button>
@@ -775,6 +779,7 @@ exports[` component Should render the  component 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2017
                   </button>
@@ -782,6 +787,7 @@ exports[` component Should render the  component 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2018
                   </button>
@@ -789,6 +795,7 @@ exports[` component Should render the  component 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2019
                   </button>
@@ -796,6 +803,7 @@ exports[` component Should render the  component 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2020
                   </button>
@@ -803,6 +811,7 @@ exports[` component Should render the  component 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2021
                   </button>
@@ -810,6 +819,7 @@ exports[` component Should render the  component 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2022
                   </button>
@@ -1362,6 +1372,7 @@ exports[` component Should render the  component 1`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -1600,6 +1611,7 @@ exports[` component Should render the  component 1`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -1623,6 +1635,7 @@ exports[` component Should render the  component 1`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -1697,7 +1710,7 @@ exports[` component Should render the  component 2`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -1706,7 +1719,7 @@ exports[` component Should render the  component 2`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -2419,6 +2432,7 @@ exports[` component Should render the  component 2`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2013
                   </button>
@@ -2426,6 +2440,7 @@ exports[` component Should render the  component 2`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2014
                   </button>
@@ -2433,6 +2448,7 @@ exports[` component Should render the  component 2`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2015
                   </button>
@@ -2440,6 +2456,7 @@ exports[` component Should render the  component 2`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2016
                   </button>
@@ -2447,6 +2464,7 @@ exports[` component Should render the  component 2`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2017
                   </button>
@@ -2454,6 +2472,7 @@ exports[` component Should render the  component 2`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2018
                   </button>
@@ -2461,6 +2480,7 @@ exports[` component Should render the  component 2`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2019
                   </button>
@@ -2468,6 +2488,7 @@ exports[` component Should render the  component 2`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2020
                   </button>
@@ -2475,6 +2496,7 @@ exports[` component Should render the  component 2`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2021
                   </button>
@@ -2482,6 +2504,7 @@ exports[` component Should render the  component 2`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2022
                   </button>
@@ -3034,6 +3057,7 @@ exports[` component Should render the  component 2`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -3272,6 +3296,7 @@ exports[` component Should render the  component 2`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -3295,6 +3320,7 @@ exports[` component Should render the  component 2`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -3369,7 +3395,7 @@ exports[` component Should render the  component 3`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -3378,7 +3404,7 @@ exports[` component Should render the  component 3`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -3962,6 +3988,7 @@ exports[` component Should render the  component 3`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2013
                   </button>
@@ -3969,6 +3996,7 @@ exports[` component Should render the  component 3`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2014
                   </button>
@@ -3976,6 +4004,7 @@ exports[` component Should render the  component 3`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2015
                   </button>
@@ -3983,6 +4012,7 @@ exports[` component Should render the  component 3`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2016
                   </button>
@@ -3990,6 +4020,7 @@ exports[` component Should render the  component 3`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2017
                   </button>
@@ -3997,6 +4028,7 @@ exports[` component Should render the  component 3`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2018
                   </button>
@@ -4004,6 +4036,7 @@ exports[` component Should render the  component 3`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2019
                   </button>
@@ -4011,6 +4044,7 @@ exports[` component Should render the  component 3`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2020
                   </button>
@@ -4018,6 +4052,7 @@ exports[` component Should render the  component 3`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2021
                   </button>
@@ -4025,6 +4060,7 @@ exports[` component Should render the  component 3`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2022
                   </button>
@@ -4577,6 +4613,7 @@ exports[` component Should render the  component 3`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -4815,6 +4852,7 @@ exports[` component Should render the  component 3`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -4838,6 +4876,7 @@ exports[` component Should render the  component 3`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -4912,7 +4951,7 @@ exports[` component Should render the  component 4`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -4921,7 +4960,7 @@ exports[` component Should render the  component 4`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -5990,6 +6029,7 @@ exports[` component Should render the  component 4`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -6228,6 +6268,7 @@ exports[` component Should render the  component 4`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -6251,6 +6292,7 @@ exports[` component Should render the  component 4`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -6325,7 +6367,7 @@ exports[` component Should render the  component 5`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -6334,7 +6376,7 @@ exports[` component Should render the  component 5`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -7047,6 +7089,7 @@ exports[` component Should render the  component 5`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2013
                   </button>
@@ -7054,6 +7097,7 @@ exports[` component Should render the  component 5`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2014
                   </button>
@@ -7061,6 +7105,7 @@ exports[` component Should render the  component 5`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2015
                   </button>
@@ -7068,6 +7113,7 @@ exports[` component Should render the  component 5`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2016
                   </button>
@@ -7075,6 +7121,7 @@ exports[` component Should render the  component 5`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2017
                   </button>
@@ -7082,6 +7129,7 @@ exports[` component Should render the  component 5`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2018
                   </button>
@@ -7089,6 +7137,7 @@ exports[` component Should render the  component 5`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2019
                   </button>
@@ -7096,6 +7145,7 @@ exports[` component Should render the  component 5`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2020
                   </button>
@@ -7103,6 +7153,7 @@ exports[` component Should render the  component 5`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2021
                   </button>
@@ -7110,6 +7161,7 @@ exports[` component Should render the  component 5`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2022
                   </button>
@@ -7662,6 +7714,7 @@ exports[` component Should render the  component 5`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -7900,6 +7953,7 @@ exports[` component Should render the  component 5`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -7923,6 +7977,7 @@ exports[` component Should render the  component 5`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -7997,7 +8052,7 @@ exports[` component Should render the  component 6`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -8006,7 +8061,7 @@ exports[` component Should render the  component 6`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -8719,6 +8774,7 @@ exports[` component Should render the  component 6`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2013
                   </button>
@@ -8726,6 +8782,7 @@ exports[` component Should render the  component 6`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2014
                   </button>
@@ -8733,6 +8790,7 @@ exports[` component Should render the  component 6`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2015
                   </button>
@@ -8740,6 +8798,7 @@ exports[` component Should render the  component 6`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2016
                   </button>
@@ -8747,6 +8806,7 @@ exports[` component Should render the  component 6`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2017
                   </button>
@@ -8754,6 +8814,7 @@ exports[` component Should render the  component 6`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2018
                   </button>
@@ -8761,6 +8822,7 @@ exports[` component Should render the  component 6`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2019
                   </button>
@@ -8768,6 +8830,7 @@ exports[` component Should render the  component 6`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2020
                   </button>
@@ -8775,6 +8838,7 @@ exports[` component Should render the  component 6`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2021
                   </button>
@@ -8782,6 +8846,7 @@ exports[` component Should render the  component 6`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2022
                   </button>
@@ -9334,6 +9399,7 @@ exports[` component Should render the  component 6`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -9572,6 +9638,7 @@ exports[` component Should render the  component 6`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -9595,6 +9662,7 @@ exports[` component Should render the  component 6`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -9669,7 +9737,7 @@ exports[` component Should render the  component 7`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -9678,7 +9746,7 @@ exports[` component Should render the  component 7`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -10389,6 +10457,7 @@ exports[` component Should render the  component 7`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2013
                   </button>
@@ -10396,6 +10465,7 @@ exports[` component Should render the  component 7`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2014
                   </button>
@@ -10403,6 +10473,7 @@ exports[` component Should render the  component 7`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2015
                   </button>
@@ -10410,6 +10481,7 @@ exports[` component Should render the  component 7`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2016
                   </button>
@@ -10417,6 +10489,7 @@ exports[` component Should render the  component 7`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2017
                   </button>
@@ -10424,6 +10497,7 @@ exports[` component Should render the  component 7`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2018
                   </button>
@@ -10431,6 +10505,7 @@ exports[` component Should render the  component 7`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2019
                   </button>
@@ -10438,6 +10513,7 @@ exports[` component Should render the  component 7`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2020
                   </button>
@@ -10445,6 +10521,7 @@ exports[` component Should render the  component 7`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2021
                   </button>
@@ -10452,6 +10529,7 @@ exports[` component Should render the  component 7`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2022
                   </button>
@@ -11004,6 +11082,7 @@ exports[` component Should render the  component 7`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -11242,6 +11321,7 @@ exports[` component Should render the  component 7`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -11265,6 +11345,7 @@ exports[` component Should render the  component 7`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -11351,7 +11432,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -11360,7 +11441,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -12073,6 +12154,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2013
                   </button>
@@ -12080,6 +12162,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2014
                   </button>
@@ -12087,6 +12170,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2015
                   </button>
@@ -12094,6 +12178,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2016
                   </button>
@@ -12101,6 +12186,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2017
                   </button>
@@ -12108,6 +12194,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2018
                   </button>
@@ -12115,6 +12202,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2019
                   </button>
@@ -12122,6 +12210,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2020
                   </button>
@@ -12129,6 +12218,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2021
                   </button>
@@ -12136,6 +12226,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 <li>
                   <button
                     class="c-btn c-btn--small"
+                    type="button"
                   >
                     2022
                   </button>
@@ -12688,6 +12779,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -12926,6 +13018,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -12949,6 +13042,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"

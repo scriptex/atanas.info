@@ -1,41 +1,39 @@
-import type { FC, ReactNode } from 'react';
+import Link, { LinkProps } from 'next/link';
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
 
+import { ReactChildren } from '@scripts/types';
 import { composeClassName } from '@scripts/shared';
 
-type Props = {
-	rel?: string;
-	href?: string;
-	type?: 'submit' | 'reset' | 'button' | 'link';
-	target?: string;
-	children?: ReactNode | string | Array<ReactNode | string>;
-	download?: boolean;
+type ButtonType = 'anchor' | 'link' | 'button' | 'reset' | 'submit';
+type AnchorProps = AnchorHTMLAttributes<HTMLAnchorElement>;
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+type DefaultProps<T> = T extends 'anchor' ? AnchorProps : T extends 'link' ? LinkProps : ButtonProps;
+
+type Props<T> = DefaultProps<T> & {
+	type: ButtonType;
+	children?: ReactChildren;
+	unstyled?: boolean;
 	className?: string;
-	ariaLabel?: string;
-	onClick?: (...args: unknown[]) => unknown;
 };
 
-export const Button: FC<Readonly<Props>> = ({
-	rel,
-	href,
+export const Button = <T extends ButtonType = 'button'>({
 	type,
-	target,
 	children,
-	download,
+	unstyled,
 	className,
-	ariaLabel,
-	onClick
-}: Props) => {
+	...rest
+}: Props<T>): JSX.Element => {
 	const commonProps = {
-		className: composeClassName('c-btn', [], [className]),
-		'aria-label': ariaLabel
+		className: unstyled ? className : composeClassName('c-btn', [], [className]),
+		...rest
 	};
 
-	return type === 'link' ? (
-		<a {...commonProps} rel={rel} href={href} target={target} download={download}>
-			{children}
-		</a>
+	return type === 'anchor' ? (
+		<a {...(commonProps as AnchorProps)}>{children}</a>
+	) : type === 'link' ? (
+		<Link {...(commonProps as unknown as LinkProps)}>{children}</Link>
 	) : (
-		<button {...commonProps} type={type} onClick={onClick}>
+		<button {...(commonProps as ButtonProps)} type={type}>
 			{children}
 		</button>
 	);

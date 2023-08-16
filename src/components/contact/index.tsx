@@ -47,7 +47,7 @@ export const Contact: FC<Readonly<Props>> = ({ initialStatus = Status.DEFAULT })
 
 	return (
 		<form onSubmit={onSubmit} className={composeClassName('c-contact', contactVisible ? ['visible'] : [])}>
-			<button
+			<Button
 				type="button"
 				onClick={() => {
 					setEmail('');
@@ -56,10 +56,11 @@ export const Contact: FC<Readonly<Props>> = ({ initialStatus = Status.DEFAULT })
 					setStatus(Status.DEFAULT);
 					setContactVisible(false);
 				}}
+				unstyled
 				className="c-contact__close"
 			>
 				Close
-			</button>
+			</Button>
 
 			<div className="c-contact__body">
 				{status === Status.SUCCESS ? null : (

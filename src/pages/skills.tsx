@@ -21,7 +21,7 @@ export const Skills: FC = () => {
 				id="skills"
 				title="Skills"
 				actions={
-					<Button onClick={() => setShowTable(!showTable)}>
+					<Button type="button" onClick={() => setShowTable(!showTable)}>
 						{showTable ? 'Interactive' : 'Static'} mode
 					</Button>
 				}
