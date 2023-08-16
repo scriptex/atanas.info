@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import { blogProps } from './blog';
+import { blogProps } from '@data/pages';
 import { articles, Article } from '@data/articles';
 import { Layout, Loader, Section, ExternalLink, Title } from '@components';
 

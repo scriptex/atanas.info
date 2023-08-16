@@ -2,7 +2,7 @@ import { FC, useState, useContext, ChangeEvent, FormEvent, useCallback } from 'r
 
 import { Button } from '@components';
 import { Status } from '@scripts/types';
-import { AppContext } from '@pages/_app';
+import { AppContext } from '@data/context';
 import { composeClassName } from '@scripts/shared';
 
 type Props = {

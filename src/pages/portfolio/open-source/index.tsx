@@ -3,16 +3,8 @@ import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
 import { useCurrentPageParam } from '@scripts/shared';
-import { portfolioSectionProps } from '..';
-import { openSourceProjectsList } from '@data/open-source';
 import { Layout, Section, SectionGrid, Title } from '@components';
-
-export const openSourceProjects = openSourceProjectsList.map((repo, index) => ({
-	url: repo?.url,
-	text: repo?.title,
-	index,
-	image: `/images/unsplash/${(index % 25) + 1}.jpeg`
-}));
+import { openSourceProjects, portfolioSectionProps } from '@data/pages';
 
 export const PortfolioOpenSourceProjects: FC = () => {
 	const page = useCurrentPageParam();

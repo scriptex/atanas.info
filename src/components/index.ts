@@ -15,7 +15,7 @@ export { default as Loader } from './loader';
 export { default as MDX } from './mdx';
 export { default as Nav } from './nav';
 export { default as Partners } from './partners';
-export * from './portfolio';
+export { default as PortfolioSliders } from './portfolio-sliders';
 export { default as Referral } from './referral';
 export * from './resume';
 export { default as Section } from './section';

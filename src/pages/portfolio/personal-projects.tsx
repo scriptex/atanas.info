@@ -4,7 +4,7 @@ import type { FC } from 'react';
 import { Routes } from '@data/routes';
 import { personalProjects } from '@data/projects';
 import { useCurrentPageParam } from '@scripts/shared';
-import { portfolioSectionProps } from '.';
+import { portfolioSectionProps } from '@data/pages';
 import { Layout, Section, SectionGrid, Title } from '@components';
 
 export const PortfolioPersonalProjects: FC = () => {

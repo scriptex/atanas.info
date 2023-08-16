@@ -3,8 +3,8 @@ import type { FC } from 'react';
 import { useRouter } from 'next/router';
 
 import { Routes } from '@data/routes';
+import { openSourceProjects } from '@data/pages';
 import { MDX, Layout, Title } from '@components';
-import { openSourceProjects } from '.';
 import { getPostBySlug, getAllPosts } from '@lib/markdown';
 
 type Props = {

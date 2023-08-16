@@ -4,12 +4,12 @@ import { FC, useRef, useEffect } from 'react';
 import { Routes } from '@data/routes';
 import gitlabCalendarData from '@data/gitlab-calendar.json';
 import { Ref, formatDate } from '@scripts/shared';
-import { GitlabInsights, GitlabRepository } from '@scripts/types';
 import { getData, queryGitlab, MongoDBProps } from '@lib/mongodb';
+import type { GitlabInsights, GitlabRepository } from '@scripts/types';
 import { addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import { Layout, Section, StatsEntry, StatsError, Title } from '@components';
 
-export const extractGitlabData = ({ general, calendar, repositories }: GitlabInsights): GeneralInsight[] => {
+const extractGitlabData = ({ general, calendar, repositories }: GitlabInsights): GeneralInsight[] => {
 	if (!repositories || !general || !calendar) {
 		return [];
 	}

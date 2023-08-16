@@ -3,8 +3,8 @@ import Image from 'next/image';
 import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
-import { WebProject } from '@data/projects';
-import { portfolioSectionProps } from '.';
+import type { WebProject } from '@data/projects';
+import { portfolioSectionProps } from '@data/pages';
 import { getData, MongoDBProps, queryScreenshots } from '@lib/mongodb';
 import { Icon, Layout, Loader, Section, SectionNav, ExternalLink, Title } from '@components';
 import { usePagination, useNetworkState, composeClassName, useCurrentPageParam } from '@scripts/shared';

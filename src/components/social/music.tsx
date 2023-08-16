@@ -11,7 +11,7 @@ type Props = {
 	condition: boolean;
 };
 
-export const SocialMusicCarousel: FC<Readonly<Props>> = ({ data, period, condition }: Props) =>
+const SocialMusicCarousel: FC<Readonly<Props>> = ({ data, period, condition }: Props) =>
 	condition ? (
 		<div className="o-grid__item xs-12">
 			<h3>Top albums for last {period}:</h3>

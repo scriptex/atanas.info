@@ -1,4 +1,4 @@
-import { AppProps } from 'next/app';
+import type { AppProps } from 'next/app';
 
 import { App } from '@pages/_app';
 import { snapshotTest } from '@test-config/helpers';

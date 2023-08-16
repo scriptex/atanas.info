@@ -13,7 +13,7 @@ import {
 	forceSimulation
 } from 'd3-force';
 
-import { ForceNode } from '@data/skills-list';
+import type { ForceNode } from '@data/skills-list';
 import { Canvas, createSVG } from './canvas';
 
 type Node = ForceNode & {

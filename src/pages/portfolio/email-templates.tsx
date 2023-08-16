@@ -5,14 +5,14 @@ import { FC, useState } from 'react';
 
 import { Routes } from '@data/routes';
 import { emailTemplates } from '@data/projects';
-import { portfolioSectionProps } from '.';
+import { portfolioSectionProps } from '@data/pages';
 import { Button, Layout, Section, Title } from '@components';
 
 type Props = {
 	template: string;
 };
 
-export const PortfolioEmailTemplate: FC<Readonly<Props>> = ({ template }: Props) => {
+const PortfolioEmailTemplate: FC<Readonly<Props>> = ({ template }: Props) => {
 	const [open, setOpen] = useState(false);
 
 	const toggle = () => setOpen(!open);

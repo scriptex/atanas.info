@@ -1,4 +1,4 @@
-import { CarouselItem } from 'react-round-carousel';
+import type { CarouselItem } from 'react-round-carousel';
 
 type LastFMAlbum = {
 	name: string;

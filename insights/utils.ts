@@ -1,7 +1,7 @@
 import { load } from 'cheerio';
-import clientPromise, { Query, queryNPM, queryGithub, queryGitlab, queryLastFM } from '@lib/mongodb';
 
 import { log } from '@scripts/shared';
+import clientPromise, { Query, queryNPM, queryGithub, queryGitlab, queryLastFM } from '@lib/mongodb';
 
 export type Project = {
 	readonly url: string;

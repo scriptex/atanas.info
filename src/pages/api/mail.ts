@@ -2,8 +2,8 @@ import mjml2html from 'mjml';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { SendSmtpEmail, TransactionalEmailsApi } from '@sendinblue/client';
 
-import { join } from 'path';
-import { readFileSync } from 'fs';
+import { join } from 'node:path';
+import { readFileSync } from 'node:fs';
 
 import type { FormData } from '@scripts/types';
 

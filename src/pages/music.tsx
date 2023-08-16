@@ -17,7 +17,7 @@ type Props = {
 	data: Track[];
 };
 
-export const getTrackArtist = (data: string): string => {
+const getTrackArtist = (data: string): string => {
 	const result = data.replace('Scriptex', '').trim();
 
 	if (result === '') {

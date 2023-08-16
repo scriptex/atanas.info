@@ -3,7 +3,7 @@ import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
 import { automotiveProjects } from '@data/projects';
-import { portfolioSectionProps } from '.';
+import { portfolioSectionProps } from '@data/pages';
 import { Layout, Section, PortfolioSliders, Title } from '@components';
 
 export const PortfolioAutomotiveApps: FC = () => (

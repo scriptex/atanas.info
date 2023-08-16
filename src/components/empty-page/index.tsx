@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
 import { errorIcon } from '@data/error-icon';
-import { ReactChildren } from '@scripts/types';
+import type { ReactChildren } from '@scripts/types';
 import { Lines, Layout, Title } from '@components';
 
 interface Props {

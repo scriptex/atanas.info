@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import { GeneralInsight } from '@scripts/stats';
+import type { GeneralInsight } from '@scripts/stats';
 
 type Props = {
 	data: GeneralInsight[];

@@ -1,16 +1,9 @@
 import Link from 'next/link';
 import type { FC } from 'react';
 
-import book from '@data/lotties/book.json';
+import { blogProps } from '@data/pages';
 import { articles, Article } from '@data/articles';
-import { Layout, Loader, Section, Animation, Title } from '@components';
-
-export const blogProps = {
-	style: { backgroundImage: 'url(images/temp/articles.jpg)' },
-	className: 'c-section--slides fullsize-background',
-	hasButton: true,
-	additionalElements: <Animation data={book} width={150} height={150} className="c-section__animation" />
-};
+import { Layout, Loader, Section, Title } from '@components';
 
 export const Blog: FC = () => (
 	<Layout>

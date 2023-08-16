@@ -30,7 +30,7 @@ type WithError = {
 
 type Props = Packages<WithSum & WithError>;
 
-export const PackagesList: FC<Readonly<Packages>> = ({ data }: Packages) => (
+const PackagesList: FC<Readonly<Packages>> = ({ data }: Packages) => (
 	<div className="o-grid c-packages">
 		{Object.keys(data).map((key: string) => {
 			const item = data[key];

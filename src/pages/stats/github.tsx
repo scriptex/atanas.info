@@ -5,10 +5,10 @@ import { Routes } from '@data/routes';
 import { formatDate } from '@scripts/shared';
 import { getData, queryGithub, MongoDBProps } from '@lib/mongodb';
 import { YEARS, GeneralInsight, sectionStatsProps } from '@scripts/stats';
-import { GithubInsights, GithubProfileData, GithubRepository } from '@scripts/types';
+import type { GithubInsights, GithubProfileData, GithubRepository } from '@scripts/types';
 import { Button, Layout, Section, StatsEntry, StatsError, GithubSkyline, Title } from '@components';
 
-export const extractGithubData = ({
+const extractGithubData = ({
 	general,
 	calendar,
 	repositories
@@ -80,7 +80,7 @@ export const extractGithubData = ({
 	].map((item, index) => ({ ...item, index }));
 };
 
-export const registerMutationObeserer = (element: HTMLDivElement | null): MutationObserver =>
+const registerMutationObeserer = (element: HTMLDivElement | null): MutationObserver =>
 	new MutationObserver(mutations => {
 		for (const mutation of mutations) {
 			if (mutation.type === 'childList' && !element?.classList.contains('js--titles-added')) {
@@ -101,7 +101,7 @@ type GithubCalendarProps = {
 	data: GithubProfileData;
 };
 
-export const GithubCalendar: FC<GithubCalendarProps> = ({ data: { markup, stylesheet } }: GithubCalendarProps) => {
+const GithubCalendar: FC<GithubCalendarProps> = ({ data: { markup, stylesheet } }: GithubCalendarProps) => {
 	if (!markup || !stylesheet) {
 		return null;
 	}
@@ -119,7 +119,7 @@ export const GithubCalendar: FC<GithubCalendarProps> = ({ data: { markup, styles
 	);
 };
 
-export const GithubSkylineComponent: FC = () => {
+const GithubSkylineComponent: FC = () => {
 	const [current, setCurrent] = useState(-1);
 
 	return (

@@ -1,5 +1,5 @@
-import { join } from 'path';
-import { readFileSync } from 'fs';
+import { join } from 'node:path';
+import { readFileSync } from 'node:fs';
 
 import { getAllPosts, getPostSlugs, getPostBySlug, markdownToHtml, postsDirectory } from '@lib/markdown';
 

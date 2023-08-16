@@ -1,23 +1,19 @@
 import { Analytics } from '@vercel/analytics/react';
 import { Fira_Sans } from 'next/font/google';
 import type { AppProps } from 'next/app';
-import { FC, useMemo, useState, useEffect, createContext } from 'react';
+import { FC, useMemo, useState, useEffect } from 'react';
 
 import { Head } from '@components';
+import { AppContext } from '@data/context';
 import { Theme, onThemeChange, setThemeClassName } from '@scripts/shared';
 
 import '@styles/index.css';
 
 type ExtendedAppProps = AppProps & { Component: any };
 
-export const titleFont = Fira_Sans({
+const titleFont = Fira_Sans({
 	weight: ['400', '700'],
 	subsets: ['latin', 'cyrillic']
-});
-
-export const AppContext = createContext({
-	contactVisible: false,
-	setContactVisible: (state: boolean) => state
 });
 
 export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppProps) => {

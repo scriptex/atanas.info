@@ -1,8 +1,8 @@
 import Link, { LinkProps } from 'next/link';
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
 
-import { ReactChildren } from '@scripts/types';
 import { composeClassName } from '@scripts/shared';
+import type { ReactChildren } from '@scripts/types';
 
 type ButtonType = 'anchor' | 'link' | 'button' | 'reset' | 'submit';
 type AnchorProps = AnchorHTMLAttributes<HTMLAnchorElement>;
