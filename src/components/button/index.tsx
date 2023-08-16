@@ -1,5 +1,5 @@
 import Link, { LinkProps } from 'next/link';
-import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react';
 
 import { composeClassName } from '@scripts/shared';
 import type { ReactChildren } from '@scripts/types';
@@ -22,7 +22,7 @@ export const Button = <T extends ButtonType = 'button'>({
 	unstyled,
 	className,
 	...rest
-}: Props<T>): JSX.Element => {
+}: Props<T>): ReactNode => {
 	const commonProps = {
 		className: unstyled ? className : composeClassName('c-btn', [], [className]),
 		...rest

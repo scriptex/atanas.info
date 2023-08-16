@@ -97,7 +97,7 @@ export const usePagination = <T>(data: T[], size = 10): PaginationData<T> => {
 	};
 };
 
-export const useCurrentPageParam = () => {
+export const useCurrentPageParam = (): number => {
 	const params = useSearchParams();
 	const page = useMemo(() => {
 		const pageFromParams = params?.get('page');

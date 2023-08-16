@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import type { ReactNode } from 'react';
 
 import { Routes } from '@data/routes';
 import { SubPage } from '@data/projects';
@@ -28,7 +29,7 @@ export const SectionGrid = <T extends boolean = false>({
 	linkType = 'internal',
 	pagination = false,
 	...rest
-}: Props<T>) => {
+}: Props<T>): ReactNode => {
 	const { menu, items } = usePagination(data, 9);
 	const { page, route } = rest as unknown as PaginationProps;
 
