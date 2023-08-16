@@ -57,7 +57,7 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 			fullPage: false
 		})
 		.then(res => res)
-		.catch(e => {
+		.catch((e: Error) => {
 			log(`atanas.info: Error capturing screenshot for ${name}: ${e}`);
 			return null;
 		});
@@ -68,7 +68,7 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 	if (shotResult) {
 		log(`atanas.info: Uploading screenshot for ${name}...`);
 
-		return upload(shotResult as Buffer, uploadOptions(name), name);
+		return upload(shotResult, uploadOptions(name), name);
 	} else {
 		return null;
 	}
@@ -138,7 +138,7 @@ async function createScreenshots(allPages: WebProject[]): Promise<void> {
 
 			process.exit();
 		})
-		.catch(e => {
+		.catch((e: Error) => {
 			console.error(e);
 			process.exit();
 		});

@@ -1,7 +1,7 @@
 import { Analytics } from '@vercel/analytics/react';
 import { Fira_Sans } from 'next/font/google';
 import type { AppProps } from 'next/app';
-import { FC, useMemo, useState, useEffect } from 'react';
+import { FC, useMemo, useState, useEffect, ComponentType } from 'react';
 
 import { Head } from '@components';
 import { AppContext } from '@data/context';
@@ -9,7 +9,7 @@ import { Theme, onThemeChange, setThemeClassName } from '@scripts/shared';
 
 import '@styles/index.css';
 
-type ExtendedAppProps = AppProps & { Component: any };
+type ExtendedAppProps = AppProps & { Component: ComponentType };
 
 const titleFont = Fira_Sans({
 	weight: ['400', '700'],
@@ -18,7 +18,7 @@ const titleFont = Fira_Sans({
 
 export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppProps) => {
 	const [contactVisible, setContactVisible] = useState(false);
-	const value: any = useMemo(() => ({ contactVisible, setContactVisible }), [contactVisible]);
+	const value = useMemo(() => ({ contactVisible, setContactVisible }), [contactVisible]);
 
 	useEffect(() => {
 		setThemeClassName(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -28,7 +28,9 @@ export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppP
 				return;
 			}
 
-			setThemeClassName(media.replace(/^\(prefers-color-scheme: (.*)\)$/, (_, match) => match) as Theme);
+			setThemeClassName(
+				media.replace(/^\(prefers-color-scheme: (.*)\)$/, (_: string, match: string) => match) as Theme
+			);
 		});
 
 		if (CSS?.paintWorklet?.addModule && typeof CSS.paintWorklet.addModule === 'function') {

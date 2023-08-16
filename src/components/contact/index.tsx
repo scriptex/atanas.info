@@ -9,6 +9,16 @@ type Props = {
 	initialStatus?: Status;
 };
 
+type ContactResult = {
+	error?: {
+		response: {
+			body: {
+				message: string;
+			};
+		};
+	};
+};
+
 const honeypot = process.env.NEXT_PUBLIC_HONEYPOT_VALUE!;
 
 export const Contact: FC<Readonly<Props>> = ({ initialStatus = Status.DEFAULT }) => {
@@ -29,7 +39,7 @@ export const Contact: FC<Readonly<Props>> = ({ initialStatus = Status.DEFAULT })
 					method: 'POST',
 					body: JSON.stringify({ email, message, honeypot })
 				});
-				const result = await response.json();
+				const result: ContactResult = await response.json();
 
 				if (result.error) {
 					setStatus(Status.ERROR);

@@ -11,6 +11,14 @@ export const Skills: FC = () => {
 		import('@scripts/force')
 			.then(({ renderForceDirectedGraph }) => renderForceDirectedGraph('skills-graph', skills, 'skills'))
 			.catch(console.error);
+
+		return () => {
+			const graph = document.getElementById('skills-graph');
+
+			if (graph) {
+				graph.innerHTML = '';
+			}
+		};
 	}, []);
 
 	return (

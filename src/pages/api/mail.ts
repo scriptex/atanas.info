@@ -10,7 +10,7 @@ import type { FormData } from '@scripts/types';
 const sendSMTPEmail = new SendSmtpEmail();
 const transactionalEmailsAPI = new TransactionalEmailsApi();
 
-transactionalEmailsAPI['authentications']['apiKey'].apiKey = process.env.SENDINBLUE_API_KEY || '';
+transactionalEmailsAPI['authentications']['apiKey'].apiKey = process.env.SENDINBLUE_API_KEY ?? '';
 
 const emailTemplate = readFileSync(join(process.cwd(), 'email', 'contact.mjml'), 'utf8');
 

@@ -1,19 +1,6 @@
 import { log } from '@scripts/shared';
 import { lastFm } from './client';
-import { asyncForEach, saveInsights } from './utils';
-
-type LastFMAlbum = {
-	name: string;
-	images: string;
-	artist: string;
-};
-
-type LastFMInsights = {
-	error: boolean;
-	updated: number;
-	topAlbums: LastFMAlbum[];
-	weeklyAlbumChart: LastFMAlbum[];
-};
+import { LastFMInsights, asyncForEach, saveInsights } from './utils';
 
 export const getLastFMInsights = async (): Promise<LastFMInsights> => {
 	log('atanas.info: Getting insights data from Last.FM...');

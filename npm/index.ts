@@ -1,11 +1,20 @@
-import info from 'package-info';
+import info, { Package } from 'package-info';
 import npmtotal from 'npmtotal';
 
 import { log } from '@scripts/shared';
 import { saveInsights } from '@insights/utils';
 
-export const run = async (): Promise<Record<string, any>> => {
-	const result: Record<string, any> = {};
+export type NPMPackage = Package & {
+	homepage: string;
+	downloads: number;
+};
+
+export type NPMResult = {
+	sum?: number;
+} & Record<string, NPMPackage>;
+
+export const run = async () => {
+	const result: NPMResult = {};
 
 	try {
 		log('atanas.info: Fetching data from NPM. Please wait...');

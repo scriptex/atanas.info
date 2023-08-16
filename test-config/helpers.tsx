@@ -75,7 +75,7 @@ export const mockAudioContext = (): jest.Mock => {
 		channelCount: 2
 	}));
 
-	const mockChannelSplitterConnect = jest.fn(n => n);
+	const mockChannelSplitterConnect = jest.fn((n: number) => n);
 
 	const mockcreateChannelSplitter = jest.fn(() => ({
 		connect: mockChannelSplitterConnect

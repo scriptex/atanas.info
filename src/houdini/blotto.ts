@@ -18,18 +18,18 @@ registerPaint(
 		public paint(
 			ctx: CanvasRenderingContext2D,
 			{ width, height }: Record<string, number>,
-			props: Map<string, any>
+			props: Map<string, string>
 		) {
-			const tileSize = parseInt(props.get(`--${paintNameBlotto}-tile-size`));
-			const amplitude = parseFloat(props.get(`--${paintNameBlotto}-amplitude`));
-			const maxOpacity = parseFloat(props.get(`--${paintNameBlotto}-max-opacity`));
+			const tileSize = parseInt(props.get(`--${paintNameBlotto}-tile-size`)!);
+			const amplitude = parseFloat(props.get(`--${paintNameBlotto}-amplitude`)!);
+			const maxOpacity = parseFloat(props.get(`--${paintNameBlotto}-max-opacity`)!);
 
 			const xTiles = Math.round(width / tileSize);
 			const yTiles = Math.round(height / tileSize);
 			const fullCircle = Math.PI * 2;
 
-			ctx.fillStyle = props.get(`--${paintNameBlotto}-color`).toString();
-			ctx.globalCompositeOperation = props.get(`--${paintNameBlotto}-blend-mode`).toString();
+			ctx.fillStyle = props.get(`--${paintNameBlotto}-color`)!;
+			ctx.globalCompositeOperation = props.get(`--${paintNameBlotto}-blend-mode`)! as GlobalCompositeOperation;
 
 			for (let y = 0; y < yTiles; y++) {
 				const yOffset = y * tileSize;

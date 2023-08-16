@@ -101,7 +101,7 @@ export const initCanvas = (id: string): Canvas => {
 
 	const canvas = createSVG(id, innerWidth, innerHeight);
 
-	canvas.on(eventType, event => {
+	canvas.on(eventType, (event: MouseEvent) => {
 		const offset = d3.pointer(event);
 		const color = d3.hsl((i = (i + 1) % 360), 1, 0.5);
 

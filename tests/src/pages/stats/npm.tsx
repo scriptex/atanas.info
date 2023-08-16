@@ -2,6 +2,9 @@ import type { ComponentProps } from 'react';
 
 import { snapshotTest } from '@test-config/helpers';
 import { NPMStats, getStaticProps } from '@pages/stats/npm';
+import type { Package, WithError, WithSum } from '@pages/stats/types';
+
+type Data = Record<string, Package> & WithSum & WithError;
 
 const data = {
 	'test-package1': {
@@ -22,13 +25,13 @@ const data = {
 		author: 'test,another',
 		downloads: 1431
 	}
-} as any;
+} as unknown as Data;
 
 jest.mock('@lib/mongodb', () => ({
 	getData: jest.fn(() => Promise.resolve({ props: { data: [] } }))
 }));
 
-snapshotTest(() => <NPMStats data={{ ...data, sum: 1876223 }} />);
+snapshotTest(() => <NPMStats data={{ ...data, sum: 1876223 } as unknown as Data} />);
 
 snapshotTest(() => <NPMStats data={data} />);
 

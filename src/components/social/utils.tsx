@@ -1,13 +1,6 @@
 import type { CarouselItem } from 'react-round-carousel';
 
-type LastFMAlbum = {
-	name: string;
-	artist: string;
-	images: Array<{
-		size: string;
-		'#text': string;
-	}>;
-};
+import type { LastFMAlbum } from '@insights/utils';
 
 export const filteredData = (data: LastFMAlbum[]): CarouselItem[] =>
 	data

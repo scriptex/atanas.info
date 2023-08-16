@@ -3,12 +3,13 @@ import type { FC } from 'react';
 
 import socialMedia from '@data/lotties/social-media.json';
 import { useNetworkState } from '@scripts/shared';
+import type { LastFMInsights } from '@insights/utils';
 import { SocialItem, socialItems } from '@data/social';
 import { getData, queryLastFM, MongoDBProps } from '@lib/mongodb';
 import { Icon, Lines, Layout, Section, Animation, SocialMusic, LinkedInBadge, Title } from '@components';
 
 type Props = {
-	data: any;
+	data: LastFMInsights;
 };
 
 export const Social: FC<Readonly<Props>> = ({ data }: Props) => {

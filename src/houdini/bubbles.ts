@@ -23,7 +23,7 @@ registerPaint(
 		public paint(
 			c: CanvasRenderingContext2D,
 			{ width: w, height: h }: Record<string, number>,
-			props: Map<string, any>
+			props: Map<string, string>
 		) {
 			let [
 				// eslint-disable-next-line prefer-const
@@ -37,7 +37,7 @@ registerPaint(
 
 			c.beginPath();
 
-			c.fillStyle = background;
+			c.fillStyle = background as string;
 
 			c.fillRect(0, 0, w, h);
 
@@ -52,12 +52,12 @@ registerPaint(
 					x: this.rand(0, w),
 					y: this.rand(0, h),
 					r: this.rand(minRadius, maxRadius),
-					color: colors[this.rand(0, colors.length - 1)]
+					color: (colors as string[])[this.rand(0, (colors as string[]).length - 1)]
 				});
 			}
 		}
 
-		private parseProps(props: Map<string, any>): Array<string | void> {
+		private parseProps(props: Map<string, string>): Array<string | string[] | number | void> {
 			return [
 				'--bubbles-colors',
 				'--bubbles-min-radius',
@@ -65,23 +65,23 @@ registerPaint(
 				'--bubbles-total-num',
 				'--bubbles-background'
 			].map(prop => {
-				if (!props.get(prop).length) {
+				if (!props.get(prop)!.length) {
 					return undefined;
 				}
 
 				if (prop === '--bubbles-colors') {
 					return props
-						.get(prop)
+						.get(prop)!
 						.toString()
 						.split(',')
 						.map((color: string) => color.trim());
 				}
 
 				if (prop === '--bubbles-background') {
-					return props.get(prop).toString().trim();
+					return props.get(prop)!.toString().trim();
 				}
 
-				return parseInt(props.get(prop).toString(), 10);
+				return parseInt(props.get(prop)!.toString(), 10);
 			});
 		}
 

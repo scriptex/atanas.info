@@ -9,10 +9,10 @@ registerPaint(
 		public paint(
 			ctx: CanvasRenderingContext2D,
 			{ width, height }: Record<string, number>,
-			properties: Map<string, any>
+			properties: Map<string, string>
 		): void {
-			const steps: number = parseInt(properties.get('--avatar-sides').toString(), 10);
-			const rotate: number = properties.get('--avatar-angle').value;
+			const steps: number = parseInt(properties.get('--avatar-sides')!, 10);
+			const rotate: number = parseInt(properties.get('--avatar-angle')!, 10);
 			const radius: number = Math.min(width, height) / 2;
 			const center: Record<string, number> = {
 				x: width / 2,

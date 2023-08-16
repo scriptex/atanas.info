@@ -4,9 +4,10 @@ import Carousel from 'react-round-carousel';
 import { formatDate } from '@scripts/shared';
 import { ExternalLink } from '@components';
 import { filteredData } from './utils';
+import type { LastFMAlbum, LastFMInsights } from '@insights/utils';
 
 type Props = {
-	data: any;
+	data: LastFMAlbum[];
 	period: 'week' | 'month';
 	condition: boolean;
 };
@@ -20,7 +21,7 @@ const SocialMusicCarousel: FC<Readonly<Props>> = ({ data, period, condition }: P
 		</div>
 	) : null;
 
-export const SocialMusic: FC<Readonly<{ data: any }>> = ({ data }) => {
+export const SocialMusic: FC<Readonly<{ data: LastFMInsights }>> = ({ data }) => {
 	const { error, updated, topAlbums, weeklyAlbumChart } = data;
 	const topAlbumsLength = topAlbums.length;
 	const weeklyAlbumChartLength = weeklyAlbumChart.length;
