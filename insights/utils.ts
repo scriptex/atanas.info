@@ -1,7 +1,7 @@
 import { load } from 'cheerio';
-import clientPromise, { Query, queryNPM, queryGithub, queryGitlab, queryLastFM } from '@lib/mongodb';
 
 import { log } from '@scripts/shared';
+import clientPromise, { Query, queryNPM, queryGithub, queryGitlab, queryLastFM } from '@lib/mongodb';
 
 export type Project = {
 	readonly url: string;
@@ -11,6 +11,22 @@ export type Project = {
 export type Contribution = {
 	count: number | null;
 	color: string;
+};
+
+export type LastFMAlbum = {
+	name: string;
+	images: Array<{
+		size: string;
+		'#text': string;
+	}>;
+	artist: string;
+};
+
+export type LastFMInsights = {
+	error: boolean;
+	updated: number;
+	topAlbums: LastFMAlbum[];
+	weeklyAlbumChart: LastFMAlbum[];
 };
 
 export type InsightsType = 'Github' | 'Gitlab' | 'NPM' | 'LastFM';

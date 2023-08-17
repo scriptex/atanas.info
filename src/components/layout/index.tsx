@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
 import SVGSprite from '@src/sprite.svg';
-import { ReactChildren } from '@scripts/types';
+import type { ReactChildren } from '@scripts/types';
 import { Nav, Contact, Header, Footer, Partners } from '@components';
 
 type Props = {

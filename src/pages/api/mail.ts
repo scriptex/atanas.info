@@ -2,15 +2,15 @@ import mjml2html from 'mjml';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { SendSmtpEmail, TransactionalEmailsApi } from '@sendinblue/client';
 
-import { join } from 'path';
-import { readFileSync } from 'fs';
+import { join } from 'node:path';
+import { readFileSync } from 'node:fs';
 
 import type { FormData } from '@scripts/types';
 
 const sendSMTPEmail = new SendSmtpEmail();
 const transactionalEmailsAPI = new TransactionalEmailsApi();
 
-transactionalEmailsAPI['authentications']['apiKey'].apiKey = process.env.SENDINBLUE_API_KEY || '';
+transactionalEmailsAPI['authentications']['apiKey'].apiKey = process.env.SENDINBLUE_API_KEY ?? '';
 
 const emailTemplate = readFileSync(join(process.cwd(), 'email', 'contact.mjml'), 'utf8');
 

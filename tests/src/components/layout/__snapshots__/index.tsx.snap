@@ -25,7 +25,7 @@ exports[`Layout component Should render the Layout component 1`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -34,7 +34,7 @@ exports[`Layout component Should render the Layout component 1`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -959,6 +959,7 @@ exports[`Layout component Should render the Layout component 1`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -1197,6 +1198,7 @@ exports[`Layout component Should render the Layout component 1`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -1220,6 +1222,7 @@ exports[`Layout component Should render the Layout component 1`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"

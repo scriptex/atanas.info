@@ -1,7 +1,7 @@
 import { act } from '@testing-library/react';
 
-import { GitlabInsights } from '@scripts/types';
 import { test, snapshotTest } from '@test-config/helpers';
+import type { GitlabInsights } from '@scripts/types';
 import { getStaticProps, GitlabStats } from '@pages/stats/gitlab';
 
 jest.mock('@lib/mongodb', () => ({

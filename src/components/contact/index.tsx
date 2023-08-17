@@ -2,11 +2,21 @@ import { FC, useState, useContext, ChangeEvent, FormEvent, useCallback } from 'r
 
 import { Button } from '@components';
 import { Status } from '@scripts/types';
-import { AppContext } from '@pages/_app';
+import { AppContext } from '@data/context';
 import { composeClassName } from '@scripts/shared';
 
 type Props = {
 	initialStatus?: Status;
+};
+
+type ContactResult = {
+	error?: {
+		response: {
+			body: {
+				message: string;
+			};
+		};
+	};
 };
 
 const honeypot = process.env.NEXT_PUBLIC_HONEYPOT_VALUE!;
@@ -29,7 +39,7 @@ export const Contact: FC<Readonly<Props>> = ({ initialStatus = Status.DEFAULT })
 					method: 'POST',
 					body: JSON.stringify({ email, message, honeypot })
 				});
-				const result = await response.json();
+				const result: ContactResult = await response.json();
 
 				if (result.error) {
 					setStatus(Status.ERROR);
@@ -47,7 +57,7 @@ export const Contact: FC<Readonly<Props>> = ({ initialStatus = Status.DEFAULT })
 
 	return (
 		<form onSubmit={onSubmit} className={composeClassName('c-contact', contactVisible ? ['visible'] : [])}>
-			<button
+			<Button
 				type="button"
 				onClick={() => {
 					setEmail('');
@@ -56,10 +66,11 @@ export const Contact: FC<Readonly<Props>> = ({ initialStatus = Status.DEFAULT })
 					setStatus(Status.DEFAULT);
 					setContactVisible(false);
 				}}
+				unstyled
 				className="c-contact__close"
 			>
 				Close
-			</button>
+			</Button>
 
 			<div className="c-contact__body">
 				{status === Status.SUCCESS ? null : (

@@ -25,7 +25,7 @@ exports[`Home component Should render the Home component 1`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -34,7 +34,7 @@ exports[`Home component Should render the Home component 1`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -1074,6 +1074,7 @@ exports[`Home component Should render the Home component 1`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -1312,6 +1313,7 @@ exports[`Home component Should render the Home component 1`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -1335,6 +1337,7 @@ exports[`Home component Should render the Home component 1`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -1411,7 +1414,7 @@ exports[`Should test the Home page 1`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -1420,7 +1423,7 @@ exports[`Should test the Home page 1`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -2460,6 +2463,7 @@ exports[`Should test the Home page 1`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -2698,6 +2702,7 @@ exports[`Should test the Home page 1`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -2721,6 +2726,7 @@ exports[`Should test the Home page 1`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -2795,7 +2801,7 @@ exports[`Should test the Home page 2`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -2804,7 +2810,7 @@ exports[`Should test the Home page 2`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -3844,6 +3850,7 @@ exports[`Should test the Home page 2`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -4082,6 +4089,7 @@ exports[`Should test the Home page 2`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -4105,6 +4113,7 @@ exports[`Should test the Home page 2`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"

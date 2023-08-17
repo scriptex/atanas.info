@@ -51,7 +51,7 @@ window.matchMedia = window.matchMedia || (() => ({
 window.crypto = {
 	...require('crypto'),
 	// @ts-ignore
-	getRandomValues: buffer => require('crypto').randomFillSync(buffer)
+	getRandomValues: (buffer: Buffer) => require('crypto').randomFillSync(buffer)
 };
 
 window.scrollTo = jest.fn();

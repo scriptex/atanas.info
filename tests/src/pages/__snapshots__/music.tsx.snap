@@ -25,7 +25,7 @@ exports[` component Should render the  component 1`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -34,7 +34,7 @@ exports[` component Should render the  component 1`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -549,11 +549,13 @@ exports[` component Should render the  component 1`] = `
           />
           <button
             class="c-music__menu"
+            type="button"
           >
             Pick a track
           </button>
           <button
             class="c-music__btn c-music__btn--pause"
+            type="button"
           >
             <svg
               viewBox="0 0 24 24"
@@ -567,6 +569,7 @@ exports[` component Should render the  component 1`] = `
           </button>
           <button
             class="c-music__btn c-music__btn--play"
+            type="button"
           >
             <svg
               viewBox="0 0 24 24"
@@ -583,12 +586,15 @@ exports[` component Should render the  component 1`] = `
           >
             <button
               class="active"
+              type="button"
             >
               <span>
                 La Playa
               </span>
             </button>
-            <button>
+            <button
+              type="button"
+            >
               <span>
                 Clash
               </span>
@@ -1135,6 +1141,7 @@ exports[` component Should render the  component 1`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -1373,6 +1380,7 @@ exports[` component Should render the  component 1`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -1396,6 +1404,7 @@ exports[` component Should render the  component 1`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -1470,7 +1479,7 @@ exports[` component Should render the  component 2`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -1479,7 +1488,7 @@ exports[` component Should render the  component 2`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -1994,11 +2003,13 @@ exports[` component Should render the  component 2`] = `
           />
           <button
             class="c-music__menu"
+            type="button"
           >
             Pick a track
           </button>
           <button
             class="c-music__btn c-music__btn--pause"
+            type="button"
           >
             <svg
               viewBox="0 0 24 24"
@@ -2012,6 +2023,7 @@ exports[` component Should render the  component 2`] = `
           </button>
           <button
             class="c-music__btn c-music__btn--play"
+            type="button"
           >
             <svg
               viewBox="0 0 24 24"
@@ -2028,12 +2040,15 @@ exports[` component Should render the  component 2`] = `
           >
             <button
               class="active"
+              type="button"
             >
               <span>
                 La Playa
               </span>
             </button>
-            <button>
+            <button
+              type="button"
+            >
               <span>
                 Clash
               </span>
@@ -2580,6 +2595,7 @@ exports[` component Should render the  component 2`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -2818,6 +2834,7 @@ exports[` component Should render the  component 2`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -2841,6 +2858,7 @@ exports[` component Should render the  component 2`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -2915,7 +2933,7 @@ exports[` component Should render the  component 3`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -2924,7 +2942,7 @@ exports[` component Should render the  component 3`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -3439,11 +3457,13 @@ exports[` component Should render the  component 3`] = `
           />
           <button
             class="c-music__menu"
+            type="button"
           >
             Pick a track
           </button>
           <button
             class="c-music__btn c-music__btn--pause"
+            type="button"
           >
             <svg
               viewBox="0 0 24 24"
@@ -3457,6 +3477,7 @@ exports[` component Should render the  component 3`] = `
           </button>
           <button
             class="c-music__btn c-music__btn--play"
+            type="button"
           >
             <svg
               viewBox="0 0 24 24"
@@ -3473,12 +3494,15 @@ exports[` component Should render the  component 3`] = `
           >
             <button
               class="active"
+              type="button"
             >
               <span>
                 La Playa
               </span>
             </button>
-            <button>
+            <button
+              type="button"
+            >
               <span>
                 Clash
               </span>
@@ -4025,6 +4049,7 @@ exports[` component Should render the  component 3`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -4263,6 +4288,7 @@ exports[` component Should render the  component 3`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -4286,6 +4312,7 @@ exports[` component Should render the  component 3`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -4360,7 +4387,7 @@ exports[` component Should render the  component 4`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -4369,7 +4396,7 @@ exports[` component Should render the  component 4`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -4884,11 +4911,13 @@ exports[` component Should render the  component 4`] = `
           />
           <button
             class="c-music__menu"
+            type="button"
           >
             Pick a track
           </button>
           <button
             class="c-music__btn c-music__btn--pause"
+            type="button"
           >
             <svg
               viewBox="0 0 24 24"
@@ -4902,6 +4931,7 @@ exports[` component Should render the  component 4`] = `
           </button>
           <button
             class="c-music__btn c-music__btn--play"
+            type="button"
           >
             <svg
               viewBox="0 0 24 24"
@@ -4918,12 +4948,15 @@ exports[` component Should render the  component 4`] = `
           >
             <button
               class="active"
+              type="button"
             >
               <span>
                 La Playa
               </span>
             </button>
-            <button>
+            <button
+              type="button"
+            >
               <span>
                 Clash
               </span>
@@ -5470,6 +5503,7 @@ exports[` component Should render the  component 4`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -5708,6 +5742,7 @@ exports[` component Should render the  component 4`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -5731,6 +5766,7 @@ exports[` component Should render the  component 4`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -5805,7 +5841,7 @@ exports[` component Should render the  component 5`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -5814,7 +5850,7 @@ exports[` component Should render the  component 5`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -6329,11 +6365,13 @@ exports[` component Should render the  component 5`] = `
           />
           <button
             class="c-music__menu"
+            type="button"
           >
             Pick a track
           </button>
           <button
             class="c-music__btn c-music__btn--pause"
+            type="button"
           >
             <svg
               viewBox="0 0 24 24"
@@ -6347,6 +6385,7 @@ exports[` component Should render the  component 5`] = `
           </button>
           <button
             class="c-music__btn c-music__btn--play"
+            type="button"
           >
             <svg
               viewBox="0 0 24 24"
@@ -6363,12 +6402,15 @@ exports[` component Should render the  component 5`] = `
           >
             <button
               class="active"
+              type="button"
             >
               <span>
                 La Playa
               </span>
             </button>
-            <button>
+            <button
+              type="button"
+            >
               <span>
                 Clash
               </span>
@@ -6915,6 +6957,7 @@ exports[` component Should render the  component 5`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -7153,6 +7196,7 @@ exports[` component Should render the  component 5`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -7176,6 +7220,7 @@ exports[` component Should render the  component 5`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -7250,7 +7295,7 @@ exports[` component Should render the  component 6`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -7259,7 +7304,7 @@ exports[` component Should render the  component 6`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -7774,11 +7819,13 @@ exports[` component Should render the  component 6`] = `
           />
           <button
             class="c-music__menu"
+            type="button"
           >
             Pick a track
           </button>
           <button
             class="c-music__btn c-music__btn--pause"
+            type="button"
           >
             <svg
               viewBox="0 0 24 24"
@@ -7792,6 +7839,7 @@ exports[` component Should render the  component 6`] = `
           </button>
           <button
             class="c-music__btn c-music__btn--play"
+            type="button"
           >
             <svg
               viewBox="0 0 24 24"
@@ -7808,12 +7856,15 @@ exports[` component Should render the  component 6`] = `
           >
             <button
               class="active"
+              type="button"
             >
               <span>
                 La Playa
               </span>
             </button>
-            <button>
+            <button
+              type="button"
+            >
               <span>
                 Clash
               </span>
@@ -8360,6 +8411,7 @@ exports[` component Should render the  component 6`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -8598,6 +8650,7 @@ exports[` component Should render the  component 6`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -8621,6 +8674,7 @@ exports[` component Should render the  component 6`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -8695,7 +8749,7 @@ exports[` component Should render the  component 7`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -8704,7 +8758,7 @@ exports[` component Should render the  component 7`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -9219,11 +9273,13 @@ exports[` component Should render the  component 7`] = `
           />
           <button
             class="c-music__menu"
+            type="button"
           >
             Pick a track
           </button>
           <button
             class="c-music__btn c-music__btn--pause"
+            type="button"
           >
             <svg
               viewBox="0 0 24 24"
@@ -9237,6 +9293,7 @@ exports[` component Should render the  component 7`] = `
           </button>
           <button
             class="c-music__btn c-music__btn--play"
+            type="button"
           >
             <svg
               viewBox="0 0 24 24"
@@ -9253,12 +9310,15 @@ exports[` component Should render the  component 7`] = `
           >
             <button
               class="active"
+              type="button"
             >
               <span>
                 La Playa
               </span>
             </button>
-            <button>
+            <button
+              type="button"
+            >
               <span>
                 Clash
               </span>
@@ -9805,6 +9865,7 @@ exports[` component Should render the  component 7`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -10043,6 +10104,7 @@ exports[` component Should render the  component 7`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -10066,6 +10128,7 @@ exports[` component Should render the  component 7`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -10140,7 +10203,7 @@ exports[` component Should render the  component 8`] = `
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -10149,7 +10212,7 @@ exports[` component Should render the  component 8`] = `
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -10664,11 +10727,13 @@ exports[` component Should render the  component 8`] = `
           />
           <button
             class="c-music__menu"
+            type="button"
           >
             Pick a track
           </button>
           <button
             class="c-music__btn c-music__btn--pause"
+            type="button"
           >
             <svg
               viewBox="0 0 24 24"
@@ -10682,6 +10747,7 @@ exports[` component Should render the  component 8`] = `
           </button>
           <button
             class="c-music__btn c-music__btn--play"
+            type="button"
           >
             <svg
               viewBox="0 0 24 24"
@@ -10698,12 +10764,15 @@ exports[` component Should render the  component 8`] = `
           >
             <button
               class="active"
+              type="button"
             >
               <span>
                 La Playa
               </span>
             </button>
-            <button>
+            <button
+              type="button"
+            >
               <span>
                 Clash
               </span>
@@ -11250,6 +11319,7 @@ exports[` component Should render the  component 8`] = `
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -11488,6 +11558,7 @@ exports[` component Should render the  component 8`] = `
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -11511,6 +11582,7 @@ exports[` component Should render the  component 8`] = `
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"

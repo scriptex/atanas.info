@@ -13,7 +13,7 @@ it('Test the `getStaticPaths` function', async () => {
 	expect(result).toBeDefined();
 	expect(result.fallback).toEqual(false);
 	expect(Array.isArray(result.paths)).toEqual(true);
-	expect(result.paths.length).toEqual(3);
+	expect(result.paths.length).toEqual(4);
 });
 
 it('Test the `getStaticProps` function', async () => {

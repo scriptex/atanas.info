@@ -26,11 +26,11 @@ export const Resume: FC = () => (
 			title="Resume"
 			actions={
 				<>
-					<Button onClick={() => window.print()} className="c-btn--print">
+					<Button type="button" onClick={() => window.print()} className="c-btn--print">
 						<i className="icon-print"></i> Print
 					</Button>
 
-					<Button type="link" href="/resume.pdf" download>
+					<Button type="anchor" href="/resume.pdf" download>
 						<i className="icon-download"></i> Download
 					</Button>
 				</>

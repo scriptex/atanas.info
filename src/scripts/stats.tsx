@@ -6,7 +6,7 @@ import { Animation } from '@components';
 export type GeneralInsight = {
 	readonly index: number;
 	readonly title: string;
-	readonly value: any;
+	readonly value: string | number;
 };
 
 export const START_YEAR = 2013;
@@ -18,7 +18,7 @@ export const { years } = intervalToDuration({
 
 export const YEARS: string[] = Array(years)
 	.fill(0)
-	.map((_, i) => `${START_YEAR + i}`);
+	.map((_: string, i: number) => `${START_YEAR + i}`);
 
 export const addTitles = (selector: string, getTitle: (rect: SVGRectElement) => string): void => {
 	const rects: SVGRectElement[] = Array.from(document.querySelectorAll(`${selector} rect`));

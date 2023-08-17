@@ -2,7 +2,7 @@ import { act } from '@testing-library/react';
 
 import { Status } from '@scripts/types';
 import { Contact } from '@components';
-import { AppContext } from '@pages/_app';
+import { AppContext } from '@data/context';
 import { test, mockFetch, snapshotTest } from '@test-config/helpers';
 
 const fetch = global.fetch;

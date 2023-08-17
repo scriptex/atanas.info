@@ -25,7 +25,7 @@ exports[`PortfolioOpenSourceProjects component Should render the PortfolioOpenSo
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -34,7 +34,7 @@ exports[`PortfolioOpenSourceProjects component Should render the PortfolioOpenSo
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -739,103 +739,92 @@ exports[`PortfolioOpenSourceProjects component Should render the PortfolioOpenSo
             <li
               class="current"
             >
-              <button
-                aria-label="Switch to 1"
+              <a
                 class="c-btn c-btn--small"
-                type="button"
+                href="/portfolio/open-source?page=1"
               >
                 1
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                aria-label="Switch to 2"
+              <a
                 class="c-btn c-btn--small"
-                type="button"
+                href="/portfolio/open-source?page=2"
               >
                 2
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                aria-label="Switch to 3"
+              <a
                 class="c-btn c-btn--small"
-                type="button"
+                href="/portfolio/open-source?page=3"
               >
                 3
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                aria-label="Switch to 4"
+              <a
                 class="c-btn c-btn--small"
-                type="button"
+                href="/portfolio/open-source?page=4"
               >
                 4
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                aria-label="Switch to 5"
+              <a
                 class="c-btn c-btn--small"
-                type="button"
+                href="/portfolio/open-source?page=5"
               >
                 5
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                aria-label="Switch to 6"
+              <a
                 class="c-btn c-btn--small"
-                type="button"
+                href="/portfolio/open-source?page=6"
               >
                 6
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                aria-label="Switch to 7"
+              <a
                 class="c-btn c-btn--small"
-                type="button"
+                href="/portfolio/open-source?page=7"
               >
                 7
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                aria-label="Switch to 8"
+              <a
                 class="c-btn c-btn--small"
-                type="button"
+                href="/portfolio/open-source?page=8"
               >
                 8
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                aria-label="Switch to 9"
+              <a
                 class="c-btn c-btn--small"
-                type="button"
+                href="/portfolio/open-source?page=9"
               >
                 9
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                aria-label="Switch to 10"
+              <a
                 class="c-btn c-btn--small"
-                type="button"
+                href="/portfolio/open-source?page=10"
               >
                 10
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                aria-label="Switch to 11"
+              <a
                 class="c-btn c-btn--small"
-                type="button"
+                href="/portfolio/open-source?page=11"
               >
                 11
-              </button>
+              </a>
             </li>
           </ul>
         </nav>
@@ -1383,6 +1372,7 @@ exports[`PortfolioOpenSourceProjects component Should render the PortfolioOpenSo
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -1621,6 +1611,7 @@ exports[`PortfolioOpenSourceProjects component Should render the PortfolioOpenSo
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -1644,6 +1635,7 @@ exports[`PortfolioOpenSourceProjects component Should render the PortfolioOpenSo
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"

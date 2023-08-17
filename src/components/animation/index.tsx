@@ -1,8 +1,8 @@
 import { FC, useEffect, useRef } from 'react';
-import lottie, { AnimationConfig } from 'lottie-web';
+import lottie, { AnimationConfig, AnimationItem } from 'lottie-web';
 
 type Props = {
-	data: any;
+	data: unknown;
 	width: number;
 	height: number;
 	options?: Omit<AnimationConfig, 'animationData'>;
@@ -19,7 +19,7 @@ const defaultOptions = {
 
 export const Animation: FC<Readonly<Props>> = ({ data: animationData, width, height, options, className }: Props) => {
 	const element = useRef<HTMLDivElement>(null);
-	const lottieInstance = useRef<any>();
+	const lottieInstance = useRef<AnimationItem | null>(null);
 
 	useEffect(() => {
 		if (element.current) {

@@ -2,7 +2,7 @@ import { act } from '@testing-library/react';
 
 import { GithubStats, getStaticProps } from '@pages/stats/github';
 import { test, mockFetch, snapshotTest } from '@test-config/helpers';
-import { GithubCount, GithubInsights, GithubContribution } from '@scripts/types';
+import type { GithubCount, GithubInsights, GithubContribution } from '@scripts/types';
 
 jest.mock('@lib/mongodb', () => ({
 	getData: jest.fn(() => Promise.resolve({ props: { data: [] } }))

@@ -1,6 +1,6 @@
 import { log } from '@scripts/shared';
 import { github } from './client';
-import { GithubInsights } from '@scripts/types';
+import type { GithubInsights } from '@scripts/types';
 import { asyncForEach, saveInsights, getContributions } from './utils';
 
 export const getGithubRepositories = async (): Promise<any[]> => {

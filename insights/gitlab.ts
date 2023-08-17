@@ -1,6 +1,6 @@
 import { log } from '@scripts/shared';
 import { gitlab } from './client';
-import { GitlabInsights } from '@scripts/types';
+import type { GitlabInsights } from '@scripts/types';
 import { asyncForEach, saveInsights } from './utils';
 
 const setOwner = (repo: any, owner: string): any => ({ ...repo, owner });

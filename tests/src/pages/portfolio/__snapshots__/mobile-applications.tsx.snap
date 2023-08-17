@@ -25,7 +25,7 @@ exports[`PortfolioMobileApps component Should render the PortfolioMobileApps com
       <button
         aria-label="Toggle menu"
         class="c-nav__toggle"
-        name="menu-toggle"
+        type="button"
       >
         <span />
         <span />
@@ -34,7 +34,7 @@ exports[`PortfolioMobileApps component Should render the PortfolioMobileApps com
       <button
         aria-label="Toggle theme"
         class="c-theme-switcher"
-        name="theme-toggle"
+        type="button"
       >
         <svg
           height="144"
@@ -3428,6 +3428,7 @@ exports[`PortfolioMobileApps component Should render the PortfolioMobileApps com
       >
         <button
           class="c-btn c-btn--small"
+          type="button"
         >
           Sponsor me
         </button>
@@ -3666,6 +3667,7 @@ exports[`PortfolioMobileApps component Should render the PortfolioMobileApps com
           </h6>
           <button
             title="Donate Bitcoin"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"
@@ -3689,6 +3691,7 @@ exports[`PortfolioMobileApps component Should render the PortfolioMobileApps com
           </h6>
           <button
             title="Donate Shiba Inu"
+            type="button"
           >
             <svg
               class="c-funding__crypto-icon"

@@ -23,14 +23,14 @@ registerPaint(
 		public paint(
 			ctx: CanvasRenderingContext2D,
 			{ width, height }: Record<string, number>,
-			props: Map<string, any>
+			props: Map<string, string>
 		): void {
-			const gap = parseInt(props.get(`--${paintNameBytemare}-gap`));
-			const tileSize = parseInt(props.get(`--${paintNameBytemare}-tile-size`));
-			const probability = parseFloat(props.get(`--${paintNameBytemare}-probability`));
+			const gap = parseInt(props.get(`--${paintNameBytemare}-gap`)!);
+			const tileSize = parseInt(props.get(`--${paintNameBytemare}-tile-size`)!);
+			const probability = parseFloat(props.get(`--${paintNameBytemare}-probability`)!);
 
 			const colors = props
-				.get(`--${paintNameBytemare}-colors`)
+				.get(`--${paintNameBytemare}-colors`)!
 				.toString()
 				.split(',')
 				.map((item: string) => item.trim());

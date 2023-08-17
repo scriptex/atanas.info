@@ -3,7 +3,7 @@ import { FC, useState } from 'react';
 
 import { Routes } from '@data/routes';
 import { composeClassName } from '@scripts/shared';
-import { Nav, Icon, ThemeSwitcher } from '@components';
+import { Nav, Icon, Button, ThemeSwitcher } from '@components';
 
 export const Header: FC = () => {
 	const [open, setOpen] = useState(false);
@@ -15,9 +15,10 @@ export const Header: FC = () => {
 			</Link>
 
 			<div className="c-header__actions">
-				<button
-					name="menu-toggle"
+				<Button
+					type="button"
 					onClick={(): void => setOpen(!open)}
+					unstyled
 					className="c-nav__toggle"
 					aria-label="Toggle menu"
 				>
@@ -26,7 +27,7 @@ export const Header: FC = () => {
 					<span></span>
 
 					<span></span>
-				</button>
+				</Button>
 
 				<ThemeSwitcher />
 			</div>

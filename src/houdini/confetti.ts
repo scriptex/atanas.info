@@ -12,13 +12,13 @@ registerPaint(
 		public paint(
 			ctx: CanvasRenderingContext2D,
 			{ width, height }: Record<string, number>,
-			props: Map<string, any>
+			props: Map<string, string>
 		) {
-			const amount = props.get('--confetti-amount');
+			const amount = Number(props.get('--confetti-amount')!);
 			const minLength = 3;
-			const maxLength = minLength + parseInt(props.get('--confetti-length'));
+			const maxLength = minLength + parseInt(props.get('--confetti-length')!);
 			const minWeight = 1;
-			const maxWeight = minWeight + parseInt(props.get('--confetti-weight'));
+			const maxWeight = minWeight + parseInt(props.get('--confetti-weight')!);
 
 			for (let i = 0; i < amount; i++) {
 				const x = Math.random() * width;

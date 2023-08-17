@@ -17,14 +17,14 @@ registerPaint(
 		public paint(
 			ctx: CanvasRenderingContext2D,
 			{ width, height }: Record<string, number>,
-			props: Map<string, any>
+			props: Map<string, string>
 		): void {
-			const tileWidth = parseInt(props.get(`--${paintNameParallelOwOw}-tile-width`), 10);
-			const probability = parseFloat(props.get(`--${paintNameParallelOwOw}-probability`));
-			const strokeWeight = parseFloat(props.get(`--${paintNameParallelOwOw}-stroke-weight`));
+			const tileWidth = parseInt(props.get(`--${paintNameParallelOwOw}-tile-width`)!, 10);
+			const probability = parseFloat(props.get(`--${paintNameParallelOwOw}-probability`)!);
+			const strokeWeight = parseFloat(props.get(`--${paintNameParallelOwOw}-stroke-weight`)!);
 
-			const baseColors = props
-				.get(`--${paintNameParallelOwOw}-base-colors`)
+			const baseColors: string[] = props
+				.get(`--${paintNameParallelOwOw}-base-colors`)!
 				.toString()
 				.split(',')
 				.map((item: string) => item.trim());

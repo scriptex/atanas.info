@@ -1,5 +1,5 @@
-import { join } from 'path';
-import { readFileSync } from 'fs';
+import { join } from 'node:path';
+import { readFileSync } from 'node:fs';
 
 import { getAllPosts, getPostSlugs, getPostBySlug, markdownToHtml, postsDirectory } from '@lib/markdown';
 
@@ -19,7 +19,7 @@ it('Test the `postsDirectory` function', () => {
 });
 
 it('Test the `getPostSlugs` function', () => {
-	expect(getPostSlugs(postsFolder)).toHaveLength(3);
+	expect(getPostSlugs(postsFolder)).toHaveLength(4);
 });
 
 it('Test the `getPostBySlug` function', () => {
@@ -35,7 +35,7 @@ it('Test the `getPostBySlug` function', () => {
 it('Test the `getAllPosts` function', () => {
 	const result = getAllPosts(postsFolder, ['slug']);
 
-	expect(result).toHaveLength(3);
+	expect(result).toHaveLength(4);
 
 	for (const item of result) {
 		expect(item.slug).toBeDefined();

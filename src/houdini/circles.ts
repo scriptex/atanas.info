@@ -18,7 +18,7 @@ registerPaint(
 		public paint(
 			ctx: CanvasRenderingContext2D,
 			{ width: w, height: h }: Record<string, number>,
-			props: Map<string, any>
+			props: Map<string, string>
 		): void {
 			const [
 				colors = ['#ef4c23', '#ff8d71'],
@@ -27,34 +27,34 @@ registerPaint(
 				minOpacity = 50,
 				maxOpacity = 90,
 				numCircles = 50
-			]: any = this.parseProps(props);
+			] = this.parseProps(props);
 
-			for (let i = 0, max = numCircles; i < max; i++) {
+			for (let i = 0, max = numCircles as number; i < max; i++) {
 				this.drawCircle(ctx, {
 					x: this.rand(0, w),
 					y: this.rand(0, h),
-					r: this.rand(minRadius, maxRadius),
-					color: colors[this.rand(0, colors.length - 1)],
-					alpha: this.rand(minOpacity, maxOpacity)
+					r: this.rand(minRadius as number, maxRadius as number),
+					color: (colors as string[])[this.rand(0, (colors as string[]).length - 1)],
+					alpha: this.rand(minOpacity as number, maxOpacity as number)
 				});
 			}
 		}
 
-		private parseProps(props: Map<string, any>): Array<string | void> {
+		private parseProps(props: Map<string, string>): Array<string[] | void | number> {
 			return ['--colors', '--min-radius', '--max-radius', '--min-opacity', '--max-opacity', '--num-circles'].map(
 				(prop: string) => {
-					if (!props.get(prop).length) {
+					if (!props.get(prop)!.length) {
 						return undefined;
 					}
 
 					if (prop == '--colors') {
 						return props
-							.get(prop)
+							.get(prop)!
 							.toString()
 							.split(',')
 							.map((color: string) => color.trim());
 					} else {
-						return parseInt(props.get(prop).toString());
+						return parseInt(props.get(prop)!.toString());
 					}
 				}
 			);

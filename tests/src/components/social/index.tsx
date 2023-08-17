@@ -1,4 +1,5 @@
 import { snapshotTest } from '@test-config/helpers';
+import type { LastFMAlbum } from '@insights/utils';
 import { SocialMusic, LinkedInBadge } from '@components';
 
 const data = {
@@ -70,4 +71,4 @@ snapshotTest(() => <SocialMusic data={{ ...data, topAlbums: [] }} />);
 
 snapshotTest(() => <SocialMusic data={{ ...data, error: true }} />);
 
-snapshotTest(() => <SocialMusic data={{ ...data, topAlbums: [{}] }} />);
+snapshotTest(() => <SocialMusic data={{ ...data, topAlbums: [{} as LastFMAlbum] }} />);

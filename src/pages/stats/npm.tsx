@@ -3,34 +3,11 @@ import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
 import { sectionStatsProps } from '@scripts/stats';
+import type { Packages, Props } from '@scripts/types';
 import { getData, queryNPM, MongoDBProps } from '@lib/mongodb';
 import { Layout, Section, ExternalLink, Title } from '@components';
 
-type Package = {
-	name: string;
-	version: string;
-	description: string;
-	license: string;
-	homepage: string;
-	author: string;
-	downloads: number;
-};
-
-type Packages<T = Record<string, Package>> = {
-	data: Record<string, Package> & T;
-};
-
-type WithSum = {
-	sum: number;
-};
-
-type WithError = {
-	error?: boolean;
-};
-
-type Props = Packages<WithSum & WithError>;
-
-export const PackagesList: FC<Readonly<Packages>> = ({ data }: Packages) => (
+const PackagesList: FC<Readonly<Packages>> = ({ data }: Packages) => (
 	<div className="o-grid c-packages">
 		{Object.keys(data).map((key: string) => {
 			const item = data[key];
