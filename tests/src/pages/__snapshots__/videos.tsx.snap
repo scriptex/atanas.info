@@ -575,7 +575,9 @@ exports[`Videos component Should render the Videos component 1`] = `
           class="c-section__nav"
         >
           <ul>
-            <li>
+            <li
+              class="current"
+            >
               <button
                 aria-label="Switch to Do more with Sublime Text"
                 class="c-btn"
