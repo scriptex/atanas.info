@@ -28,15 +28,18 @@ export const Button = <T extends ButtonType = 'button'>({
 		...rest
 	};
 
-	return type === 'anchor' ? (
-		<a {...(commonProps as AnchorProps)}>{children}</a>
-	) : type === 'link' ? (
-		<Link {...(commonProps as unknown as LinkProps)}>{children}</Link>
-	) : (
-		<button {...(commonProps as ButtonProps)} type={type}>
-			{children}
-		</button>
-	);
+	switch (type) {
+		case 'anchor':
+			return <a {...(commonProps as AnchorProps)}>{children}</a>;
+		case 'link':
+			return <Link {...(commonProps as unknown as LinkProps)}>{children}</Link>;
+		default:
+			return (
+				<button {...(commonProps as ButtonProps)} type={type}>
+					{children}
+				</button>
+			);
+	}
 };
 
 export default Button;
