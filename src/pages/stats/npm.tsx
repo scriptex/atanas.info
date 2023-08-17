@@ -3,10 +3,9 @@ import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
 import { sectionStatsProps } from '@scripts/stats';
+import type { Packages, Props } from '@scripts/types';
 import { getData, queryNPM, MongoDBProps } from '@lib/mongodb';
 import { Layout, Section, ExternalLink, Title } from '@components';
-
-import type { Packages, Props } from './types';
 
 const PackagesList: FC<Readonly<Packages>> = ({ data }: Packages) => (
 	<div className="o-grid c-packages">

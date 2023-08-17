@@ -2,7 +2,7 @@ import type { ComponentProps } from 'react';
 
 import { snapshotTest } from '@test-config/helpers';
 import { NPMStats, getStaticProps } from '@pages/stats/npm';
-import type { Package, WithError, WithSum } from '@pages/stats/types';
+import type { Package, WithError, WithSum } from '@scripts/types';
 
 type Data = Record<string, Package> & WithSum & WithError;
 
