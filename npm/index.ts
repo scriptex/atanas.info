@@ -13,7 +13,7 @@ export type NPMResult = {
 	sum?: number;
 } & Record<string, NPMPackage>;
 
-export const run = async () => {
+export const run = async (): Promise<NPMResult> => {
 	const result: NPMResult = {};
 
 	try {
