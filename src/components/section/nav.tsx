@@ -31,7 +31,7 @@ export const SectionNav: FC<Readonly<Props>> = ({ name, data, small = false, rou
 							{item[name]}
 						</Button>
 					) : (
-						<Button<'link'>
+						<Button
 							type="link"
 							href={`${route}?page=${index + 1}`}
 							className={small ? 'c-btn--small' : undefined}

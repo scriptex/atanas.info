@@ -41,5 +41,12 @@ export const articles: Article[] = [
 		image: '/images/temp/testing-websockets-with-cypress.png',
 		index: 4,
 		external: false
+	},
+	{
+		url: '/blog/polymorphic-button-for-nextjs',
+		title: 'Polymorphic button component for NextJS',
+		image: '/images/temp/polymorphic-button-for-nextjs.png',
+		index: 5,
+		external: false
 	}
 ];

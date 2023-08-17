@@ -5,7 +5,9 @@ exports[` component Should render the  component 1`] = `
   <a
     class="c-btn"
     href="/about"
-  />
+  >
+    This is an internal link button
+  </a>
 </DocumentFragment>
 `;
 
@@ -14,7 +16,9 @@ exports[` component Should render the  component 2`] = `
   <button
     class="c-btn"
     type="button"
-  />
+  >
+    This is a regular button
+  </button>
 </DocumentFragment>
 `;
 
@@ -25,7 +29,9 @@ exports[` component Should render the  component 3`] = `
     href="https://atanas.info"
     rel="noopener noreferrer"
     target="_blank"
-  />
+  >
+    This is an external link button
+  </a>
 </DocumentFragment>
 `;
 

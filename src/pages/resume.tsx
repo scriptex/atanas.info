@@ -30,7 +30,7 @@ export const Resume: FC = () => (
 						<i className="icon-print"></i> Print
 					</Button>
 
-					<Button<'anchor'> type="anchor" href="/resume.pdf" download>
+					<Button type="anchor" href="/resume.pdf" download>
 						<i className="icon-download"></i> Download
 					</Button>
 				</>

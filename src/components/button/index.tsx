@@ -1,45 +1,59 @@
-import Link, { LinkProps } from 'next/link';
-import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import Link, { LinkProps as ILinkProps } from 'next/link';
+import { FC, useMemo, AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
 
 import { composeClassName } from '@scripts/shared';
 import type { ReactChildren } from '@scripts/types';
 
-type ButtonType = 'anchor' | 'link' | 'button' | 'reset' | 'submit';
-type AnchorProps = AnchorHTMLAttributes<HTMLAnchorElement>;
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
-type DefaultProps<T> = T extends 'anchor' ? AnchorProps : T extends 'link' ? LinkProps : ButtonProps;
-
-type Props<T> = DefaultProps<T> & {
-	type: ButtonType;
-	children?: ReactChildren;
+type CustomProps = {
 	unstyled?: boolean;
 	className?: string;
 };
 
-export const Button = <T extends ButtonType = 'button'>({
-	type,
-	children,
-	unstyled,
-	className,
-	...rest
-}: Props<T>): ReactNode => {
-	const commonProps = {
-		className: unstyled ? className : composeClassName('c-btn', [], [className]),
-		...rest
-	};
+type LinkProps = CustomProps & ILinkProps & { type: 'link'; children: ReactChildren };
+type AnchorProps = CustomProps & AnchorHTMLAttributes<HTMLAnchorElement> & { type: 'anchor' };
+type ButtonProps = CustomProps & ButtonHTMLAttributes<HTMLButtonElement> & { type: 'button' | 'reset' | 'submit' };
 
-	switch (type) {
-		case 'anchor':
-			return <a {...(commonProps as AnchorProps)}>{children}</a>;
-		case 'link':
-			return <Link {...(commonProps as unknown as LinkProps)}>{children}</Link>;
-		default:
-			return (
-				<button {...(commonProps as ButtonProps)} type={type}>
-					{children}
-				</button>
-			);
+type Props = LinkProps | AnchorProps | ButtonProps;
+
+const getClassName = <T extends Props>({ unstyled, className }: T): string | undefined => {
+	if (unstyled) {
+		return className;
 	}
+
+	return composeClassName('c-btn', [], [className]);
+};
+
+const AnchorButton: FC<Readonly<AnchorProps>> = (props: AnchorProps) => {
+	const { type, unstyled, children, ...rest } = props;
+
+	return <a {...rest}>{children}</a>;
+};
+
+const LinkButton: FC<Readonly<LinkProps>> = (props: LinkProps) => {
+	const { type, unstyled, children, ...rest } = props;
+
+	return <Link {...rest}>{children}</Link>;
+};
+
+const DefaultButton: FC<Readonly<ButtonProps>> = (props: ButtonProps) => {
+	const { unstyled, children, ...rest } = props;
+
+	return <button {...rest}>{children}</button>;
+};
+
+export const Button: FC<Readonly<Props>> = (props: Props) => {
+	const className = useMemo(() => getClassName(props), [props]);
+
+	if (props.type === 'anchor') {
+		return <AnchorButton {...props} className={className} />;
+	}
+
+	if (props.type === 'link') {
+		return <LinkButton {...props} className={className} />;
+	}
+
+	return <DefaultButton {...props} className={className} />;
 };
 
 export default Button;

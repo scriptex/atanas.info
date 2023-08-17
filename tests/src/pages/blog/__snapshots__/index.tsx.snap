@@ -609,6 +609,26 @@ exports[`Blog component Should render the Blog component 1`] = `
               />
             </div>
           </div>
+          <div
+            class="o-grid__item xs-12 sm-6"
+          >
+            <a
+              class="c-article-link fullsize-background"
+              href="/blog/polymorphic-button-for-nextjs"
+              style="background-image: url(/images/temp/polymorphic-button-for-nextjs.png);"
+            >
+              <strong>
+                Polymorphic button component for NextJS
+              </strong>
+            </a>
+            <div
+              class="c-loading"
+            >
+              <div
+                class="c-loader"
+              />
+            </div>
+          </div>
         </div>
         <div
           class="c-section__actions"
