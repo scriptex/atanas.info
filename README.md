@@ -40,6 +40,7 @@ A fullstack progressive web app built with
 -   [Prettier](https://prettier.io/)
 -   [Jest](https://jestjs.io/)
 -   [Husky](https://typicode.github.io/husky/)
+-   [Contentful](https://www.contentful.com/)
 
 ## Visitor stats
 
