@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import type { FC } from 'react';
-import type { InferGetServerSidePropsType } from 'next';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import book from '@data/lotties/book.json';
 import { cms, BioEntry } from '@scripts/cms';
 import { useNetworkState } from '@scripts/shared';
 import { Layout, Section, Animation, Icon, Title } from '@components';
 
-export const About: FC<InferGetServerSidePropsType<typeof getServerSideProps>> = ({ bio }) => {
+export const About: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ bio }) => {
 	const online = useNetworkState();
 
 	return (
@@ -50,13 +50,7 @@ export const About: FC<InferGetServerSidePropsType<typeof getServerSideProps>> =
 	);
 };
 
-type ServerSideProps = {
-	props: {
-		bio: BioEntry[];
-	};
-};
-
-export const getServerSideProps = async (): Promise<ServerSideProps> => ({
+export const getStaticProps: GetStaticProps<{ bio: BioEntry[] }> = async () => ({
 	props: {
 		bio: await cms('bio')
 	}
