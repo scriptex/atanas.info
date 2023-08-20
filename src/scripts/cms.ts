@@ -7,6 +7,11 @@ const client = createClient({
 	accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!
 });
 
+export type BioEntry = {
+	title: string | undefined;
+	content: string;
+};
+
 const extractBio = (data: EntryCollection<EntrySkeletonType, undefined, string>) =>
 	data.items
 		.map(item => item.fields)
@@ -15,7 +20,7 @@ const extractBio = (data: EntryCollection<EntrySkeletonType, undefined, string>)
 			content: content ? documentToHtmlString(content as unknown as Document) : ''
 		}));
 
-export async function cms(type: 'bio'): Promise<ReturnType<typeof extractBio>> {
+export async function cms(type: 'bio'): Promise<BioEntry[]> {
 	try {
 		const contentTypes = await client.getContentTypes();
 		const content_type = contentTypes.items.find(item => item.name.toLowerCase() === type)?.sys.id;

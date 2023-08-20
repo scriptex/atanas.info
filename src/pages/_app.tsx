@@ -47,7 +47,7 @@ export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppP
 		import('react-gtm-module')
 			.then(({ default: TagManager }) => {
 				TagManager.initialize({
-					gtmId: process.env.NEXT_PUBLIC_GTM_ID || ''
+					gtmId: process.env.NEXT_PUBLIC_GTM_ID || process.env.GTM_ID || ''
 				});
 			})
 			.catch(console.error);

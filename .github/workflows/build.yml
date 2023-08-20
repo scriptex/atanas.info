@@ -26,9 +26,13 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
                   GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
                   LAST_FM_API_KEY: ${{ secrets.LAST_FM_API_KEY }}
+                  NEXT_PUBLIC_GTM_ID: ${{ secrets.GTM_ID }}
                   CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+                  CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
                   CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
                   CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+                  CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+                  NEXT_PUBLIC_HONEYPOT_VALUE: ${{ secrets.NEXT_PUBLIC_HONEYPOT_VALUE }}
                   NODE_OPTIONS: '--max_old_space_size=8192'
             - name: Upload
               uses: actions/upload-artifact@v3

@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import type { InferGetServerSidePropsType } from 'next';
 
 import book from '@data/lotties/book.json';
-import { cms } from '@scripts/cms';
+import { cms, BioEntry } from '@scripts/cms';
 import { useNetworkState } from '@scripts/shared';
 import { Layout, Section, Animation, Icon, Title } from '@components';
 
@@ -34,7 +34,7 @@ export const About: FC<InferGetServerSidePropsType<typeof getServerSideProps>> =
 					<Icon name="svg-disconnected " className="svg-disconnected" width={240} height={240} />
 				)}
 
-				{bio.map((item, index) => (
+				{bio.map((item: BioEntry, index: number) => (
 					<div className="c-article__block" key={item.title}>
 						<h3>{item.title}</h3>
 
@@ -50,7 +50,13 @@ export const About: FC<InferGetServerSidePropsType<typeof getServerSideProps>> =
 	);
 };
 
-export const getServerSideProps = async () => ({
+type ServerSideProps = {
+	props: {
+		bio: BioEntry[];
+	};
+};
+
+export const getServerSideProps = async (): Promise<ServerSideProps> => ({
 	props: {
 		bio: await cms('bio')
 	}
