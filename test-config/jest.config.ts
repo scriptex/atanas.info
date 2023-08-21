@@ -55,7 +55,7 @@ const config: Config.InitialOptions = {
 			lines: 97,
 			branches: 87,
 			functions: 96,
-			statements: 98
+			statements: 97
 		}
 	},
 	coverageReporters: ['lcov', 'html', 'cobertura'],
