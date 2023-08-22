@@ -16,8 +16,8 @@ export const test = async (Component: ComponentType): Promise<RenderResult> => {
 	return result;
 };
 
-export const snapshotTest = (Component: ComponentType, buttonSelector?: string): void => {
-	const { name } = Component;
+export const snapshotTest = (Component: ComponentType, buttonSelector?: string, componentName?: string): void => {
+	const name = Component.name || componentName || 'Unknown';
 
 	jest.spyOn(shared, 'formatDate');
 

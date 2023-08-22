@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[` component Should render the  component 1`] = `
+exports[`About component Should render the About component 1`] = `
 <DocumentFragment>
   <svg />
   <header
@@ -1405,7 +1405,7 @@ exports[` component Should render the  component 1`] = `
 </DocumentFragment>
 `;
 
-exports[` component Should render the  component 2`] = `
+exports[`About component Should render the About component 2`] = `
 <DocumentFragment>
   <svg />
   <header
@@ -2830,9 +2830,9 @@ exports[` component Should render the  component 2`] = `
 </DocumentFragment>
 `;
 
-exports[` component Should unmount the  component 1`] = `<DocumentFragment />`;
+exports[`About component Should unmount the About component 1`] = `<DocumentFragment />`;
 
-exports[` component Should unmount the  component 2`] = `<DocumentFragment />`;
+exports[`About component Should unmount the About component 2`] = `<DocumentFragment />`;
 
 exports[`Tests the About page when offline 1`] = `
 <DocumentFragment>

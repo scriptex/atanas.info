@@ -1,11 +1,12 @@
 import useInterval from 'use-interval';
 import { FC, useRef, useState, useEffect } from 'react';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import hello from '@data/lotties/hello.json';
-import { titles } from '@data/titles';
-import { Layout, Section, Animation, Title } from '@components';
+import { getTitlesFromCMS } from '@scripts/cms';
+import { Title, Layout, Section, Animation } from '@components';
 
-export const Home: FC = () => {
+export const Home: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ titles }) => {
 	const canvasRef = useRef<HTMLDivElement>(null);
 	const [activeIndex, setActiveIndex] = useState(0);
 
@@ -54,5 +55,11 @@ export const Home: FC = () => {
 		</Layout>
 	);
 };
+
+export const getStaticProps: GetStaticProps<{ titles: string[] }> = async () => ({
+	props: {
+		titles: await getTitlesFromCMS()
+	}
+});
 
 export default Home;

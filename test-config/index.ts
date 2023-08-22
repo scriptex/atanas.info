@@ -127,3 +127,11 @@ jest.mock('next/font/google', () => ({
 		}
 	}))
 }));
+
+jest.mock('contentful', () => ({
+	...jest.requireActual('contentful'),
+	createClient: jest.fn(() => ({
+		getEntries: jest.fn(() => Promise.resolve({ items: [] })),
+		getContentTypes: jest.fn(() => Promise.resolve([]))
+	}))
+}));
