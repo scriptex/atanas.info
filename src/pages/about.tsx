@@ -3,8 +3,8 @@ import type { FC } from 'react';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import book from '@data/lotties/book.json';
-import { cms, BioEntry } from '@scripts/cms';
 import { useNetworkState } from '@scripts/shared';
+import { BioEntry, getBioFromCMS } from '@scripts/cms';
 import { Layout, Section, Animation, Icon, Title } from '@components';
 
 export const About: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ bio }) => {
@@ -52,7 +52,7 @@ export const About: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ bio 
 
 export const getStaticProps: GetStaticProps<{ bio: BioEntry[] }> = async () => ({
 	props: {
-		bio: await cms('bio')
+		bio: await getBioFromCMS()
 	}
 });
 

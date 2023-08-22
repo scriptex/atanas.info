@@ -1,6 +1,97 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[` component Should render the  component 1`] = `
+exports[`LinkedInBadge component Should render the LinkedInBadge component 1`] = `
+<DocumentFragment>
+  <div
+    class="linkedin-badge bubbles"
+  >
+    <div
+      class="linkedin-badge__content"
+    >
+      <img
+        alt="Atanas Atanasov smiling dressed in a green t-shirt"
+        data-nimg="1"
+        decoding="async"
+        height="240"
+        loading="lazy"
+        src="/_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=640&q=75"
+        srcset="/_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=256&q=75 1x, /_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=640&q=75 2x"
+        style="color: transparent;"
+        width="240"
+      />
+      <h4>
+        <a
+          href="https://linkedin.com/in/scriptex"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          👨💻 Atanas Atanasov
+          <svg
+            class="c-svg-external-link"
+          >
+            <use
+              xlink:href="#svg-external-link"
+            />
+          </svg>
+        </a>
+      </h4>
+      <h5>
+        Lead Front-end Engineer / E.ON Home Project @E.ON
+      </h5>
+      <h5>
+        <a
+          href="https://www.linkedin.com/company/e-on"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          E.ON
+          <svg
+            class="c-svg-external-link"
+          >
+            <use
+              xlink:href="#svg-external-link"
+            />
+          </svg>
+        </a>
+         |
+        <a
+          href="https://www.linkedin.com/school/university-of-economics-varna"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          University of Economics - Varna
+          <svg
+            class="c-svg-external-link"
+          >
+            <use
+              xlink:href="#svg-external-link"
+            />
+          </svg>
+        </a>
+      </h5>
+      <a
+        class="c-btn c-btn--small"
+        href="https://linkedin.com/in/scriptex"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        View profile
+        <svg
+          class="c-svg-external-link"
+        >
+          <use
+            xlink:href="#svg-external-link"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`LinkedInBadge component Should unmount the LinkedInBadge component 1`] = `<DocumentFragment />`;
+
+exports[`Unknown component Should render the Unknown component 1`] = `
 <DocumentFragment>
   <header
     class="c-section__header"
@@ -139,7 +230,7 @@ exports[` component Should render the  component 1`] = `
 </DocumentFragment>
 `;
 
-exports[` component Should render the  component 2`] = `
+exports[`Unknown component Should render the Unknown component 2`] = `
 <DocumentFragment>
   <header
     class="c-section__header"
@@ -229,9 +320,9 @@ exports[` component Should render the  component 2`] = `
 </DocumentFragment>
 `;
 
-exports[` component Should render the  component 3`] = `<DocumentFragment />`;
+exports[`Unknown component Should render the Unknown component 3`] = `<DocumentFragment />`;
 
-exports[` component Should render the  component 4`] = `
+exports[`Unknown component Should render the Unknown component 4`] = `
 <DocumentFragment>
   <header
     class="c-section__header"
@@ -350,101 +441,10 @@ exports[` component Should render the  component 4`] = `
 </DocumentFragment>
 `;
 
-exports[` component Should unmount the  component 1`] = `<DocumentFragment />`;
+exports[`Unknown component Should unmount the Unknown component 1`] = `<DocumentFragment />`;
 
-exports[` component Should unmount the  component 2`] = `<DocumentFragment />`;
+exports[`Unknown component Should unmount the Unknown component 2`] = `<DocumentFragment />`;
 
-exports[` component Should unmount the  component 3`] = `<DocumentFragment />`;
+exports[`Unknown component Should unmount the Unknown component 3`] = `<DocumentFragment />`;
 
-exports[` component Should unmount the  component 4`] = `<DocumentFragment />`;
-
-exports[`LinkedInBadge component Should render the LinkedInBadge component 1`] = `
-<DocumentFragment>
-  <div
-    class="linkedin-badge bubbles"
-  >
-    <div
-      class="linkedin-badge__content"
-    >
-      <img
-        alt="Atanas Atanasov smiling dressed in a green t-shirt"
-        data-nimg="1"
-        decoding="async"
-        height="240"
-        loading="lazy"
-        src="/_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=640&q=75"
-        srcset="/_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=256&q=75 1x, /_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=640&q=75 2x"
-        style="color: transparent;"
-        width="240"
-      />
-      <h4>
-        <a
-          href="https://linkedin.com/in/scriptex"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          👨💻 Atanas Atanasov
-          <svg
-            class="c-svg-external-link"
-          >
-            <use
-              xlink:href="#svg-external-link"
-            />
-          </svg>
-        </a>
-      </h4>
-      <h5>
-        Lead Front-end Engineer / E.ON Home Project @E.ON
-      </h5>
-      <h5>
-        <a
-          href="https://www.linkedin.com/company/e-on"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          E.ON
-          <svg
-            class="c-svg-external-link"
-          >
-            <use
-              xlink:href="#svg-external-link"
-            />
-          </svg>
-        </a>
-         |
-        <a
-          href="https://www.linkedin.com/school/university-of-economics-varna"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          University of Economics - Varna
-          <svg
-            class="c-svg-external-link"
-          >
-            <use
-              xlink:href="#svg-external-link"
-            />
-          </svg>
-        </a>
-      </h5>
-      <a
-        class="c-btn c-btn--small"
-        href="https://linkedin.com/in/scriptex"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        View profile
-        <svg
-          class="c-svg-external-link"
-        >
-          <use
-            xlink:href="#svg-external-link"
-          />
-        </svg>
-      </a>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`LinkedInBadge component Should unmount the LinkedInBadge component 1`] = `<DocumentFragment />`;
+exports[`Unknown component Should unmount the Unknown component 4`] = `<DocumentFragment />`;
