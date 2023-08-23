@@ -1,25 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Unknown component Should render the Unknown component 1`] = `
-<DocumentFragment>
-  <div
-    class="c-section__entry c-section__entry--no-background"
-  >
-    <div
-      class="o-shell"
-    >
-      <h3>
-        Github profile statistics
-      </h3>
-      <p>
-        Failed fetching data from Github. Please check again in 8 hours.
-      </p>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Unknown component Should render the Unknown component 2`] = `
+exports[`StatsEntry component Should render the StatsEntry component 1`] = `
 <DocumentFragment>
   <div
     class="c-section__entry c-section__entry--no-background"
@@ -47,6 +28,25 @@ exports[`Unknown component Should render the Unknown component 2`] = `
 </DocumentFragment>
 `;
 
-exports[`Unknown component Should unmount the Unknown component 1`] = `<DocumentFragment />`;
+exports[`StatsEntry component Should unmount the StatsEntry component 1`] = `<DocumentFragment />`;
 
-exports[`Unknown component Should unmount the Unknown component 2`] = `<DocumentFragment />`;
+exports[`StatsError component Should render the StatsError component 1`] = `
+<DocumentFragment>
+  <div
+    class="c-section__entry c-section__entry--no-background"
+  >
+    <div
+      class="o-shell"
+    >
+      <h3>
+        Github profile statistics
+      </h3>
+      <p>
+        Failed fetching data from Github. Please check again in 8 hours.
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StatsError component Should unmount the StatsError component 1`] = `<DocumentFragment />`;

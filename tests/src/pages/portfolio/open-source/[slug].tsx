@@ -11,14 +11,26 @@ jest.mock('next/router', () => ({
 
 const testSlug = '2048';
 
-snapshotTest(() => <OpenSourceProject post={{ slug: testSlug, content: 'This is a test content' }} />);
+snapshotTest(
+	() => <OpenSourceProject post={{ slug: testSlug, content: 'This is a test content' }} />,
+	undefined,
+	'OpenSourceProject'
+);
 
-snapshotTest(() => <OpenSourceProject post={{ slug: 'nonexistent-post', content: 'This post is missing' }} />);
+snapshotTest(
+	() => <OpenSourceProject post={{ slug: 'nonexistent-post', content: 'This post is missing' }} />,
+	undefined,
+	'OpenSourceProject'
+);
 
-snapshotTest(() => <OpenSourceProject post={{ slug: '', content: 'This post is missing' }} />);
+snapshotTest(
+	() => <OpenSourceProject post={{ slug: '', content: 'This post is missing' }} />,
+	undefined,
+	'OpenSourceProject'
+);
 
 // @ts-ignore
-snapshotTest(() => <OpenSourceProject />);
+snapshotTest(() => <OpenSourceProject />, undefined, 'OpenSourceProject');
 
 it('Test the `getStaticPaths` function', async () => {
 	const result = await getStaticPaths();

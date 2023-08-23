@@ -1,26 +1,13 @@
 import type { FC } from 'react';
 
 import { Routes } from '@data/routes';
-import { Article, articles } from '@data/articles';
 import { MDX, Layout, Title } from '@components';
 import { getPostBySlug, getAllPosts } from '@lib/markdown';
-
-type Props = {
-	post: {
-		slug: string;
-		content: string;
-	};
-};
+import { Article, getArticlesFromCMS } from '@scripts/cms';
 
 type Params = {
 	params: {
 		slug: string;
-	};
-};
-
-type StaticProps = {
-	props: {
-		post: Record<string, string>;
 	};
 };
 
@@ -29,7 +16,12 @@ type StaticPaths = {
 	fallback: boolean;
 };
 
-export const OpenSourceProject: FC<Readonly<Props>> = ({ post }: Props) => {
+type Props = {
+	post: ReturnType<typeof getPostBySlug>;
+	articles: Article[];
+};
+
+export const OpenSourceProject: FC<Readonly<Props>> = ({ post, articles }: Props) => {
 	const match = articles
 		.filter((article: Article) => !article.external)
 		.find(item => item.url === `/blog/${post.slug}`);
@@ -42,18 +34,19 @@ export const OpenSourceProject: FC<Readonly<Props>> = ({ post }: Props) => {
 				id="blog-post"
 				back={Routes.BLOG}
 				title={match?.title ?? post.slug}
-				image={match?.image}
+				image={match?.externalImage ?? match?.image?.fields.file?.url?.toString()}
 				content={post.content}
 			/>
 		</Layout>
 	);
 };
 
-export async function getStaticProps({ params }: Params): Promise<StaticProps> {
+export const getStaticProps = async ({ params }: Params): Promise<{ props: Props }> => {
 	const post = getPostBySlug('src/data/posts', params.slug, ['slug', 'content']);
+	const articles = await getArticlesFromCMS();
 
-	return { props: { post } };
-}
+	return { props: { post, articles } };
+};
 
 export async function getStaticPaths(): Promise<StaticPaths> {
 	const posts = getAllPosts('src/data/posts', ['slug']);

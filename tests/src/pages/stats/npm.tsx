@@ -31,11 +31,11 @@ jest.mock('@lib/mongodb', () => ({
 	getData: jest.fn(() => Promise.resolve({ props: { data: [] } }))
 }));
 
-snapshotTest(() => <NPMStats data={{ ...data, sum: 1876223 } as unknown as Data} />);
+snapshotTest(() => <NPMStats data={{ ...data, sum: 1876223 } as unknown as Data} />, undefined, 'NPMStats');
 
-snapshotTest(() => <NPMStats data={data} />);
+snapshotTest(() => <NPMStats data={data} />, undefined, 'NPMStats');
 
-snapshotTest(() => <NPMStats data={{} as ComponentProps<typeof NPMStats>['data']} />);
+snapshotTest(() => <NPMStats data={{} as ComponentProps<typeof NPMStats>['data']} />, undefined, 'NPMStats');
 
 it('Test the `getStaticProps` function', async () => {
 	const result = await getStaticProps();

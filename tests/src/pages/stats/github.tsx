@@ -61,50 +61,62 @@ const dataEmpty: GithubInsights = {
 	repositories: null
 };
 
-snapshotTest(() => <GithubStats data={dataFull} />, '.c-skyline__nav li:first-child .c-btn--small');
+snapshotTest(() => <GithubStats data={dataFull} />, '.c-skyline__nav li:first-child .c-btn--small', 'GithubStats');
 
-snapshotTest(() => <GithubStats data={dataEmpty} />);
+snapshotTest(() => <GithubStats data={dataEmpty} />, undefined, 'GithubStats');
 
-snapshotTest(() => <GithubStats data={{ ...dataEmpty, error: true }} />);
+snapshotTest(() => <GithubStats data={{ ...dataEmpty, error: true }} />, undefined, 'GithubStats');
 
-snapshotTest(() => (
-	<GithubStats
-		data={{
-			...dataFull,
-			updated: null,
-			repositories: dataFull.repositories!.map(r => ({
-				...r,
-				contributions: r.contributions.map(c => ({
-					...c,
-					user: 'test'
+snapshotTest(
+	() => (
+		<GithubStats
+			data={{
+				...dataFull,
+				updated: null,
+				repositories: dataFull.repositories!.map(r => ({
+					...r,
+					contributions: r.contributions.map(c => ({
+						...c,
+						user: 'test'
+					}))
 				}))
-			}))
-		}}
-	/>
-));
+			}}
+		/>
+	),
+	undefined,
+	'GithubStats'
+);
 
-snapshotTest(() => (
-	<GithubStats
-		data={{
-			...dataFull,
-			calendar: {
-				'2022-01-30': {} as unknown as GithubCount
-			}
-		}}
-	/>
-));
+snapshotTest(
+	() => (
+		<GithubStats
+			data={{
+				...dataFull,
+				calendar: {
+					'2022-01-30': {} as unknown as GithubCount
+				}
+			}}
+		/>
+	),
+	undefined,
+	'GithubStats'
+);
 
-snapshotTest(() => (
-	<GithubStats
-		data={{
-			...dataFull,
-			repositories: dataFull.repositories!.map(r => ({
-				...r,
-				language: null
-			}))
-		}}
-	/>
-));
+snapshotTest(
+	() => (
+		<GithubStats
+			data={{
+				...dataFull,
+				repositories: dataFull.repositories!.map(r => ({
+					...r,
+					language: null
+				}))
+			}}
+		/>
+	),
+	undefined,
+	'GithubStats'
+);
 
 it('Test the GithubStats page with fake timers', async () => {
 	jest.useFakeTimers();

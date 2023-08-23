@@ -18,38 +18,47 @@ snapshotTest(
 			<h1>This is a test title</h1>
 		</Section>
 	),
-	'.c-section__actions .c-btn:first-child'
+	'.c-section__actions .c-btn:first-child',
+	'Section'
 );
 
-snapshotTest(() => (
-	<Section
-		id="test"
-		style={{ color: 'rebeccapurple' }}
-		actions={<div />}
-		subtitle="Test subtitle"
-		hasButton={false}
-		className="c-section-test"
-		shellClass="c-shell-test"
-		additionalElements={<div />}
-	>
-		<h1>This is a test title</h1>
-	</Section>
-));
+snapshotTest(
+	() => (
+		<Section
+			id="test"
+			style={{ color: 'rebeccapurple' }}
+			actions={<div />}
+			subtitle="Test subtitle"
+			hasButton={false}
+			className="c-section-test"
+			shellClass="c-shell-test"
+			additionalElements={<div />}
+		>
+			<h1>This is a test title</h1>
+		</Section>
+	),
+	undefined,
+	'Section'
+);
 
-snapshotTest(() => (
-	<Section
-		id="test"
-		style={{ color: 'rebeccapurple' }}
-		actions={<div />}
-		hasShell={false}
-		hasButton={false}
-		className="c-section-test"
-		shellClass="c-shell-test"
-		additionalElements={<div />}
-	>
-		<h1>This is a test title</h1>
-	</Section>
-));
+snapshotTest(
+	() => (
+		<Section
+			id="test"
+			style={{ color: 'rebeccapurple' }}
+			actions={<div />}
+			hasShell={false}
+			hasButton={false}
+			className="c-section-test"
+			shellClass="c-shell-test"
+			additionalElements={<div />}
+		>
+			<h1>This is a test title</h1>
+		</Section>
+	),
+	undefined,
+	'Section'
+);
 
 snapshotTest(
 	() => (
@@ -66,13 +75,18 @@ snapshotTest(
 			<h1>This is a test title</h1>
 		</Section>
 	),
-	'.c-section__actions .c-btn:first-child'
+	'.c-section__actions .c-btn:first-child',
+	'Section'
 );
 
-snapshotTest(() => <SectionNav name="title" data={presentations} active={0} onClick={jest.fn()} />, '.c-btn');
+snapshotTest(
+	() => <SectionNav name="title" data={presentations} active={0} onClick={jest.fn()} />,
+	'.c-btn',
+	'Section'
+);
 
-snapshotTest(() => <SectionGrid data={statsItems} />);
+snapshotTest(() => <SectionGrid data={statsItems} />, undefined, 'Section');
 
-snapshotTest(() => <SectionGrid data={statsItems} linkType="internal" />);
+snapshotTest(() => <SectionGrid data={statsItems} linkType="internal" />, undefined, 'Section');
 
-snapshotTest(() => <SectionGrid data={statsItems} linkType="external" />);
+snapshotTest(() => <SectionGrid data={statsItems} linkType="external" />, undefined, 'Section');

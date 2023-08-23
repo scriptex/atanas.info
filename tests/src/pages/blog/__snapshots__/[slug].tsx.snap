@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Unknown component Should render the Unknown component 1`] = `
+exports[`OpenSourceProject component Should render the OpenSourceProject component 1`] = `
 <DocumentFragment>
   <svg />
   <header
@@ -538,7 +538,7 @@ exports[`Unknown component Should render the Unknown component 1`] = `
           class="c-section__header"
         >
           <h2>
-            Testing WebSockets with Cypress
+            testing-websockets-with-cypress
           </h2>
         </header>
         <div
@@ -567,11 +567,6 @@ exports[`Unknown component Should render the Unknown component 1`] = `
             class="line line--horizontal"
           />
         </div>
-        <img
-          alt=""
-          loading="lazy"
-          src="/images/temp/testing-websockets-with-cypress.png"
-        />
         <div
           class="c-blog-post"
         >
@@ -1441,7 +1436,7 @@ exports[`Unknown component Should render the Unknown component 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Unknown component Should render the Unknown component 2`] = `
+exports[`OpenSourceProject component Should render the OpenSourceProject component 2`] = `
 <DocumentFragment>
   <svg />
   <header
@@ -2877,6 +2872,6 @@ exports[`Unknown component Should render the Unknown component 2`] = `
 </DocumentFragment>
 `;
 
-exports[`Unknown component Should unmount the Unknown component 1`] = `<DocumentFragment />`;
+exports[`OpenSourceProject component Should unmount the OpenSourceProject component 1`] = `<DocumentFragment />`;
 
-exports[`Unknown component Should unmount the Unknown component 2`] = `<DocumentFragment />`;
+exports[`OpenSourceProject component Should unmount the OpenSourceProject component 2`] = `<DocumentFragment />`;
