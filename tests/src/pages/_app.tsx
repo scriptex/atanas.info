@@ -24,4 +24,4 @@ window.CSS = window.CSS || {
 	}
 };
 
-snapshotTest(() => <App {...props} />);
+snapshotTest(() => <App {...props} />, undefined, 'App');

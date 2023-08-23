@@ -47,11 +47,11 @@ const dataEmpty: GitlabInsights = {
 	repositories: null
 };
 
-snapshotTest(() => <GitlabStats data={dataFull} />);
+snapshotTest(() => <GitlabStats data={dataFull} />, undefined, 'GitlabStats');
 
-snapshotTest(() => <GitlabStats data={{ ...dataFull, updated: null }} />);
+snapshotTest(() => <GitlabStats data={{ ...dataFull, updated: null }} />, undefined, 'GitlabStats');
 
-snapshotTest(() => <GitlabStats data={dataEmpty} />);
+snapshotTest(() => <GitlabStats data={dataEmpty} />, undefined, 'GitlabStats');
 
 it('Test the GitlabStats page with fake timers', async () => {
 	jest.useFakeTimers();

@@ -67,7 +67,7 @@ const lastFMData = {
 	]
 };
 
-snapshotTest(() => <Social data={lastFMData} />);
+snapshotTest(() => <Social data={lastFMData} />, undefined, 'Social');
 
 it('Tests the Social page when offline', async () => {
 	jest.spyOn(shared, 'useNetworkState').mockImplementation(() => false);

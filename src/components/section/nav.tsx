@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import { Slide } from '@data/slides';
 import { Button } from '@components';
 import { Routes } from '@data/routes';
-import { Article } from '@data/articles';
+import { Article } from '@scripts/cms';
 import { Presentation } from '@data/presentations';
 import { composeClassName } from '@scripts/shared';
 

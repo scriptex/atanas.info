@@ -1,14 +1,23 @@
 import type { Document } from '@contentful/rich-text-types';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
-import { createClient, EntryCollection, EntrySkeletonType } from 'contentful';
+import { Asset, createClient, EntryCollection, EntrySkeletonType } from 'contentful';
 
-type CMSType = 'bio' | 'titles';
+type CMSType = 'bio' | 'titles' | 'article';
 type RawCMSData = EntryCollection<EntrySkeletonType, undefined, string>;
 
 export type BioEntry = {
 	title: string | undefined;
 	content: string;
 };
+
+export type Article = Readonly<{
+	url: string;
+	title: string;
+	image?: Asset;
+	index: number;
+	external: boolean;
+	externalImage?: string;
+}>;
 
 const client = createClient({
 	space: process.env.CONTENTFUL_SPACE_ID!,
@@ -52,6 +61,16 @@ export const getTitlesFromCMS = async (): Promise<string[]> => {
 		const content = data.items.map(item => item.fields).map(({ content }) => content as unknown as string[]);
 
 		return content?.[0] ?? [];
+	} catch (error: unknown) {
+		return [];
+	}
+};
+
+export const getArticlesFromCMS = async (): Promise<Article[]> => {
+	try {
+		const data = await getCMSData('article');
+
+		return (data.items.map(item => item.fields) as Article[]) ?? [];
 	} catch (error: unknown) {
 		return [];
 	}

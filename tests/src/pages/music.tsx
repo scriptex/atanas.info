@@ -21,13 +21,13 @@ const data = [
 	}
 ];
 
-snapshotTest(() => <Music data={data} />, '.c-music__menu');
+snapshotTest(() => <Music data={data} />, '.c-music__menu', 'Music');
 
-snapshotTest(() => <Music data={data} />, '.c-music__btn--play');
+snapshotTest(() => <Music data={data} />, '.c-music__btn--play', 'Music');
 
-snapshotTest(() => <Music data={data} />, '.c-music__btn--pause');
+snapshotTest(() => <Music data={data} />, '.c-music__btn--pause', 'Music');
 
-snapshotTest(() => <Music data={data} />, '.c-music__tracks button:first-child');
+snapshotTest(() => <Music data={data} />, '.c-music__tracks button:first-child', 'Music');
 
 it('Should test the `getStaticProps` function', async () => {
 	const result = await getStaticProps();

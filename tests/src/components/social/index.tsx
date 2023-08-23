@@ -65,10 +65,10 @@ const data = {
 
 snapshotTest(LinkedInBadge);
 
-snapshotTest(() => <SocialMusic data={data} />);
+snapshotTest(() => <SocialMusic data={data} />, undefined, 'SocialMusic');
 
-snapshotTest(() => <SocialMusic data={{ ...data, topAlbums: [] }} />);
+snapshotTest(() => <SocialMusic data={{ ...data, topAlbums: [] }} />, undefined, 'SocialMusic');
 
-snapshotTest(() => <SocialMusic data={{ ...data, error: true }} />);
+snapshotTest(() => <SocialMusic data={{ ...data, error: true }} />, undefined, 'SocialMusic');
 
-snapshotTest(() => <SocialMusic data={{ ...data, topAlbums: [{} as LastFMAlbum] }} />);
+snapshotTest(() => <SocialMusic data={{ ...data, topAlbums: [{} as LastFMAlbum] }} />, undefined, 'SocialMusic');
