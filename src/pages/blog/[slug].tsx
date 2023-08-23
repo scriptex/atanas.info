@@ -1,5 +1,4 @@
 import type { FC } from 'react';
-import type { InferGetStaticPropsType } from 'next';
 
 import { Routes } from '@data/routes';
 import { MDX, Layout, Title } from '@components';
@@ -17,7 +16,10 @@ type StaticPaths = {
 	fallback: boolean;
 };
 
-type Props = InferGetStaticPropsType<typeof getStaticProps>;
+type Props = {
+	post: ReturnType<typeof getPostBySlug>;
+	articles: Article[];
+};
 
 export const OpenSourceProject: FC<Readonly<Props>> = ({ post, articles }: Props) => {
 	const match = articles
@@ -39,8 +41,8 @@ export const OpenSourceProject: FC<Readonly<Props>> = ({ post, articles }: Props
 	);
 };
 
-export const getStaticProps = async ({ params }: Params) => {
-	const post = getPostBySlug('src/data/posts', params?.slug, ['slug', 'content']);
+export const getStaticProps = async ({ params }: Params): Promise<{ props: Props }> => {
+	const post = getPostBySlug('src/data/posts', params.slug, ['slug', 'content']);
 	const articles = await getArticlesFromCMS();
 
 	return { props: { post, articles } };
