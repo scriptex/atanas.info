@@ -5,33 +5,37 @@ exports[`Nav component Should render the Nav component 1`] = `
   <nav
     class="c-nav"
   >
-    <ul>
-      <li>
-        <a
-          class="active"
-          href="/"
-          title="Home"
-        >
-          Home
-        </a>
-      </li>
-      <li>
-        <a
-          href="mailto:someone@example.com"
-          index="1"
-          title="Send mail"
-        >
-          Send mail
-          <svg
-            class="c-svg-external-link"
+    <div
+      class="c-nav__inner"
+    >
+      <ul>
+        <li>
+          <a
+            class="active"
+            href="/"
+            title="Home"
           >
-            <use
-              xlink:href="#svg-external-link"
-            />
-          </svg>
-        </a>
-      </li>
-    </ul>
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="mailto:someone@example.com"
+            index="1"
+            title="Send mail"
+          >
+            Send mail
+            <svg
+              class="c-svg-external-link"
+            >
+              <use
+                xlink:href="#svg-external-link"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </DocumentFragment>
 `;

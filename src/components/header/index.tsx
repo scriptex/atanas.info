@@ -7,6 +7,7 @@ import { Nav, Icon, Button, ThemeSwitcher } from '@components';
 
 export const Header: FC = () => {
 	const [open, setOpen] = useState(false);
+	const [active, setActive] = useState(-1);
 
 	return (
 		<header className={composeClassName('c-header', open ? ['open'] : [])}>
@@ -17,7 +18,10 @@ export const Header: FC = () => {
 			<div className="c-header__actions">
 				<Button
 					type="button"
-					onClick={(): void => setOpen(!open)}
+					onClick={(): void => {
+						setOpen(!open);
+						setActive(-1);
+					}}
 					unstyled
 					className="c-nav__toggle"
 					aria-label="Toggle menu"
@@ -32,7 +36,7 @@ export const Header: FC = () => {
 				<ThemeSwitcher />
 			</div>
 
-			<Nav onClick={() => setOpen(false)} />
+			<Nav active={active} onClick={() => setOpen(false)} setActive={setActive} />
 		</header>
 	);
 };

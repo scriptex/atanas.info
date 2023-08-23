@@ -1,11 +1,10 @@
 import type { MenuItem } from '@data/menu';
-import type { ReactChildren } from '@scripts/types';
 
 export type Props = {
+	active?: number;
+	inline?: boolean;
 	onClick?: () => void;
-	hasShell?: boolean;
-	children?: ReactChildren;
-	className?: string;
+	setActive?: (index: number) => void;
 };
 
 export type AnchorProps = Omit<MenuItem, 'children'> & Pick<Props, 'onClick'>;
