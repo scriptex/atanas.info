@@ -1179,6 +1179,33 @@ exports[`Skills component Should render the Skills component 1`] = `
                 class="c-skill"
               >
                 <figure
+                  style="background-color: rgb(36, 120, 204);"
+                >
+                  <svg
+                    class="c-skill__icon"
+                    height="34"
+                    width="34"
+                  >
+                    <use
+                      xlink:href="#svg-contentful"
+                    />
+                  </svg>
+                </figure>
+                <p>
+                  <strong>
+                    Contentful
+                  </strong>
+                  Since 2023
+                </p>
+              </div>
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6 md-4 lg-3"
+            >
+              <div
+                class="c-skill"
+              >
+                <figure
                   style="background-color: rgb(21, 114, 182);"
                 >
                   <svg
@@ -5828,6 +5855,33 @@ exports[`Skills component Should render the Skills component 2`] = `
                     Confluence
                   </strong>
                   Since 2017
+                </p>
+              </div>
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6 md-4 lg-3"
+            >
+              <div
+                class="c-skill"
+              >
+                <figure
+                  style="background-color: rgb(36, 120, 204);"
+                >
+                  <svg
+                    class="c-skill__icon"
+                    height="34"
+                    width="34"
+                  >
+                    <use
+                      xlink:href="#svg-contentful"
+                    />
+                  </svg>
+                </figure>
+                <p>
+                  <strong>
+                    Contentful
+                  </strong>
+                  Since 2023
                 </p>
               </div>
             </div>
