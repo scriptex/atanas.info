@@ -125,6 +125,13 @@ export const Music: FC<Readonly<Props>> = ({ data }: Props) => {
 					<h2>
 						Pick a track and <br /> press the play button.
 					</h2>
+
+					{playing && (
+						<h3>
+							Now playing: <br />
+							{source.metaData.title}
+						</h3>
+					)}
 				</div>
 			</Section>
 		</Layout>
