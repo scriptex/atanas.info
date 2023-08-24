@@ -1047,25 +1047,25 @@
     "@babel/helper-validator-identifier" "^7.22.5"
     to-fast-properties "^2.0.0"
 
-"@babylonjs/core@6.17.1":
-  version "6.17.1"
-  resolved "https://registry.yarnpkg.com/@babylonjs/core/-/core-6.17.1.tgz#075106911b15be2485eeda53f13d3ad0c290de19"
-  integrity sha512-CMhbyA7FEjYJC1JMetfRVH955lDwpKASufjeYw0UTB92+tlwwOsonN8eYr2r9DAHb+7UcQegGopx/nj+THAcIQ==
+"@babylonjs/core@6.18.0":
+  version "6.18.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/core/-/core-6.18.0.tgz#1f4d1ed0a48ed4b2b2104ed84bd89c963cc94d89"
+  integrity sha512-Tufbl8S0aNm5Czt6J2l7kPHkU6UYcK6o7zWtS76QDwIHE1yvNq1MwounTSuLc+u9vQR7Ml0HuACmePDmUNUSfw==
 
-"@babylonjs/gui@6.17.1":
-  version "6.17.1"
-  resolved "https://registry.yarnpkg.com/@babylonjs/gui/-/gui-6.17.1.tgz#234c88f6c751a78388c7974b235a8c3a3c03649e"
-  integrity sha512-AQUE+r71X889I8hHg58Gpou7eeksIY878hrROnBbV2W8UpAAwL9p4A4kQ+EG8gTWwmn+NnahSRblmHfYnsT2KA==
+"@babylonjs/gui@6.18.0":
+  version "6.18.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/gui/-/gui-6.18.0.tgz#521965fd24948b670ef223d360af9c49cdd5d33a"
+  integrity sha512-sYMFUOJMIE6R5YSiSw91Fm4nXIWKWWyxDUlP/R9a/mGdtbl1/BZ/xB37qYHb50AOxXLKY2l0GgLWHn8uQQr2GQ==
 
-"@babylonjs/loaders@6.17.1":
-  version "6.17.1"
-  resolved "https://registry.yarnpkg.com/@babylonjs/loaders/-/loaders-6.17.1.tgz#8547113725f2b878a8980aa64af08f7a9526a063"
-  integrity sha512-k4g2rnqKnzoq+8AYO4IQL3aLAJDCCJrpL8Qj/CoVFjt3fDsPzC3ncnmu45VaTwpiXI5St/qfX3s9Bwncn6aI+A==
+"@babylonjs/loaders@6.18.0":
+  version "6.18.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/loaders/-/loaders-6.18.0.tgz#810df9aed5077a9b71e2053a2a52f49c1ba1d6af"
+  integrity sha512-VWENt2XvQ9uUN2DHTI/XMpQPNHl9mf9D3XAv93HesaQeNL7mZEmbA+iO0ZR5y5jNyU5n+xHNkZ37LLDbl7QhJQ==
 
-"@babylonjs/materials@6.17.1":
-  version "6.17.1"
-  resolved "https://registry.yarnpkg.com/@babylonjs/materials/-/materials-6.17.1.tgz#12acbd1c19bd662dd0e02731221895587d8d1962"
-  integrity sha512-MS4nTC4gH95CKOvp6ycJef7HpftUJ77daEenDpQczwfu+ftZDjIHsPvgJLXAJnuXtVKf0UhgfKUcHcYJ16VwFA==
+"@babylonjs/materials@6.18.0":
+  version "6.18.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/materials/-/materials-6.18.0.tgz#52ab114b940b0b14d706150a36f9bce006a88d70"
+  integrity sha512-ruOTPKjVdPKWC9FqeCiLzE58VeVW2GPGeN/uUyKzTDCWTgz+qe6OxBMfqN6Kxemu8eX4wrvh016YBOgdT8RAFA==
 
 "@bcoe/v8-coverage@^0.2.3":
   version "0.2.3"
@@ -2494,12 +2494,7 @@
   dependencies:
     "@types/mjml-core" "*"
 
-"@types/node@*":
-  version "20.5.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.5.2.tgz#02850ed821c8113fd6ed9ae5c744b7f7cd6d6f51"
-  integrity sha512-5j/lXt7unfPOUlrKC34HIaedONleyLtwkKggiD/0uuMfT8gg2EOpg0dz4lCD15Ga7muC+1WzJZAjIB9simWd6Q==
-
-"@types/node@20.5.4":
+"@types/node@*", "@types/node@20.5.4":
   version "20.5.4"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.5.4.tgz#4666fb40f9974d60c53c4ff554315860ba4feab8"
   integrity sha512-Y9vbIAoM31djQZrPYjpTLo0XlaSwOIsrlfE3LpulZeRblttsLQRFRlBAppW0LOxyT3ALj2M5vU1ucQQayQH3jA==
@@ -2559,16 +2554,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*":
-  version "18.2.20"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.20.tgz#1605557a83df5c8a2cc4eeb743b3dfc0eb6aaeb2"
-  integrity sha512-WKNtmsLWJM/3D5mG4U84cysVY31ivmyw85dE84fOCk5Hx78wezB/XEjVPWl2JTZ5FkEeaTJf+VgUAUn3PE7Isw==
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/scheduler" "*"
-    csstype "^3.0.2"
-
-"@types/react@18.2.21":
+"@types/react@*", "@types/react@18.2.21":
   version "18.2.21"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.21.tgz#774c37fd01b522d0b91aed04811b58e4e0514ed9"
   integrity sha512-neFKG/sBAwGxHgXiIxnbm3/AAVQ/cMRS93hvBpg8xYRbeQSPVABp9U2bRnPf0iI4+Ucdv3plSxKK+3CW2ENJxA==
@@ -3446,10 +3432,10 @@ babel-preset-jest@^29.6.3:
     babel-plugin-jest-hoist "^29.6.3"
     babel-preset-current-node-syntax "^1.0.0"
 
-babylonjs-gltf2interface@6.17.1:
-  version "6.17.1"
-  resolved "https://registry.yarnpkg.com/babylonjs-gltf2interface/-/babylonjs-gltf2interface-6.17.1.tgz#c06a7f6f20ca4d0423619cd82c0f731f7fdffa85"
-  integrity sha512-Qx08xYKcA2gU7chI2SSpEWxTf/k0LH/HMBGg756UwBdB3nQoh8SE/kq3NCe1Cdy/Dj1Uk9b0k1eAu7Ra7F2XBQ==
+babylonjs-gltf2interface@6.18.0:
+  version "6.18.0"
+  resolved "https://registry.yarnpkg.com/babylonjs-gltf2interface/-/babylonjs-gltf2interface-6.18.0.tgz#a63540b5e0a2b90970177b2579cd4fc5068b3283"
+  integrity sha512-gSXoYec7BFawuvdrvsBXKqVdkpuxznlX57c0qFP+/AkeAnb5Cvo3tGLKN0Iz6w4SLBgg7Td7hvxwQTxXkL/NRA==
 
 balanced-match@^1.0.0:
   version "1.0.2"
@@ -4864,9 +4850,9 @@ ejs@^3.1.6:
     jake "^10.8.5"
 
 electron-to-chromium@^1.4.477:
-  version "1.4.499"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.499.tgz#dc36b67f4c8e273524e8d2080c5203a6a76987b6"
-  integrity sha512-0NmjlYBLKVHva4GABWAaHuPJolnDuL0AhV3h1hES6rcLCWEIbRL6/8TghfsVwkx6TEroQVdliX7+aLysUpKvjw==
+  version "1.4.500"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.500.tgz#7dd05fdfbe02ed34b9f6099cfe01407b473d5af7"
+  integrity sha512-P38NO8eOuWOKY1sQk5yE0crNtrjgjJj6r3NrbIKtG18KzCHmHE2Bt+aQA7/y0w3uYsHWxDa6icOohzjLJ4vJ4A==
 
 emittery@^0.13.1:
   version "0.13.1"
@@ -6237,9 +6223,9 @@ ignore@^5.2.0, ignore@^5.2.4:
   integrity sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==
 
 immutable@^4.0.0:
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.3.2.tgz#f89d910f8dfb6e15c03b2cae2faaf8c1f66455fe"
-  integrity sha512-oGXzbEDem9OOpDWZu88jGiYCvIsLHMvGw+8OXlpsvTFvIQplQbjg1B1cvKg8f7Hoch6+NGjpPsH1Fr+Mc2D1aA==
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.3.3.tgz#8934ff6826d996a7642c8dc4b46e694dd19561e3"
+  integrity sha512-808ZFYMsIRAjLAu5xkKo0TsbY9LBy9H5MazTKIEHerNkg0ymgilGfBPMR/3G7d/ihGmuK2Hw8S1izY2d3kd3wA==
 
 import-fresh@^3.2.1:
   version "3.3.0"
@@ -8278,9 +8264,9 @@ node-fetch@^1.0.1:
     is-stream "^1.0.1"
 
 node-fetch@^2.6.0, node-fetch@^2.6.1, node-fetch@^2.6.12:
-  version "2.6.13"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.13.tgz#a20acbbec73c2e09f9007de5cda17104122e0010"
-  integrity sha512-StxNAxh15zr77QvvkmveSQ8uCQ4+v5FkvNTj0OESmiHu+VRi/gXArXtkWMElOsOUNLtUEvI4yS+rdtOHZTwlQA==
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.7.0.tgz#d0f0fa6e3e2dc1d27efcd8ad99d550bda94d187d"
+  integrity sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==
   dependencies:
     whatwg-url "^5.0.0"
 
