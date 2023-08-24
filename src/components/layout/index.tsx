@@ -21,7 +21,7 @@ export const Layout: FC<Readonly<Props>> = ({ main, children }: Props) => (
 
 		<Partners />
 
-		<Nav hasShell className="c-nav--inline" />
+		<Nav inline />
 
 		<Footer />
 	</>

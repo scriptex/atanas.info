@@ -165,6 +165,13 @@ export const skills: ForceNode[] = [
 		...defaultForceNodeSize
 	},
 	{
+		text: 'Contentful',
+		icon: 'contentful',
+		fill: '#2478CC',
+		since: 2023,
+		...defaultForceNodeSize
+	},
+	{
 		text: 'CSS3',
 		icon: 'css3',
 		fill: '#1572B6',

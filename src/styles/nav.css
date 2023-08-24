@@ -7,8 +7,8 @@
 	right: 0;
 	pointer-events: none;
 
-	& ul,
-	&::before {
+	&::before,
+	& .c-nav__inner {
 		opacity: 0;
 		visibility: hidden;
 		transition: all var(--timing) var(--easing);
@@ -25,10 +25,9 @@
 		background-color: color-mod(var(--color-secondary) a(70%));
 	}
 
-	& ul {
+	& .c-nav__inner {
 		width: 20rem;
 		height: 100%;
-		@mixin flex-column nowrap;
 		position: relative;
 		z-index: 2;
 		margin: 0 0 0 auto;
@@ -36,6 +35,45 @@
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 		transform: translateX(100%);
+
+		& > ul {
+			height: 100%;
+			@mixin flex-column nowrap;
+			position: relative;
+			z-index: 2;
+			transition: transform var(--timing) var(--easing);
+
+			&:not(:nth-child(1)) {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 1;
+				transform: translateX(100%);
+
+				& li:first-child {
+					max-height: 3rem;
+
+					& button {
+						width: 100%;
+						height: 100%;
+						position: static;
+						top: auto;
+						right: auto;
+						bottom: auto;
+						border: 0;
+						margin: 0 auto 0 0;
+						border-radius: 0;
+
+						&::before {
+							transform: rotate(135deg);
+							margin: 0 0 0 0.375rem;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	& li,
@@ -50,18 +88,43 @@
 		transform: translateX(100%);
 
 		& ul {
-			font-size: 75%;
-			height: auto;
-			flex-flow: row wrap;
-			opacity: 1;
-			visibility: visible;
+			width: 100%;
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			top: 0;
+			left: 100%;
+			bottom: 0;
 			transform: none;
+			transition:
+				opacity var(--timing) var(--easing),
+				visibility var(--timing) var(--easing);
 
 			& li {
-				text-align: center;
-				width: calc(100% / 3);
-				flex: 0 0 calc(100% / 3);
-				border-top: 1px solid;
+				height: 3rem;
+				border-width: 1px 1px 0;
+				border-style: solid;
+				border-color: var(--color-primary);
+				transition: none !important;
+
+				&:last-child {
+					border-bottom-width: 1px;
+				}
+			}
+
+			& button {
+				width: 100%;
+				height: 3rem;
+				position: static;
+				top: auto;
+				right: auto;
+				border: 0;
+				margin: 0 auto 0 0;
+				border-radius: 0;
+
+				&::before {
+					transform: rotate(135deg);
+				}
 			}
 		}
 	}
@@ -73,6 +136,7 @@
 	& a {
 		color: var(--color-primary);
 		text-decoration: none;
+		height: 100%;
 		@mixin flex-row nowrap, center, center;
 		padding: 0.5rem;
 		background-color: var(--color-secondary);
@@ -81,26 +145,68 @@
 			transition: none;
 		}
 
-		&:only-child {
-			height: 100%;
-		}
-
-		&.active,
-		&.has-active:not(:only-child) {
+		&.active {
 			color: var(--color-action);
 			background-color: var(--color-primary);
 
-			& + ul {
-				opacity: 1;
-				visibility: visible;
+			& ~ button {
+				color: var(--color-action);
 			}
 		}
+	}
+
+	& button {
+		width: 2rem;
+		height: 2rem;
+		@mixin flex-row nowrap, center, center;
+		position: absolute;
+		top: 0;
+		right: 1rem;
+		bottom: 0;
+		z-index: 2;
+		padding: 0;
+		border: 1px solid;
+		margin: auto;
+		background: none;
+		border-radius: 50%;
+		box-shadow: none;
+		appearance: none;
+		cursor: pointer;
+
+		&::before {
+			content: '';
+			width: 0.625rem;
+			height: 0.625rem;
+			display: block;
+			border-width: 0.125rem;
+			border-style: solid;
+			border-color: transparent currentcolor currentcolor transparent;
+			margin-left: -0.3125rem;
+			transform: rotate(-45deg);
+		}
+	}
+
+	& .is--active ul {
+		opacity: 1;
+		visibility: visible;
 	}
 }
 
 @for $i from 1 to 20 {
 	.c-nav li:nth-child($(i)) {
 		transition-delay: calc(0.075s * $i);
+	}
+}
+
+.c-nav--active {
+	& .c-nav__inner {
+		& > ul {
+			transform: translateX(-100%);
+
+			&.is--visible {
+				transform: translateX(0);
+			}
+		}
 	}
 }
 
@@ -153,12 +259,21 @@
 
 		& ul {
 			font-size: 90%;
+			width: auto;
+			position: static;
+			opacity: 1;
+			visibility: visible;
+			top: auto;
+			right: auto;
+			bottom: auto;
+			left: auto;
 			columns: 1;
 			column-gap: 0;
 			margin: 0.5rem 0 -0.25rem 0.5rem;
 
 			& li {
 				width: auto;
+				height: auto;
 				text-align: left;
 				padding-bottom: 0.25rem;
 				border: 0;
@@ -181,8 +296,7 @@
 		padding: 0;
 		background-color: transparent;
 
-		&.active,
-		&.has-active:not(:only-child) {
+		&.active {
 			color: inherit;
 			text-decoration: underline;
 			text-decoration-color: var(--color-action);
@@ -200,6 +314,16 @@
 	.c-nav a:hover {
 		color: var(--color-action);
 		background-color: var(--color-primary);
+
+		& ~ button {
+			color: var(--color-action);
+		}
+	}
+
+	.c-nav button:hover {
+		color: var(--color-primary) !important;
+		border-color: var(--color-action);
+		background-color: var(--color-action);
 	}
 
 	.c-nav--inline a:hover {
@@ -260,14 +384,14 @@
 	& .c-nav {
 		pointer-events: all;
 
-		& > ul,
-		&::before {
+		&::before,
+		& .c-nav__inner {
 			opacity: 1;
 			visibility: visible;
 		}
 	}
 
-	& ul {
+	& .c-nav__inner {
 		transform: translateX(0);
 	}
 
