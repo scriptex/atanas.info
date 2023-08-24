@@ -58,6 +58,14 @@ export const Social: FC<Readonly<Props>> = ({ data }: Props) => {
 					</div>
 				</div>
 
+				<header className="c-section__header">
+					<h2>Social feed</h2>
+				</header>
+
+				<Script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer />
+
+				<div className="elfsight-app-6509195d-9c2d-4028-aad0-bfe6cc2c0676" />
+
 				{online && <SocialMusic data={data} />}
 			</Section>
 		</Layout>
