@@ -2,7 +2,7 @@ import type { Document } from '@contentful/rich-text-types';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import { Asset, createClient, EntryCollection, EntrySkeletonType } from 'contentful';
 
-type CMSType = 'bio' | 'titles' | 'article';
+type CMSType = 'bio' | 'titles' | 'article' | 'timeline';
 type RawCMSData = EntryCollection<EntrySkeletonType, undefined, string>;
 
 export type BioEntry = {
@@ -19,10 +19,21 @@ export type Article = Readonly<{
 	externalImage?: string;
 }>;
 
+export type TimelineItem = {
+	date: string;
+	icon: 'work' | 'education' | 'personal';
+	index: number;
+	title: string;
+	content: string;
+	location: string;
+};
+
 const client = createClient({
 	space: process.env.CONTENTFUL_SPACE_ID!,
 	accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!
 });
+
+const getHTMLString = <T extends Document>(data?: T): string => (data ? documentToHtmlString(data) : '');
 
 const getCMSData = async (type: CMSType): Promise<RawCMSData> => {
 	const contentTypes = await client.getContentTypes();
@@ -48,7 +59,7 @@ export const getBioFromCMS = async (): Promise<BioEntry[]> => {
 			.map(item => item.fields)
 			.map(({ title, content }) => ({
 				title: title?.toString(),
-				content: content ? documentToHtmlString(content as unknown as Document) : ''
+				content: getHTMLString(content as Document)
 			}));
 	} catch (error: unknown) {
 		return [];
@@ -71,6 +82,24 @@ export const getArticlesFromCMS = async (): Promise<Article[]> => {
 		const data = await getCMSData('article');
 
 		return (data.items.map(item => item.fields) as Article[]) ?? [];
+	} catch (error: unknown) {
+		return [];
+	}
+};
+
+export const getTimelineFromCMS = async (): Promise<TimelineItem[]> => {
+	try {
+		const data = await getCMSData('timeline');
+
+		return (
+			(data.items
+				.map(item => item.fields)
+				.map(({ title, content, ...rest }) => ({
+					...rest,
+					title: getHTMLString(title as Document),
+					content: getHTMLString(content as Document)
+				})) as TimelineItem[]) ?? []
+		);
 	} catch (error: unknown) {
 		return [];
 	}
