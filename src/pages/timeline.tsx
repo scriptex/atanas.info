@@ -1,10 +1,10 @@
 import type { FC } from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import timeline from '@data/lotties/timeline.json';
 import { TimelineItem, getTimelineFromCMS } from '@scripts/cms';
 import { Layout, Section, Animation, Title, Icon } from '@components';
-import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 export const Timeline: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data }) => (
 	<Layout>
