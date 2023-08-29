@@ -1,25 +1,25 @@
 import type { FC } from 'react';
 
 import { ResumeEntry } from '@components';
-import { resumeExperience, ResumeExperienceItem } from '@data/resume';
+import type { Experience } from '@scripts/cms';
 
-export const ResumeExperience: FC = () => (
+type Props = {
+	data: Experience[];
+};
+
+export const ResumeExperience: FC<Readonly<Props>> = ({ data }: Props) => (
 	<div className="c-resume__block">
 		<h2>Experience</h2>
 
-		{resumeExperience.map((item: ResumeExperienceItem) => (
+		{data.map((item: Experience) => (
 			<div className="c-resume__experience" key={item.index}>
-				<h3>{item.position}</h3>
+				<h3>{item.title}</h3>
 
-				<h4>{item.project}</h4>
+				<div className="c-resume__experience-title" dangerouslySetInnerHTML={{ __html: item.project }} />
 
-				<ResumeEntry {...item.meta} />
+				<ResumeEntry place={item.location} period={item.period} />
 
-				<ul>
-					{item.details.map(detail => (
-						<li key={detail}>{detail}</li>
-					))}
-				</ul>
+				<div className="c-resume__experience-details" dangerouslySetInnerHTML={{ __html: item.details }} />
 			</div>
 		))}
 	</div>

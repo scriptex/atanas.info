@@ -76,7 +76,7 @@ snapshotTest(
 );
 
 it('Test the `getStaticProps` function', async () => {
-	const result = await getStaticProps();
+	const result = await getStaticProps({});
 
 	expect(result).toBeDefined();
 });

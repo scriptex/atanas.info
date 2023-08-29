@@ -1,6 +1,18 @@
 import type { FC } from 'react';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import resume from '@data/lotties/resume.json';
+import {
+	ResumeData,
+	getEducationFromCMS,
+	getStrengthsFromCMS,
+	getExperienceFromCMS,
+	getResumeMoreFromCMS,
+	getResumeLinksFromCMS,
+	getCertificatesFromCMS,
+	getOwnerDetailsFromCMS,
+	getResumeSkillsFromCMS
+} from '@scripts/cms';
 import {
 	Lines,
 	Title,
@@ -17,7 +29,7 @@ import {
 	ResumeExperience
 } from '@components';
 
-export const Resume: FC = () => (
+export const Resume: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data }) => (
 	<Layout>
 		<Title text="Resume | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
@@ -41,26 +53,49 @@ export const Resume: FC = () => (
 			<Lines />
 
 			<div className="c-resume">
-				<ResumeTitle />
+				{!!data.links?.length && (
+					<ResumeTitle
+						alt={data.owner.alt}
+						data={data.links}
+						name={data.owner.name}
+						title={data.owner.title}
+						image={data.owner.image}
+					/>
+				)}
 
 				<div className="c-resume__content">
-					<ResumeSummary />
+					<ResumeSummary content={data.owner.summary} />
 
-					<ResumeEducation />
+					<ResumeEducation education={data.education} certificates={data.certificates} />
 
-					<ResumeExperience />
+					<ResumeExperience data={data.experience} />
 				</div>
 
 				<div className="c-resume__aside">
-					<ResumeSkills />
+					<ResumeSkills data={data.skills} />
 
-					<ResumeStrengths />
+					<ResumeStrengths data={data.strengths} />
 
-					<ResumeMore />
+					<ResumeMore data={data.more} />
 				</div>
 			</div>
 		</Section>
 	</Layout>
 );
+
+export const getStaticProps: GetStaticProps<{ data: ResumeData }> = async () => ({
+	props: {
+		data: {
+			more: await getResumeMoreFromCMS(),
+			links: await getResumeLinksFromCMS(),
+			owner: await getOwnerDetailsFromCMS(),
+			skills: await getResumeSkillsFromCMS(),
+			education: await getEducationFromCMS(),
+			strengths: await getStrengthsFromCMS(),
+			experience: await getExperienceFromCMS(),
+			certificates: await getCertificatesFromCMS()
+		}
+	}
+});
 
 export default Resume;

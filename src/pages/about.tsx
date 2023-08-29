@@ -4,10 +4,10 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import book from '@data/lotties/book.json';
 import { useNetworkState } from '@scripts/shared';
-import { BioEntry, getBioFromCMS } from '@scripts/cms';
-import { Layout, Section, Animation, Icon, Title } from '@components';
+import { Icon, Title, Layout, Section, Animation } from '@components';
+import { BioEntry, OwnerDetails, getBioFromCMS, getOwnerDetailsFromCMS } from '@scripts/cms';
 
-export const About: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ bio }) => {
+export const About: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ bio, owner }) => {
 	const online = useNetworkState();
 
 	return (
@@ -23,13 +23,7 @@ export const About: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ bio 
 				additionalElements={<Animation data={book} width={200} height={200} className="c-section__animation" />}
 			>
 				{online ? (
-					<Image
-						src="/images/temp/atanas.jpg"
-						alt="Atanas Atanasov smiling dressed in a green t-shirt"
-						width={240}
-						height={240}
-						loading="lazy"
-					/>
+					<Image alt={owner.alt} src={owner.image} width={240} height={240} loading="lazy" />
 				) : (
 					<Icon name="svg-disconnected " className="svg-disconnected" width={240} height={240} />
 				)}
@@ -50,9 +44,10 @@ export const About: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ bio 
 	);
 };
 
-export const getStaticProps: GetStaticProps<{ bio: BioEntry[] }> = async () => ({
+export const getStaticProps: GetStaticProps<{ bio: BioEntry[]; owner: OwnerDetails }> = async () => ({
 	props: {
-		bio: await getBioFromCMS()
+		bio: await getBioFromCMS(),
+		owner: await getOwnerDetailsFromCMS()
 	}
 });
 

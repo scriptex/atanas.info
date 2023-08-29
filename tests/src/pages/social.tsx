@@ -78,7 +78,7 @@ it('Tests the Social page when offline', async () => {
 });
 
 it('Should test the `getStaticProps` function', async () => {
-	const result = await getStaticProps();
+	const result = await getStaticProps({});
 
 	expect(result).toEqual({ props: { data: [] } });
 });

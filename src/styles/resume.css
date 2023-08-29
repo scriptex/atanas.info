@@ -124,12 +124,37 @@
 	}
 }
 
+.c-resume__experience-title {
+	font-size: var(--font-size-h4);
+	font-weight: 700;
+	padding-bottom: 1rem;
+
+	& i {
+		color: inherit;
+	}
+
+	& p {
+		margin: 0;
+
+		&:last-child {
+			font-size: 80%;
+		}
+	}
+
+	& h6 {
+		font-size: 75%;
+		font-weight: normal;
+		padding: 0.25rem 0;
+		margin: 0;
+	}
+}
+
 .c-resume__skills {
 	padding: 0;
 	margin: 0 -0.5rem;
 	list-style: none outside none;
 
-	&:not(:first-child) {
+	&:not(:first-of-type) {
 		padding-top: 1.375rem;
 	}
 
@@ -351,6 +376,14 @@
 		}
 	}
 
+	.c-resume__experience-title {
+		padding-bottom: 0.25rem;
+
+		& h6 {
+			padding: 0;
+		}
+	}
+
 	.c-resume__block {
 		& p:last-child {
 			margin-bottom: 0;
@@ -362,7 +395,6 @@
 	}
 
 	.c-resume__list {
-		display: block;
 		padding-bottom: 0.25rem;
 
 		& li {
@@ -371,7 +403,7 @@
 	}
 
 	.c-resume__skills {
-		&:not(:first-child) {
+		&:not(:first-of-type) {
 			padding-top: 0;
 		}
 	}

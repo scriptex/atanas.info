@@ -1,16 +1,20 @@
 import type { FC } from 'react';
 
-import { ResumeStrengthItem, resumeStrengths } from '@data/resume';
+import type { Strength } from '@scripts/cms';
 
-export const ResumeStrengths: FC = () => (
+type Props = {
+	data: Strength[];
+};
+
+export const ResumeStrengths: FC<Readonly<Props>> = ({ data }: Props) => (
 	<div className="c-resume__block">
 		<h2>Strengths</h2>
 
 		<ul className="c-resume__strengths">
-			{resumeStrengths.map((item: ResumeStrengthItem) => (
+			{data.map((item: Strength) => (
 				<li key={item.index}>
 					<h4>
-						<i className={item.icon} />
+						<i className={`icon-${item.icon}`} />
 						{item.title}
 					</h4>
 

@@ -1,14 +1,18 @@
 import type { FC } from 'react';
 
-import { resumeMore } from '@data/resume';
+import type { ResumeMore as IResumeMore } from '@scripts/cms';
 
-export const ResumeMore: FC = () => (
+type Props = {
+	data: IResumeMore[];
+};
+
+export const ResumeMore: FC<Readonly<Props>> = ({ data }: Props) => (
 	<div className="c-resume__block">
 		<h2>More</h2>
 
 		<ul className="c-resume__strengths">
-			{resumeMore.map((item: string) => (
-				<p key={item}>{item}</p>
+			{data.map((item: IResumeMore) => (
+				<li key={item.index} dangerouslySetInnerHTML={{ __html: item.content }} />
 			))}
 		</ul>
 	</div>

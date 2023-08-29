@@ -577,7 +577,7 @@ exports[`Certificates component Should render the Certificates component 1`] = `
           >
             <a
               class="c-certificate"
-              href="/cert/html.pdf"
+              href="https://example.com/file.pdf"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -589,193 +589,13 @@ exports[`Certificates component Should render the Certificates component 1`] = `
                 />
               </div>
               <img
-                alt="HTML"
+                alt="Certificate 1"
                 data-nimg="1"
                 decoding="async"
                 height="578"
                 loading="lazy"
-                src="/_next/image?url=%2Fcert%2Fhtml.jpg&w=1920&q=75"
-                srcset="/_next/image?url=%2Fcert%2Fhtml.jpg&w=828&q=75 1x, /_next/image?url=%2Fcert%2Fhtml.jpg&w=1920&q=75 2x"
-                style="color: transparent;"
-                width="818"
-              />
-              <svg
-                class="c-svg-external-link"
-              >
-                <use
-                  xlink:href="#svg-external-link"
-                />
-              </svg>
-            </a>
-          </div>
-          <div
-            class="o-grid__item xs-12 sm-6"
-          >
-            <a
-              class="c-certificate"
-              href="/cert/javascript.pdf"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <div
-                class="c-loading"
-              >
-                <div
-                  class="c-loader"
-                />
-              </div>
-              <img
-                alt="Javascript"
-                data-nimg="1"
-                decoding="async"
-                height="578"
-                loading="lazy"
-                src="/_next/image?url=%2Fcert%2Fjavascript.jpg&w=1920&q=75"
-                srcset="/_next/image?url=%2Fcert%2Fjavascript.jpg&w=828&q=75 1x, /_next/image?url=%2Fcert%2Fjavascript.jpg&w=1920&q=75 2x"
-                style="color: transparent;"
-                width="818"
-              />
-              <svg
-                class="c-svg-external-link"
-              >
-                <use
-                  xlink:href="#svg-external-link"
-                />
-              </svg>
-            </a>
-          </div>
-          <div
-            class="o-grid__item xs-12 sm-6"
-          >
-            <a
-              class="c-certificate"
-              href="/cert/python.pdf"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <div
-                class="c-loading"
-              >
-                <div
-                  class="c-loader"
-                />
-              </div>
-              <img
-                alt="Python"
-                data-nimg="1"
-                decoding="async"
-                height="578"
-                loading="lazy"
-                src="/_next/image?url=%2Fcert%2Fpython.jpg&w=1920&q=75"
-                srcset="/_next/image?url=%2Fcert%2Fpython.jpg&w=828&q=75 1x, /_next/image?url=%2Fcert%2Fpython.jpg&w=1920&q=75 2x"
-                style="color: transparent;"
-                width="818"
-              />
-              <svg
-                class="c-svg-external-link"
-              >
-                <use
-                  xlink:href="#svg-external-link"
-                />
-              </svg>
-            </a>
-          </div>
-          <div
-            class="o-grid__item xs-12 sm-6"
-          >
-            <a
-              class="c-certificate"
-              href="/cert/react.pdf"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <div
-                class="c-loading"
-              >
-                <div
-                  class="c-loader"
-                />
-              </div>
-              <img
-                alt="React Development"
-                data-nimg="1"
-                decoding="async"
-                height="578"
-                loading="lazy"
-                src="/_next/image?url=%2Fcert%2Freact.jpg&w=1920&q=75"
-                srcset="/_next/image?url=%2Fcert%2Freact.jpg&w=828&q=75 1x, /_next/image?url=%2Fcert%2Freact.jpg&w=1920&q=75 2x"
-                style="color: transparent;"
-                width="818"
-              />
-              <svg
-                class="c-svg-external-link"
-              >
-                <use
-                  xlink:href="#svg-external-link"
-                />
-              </svg>
-            </a>
-          </div>
-          <div
-            class="o-grid__item xs-12 sm-6"
-          >
-            <a
-              class="c-certificate"
-              href="/cert/css.pdf"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <div
-                class="c-loading"
-              >
-                <div
-                  class="c-loader"
-                />
-              </div>
-              <img
-                alt="CSS"
-                data-nimg="1"
-                decoding="async"
-                height="578"
-                loading="lazy"
-                src="/_next/image?url=%2Fcert%2Fcss.jpg&w=1920&q=75"
-                srcset="/_next/image?url=%2Fcert%2Fcss.jpg&w=828&q=75 1x, /_next/image?url=%2Fcert%2Fcss.jpg&w=1920&q=75 2x"
-                style="color: transparent;"
-                width="818"
-              />
-              <svg
-                class="c-svg-external-link"
-              >
-                <use
-                  xlink:href="#svg-external-link"
-                />
-              </svg>
-            </a>
-          </div>
-          <div
-            class="o-grid__item xs-12 sm-6"
-          >
-            <a
-              class="c-certificate"
-              href="/cert/deno.pdf"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <div
-                class="c-loading"
-              >
-                <div
-                  class="c-loader"
-                />
-              </div>
-              <img
-                alt="Deno"
-                data-nimg="1"
-                decoding="async"
-                height="578"
-                loading="lazy"
-                src="/_next/image?url=%2Fcert%2Fdeno.jpg&w=1920&q=75"
-                srcset="/_next/image?url=%2Fcert%2Fdeno.jpg&w=828&q=75 1x, /_next/image?url=%2Fcert%2Fdeno.jpg&w=1920&q=75 2x"
+                src="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage.png&w=1920&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage.png&w=828&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2Fimage.png&w=1920&q=75 2x"
                 style="color: transparent;"
                 width="818"
               />

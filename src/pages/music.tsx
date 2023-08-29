@@ -1,9 +1,10 @@
 import { FC, useRef, useState, useEffect } from 'react';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
+import { getData, queryMusic } from '@lib/mongodb';
 import { music, MusicFunctions } from '@scripts/music';
 import { Ref, composeClassName } from '@scripts/shared';
 import { Button, Layout, Section, Title } from '@components';
-import { getData, queryMusic, MongoDBProps } from '@lib/mongodb';
 
 type Track = {
 	url: string;
@@ -11,10 +12,6 @@ type Track = {
 		title: string;
 		artist: string;
 	};
-};
-
-type Props = {
-	data: Track[];
 };
 
 const getTrackArtist = (data: string): string => {
@@ -31,7 +28,7 @@ const getTrackArtist = (data: string): string => {
 	return ` (${result})`;
 };
 
-export const Music: FC<Readonly<Props>> = ({ data }: Props) => {
+export const Music: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data }) => {
 	const [source, setSource] = useState(data[0]);
 	const [playing, setPlaying] = useState(false);
 	const [visible, setVisible] = useState(false);
@@ -138,6 +135,7 @@ export const Music: FC<Readonly<Props>> = ({ data }: Props) => {
 	);
 };
 
-export const getStaticProps = async (): Promise<MongoDBProps<unknown>> => getData('Music', queryMusic);
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const getStaticProps: GetStaticProps<{ data: Track[] }> = async ({ params }) => getData('Music', queryMusic);
 
 export default Music;

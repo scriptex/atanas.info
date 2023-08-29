@@ -1,4 +1,4 @@
-import { intervalToDuration } from 'date-fns';
+import intervalToDuration from 'date-fns/intervalToDuration';
 
 import statistics from '@data/lotties/statistics.json';
 import { Animation } from '@components';

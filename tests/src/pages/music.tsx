@@ -30,7 +30,7 @@ snapshotTest(() => <Music data={data} />, '.c-music__btn--pause', 'Music');
 snapshotTest(() => <Music data={data} />, '.c-music__tracks button:first-child', 'Music');
 
 it('Should test the `getStaticProps` function', async () => {
-	const result = await getStaticProps();
+	const result = await getStaticProps({});
 
 	expect(result).toEqual({ props: { data: [] } });
 });

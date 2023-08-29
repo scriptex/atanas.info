@@ -45,7 +45,7 @@ export const queryLastFM: Query = { name: 'atanas-info-last-fm' };
 export const queryCloudinary: Query = { name: 'atanas-info-cloudinary' };
 export const queryScreenshots: Query = { name: 'atanas-info-screenshots' };
 
-export type MongoDBProps<T> = {
+type MongoDBProps<T> = {
 	props: {
 		data: T;
 	};

@@ -1,19 +1,16 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { FC } from 'react';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Routes } from '@data/routes';
 import type { WebProject } from '@data/projects';
 import { portfolioSectionProps } from '@data/pages';
-import { getData, MongoDBProps, queryScreenshots } from '@lib/mongodb';
+import { getData, queryScreenshots } from '@lib/mongodb';
 import { Icon, Layout, Loader, Section, SectionNav, ExternalLink, Title } from '@components';
 import { usePagination, useNetworkState, composeClassName, useCurrentPageParam } from '@scripts/shared';
 
-type Props = {
-	data: WebProject[];
-};
-
-export const PortfolioWebApps: FC<Readonly<Props>> = ({ data = [] }: Props) => {
+export const PortfolioWebApps: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data = [] }) => {
 	const page = useCurrentPageParam();
 	const online = useNetworkState();
 	const { menu, items } = usePagination(data);
@@ -72,6 +69,8 @@ export const PortfolioWebApps: FC<Readonly<Props>> = ({ data = [] }: Props) => {
 	);
 };
 
-export const getStaticProps = async (): Promise<MongoDBProps<unknown[]>> => getData('Screenshots', queryScreenshots);
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const getStaticProps: GetStaticProps<{ data: WebProject[] }> = async ({ params }) =>
+	getData('Screenshots', queryScreenshots);
 
 export default PortfolioWebApps;
