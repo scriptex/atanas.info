@@ -146,6 +146,8 @@ export const GitlabStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 	);
 };
 
-export const getStaticProps: GetStaticProps<{ data: GitlabInsights }> = async ({}) => getData('Insights', queryGitlab);
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const getStaticProps: GetStaticProps<{ data: GitlabInsights }> = async ({ params }) =>
+	getData('Insights', queryGitlab);
 
 export default GitlabStats;

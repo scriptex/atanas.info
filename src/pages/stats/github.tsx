@@ -212,6 +212,8 @@ export const GithubStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 	);
 };
 
-export const getStaticProps: GetStaticProps<{ data: GithubInsights }> = async ({}) => getData('Insights', queryGithub);
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const getStaticProps: GetStaticProps<{ data: GithubInsights }> = async ({ params }) =>
+	getData('Insights', queryGithub);
 
 export default GithubStats;

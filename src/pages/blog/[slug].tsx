@@ -36,7 +36,8 @@ export const getStaticProps: GetStaticProps<{
 	return { props: { post, articles } };
 };
 
-export const getStaticPaths: GetStaticPaths = async ({}) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const getStaticPaths: GetStaticPaths = async ({ locales, defaultLocale }) => {
 	const posts = getAllPosts('src/data/posts', ['slug']);
 
 	return {

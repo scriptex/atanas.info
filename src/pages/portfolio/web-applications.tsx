@@ -69,7 +69,8 @@ export const PortfolioWebApps: FC<Readonly<InferGetStaticPropsType<typeof getSta
 	);
 };
 
-export const getStaticProps: GetStaticProps<{ data: WebProject[] }> = async ({}) =>
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const getStaticProps: GetStaticProps<{ data: WebProject[] }> = async ({ params }) =>
 	getData('Screenshots', queryScreenshots);
 
 export default PortfolioWebApps;

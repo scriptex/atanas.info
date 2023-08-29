@@ -83,6 +83,7 @@ export const NPMStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps
 	);
 };
 
-export const getStaticProps: GetStaticProps<Props> = async ({}) => getData('Insights', queryNPM);
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const getStaticProps: GetStaticProps<Props> = async ({ params }) => getData('Insights', queryNPM);
 
 export default NPMStats;

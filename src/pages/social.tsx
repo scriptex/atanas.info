@@ -69,6 +69,8 @@ export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>
 	);
 };
 
-export const getStaticProps: GetStaticProps<{ data: LastFMInsights }> = async ({}) => getData('Insights', queryLastFM);
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const getStaticProps: GetStaticProps<{ data: LastFMInsights }> = async ({ params }) =>
+	getData('Insights', queryLastFM);
 
 export default Social;
