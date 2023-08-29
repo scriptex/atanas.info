@@ -212,6 +212,6 @@ export const GithubStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 	);
 };
 
-export const getStaticProps: GetStaticProps<{ data: GithubInsights }> = async () => getData('Insights', queryGithub);
+export const getStaticProps: GetStaticProps<{ data: GithubInsights }> = async ({}) => getData('Insights', queryGithub);
 
 export default GithubStats;

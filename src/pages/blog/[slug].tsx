@@ -18,7 +18,7 @@ export const OpenSourceProject: FC<Readonly<InferGetStaticPropsType<typeof getSt
 			<MDX
 				id="blog-post"
 				back={Routes.BLOG}
-				title={match?.title ?? post.slug}
+				title={match?.title ?? post.slug ?? ''}
 				image={match?.externalImage ?? match?.image?.fields.file?.url?.toString()}
 				content={post.content}
 			/>
@@ -36,7 +36,7 @@ export const getStaticProps: GetStaticProps<{
 	return { props: { post, articles } };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async ({}) => {
 	const posts = getAllPosts('src/data/posts', ['slug']);
 
 	return {

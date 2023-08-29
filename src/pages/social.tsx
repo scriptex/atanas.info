@@ -69,6 +69,6 @@ export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>
 	);
 };
 
-export const getStaticProps: GetStaticProps<{ data: LastFMInsights }> = async () => getData('Insights', queryLastFM);
+export const getStaticProps: GetStaticProps<{ data: LastFMInsights }> = async ({}) => getData('Insights', queryLastFM);
 
 export default Social;

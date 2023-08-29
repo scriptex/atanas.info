@@ -69,7 +69,7 @@ export const PortfolioWebApps: FC<Readonly<InferGetStaticPropsType<typeof getSta
 	);
 };
 
-export const getStaticProps: GetStaticProps<{ data: WebProject[] }> = async () =>
+export const getStaticProps: GetStaticProps<{ data: WebProject[] }> = async ({}) =>
 	getData('Screenshots', queryScreenshots);
 
 export default PortfolioWebApps;

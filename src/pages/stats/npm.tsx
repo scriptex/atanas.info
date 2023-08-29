@@ -83,6 +83,6 @@ export const NPMStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps
 	);
 };
 
-export const getStaticProps: GetStaticProps<Props> = async () => getData('Insights', queryNPM);
+export const getStaticProps: GetStaticProps<Props> = async ({}) => getData('Insights', queryNPM);
 
 export default NPMStats;

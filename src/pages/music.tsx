@@ -135,6 +135,6 @@ export const Music: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>>
 	);
 };
 
-export const getStaticProps: GetStaticProps<{ data: Track[] }> = async () => getData('Music', queryMusic);
+export const getStaticProps: GetStaticProps<{ data: Track[] }> = async ({}) => getData('Music', queryMusic);
 
 export default Music;
