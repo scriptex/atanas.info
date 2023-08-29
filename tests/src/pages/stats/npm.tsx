@@ -3,6 +3,7 @@ import type { ComponentProps } from 'react';
 import { snapshotTest } from '@test-config/helpers';
 import { NPMStats, getStaticProps } from '@pages/stats/npm';
 import type { Package, WithError, WithSum } from '@scripts/types';
+import { InferGetStaticPropsType } from 'next';
 
 type Data = Record<string, Package> & WithSum & WithError;
 
@@ -38,11 +39,13 @@ snapshotTest(() => <NPMStats data={data} />, undefined, 'NPMStats');
 snapshotTest(() => <NPMStats data={{} as ComponentProps<typeof NPMStats>['data']} />, undefined, 'NPMStats');
 
 it('Test the `getStaticProps` function', async () => {
-	const result = await getStaticProps();
+	const result = (await getStaticProps({})) as {
+		props: InferGetStaticPropsType<typeof getStaticProps>;
+	};
 
 	expect(result).toBeDefined();
 	expect(result.props).toBeDefined();
 	expect(result.props.data).toBeDefined();
 	expect(Array.isArray(result.props.data)).toEqual(true);
-	expect((result.props.data as []).length).toEqual(0);
+	expect((result.props.data as unknown as Array<never>).length).toEqual(0);
 });

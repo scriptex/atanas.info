@@ -1,18 +1,15 @@
 import Script from 'next/script';
 import type { FC } from 'react';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import socialMedia from '@data/lotties/social-media.json';
 import { useNetworkState } from '@scripts/shared';
 import type { LastFMInsights } from '@insights/utils';
+import { getData, queryLastFM } from '@lib/mongodb';
 import { SocialItem, socialItems } from '@data/social';
-import { getData, queryLastFM, MongoDBProps } from '@lib/mongodb';
 import { Icon, Lines, Layout, Section, Animation, SocialMusic, LinkedInBadge, Title } from '@components';
 
-type Props = {
-	data: LastFMInsights;
-};
-
-export const Social: FC<Readonly<Props>> = ({ data }: Props) => {
+export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data }) => {
 	const online = useNetworkState();
 
 	return (
@@ -72,6 +69,6 @@ export const Social: FC<Readonly<Props>> = ({ data }: Props) => {
 	);
 };
 
-export const getStaticProps = async (): Promise<MongoDBProps<unknown>> => getData('Insights', queryLastFM);
+export const getStaticProps: GetStaticProps<{ data: LastFMInsights }> = async () => getData('Insights', queryLastFM);
 
 export default Social;

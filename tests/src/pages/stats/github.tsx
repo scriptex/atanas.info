@@ -1,4 +1,5 @@
 import { act } from '@testing-library/react';
+import type { InferGetStaticPropsType } from 'next';
 
 import { GithubStats, getStaticProps } from '@pages/stats/github';
 import { test, mockFetch, snapshotTest } from '@test-config/helpers';
@@ -131,11 +132,13 @@ it('Test the GithubStats page with fake timers', async () => {
 });
 
 it('Test the `getStaticProps` function', async () => {
-	const result = await getStaticProps();
+	const result = (await getStaticProps({})) as {
+		props: InferGetStaticPropsType<typeof getStaticProps>;
+	};
 
 	expect(result).toBeDefined();
 	expect(result.props).toBeDefined();
 	expect(result.props.data).toBeDefined();
 	expect(Array.isArray(result.props.data)).toEqual(true);
-	expect((result.props.data as []).length).toEqual(0);
+	expect((result.props.data as unknown as Array<never>).length).toEqual(0);
 });

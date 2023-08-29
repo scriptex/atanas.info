@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import type { FC } from 'react';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Routes } from '@data/routes';
 import { sectionStatsProps } from '@scripts/stats';
+import { getData, queryNPM } from '@lib/mongodb';
 import type { Packages, Props } from '@scripts/types';
-import { getData, queryNPM, MongoDBProps } from '@lib/mongodb';
 import { Layout, Section, ExternalLink, Title } from '@components';
 
 const PackagesList: FC<Readonly<Packages>> = ({ data }: Packages) => (
@@ -42,7 +43,7 @@ const PackagesList: FC<Readonly<Packages>> = ({ data }: Packages) => (
 	</div>
 );
 
-export const NPMStats: FC<Readonly<Props>> = ({ data }: Props) => {
+export const NPMStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data }) => {
 	if (!data || Object.keys(data).length === 0) {
 		return null;
 	}
@@ -82,6 +83,6 @@ export const NPMStats: FC<Readonly<Props>> = ({ data }: Props) => {
 	);
 };
 
-export const getStaticProps = async (): Promise<MongoDBProps<unknown>> => getData('Insights', queryNPM);
+export const getStaticProps: GetStaticProps<Props> = async () => getData('Insights', queryNPM);
 
 export default NPMStats;

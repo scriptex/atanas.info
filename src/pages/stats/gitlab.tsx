@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { FC, useRef, useEffect } from 'react';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Routes } from '@data/routes';
 import gitlabCalendarData from '@data/gitlab-calendar.json';
 import { Ref, formatDate } from '@scripts/shared';
-import { getData, queryGitlab, MongoDBProps } from '@lib/mongodb';
+import { getData, queryGitlab } from '@lib/mongodb';
 import type { GitlabInsights, GitlabRepository } from '@scripts/types';
 import { addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import { Layout, Section, StatsEntry, StatsError, Title } from '@components';
@@ -61,11 +62,7 @@ const extractGitlabData = ({ general, calendar, repositories }: GitlabInsights):
 	].map((item, index) => ({ ...item, index }));
 };
 
-type Props = {
-	data: GitlabInsights;
-};
-
-export const GitlabStats: FC<Readonly<Props>> = ({ data }: Props) => {
+export const GitlabStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data }) => {
 	const { error, calendar, updated }: GitlabInsights = data;
 	const blocks = extractGitlabData(data);
 	const timeout: Ref<NodeJS.Timeout> = useRef(null);
@@ -149,6 +146,6 @@ export const GitlabStats: FC<Readonly<Props>> = ({ data }: Props) => {
 	);
 };
 
-export const getStaticProps = async (): Promise<MongoDBProps<unknown>> => getData('Insights', queryGitlab);
+export const getStaticProps: GetStaticProps<{ data: GitlabInsights }> = async () => getData('Insights', queryGitlab);
 
 export default GitlabStats;

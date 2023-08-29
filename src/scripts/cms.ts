@@ -210,7 +210,7 @@ export const getOwnerDetailsFromCMS = async (): Promise<OwnerDetails> => {
 				...item.fields,
 				alt: image.fields.description,
 				image: `https:${image.fields.file?.url}`,
-				summary: getHTMLString(item.fields?.summary as Document)
+				summary: getHTMLString(item.fields.summary as Document)
 			} as OwnerDetails;
 		});
 

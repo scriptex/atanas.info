@@ -1,9 +1,10 @@
 import Link from 'next/link';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { FC, useRef, useState, useEffect, MutableRefObject } from 'react';
 
 import { Routes } from '@data/routes';
 import { formatDate } from '@scripts/shared';
-import { getData, queryGithub, MongoDBProps } from '@lib/mongodb';
+import { getData, queryGithub } from '@lib/mongodb';
 import { YEARS, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import type { GithubInsights, GithubProfileData, GithubRepository } from '@scripts/types';
 import { Button, Layout, Section, StatsEntry, StatsError, GithubSkyline, Title } from '@components';
@@ -97,11 +98,11 @@ const registerMutationObeserer = (element: HTMLDivElement | null): MutationObser
 		}
 	});
 
-type GithubCalendarProps = {
+type Props = {
 	data: GithubProfileData;
 };
 
-const GithubCalendar: FC<GithubCalendarProps> = ({ data: { markup, stylesheet } }: GithubCalendarProps) => {
+const GithubCalendar: FC<Props> = ({ data: { markup, stylesheet } }: Props) => {
 	if (!markup || !stylesheet) {
 		return null;
 	}
@@ -148,11 +149,7 @@ const GithubSkylineComponent: FC = () => {
 	);
 };
 
-type GithubStatsProps = {
-	data: GithubInsights;
-};
-
-export const GithubStats: FC<Readonly<GithubStatsProps>> = ({ data }: GithubStatsProps) => {
+export const GithubStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data }) => {
 	const { error, updated, ...rest }: GithubInsights = data;
 	const blocks: GeneralInsight[] = error ? [] : extractGithubData(rest);
 
@@ -215,6 +212,6 @@ export const GithubStats: FC<Readonly<GithubStatsProps>> = ({ data }: GithubStat
 	);
 };
 
-export const getStaticProps = async (): Promise<MongoDBProps<unknown>> => getData('Insights', queryGithub);
+export const getStaticProps: GetStaticProps<{ data: GithubInsights }> = async () => getData('Insights', queryGithub);
 
 export default GithubStats;

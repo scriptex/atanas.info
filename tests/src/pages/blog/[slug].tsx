@@ -1,3 +1,5 @@
+import type { InferGetStaticPropsType } from 'next';
+
 import { articles } from '@test-config/mocks';
 import { snapshotTest } from '@test-config/helpers';
 import { getStaticPaths, getStaticProps, OpenSourceProject } from '@pages/blog/[slug]';
@@ -19,7 +21,7 @@ snapshotTest(
 );
 
 it('Test the `getStaticPaths` function', async () => {
-	const result = await getStaticPaths();
+	const result = await getStaticPaths({});
 
 	expect(result).toBeDefined();
 	expect(result.fallback).toEqual(false);
@@ -28,7 +30,9 @@ it('Test the `getStaticPaths` function', async () => {
 });
 
 it('Test the `getStaticProps` function', async () => {
-	const result = await getStaticProps({ params: { slug: testSlug } });
+	const result = (await getStaticProps({ params: { slug: testSlug } })) as {
+		props: InferGetStaticPropsType<typeof getStaticProps>;
+	};
 
 	expect(result).toBeDefined();
 	expect(result.props).toBeDefined();
