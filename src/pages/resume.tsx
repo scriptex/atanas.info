@@ -5,7 +5,9 @@ import resume from '@data/lotties/resume.json';
 import {
 	ResumeData,
 	getEducationFromCMS,
+	getStrengthsFromCMS,
 	getExperienceFromCMS,
+	getResumeMoreFromCMS,
 	getResumeLinksFromCMS,
 	getCertificatesFromCMS,
 	getOwnerDetailsFromCMS,
@@ -72,9 +74,9 @@ export const Resume: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ dat
 				<div className="c-resume__aside">
 					<ResumeSkills data={data.skills} />
 
-					<ResumeStrengths />
+					<ResumeStrengths data={data.strengths} />
 
-					<ResumeMore />
+					<ResumeMore data={data.more} />
 				</div>
 			</div>
 		</Section>
@@ -84,10 +86,12 @@ export const Resume: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ dat
 export const getStaticProps: GetStaticProps<{ data: ResumeData }> = async () => ({
 	props: {
 		data: {
+			more: await getResumeMoreFromCMS(),
 			links: await getResumeLinksFromCMS(),
 			owner: await getOwnerDetailsFromCMS(),
 			skills: await getResumeSkillsFromCMS(),
 			education: await getEducationFromCMS(),
+			strengths: await getStrengthsFromCMS(),
 			experience: await getExperienceFromCMS(),
 			certificates: await getCertificatesFromCMS()
 		}

@@ -1,4 +1,4 @@
-import type { Education, OwnerDetails, ResumeLink, ResumeSkills } from '@scripts/cms';
+import type { Education, OwnerDetails, ResumeLink, ResumeMore, ResumeSkills } from '@scripts/cms';
 
 export const resumeLinks: ResumeLink[] = [
 	{
@@ -51,5 +51,13 @@ export const resumeSkills: ResumeSkills[] = [
 		index: 0,
 		title: 'Skills group 1',
 		content: ['Skill 1', 'Skill 2', 'Skill 3']
+	}
+];
+
+export const resumeMore: ResumeMore[] = [
+	{
+		index: 0,
+		title: 'Resume more 1 Title',
+		content: '<p>Resume more 1 content</p>'
 	}
 ];

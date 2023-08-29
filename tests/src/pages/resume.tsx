@@ -1,8 +1,10 @@
 import { Resume } from '@pages/resume';
 import { snapshotTest } from '@test-config/helpers';
 import {
+	strengths,
 	experience,
 	certificates,
+	resumeMore as more,
 	resumeLinks as links,
 	resumeOwner as owner,
 	resumeSkills as skills,
@@ -15,9 +17,11 @@ snapshotTest(
 	() => (
 		<Resume
 			data={{
+				more,
 				links,
 				owner,
 				skills,
+				strengths,
 				education,
 				experience,
 				certificates

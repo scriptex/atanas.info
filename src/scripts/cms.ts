@@ -8,10 +8,12 @@ type CMSType =
 	| 'titles'
 	| 'article'
 	| 'timeline'
+	| 'strength'
 	| 'education'
 	| 'experience'
 	| 'certificate'
 	| 'resume link'
+	| 'resume more'
 	| 'resume skills';
 
 type RawCMSData = EntryCollection<EntrySkeletonType, undefined, string>;
@@ -84,11 +86,26 @@ export type ResumeSkills = Readonly<{
 	content: string[];
 }>;
 
+export type Strength = Readonly<{
+	icon: 'share' | 'star' | 'brush' | 'clock';
+	index: number;
+	title: string;
+	content: string;
+}>;
+
+export type ResumeMore = Readonly<{
+	index: number;
+	title: string;
+	content: string;
+}>;
+
 export type ResumeData = Readonly<{
+	more: ResumeMore[];
 	links: ResumeLink[];
 	owner: OwnerDetails;
 	skills: ResumeSkills[];
 	education: Education[];
+	strengths: Strength[];
 	experience: Experience[];
 	certificates: Certificate[];
 }>;
@@ -258,11 +275,32 @@ export const getResumeSkillsFromCMS = async (): Promise<ResumeSkills[]> => {
 	try {
 		const data = await getCMSData('resume skills');
 
+		return data.items.map(item => item.fields as ResumeSkills);
+	} catch (error: unknown) {
+		return [];
+	}
+};
+
+export const getStrengthsFromCMS = async (): Promise<Strength[]> => {
+	try {
+		const data = await getCMSData('strength');
+
+		return data.items.map(item => item.fields as Strength);
+	} catch (error: unknown) {
+		return [];
+	}
+};
+
+export const getResumeMoreFromCMS = async (): Promise<ResumeMore[]> => {
+	try {
+		const data = await getCMSData('resume more');
+
 		return data.items.map(
 			item =>
 				({
-					...item.fields
-				}) as ResumeSkills
+					...item.fields,
+					content: getHTMLString(item.fields.content as Document)
+				}) as ResumeMore
 		);
 	} catch (error: unknown) {
 		return [];
