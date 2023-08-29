@@ -1,26 +1,28 @@
 import Image from 'next/image';
 import type { FC } from 'react';
 
-import { resumeLinks, ResumeLinkItem } from '@data/resume';
+import type { ResumeLink } from '@scripts/cms';
 
-export const ResumeTitle: FC = () => (
+type Props = {
+	alt: string;
+	data: ResumeLink[];
+	name: string;
+	title: string;
+	image: string;
+};
+
+export const ResumeTitle: FC<Readonly<Props>> = ({ alt, data, name, title, image }: Props) => (
 	<div className="c-resume__title">
-		<Image
-			src="/images/temp/atanas.jpg"
-			alt="Atanas Atanasov's profile picture"
-			width={240}
-			height={240}
-			loading="lazy"
-		/>
+		{image && <Image src={image} alt={alt} width={240} height={240} loading="lazy" />}
 
-		<h1>Atanas Atanasov</h1>
+		<h1>{name}</h1>
 
-		<h3>Frontend Team Lead</h3>
+		<h3>{title}</h3>
 
 		<ul className="c-resume__list">
-			{resumeLinks.map((item: ResumeLinkItem) => (
+			{data.map((item: ResumeLink) => (
 				<li key={item.index}>
-					<i className={item.icon} />
+					<i className={`icon-${item.icon}`} />
 					{item.text}
 				</li>
 			))}

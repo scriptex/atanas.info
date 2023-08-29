@@ -2,7 +2,18 @@ import type { Document } from '@contentful/rich-text-types';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import { Asset, createClient, EntryCollection, EntrySkeletonType } from 'contentful';
 
-type CMSType = 'bio' | 'titles' | 'article' | 'timeline';
+type CMSType =
+	| 'bio'
+	| 'owner'
+	| 'titles'
+	| 'article'
+	| 'timeline'
+	| 'education'
+	| 'experience'
+	| 'certificate'
+	| 'resume link'
+	| 'resume skills';
+
 type RawCMSData = EntryCollection<EntrySkeletonType, undefined, string>;
 
 export type BioEntry = {
@@ -19,14 +30,68 @@ export type Article = Readonly<{
 	externalImage?: string;
 }>;
 
-export type TimelineItem = {
+export type TimelineItem = Readonly<{
 	date: string;
 	icon: 'work' | 'education' | 'personal';
 	index: number;
 	title: string;
 	content: string;
 	location: string;
-};
+}>;
+
+export type ResumeLink = Readonly<{
+	icon: 'mail' | 'link' | 'location';
+	text: string;
+	index: number;
+}>;
+
+export type OwnerDetails = Readonly<{
+	alt: string;
+	name: string;
+	index: number;
+	title: string;
+	image: string;
+	summary: string;
+}>;
+
+export type Education = Readonly<{
+	index: number;
+	degree: string;
+	period: string;
+	school: string;
+}>;
+
+export type Certificate = Readonly<{
+	pdf: string;
+	date: string;
+	image: string;
+	index: number;
+	title: string;
+}>;
+
+export type Experience = Readonly<{
+	index: number;
+	title: string;
+	period: string;
+	details: string;
+	project: string;
+	location: string;
+}>;
+
+export type ResumeSkills = Readonly<{
+	index: number;
+	title: string;
+	content: string[];
+}>;
+
+export type ResumeData = Readonly<{
+	links: ResumeLink[];
+	owner: OwnerDetails;
+	skills: ResumeSkills[];
+	education: Education[];
+	experience: Experience[];
+	certificates: Certificate[];
+}>;
 
 const client = createClient({
 	space: process.env.CONTENTFUL_SPACE_ID!,
@@ -81,7 +146,7 @@ export const getArticlesFromCMS = async (): Promise<Article[]> => {
 	try {
 		const data = await getCMSData('article');
 
-		return (data.items.map(item => item.fields) as Article[]) ?? [];
+		return data.items.map(item => item.fields as Article) ?? [];
 	} catch (error: unknown) {
 		return [];
 	}
@@ -92,13 +157,112 @@ export const getTimelineFromCMS = async (): Promise<TimelineItem[]> => {
 		const data = await getCMSData('timeline');
 
 		return (
-			(data.items
+			data.items
 				.map(item => item.fields)
-				.map(({ title, content, ...rest }) => ({
-					...rest,
-					title: getHTMLString(title as Document),
-					content: getHTMLString(content as Document)
-				})) as TimelineItem[]) ?? []
+				.map(
+					({ title, content, ...rest }) =>
+						({
+							...rest,
+							title: getHTMLString(title as Document),
+							content: getHTMLString(content as Document)
+						}) as TimelineItem
+				) ?? []
+		);
+	} catch (error: unknown) {
+		return [];
+	}
+};
+
+export const getResumeLinksFromCMS = async (): Promise<ResumeLink[]> => {
+	try {
+		const links = await getCMSData('resume link');
+
+		return links.items.map(item => item.fields as ResumeLink) ?? [];
+	} catch (error: unknown) {
+		return [];
+	}
+};
+
+export const getOwnerDetailsFromCMS = async (): Promise<OwnerDetails> => {
+	try {
+		const data = await getCMSData('owner');
+		const all = data.items.map(item => {
+			const image = item.fields.image as Asset;
+
+			return {
+				...item.fields,
+				alt: image.fields.description,
+				image: `https:${image.fields.file?.url}`,
+				summary: getHTMLString(item.fields?.summary as Document)
+			} as OwnerDetails;
+		});
+
+		return all[0];
+	} catch (error: unknown) {
+		return {
+			alt: '',
+			name: '',
+			image: '',
+			index: 0,
+			title: '',
+			summary: ''
+		};
+	}
+};
+
+export const getEducationFromCMS = async (): Promise<Education[]> => {
+	try {
+		const data = await getCMSData('education');
+
+		return data.items.map(item => item.fields as Education);
+	} catch (error: unknown) {
+		return [];
+	}
+};
+
+export const getCertificatesFromCMS = async (): Promise<Certificate[]> => {
+	try {
+		const data = await getCMSData('certificate');
+
+		return data.items.map(
+			item =>
+				({
+					...item.fields,
+					pdf: `https:${(item.fields.pdf as Asset).fields.file?.url}`,
+					image: `https:${(item.fields.image as Asset).fields.file?.url}`
+				}) as Certificate
+		);
+	} catch (error: unknown) {
+		return [];
+	}
+};
+
+export const getExperienceFromCMS = async (): Promise<Experience[]> => {
+	try {
+		const data = await getCMSData('experience');
+
+		return data.items.map(
+			item =>
+				({
+					...item.fields,
+					details: getHTMLString(item.fields.details as Document),
+					project: getHTMLString(item.fields.project as Document)
+				}) as Experience
+		);
+	} catch (error: unknown) {
+		return [];
+	}
+};
+
+export const getResumeSkillsFromCMS = async (): Promise<ResumeSkills[]> => {
+	try {
+		const data = await getCMSData('resume skills');
+
+		return data.items.map(
+			item =>
+				({
+					...item.fields
+				}) as ResumeSkills
 		);
 	} catch (error: unknown) {
 		return [];

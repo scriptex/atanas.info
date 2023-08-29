@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import type { FC } from 'react';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import certificate from '@data/lotties/certificate.json';
-import { Certificate, certificates } from '@data/certificates';
+import { Certificate, getCertificatesFromCMS } from '@scripts/cms';
 import { Layout, Loader, Section, Animation, ExternalLink, Title } from '@components';
 
-export const Certificates: FC = () => (
+export const Certificates: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data }) => (
 	<Layout>
 		<Title text="Certificates | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
@@ -18,18 +19,11 @@ export const Certificates: FC = () => (
 			}
 		>
 			<div className="c-section__body o-grid">
-				{certificates.map((certificate: Certificate) => (
-					<div className="o-grid__item xs-12 sm-6" key={certificate.name}>
-						<ExternalLink href={`/cert/${certificate.type}.pdf`} className="c-certificate">
+				{data.map((item: Certificate) => (
+					<div className="o-grid__item xs-12 sm-6" key={item.index}>
+						<ExternalLink href={item.pdf} className="c-certificate">
 							<Loader />
-
-							<Image
-								src={`/cert/${certificate.type}.jpg`}
-								alt={certificate.name}
-								width="818"
-								height="578"
-								loading="lazy"
-							/>
+							<Image src={item.image} alt={item.title} width="818" height="578" loading="lazy" />
 						</ExternalLink>
 					</div>
 				))}
@@ -37,5 +31,11 @@ export const Certificates: FC = () => (
 		</Section>
 	</Layout>
 );
+
+export const getStaticProps: GetStaticProps<{ data: Certificate[] }> = async () => ({
+	props: {
+		data: await getCertificatesFromCMS()
+	}
+});
 
 export default Certificates;

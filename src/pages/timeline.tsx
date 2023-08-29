@@ -27,7 +27,9 @@ export const Timeline: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ d
 							className="vertical-timeline-element-title"
 							dangerouslySetInnerHTML={{ __html: item.title }}
 						/>
+
 						<h4 className="vertical-timeline-element-subtitle">📍 {item.location}</h4>
+
 						<div dangerouslySetInnerHTML={{ __html: item.content }} />
 					</VerticalTimelineElement>
 				))}

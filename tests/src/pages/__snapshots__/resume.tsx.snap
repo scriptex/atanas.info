@@ -602,21 +602,21 @@ exports[`Resume component Should render the Resume component 1`] = `
             class="c-resume__title"
           >
             <img
-              alt="Atanas Atanasov's profile picture"
+              alt="Owner alt"
               data-nimg="1"
               decoding="async"
               height="240"
               loading="lazy"
-              src="/_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=640&q=75"
-              srcset="/_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=256&q=75 1x, /_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=640&q=75 2x"
+              src="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage.png&w=640&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2Fimage.png&w=640&q=75 2x"
               style="color: transparent;"
               width="240"
             />
             <h1>
-              Atanas Atanasov
+              Owner name
             </h1>
             <h3>
-              Frontend Team Lead
+              Owner title
             </h3>
             <ul
               class="c-resume__list"
@@ -625,31 +625,31 @@ exports[`Resume component Should render the Resume component 1`] = `
                 <i
                   class="icon-mail"
                 />
-                hi@atanas.info
+                someone@example.com
               </li>
               <li>
                 <i
                   class="icon-link"
                 />
-                atanas.info
+                example.com
               </li>
               <li>
                 <i
                   class="icon-link"
                 />
-                linkedin.com/in/scriptex
+                linkedin.com/in/$USER
               </li>
               <li>
                 <i
                   class="icon-link"
                 />
-                github.com/scriptex
+                github.com/$USER
               </li>
               <li>
                 <i
                   class="icon-location"
                 />
-                Varna, Bulgaria
+                Earth
               </li>
             </ul>
           </div>
@@ -662,9 +662,9 @@ exports[`Resume component Should render the Resume component 1`] = `
               <h2>
                 Summary
               </h2>
-              <p>
-                I am a senior front-end engineer with more than 11 years of professional experience, striving to provide well tested and maintainable code, pixel-perfect user interfaces and the best user experience utilizing the latest and most recent technologies.
-              </p>
+              <div>
+                Owner summary
+              </div>
             </div>
             <div
               class="c-resume__block"
@@ -680,7 +680,7 @@ exports[`Resume component Should render the Resume component 1`] = `
                   </h2>
                   <p>
                     <strong>
-                      Master in Marketing
+                      Education degree
                     </strong>
                   </p>
                   <ul
@@ -690,13 +690,13 @@ exports[`Resume component Should render the Resume component 1`] = `
                       <i
                         class="icon-calendar"
                       />
-                      2003 - 2009
+                      Education period
                     </li>
                     <li>
                       <i
                         class="icon-location"
                       />
-                      University of Economics Varna
+                      Education school
                     </li>
                   </ul>
                 </div>
@@ -708,22 +708,7 @@ exports[`Resume component Should render the Resume component 1`] = `
                   </h2>
                   <ul>
                     <li>
-                      HTML Certification, 2021
-                    </li>
-                    <li>
-                      CSS Certification, 2021
-                    </li>
-                    <li>
-                      Javascript Certification, 2020
-                    </li>
-                    <li>
-                      React Development Certification, 2020
-                    </li>
-                    <li>
-                      Deno Certification, 2020
-                    </li>
-                    <li>
-                      Python Certification, 2020
+                      Certificate 1 Certification, 20 Nov 2020
                     </li>
                   </ul>
                 </div>
@@ -739,37 +724,15 @@ exports[`Resume component Should render the Resume component 1`] = `
                 class="c-resume__experience"
               >
                 <h3>
-                  Frontend Team Lead
+                  Experience title 1
                 </h3>
-                <h4>
-                  E.ON, E.ON Home project, 
-                  <em>
-                    contract
-                  </em>
-                  <br />
-                  <span>
-                    https://app.home.eon.com | https://admin.eonhome.eu
-                  </span>
-                  <br />
-                  <small>
-                    Highlights: 
-                    <strong>
-                      Typescript
-                    </strong>
-                    , 
-                    <strong>
-                      React
-                    </strong>
-                    , 
-                    <strong>
-                      React Native
-                    </strong>
-                    , 
-                    <strong>
-                      TDD
-                    </strong>
-                  </small>
-                </h4>
+                <div
+                  class="c-resume__experience-title"
+                >
+                  <p>
+                    Experience project 1
+                  </p>
+                </div>
                 <ul
                   class="c-resume__list"
                 >
@@ -777,257 +740,22 @@ exports[`Resume component Should render the Resume component 1`] = `
                     <i
                       class="icon-calendar"
                     />
-                    Jul 2018 - Present
+                    Period start - Period end
                   </li>
                   <li>
                     <i
                       class="icon-location"
                     />
-                    Remote
+                    Location 1
                   </li>
                 </ul>
-                <ul>
-                  <li>
-                    Implementing and maintaining the frontend of E.ON Home - an award winning web and hybrid mobile application. Technologies used: React, React Native, Redux, Typescript, SCSS, SVG, MJML, NodeJS, MS Azure, AWS, Jest, Cypress, Sketch and many more.
-                  </li>
-                  <li>
-                    Designing, implementing and maintaining the frontend of E.ON H.E.M.S - the administration application behind E.ON Home. Technologies used: Angular, Redux, Typescript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.
-                  </li>
-                  <li>
-                    Leading a team of several front-end developers working on all aspects of the front-end.
-                  </li>
-                  <li>
-                    Participating in the hiring process and evaluation of candidates.
-                  </li>
-                </ul>
-              </div>
-              <div
-                class="c-resume__experience"
-              >
-                <h3>
-                  Senior Frontend Developer
-                </h3>
-                <h4>
-                  3-11, 
-                  <em>
-                    full-time
-                  </em>
-                  <br />
-                  <small>
-                    Highlights: 
-                    <strong>
-                      React
-                    </strong>
-                    , 
-                    <strong>
-                      Redux
-                    </strong>
-                    , 
-                    <strong>
-                      NodeJS
-                    </strong>
-                    , 
-                    <strong>
-                      NextJS
-                    </strong>
-                    , 
-                    <strong>
-                      TDD
-                    </strong>
-                  </small>
-                </h4>
-                <ul
-                  class="c-resume__list"
+                <div
+                  class="c-resume__experience-details"
                 >
-                  <li>
-                    <i
-                      class="icon-calendar"
-                    />
-                    Jan 2018 - Present
-                  </li>
-                  <li>
-                    <i
-                      class="icon-location"
-                    />
-                    Varna, Bulgaria
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    Leading a team of several senior front-end and full-stack developers in delivering high-end closed-source enterprise applications
-                  </li>
-                  <li>
-                    Working with clients such as Kinetik Automotive, Duke University, E.ON and many more.
-                  </li>
-                  <li>
-                    Utilizing technologies such as: Javascript, Typescript, SCSS, MJML, NodeJS, React, Redux, NextJS, MongoDB, Jest, Cypress, Mocha, Tape, Chai and many many more.
-                  </li>
-                  <li>
-                    Participating in the hiring process and evaluation of candidates.
-                  </li>
-                </ul>
-              </div>
-              <div
-                class="c-resume__experience"
-              >
-                <h3>
-                  Senior Web Developer
-                </h3>
-                <h4>
-                  Kinetik Automotive, 
-                  <em>
-                    part-time
-                  </em>
-                  <br />
-                  <span>
-                    https://kinetik-automotive.com | https://kinetik-e.com
-                  </span>
-                  <br />
-                  <small>
-                    Highlights: 
-                    <strong>
-                      React
-                    </strong>
-                    , 
-                    <strong>
-                      Redux
-                    </strong>
-                    , 
-                    <strong>
-                      NodeJS
-                    </strong>
-                    , 
-                    <strong>
-                      MS Azure
-                    </strong>
-                    , 
-                    <strong>
-                      CosmosDB
-                    </strong>
-                    , 
-                    <strong>
-                      WebSockets
-                    </strong>
-                  </small>
-                </h4>
-                <ul
-                  class="c-resume__list"
-                >
-                  <li>
-                    <i
-                      class="icon-calendar"
-                    />
-                    Nov 2019 - Present
-                  </li>
-                  <li>
-                    <i
-                      class="icon-location"
-                    />
-                    Varna, Bulgaria
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    Implementing and maintaining of the website of the company.
-                  </li>
-                  <li>
-                    Implementing and maintaining of several web apps related to eKart championships.
-                  </li>
-                  <li>
-                    Implemeting the dashboard of the first bulgarian eKart.
-                  </li>
-                  <li>
-                    Implemeting the dashboard of the inhouse-customized hybrid Volvo P1800.
-                  </li>
-                  <li>
-                    Working closely with embedded developers to produce the web application for the Telemetry service - complex telemetry system that offers drivers, mechanics, engineers and coaches all the information they may need to perform their duties.
-                  </li>
-                </ul>
-              </div>
-              <div
-                class="c-resume__experience"
-              >
-                <h3>
-                  Senior Frontend Developer
-                </h3>
-                <h4>
-                  2create, 
-                  <em>
-                    full-time
-                  </em>
-                  <br />
-                  <span>
-                    https://htmlburger.com | https://htmlboutique.com | https://mailbakery.com
-                  </span>
-                  <br />
-                  <small>
-                    Highlights: 
-                    <strong>
-                      HTML5
-                    </strong>
-                    , 
-                    <strong>
-                      CSS3
-                    </strong>
-                    , 
-                    <strong>
-                      Javascript
-                    </strong>
-                    , 
-                    <strong>
-                      SCSS
-                    </strong>
-                    , 
-                    <strong>
-                      React
-                    </strong>
-                    , 
-                    <strong>
-                      Angular
-                    </strong>
-                    , 
-                    <strong>
-                      NodeJS
-                    </strong>
-                    , 
-                    <strong>
-                      Webpack
-                    </strong>
-                  </small>
-                </h4>
-                <ul
-                  class="c-resume__list"
-                >
-                  <li>
-                    <i
-                      class="icon-calendar"
-                    />
-                    May 2012 - Jan 2018
-                  </li>
-                  <li>
-                    <i
-                      class="icon-location"
-                    />
-                    Varna, Bulgaria
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    Worked for brands such as "htmlBurger", "htmlBoutique" and "Mail Bakery" - leaders in the outsourced web and mobile development.
-                  </li>
-                  <li>
-                    Designed, implemented, maintained and taught the internal coding standards used in tens of thousands of projects.
-                  </li>
-                  <li>
-                    Designed, implemented and maintained the internal frontend build system used in tens of thousands of projects.
-                  </li>
-                  <li>
-                    Mentored and led several front-end developer teams throughout the years.
-                  </li>
-                  <li>
-                    Published several articles.
-                  </li>
-                </ul>
+                  <p>
+                    Experience details 1
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -1038,142 +766,19 @@ exports[`Resume component Should render the Resume component 1`] = `
               class="c-resume__block"
             >
               <h2>
-                INDUSTRY SKILLS
+                Industry Skills
               </h2>
               <ul
                 class="c-resume__skills"
               >
                 <li>
-                  Javascript
+                  Skill 1
                 </li>
                 <li>
-                  Typescript
+                  Skill 2
                 </li>
                 <li>
-                  CSS
-                </li>
-                <li>
-                  SCSS
-                </li>
-                <li>
-                  HTML
-                </li>
-                <li>
-                  SVG
-                </li>
-                <li>
-                  MJML
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  React
-                </li>
-                <li>
-                  Redux
-                </li>
-                <li>
-                  Angular
-                </li>
-                <li>
-                  Vue
-                </li>
-                <li>
-                  NodeJS
-                </li>
-                <li>
-                  D3
-                </li>
-                <li>
-                  Chart JS
-                </li>
-                <li>
-                  Highcharts
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  NPM / Yarn
-                </li>
-                <li>
-                  Webpack
-                </li>
-                <li>
-                  Rollup
-                </li>
-                <li>
-                  Parcel
-                </li>
-                <li>
-                  Vite
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  Jest
-                </li>
-                <li>
-                  Cypress
-                </li>
-                <li>
-                  React Testing Library
-                </li>
-                <li>
-                  Mocha
-                </li>
-                <li>
-                  Tape
-                </li>
-                <li>
-                  Chai
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  UI/UX
-                </li>
-                <li>
-                  SEO
-                </li>
-                <li>
-                  Accessibility (a11y)
-                </li>
-                <li>
-                  Internationalization (i18n)
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  Azure DevOps
-                </li>
-                <li>
-                  Github Actions
-                </li>
-                <li>
-                  Gitlab CI
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  Scrum
-                </li>
-                <li>
-                  Agile
-                </li>
-                <li>
-                  Git
+                  Skill 3
                 </li>
               </ul>
             </div>
@@ -2723,21 +2328,21 @@ exports[`Resume component Should render the Resume component 2`] = `
             class="c-resume__title"
           >
             <img
-              alt="Atanas Atanasov's profile picture"
+              alt="Owner alt"
               data-nimg="1"
               decoding="async"
               height="240"
               loading="lazy"
-              src="/_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=640&q=75"
-              srcset="/_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=256&q=75 1x, /_next/image?url=%2Fimages%2Ftemp%2Fatanas.jpg&w=640&q=75 2x"
+              src="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage.png&w=640&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2Fimage.png&w=640&q=75 2x"
               style="color: transparent;"
               width="240"
             />
             <h1>
-              Atanas Atanasov
+              Owner name
             </h1>
             <h3>
-              Frontend Team Lead
+              Owner title
             </h3>
             <ul
               class="c-resume__list"
@@ -2746,31 +2351,31 @@ exports[`Resume component Should render the Resume component 2`] = `
                 <i
                   class="icon-mail"
                 />
-                hi@atanas.info
+                someone@example.com
               </li>
               <li>
                 <i
                   class="icon-link"
                 />
-                atanas.info
+                example.com
               </li>
               <li>
                 <i
                   class="icon-link"
                 />
-                linkedin.com/in/scriptex
+                linkedin.com/in/$USER
               </li>
               <li>
                 <i
                   class="icon-link"
                 />
-                github.com/scriptex
+                github.com/$USER
               </li>
               <li>
                 <i
                   class="icon-location"
                 />
-                Varna, Bulgaria
+                Earth
               </li>
             </ul>
           </div>
@@ -2783,9 +2388,9 @@ exports[`Resume component Should render the Resume component 2`] = `
               <h2>
                 Summary
               </h2>
-              <p>
-                I am a senior front-end engineer with more than 11 years of professional experience, striving to provide well tested and maintainable code, pixel-perfect user interfaces and the best user experience utilizing the latest and most recent technologies.
-              </p>
+              <div>
+                Owner summary
+              </div>
             </div>
             <div
               class="c-resume__block"
@@ -2801,7 +2406,7 @@ exports[`Resume component Should render the Resume component 2`] = `
                   </h2>
                   <p>
                     <strong>
-                      Master in Marketing
+                      Education degree
                     </strong>
                   </p>
                   <ul
@@ -2811,13 +2416,13 @@ exports[`Resume component Should render the Resume component 2`] = `
                       <i
                         class="icon-calendar"
                       />
-                      2003 - 2009
+                      Education period
                     </li>
                     <li>
                       <i
                         class="icon-location"
                       />
-                      University of Economics Varna
+                      Education school
                     </li>
                   </ul>
                 </div>
@@ -2829,22 +2434,7 @@ exports[`Resume component Should render the Resume component 2`] = `
                   </h2>
                   <ul>
                     <li>
-                      HTML Certification, 2021
-                    </li>
-                    <li>
-                      CSS Certification, 2021
-                    </li>
-                    <li>
-                      Javascript Certification, 2020
-                    </li>
-                    <li>
-                      React Development Certification, 2020
-                    </li>
-                    <li>
-                      Deno Certification, 2020
-                    </li>
-                    <li>
-                      Python Certification, 2020
+                      Certificate 1 Certification, 20 Nov 2020
                     </li>
                   </ul>
                 </div>
@@ -2860,37 +2450,15 @@ exports[`Resume component Should render the Resume component 2`] = `
                 class="c-resume__experience"
               >
                 <h3>
-                  Frontend Team Lead
+                  Experience title 1
                 </h3>
-                <h4>
-                  E.ON, E.ON Home project, 
-                  <em>
-                    contract
-                  </em>
-                  <br />
-                  <span>
-                    https://app.home.eon.com | https://admin.eonhome.eu
-                  </span>
-                  <br />
-                  <small>
-                    Highlights: 
-                    <strong>
-                      Typescript
-                    </strong>
-                    , 
-                    <strong>
-                      React
-                    </strong>
-                    , 
-                    <strong>
-                      React Native
-                    </strong>
-                    , 
-                    <strong>
-                      TDD
-                    </strong>
-                  </small>
-                </h4>
+                <div
+                  class="c-resume__experience-title"
+                >
+                  <p>
+                    Experience project 1
+                  </p>
+                </div>
                 <ul
                   class="c-resume__list"
                 >
@@ -2898,257 +2466,22 @@ exports[`Resume component Should render the Resume component 2`] = `
                     <i
                       class="icon-calendar"
                     />
-                    Jul 2018 - Present
+                    Period start - Period end
                   </li>
                   <li>
                     <i
                       class="icon-location"
                     />
-                    Remote
+                    Location 1
                   </li>
                 </ul>
-                <ul>
-                  <li>
-                    Implementing and maintaining the frontend of E.ON Home - an award winning web and hybrid mobile application. Technologies used: React, React Native, Redux, Typescript, SCSS, SVG, MJML, NodeJS, MS Azure, AWS, Jest, Cypress, Sketch and many more.
-                  </li>
-                  <li>
-                    Designing, implementing and maintaining the frontend of E.ON H.E.M.S - the administration application behind E.ON Home. Technologies used: Angular, Redux, Typescript, SCSS, SVG, NodeJS, MS Azure, AWS and many more.
-                  </li>
-                  <li>
-                    Leading a team of several front-end developers working on all aspects of the front-end.
-                  </li>
-                  <li>
-                    Participating in the hiring process and evaluation of candidates.
-                  </li>
-                </ul>
-              </div>
-              <div
-                class="c-resume__experience"
-              >
-                <h3>
-                  Senior Frontend Developer
-                </h3>
-                <h4>
-                  3-11, 
-                  <em>
-                    full-time
-                  </em>
-                  <br />
-                  <small>
-                    Highlights: 
-                    <strong>
-                      React
-                    </strong>
-                    , 
-                    <strong>
-                      Redux
-                    </strong>
-                    , 
-                    <strong>
-                      NodeJS
-                    </strong>
-                    , 
-                    <strong>
-                      NextJS
-                    </strong>
-                    , 
-                    <strong>
-                      TDD
-                    </strong>
-                  </small>
-                </h4>
-                <ul
-                  class="c-resume__list"
+                <div
+                  class="c-resume__experience-details"
                 >
-                  <li>
-                    <i
-                      class="icon-calendar"
-                    />
-                    Jan 2018 - Present
-                  </li>
-                  <li>
-                    <i
-                      class="icon-location"
-                    />
-                    Varna, Bulgaria
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    Leading a team of several senior front-end and full-stack developers in delivering high-end closed-source enterprise applications
-                  </li>
-                  <li>
-                    Working with clients such as Kinetik Automotive, Duke University, E.ON and many more.
-                  </li>
-                  <li>
-                    Utilizing technologies such as: Javascript, Typescript, SCSS, MJML, NodeJS, React, Redux, NextJS, MongoDB, Jest, Cypress, Mocha, Tape, Chai and many many more.
-                  </li>
-                  <li>
-                    Participating in the hiring process and evaluation of candidates.
-                  </li>
-                </ul>
-              </div>
-              <div
-                class="c-resume__experience"
-              >
-                <h3>
-                  Senior Web Developer
-                </h3>
-                <h4>
-                  Kinetik Automotive, 
-                  <em>
-                    part-time
-                  </em>
-                  <br />
-                  <span>
-                    https://kinetik-automotive.com | https://kinetik-e.com
-                  </span>
-                  <br />
-                  <small>
-                    Highlights: 
-                    <strong>
-                      React
-                    </strong>
-                    , 
-                    <strong>
-                      Redux
-                    </strong>
-                    , 
-                    <strong>
-                      NodeJS
-                    </strong>
-                    , 
-                    <strong>
-                      MS Azure
-                    </strong>
-                    , 
-                    <strong>
-                      CosmosDB
-                    </strong>
-                    , 
-                    <strong>
-                      WebSockets
-                    </strong>
-                  </small>
-                </h4>
-                <ul
-                  class="c-resume__list"
-                >
-                  <li>
-                    <i
-                      class="icon-calendar"
-                    />
-                    Nov 2019 - Present
-                  </li>
-                  <li>
-                    <i
-                      class="icon-location"
-                    />
-                    Varna, Bulgaria
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    Implementing and maintaining of the website of the company.
-                  </li>
-                  <li>
-                    Implementing and maintaining of several web apps related to eKart championships.
-                  </li>
-                  <li>
-                    Implemeting the dashboard of the first bulgarian eKart.
-                  </li>
-                  <li>
-                    Implemeting the dashboard of the inhouse-customized hybrid Volvo P1800.
-                  </li>
-                  <li>
-                    Working closely with embedded developers to produce the web application for the Telemetry service - complex telemetry system that offers drivers, mechanics, engineers and coaches all the information they may need to perform their duties.
-                  </li>
-                </ul>
-              </div>
-              <div
-                class="c-resume__experience"
-              >
-                <h3>
-                  Senior Frontend Developer
-                </h3>
-                <h4>
-                  2create, 
-                  <em>
-                    full-time
-                  </em>
-                  <br />
-                  <span>
-                    https://htmlburger.com | https://htmlboutique.com | https://mailbakery.com
-                  </span>
-                  <br />
-                  <small>
-                    Highlights: 
-                    <strong>
-                      HTML5
-                    </strong>
-                    , 
-                    <strong>
-                      CSS3
-                    </strong>
-                    , 
-                    <strong>
-                      Javascript
-                    </strong>
-                    , 
-                    <strong>
-                      SCSS
-                    </strong>
-                    , 
-                    <strong>
-                      React
-                    </strong>
-                    , 
-                    <strong>
-                      Angular
-                    </strong>
-                    , 
-                    <strong>
-                      NodeJS
-                    </strong>
-                    , 
-                    <strong>
-                      Webpack
-                    </strong>
-                  </small>
-                </h4>
-                <ul
-                  class="c-resume__list"
-                >
-                  <li>
-                    <i
-                      class="icon-calendar"
-                    />
-                    May 2012 - Jan 2018
-                  </li>
-                  <li>
-                    <i
-                      class="icon-location"
-                    />
-                    Varna, Bulgaria
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    Worked for brands such as "htmlBurger", "htmlBoutique" and "Mail Bakery" - leaders in the outsourced web and mobile development.
-                  </li>
-                  <li>
-                    Designed, implemented, maintained and taught the internal coding standards used in tens of thousands of projects.
-                  </li>
-                  <li>
-                    Designed, implemented and maintained the internal frontend build system used in tens of thousands of projects.
-                  </li>
-                  <li>
-                    Mentored and led several front-end developer teams throughout the years.
-                  </li>
-                  <li>
-                    Published several articles.
-                  </li>
-                </ul>
+                  <p>
+                    Experience details 1
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -3159,142 +2492,19 @@ exports[`Resume component Should render the Resume component 2`] = `
               class="c-resume__block"
             >
               <h2>
-                INDUSTRY SKILLS
+                Industry Skills
               </h2>
               <ul
                 class="c-resume__skills"
               >
                 <li>
-                  Javascript
+                  Skill 1
                 </li>
                 <li>
-                  Typescript
+                  Skill 2
                 </li>
                 <li>
-                  CSS
-                </li>
-                <li>
-                  SCSS
-                </li>
-                <li>
-                  HTML
-                </li>
-                <li>
-                  SVG
-                </li>
-                <li>
-                  MJML
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  React
-                </li>
-                <li>
-                  Redux
-                </li>
-                <li>
-                  Angular
-                </li>
-                <li>
-                  Vue
-                </li>
-                <li>
-                  NodeJS
-                </li>
-                <li>
-                  D3
-                </li>
-                <li>
-                  Chart JS
-                </li>
-                <li>
-                  Highcharts
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  NPM / Yarn
-                </li>
-                <li>
-                  Webpack
-                </li>
-                <li>
-                  Rollup
-                </li>
-                <li>
-                  Parcel
-                </li>
-                <li>
-                  Vite
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  Jest
-                </li>
-                <li>
-                  Cypress
-                </li>
-                <li>
-                  React Testing Library
-                </li>
-                <li>
-                  Mocha
-                </li>
-                <li>
-                  Tape
-                </li>
-                <li>
-                  Chai
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  UI/UX
-                </li>
-                <li>
-                  SEO
-                </li>
-                <li>
-                  Accessibility (a11y)
-                </li>
-                <li>
-                  Internationalization (i18n)
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  Azure DevOps
-                </li>
-                <li>
-                  Github Actions
-                </li>
-                <li>
-                  Gitlab CI
-                </li>
-              </ul>
-              <ul
-                class="c-resume__skills"
-              >
-                <li>
-                  Scrum
-                </li>
-                <li>
-                  Agile
-                </li>
-                <li>
-                  Git
+                  Skill 3
                 </li>
               </ul>
             </div>

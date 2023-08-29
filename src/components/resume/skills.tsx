@@ -1,14 +1,18 @@
 import type { FC } from 'react';
 
-import { resumeSkills } from '@data/resume';
+import type { ResumeSkills as IResumeSkills } from '@scripts/cms';
 
-export const ResumeSkills: FC = () => (
+type Props = {
+	data: IResumeSkills[];
+};
+
+export const ResumeSkills: FC<Readonly<Props>> = ({ data }) => (
 	<div className="c-resume__block">
-		<h2>INDUSTRY SKILLS</h2>
+		<h2>Industry Skills</h2>
 
-		{resumeSkills.map((skills: string[]) => (
-			<ul className="c-resume__skills" key={skills.join('')}>
-				{skills.map((skill: string) => (
+		{data.map((item: IResumeSkills) => (
+			<ul className="c-resume__skills" key={item.index}>
+				{item.content.map((skill: string) => (
 					<li key={skill}>{skill}</li>
 				))}
 			</ul>
