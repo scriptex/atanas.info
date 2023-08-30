@@ -1,11 +1,12 @@
 import { FC, useState } from 'react';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import presentation from '@data/lotties/presentation.json';
-import { Slide, slides } from '@data/slides';
 import { composeClassName } from '@scripts/shared';
+import { Slide, getSlidesFromCMS } from '@scripts/cms';
 import { Loader, Section, Animation, SectionNav, Layout, Title } from '@components';
 
-export const Slides: FC = () => {
+export const Slides: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data }) => {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	return (
@@ -22,10 +23,10 @@ export const Slides: FC = () => {
 					<Animation data={presentation} width={150} height={150} className="c-section__animation" />
 				}
 			>
-				<SectionNav name="title" data={slides} active={activeIndex} onClick={setActiveIndex} />
+				<SectionNav name="title" data={data} active={activeIndex} onClick={setActiveIndex} />
 
 				<div className="c-section__body">
-					{slides.map((slide: Slide, index: number) => (
+					{data.map((slide: Slide, index: number) => (
 						<div
 							key={slide.title}
 							className={composeClassName(
@@ -48,5 +49,11 @@ export const Slides: FC = () => {
 		</Layout>
 	);
 };
+
+export const getStaticProps: GetStaticProps<{ data: Slide[] }> = async () => ({
+	props: {
+		data: await getSlidesFromCMS()
+	}
+});
 
 export default Slides;

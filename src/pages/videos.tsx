@@ -1,11 +1,12 @@
 import { FC, useState } from 'react';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import videoCamera from '@data/lotties/video-camera.json';
 import { composeClassName } from '@scripts/shared';
-import { presentations, Presentation } from '@data/presentations';
+import { Video, getVideosFromCMS } from '@scripts/cms';
 import { Lines, Loader, Layout, Section, Animation, SectionNav, Title } from '@components';
 
-export const Videos: FC = () => {
+export const Videos: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data }) => {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	return (
@@ -23,12 +24,12 @@ export const Videos: FC = () => {
 			>
 				<Lines />
 
-				<SectionNav name="title" data={presentations} active={activeIndex} onClick={setActiveIndex} />
+				<SectionNav name="title" data={data} active={activeIndex} onClick={setActiveIndex} />
 
 				<div className="c-section__body">
-					{presentations.map((presentation: Presentation, index: number) => (
+					{data.map((presentation: Video, index: number) => (
 						<div
-							key={presentation.id}
+							key={presentation.index}
 							className={composeClassName(
 								'c-section__frame',
 								[],
@@ -49,5 +50,11 @@ export const Videos: FC = () => {
 		</Layout>
 	);
 };
+
+export const getStaticProps: GetStaticProps<{ data: Video[] }> = async () => ({
+	props: {
+		data: await getVideosFromCMS()
+	}
+});
 
 export default Videos;

@@ -5,6 +5,8 @@ import { Asset, createClient, EntryCollection, EntrySkeletonType } from 'content
 type CMSType =
 	| 'bio'
 	| 'owner'
+	| 'slide'
+	| 'video'
 	| 'titles'
 	| 'article'
 	| 'timeline'
@@ -108,6 +110,20 @@ export type ResumeData = Readonly<{
 	strengths: Strength[];
 	experience: Experience[];
 	certificates: Certificate[];
+}>;
+
+export type Slide = Readonly<{
+	url: string;
+	index: number;
+	title: string;
+	description: string;
+}>;
+
+export type Video = Readonly<{
+	url: string;
+	index: number;
+	title: string;
+	description: string;
 }>;
 
 const client = createClient({
@@ -302,6 +318,26 @@ export const getResumeMoreFromCMS = async (): Promise<ResumeMore[]> => {
 					content: getHTMLString(item.fields.content as Document)
 				}) as ResumeMore
 		);
+	} catch (error: unknown) {
+		return [];
+	}
+};
+
+export const getSlidesFromCMS = async (): Promise<Slide[]> => {
+	try {
+		const data = await getCMSData('slide');
+
+		return data.items.map(item => item.fields as Slide);
+	} catch (error: unknown) {
+		return [];
+	}
+};
+
+export const getVideosFromCMS = async (): Promise<Video[]> => {
+	try {
+		const data = await getCMSData('video');
+
+		return data.items.map(item => item.fields as Video);
 	} catch (error: unknown) {
 		return [];
 	}

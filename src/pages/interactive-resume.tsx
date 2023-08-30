@@ -2,8 +2,63 @@ import { FC, useEffect } from 'react';
 
 import resume from '@data/lotties/resume.json';
 import { useNetworkState } from '@scripts/shared';
-import { interactiveResumeItems, InteractiveResumeItem } from '@data/interactive-resume';
 import { Icon, Lines, Layout, Section, Animation, Title } from '@components';
+
+const items = [
+	{
+		index: 0,
+		title: 'Activity',
+		element: <codersrank-activity labels legend tooltip branding="false" username="scriptex" />
+	},
+	{
+		index: 1,
+		title: 'Education',
+		element: (
+			<codersrank-education
+				grid
+				branding="false"
+				username="scriptex"
+				education-section-title="Schools"
+				certificates-section-title="Certificates"
+			/>
+		)
+	},
+	{
+		index: 2,
+		title: 'Portfolio',
+		element: <codersrank-portfolio grid branding="false" username="scriptex" />
+	},
+	{
+		index: 3,
+		title: 'Skills',
+		element: <codersrank-skills-chart labels legend tooltip branding="false" username="scriptex" />
+	},
+	{
+		index: 4,
+		title: 'Summary',
+		element: <codersrank-summary username="scriptex" />
+	},
+	{
+		index: 5,
+		title: 'Work',
+		element: <codersrank-work-experience grid logos branding="false" username="scriptex" />
+	},
+	{
+		index: 6,
+		title: 'Work Experience Timeline',
+		element: <codersrank-timeline type="workexperience" branding="false" username="scriptex" />
+	},
+	{
+		index: 7,
+		title: 'Portfolio Timeline',
+		element: <codersrank-timeline type="portfolio" branding="false" username="scriptex" />
+	},
+	{
+		index: 8,
+		title: 'Technologies Timeline',
+		element: <codersrank-timeline type="technologies" branding="false" username="scriptex" />
+	}
+];
 
 export const InteractiveResume: FC = () => {
 	const online = useNetworkState();
@@ -33,8 +88,8 @@ export const InteractiveResume: FC = () => {
 				<Lines />
 
 				<div className="c-interactive-resume">
-					{interactiveResumeItems.map((item: InteractiveResumeItem) => (
-						<div key={item.title} className="c-interactive-resume__widget">
+					{items.map(item => (
+						<div key={item.index} className="c-interactive-resume__widget">
 							<h3>{item.title}</h3>
 
 							{online ? item.element : <Icon name="svg-disconnected " className="svg-disconnected" />}
