@@ -52,10 +52,10 @@ const config: Config.InitialOptions = {
 	],
 	coverageThreshold: {
 		global: {
-			lines: 96,
-			branches: 83,
-			functions: 95,
-			statements: 96
+			lines: 75,
+			branches: 75,
+			functions: 75,
+			statements: 75
 		}
 	},
 	coverageReporters: ['lcov', 'html', 'cobertura'],

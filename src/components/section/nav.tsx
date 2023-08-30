@@ -1,15 +1,15 @@
 import type { FC } from 'react';
 
-import { Slide } from '@data/slides';
 import { Button } from '@components';
 import { Routes } from '@data/routes';
-import { Article } from '@scripts/cms';
-import { Presentation } from '@data/presentations';
 import { composeClassName } from '@scripts/shared';
+import { Slide, Video, Article } from '@scripts/cms';
+
+type AllowedDataTypes = Video | Slide | Article;
 
 type Props = {
 	name: 'title';
-	data: Array<Presentation | Slide | Article>;
+	data: Array<AllowedDataTypes>;
 	small?: boolean;
 	route?: Routes;
 	active: number;
@@ -19,7 +19,7 @@ type Props = {
 export const SectionNav: FC<Readonly<Props>> = ({ name, data, small = false, route, active, onClick }: Props) => (
 	<nav className={composeClassName('c-section__nav', small ? ['small'] : [])}>
 		<ul>
-			{data.map((item: Presentation | Slide | Article, index: number) => (
+			{data.map((item: AllowedDataTypes, index: number) => (
 				<li
 					key={item.index}
 					className={active === index + (typeof onClick === 'function' ? 0 : 1) ? 'current' : undefined}

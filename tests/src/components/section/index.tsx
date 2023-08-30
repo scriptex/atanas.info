@@ -1,6 +1,6 @@
+import { videos } from '@test-config/mocks';
 import { statsItems } from '@data/projects';
 import { snapshotTest } from '@test-config/helpers';
-import { presentations } from '@data/presentations';
 import { Section, SectionNav, SectionGrid } from '@components';
 
 snapshotTest(
@@ -79,11 +79,7 @@ snapshotTest(
 	'Section'
 );
 
-snapshotTest(
-	() => <SectionNav name="title" data={presentations} active={0} onClick={jest.fn()} />,
-	'.c-btn',
-	'Section'
-);
+snapshotTest(() => <SectionNav name="title" data={videos} active={0} onClick={jest.fn()} />, '.c-btn', 'Section');
 
 snapshotTest(() => <SectionGrid data={statsItems} />, undefined, 'Section');
 
