@@ -34,7 +34,11 @@ export const resumeOwner: OwnerDetails = {
 	index: 0,
 	title: 'Owner title',
 	image: 'https://example.com/image.png',
-	summary: 'Owner summary'
+	summary: 'Owner summary',
+	privateGitlabCalendar: {
+		test1: 1,
+		test2: 2
+	}
 };
 
 export const resumeEducation: Education[] = [

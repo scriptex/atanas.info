@@ -203,6 +203,22 @@
 	-webkit-overflow-scrolling: touch;
 }
 
+.c-calendar__outer--error,
+.c-calendar__outer--loading {
+	height: 8.9375rem;
+	position: relative;
+	margin-bottom: 1rem;
+
+	& .c-loading {
+		height: 100%;
+	}
+}
+
+.c-calendar__outer--error {
+	color: red;
+	@mixin flex-column nowrap, center, center;
+}
+
 .c-calendar__entry:not(:first-child) {
 	padding-top: 3.5rem;
 }

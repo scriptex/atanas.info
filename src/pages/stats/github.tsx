@@ -7,7 +7,7 @@ import { formatDate } from '@scripts/shared';
 import { getData, queryGithub } from '@lib/mongodb';
 import { YEARS, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import type { GithubInsights, GithubProfileData, GithubRepository } from '@scripts/types';
-import { Button, Layout, Section, StatsEntry, StatsError, GithubSkyline, Title } from '@components';
+import { Title, Button, Layout, Loader, Section, StatsEntry, StatsError, GithubSkyline } from '@components';
 
 const extractGithubData = ({
 	general,
@@ -100,25 +100,32 @@ const registerMutationObeserer = (element: HTMLDivElement | null): MutationObser
 
 type Props = {
 	data: GithubProfileData;
+	error: boolean;
+	loading: boolean;
 };
 
-const GithubCalendar: FC<Props> = ({ data: { markup, stylesheet } }: Props) => {
-	if (!markup || !stylesheet) {
-		return null;
-	}
+const GithubCalendar: FC<Props> = ({ data: { markup, stylesheet }, error, loading }: Props) => (
+	<>
+		<h3>Github contributions calendar</h3>
 
-	return (
-		<>
-			<h3>Github contributions calendar</h3>
-
+		{loading ? (
+			<div className="c-calendar__outer c-calendar__outer--loading">
+				<Loader />
+			</div>
+		) : error || !markup || !stylesheet ? (
+			<div className="c-calendar__outer c-calendar__outer--error">
+				<p>Error fetching Github calendar data.</p>
+				<p>Please try again later.</p>
+			</div>
+		) : (
 			<div className="c-calendar__outer">
 				<link rel="stylesheet" href={stylesheet} />
 
 				<div className="c-calendar c-calendar--github" dangerouslySetInnerHTML={{ __html: markup }} />
 			</div>
-		</>
-	);
-};
+		)}
+	</>
+);
 
 const GithubSkylineComponent: FC = () => {
 	const [current, setCurrent] = useState(-1);
@@ -150,16 +157,29 @@ const GithubSkylineComponent: FC = () => {
 };
 
 export const GithubStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data }) => {
-	const { error, updated, ...rest }: GithubInsights = data;
-	const blocks: GeneralInsight[] = error ? [] : extractGithubData(rest);
+	const { error: statsError, updated, ...rest }: GithubInsights = data;
+	const blocks: GeneralInsight[] = statsError ? [] : extractGithubData(rest);
 
 	const calendarRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
+
+	const [error, setError] = useState(false);
+	const [loading, setLoading] = useState(true);
 	const [githubProfileData, setGithubProfileData] = useState<GithubProfileData>({});
 
 	useEffect(() => {
 		fetch('/api/github-calendar')
 			.then(r => r.json())
-			.then(setGithubProfileData);
+			.then(r => {
+				setError(false);
+				setGithubProfileData(r);
+			})
+			.catch(() => {
+				setError(true);
+				setGithubProfileData({});
+			})
+			.finally(() => {
+				setLoading(false);
+			});
 	}, []);
 
 	useEffect(() => {
@@ -188,7 +208,7 @@ export const GithubStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 				}
 				hasShell={false}
 			>
-				{error ? (
+				{statsError ? (
 					<StatsError network="Github" />
 				) : (
 					<>
@@ -200,7 +220,7 @@ export const GithubStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 							</small>
 
 							<div className="o-shell" ref={calendarRef}>
-								<GithubCalendar data={githubProfileData} />
+								<GithubCalendar data={githubProfileData} error={error} loading={loading} />
 
 								<GithubSkylineComponent />
 							</div>
