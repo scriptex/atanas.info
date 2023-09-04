@@ -56,6 +56,7 @@ export type OwnerDetails = Readonly<{
 	title: string;
 	image: string;
 	summary: string;
+	privateGitlabCalendar: Record<string, number>;
 }>;
 
 export type Education = Readonly<{
@@ -238,7 +239,8 @@ export const getOwnerDetailsFromCMS = async (): Promise<OwnerDetails> => {
 			image: '',
 			index: 0,
 			title: '',
-			summary: ''
+			summary: '',
+			privateGitlabCalendar: {}
 		};
 	}
 };

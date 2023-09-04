@@ -1,6 +1,7 @@
 import { act } from '@testing-library/react';
 import type { InferGetStaticPropsType } from 'next';
 
+import { resumeOwner } from '@test-config/mocks';
 import { test, snapshotTest } from '@test-config/helpers';
 import type { GitlabInsights } from '@scripts/types';
 import { getStaticProps, GitlabStats } from '@pages/stats/gitlab';
@@ -48,16 +49,22 @@ const dataEmpty: GitlabInsights = {
 	repositories: null
 };
 
-snapshotTest(() => <GitlabStats data={dataFull} />, undefined, 'GitlabStats');
+const calendarData = resumeOwner.privateGitlabCalendar;
 
-snapshotTest(() => <GitlabStats data={{ ...dataFull, updated: null }} />, undefined, 'GitlabStats');
+snapshotTest(() => <GitlabStats data={dataFull} calendarData={calendarData} />, undefined, 'GitlabStats');
 
-snapshotTest(() => <GitlabStats data={dataEmpty} />, undefined, 'GitlabStats');
+snapshotTest(
+	() => <GitlabStats data={{ ...dataFull, updated: null }} calendarData={calendarData} />,
+	undefined,
+	'GitlabStats'
+);
+
+snapshotTest(() => <GitlabStats data={dataEmpty} calendarData={calendarData} />, undefined, 'GitlabStats');
 
 it('Test the GitlabStats page with fake timers', async () => {
 	jest.useFakeTimers();
 
-	const { asFragment } = await test(() => <GitlabStats data={dataFull} />);
+	const { asFragment } = await test(() => <GitlabStats data={dataFull} calendarData={calendarData} />);
 
 	act(() => {
 		jest.runOnlyPendingTimers();
