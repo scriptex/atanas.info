@@ -7,7 +7,7 @@ import { useNetworkState } from '@scripts/shared';
 import type { LastFMInsights } from '@insights/utils';
 import { getData, queryLastFM } from '@lib/mongodb';
 import { SocialItem, socialItems } from '@data/social';
-import { Icon, Lines, Layout, Section, Animation, SocialMusic, LinkedInBadge, Title } from '@components';
+import { Icon, Lines, Title, Layout, Section, Animation, SocialMusic } from '@components';
 
 export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data }) => {
 	const online = useNetworkState();
@@ -37,7 +37,7 @@ export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>
 							<div className="o-grid__item xs-12 sm-6">
 								<h3>LinkedIn Profile</h3>
 
-								<LinkedInBadge />
+								<iframe src="/api/linkedin-badge" height={241} />
 							</div>
 
 							{socialItems.map((item: SocialItem) => (
