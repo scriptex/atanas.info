@@ -3929,15 +3929,15 @@ combined-stream@^1.0.6, combined-stream@^1.0.8, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
+commander@11.0.0:
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-11.0.0.tgz#43e19c25dbedc8256203538e8d7e9346877a6f67"
+  integrity sha512-9HMlXtt/BNoYr8ooyjjNRdIilOTkVJXB+GhxMTtOKwk0R4j4lS4NpjuqmRxroBfnfTSHQIHQB7wryHhXarNjmQ==
+
 commander@7, commander@^7.2.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
   integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
-
-commander@9.4.1:
-  version "9.4.1"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-9.4.1.tgz#d1dd8f2ce6faf93147295c0df13c7c21141cfbdd"
-  integrity sha512-5EEkTNyHNGFPD2H+c/dXXfQZYa/scCKasxWcXJaWnNJ99pnQN9Vnmqow+p+PlFPE63Q6mThaZws1T+HxfpgtPw==
 
 commander@^10.0.0, commander@^10.0.1:
   version "10.0.1"
@@ -10771,14 +10771,14 @@ svg-parser@^2.0.4:
   resolved "https://registry.yarnpkg.com/svg-parser/-/svg-parser-2.0.4.tgz#fdc2e29e13951736140b76cb122c8ee6630eb6b5"
   integrity sha512-e4hG1hRwoOdRb37cIMSgzNsxyzKfayW6VOflrwvR+/bzrkyxY/31WkbgnQpgtrNp1SdpJvpUAGTa/ZoiPNDuRQ==
 
-svg-symbol-sprite@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/svg-symbol-sprite/-/svg-symbol-sprite-1.4.0.tgz#8c9c4556c8b7fc62cd884c5dbdaf356c7caa943c"
-  integrity sha512-gQhffCA8XF+F6CHPiKSrBv8c1tiYRHDzYMdFbdqiVGEtkLhMXqLM38RLIzoPdbi95z2U7oCZ8tjXf45CcQMUEg==
+svg-symbol-sprite@1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/svg-symbol-sprite/-/svg-symbol-sprite-1.4.1.tgz#6a1bd119ea56905863625c73979025bfd3b117d0"
+  integrity sha512-s/2i4KQjOE9j9NOSed0i+DCO/ueAjBLX5Uth2VvbUdpqur9I0iFhGyldS8TZBAVwDVuR4OV3pgfOuy1PVRq7dQ==
   dependencies:
     cheerio "1.0.0-rc.12"
-    commander "9.4.1"
-    svgo "3.0.1"
+    commander "11.0.0"
+    svgo "3.0.2"
 
 svg-tags@^1.0.0:
   version "1.0.0"
@@ -10803,18 +10803,6 @@ svgo-viewbox@3.0.0:
     meow "12.0.1"
     svgo "3.0.2"
     svgo-add-viewbox "3.0.0"
-
-svgo@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/svgo/-/svgo-3.0.1.tgz#873f3341d04a08980ad8366780e8d04143b9fc2c"
-  integrity sha512-6kiDrstRCmA600TySGBu4VNA/FdEriOv7PKQRDOyIaVYUNamWvDSZjgMsM+mB0r0y5T7S3P5DkZJSIBQ/9QEsg==
-  dependencies:
-    "@trysound/sax" "0.2.0"
-    commander "^7.2.0"
-    css-select "^5.1.0"
-    css-tree "^2.2.1"
-    csso "^5.0.5"
-    picocolors "^1.0.0"
 
 svgo@3.0.2, svgo@^3.0.2:
   version "3.0.2"
