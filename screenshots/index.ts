@@ -41,6 +41,8 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 	log(`atanas.info: Opening new browser page for ${name}...`);
 	const page = await browser.newPage();
 
+	page.setDefaultNavigationTimeout(0);
+
 	await page.setViewport({
 		width: 1280,
 		height: 1000
