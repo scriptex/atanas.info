@@ -438,10 +438,10 @@ export const projects: WebProject[] = [
 		skip: false
 	},
 	{
-		url: '',
+		url: 'https://demetry.film/',
 		image: '/images/web-apps/Hàla.jpg',
 		index: 51,
-		title: 'Hàla',
+		title: 'Demetry',
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
 		skip: false
 	},
@@ -638,11 +638,11 @@ export const mobileApps: ExtendedProject[] = [
 
 export const automotiveProjects: ExtendedProject[] = [
 	{
-		url: 'https://kinetik-infotainment.netlify.app/',
+		url: 'https://gokart-ui.atanas.info/',
 		index: 0,
 		title: 'Kinetik Infotainment',
 		description: 'Dashboard and infotainment system for the Kinetik Model 27 electric kart',
-		details: 'Typescript, SCSS, SVG, React, Redux, NodeJS, Express, WebSocket',
+		details: 'Typescript, SCSS, SVG, React, Redux, NodeJS, Express, WebSocket, Electron',
 		images: [
 			'kinetik-infotainment-1.jpg',
 			'kinetik-infotainment-2.jpg',
@@ -658,7 +658,7 @@ export const automotiveProjects: ExtendedProject[] = [
 		imageHeight: 1440
 	},
 	{
-		url: 'https://volvo-dashboard.netlify.app/',
+		url: 'https://volvo-dashboard.atanas.info/',
 		index: 1,
 		title: 'Volvo Dashboard',
 		description: 'Dashboard system for the Volvo P1800 custom hybrid automobile',
