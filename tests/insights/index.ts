@@ -25,16 +25,18 @@ jest.mock('@insights/client', () => ({
 			if (path.startsWith('/user/repos')) {
 				return [
 					{
-						full_name: 'test/test-repo',
+						size: 100,
 						owner: {
 							login: 'test'
-						}
+						},
+						full_name: 'test/test-repo'
 					}
 				];
 			}
 
 			if (path.startsWith('/users/scriptex')) {
 				return {
+					size: 100,
 					followers: 20,
 					following: 0,
 					created_at: '2008-01-14T04:33:35Z',
@@ -63,6 +65,7 @@ jest.mock('@insights/client', () => ({
 			if (path.endsWith('/contributors')) {
 				return [
 					{
+						size: 100,
 						login: 'test',
 						contributions: 32
 					}
@@ -86,7 +89,7 @@ jest.mock('@insights/client', () => ({
 			};
 		}
 
-		if (path.endsWith('projects?per_page=100&statistics=true')) {
+		if (path.includes('projects?per_page=100&statistics=true')) {
 			return [
 				{
 					name: 'Test Repo',
@@ -121,6 +124,30 @@ jest.mock('@insights/client', () => ({
 		return {};
 	},
 	lastFm: {
+		userGetInfo: () =>
+			Promise.resolve({
+				user: {
+					name: 'scriptex',
+					age: '39',
+					subscriber: '',
+					realname: 'Atanas',
+					bootstrap: '',
+					playcount: '12345',
+					artist_count: '1234',
+					playlists: '10',
+					track_count: '100',
+					album_count: '1000',
+					image: [],
+					registered: {
+						unixtime: '123456789',
+						'#text': 123456789
+					},
+					country: 'Bulgaria',
+					gender: 'male',
+					url: 'https://atanas.info',
+					type: 'user'
+				}
+			}),
 		userGetWeeklyAlbumChart: () =>
 			Promise.resolve({
 				weeklyalbumchart: {
@@ -185,7 +212,7 @@ it('Test the `getContributions` function', async () => {
 it('Test the `getGithubRepositories` function', async () => {
 	const result = await getGithubRepositories();
 
-	expect(result.length).toEqual(2);
+	expect(result.length).toEqual(3);
 	expect(result[0].full_name).toBeDefined();
 	expect(typeof result[0].full_name).toEqual('string');
 });
@@ -216,7 +243,7 @@ it('Test the `getGithubInsights` function', async () => {
 	expect(Object.keys(result1.calendar!).length).toEqual(1);
 
 	expect(result1.repositories).toBeDefined();
-	expect(result1.repositories!.length).toEqual(2);
+	expect(result1.repositories!.length).toEqual(3);
 
 	expect(result1.updated).toBeDefined();
 	expect(typeof result1.updated).toEqual('number');
@@ -254,7 +281,7 @@ it('Test the `getGitlabInsights` function', async () => {
 
 	expect(result1.general).toBeDefined();
 	expect(result1.general?.repos).toBeDefined();
-	expect(result1.general?.repos).toEqual(4);
+	expect(result1.general?.repos).toEqual(8);
 	expect(result1.general?.createdAt).toBeDefined();
 	expect(result1.general?.updatedAt).toBeDefined();
 	expect(typeof result1.general?.updatedAt).toEqual('string');
@@ -263,7 +290,7 @@ it('Test the `getGitlabInsights` function', async () => {
 	expect(Object.keys(result1.calendar!).length).toEqual(1);
 
 	expect(result1.repositories).toBeDefined();
-	expect(result1.repositories!.length).toEqual(4);
+	expect(result1.repositories!.length).toEqual(8);
 
 	expect(result1.updated).toBeDefined();
 	expect(typeof result1.updated).toEqual('number');

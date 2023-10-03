@@ -23,7 +23,7 @@ export const getGitlabInsights = async (): Promise<GitlabInsights> => {
 		const groupProjects1 = await gitlab(`groups/${group.id}/projects?per_page=100&statistics=true`);
 		const groupProjects2 = await gitlab(`groups/${group.id}/projects?per_page=100&statistics=true&page=2`);
 
-		const calendar = await fetch('https://gitlab.com/users/scriptex/calendar.json').then((res: any) => res.json());
+		const calendar = await fetch('https://gitlab.com/users/scriptex/calendar.json').then(r => r.json());
 
 		const projects = [
 			...userProjects1.map((project: any) => setOwner(project, 'scriptex')),
