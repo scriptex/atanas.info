@@ -10,7 +10,7 @@ type Props = {
 export const StatsEntry: FC<Readonly<Props>> = ({ title, data }: Props) => (
 	<div className="c-section__entry c-section__entry--no-background">
 		<div className="o-shell">
-			<h3>{title}</h3>
+			{title && <h3>{title}</h3>}
 
 			<ul className="c-section__list">
 				{data.map((item: GeneralInsight) => (
