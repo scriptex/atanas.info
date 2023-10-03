@@ -8,7 +8,7 @@ dotenvConfig({
 
 export const github = new GitHubClient({
 	base: 'https://api.github.com',
-	token: process.env.GITHUB_TOKEN as string,
+	token: process.env.GITHUB_TOKEN!,
 	fetch
 });
 

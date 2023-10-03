@@ -1,4 +1,5 @@
 import { load } from 'cheerio';
+import type { LastFMImage, LastFMUserResponse } from 'lastfm-node-client';
 
 import { log } from '@scripts/shared';
 import clientPromise, { Query, queryNPM, queryGithub, queryGitlab, queryLastFM } from '@lib/mongodb';
@@ -15,14 +16,12 @@ export type Contribution = {
 
 export type LastFMAlbum = {
 	name: string;
-	images: Array<{
-		size: string;
-		'#text': string;
-	}>;
+	images: LastFMImage[];
 	artist: string;
 };
 
 export type LastFMInsights = {
+	info: LastFMUserResponse | null;
 	error: boolean;
 	updated: number;
 	topAlbums: LastFMAlbum[];

@@ -112,6 +112,11 @@
 			}
 		}
 	}
+
+	& .c-section--stats {
+		padding-top: 0;
+		margin-top: -6rem;
+	}
 }
 
 @media (--tablet-landscape) {
@@ -134,6 +139,10 @@
 
 		& .c-section__header:not(:first-child) {
 			padding-top: 2rem;
+		}
+
+		& .c-section--stats {
+			margin-top: -2rem;
 		}
 	}
 }
