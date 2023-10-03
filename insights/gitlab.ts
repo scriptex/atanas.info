@@ -16,16 +16,20 @@ export const getGitlabInsights = async (): Promise<GitlabInsights> => {
 		const group = await gitlab('groups/2344434');
 
 		log('atanas.info: Getting projects for user Scriptex from Gitlab...');
-		const userProjects = await gitlab(`users/${user.id}/projects?per_page=100&statistics=true`);
+		const userProjects1 = await gitlab(`users/${user.id}/projects?per_page=100&statistics=true`);
+		const userProjects2 = await gitlab(`users/${user.id}/projects?per_page=100&statistics=true&page=2`);
 
 		log('atanas.info: Getting projects for organization Three11 from Gitlab...');
-		const groupProjects = await gitlab(`groups/${group.id}/projects?per_page=100&statistics=true`);
+		const groupProjects1 = await gitlab(`groups/${group.id}/projects?per_page=100&statistics=true`);
+		const groupProjects2 = await gitlab(`groups/${group.id}/projects?per_page=100&statistics=true&page=2`);
 
 		const calendar = await fetch('https://gitlab.com/users/scriptex/calendar.json').then((res: any) => res.json());
 
 		const projects = [
-			...userProjects.map((project: any) => setOwner(project, 'scriptex')),
-			...groupProjects.map((project: any) => setOwner(project, 'three11'))
+			...userProjects1.map((project: any) => setOwner(project, 'scriptex')),
+			...userProjects2.map((project: any) => setOwner(project, 'scriptex')),
+			...groupProjects1.map((project: any) => setOwner(project, 'three11')),
+			...groupProjects2.map((project: any) => setOwner(project, 'three11'))
 		];
 		const repositories: any[] = [];
 
