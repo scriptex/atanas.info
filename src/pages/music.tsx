@@ -1,18 +1,12 @@
 import { FC, useRef, useState, useEffect } from 'react';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
+import { getPartnersFromCMS } from '@scripts/cms';
 import { getData, queryMusic } from '@lib/mongodb';
 import { music, MusicFunctions } from '@scripts/music';
 import { Ref, composeClassName } from '@scripts/shared';
+import type { MusicPageProps, Track } from '@scripts/types';
 import { Button, Layout, Section, Title } from '@components';
-
-type Track = {
-	url: string;
-	metaData: {
-		title: string;
-		artist: string;
-	};
-};
 
 const getTrackArtist = (data: string): string => {
 	const result = data.replace('Scriptex', '').trim();
@@ -28,7 +22,7 @@ const getTrackArtist = (data: string): string => {
 	return ` (${result})`;
 };
 
-export const Music: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data }) => {
+export const Music: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data, partners }) => {
 	const [source, setSource] = useState(data[0]);
 	const [playing, setPlaying] = useState(false);
 	const [visible, setVisible] = useState(false);
@@ -45,7 +39,7 @@ export const Music: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>>
 	}, []);
 
 	return (
-		<Layout main="o-main--high">
+		<Layout main="o-main--high" partners={partners}>
 			<Title text="Music | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section id="music" hasButton>
@@ -136,6 +130,11 @@ export const Music: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>>
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const getStaticProps: GetStaticProps<{ data: Track[] }> = async ({ params }) => getData('Music', queryMusic);
+export const getStaticProps: GetStaticProps<MusicPageProps> = async ({ params }) => ({
+	props: {
+		data: (await getData('Music', queryMusic)).props.data as Track[],
+		partners: await getPartnersFromCMS()
+	}
+});
 
 export default Music;

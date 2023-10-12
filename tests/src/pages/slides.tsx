@@ -1,5 +1,5 @@
 import { Slides } from '@pages/slides';
-import { slides } from '@test-config/mocks';
 import { snapshotTest } from '@test-config/helpers';
+import { partners, slides } from '@test-config/mocks';
 
-snapshotTest(() => <Slides data={slides} />, '.c-section__nav button', 'Slides');
+snapshotTest(() => <Slides data={slides} partners={partners} />, '.c-section__nav button', 'Slides');

@@ -3,16 +3,21 @@ import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'ne
 
 import { Routes } from '@data/routes';
 import { MDX, Layout, Title } from '@components';
+import type { BlogPostPageData } from '@scripts/types';
 import { getPostBySlug, getAllPosts } from '@lib/markdown';
-import { Article, getArticlesFromCMS } from '@scripts/cms';
+import { Article, getArticlesFromCMS, getPartnersFromCMS } from '@scripts/cms';
 
-export const OpenSourceProject: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ post, articles }) => {
+export const OpenSourceProject: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({
+	post,
+	articles,
+	partners
+}) => {
 	const match = articles
 		.filter((article: Article) => !article.external)
 		.find(item => item.url === `/blog/${post.slug}`);
 
 	return (
-		<Layout>
+		<Layout partners={partners}>
 			<Title text={`${match?.title ?? post.slug} | Atanas Atanasov | Senior Javascript/Typescript Engineer`} />
 
 			<MDX
@@ -26,14 +31,16 @@ export const OpenSourceProject: FC<Readonly<InferGetStaticPropsType<typeof getSt
 	);
 };
 
-export const getStaticProps: GetStaticProps<{
-	post: ReturnType<typeof getPostBySlug>;
-	articles: Article[];
-}> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<BlogPostPageData<typeof getPostBySlug>> = async ({ params }) => {
 	const post = getPostBySlug('src/data/posts', params?.slug as string, ['slug', 'content']);
-	const articles = await getArticlesFromCMS();
 
-	return { props: { post, articles } };
+	return {
+		props: {
+			post,
+			articles: await getArticlesFromCMS(),
+			partners: await getPartnersFromCMS()
+		}
+	};
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

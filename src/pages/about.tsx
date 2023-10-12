@@ -4,14 +4,15 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import book from '@data/lotties/book.json';
 import { useNetworkState } from '@scripts/shared';
+import type { AboutPageProps } from '@scripts/types';
 import { Icon, Title, Layout, Section, Animation } from '@components';
-import { BioEntry, OwnerDetails, getBioFromCMS, getOwnerDetailsFromCMS } from '@scripts/cms';
+import { BioEntry, getBioFromCMS, getOwnerDetailsFromCMS, getPartnersFromCMS } from '@scripts/cms';
 
-export const About: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ bio, owner }) => {
+export const About: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ bio, owner, partners }) => {
 	const online = useNetworkState();
 
 	return (
-		<Layout>
+		<Layout partners={partners}>
 			<Title text="About | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
@@ -44,10 +45,11 @@ export const About: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ bio,
 	);
 };
 
-export const getStaticProps: GetStaticProps<{ bio: BioEntry[]; owner: OwnerDetails }> = async () => ({
+export const getStaticProps: GetStaticProps<AboutPageProps> = async () => ({
 	props: {
 		bio: await getBioFromCMS(),
-		owner: await getOwnerDetailsFromCMS()
+		owner: await getOwnerDetailsFromCMS(),
+		partners: await getPartnersFromCMS()
 	}
 });
 

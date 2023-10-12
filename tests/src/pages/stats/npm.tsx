@@ -1,9 +1,10 @@
 import type { ComponentProps } from 'react';
+import type { InferGetStaticPropsType } from 'next';
 
+import { partners } from '@test-config/mocks';
+import { NPMStats } from '@pages/stats/npm';
 import { snapshotTest } from '@test-config/helpers';
-import { NPMStats, getStaticProps } from '@pages/stats/npm';
 import type { Package, WithError, WithSum } from '@scripts/types';
-import { InferGetStaticPropsType } from 'next';
 
 type Data = Record<string, Package> & WithSum & WithError;
 
@@ -32,20 +33,16 @@ jest.mock('@lib/mongodb', () => ({
 	getData: jest.fn(() => Promise.resolve({ props: { data: [] } }))
 }));
 
-snapshotTest(() => <NPMStats data={{ ...data, sum: 1876223 } as unknown as Data} />, undefined, 'NPMStats');
+snapshotTest(
+	() => <NPMStats data={{ ...data, sum: 1876223 } as unknown as Data} partners={partners} />,
+	undefined,
+	'NPMStats'
+);
 
-snapshotTest(() => <NPMStats data={data} />, undefined, 'NPMStats');
+snapshotTest(() => <NPMStats data={data} partners={partners} />, undefined, 'NPMStats');
 
-snapshotTest(() => <NPMStats data={{} as ComponentProps<typeof NPMStats>['data']} />, undefined, 'NPMStats');
-
-it('Test the `getStaticProps` function', async () => {
-	const result = (await getStaticProps({})) as {
-		props: InferGetStaticPropsType<typeof getStaticProps>;
-	};
-
-	expect(result).toBeDefined();
-	expect(result.props).toBeDefined();
-	expect(result.props.data).toBeDefined();
-	expect(Array.isArray(result.props.data)).toEqual(true);
-	expect((result.props.data as unknown as Array<never>).length).toEqual(0);
-});
+snapshotTest(
+	() => <NPMStats data={{} as ComponentProps<typeof NPMStats>['data']} partners={partners} />,
+	undefined,
+	'NPMStats'
+);

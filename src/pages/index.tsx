@@ -3,10 +3,11 @@ import { FC, useRef, useState, useEffect } from 'react';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import hello from '@data/lotties/hello.json';
-import { getTitlesFromCMS } from '@scripts/cms';
+import type { HomePageProps } from '@scripts/types';
 import { Title, Layout, Section, Animation } from '@components';
+import { getPartnersFromCMS, getTitlesFromCMS } from '@scripts/cms';
 
-export const Home: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ titles }) => {
+export const Home: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ titles, partners }) => {
 	const canvasRef = useRef<HTMLDivElement>(null);
 	const [activeIndex, setActiveIndex] = useState(0);
 
@@ -31,7 +32,7 @@ export const Home: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ title
 	}, []);
 
 	return (
-		<Layout main="o-main--high">
+		<Layout main="o-main--high" partners={partners}>
 			<Title text="Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section id="hello" hasShell={false} hasButton={false}>
@@ -56,9 +57,10 @@ export const Home: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ title
 	);
 };
 
-export const getStaticProps: GetStaticProps<{ titles: string[] }> = async () => ({
+export const getStaticProps: GetStaticProps<HomePageProps> = async () => ({
 	props: {
-		titles: await getTitlesFromCMS()
+		titles: await getTitlesFromCMS(),
+		partners: await getPartnersFromCMS()
 	}
 });
 

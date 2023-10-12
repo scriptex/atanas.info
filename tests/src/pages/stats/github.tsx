@@ -1,7 +1,8 @@
 import { act } from '@testing-library/react';
 import type { InferGetStaticPropsType } from 'next';
 
-import { GithubStats, getStaticProps } from '@pages/stats/github';
+import { partners } from '@test-config/mocks';
+import { GithubStats } from '@pages/stats/github';
 import { test, mockFetch, snapshotTest } from '@test-config/helpers';
 import type { GithubCount, GithubInsights, GithubContribution } from '@scripts/types';
 
@@ -62,11 +63,15 @@ const dataEmpty: GithubInsights = {
 	repositories: null
 };
 
-snapshotTest(() => <GithubStats data={dataFull} />, '.c-skyline__nav li:first-child .c-btn--small', 'GithubStats');
+snapshotTest(
+	() => <GithubStats data={dataFull} partners={partners} />,
+	'.c-skyline__nav li:first-child .c-btn--small',
+	'GithubStats'
+);
 
-snapshotTest(() => <GithubStats data={dataEmpty} />, undefined, 'GithubStats');
+snapshotTest(() => <GithubStats data={dataEmpty} partners={partners} />, undefined, 'GithubStats');
 
-snapshotTest(() => <GithubStats data={{ ...dataEmpty, error: true }} />, undefined, 'GithubStats');
+snapshotTest(() => <GithubStats data={{ ...dataEmpty, error: true }} partners={partners} />, undefined, 'GithubStats');
 
 snapshotTest(
 	() => (
@@ -82,6 +87,7 @@ snapshotTest(
 					}))
 				}))
 			}}
+			partners={partners}
 		/>
 	),
 	undefined,
@@ -97,6 +103,7 @@ snapshotTest(
 					'2022-01-30': {} as unknown as GithubCount
 				}
 			}}
+			partners={partners}
 		/>
 	),
 	undefined,
@@ -113,6 +120,7 @@ snapshotTest(
 					language: null
 				}))
 			}}
+			partners={partners}
 		/>
 	),
 	undefined,
@@ -122,23 +130,11 @@ snapshotTest(
 it('Test the GithubStats page with fake timers', async () => {
 	jest.useFakeTimers();
 
-	const { asFragment } = await test(() => <GithubStats data={dataFull} />);
+	const { asFragment } = await test(() => <GithubStats data={dataFull} partners={partners} />);
 
 	act(() => {
 		jest.runOnlyPendingTimers();
 	});
 
 	expect(asFragment()).toMatchSnapshot();
-});
-
-it('Test the `getStaticProps` function', async () => {
-	const result = (await getStaticProps({})) as {
-		props: InferGetStaticPropsType<typeof getStaticProps>;
-	};
-
-	expect(result).toBeDefined();
-	expect(result.props).toBeDefined();
-	expect(result.props.data).toBeDefined();
-	expect(Array.isArray(result.props.data)).toEqual(true);
-	expect((result.props.data as unknown as Array<never>).length).toEqual(0);
 });

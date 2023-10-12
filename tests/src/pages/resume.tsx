@@ -1,6 +1,7 @@
 import { Resume } from '@pages/resume';
 import { snapshotTest } from '@test-config/helpers';
 import {
+	partners,
 	strengths,
 	experience,
 	certificates,
@@ -26,6 +27,7 @@ snapshotTest(
 				experience,
 				certificates
 			}}
+			partners={partners}
 		/>
 	),
 	'.c-btn--print',

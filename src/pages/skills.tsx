@@ -1,10 +1,13 @@
 import { FC, useState, useEffect } from 'react';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { composeClassName } from '@scripts/shared';
 import { ForceNode, skills } from '@data/skills-list';
+import { getPartnersFromCMS } from '@scripts/cms';
+import type { SkillsPageData } from '@scripts/types';
 import { Icon, Lines, Button, Section, Layout, Title } from '@components';
 
-export const Skills: FC = () => {
+export const Skills: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ partners }) => {
 	const [showTable, setShowTable] = useState(false);
 
 	useEffect(() => {
@@ -22,7 +25,7 @@ export const Skills: FC = () => {
 	}, []);
 
 	return (
-		<Layout>
+		<Layout partners={partners}>
 			<Title text="Skills | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
@@ -69,5 +72,11 @@ export const Skills: FC = () => {
 		</Layout>
 	);
 };
+
+export const getStaticProps: GetStaticProps<SkillsPageData> = async () => ({
+	props: {
+		partners: await getPartnersFromCMS()
+	}
+});
 
 export default Skills;

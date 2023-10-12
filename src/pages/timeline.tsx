@@ -3,11 +3,12 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import timeline from '@data/lotties/timeline.json';
-import { TimelineItem, getTimelineFromCMS } from '@scripts/cms';
+import type { TimelinePageData } from '@scripts/types';
 import { Layout, Section, Animation, Title, Icon } from '@components';
+import { TimelineItem, getPartnersFromCMS, getTimelineFromCMS } from '@scripts/cms';
 
-export const Timeline: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data }) => (
-	<Layout>
+export const Timeline: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, partners }) => (
+	<Layout partners={partners}>
 		<Title text="Timeline | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section
@@ -38,9 +39,10 @@ export const Timeline: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ d
 	</Layout>
 );
 
-export const getStaticProps: GetStaticProps<{ data: TimelineItem[] }> = async () => ({
+export const getStaticProps: GetStaticProps<TimelinePageData> = async () => ({
 	props: {
-		data: await getTimelineFromCMS()
+		data: await getTimelineFromCMS(),
+		partners: await getPartnersFromCMS()
 	}
 });
 
