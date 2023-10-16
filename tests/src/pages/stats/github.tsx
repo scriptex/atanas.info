@@ -1,5 +1,4 @@
 import { act } from '@testing-library/react';
-import type { InferGetStaticPropsType } from 'next';
 
 import { partners } from '@test-config/mocks';
 import { GithubStats } from '@pages/stats/github';

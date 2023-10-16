@@ -1,5 +1,4 @@
 import type { ComponentProps } from 'react';
-import type { InferGetStaticPropsType } from 'next';
 
 import { partners } from '@test-config/mocks';
 import { NPMStats } from '@pages/stats/npm';

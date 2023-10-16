@@ -1,5 +1,4 @@
 import { act } from '@testing-library/react';
-import type { InferGetStaticPropsType } from 'next';
 
 import { GitlabStats } from '@pages/stats/gitlab';
 import { test, snapshotTest } from '@test-config/helpers';
