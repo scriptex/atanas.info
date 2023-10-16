@@ -74,8 +74,7 @@ export const PortfolioWebApps: FC<Readonly<InferGetStaticPropsType<typeof getSta
 	);
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const getStaticProps: GetStaticProps<PortfolioWebAppsPageData> = async ({ params }) => ({
+export const getStaticProps: GetStaticProps<PortfolioWebAppsPageData> = async () => ({
 	props: {
 		data: (await getData('Screenshots', queryScreenshots)).props.data as WebProject[],
 		partners: await getPartnersFromCMS()

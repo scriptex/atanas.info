@@ -233,8 +233,7 @@ export const GithubStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 	);
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const getStaticProps: GetStaticProps<GithubStatsPageData> = async ({ params }) => ({
+export const getStaticProps: GetStaticProps<GithubStatsPageData> = async () => ({
 	props: {
 		data: (await getData('Insights', queryGithub)).props.data as GithubInsights,
 		partners: await getPartnersFromCMS()

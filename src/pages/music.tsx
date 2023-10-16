@@ -129,8 +129,7 @@ export const Music: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>>
 	);
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const getStaticProps: GetStaticProps<MusicPageProps> = async ({ params }) => ({
+export const getStaticProps: GetStaticProps<MusicPageProps> = async () => ({
 	props: {
 		data: (await getData('Music', queryMusic)).props.data as Track[],
 		partners: await getPartnersFromCMS()
