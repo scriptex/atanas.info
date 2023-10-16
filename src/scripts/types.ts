@@ -1,8 +1,8 @@
 import type { ReactNode } from 'react';
 
+import type { WebProject } from '@data/projects';
 import type { LastFMInsights } from '@insights/utils';
 import type { Article, BioEntry, Certificate, OwnerDetails, ResumeData, Slide, TimelineItem, Video } from './cms';
-import { WebProject } from '@data/projects';
 
 export type Nullable<T> = T | null;
 

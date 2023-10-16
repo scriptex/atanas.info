@@ -550,7 +550,11 @@ exports[`Layout component Should render the Layout component 1`] = `
   </header>
   <main
     class="o-main "
-  />
+  >
+    <p>
+      Layout page
+    </p>
+  </main>
   <form
     class="c-contact"
   >
@@ -615,6 +619,45 @@ exports[`Layout component Should render the Layout component 1`] = `
       </div>
     </div>
   </form>
+  <div
+    class="c-partners"
+  >
+    <div
+      class="o-shell"
+    >
+      <h2>
+        Trusted by
+      </h2>
+      <ul>
+        <li>
+          <img
+            alt="Partner 1 brand image"
+            data-nimg="1"
+            decoding="async"
+            height="200"
+            loading="lazy"
+            src="/images/clients/partner-1.svg"
+            style="color: transparent;"
+            title="Partner 1"
+            width="200"
+          />
+        </li>
+        <li>
+          <img
+            alt="Partner 2 brand image"
+            data-nimg="1"
+            decoding="async"
+            height="200"
+            loading="lazy"
+            src="/images/clients/partner-2.svg"
+            style="color: transparent;"
+            title="Partner 2"
+            width="200"
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
   <nav
     class="c-nav c-nav--inline"
   >

@@ -5,9 +5,9 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { Routes } from '@data/routes';
 import { sectionStatsProps } from '@scripts/stats';
 import { getData, queryNPM } from '@lib/mongodb';
-import type { Packages, NPMStatsPageProps, WithSum, WithError } from '@scripts/types';
-import { Layout, Section, ExternalLink, Title } from '@components';
 import { getPartnersFromCMS } from '@scripts/cms';
+import { Layout, Section, ExternalLink, Title } from '@components';
+import type { WithSum, WithError, Packages, NPMStatsPageProps } from '@scripts/types';
 
 const PackagesList: FC<Readonly<Packages>> = ({ data }: Packages) => (
 	<div className="o-grid c-packages">
