@@ -3,6 +3,7 @@ import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import { Asset, createClient, EntryCollection, EntrySkeletonType } from 'contentful';
 
 import type { Partner } from './types';
+import type { ForceNode } from '@data/skills-list';
 
 type CMSType =
 	| 'bio'
@@ -16,6 +17,7 @@ type CMSType =
 	| 'strength'
 	| 'education'
 	| 'experience'
+	| 'occupation'
 	| 'certificate'
 	| 'resume link'
 	| 'resume more'
@@ -129,6 +131,15 @@ export type Video = Readonly<{
 	title: string;
 	description: string;
 }>;
+
+export type CMSPartner = Omit<Partner, 'image'> & {
+	image: Asset;
+};
+
+export type Occupation = Omit<ForceNode, 'text'> & {
+	name: string;
+	index: number;
+};
 
 const client = createClient({
 	space: process.env.CONTENTFUL_SPACE_ID!,
@@ -348,10 +359,6 @@ export const getVideosFromCMS = async (): Promise<Video[]> => {
 	}
 };
 
-type CMSPartner = Omit<Partner, 'image'> & {
-	image: Asset;
-};
-
 export const getPartnersFromCMS = async (): Promise<Partner[]> => {
 	try {
 		const data = await getCMSData('partner');
@@ -363,6 +370,24 @@ export const getPartnersFromCMS = async (): Promise<Partner[]> => {
 				name,
 				index,
 				image: image.fields.file?.url as string
+			};
+		});
+	} catch (error: unknown) {
+		return [];
+	}
+};
+
+export const getOccupationFromCMS = async (): Promise<ForceNode[]> => {
+	try {
+		const data = await getCMSData('occupation');
+
+		return data.items.map(item => {
+			// eslint-disable-next-line @typescript-eslint/no-unused-vars
+			const { index, name, ...rest } = item.fields as Occupation;
+
+			return {
+				...rest,
+				text: name
 			};
 		});
 	} catch (error: unknown) {
