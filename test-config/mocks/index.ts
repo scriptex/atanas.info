@@ -2,6 +2,7 @@ export * from './articles';
 export * from './certificates';
 export * from './experience';
 export * from './lastfm-insights';
+export * from './occupation';
 export * from './resume';
 export * from './partners';
 export * from './slides';

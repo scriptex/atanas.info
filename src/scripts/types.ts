@@ -1,8 +1,9 @@
 import type { ReactNode } from 'react';
 
+import type { ForceNode } from '@data/skills-list';
 import type { WebProject } from '@data/projects';
 import type { LastFMInsights } from '@insights/utils';
-import type { Article, BioEntry, Certificate, OwnerDetails, ResumeData, Slide, TimelineItem, Video } from './cms';
+import type { Slide, Video, Article, BioEntry, ResumeData, Certificate, OwnerDetails, TimelineItem } from './cms';
 
 export type Nullable<T> = T | null;
 
@@ -155,7 +156,9 @@ export type MusicPageProps = SharedPageProps & {
 	data: Track[];
 };
 
-export type OccupationPageProps = SharedPageProps; //NOSONAR
+export type OccupationPageProps = SharedPageProps & {
+	data: ForceNode[];
+};
 
 export type ResumePageData = SharedPageProps & {
 	data: ResumeData;
