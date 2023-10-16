@@ -1,10 +1,13 @@
 import { useEffect, type FC } from 'react';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import working from '@data/lotties/working.json';
 import { occupation } from '@data/occupation';
+import { getPartnersFromCMS } from '@scripts/cms';
+import type { OccupationPageProps } from '@scripts/types';
 import { Layout, Section, Animation, Title } from '@components';
 
-export const Occupation: FC = () => {
+export const Occupation: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ partners }) => {
 	useEffect(() => {
 		import('@scripts/force')
 			.then(({ renderForceDirectedGraph }) =>
@@ -14,7 +17,7 @@ export const Occupation: FC = () => {
 	}, []);
 
 	return (
-		<Layout>
+		<Layout partners={partners}>
 			<Title text="Occupation | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
@@ -33,5 +36,11 @@ export const Occupation: FC = () => {
 		</Layout>
 	);
 };
+
+export const getStaticProps: GetStaticProps<OccupationPageProps> = async () => ({
+	props: {
+		partners: await getPartnersFromCMS()
+	}
+});
 
 export default Occupation;

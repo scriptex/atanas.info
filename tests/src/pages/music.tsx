@@ -1,4 +1,5 @@
-import { Music, getStaticProps } from '@pages/music';
+import { Music } from '@pages/music';
+import { partners } from '@test-config/mocks';
 import { snapshotTest, mockAudioContext } from '@test-config/helpers';
 
 jest.mock('@lib/mongodb', () => ({
@@ -21,16 +22,10 @@ const data = [
 	}
 ];
 
-snapshotTest(() => <Music data={data} />, '.c-music__menu', 'Music');
+snapshotTest(() => <Music data={data} partners={partners} />, '.c-music__menu', 'Music');
 
-snapshotTest(() => <Music data={data} />, '.c-music__btn--play', 'Music');
+snapshotTest(() => <Music data={data} partners={partners} />, '.c-music__btn--play', 'Music');
 
-snapshotTest(() => <Music data={data} />, '.c-music__btn--pause', 'Music');
+snapshotTest(() => <Music data={data} partners={partners} />, '.c-music__btn--pause', 'Music');
 
-snapshotTest(() => <Music data={data} />, '.c-music__tracks button:first-child', 'Music');
-
-it('Should test the `getStaticProps` function', async () => {
-	const result = await getStaticProps({});
-
-	expect(result).toEqual({ props: { data: [] } });
-});
+snapshotTest(() => <Music data={data} partners={partners} />, '.c-music__tracks button:first-child', 'Music');

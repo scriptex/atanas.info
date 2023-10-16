@@ -5,18 +5,23 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Routes } from '@data/routes';
 import type { WebProject } from '@data/projects';
+import { getPartnersFromCMS } from '@scripts/cms';
 import { portfolioSectionProps } from '@data/pages';
 import { getData, queryScreenshots } from '@lib/mongodb';
+import type { PortfolioWebAppsPageData } from '@scripts/types';
 import { Icon, Layout, Loader, Section, SectionNav, ExternalLink, Title } from '@components';
 import { usePagination, useNetworkState, composeClassName, useCurrentPageParam } from '@scripts/shared';
 
-export const PortfolioWebApps: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data = [] }) => {
+export const PortfolioWebApps: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({
+	data = [],
+	partners
+}) => {
 	const page = useCurrentPageParam();
 	const online = useNetworkState();
 	const { menu, items } = usePagination(data);
 
 	return !items ? null : (
-		<Layout>
+		<Layout partners={partners}>
 			<Title text="Web Applications | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
@@ -69,8 +74,11 @@ export const PortfolioWebApps: FC<Readonly<InferGetStaticPropsType<typeof getSta
 	);
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const getStaticProps: GetStaticProps<{ data: WebProject[] }> = async ({ params }) =>
-	getData('Screenshots', queryScreenshots);
+export const getStaticProps: GetStaticProps<PortfolioWebAppsPageData> = async () => ({
+	props: {
+		data: (await getData('Screenshots', queryScreenshots)).props.data as WebProject[],
+		partners: await getPartnersFromCMS()
+	}
+});
 
 export default PortfolioWebApps;

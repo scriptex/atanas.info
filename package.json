@@ -23,7 +23,7 @@
 		"url": "github:scriptex/atanas.info"
 	},
 	"scripts": {
-		"pwa": "create-pwa --icon public/images/icons/icon.png --launch public/images/icons/splash.png",
+		"pwa": "npx create-pwa --icon public/images/icons/icon.png --launch public/images/icons/splash.png",
 		"svg": "./bin/svg.sh",
 		"time": "./bin/time.sh",
 		"mjml": "mjml -w ./email/*.mjml -o ./email/",
@@ -142,7 +142,6 @@
 		"browserslist": "4.22.1",
 		"cheerio": "1.0.0-rc.12",
 		"cloudinary": "1.41.0",
-		"create-pwa": "2.7.0",
 		"dotenv": "16.3.1",
 		"eslint": "8.51.0",
 		"eslint-config-next": "13.5.4",

@@ -1,6 +1,18 @@
 import type { ReactNode } from 'react';
 
+import type { WebProject } from '@data/projects';
+import type { LastFMInsights } from '@insights/utils';
+import type { Article, BioEntry, Certificate, OwnerDetails, ResumeData, Slide, TimelineItem, Video } from './cms';
+
 export type Nullable<T> = T | null;
+
+export type Track = {
+	url: string;
+	metaData: {
+		title: string;
+		artist: string;
+	};
+};
 
 export type GithubCount = {
 	count: number | null;
@@ -110,4 +122,100 @@ export type WithError = {
 	error?: boolean;
 };
 
-export type Props = Packages<WithSum & WithError>;
+export type Partner = {
+	name: string;
+	index: number;
+	image?: string;
+};
+
+export type SharedPageProps = {
+	partners: Partner[];
+};
+
+export type AboutPageProps = SharedPageProps & {
+	bio: BioEntry[];
+	owner: OwnerDetails;
+};
+
+export type ArticlesPageProps = SharedPageProps & {
+	articles: Article[];
+};
+
+export type CertificatesPageProps = SharedPageProps & {
+	data: Certificate[];
+};
+
+export type HomePageProps = SharedPageProps & {
+	titles: string[];
+};
+
+export type InteractiveResumePageProps = SharedPageProps; //NOSONAR //NOSONAR
+
+export type MusicPageProps = SharedPageProps & {
+	data: Track[];
+};
+
+export type OccupationPageProps = SharedPageProps; //NOSONAR
+
+export type ResumePageData = SharedPageProps & {
+	data: ResumeData;
+};
+
+export type SkillsPageData = SharedPageProps; //NOSONAR
+
+export type SlidesPageData = SharedPageProps & {
+	data: Slide[];
+};
+
+export type SocialPageData = SharedPageProps & {
+	data: LastFMInsights;
+};
+
+export type TimelinePageData = SharedPageProps & {
+	data: TimelineItem[];
+};
+
+export type VideosPageData = SharedPageProps & {
+	data: Video[];
+};
+
+export type BlogPageData = SharedPageProps & {
+	articles: Article[];
+};
+
+export type BlogPostPageData<T extends (...args: any) => any> = BlogPageData & {
+	post: ReturnType<T>;
+};
+
+export type PortfolioAutomotiveAppsPageData = SharedPageProps; //NOSONAR
+
+export type PortfolioEmailTemplatesPageData = SharedPageProps; //NOSONAR
+
+export type PortfolioPageData = SharedPageProps; //NOSONAR
+
+export type PortfolioMobileAppsPageData = SharedPageProps; //NOSONAR
+
+export type PortfolioPersonalProjectsPageData = SharedPageProps; //NOSONAR
+
+export type PortfolioWebAppsPageData = SharedPageProps & {
+	data: WebProject[];
+};
+
+export type PortfolioOpenSourceProjectPageData = SharedPageProps & {
+	post: Record<string, string>;
+};
+
+export type PortfolioOpenSourcePageData = SharedPageProps; //NOSONAR
+
+export type GithubStatsPageData = SharedPageProps & {
+	data: GithubInsights;
+};
+
+export type GitlabStatsPageData = SharedPageProps & {
+	data: GitlabInsights;
+	calendarData: Record<string, number>;
+};
+
+export type StatsPageData = SharedPageProps; //NOSONAR
+
+export type NPMStatsPageProps = SharedPageProps & Packages<WithSum & WithError>;

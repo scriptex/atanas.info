@@ -1,15 +1,16 @@
 import type { FC } from 'react';
 
 import { errorIcon } from '@data/error-icon';
-import type { ReactChildren } from '@scripts/types';
 import { Lines, Layout, Title } from '@components';
+import type { Partner, ReactChildren } from '@scripts/types';
 
 interface Props {
 	children: ReactChildren;
+	partners: Partner[];
 }
 
-export const EmptyPage: FC<Readonly<Props>> = ({ children }: Props) => (
-	<Layout main="o-main--high">
+export const EmptyPage: FC<Readonly<Props>> = ({ children, partners }: Props) => (
+	<Layout main="o-main--high" partners={partners}>
 		<Title text="Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<div className="c-error-page">

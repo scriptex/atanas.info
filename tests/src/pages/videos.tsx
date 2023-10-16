@@ -1,5 +1,5 @@
 import { Videos } from '@pages/videos';
-import { videos } from '@test-config/mocks';
 import { snapshotTest } from '@test-config/helpers';
+import { partners, videos } from '@test-config/mocks';
 
-snapshotTest(() => <Videos data={videos} />, '.c-section__nav button', 'Videos');
+snapshotTest(() => <Videos data={videos} partners={partners} />, '.c-section__nav button', 'Videos');

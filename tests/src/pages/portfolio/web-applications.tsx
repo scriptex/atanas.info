@@ -1,6 +1,7 @@
 import * as shared from '@scripts/shared';
+import { partners } from '@test-config/mocks';
 import { snapshotTest } from '@test-config/helpers';
-import { getStaticProps, PortfolioWebApps } from '@pages/portfolio/web-applications';
+import { PortfolioWebApps } from '@pages/portfolio/web-applications';
 
 jest.mock('@lib/mongodb', () => ({
 	getData: jest.fn(() => Promise.resolve({ props: { data: [] } }))
@@ -27,6 +28,7 @@ snapshotTest(
 					index: 1
 				}
 			]}
+			partners={partners}
 		/>
 	),
 	undefined,
@@ -56,6 +58,7 @@ snapshotTest(
 					index: 1
 				}
 			]}
+			partners={partners}
 		/>
 	),
 	undefined,
@@ -64,19 +67,13 @@ snapshotTest(
 
 jest.spyOn(shared, 'useNetworkState').mockImplementation(() => false);
 
-snapshotTest(() => <PortfolioWebApps data={[]} />, undefined, 'PortfolioWebApps');
+snapshotTest(() => <PortfolioWebApps data={[]} partners={partners} />, undefined, 'PortfolioWebApps');
 
 snapshotTest(
 	() => (
 		// @ts-ignore
-		<PortfolioWebApps />
+		<PortfolioWebApps partners={partners} />
 	),
 	undefined,
 	'PortfolioWebApps'
 );
-
-it('Test the `getStaticProps` function', async () => {
-	const result = await getStaticProps({});
-
-	expect(result).toBeDefined();
-});

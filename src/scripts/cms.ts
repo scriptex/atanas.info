@@ -2,6 +2,8 @@ import type { Document } from '@contentful/rich-text-types';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import { Asset, createClient, EntryCollection, EntrySkeletonType } from 'contentful';
 
+import type { Partner } from './types';
+
 type CMSType =
 	| 'bio'
 	| 'owner'
@@ -9,6 +11,7 @@ type CMSType =
 	| 'video'
 	| 'titles'
 	| 'article'
+	| 'partner'
 	| 'timeline'
 	| 'strength'
 	| 'education'
@@ -340,6 +343,28 @@ export const getVideosFromCMS = async (): Promise<Video[]> => {
 		const data = await getCMSData('video');
 
 		return data.items.map(item => item.fields as Video);
+	} catch (error: unknown) {
+		return [];
+	}
+};
+
+type CMSPartner = Omit<Partner, 'image'> & {
+	image: Asset;
+};
+
+export const getPartnersFromCMS = async (): Promise<Partner[]> => {
+	try {
+		const data = await getCMSData('partner');
+
+		return data.items.map(item => {
+			const { name, image, index } = item.fields as CMSPartner;
+
+			return {
+				name,
+				index,
+				image: image.fields.file?.url as string
+			};
+		});
 	} catch (error: unknown) {
 		return [];
 	}

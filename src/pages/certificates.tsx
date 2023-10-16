@@ -3,11 +3,12 @@ import type { FC } from 'react';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import certificate from '@data/lotties/certificate.json';
-import { Certificate, getCertificatesFromCMS } from '@scripts/cms';
+import type { CertificatesPageProps } from '@scripts/types';
 import { Layout, Loader, Section, Animation, ExternalLink, Title } from '@components';
+import { Certificate, getCertificatesFromCMS, getPartnersFromCMS } from '@scripts/cms';
 
-export const Certificates: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data }) => (
-	<Layout>
+export const Certificates: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, partners }) => (
+	<Layout partners={partners}>
 		<Title text="Certificates | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section
@@ -32,9 +33,10 @@ export const Certificates: FC<InferGetStaticPropsType<typeof getStaticProps>> = 
 	</Layout>
 );
 
-export const getStaticProps: GetStaticProps<{ data: Certificate[] }> = async () => ({
+export const getStaticProps: GetStaticProps<CertificatesPageProps> = async () => ({
 	props: {
-		data: await getCertificatesFromCMS()
+		data: await getCertificatesFromCMS(),
+		partners: await getPartnersFromCMS()
 	}
 });
 

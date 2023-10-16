@@ -1,15 +1,16 @@
 import type { FC } from 'react';
 
 import SVGSprite from '@src/sprite.svg';
-import type { ReactChildren } from '@scripts/types';
+import type { Partner, ReactChildren } from '@scripts/types';
 import { Nav, Contact, Header, Footer, Partners } from '@components';
 
 type Props = {
 	main?: string;
 	children: ReactChildren;
+	partners: Partner[];
 };
 
-export const Layout: FC<Readonly<Props>> = ({ main, children }: Props) => (
+export const Layout: FC<Readonly<Props>> = ({ main, partners, children }: Props) => (
 	<>
 		<SVGSprite />
 
@@ -19,7 +20,7 @@ export const Layout: FC<Readonly<Props>> = ({ main, children }: Props) => (
 
 		<Contact />
 
-		<Partners />
+		<Partners data={partners} />
 
 		<Nav inline />
 

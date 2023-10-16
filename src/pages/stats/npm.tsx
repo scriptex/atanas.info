@@ -5,8 +5,9 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { Routes } from '@data/routes';
 import { sectionStatsProps } from '@scripts/stats';
 import { getData, queryNPM } from '@lib/mongodb';
-import type { Packages, Props } from '@scripts/types';
+import { getPartnersFromCMS } from '@scripts/cms';
 import { Layout, Section, ExternalLink, Title } from '@components';
+import type { WithSum, WithError, Packages, NPMStatsPageProps } from '@scripts/types';
 
 const PackagesList: FC<Readonly<Packages>> = ({ data }: Packages) => (
 	<div className="o-grid c-packages">
@@ -43,7 +44,7 @@ const PackagesList: FC<Readonly<Packages>> = ({ data }: Packages) => (
 	</div>
 );
 
-export const NPMStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data }) => {
+export const NPMStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data, partners }) => {
 	if (!data || Object.keys(data).length === 0) {
 		return null;
 	}
@@ -55,7 +56,7 @@ export const NPMStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps
 	}
 
 	return (
-		<Layout>
+		<Layout partners={partners}>
 			<Title text="NPM Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
@@ -83,7 +84,11 @@ export const NPMStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps
 	);
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const getStaticProps: GetStaticProps<Props> = async ({ params }) => getData('Insights', queryNPM);
+export const getStaticProps: GetStaticProps<NPMStatsPageProps> = async () => ({
+	props: {
+		data: (await getData('Insights', queryNPM)).props.data as Packages<WithSum & WithError>['data'],
+		partners: await getPartnersFromCMS()
+	}
+});
 
 export default NPMStats;

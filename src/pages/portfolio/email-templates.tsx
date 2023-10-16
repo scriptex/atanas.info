@@ -2,11 +2,14 @@
 import Link from 'next/link';
 import Modal from 'react-modal';
 import { FC, useState } from 'react';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Routes } from '@data/routes';
 import { emailTemplates } from '@data/projects';
+import { getPartnersFromCMS } from '@scripts/cms';
 import { portfolioSectionProps } from '@data/pages';
 import { Button, Layout, Section, Title } from '@components';
+import type { PortfolioEmailTemplatesPageData } from '@scripts/types';
 
 type Props = {
 	template: string;
@@ -36,8 +39,8 @@ const PortfolioEmailTemplate: FC<Readonly<Props>> = ({ template }: Props) => {
 	);
 };
 
-export const PortfolioEmailTemplates: FC = () => (
-	<Layout>
+export const PortfolioEmailTemplates: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ partners }) => (
+	<Layout partners={partners}>
 		<Title text="Email Templates | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section
@@ -58,5 +61,11 @@ export const PortfolioEmailTemplates: FC = () => (
 		</Section>
 	</Layout>
 );
+
+export const getStaticProps: GetStaticProps<PortfolioEmailTemplatesPageData> = async () => ({
+	props: {
+		partners: await getPartnersFromCMS()
+	}
+});
 
 export default PortfolioEmailTemplates;

@@ -3,14 +3,15 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import videoCamera from '@data/lotties/video-camera.json';
 import { composeClassName } from '@scripts/shared';
-import { Video, getVideosFromCMS } from '@scripts/cms';
+import type { VideosPageData } from '@scripts/types';
+import { Video, getPartnersFromCMS, getVideosFromCMS } from '@scripts/cms';
 import { Lines, Loader, Layout, Section, Animation, SectionNav, Title } from '@components';
 
-export const Videos: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data }) => {
+export const Videos: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, partners }) => {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	return (
-		<Layout>
+		<Layout partners={partners}>
 			<Title text="Videos | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
@@ -51,9 +52,10 @@ export const Videos: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ dat
 	);
 };
 
-export const getStaticProps: GetStaticProps<{ data: Video[] }> = async () => ({
+export const getStaticProps: GetStaticProps<VideosPageData> = async () => ({
 	props: {
-		data: await getVideosFromCMS()
+		data: await getVideosFromCMS(),
+		partners: await getPartnersFromCMS()
 	}
 });
 

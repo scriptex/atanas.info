@@ -1,10 +1,9 @@
 import { act } from '@testing-library/react';
-import type { InferGetStaticPropsType } from 'next';
 
-import { resumeOwner } from '@test-config/mocks';
+import { GitlabStats } from '@pages/stats/gitlab';
 import { test, snapshotTest } from '@test-config/helpers';
 import type { GitlabInsights } from '@scripts/types';
-import { getStaticProps, GitlabStats } from '@pages/stats/gitlab';
+import { partners, resumeOwner } from '@test-config/mocks';
 
 jest.mock('@lib/mongodb', () => ({
 	getData: jest.fn(() => Promise.resolve({ props: { data: [] } }))
@@ -51,36 +50,34 @@ const dataEmpty: GitlabInsights = {
 
 const calendarData = resumeOwner.privateGitlabCalendar;
 
-snapshotTest(() => <GitlabStats data={dataFull} calendarData={calendarData} />, undefined, 'GitlabStats');
-
 snapshotTest(
-	() => <GitlabStats data={{ ...dataFull, updated: null }} calendarData={calendarData} />,
+	() => <GitlabStats data={dataFull} partners={partners} calendarData={calendarData} />,
 	undefined,
 	'GitlabStats'
 );
 
-snapshotTest(() => <GitlabStats data={dataEmpty} calendarData={calendarData} />, undefined, 'GitlabStats');
+snapshotTest(
+	() => <GitlabStats partners={partners} data={{ ...dataFull, updated: null }} calendarData={calendarData} />,
+	undefined,
+	'GitlabStats'
+);
+
+snapshotTest(
+	() => <GitlabStats partners={partners} data={dataEmpty} calendarData={calendarData} />,
+	undefined,
+	'GitlabStats'
+);
 
 it('Test the GitlabStats page with fake timers', async () => {
 	jest.useFakeTimers();
 
-	const { asFragment } = await test(() => <GitlabStats data={dataFull} calendarData={calendarData} />);
+	const { asFragment } = await test(() => (
+		<GitlabStats partners={partners} data={dataFull} calendarData={calendarData} />
+	));
 
 	act(() => {
 		jest.runOnlyPendingTimers();
 	});
 
 	expect(asFragment()).toMatchSnapshot();
-});
-
-it('Test the `getStaticProps` function', async () => {
-	const result = (await getStaticProps({})) as {
-		props: InferGetStaticPropsType<typeof getStaticProps>;
-	};
-
-	expect(result).toBeDefined();
-	expect(result.props).toBeDefined();
-	expect(result.props.data).toBeDefined();
-	expect(Array.isArray(result.props.data)).toEqual(true);
-	expect((result.props.data as unknown as Array<never>).length).toEqual(0);
 });

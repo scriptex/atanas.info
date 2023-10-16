@@ -4,16 +4,18 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import socialMedia from '@data/lotties/social-media.json';
 import { useNetworkState } from '@scripts/shared';
+import { getPartnersFromCMS } from '@scripts/cms';
 import type { LastFMInsights } from '@insights/utils';
+import type { SocialPageData } from '@scripts/types';
 import { getData, queryLastFM } from '@lib/mongodb';
 import { SocialItem, socialItems } from '@data/social';
 import { Icon, Lines, Layout, Section, Animation, SocialMusic, LinkedInBadge, Title } from '@components';
 
-export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data }) => {
+export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data, partners }) => {
 	const online = useNetworkState();
 
 	return (
-		<Layout>
+		<Layout partners={partners}>
 			<Title text="Social | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
@@ -69,8 +71,11 @@ export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>
 	);
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const getStaticProps: GetStaticProps<{ data: LastFMInsights }> = async ({ params }) =>
-	getData('Insights', queryLastFM);
+export const getStaticProps: GetStaticProps<SocialPageData> = async () => ({
+	props: {
+		data: (await getData('Insights', queryLastFM)).props.data as LastFMInsights,
+		partners: await getPartnersFromCMS()
+	}
+});
 
 export default Social;

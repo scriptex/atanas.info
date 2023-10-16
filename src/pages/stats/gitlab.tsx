@@ -5,10 +5,10 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { Routes } from '@data/routes';
 import { Ref, formatDate } from '@scripts/shared';
 import { getData, queryGitlab } from '@lib/mongodb';
-import { getOwnerDetailsFromCMS } from '@scripts/cms';
-import type { GitlabInsights, GitlabRepository } from '@scripts/types';
+import { getOwnerDetailsFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import { Layout, Section, StatsEntry, StatsError, Title } from '@components';
+import type { GitlabInsights, GitlabRepository, GitlabStatsPageData } from '@scripts/types';
 
 const extractGitlabData = ({ general, calendar, repositories }: GitlabInsights): GeneralInsight[] => {
 	if (!repositories || !general || !calendar) {
@@ -62,7 +62,11 @@ const extractGitlabData = ({ general, calendar, repositories }: GitlabInsights):
 	].map((item, index) => ({ ...item, index }));
 };
 
-export const GitlabStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data, calendarData }) => {
+export const GitlabStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({
+	data,
+	partners,
+	calendarData
+}) => {
 	const { error, calendar, updated }: GitlabInsights = data;
 	const blocks = extractGitlabData(data);
 	const timeout: Ref<NodeJS.Timeout> = useRef(null);
@@ -73,11 +77,11 @@ export const GitlabStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 		import('gitlab-calendar')
 			.then(({ GitlabCalendar }) => {
 				if (calendarPlaceholder1.current && !!calendar) {
-					new GitlabCalendar(calendarPlaceholder1.current, calendar, {});
+					new GitlabCalendar(calendarPlaceholder1.current, calendar, {}); //NOSONAR
 				}
 
 				if (calendarPlaceholder2.current) {
-					new GitlabCalendar(calendarPlaceholder2.current, calendarData, {});
+					new GitlabCalendar(calendarPlaceholder2.current, calendarData, {}); //NOSONAR
 				}
 			})
 			.catch(console.error);
@@ -96,7 +100,7 @@ export const GitlabStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 	}, []);
 
 	return (
-		<Layout>
+		<Layout partners={partners}>
 			<Title text="Gitlab Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
@@ -146,19 +150,12 @@ export const GitlabStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 	);
 };
 
-export const getStaticProps: GetStaticProps<{ data: GitlabInsights; calendarData: Record<string, number> }> = async ({
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	params
-}) => {
-	const insights = await getData<GitlabInsights>('Insights', queryGitlab);
-	const ownerDetails = await getOwnerDetailsFromCMS();
-
-	return {
-		props: {
-			data: insights.props.data,
-			calendarData: ownerDetails.privateGitlabCalendar
-		}
-	};
-};
+export const getStaticProps: GetStaticProps<GitlabStatsPageData> = async () => ({
+	props: {
+		data: (await getData<GitlabInsights>('Insights', queryGitlab)).props.data,
+		partners: await getPartnersFromCMS(),
+		calendarData: (await getOwnerDetailsFromCMS()).privateGitlabCalendar
+	}
+});
 
 export default GitlabStats;

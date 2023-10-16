@@ -3,14 +3,15 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import presentation from '@data/lotties/presentation.json';
 import { composeClassName } from '@scripts/shared';
-import { Slide, getSlidesFromCMS } from '@scripts/cms';
+import type { SlidesPageData } from '@scripts/types';
+import { Slide, getPartnersFromCMS, getSlidesFromCMS } from '@scripts/cms';
 import { Loader, Section, Animation, SectionNav, Layout, Title } from '@components';
 
-export const Slides: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data }) => {
+export const Slides: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, partners }) => {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	return (
-		<Layout>
+		<Layout partners={partners}>
 			<Title text="Slides | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
@@ -50,9 +51,10 @@ export const Slides: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ dat
 	);
 };
 
-export const getStaticProps: GetStaticProps<{ data: Slide[] }> = async () => ({
+export const getStaticProps: GetStaticProps<SlidesPageData> = async () => ({
 	props: {
-		data: await getSlidesFromCMS()
+		data: await getSlidesFromCMS(),
+		partners: await getPartnersFromCMS()
 	}
 });
 

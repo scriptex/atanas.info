@@ -1,13 +1,16 @@
 import Link from 'next/link';
 import type { FC } from 'react';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Routes } from '@data/routes';
 import { mobileApps } from '@data/projects';
+import { getPartnersFromCMS } from '@scripts/cms';
 import { portfolioSectionProps } from '@data/pages';
+import type { PortfolioMobileAppsPageData } from '@scripts/types';
 import { Layout, Section, PortfolioSliders, Title } from '@components';
 
-export const PortfolioMobileApps: FC = () => (
-	<Layout>
+export const PortfolioMobileApps: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ partners }) => (
+	<Layout partners={partners}>
 		<Title text="Mobile Applications | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section
@@ -24,5 +27,11 @@ export const PortfolioMobileApps: FC = () => (
 		</Section>
 	</Layout>
 );
+
+export const getStaticProps: GetStaticProps<PortfolioMobileAppsPageData> = async () => ({
+	props: {
+		partners: await getPartnersFromCMS()
+	}
+});
 
 export default PortfolioMobileApps;
