@@ -4,10 +4,10 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { blogProps } from '@data/pages';
 import type { ArticlesPageProps } from '@scripts/types';
 import { Layout, Loader, Section, ExternalLink, Title } from '@components';
-import { Article, getArticlesFromCMS, getPartnersFromCMS } from '@scripts/cms';
+import { Article, getArticlesFromCMS, getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 
-export const Articles: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ articles, partners }) => (
-	<Layout partners={partners}>
+export const Articles: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, articles, partners }) => (
+	<Layout funding={funding} partners={partners}>
 		<Title text="Articles | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section id="articles" title="Articles" {...blogProps}>
@@ -34,6 +34,7 @@ export const Articles: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ a
 
 export const getStaticProps: GetStaticProps<ArticlesPageProps> = async () => ({
 	props: {
+		funding: await getFundingFromCMS(),
 		articles: await getArticlesFromCMS(),
 		partners: await getPartnersFromCMS()
 	}

@@ -1,16 +1,18 @@
 import type { FC } from 'react';
 
 import SVGSprite from '@src/sprite.svg';
+import type { FundingNetwork } from '@scripts/cms';
 import type { Partner, ReactChildren } from '@scripts/types';
 import { Nav, Contact, Header, Footer, Partners } from '@components';
 
 type Props = {
 	main?: string;
+	funding: FundingNetwork[];
 	children: ReactChildren;
 	partners: Partner[];
 };
 
-export const Layout: FC<Readonly<Props>> = ({ main, partners, children }: Props) => (
+export const Layout: FC<Readonly<Props>> = ({ main, partners, children, funding }: Props) => (
 	<>
 		<SVGSprite />
 
@@ -24,7 +26,7 @@ export const Layout: FC<Readonly<Props>> = ({ main, partners, children }: Props)
 
 		<Nav inline />
 
-		<Footer />
+		<Footer funding={funding} />
 	</>
 );
 

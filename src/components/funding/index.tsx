@@ -5,9 +5,13 @@ import { Button } from '@components';
 import { FundingCrypto } from './crypto';
 import { FundingNetwork } from './network';
 import { composeClassName } from '@scripts/shared';
-import { fundingNetworks, FundingNetworkData } from '@data/funding';
+import type { FundingNetwork as FundingNetworkType } from '@scripts/cms';
 
-export const Funding: FC = () => {
+type Props = {
+	data: FundingNetworkType[];
+};
+
+export const Funding: FC<Readonly<Props>> = ({ data }) => {
 	const knob = useRef(null);
 	const [open, setOpen] = useState(false);
 
@@ -33,8 +37,8 @@ export const Funding: FC = () => {
 
 			<svg viewBox="-100 -100 700 700" ref={knob} className="c-funding__knob">
 				<g>
-					{fundingNetworks.map((network: FundingNetworkData) => (
-						<FundingNetwork key={network.name} {...network} />
+					{data.map((network: FundingNetworkType) => (
+						<FundingNetwork key={network.index} {...network} />
 					))}
 				</g>
 

@@ -1,10 +1,10 @@
 import { Layout } from '@components';
-import { partners } from '@test-config/mocks';
 import { snapshotTest } from '@test-config/helpers';
+import { funding, partners } from '@test-config/mocks';
 
 snapshotTest(
 	() => (
-		<Layout partners={partners}>
+		<Layout funding={funding} partners={partners}>
 			<p>Layout page</p>
 		</Layout>
 	),

@@ -3,7 +3,7 @@ import { act } from '@testing-library/react';
 import { GitlabStats } from '@pages/stats/gitlab';
 import { test, snapshotTest } from '@test-config/helpers';
 import type { GitlabInsights } from '@scripts/types';
-import { partners, resumeOwner } from '@test-config/mocks';
+import { funding, partners, resumeOwner } from '@test-config/mocks';
 
 jest.mock('@lib/mongodb', () => ({
 	getData: jest.fn(() => Promise.resolve({ props: { data: [] } }))
@@ -51,19 +51,26 @@ const dataEmpty: GitlabInsights = {
 const calendarData = resumeOwner.privateGitlabCalendar;
 
 snapshotTest(
-	() => <GitlabStats data={dataFull} partners={partners} calendarData={calendarData} />,
+	() => <GitlabStats data={dataFull} funding={funding} partners={partners} calendarData={calendarData} />,
 	undefined,
 	'GitlabStats'
 );
 
 snapshotTest(
-	() => <GitlabStats partners={partners} data={{ ...dataFull, updated: null }} calendarData={calendarData} />,
+	() => (
+		<GitlabStats
+			data={{ ...dataFull, updated: null }}
+			funding={funding}
+			partners={partners}
+			calendarData={calendarData}
+		/>
+	),
 	undefined,
 	'GitlabStats'
 );
 
 snapshotTest(
-	() => <GitlabStats partners={partners} data={dataEmpty} calendarData={calendarData} />,
+	() => <GitlabStats data={dataEmpty} funding={funding} partners={partners} calendarData={calendarData} />,
 	undefined,
 	'GitlabStats'
 );
@@ -71,9 +78,11 @@ snapshotTest(
 it('Test the GitlabStats page with fake timers', async () => {
 	jest.useFakeTimers();
 
-	const { asFragment } = await test(() => (
-		<GitlabStats partners={partners} data={dataFull} calendarData={calendarData} />
-	));
+	const GitlabStatsComponent = () => (
+		<GitlabStats data={dataFull} funding={funding} partners={partners} calendarData={calendarData} />
+	);
+
+	const { asFragment } = await test(GitlabStatsComponent);
 
 	act(() => {
 		jest.runOnlyPendingTimers();

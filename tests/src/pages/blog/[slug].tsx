@@ -1,5 +1,5 @@
 import { snapshotTest } from '@test-config/helpers';
-import { articles, partners } from '@test-config/mocks';
+import { articles, funding, partners } from '@test-config/mocks';
 import { getStaticPaths, OpenSourceProject } from '@pages/blog/[slug]';
 
 const testSlug = 'testing-websockets-with-cypress';
@@ -8,6 +8,7 @@ snapshotTest(
 	() => (
 		<OpenSourceProject
 			post={{ slug: testSlug, content: 'This is a test content' }}
+			funding={funding}
 			articles={articles}
 			partners={partners}
 		/>
@@ -20,6 +21,7 @@ snapshotTest(
 	() => (
 		<OpenSourceProject
 			post={{ slug: 'nonexistent-post', content: 'This post is missing' }}
+			funding={funding}
 			articles={articles}
 			partners={partners}
 		/>

@@ -3,8 +3,8 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import resume from '@data/lotties/resume.json';
 import { useNetworkState } from '@scripts/shared';
-import { getPartnersFromCMS } from '@scripts/cms';
 import type { InteractiveResumePageProps } from '@scripts/types';
+import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { Icon, Lines, Layout, Section, Animation, Title } from '@components';
 
 const items = [
@@ -63,7 +63,7 @@ const items = [
 	}
 ];
 
-export const InteractiveResume: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ partners }) => {
+export const InteractiveResume: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners }) => {
 	const online = useNetworkState();
 
 	useEffect(() => {
@@ -77,7 +77,7 @@ export const InteractiveResume: FC<InferGetStaticPropsType<typeof getStaticProps
 	}, []);
 
 	return (
-		<Layout partners={partners}>
+		<Layout funding={funding} partners={partners}>
 			<Title text="Interactive Resume | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
@@ -106,6 +106,7 @@ export const InteractiveResume: FC<InferGetStaticPropsType<typeof getStaticProps
 
 export const getStaticProps: GetStaticProps<InteractiveResumePageProps> = async () => ({
 	props: {
+		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });

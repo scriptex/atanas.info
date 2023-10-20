@@ -2,9 +2,14 @@ import { FC, useEffect } from 'react';
 
 import { updatedAt } from '@data/updated-at';
 import { formatDate } from '@scripts/shared';
+import type { FundingNetwork } from '@scripts/cms';
 import { Funding, ExternalLink, Referral } from '@components';
 
-export const Footer: FC = () => {
+type Props = {
+	funding: FundingNetwork[];
+};
+
+export const Footer: FC<Readonly<Props>> = ({ funding }) => {
 	useEffect(() => {
 		// @ts-ignore
 		import('scriptex-socials');
@@ -35,7 +40,7 @@ export const Footer: FC = () => {
 
 				<small>Updated at {formatDate(updatedAt * 1000, 'dd MMM yyyy HH:mm:ss')}</small>
 
-				<Funding />
+				<Funding data={funding} />
 
 				<Referral />
 			</div>

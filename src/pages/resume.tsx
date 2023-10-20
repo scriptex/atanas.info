@@ -4,6 +4,7 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import resume from '@data/lotties/resume.json';
 import type { ResumePageData } from '@scripts/types';
 import {
+	getFundingFromCMS,
 	getPartnersFromCMS,
 	getEducationFromCMS,
 	getStrengthsFromCMS,
@@ -30,8 +31,8 @@ import {
 	ResumeExperience
 } from '@components';
 
-export const Resume: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, partners }) => (
-	<Layout partners={partners}>
+export const Resume: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, funding, partners }) => (
+	<Layout funding={funding} partners={partners}>
 		<Title text="Resume | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section
@@ -96,6 +97,7 @@ export const getStaticProps: GetStaticProps<ResumePageData> = async () => ({
 			experience: await getExperienceFromCMS(),
 			certificates: await getCertificatesFromCMS()
 		},
+		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });

@@ -4,11 +4,11 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Routes } from '@data/routes';
 import { EmptyPage } from '@components';
-import type { Partner } from '@scripts/types';
-import { getPartnersFromCMS } from '@scripts/cms';
+import type { ErrorPageProps } from '@scripts/types';
+import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 
-export const ErrorPage: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ partners }) => (
-	<EmptyPage partners={partners}>
+export const ErrorPage: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners }) => (
+	<EmptyPage funding={funding} partners={partners}>
 		<div className="c-error-page__content">
 			<h1>404</h1>
 
@@ -21,8 +21,9 @@ export const ErrorPage: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ 
 	</EmptyPage>
 );
 
-export const getStaticProps: GetStaticProps<{ partners: Partner[] }> = async () => ({
+export const getStaticProps: GetStaticProps<ErrorPageProps> = async () => ({
 	props: {
+		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });

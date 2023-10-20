@@ -3,11 +3,11 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { composeClassName } from '@scripts/shared';
 import { ForceNode, skills } from '@data/skills-list';
-import { getPartnersFromCMS } from '@scripts/cms';
 import type { SkillsPageData } from '@scripts/types';
+import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { Icon, Lines, Button, Section, Layout, Title } from '@components';
 
-export const Skills: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ partners }) => {
+export const Skills: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners }) => {
 	const [showTable, setShowTable] = useState(false);
 
 	useEffect(() => {
@@ -25,7 +25,7 @@ export const Skills: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ par
 	}, []);
 
 	return (
-		<Layout partners={partners}>
+		<Layout funding={funding} partners={partners}>
 			<Title text="Skills | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
@@ -75,6 +75,7 @@ export const Skills: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ par
 
 export const getStaticProps: GetStaticProps<SkillsPageData> = async () => ({
 	props: {
+		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });

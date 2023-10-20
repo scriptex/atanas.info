@@ -1,13 +1,10 @@
 import type { FC } from 'react';
 
-type Props = {
-	url: string;
-	icon: string;
-	name: string;
-	matrix: string;
-};
+import type { FundingNetwork as FundingNetworkType } from '@scripts/cms';
 
-export const FundingNetwork: FC<Props> = ({ url, icon, name, matrix }: Props) => (
+type Props = Omit<FundingNetworkType, 'index'>;
+
+export const FundingNetwork: FC<Props> = ({ url, name, matrix }: Props) => (
 	<g transform={matrix} className="c-funding__item">
 		<path fill="none" d="M250,250 l250,0 A250,250 0 0,0 375,33.49364905389035 z" />
 
@@ -28,7 +25,7 @@ export const FundingNetwork: FC<Props> = ({ url, icon, name, matrix }: Props) =>
 				y="145"
 				width="40"
 				height="40"
-				xlinkHref={`#svg-${icon}`}
+				xlinkHref={`#svg-${name.toLowerCase()}`}
 				transform="rotate(60 397.2243347167969 165)"
 			/>
 		</a>

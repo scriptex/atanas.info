@@ -2,11 +2,11 @@ import type { FC } from 'react';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { EmptyPage } from '@components';
-import type { Partner } from '@scripts/types';
-import { getPartnersFromCMS } from '@scripts/cms';
+import type { OfflinePageProps } from '@scripts/types';
+import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 
-export const OfflinePage: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ partners }) => (
-	<EmptyPage partners={partners}>
+export const OfflinePage: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners }) => (
+	<EmptyPage funding={funding} partners={partners}>
 		<div className="c-error-page__content">
 			<h1>No internet</h1>
 
@@ -17,8 +17,9 @@ export const OfflinePage: FC<InferGetStaticPropsType<typeof getStaticProps>> = (
 	</EmptyPage>
 );
 
-export const getStaticProps: GetStaticProps<{ partners: Partner[] }> = async () => ({
+export const getStaticProps: GetStaticProps<OfflinePageProps> = async () => ({
 	props: {
+		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });

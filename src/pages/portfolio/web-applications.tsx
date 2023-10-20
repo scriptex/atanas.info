@@ -5,15 +5,16 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Routes } from '@data/routes';
 import type { WebProject } from '@data/projects';
-import { getPartnersFromCMS } from '@scripts/cms';
 import { portfolioSectionProps } from '@data/pages';
 import { getData, queryScreenshots } from '@lib/mongodb';
 import type { PortfolioWebAppsPageData } from '@scripts/types';
+import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { Icon, Layout, Loader, Section, SectionNav, ExternalLink, Title } from '@components';
 import { usePagination, useNetworkState, composeClassName, useCurrentPageParam } from '@scripts/shared';
 
 export const PortfolioWebApps: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({
 	data = [],
+	funding,
 	partners
 }) => {
 	const page = useCurrentPageParam();
@@ -21,7 +22,7 @@ export const PortfolioWebApps: FC<Readonly<InferGetStaticPropsType<typeof getSta
 	const { menu, items } = usePagination(data);
 
 	return !items ? null : (
-		<Layout partners={partners}>
+		<Layout funding={funding} partners={partners}>
 			<Title text="Web Applications | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
@@ -77,6 +78,7 @@ export const PortfolioWebApps: FC<Readonly<InferGetStaticPropsType<typeof getSta
 export const getStaticProps: GetStaticProps<PortfolioWebAppsPageData> = async () => ({
 	props: {
 		data: (await getData('Screenshots', queryScreenshots)).props.data as WebProject[],
+		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });

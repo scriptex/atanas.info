@@ -3,7 +3,17 @@ import type { ReactNode } from 'react';
 import type { ForceNode } from '@data/skills-list';
 import type { WebProject } from '@data/projects';
 import type { LastFMInsights } from '@insights/utils';
-import type { Slide, Video, Article, BioEntry, ResumeData, Certificate, OwnerDetails, TimelineItem } from './cms';
+import type {
+	Slide,
+	Video,
+	Article,
+	BioEntry,
+	ResumeData,
+	Certificate,
+	OwnerDetails,
+	TimelineItem,
+	FundingNetwork
+} from './cms';
 
 export type Nullable<T> = T | null;
 
@@ -130,6 +140,7 @@ export type Partner = {
 };
 
 export type SharedPageProps = {
+	funding: FundingNetwork[];
 	partners: Partner[];
 };
 
@@ -222,3 +233,7 @@ export type GitlabStatsPageData = SharedPageProps & {
 export type StatsPageData = SharedPageProps; //NOSONAR
 
 export type NPMStatsPageProps = SharedPageProps & Packages<WithSum & WithError>;
+
+export type OfflinePageProps = SharedPageProps; //NOSONAR
+
+export type ErrorPageProps = SharedPageProps; //NOSONAR

@@ -1,5 +1,5 @@
-import { partners } from '@test-config/mocks';
 import { OfflinePage } from '@pages/_offline';
 import { snapshotTest } from '@test-config/helpers';
+import { funding, partners } from '@test-config/mocks';
 
-snapshotTest(() => <OfflinePage partners={partners} />, undefined, 'OfflinePage');
+snapshotTest(() => <OfflinePage funding={funding} partners={partners} />, undefined, 'OfflinePage');

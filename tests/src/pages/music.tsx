@@ -1,5 +1,5 @@
 import { Music } from '@pages/music';
-import { partners } from '@test-config/mocks';
+import { funding, partners } from '@test-config/mocks';
 import { snapshotTest, mockAudioContext } from '@test-config/helpers';
 
 jest.mock('@lib/mongodb', () => ({
@@ -22,10 +22,14 @@ const data = [
 	}
 ];
 
-snapshotTest(() => <Music data={data} partners={partners} />, '.c-music__menu', 'Music');
+snapshotTest(() => <Music data={data} funding={funding} partners={partners} />, '.c-music__menu', 'Music');
 
-snapshotTest(() => <Music data={data} partners={partners} />, '.c-music__btn--play', 'Music');
+snapshotTest(() => <Music data={data} funding={funding} partners={partners} />, '.c-music__btn--play', 'Music');
 
-snapshotTest(() => <Music data={data} partners={partners} />, '.c-music__btn--pause', 'Music');
+snapshotTest(() => <Music data={data} funding={funding} partners={partners} />, '.c-music__btn--pause', 'Music');
 
-snapshotTest(() => <Music data={data} partners={partners} />, '.c-music__tracks button:first-child', 'Music');
+snapshotTest(
+	() => <Music data={data} funding={funding} partners={partners} />,
+	'.c-music__tracks button:first-child',
+	'Music'
+);

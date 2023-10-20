@@ -12,6 +12,7 @@ type CMSType =
 	| 'video'
 	| 'titles'
 	| 'article'
+	| 'funding'
 	| 'partner'
 	| 'timeline'
 	| 'strength'
@@ -139,6 +140,13 @@ export type CMSPartner = Omit<Partner, 'image'> & {
 export type Occupation = Omit<ForceNode, 'text'> & {
 	name: string;
 	index: number;
+};
+
+export type FundingNetwork = {
+	url: string;
+	name: string;
+	index: number;
+	matrix: string;
 };
 
 const client = createClient({
@@ -390,6 +398,16 @@ export const getOccupationFromCMS = async (): Promise<ForceNode[]> => {
 				text: name
 			};
 		});
+	} catch (error: unknown) {
+		return [];
+	}
+};
+
+export const getFundingFromCMS = async (): Promise<FundingNetwork[]> => {
+	try {
+		const data = await getCMSData('funding');
+
+		return data.items.map(item => item.fields as FundingNetwork);
 	} catch (error: unknown) {
 		return [];
 	}

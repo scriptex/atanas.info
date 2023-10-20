@@ -1,12 +1,15 @@
 import { act, waitFor, fireEvent } from '@testing-library/react';
 
 import { Funding } from '@components';
+import { funding } from '@test-config/mocks';
 import { test, snapshotTest } from '@test-config/helpers';
 
-snapshotTest(Funding);
+snapshotTest(() => <Funding data={funding} />, undefined, 'Gunding');
 
 it('Should test the Funding lifecycle', async () => {
-	const { asFragment, container } = await test(Funding);
+	const FundingComponent = () => <Funding data={funding} />;
+
+	const { asFragment, container } = await test(FundingComponent);
 
 	expect(asFragment()).toMatchSnapshot();
 

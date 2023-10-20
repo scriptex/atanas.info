@@ -1,6 +1,7 @@
 export * from './articles';
 export * from './certificates';
 export * from './experience';
+export * from './funding';
 export * from './lastfm-insights';
 export * from './occupation';
 export * from './resume';
