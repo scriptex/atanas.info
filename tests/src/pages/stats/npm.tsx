@@ -1,8 +1,8 @@
 import type { ComponentProps } from 'react';
 
-import { partners } from '@test-config/mocks';
 import { NPMStats } from '@pages/stats/npm';
 import { snapshotTest } from '@test-config/helpers';
+import { funding, partners } from '@test-config/mocks';
 import type { Package, WithError, WithSum } from '@scripts/types';
 
 type Data = Record<string, Package> & WithSum & WithError;
@@ -33,15 +33,15 @@ jest.mock('@lib/mongodb', () => ({
 }));
 
 snapshotTest(
-	() => <NPMStats data={{ ...data, sum: 1876223 } as unknown as Data} partners={partners} />,
+	() => <NPMStats data={{ ...data, sum: 1876223 } as unknown as Data} funding={funding} partners={partners} />,
 	undefined,
 	'NPMStats'
 );
 
-snapshotTest(() => <NPMStats data={data} partners={partners} />, undefined, 'NPMStats');
+snapshotTest(() => <NPMStats data={data} funding={funding} partners={partners} />, undefined, 'NPMStats');
 
 snapshotTest(
-	() => <NPMStats data={{} as ComponentProps<typeof NPMStats>['data']} partners={partners} />,
+	() => <NPMStats data={{} as ComponentProps<typeof NPMStats>['data']} funding={funding} partners={partners} />,
 	undefined,
 	'NPMStats'
 );

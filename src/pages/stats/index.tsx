@@ -3,12 +3,12 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { statsItems } from '@data/projects';
 import { sectionStatsProps } from '@scripts/stats';
-import { getPartnersFromCMS } from '@scripts/cms';
 import type { StatsPageData } from '@scripts/types';
 import { Layout, Section, SectionGrid, Title } from '@components';
+import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 
-export const Stats: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ partners }) => (
-	<Layout partners={partners}>
+export const Stats: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners }) => (
+	<Layout funding={funding} partners={partners}>
 		<Title text="Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section {...sectionStatsProps} hasShell={true}>
@@ -19,6 +19,7 @@ export const Stats: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ part
 
 export const getStaticProps: GetStaticProps<StatsPageData> = async () => ({
 	props: {
+		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });

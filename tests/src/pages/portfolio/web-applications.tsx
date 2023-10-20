@@ -1,7 +1,7 @@
 import * as shared from '@scripts/shared';
-import { partners } from '@test-config/mocks';
 import { snapshotTest } from '@test-config/helpers';
 import { PortfolioWebApps } from '@pages/portfolio/web-applications';
+import { funding, partners } from '@test-config/mocks';
 
 jest.mock('@lib/mongodb', () => ({
 	getData: jest.fn(() => Promise.resolve({ props: { data: [] } }))
@@ -28,6 +28,7 @@ snapshotTest(
 					index: 1
 				}
 			]}
+			funding={funding}
 			partners={partners}
 		/>
 	),
@@ -58,6 +59,7 @@ snapshotTest(
 					index: 1
 				}
 			]}
+			funding={funding}
 			partners={partners}
 		/>
 	),
@@ -67,13 +69,7 @@ snapshotTest(
 
 jest.spyOn(shared, 'useNetworkState').mockImplementation(() => false);
 
-snapshotTest(() => <PortfolioWebApps data={[]} partners={partners} />, undefined, 'PortfolioWebApps');
+snapshotTest(() => <PortfolioWebApps data={[]} funding={funding} partners={partners} />, undefined, 'PortfolioWebApps');
 
-snapshotTest(
-	() => (
-		// @ts-ignore
-		<PortfolioWebApps partners={partners} />
-	),
-	undefined,
-	'PortfolioWebApps'
-);
+// @ts-ignore
+snapshotTest(() => <PortfolioWebApps funding={funding} partners={partners} />, undefined, 'PortfolioWebApps');

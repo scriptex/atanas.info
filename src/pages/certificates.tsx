@@ -5,10 +5,10 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import certificate from '@data/lotties/certificate.json';
 import type { CertificatesPageProps } from '@scripts/types';
 import { Layout, Loader, Section, Animation, ExternalLink, Title } from '@components';
-import { Certificate, getCertificatesFromCMS, getPartnersFromCMS } from '@scripts/cms';
+import { Certificate, getCertificatesFromCMS, getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 
-export const Certificates: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, partners }) => (
-	<Layout partners={partners}>
+export const Certificates: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, funding, partners }) => (
+	<Layout funding={funding} partners={partners}>
 		<Title text="Certificates | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section
@@ -36,6 +36,7 @@ export const Certificates: FC<InferGetStaticPropsType<typeof getStaticProps>> = 
 export const getStaticProps: GetStaticProps<CertificatesPageProps> = async () => ({
 	props: {
 		data: await getCertificatesFromCMS(),
+		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });

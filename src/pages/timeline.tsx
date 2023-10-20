@@ -5,10 +5,10 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import timeline from '@data/lotties/timeline.json';
 import type { TimelinePageData } from '@scripts/types';
 import { Layout, Section, Animation, Title, Icon } from '@components';
-import { TimelineItem, getPartnersFromCMS, getTimelineFromCMS } from '@scripts/cms';
+import { TimelineItem, getFundingFromCMS, getPartnersFromCMS, getTimelineFromCMS } from '@scripts/cms';
 
-export const Timeline: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, partners }) => (
-	<Layout partners={partners}>
+export const Timeline: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, funding, partners }) => (
+	<Layout funding={funding} partners={partners}>
 		<Title text="Timeline | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section
@@ -42,6 +42,7 @@ export const Timeline: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ d
 export const getStaticProps: GetStaticProps<TimelinePageData> = async () => ({
 	props: {
 		data: await getTimelineFromCMS(),
+		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });

@@ -4,9 +4,9 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import working from '@data/lotties/working.json';
 import type { OccupationPageProps } from '@scripts/types';
 import { Layout, Section, Animation, Title } from '@components';
-import { getPartnersFromCMS, getOccupationFromCMS } from '@scripts/cms';
+import { getPartnersFromCMS, getOccupationFromCMS, getFundingFromCMS } from '@scripts/cms';
 
-export const Occupation: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, partners }) => {
+export const Occupation: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, funding, partners }) => {
 	useEffect(() => {
 		import('@scripts/force')
 			.then(({ renderForceDirectedGraph }) => renderForceDirectedGraph('occupation-graph', data, 'occupation'))
@@ -14,7 +14,7 @@ export const Occupation: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 	}, [data]);
 
 	return (
-		<Layout partners={partners}>
+		<Layout funding={funding} partners={partners}>
 			<Title text="Occupation | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
@@ -37,6 +37,7 @@ export const Occupation: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 export const getStaticProps: GetStaticProps<OccupationPageProps> = async () => ({
 	props: {
 		data: await getOccupationFromCMS(),
+		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });

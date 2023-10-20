@@ -4,13 +4,13 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Routes } from '@data/routes';
 import { mobileApps } from '@data/projects';
-import { getPartnersFromCMS } from '@scripts/cms';
 import { portfolioSectionProps } from '@data/pages';
 import type { PortfolioMobileAppsPageData } from '@scripts/types';
+import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { Layout, Section, PortfolioSliders, Title } from '@components';
 
-export const PortfolioMobileApps: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ partners }) => (
-	<Layout partners={partners}>
+export const PortfolioMobileApps: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners }) => (
+	<Layout funding={funding} partners={partners}>
 		<Title text="Mobile Applications | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section
@@ -30,6 +30,7 @@ export const PortfolioMobileApps: FC<InferGetStaticPropsType<typeof getStaticPro
 
 export const getStaticProps: GetStaticProps<PortfolioMobileAppsPageData> = async () => ({
 	props: {
+		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });

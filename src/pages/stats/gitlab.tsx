@@ -5,10 +5,10 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { Routes } from '@data/routes';
 import { Ref, formatDate } from '@scripts/shared';
 import { getData, queryGitlab } from '@lib/mongodb';
-import { getOwnerDetailsFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import { Layout, Section, StatsEntry, StatsError, Title } from '@components';
 import type { GitlabInsights, GitlabRepository, GitlabStatsPageData } from '@scripts/types';
+import { getFundingFromCMS, getOwnerDetailsFromCMS, getPartnersFromCMS } from '@scripts/cms';
 
 const extractGitlabData = ({ general, calendar, repositories }: GitlabInsights): GeneralInsight[] => {
 	if (!repositories || !general || !calendar) {
@@ -64,6 +64,7 @@ const extractGitlabData = ({ general, calendar, repositories }: GitlabInsights):
 
 export const GitlabStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({
 	data,
+	funding,
 	partners,
 	calendarData
 }) => {
@@ -100,7 +101,7 @@ export const GitlabStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 	}, []);
 
 	return (
-		<Layout partners={partners}>
+		<Layout funding={funding} partners={partners}>
 			<Title text="Gitlab Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
@@ -153,6 +154,7 @@ export const GitlabStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 export const getStaticProps: GetStaticProps<GitlabStatsPageData> = async () => ({
 	props: {
 		data: (await getData<GitlabInsights>('Insights', queryGitlab)).props.data,
+		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS(),
 		calendarData: (await getOwnerDetailsFromCMS()).privateGitlabCalendar
 	}

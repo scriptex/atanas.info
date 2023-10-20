@@ -4,18 +4,18 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import socialMedia from '@data/lotties/social-media.json';
 import { useNetworkState } from '@scripts/shared';
-import { getPartnersFromCMS } from '@scripts/cms';
 import type { LastFMInsights } from '@insights/utils';
 import type { SocialPageData } from '@scripts/types';
 import { getData, queryLastFM } from '@lib/mongodb';
 import { SocialItem, socialItems } from '@data/social';
+import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { Icon, Lines, Layout, Section, Animation, SocialMusic, LinkedInBadge, Title } from '@components';
 
-export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data, partners }) => {
+export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data, funding, partners }) => {
 	const online = useNetworkState();
 
 	return (
-		<Layout partners={partners}>
+		<Layout funding={funding} partners={partners}>
 			<Title text="Social | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
@@ -74,6 +74,7 @@ export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>
 export const getStaticProps: GetStaticProps<SocialPageData> = async () => ({
 	props: {
 		data: (await getData('Insights', queryLastFM)).props.data as LastFMInsights,
+		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });

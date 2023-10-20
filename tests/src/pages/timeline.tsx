@@ -1,5 +1,5 @@
 import { Timeline } from '@pages/timeline';
 import { snapshotTest } from '@test-config/helpers';
-import { partners, timelineItems } from '@test-config/mocks';
+import { funding, partners, timelineItems } from '@test-config/mocks';
 
-snapshotTest(() => <Timeline data={timelineItems} partners={partners} />, undefined, 'Timeline');
+snapshotTest(() => <Timeline data={timelineItems} funding={funding} partners={partners} />, undefined, 'Timeline');

@@ -4,17 +4,20 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Routes } from '@data/routes';
 import { personalProjects } from '@data/projects';
-import { getPartnersFromCMS } from '@scripts/cms';
 import { useCurrentPageParam } from '@scripts/shared';
 import { portfolioSectionProps } from '@data/pages';
 import { Layout, Section, SectionGrid, Title } from '@components';
+import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import type { PortfolioPersonalProjectsPageData } from '@scripts/types';
 
-export const PortfolioPersonalProjects: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ partners }) => {
+export const PortfolioPersonalProjects: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
+	funding,
+	partners
+}) => {
 	const page = useCurrentPageParam();
 
 	return (
-		<Layout partners={partners}>
+		<Layout funding={funding} partners={partners}>
 			<Title text="Personal Projects | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
@@ -41,6 +44,7 @@ export const PortfolioPersonalProjects: FC<InferGetStaticPropsType<typeof getSta
 
 export const getStaticProps: GetStaticProps<PortfolioPersonalProjectsPageData> = async () => ({
 	props: {
+		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });

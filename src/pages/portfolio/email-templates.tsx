@@ -6,10 +6,10 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Routes } from '@data/routes';
 import { emailTemplates } from '@data/projects';
-import { getPartnersFromCMS } from '@scripts/cms';
 import { portfolioSectionProps } from '@data/pages';
 import { Button, Layout, Section, Title } from '@components';
 import type { PortfolioEmailTemplatesPageData } from '@scripts/types';
+import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 
 type Props = {
 	template: string;
@@ -39,8 +39,8 @@ const PortfolioEmailTemplate: FC<Readonly<Props>> = ({ template }: Props) => {
 	);
 };
 
-export const PortfolioEmailTemplates: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ partners }) => (
-	<Layout partners={partners}>
+export const PortfolioEmailTemplates: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners }) => (
+	<Layout funding={funding} partners={partners}>
 		<Title text="Email Templates | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 		<Section
@@ -64,6 +64,7 @@ export const PortfolioEmailTemplates: FC<InferGetStaticPropsType<typeof getStati
 
 export const getStaticProps: GetStaticProps<PortfolioEmailTemplatesPageData> = async () => ({
 	props: {
+		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });

@@ -1,7 +1,7 @@
 import { act } from '@testing-library/react';
 
-import { partners } from '@test-config/mocks';
 import { GithubStats } from '@pages/stats/github';
+import { funding, partners } from '@test-config/mocks';
 import { test, mockFetch, snapshotTest } from '@test-config/helpers';
 import type { GithubCount, GithubInsights, GithubContribution } from '@scripts/types';
 
@@ -63,14 +63,18 @@ const dataEmpty: GithubInsights = {
 };
 
 snapshotTest(
-	() => <GithubStats data={dataFull} partners={partners} />,
+	() => <GithubStats data={dataFull} funding={funding} partners={partners} />,
 	'.c-skyline__nav li:first-child .c-btn--small',
 	'GithubStats'
 );
 
-snapshotTest(() => <GithubStats data={dataEmpty} partners={partners} />, undefined, 'GithubStats');
+snapshotTest(() => <GithubStats data={dataEmpty} funding={funding} partners={partners} />, undefined, 'GithubStats');
 
-snapshotTest(() => <GithubStats data={{ ...dataEmpty, error: true }} partners={partners} />, undefined, 'GithubStats');
+snapshotTest(
+	() => <GithubStats data={{ ...dataEmpty, error: true }} funding={funding} partners={partners} />,
+	undefined,
+	'GithubStats'
+);
 
 snapshotTest(
 	() => (
@@ -86,6 +90,7 @@ snapshotTest(
 					}))
 				}))
 			}}
+			funding={funding}
 			partners={partners}
 		/>
 	),
@@ -102,6 +107,7 @@ snapshotTest(
 					'2022-01-30': {} as unknown as GithubCount
 				}
 			}}
+			funding={funding}
 			partners={partners}
 		/>
 	),
@@ -119,6 +125,7 @@ snapshotTest(
 					language: null
 				}))
 			}}
+			funding={funding}
 			partners={partners}
 		/>
 	),
@@ -129,7 +136,9 @@ snapshotTest(
 it('Test the GithubStats page with fake timers', async () => {
 	jest.useFakeTimers();
 
-	const { asFragment } = await test(() => <GithubStats data={dataFull} partners={partners} />);
+	const GithubStatsComponent = () => <GithubStats funding={funding} data={dataFull} partners={partners} />;
+
+	const { asFragment } = await test(GithubStatsComponent);
 
 	act(() => {
 		jest.runOnlyPendingTimers();

@@ -1,5 +1,9 @@
-import { partners } from '@test-config/mocks';
 import { snapshotTest } from '@test-config/helpers';
+import { funding, partners } from '@test-config/mocks';
 import { PortfolioAutomotiveApps } from '@pages/portfolio/automotive-applications';
 
-snapshotTest(() => <PortfolioAutomotiveApps partners={partners} />, undefined, 'PortfolioAutomotiveApps');
+snapshotTest(
+	() => <PortfolioAutomotiveApps funding={funding} partners={partners} />,
+	undefined,
+	'PortfolioAutomotiveApps'
+);

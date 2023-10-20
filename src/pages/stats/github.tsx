@@ -4,8 +4,8 @@ import { FC, useRef, useState, useEffect, MutableRefObject } from 'react';
 
 import { Routes } from '@data/routes';
 import { formatDate } from '@scripts/shared';
-import { getPartnersFromCMS } from '@scripts/cms';
 import { getData, queryGithub } from '@lib/mongodb';
+import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { YEARS, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import type { GithubInsights, GithubProfileData, GithubRepository, GithubStatsPageData } from '@scripts/types';
 import { Title, Button, Layout, Loader, Section, StatsEntry, StatsError, GithubSkyline } from '@components';
@@ -157,7 +157,11 @@ const GithubSkylineComponent: FC = () => {
 	);
 };
 
-export const GithubStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data, partners }) => {
+export const GithubStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({
+	data,
+	funding,
+	partners
+}) => {
 	const { error: statsError, updated, ...rest }: GithubInsights = data;
 	const blocks: GeneralInsight[] = statsError ? [] : extractGithubData(rest);
 
@@ -197,7 +201,7 @@ export const GithubStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 	}, []);
 
 	return (
-		<Layout partners={partners}>
+		<Layout funding={funding} partners={partners}>
 			<Title text="Github Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
@@ -236,6 +240,7 @@ export const GithubStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 export const getStaticProps: GetStaticProps<GithubStatsPageData> = async () => ({
 	props: {
 		data: (await getData('Insights', queryGithub)).props.data as GithubInsights,
+		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });

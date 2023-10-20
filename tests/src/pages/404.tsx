@@ -1,5 +1,5 @@
-import { partners } from '@test-config/mocks';
 import { ErrorPage } from '@pages/404';
 import { snapshotTest } from '@test-config/helpers';
+import { funding, partners } from '@test-config/mocks';
 
-snapshotTest(() => <ErrorPage partners={partners} />, undefined, 'ErrorPage');
+snapshotTest(() => <ErrorPage funding={funding} partners={partners} />, undefined, 'ErrorPage');

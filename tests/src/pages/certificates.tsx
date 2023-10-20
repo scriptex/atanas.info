@@ -1,5 +1,9 @@
 import { Certificates } from '@pages/certificates';
 import { snapshotTest } from '@test-config/helpers';
-import { certificates, partners } from '@test-config/mocks';
+import { certificates, funding, partners } from '@test-config/mocks';
 
-snapshotTest(() => <Certificates data={certificates} partners={partners} />, undefined, 'Certificates');
+snapshotTest(
+	() => <Certificates data={certificates} funding={funding} partners={partners} />,
+	undefined,
+	'Certificates'
+);

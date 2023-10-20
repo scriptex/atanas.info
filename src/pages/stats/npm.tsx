@@ -5,8 +5,8 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { Routes } from '@data/routes';
 import { sectionStatsProps } from '@scripts/stats';
 import { getData, queryNPM } from '@lib/mongodb';
-import { getPartnersFromCMS } from '@scripts/cms';
 import { Layout, Section, ExternalLink, Title } from '@components';
+import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import type { WithSum, WithError, Packages, NPMStatsPageProps } from '@scripts/types';
 
 const PackagesList: FC<Readonly<Packages>> = ({ data }: Packages) => (
@@ -44,7 +44,7 @@ const PackagesList: FC<Readonly<Packages>> = ({ data }: Packages) => (
 	</div>
 );
 
-export const NPMStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data, partners }) => {
+export const NPMStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data, funding, partners }) => {
 	if (!data || Object.keys(data).length === 0) {
 		return null;
 	}
@@ -56,7 +56,7 @@ export const NPMStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps
 	}
 
 	return (
-		<Layout partners={partners}>
+		<Layout funding={funding} partners={partners}>
 			<Title text="NPM Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
 			<Section
@@ -87,6 +87,7 @@ export const NPMStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps
 export const getStaticProps: GetStaticProps<NPMStatsPageProps> = async () => ({
 	props: {
 		data: (await getData('Insights', queryNPM)).props.data as Packages<WithSum & WithError>['data'],
+		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });

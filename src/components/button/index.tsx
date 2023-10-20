@@ -43,7 +43,7 @@ const DefaultButton: FC<Readonly<ButtonProps>> = (props: ButtonProps) => {
 };
 
 export const Button: FC<Readonly<Props>> = (props: Props) => {
-	const className = useMemo(() => getClassName(props), [props]);
+	const className = useMemo(() => getClassName(props) as string, [props]);
 
 	if (props.type === 'anchor') {
 		return <AnchorButton {...props} className={className} />;
