@@ -599,6 +599,13 @@ export const skills: ForceNode[] = [
 		...defaultForceNodeSize
 	},
 	{
+		text: 'PostgreSQL',
+		icon: 'postgresql',
+		fill: '#4169E1',
+		since: 2023,
+		...defaultForceNodeSize
+	},
+	{
 		text: 'PostHTML',
 		icon: 'posthtml',
 		fill: '#fff',
@@ -617,6 +624,13 @@ export const skills: ForceNode[] = [
 		icon: 'prettier',
 		fill: '#F7B93E',
 		since: 2014,
+		...defaultForceNodeSize
+	},
+	{
+		text: 'Prisma',
+		icon: 'prisma',
+		fill: '#2D3748',
+		since: 2023,
 		...defaultForceNodeSize
 	},
 	{
@@ -765,6 +779,13 @@ export const skills: ForceNode[] = [
 		icon: 'swiper',
 		fill: '#6332F6',
 		since: 2017,
+		...defaultForceNodeSize
+	},
+	{
+		text: 'Tailwind CSS',
+		icon: 'tailwindcss',
+		fill: '#06B6D4',
+		since: 2023,
 		...defaultForceNodeSize
 	},
 	{
