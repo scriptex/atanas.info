@@ -17,6 +17,7 @@ export enum Routes {
 	OCCUPATION = '/occupation',
 	SLIDES = '/slides',
 	VIDEOS = '/videos',
+	TESTIMONIALS = '/testimonials',
 	ARTICLES = '/articles',
 	CERTIFICATES = '/certificates',
 	SOCIAL = '/social',

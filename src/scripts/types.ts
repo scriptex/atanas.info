@@ -10,6 +10,7 @@ import type {
 	BioEntry,
 	ResumeData,
 	Certificate,
+	Testimonial,
 	OwnerDetails,
 	TimelineItem,
 	FundingNetwork
@@ -237,3 +238,7 @@ export type NPMStatsPageProps = SharedPageProps & Packages<WithSum & WithError>;
 export type OfflinePageProps = SharedPageProps; //NOSONAR
 
 export type ErrorPageProps = SharedPageProps; //NOSONAR
+
+export type TestimonialsPageProps = SharedPageProps & {
+	data: Testimonial[];
+};

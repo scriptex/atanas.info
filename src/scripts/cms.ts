@@ -14,14 +14,15 @@ type CMSType =
 	| 'article'
 	| 'funding'
 	| 'partner'
-	| 'timeline'
 	| 'strength'
+	| 'timeline'
 	| 'education'
 	| 'experience'
 	| 'occupation'
 	| 'certificate'
 	| 'resume link'
 	| 'resume more'
+	| 'testimonial'
 	| 'resume skills';
 
 type RawCMSData = EntryCollection<EntrySkeletonType, undefined, string>;
@@ -133,21 +134,44 @@ export type Video = Readonly<{
 	description: string;
 }>;
 
-export type CMSPartner = Omit<Partner, 'image'> & {
-	image: Asset;
-};
+export type CMSPartner = Omit<Partner, 'image'> &
+	Readonly<{
+		image: Asset;
+	}>;
 
-export type Occupation = Omit<ForceNode, 'text'> & {
-	name: string;
-	index: number;
-};
+export type Occupation = Omit<ForceNode, 'text'> &
+	Readonly<{
+		name: string;
+		index: number;
+	}>;
 
-export type FundingNetwork = {
+export type FundingNetwork = Readonly<{
 	url: string;
 	name: string;
 	index: number;
 	matrix: string;
-};
+}>;
+
+type SharedTestimonial = Readonly<{
+	date: string;
+	index: number;
+
+	authorUrl: string;
+	authorName: string;
+	authorImage: string;
+	authorTitle: string;
+	authorRelationship: string;
+}>;
+
+type CMSTestimonial = SharedTestimonial &
+	Readonly<{
+		content: Document;
+	}>;
+
+export type Testimonial = SharedTestimonial &
+	Readonly<{
+		content: string;
+	}>;
 
 const client = createClient({
 	space: process.env.CONTENTFUL_SPACE_ID!,
@@ -408,6 +432,34 @@ export const getFundingFromCMS = async (): Promise<FundingNetwork[]> => {
 		const data = await getCMSData('funding');
 
 		return data.items.map(item => item.fields as FundingNetwork);
+	} catch (error: unknown) {
+		return [];
+	}
+};
+
+export const getTestimonialsFromCMS = async (): Promise<Testimonial[]> => {
+	try {
+		const data = await getCMSData('testimonial');
+
+		return data.items
+			.map(item => ({
+				...(item.fields as CMSTestimonial),
+				content: getHTMLString(item.fields.content as Document)
+			}))
+			.sort((a: Testimonial, b: Testimonial) => {
+				const aDate = new Date(a.date);
+				const bDate = new Date(b.date);
+
+				if (aDate > bDate) {
+					return 1;
+				}
+
+				if (aDate < bDate) {
+					return -1;
+				}
+
+				return 0;
+			});
 	} catch (error: unknown) {
 		return [];
 	}

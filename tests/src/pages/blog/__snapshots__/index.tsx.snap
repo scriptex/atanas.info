@@ -410,6 +410,14 @@ exports[`Blog component Should render the Blog component 1`] = `
           </li>
           <li>
             <a
+              href="/testimonials"
+              title="Testimonials I've received throughout the years"
+            >
+              Testimonials
+            </a>
+          </li>
+          <li>
+            <a
               href="/occupation"
               title="My current occupation"
             >
@@ -962,6 +970,14 @@ exports[`Blog component Should render the Blog component 1`] = `
             title="My video presentations"
           >
             Videos
+          </a>
+        </li>
+        <li>
+          <a
+            href="/testimonials"
+            title="Testimonials I've received throughout the years"
+          >
+            Testimonials
           </a>
         </li>
         <li>

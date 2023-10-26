@@ -130,38 +130,44 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 		content: 'Videos'
 	},
 	{
-		href: Routes.OCCUPATION,
+		href: Routes.TESTIMONIALS,
 		index: 10,
+		title: "Testimonials I've received throughout the years",
+		content: 'Testimonials'
+	},
+	{
+		href: Routes.OCCUPATION,
+		index: 11,
 		title: 'My current occupation',
 		content: 'Occupation'
 	},
 	{
 		href: Routes.ARTICLES,
-		index: 11,
+		index: 12,
 		title: 'My published articles',
 		content: 'Articles'
 	},
 	{
 		href: Routes.BLOG,
-		index: 12,
+		index: 13,
 		title: 'My blog',
 		content: 'Blog'
 	},
 	{
 		href: Routes.CERTIFICATES,
-		index: 13,
+		index: 14,
 		title: 'My certificates',
 		content: 'Certificates'
 	},
 	{
 		href: Routes.SOCIAL,
-		index: 14,
+		index: 15,
 		title: 'Social widgets',
 		content: 'Social'
 	},
 	{
 		href: Routes.MUSIC,
-		index: 15,
+		index: 16,
 		title: 'My music',
 		content: 'Music'
 	}
