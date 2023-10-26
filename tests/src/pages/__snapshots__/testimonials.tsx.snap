@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTemplates component 1`] = `
+exports[`Testimonials component Should render the Testimonials component 1`] = `
 <DocumentFragment>
   <svg />
   <header
@@ -560,8 +560,8 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
     class="o-main "
   >
     <section
-      class="c-section c-section--portfolio"
-      id="portfolio"
+      class="c-section c-section--testimonials"
+      id="testimonials"
     >
       <div
         class="o-shell"
@@ -571,122 +571,191 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
         >
           <div
             class="c-section__animation"
-            style="width: 200px; height: 150px; margin-left: auto; margin-right: auto;"
+            style="width: 150px; height: 150px; margin-left: auto; margin-right: auto;"
           />
           <h2>
-            Portfolio
+            Testimonials
           </h2>
         </header>
-        <h3>
-          Email Templates
-        </h3>
         <div
-          class="c-email-templates"
+          class="lines"
         >
-          <button
-            type="button"
+          <div
+            class="line line--vertical"
+          />
+          <div
+            class="line line--vertical"
+          />
+          <div
+            class="line line--vertical"
+          />
+        </div>
+        <div
+          class="lines"
+        >
+          <div
+            class="line line--horizontal"
+          />
+          <div
+            class="line line--horizontal"
+          />
+          <div
+            class="line line--horizontal"
+          />
+        </div>
+        <div
+          class="c-section__body"
+        >
+          <div
+            data-testid="swiper-testid"
           >
-            <iframe
-              src="/email-templates/template1.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
+            <div
+              data-testid="swiper-slide-testid"
+            >
+              <div
+                class="c-testimonial"
+              >
+                <a
+                  class="c-testimonial__head"
+                  href="https://example.com/authorUrl/1"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <img
+                    alt="Author name 1"
+                    data-nimg="1"
+                    decoding="async"
+                    height="80"
+                    loading="lazy"
+                    src="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F1&w=256&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F1&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F1&w=256&q=75 2x"
+                    style="color: transparent;"
+                    width="80"
+                  />
+                  <h3>
+                    Author name 1
+                  </h3>
+                  <h4>
+                    Author title 1
+                  </h4>
+                  <p>
+                    Author relationship 1
+                  </p>
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+                <div
+                  class="c-testimonial__body"
+                >
+                  <time
+                    datetime="2023-11-11T00:00:00.000Z"
+                  >
+                    Nov 11th, 2023
+                  </time>
+                  <div
+                    class="c-testimonial__content"
+                  >
+                    Testimonial content 1
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              data-testid="swiper-slide-testid"
+            >
+              <div
+                class="c-testimonial"
+              >
+                <a
+                  class="c-testimonial__head"
+                  href="https://example.com/authorUrl/2"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <img
+                    alt="Author name 2"
+                    data-nimg="1"
+                    decoding="async"
+                    height="80"
+                    loading="lazy"
+                    src="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F2&w=256&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F2&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F2&w=256&q=75 2x"
+                    style="color: transparent;"
+                    width="80"
+                  />
+                  <h3>
+                    Author name 2
+                  </h3>
+                  <h4>
+                    Author title 2
+                  </h4>
+                  <p>
+                    Author relationship 2
+                  </p>
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+                <div
+                  class="c-testimonial__body"
+                >
+                  <time
+                    datetime="2023-12-12T00:00:00.000Z"
+                  >
+                    Dec 12th, 2023
+                  </time>
+                  <div
+                    class="c-testimonial__content"
+                  >
+                    Testimonial content 2
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-testid="swiper-testid"
           >
-            <iframe
-              src="/email-templates/template2.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template3.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template4.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template5.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template6.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template7.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template8.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template9.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template10.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template11.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template12.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template13.html"
-              style="pointer-events: none;"
-            />
-          </button>
+            <div
+              data-testid="swiper-slide-testid"
+            >
+              <img
+                alt="Author name 1"
+                data-nimg="1"
+                decoding="async"
+                height="80"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F1&w=256&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F1&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F1&w=256&q=75 2x"
+                style="color: transparent;"
+                width="80"
+              />
+            </div>
+            <div
+              data-testid="swiper-slide-testid"
+            >
+              <img
+                alt="Author name 2"
+                data-nimg="1"
+                decoding="async"
+                height="80"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F2&w=256&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F2&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F2&w=256&q=75 2x"
+                style="color: transparent;"
+                width="80"
+              />
+            </div>
+          </div>
         </div>
         <div
           class="c-section__actions"
@@ -787,15 +856,6 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
               </a>
             </li>
           </ul>
-          <br
-            class="visible-xs-block"
-          />
-          <a
-            class="c-btn"
-            href="/portfolio"
-          >
-            Go back
-          </a>
         </div>
       </div>
     </section>
@@ -1369,7 +1429,7 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
 </DocumentFragment>
 `;
 
-exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTemplates component 2`] = `
+exports[`Testimonials component Should render the Testimonials component 2`] = `
 <DocumentFragment>
   <svg />
   <header
@@ -1929,8 +1989,8 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
     class="o-main "
   >
     <section
-      class="c-section c-section--portfolio"
-      id="portfolio"
+      class="c-section c-section--testimonials"
+      id="testimonials"
     >
       <div
         class="o-shell"
@@ -1940,122 +2000,47 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
         >
           <div
             class="c-section__animation"
-            style="width: 200px; height: 150px; margin-left: auto; margin-right: auto;"
+            style="width: 150px; height: 150px; margin-left: auto; margin-right: auto;"
           />
           <h2>
-            Portfolio
+            Testimonials
           </h2>
         </header>
-        <h3>
-          Email Templates
-        </h3>
         <div
-          class="c-email-templates"
+          class="lines"
         >
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template1.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template2.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template3.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template4.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template5.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template6.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template7.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template8.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template9.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template10.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template11.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template12.html"
-              style="pointer-events: none;"
-            />
-          </button>
-          <button
-            type="button"
-          >
-            <iframe
-              src="/email-templates/template13.html"
-              style="pointer-events: none;"
-            />
-          </button>
+          <div
+            class="line line--vertical"
+          />
+          <div
+            class="line line--vertical"
+          />
+          <div
+            class="line line--vertical"
+          />
+        </div>
+        <div
+          class="lines"
+        >
+          <div
+            class="line line--horizontal"
+          />
+          <div
+            class="line line--horizontal"
+          />
+          <div
+            class="line line--horizontal"
+          />
+        </div>
+        <div
+          class="c-section__body"
+        >
+          <div
+            data-testid="swiper-testid"
+          />
+          <div
+            data-testid="swiper-testid"
+          />
         </div>
         <div
           class="c-section__actions"
@@ -2156,15 +2141,6 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
               </a>
             </li>
           </ul>
-          <br
-            class="visible-xs-block"
-          />
-          <a
-            class="c-btn"
-            href="/portfolio"
-          >
-            Go back
-          </a>
         </div>
       </div>
     </section>
@@ -2738,4 +2714,6 @@ exports[`PortfolioEmailTemplates component Should render the PortfolioEmailTempl
 </DocumentFragment>
 `;
 
-exports[`PortfolioEmailTemplates component Should unmount the PortfolioEmailTemplates component 1`] = `<DocumentFragment />`;
+exports[`Testimonials component Should unmount the Testimonials component 1`] = `<DocumentFragment />`;
+
+exports[`Testimonials component Should unmount the Testimonials component 2`] = `<DocumentFragment />`;

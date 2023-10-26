@@ -8,5 +8,6 @@ export * from './resume';
 export * from './partners';
 export * from './slides';
 export * from './strengths';
+export * from './testimonials';
 export * from './timeline';
 export * from './videos';

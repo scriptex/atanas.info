@@ -7,6 +7,7 @@ const config: Config.InitialOptions = {
 	moduleNameMapper: {
 		'\\.svg': '<rootDir>/test-config/svg.ts',
 		'\\.(css|scss)$': '<rootDir>/test-config/style-mock.ts',
+		'swiper/css': '<rootDir>/test-config/style-mock.ts',
 		'@lib(.*)': '<rootDir>/lib/$1',
 		'@npm': '<rootDir>/npm',
 		'@src(.*)': '<rootDir>/src/$1',

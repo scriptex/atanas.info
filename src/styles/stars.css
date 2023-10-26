@@ -9,6 +9,7 @@
 .c-section--blog-post,
 .c-section--portfolio,
 .c-section--certificates,
+.c-section--testimonials,
 .c-section--interactive-resume,
 .c-section--open-source-project,
 .c-section--videos.c-section--slides {
@@ -1030,6 +1031,9 @@
 }
 
 .theme-light {
+	& .bubbles,
+	& .circles,
+	& .c-error-page,
 	& .c-section--music,
 	& .c-section--stats,
 	& .c-section--resume,
@@ -1038,10 +1042,11 @@
 	& .c-section--blog-post,
 	& .c-section--portfolio,
 	& .c-section--certificates,
+	& .c-section--testimonials,
 	& .c-section--interactive-resume,
 	& .c-section--open-source-project,
 	& .c-section--videos.c-section--slides {
-		&::before {
+		&::after {
 			box-shadow:
 				98.7475861381vw 78.971825984vh 1px #111222,
 				55.9234356027vw 90.4689024603vh 0px rgb(34 34 34 / 76%),
