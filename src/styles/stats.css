@@ -176,6 +176,16 @@
 	& > div > div > div:last-child {
 		@mixin flex-row nowrap, center, flex-end;
 		padding-top: 0.5rem;
+
+		& .float-left {
+			flex: 0 0 45%;
+			margin-left: auto;
+		}
+
+		& .mr-1 {
+			font-style: italic;
+			text-decoration: underline;
+		}
 	}
 }
 
