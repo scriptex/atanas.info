@@ -5,7 +5,8 @@ const withPWA = require('next-pwa')({
 
 module.exports = withPWA({
 	images: {
-		domains: ['res.cloudinary.com', 'images.ctfassets.net', 'media.licdn.com']
+		domains: ['res.cloudinary.com', 'images.ctfassets.net', 'media.licdn.com'],
+		unoptimized: true
 	},
 	webpack(config) {
 		config.module.rules = [

@@ -44,7 +44,7 @@ const List: FC<ListProps> = ({ data, swiper }) => (
 				<SwiperSlide key={item.index}>
 					<div className="c-testimonial">
 						<ExternalLink href={item.authorUrl} className="c-testimonial__head">
-							<Image src={item.authorImage} alt={item.authorName} width={80} height={80} />
+							<Image src={item.image} alt={item.authorName} width={80} height={80} />
 
 							<h3>{item.authorName}</h3>
 
@@ -72,7 +72,7 @@ const Pagination: FC<PaginationProps> = ({ data, setSwiper }) => (
 	<Swiper modules={[Thumbs]} onSwiper={setSwiper} className="c-testimonials__pagination" slidesPerView="auto">
 		{data.map(item => (
 			<SwiperSlide key={item.index}>
-				<Image src={item.authorImage} alt={item.authorName} width={80} height={80} />
+				<Image src={item.image} alt={item.authorName} width={80} height={80} />
 			</SwiperSlide>
 		))}
 	</Swiper>

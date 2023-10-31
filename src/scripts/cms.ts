@@ -155,21 +155,21 @@ export type FundingNetwork = Readonly<{
 type SharedTestimonial = Readonly<{
 	date: string;
 	index: number;
-
 	authorUrl: string;
 	authorName: string;
-	authorImage: string;
 	authorTitle: string;
 	authorRelationship: string;
 }>;
 
 type CMSTestimonial = SharedTestimonial &
 	Readonly<{
+		image: Asset;
 		content: Document;
 	}>;
 
 export type Testimonial = SharedTestimonial &
 	Readonly<{
+		image: string;
 		content: string;
 	}>;
 
@@ -442,10 +442,16 @@ export const getTestimonialsFromCMS = async (): Promise<Testimonial[]> => {
 		const data = await getCMSData('testimonial');
 
 		return data.items
-			.map(item => ({
-				...(item.fields as CMSTestimonial),
-				content: getHTMLString(item.fields.content as Document)
-			}))
+			.map(item => {
+				const { image, content, ...rest } = item.fields as CMSTestimonial;
+				const imageURL = image.fields.file?.url;
+
+				return {
+					...rest,
+					image: `https://${imageURL}`,
+					content: getHTMLString(content)
+				};
+			})
 			.sort((a: Testimonial, b: Testimonial) => {
 				const aDate = new Date(a.date);
 				const bDate = new Date(b.date);
