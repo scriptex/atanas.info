@@ -6,12 +6,24 @@
 	--color-secondary: #000;
 	--color-action: #ef4c23;
 	--color-calendar-graph-day-bg: #ebedf0;
-	--color-calendar-graph-day-border: rgba(27, 31, 35, 0.07);
+	--color-calendar-graph-day-border: rgba(27, 31, 35, 0.06);
 	--color-calendar-graph-day-L0-bg: #ededed !important;
 	--color-calendar-graph-day-L1-bg: #acd5f2 !important;
 	--color-calendar-graph-day-L2-bg: #7fa8c9 !important;
 	--color-calendar-graph-day-L3-bg: #527ba0 !important;
 	--color-calendar-graph-day-L4-bg: #254e77 !important;
+	--color-calendar-halloween-graph-day-L1-bg: #631c03;
+	--color-calendar-halloween-graph-day-L2-bg: #bd561d;
+	--color-calendar-halloween-graph-day-L3-bg: #fa7a18;
+	--color-calendar-halloween-graph-day-L4-bg: #fddf68;
+	--color-calendar-winter-graph-day-L1-bg: #0a3069;
+	--color-calendar-winter-graph-day-L2-bg: #0969da;
+	--color-calendar-winter-graph-day-L3-bg: #54aeff;
+	--color-calendar-winter-graph-day-L4-bg: #b6e3ff;
+	--color-calendar-graph-day-L1-border: rgba(255, 255, 255, 0.05);
+	--color-calendar-graph-day-L2-border: rgba(255, 255, 255, 0.05);
+	--color-calendar-graph-day-L3-border: rgba(255, 255, 255, 0.05);
+	--color-calendar-graph-day-L4-border: rgba(255, 255, 255, 0.05);
 	/* prettier-ignore */
 	--houdini-color: var(--color-action), color-mod(var(--color-action) shade(20%)), color-mod(var(--color-action) shade(40%));
 	--parallelowow-tile-width: 24;
