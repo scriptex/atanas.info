@@ -35,7 +35,6 @@ const List: FC<ListProps> = ({ data, swiper }) => (
 		autoplay={{ delay: 10000 }}
 		keyboard
 		className="c-testimonials__list"
-		autoHeight
 	>
 		{data.map(item => {
 			const date = new Date(item.date);

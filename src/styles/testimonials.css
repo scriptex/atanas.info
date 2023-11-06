@@ -1,8 +1,30 @@
 .c-testimonial {
+	--parallelowow-tile-width: 64px;
+	--parallelowow-probability: 0.9;
+	--parallelowow-base-colors: var(--color-primary);
+	--parallelowow-stroke-color: var(--color-secondary);
+	--parallelowow-stroke-weight: 2;
+
+	height: 100%;
+	position: relative;
 	padding: 1rem;
 	border: 1px solid;
 	background-color: var(--color-secondary);
 	border-radius: 2.5rem;
+
+	&::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		display: block;
+		opacity: 0.05;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		background-image: paint(parallelowow);
+		border-radius: 2.5rem;
+	}
 }
 
 .c-testimonial__head {
@@ -10,6 +32,7 @@
 	text-decoration: none;
 	display: block;
 	position: relative;
+	z-index: 2;
 	padding-left: 6rem;
 
 	& img {
@@ -40,6 +63,8 @@
 }
 
 .c-testimonial__body {
+	position: relative;
+	z-index: 2;
 	padding: 1rem 0;
 	border-top: 1px solid var(--color-action);
 	margin-top: 1rem;
@@ -64,6 +89,11 @@
 			display: block;
 			border-radius: 50%;
 		}
+	}
+
+	& .swiper-slide {
+		height: auto;
+		box-sizing: border-box;
 	}
 }
 
@@ -120,6 +150,12 @@
 
 		& .swiper-wrapper {
 			justify-content: flex-start;
+		}
+	}
+
+	.c-section--testimonials {
+		& .c-section__animation {
+			margin: -1rem 0 1.5rem;
 		}
 	}
 }

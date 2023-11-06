@@ -10,6 +10,7 @@ registerPaint(
 				`--${paintNameParallelOwOw}-tile-width`,
 				`--${paintNameParallelOwOw}-base-colors`,
 				`--${paintNameParallelOwOw}-probability`,
+				`--${paintNameParallelOwOw}-stroke-color`,
 				`--${paintNameParallelOwOw}-stroke-weight`
 			];
 		}
@@ -21,6 +22,7 @@ registerPaint(
 		): void {
 			const tileWidth = parseInt(props.get(`--${paintNameParallelOwOw}-tile-width`)!, 10);
 			const probability = parseFloat(props.get(`--${paintNameParallelOwOw}-probability`)!);
+			const strokeColor = props.get(`--${paintNameParallelOwOw}-stroke-color`);
 			const strokeWeight = parseFloat(props.get(`--${paintNameParallelOwOw}-stroke-weight`)!);
 
 			const baseColors: string[] = props
@@ -81,6 +83,7 @@ registerPaint(
 						ctx.fill();
 
 						if (strokeWeight > 0) {
+							ctx.strokeStyle = strokeColor ?? 'black';
 							ctx.stroke();
 						}
 
