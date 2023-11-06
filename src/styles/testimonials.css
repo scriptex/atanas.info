@@ -1,4 +1,5 @@
 .c-testimonial {
+	height: 100%;
 	padding: 1rem;
 	border: 1px solid;
 	background-color: var(--color-secondary);
@@ -65,6 +66,11 @@
 			border-radius: 50%;
 		}
 	}
+
+	& .swiper-slide {
+		height: auto;
+		box-sizing: border-box;
+	}
 }
 
 .c-testimonials__list {
@@ -120,6 +126,12 @@
 
 		& .swiper-wrapper {
 			justify-content: flex-start;
+		}
+	}
+
+	.c-section--testimonials {
+		& .c-section__animation {
+			margin: -1rem 0 1.5rem;
 		}
 	}
 }
