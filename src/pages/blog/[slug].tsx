@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Routes } from '@data/routes';
-import { MDX, Layout, Title } from '@components';
+import { MDX as Mdx, Layout, Title } from '@components';
 import type { BlogPostPageData } from '@scripts/types';
 import { getPostBySlug, getAllPosts } from '@lib/markdown';
 import { Article, getArticlesFromCMS, getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
@@ -21,7 +21,7 @@ export const OpenSourceProject: FC<Readonly<InferGetStaticPropsType<typeof getSt
 		<Layout funding={funding} partners={partners}>
 			<Title text={`${match?.title ?? post.slug} | Atanas Atanasov | Senior Javascript/Typescript Engineer`} />
 
-			<MDX
+			<Mdx
 				id="blog-post"
 				back={Routes.BLOG}
 				title={match?.title ?? post.slug ?? ''}

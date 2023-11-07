@@ -3420,7 +3420,7 @@ exports[`PortfolioMobileApps component Should render the PortfolioMobileApps com
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -3497,7 +3497,6 @@ exports[`PortfolioMobileApps component Should render the PortfolioMobileApps com
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"

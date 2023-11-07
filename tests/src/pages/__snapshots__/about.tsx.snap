@@ -1084,7 +1084,7 @@ exports[`About component Should render the About component 1`] = `
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -1161,7 +1161,6 @@ exports[`About component Should render the About component 1`] = `
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"
@@ -2365,7 +2364,7 @@ exports[`About component Should render the About component 2`] = `
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -2442,7 +2441,6 @@ exports[`About component Should render the About component 2`] = `
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"
@@ -3648,7 +3646,7 @@ exports[`Tests the About page when offline 1`] = `
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -3725,7 +3723,6 @@ exports[`Tests the About page when offline 1`] = `
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"

@@ -109,9 +109,13 @@
 	bottom: 0;
 	left: 0;
 	z-index: 90;
-	background-color: var(--color-secondary);
+	padding: 0;
+	border: 0;
+	background: var(--color-secondary);
 	transition: opacity var(--timing) var(--easing);
 	pointer-events: none;
+	appearance: nine;
+	cursor: pointer;
 }
 
 .c-funding--open {

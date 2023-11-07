@@ -1196,7 +1196,7 @@ exports[`Portfolio component Should render the Portfolio component 1`] = `
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -1273,7 +1273,6 @@ exports[`Portfolio component Should render the Portfolio component 1`] = `
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"

@@ -33,7 +33,7 @@ export const Funding: FC<Readonly<Props>> = ({ data }) => {
 				Sponsor me
 			</Button>
 
-			<div className="c-funding__backdrop" onClick={() => setOpen(false)} />
+			<button className="c-funding__backdrop" onClick={() => setOpen(false)} />
 
 			<svg viewBox="-100 -100 700 700" ref={knob} className="c-funding__knob">
 				<g>
@@ -42,7 +42,7 @@ export const Funding: FC<Readonly<Props>> = ({ data }) => {
 					))}
 				</g>
 
-				<g className="c-funding__trigger" role="button" onClick={() => setOpen(false)}>
+				<g className="c-funding__trigger" onClick={() => setOpen(false)}>
 					<circle cx="250" cy="250" r="30" />
 
 					<text textAnchor="middle" x="250" y="260" fill="var(--color-primary)" fontSize="2.5em">

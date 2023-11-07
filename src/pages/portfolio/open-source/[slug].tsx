@@ -5,7 +5,7 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Routes } from '@data/routes';
 import { openSourceProjects } from '@data/pages';
-import { MDX, Layout, Title } from '@components';
+import { MDX as Mdx, Layout, Title } from '@components';
 import { getPostBySlug, getAllPosts } from '@lib/markdown';
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import type { PortfolioOpenSourceProjectPageData } from '@scripts/types';
@@ -38,7 +38,7 @@ export const OpenSourceProject: FC<InferGetStaticPropsType<typeof getStaticProps
 		<Layout funding={funding} partners={partners}>
 			<Title text="Open Source | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
 
-			<MDX
+			<Mdx
 				id="blog-post"
 				back={Routes.PORTFOLIO_OPEN_SOURCE_PROJECTS}
 				title={post.slug}
