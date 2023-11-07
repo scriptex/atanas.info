@@ -1364,7 +1364,7 @@ exports[`PortfolioOpenSourceProjects component Should render the PortfolioOpenSo
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -1441,7 +1441,6 @@ exports[`PortfolioOpenSourceProjects component Should render the PortfolioOpenSo
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"

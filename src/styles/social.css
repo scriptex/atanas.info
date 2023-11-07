@@ -64,6 +64,12 @@
 		height: 100%;
 	}
 
+	& a.twitter-timeline {
+		font-size: 0;
+		line-height: 0;
+		text-indent: -250rem;
+	}
+
 	& .linkedin-frame iframe {
 		width: auto;
 		min-width: 20.75rem;

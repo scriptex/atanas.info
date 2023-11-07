@@ -23,7 +23,6 @@ export const socialItems: SocialItem[] = [
 				height={400}
 				loading="lazy"
 				className="github-frame"
-				frameBorder={0}
 			/>
 		)
 	},
@@ -37,7 +36,9 @@ export const socialItems: SocialItem[] = [
 				className="twitter-timeline"
 				data-theme="dark"
 				data-height={400}
-			/>
+			>
+				@scriptexbg on Twitter
+			</a>
 		)
 	},
 	{
@@ -65,7 +66,6 @@ export const socialItems: SocialItem[] = [
 				height={400}
 				loading="lazy"
 				className="spotify-frame"
-				frameBorder={0}
 			/>
 		)
 	},

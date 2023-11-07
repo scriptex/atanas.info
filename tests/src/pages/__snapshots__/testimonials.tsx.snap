@@ -1252,7 +1252,7 @@ exports[`Testimonials component Should render the Testimonials component 1`] = `
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -1329,7 +1329,6 @@ exports[`Testimonials component Should render the Testimonials component 1`] = `
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"
@@ -2537,7 +2536,7 @@ exports[`Testimonials component Should render the Testimonials component 2`] = `
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -2614,7 +2613,6 @@ exports[`Testimonials component Should render the Testimonials component 2`] = `
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"

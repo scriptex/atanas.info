@@ -4422,7 +4422,7 @@ exports[`Skills component Should render the Skills component 1`] = `
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -4499,7 +4499,6 @@ exports[`Skills component Should render the Skills component 1`] = `
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"
@@ -9021,7 +9020,7 @@ exports[`Skills component Should render the Skills component 2`] = `
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -9098,7 +9097,6 @@ exports[`Skills component Should render the Skills component 2`] = `
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"

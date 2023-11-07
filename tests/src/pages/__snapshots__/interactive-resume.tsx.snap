@@ -1215,7 +1215,7 @@ exports[`InteractiveResume component Should render the InteractiveResume compone
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -1292,7 +1292,6 @@ exports[`InteractiveResume component Should render the InteractiveResume compone
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"
@@ -2622,7 +2621,7 @@ exports[`Tests the Interactive resume page when offline 1`] = `
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -2699,7 +2698,6 @@ exports[`Tests the Interactive resume page when offline 1`] = `
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"

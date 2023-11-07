@@ -955,7 +955,7 @@ exports[`Layout component Should render the Layout component 1`] = `
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -1032,7 +1032,6 @@ exports[`Layout component Should render the Layout component 1`] = `
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"

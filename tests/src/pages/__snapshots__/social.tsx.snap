@@ -723,7 +723,6 @@ exports[`Social component Should render the Social component 1`] = `
               </h3>
               <iframe
                 class="github-frame"
-                frameborder="0"
                 height="400"
                 loading="lazy"
                 src="https://github.com/sponsors/scriptex/card"
@@ -743,7 +742,9 @@ exports[`Social component Should render the Social component 1`] = `
                 data-height="400"
                 data-theme="dark"
                 href="//twitter.com/scriptexbg"
-              />
+              >
+                @scriptexbg on Twitter
+              </a>
             </div>
             <div
               class="o-grid__item xs-12 sm-6"
@@ -769,7 +770,6 @@ exports[`Social component Should render the Social component 1`] = `
               <iframe
                 allow="encrypted-media"
                 class="spotify-frame"
-                frameborder="0"
                 height="400"
                 loading="lazy"
                 src="https://open.spotify.com/embed/playlist/37i9dQZF1EpzZomgLqaOnp?theme=0"
@@ -1513,7 +1513,7 @@ exports[`Social component Should render the Social component 1`] = `
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -1590,7 +1590,6 @@ exports[`Social component Should render the Social component 1`] = `
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"
@@ -2987,7 +2986,7 @@ exports[`Tests the Social page when offline 1`] = `
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -3064,7 +3063,6 @@ exports[`Tests the Social page when offline 1`] = `
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"

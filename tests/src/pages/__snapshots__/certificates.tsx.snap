@@ -1112,7 +1112,7 @@ exports[`Certificates component Should render the Certificates component 1`] = `
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -1189,7 +1189,6 @@ exports[`Certificates component Should render the Certificates component 1`] = `
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"

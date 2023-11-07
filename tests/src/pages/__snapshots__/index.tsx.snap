@@ -973,7 +973,7 @@ exports[`Home component Should render the Home component 1`] = `
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -1050,7 +1050,6 @@ exports[`Home component Should render the Home component 1`] = `
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"
@@ -2132,7 +2131,7 @@ exports[`Home component Should render the Home component 2`] = `
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -2209,7 +2208,6 @@ exports[`Home component Should render the Home component 2`] = `
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"
@@ -3295,7 +3293,7 @@ exports[`Should test the Home page 1`] = `
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -3372,7 +3370,6 @@ exports[`Should test the Home page 1`] = `
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"
@@ -4454,7 +4451,7 @@ exports[`Should test the Home page 2`] = `
         >
           Sponsor me
         </button>
-        <div
+        <button
           class="c-funding__backdrop"
         />
         <svg
@@ -4531,7 +4528,6 @@ exports[`Should test the Home page 2`] = `
           </g>
           <g
             class="c-funding__trigger"
-            role="button"
           >
             <circle
               cx="250"
