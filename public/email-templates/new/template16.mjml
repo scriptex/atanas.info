@@ -1,0 +1,128 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-text font-family="Arial, Helvetica" font-size="18px" line-height="24px" color="#393939" padding="0 0 24px"></mj-text>
+      <mj-social font-family="Arial, Helvetica" font-size="18px" line-height="24px" color="#393939" padding="0 0 24px">
+        <mj-social-element name="facebook"></mj-social-element>
+        <mj-social-element name="twitter"></mj-social-element>
+        <mj-social-element name="google"></mj-social-element>
+      </mj-social>
+    </mj-attributes>
+    <mj-style>
+      .stripe-1 {
+        width: 42%;
+        background-color: #1ea2b1;
+      }
+
+      .stripe-2 {
+        width: 33%;
+        background-color: #b00402;
+      }
+
+      .stripe-3 {
+        width: 25%;
+        background-color: #ea1c0a;
+      }
+
+      .stripe-1,
+      .stripe-2,
+      .stripe-3 {
+        display: inline-block;
+        float: left;
+        padding: 0;
+      }
+
+      .stripe-spacer {
+        min-height: 0px !important;
+        padding: 0 !important;
+      }
+
+      .head-stripe {
+        height: 42px;
+      }
+
+      .logo {
+        display: block;
+        margin-left: auto;
+        width: 45% !important;
+        height: auto !important;
+      }
+
+      a {
+        color: #ea1c0a;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #d51607;
+        text-decoration: underline;
+      }
+
+      @media (max-width: 480px) {
+        .head-stripe {
+          height: 20px;
+        }
+
+        .logo {
+          padding: 5px !important;
+        }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body width="680px" background-color="#fff">
+    <mj-section padding="0 9px 30px 10px">
+      <mj-column>
+        <mj-image src="http://oupl.mj.is/tplimg/oupl/b/0s15w/kv5nx.png" alt="" width="250px" height="40px" href="{{var:url:''}}/"></mj-image>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0 9px 30px 10px">
+      <mj-image src="http://oupl.mj.is/tplimg/oupl/b/0s15w/kv5n0.jpeg" alt="Header pic" fluid-on-mobile="true" href="{{var:url:''}}"></mj-image>
+    </mj-section>
+    <mj-raw>
+      <!-- Content -->
+    </mj-raw>
+    <mj-section padding="0px 10px 6px">
+      <mj-text><br /> <strong>Oggetto: benvenuto in Super Solar. Ecco un vantaggio in più per te.</strong> <br /> <br />
+
+        Gentile {{var:userName:"user"}},<br />
+        ti ringraziamo per averci scelto e ti diamo il benvenuto nella grande famiglia E.ON Super Solar.<br /> <br />
+        Ti sei appena unito ad una community di oltre 65.000 famiglie italiane che ci hanno voluto al proprio fianco per intraprendere l’importante viaggio verso la transizione energetica ed un futuro più green.<br /> <br />
+        Grazie alla tua decisione, non sarà solamente il portafoglio a guadagnarci!<br />
+        Certo, risparmiare sulle bollette di luce e gas è già una cosa importante ma da oggi, con la tua nuova installazione, darai un notevole e fondamentale contributo anche alla protezione del nostro pianeta, riducendo la quantità di emissioni di CO2 nell’atmosfera. <br /> <br />
+
+        <strong>Ma i vantaggi non finiscono qui….</strong> <br /> <br />
+        Come membro della grande famiglia E.ON Super Solar, vogliamo premiare il tuo impegno mettendoti a disposizione uno strumento che diventerà il cuore digitale della tua casa e ti permetterà di godere a pieno del suo comfort in modo efficiente, sostenibile e senza sforzo, direttamente dal palmo della tua mano: stiamo parlando di E.ON Home, la nostraApp disponibile per te registrandoti qui sotto.<br /> <br />
+      </mj-text>
+      <mj-image src="http://oupl.mj.is/tplimg/oupl/b/0s15w/jnrto.png" alt="Mobile and Web" fluid-on-mobile="true" href="{{var:url:''}}"></mj-image>
+      <mj-spacer></mj-spacer>
+      <mj-text><strong>Cosa aspetti? Porta la tua casa nel futuro con E.ON Home!</strong> <br /> <br />
+
+        A presto,<br />
+        Elisa<br />
+        Team Super Solar<br /></mj-text>
+      <mj-spacer></mj-spacer>
+    </mj-section>
+    <mj-column width="100%">
+      <mj-button href="{{var:url:''}}" background-color="#ea1b12" horizontal="" alignment="center">Registrati a E.ON Home</mj-button>
+    </mj-column>
+    <mj-spacer></mj-spacer>
+    <mj-raw>
+      <!-- Disclaimer -->
+    </mj-raw>
+    <mj-section padding="0px 10px">
+      <mj-column padding-bottom="20px">
+        <mj-spacer height="2px" container-background-color="#e8e8e8"></mj-spacer>
+        <mj-spacer height="10px"></mj-spacer>
+        <mj-text font-size="14px" line-height="18px" color="#8f9192" padding-bottom="0px">© 2020 Solar Energy Group S.p.A. - Partita Iva 01829150307<br /><br />Ricevi questa mail in quanto cliente Solar Energy Group S.p.A., soggetta alla attività di direzione e coordinamento di E.ON Italia S.p.a., se hai bisogno di maggiori informazioni sul tema della privacy puoi consultare il <strong><a href="https://app.home.eon.com/more/privacy-policy">seguente link</a></strong>.</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-raw>
+      <!-- Bottom strip -->
+    </mj-raw>
+    <mj-section padding="0px 10px">
+      <mj-section css-class="stripe-1 footer-stripe" padding="2px 0"></mj-section>
+      <mj-section css-class="stripe-2 footer-stripe" padding="2px 0"></mj-section>
+      <mj-section css-class="stripe-3 footer-stripe" padding="2px 0"></mj-section>
+    </mj-section>
+  </mj-body>
+</mjml>

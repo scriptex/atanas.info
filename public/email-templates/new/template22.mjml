@@ -1,0 +1,157 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-text font-family="Arial, Helvetica" font-size="18px" line-height="24px" color="#393939" padding="0 0 24px" />
+
+      <mj-social font-family="Arial, Helvetica" font-size="18px" line-height="24px" color="#393939" padding="0 0 24px" />
+    </mj-attributes>
+
+    <mj-style>
+      .stripe-1 {
+        width: 42%;
+        background-color: #1ea2b1;
+      }
+
+      .stripe-2 {
+        width: 33%;
+        background-color: #b00402;
+      }
+
+      .stripe-3 {
+        width: 25%;
+        background-color: #ea1c0a;
+      }
+      
+      .stripe-1, .stripe-2, .stripe-3 {
+      display: inline-block;
+        float: left;
+        padding: 0;
+      }
+      
+      .stripe-spacer {
+        min-height: 0px!important;
+        padding: 0!important;
+      }
+      
+      .head-stripe {
+      height: 42px;
+      }
+      
+      .logo {
+        display: block;
+        margin-left: auto;
+        width: 45% !important;
+        height: auto !important;
+      }
+
+      a {
+        color: #ea1c0a;
+        text-decoration: none;
+      }
+      
+      a:hover {
+        color: #d51607;
+        text-decoration: underline;
+      }
+      
+      @media (max-width: 480px) {
+        .head-stripe {
+          height: 20px;
+        }
+      
+       .logo {
+      padding: 5px!important;
+        }
+      }
+    </mj-style>
+  </mj-head>
+
+  <mj-body width="600px" background-color="#fff">
+    <mj-section padding="0 9px 30px 10px">
+      <mj-image src="http://oupl.mj.is/tplimg/oupl/b/0s15n/h69g9.jpeg" alt="E.ON Home" width="600" height="262" padding="0" />
+    </mj-section>
+
+    <!-- Content -->
+    <mj-section padding="0px 10px 6px">
+      <mj-text>Gentile {{var:userName:"user"}},<br /> <br />
+come saprai, grazie all'installazione del tuo pannello fotovoltaico, sei in grado di <strong>produrre energia in autonomia</strong>, con un <strong>risparmio considerevole in bolletta</strong>.
+        <br /><br />Per conoscere nel dettaglio tutti i vantaggi e il potenziale del tuo impianto fotovoltaico, ti invitiamo a scaricare gratuitamente l'<strong>App E.ON Home</strong>.<br /> <br />Grazie all'App, potrai ad esempio sapere in tempo reale:</mj-text>
+    </mj-section>
+    
+    <mj-section text-align="left" padding="20px 0 0">
+      <mj-column width="20%" vertical-align="middle" padding="0">
+        <mj-image src="http://oupl.mj.is/tplimg/oupl/b/0s15w/655v2.jpeg" alt="" width="99px" height="62px" padding="0" />
+      </mj-column>
+      
+      <mj-column width="80%" vertical-align="middle" padding="0">
+        <mj-text padding="0 0 0 10px">
+          <strong>quanta energia</strong> del tuo impianto stai sfruttando
+        </mj-text>
+      </mj-column>      
+    </mj-section>
+    
+    <mj-section text-align="left" padding="20px 0 0">
+      <mj-column width="20%" vertical-align="middle" padding="0">
+<mj-image src="http://oupl.mj.is/tplimg/oupl/b/0s15w/655gr.jpeg" alt="" width="99px" height="62px" padding="0" />
+      </mj-column>
+      
+      <mj-column width="80%" vertical-align="middle" padding="0">
+        <mj-text padding="0 0 0 10px">
+          qual è lo <strong>stato della carica</strong> della batteria, se presente
+        </mj-text>
+      </mj-column>      
+    </mj-section>
+    
+    <mj-section text-align="left" padding="20px 0 0">
+      <mj-column width="20%" vertical-align="middle" padding="0">
+        <mj-image src="http://oupl.mj.is/tplimg/oupl/b/0s15w/6556p.jpeg" alt="" width="99px" height="62px" padding="0" />
+      </mj-column>
+      
+      <mj-column width="80%" vertical-align="middle" padding="0">
+        <mj-text padding="0 0 0 10px">
+          se i tuoi <strong>pannelli stanno producendo energia</strong>
+        </mj-text>
+      </mj-column>      
+    </mj-section>
+    
+    <mj-section padding="30px 10px">
+      <mj-text>Il resto scoprilo di persona!</mj-text>
+      
+      <mj-spacer></mj-spacer>
+      
+      <mj-button href={{var:url:""}} background-color="#ea1b12">Registrati</mj-button>
+    </mj-section>
+    
+    <mj-section padding="0 10px 25px">
+      <mj-column width="220px" padding="0" vertical-align="middle">
+        <mj-image href="#" src="http://oupl.mj.is/tplimg/oupl/b/0s15w/655ix.jpeg" alt="" width="220px" height="45px" />
+      </mj-column>
+      
+      <mj-column width="218px" padding="0" vertical-align="middle">
+        <mj-image src="http://oupl.mj.is/tplimg/oupl/b/0s15w/65rs8.png" href="https://play.google.com/store/apps/details?id=com.eon.home.eu&hl=it" alt="" width="124" height="38" />
+      </mj-column>
+      
+      <mj-column width="218px" padding="0" vertical-align="middle">
+        <mj-image src="http://oupl.mj.is/tplimg/oupl/b/0s15w/65r11.png" href="https://apps.apple.com/it/app/e-on-home/id1468486784" alt="" width="124" height="38" />
+      </mj-column>
+    </mj-section>
+    
+<!-- Disclaimer -->
+    <mj-section padding="0px 10px">
+      <mj-column padding-bottom="20px">
+        <mj-spacer height="2px" container-background-color="#e8e8e8"></mj-spacer>
+        <mj-spacer height="10px"></mj-spacer>
+        <mj-text font-size="14px" line-height="18px" color="#8f9192" padding-bottom="0">
+          © 2020 E.ON Energia S.p.A. - Partita Iva 03429130234<br/><br/>
+        Ricevi questa mail in quanto cliente E.ON Energia, soggetta alla attività  direzione e coordinamento di E.ON Italia S.p.A., se hai bisogno di maggiori informazioni sul tema della privacy puoi consultare il <strong><a href="https://app.home.eon.com/more/privacy-policy">seguente link</a></strong>.</mj-text>
+      </mj-column>
+    </mj-section>
+    
+    <!-- Bottom strip -->
+    <mj-section padding="0px 10px">
+      <mj-section css-class="stripe-1 footer-stripe" padding="2px 0"></mj-section>
+      <mj-section css-class="stripe-2 footer-stripe" padding="2px 0"></mj-section>
+      <mj-section css-class="stripe-3 footer-stripe" padding="2px 0"></mj-section>
+    </mj-section>
+  </mj-body>
+</mjml>

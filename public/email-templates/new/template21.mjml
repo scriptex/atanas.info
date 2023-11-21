@@ -1,0 +1,130 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-text font-family="Arial, Helvetica" font-size="18px" line-height="24px" color="#393939" padding="0 0 24px" />
+
+      <mj-social font-family="Arial, Helvetica" font-size="18px" line-height="24px" color="#393939" padding="0 0 24px" />
+    </mj-attributes>
+
+    <mj-style>
+      .stripe-1 {
+        width: 42%;
+        background-color: #F5C500;
+      }
+
+      .stripe-2 {
+        width: 33%;
+        background-color: #056732;
+      }
+
+      .stripe-3 {
+        width: 25%;
+        background-color: #164194;
+      }
+      
+      .stripe-1, .stripe-2, .stripe-3 {
+      display: inline-block;
+        float: left;
+        padding: 0;
+      }
+      
+      .stripe-spacer {
+      min-height: 0px!important;
+      padding: 0!important;
+      }
+      
+      .head-stripe {
+      height: 42px;
+      }
+      
+
+      .logo {
+        display: block;
+        margin-left: auto;
+        width: 45% !important;
+        height: auto !important;
+      }
+
+      a {
+        color: #ea1c0a;
+        text-decoration: none;
+      }
+      
+      a:hover {
+        color: #d51607;
+        text-decoration: underline;
+      }
+      
+      @media (max-width: 480px) {
+        .head-stripe {
+          height: 20px;
+        }
+      
+       .logo {
+      padding: 5px!important;
+        }
+      }
+    </mj-style>
+  </mj-head>
+
+  <mj-body width="680px" background-color="#fff">
+    <!-- Header -->
+    <mj-section padding="60px 10px 50px" full-width="full-width">
+      <mj-section css-class="stripe-1 head-stripe" padding="0">
+        <mj-spacer css-class="stripe-spacer"></mj-spacer>
+      </mj-section>
+      <mj-section css-class="stripe-2 head-stripe" padding="0">
+        <mj-spacer css-class="stripe-spacer"></mj-spacer>
+      </mj-section>
+      <mj-section css-class="stripe-3 head-stripe" padding="0">
+         <mj-column  padding="0">
+        </mj-column>
+      </mj-section>
+    </mj-section>
+
+    <!-- Content -->
+    <mj-section padding="0px 10px 6px">
+      <mj-column>
+         <mj-text>Dzień dobry,<br /><br />Sprawdź, co generujesz! Zobaczysz to dzięki FOTON Home.<br /><br />FOTON Home to aplikacja, która pokazuje informacje o generowanej energii. Aplikację możesz uruchomić, aktywując swoje konto FOTON Home. Twoje konto jest przygotowane, wystarczy, że się zalogujesz i ustawisz nowe hasło:
+        </mj-text>
+         
+        <mj-social icon-height="25px" mode="horizontal" align="left" color="#ea1c0a">
+          <mj-social-element href="https://app.home.fotontechnik.pl/login?username={username}&password={####}" src="http://oupl.mj.is/tplimg/oupl/b/8xzq/2h6xq.png" name="cta" padding="0 10px 0 20px">Kliknij tutaj, aby zalogować się do FOTON Home</mj-social-element>
+        </mj-social>
+
+        <mj-text>Możesz pobrać aplikację bezpośrednio na swój telefon komórkowy:</mj-text>
+
+        <mj-social icon-height="25px" mode="horizontal" align="left" color="#ea1c0a">
+<mj-social-element href="https://apps.apple.com/us/app/foton-home/id1525688620" src="http://oupl.mj.is/tplimg/oupl/b/8xzq/2h6xq.png" name="cta" padding="0 10px 0 20px">Kliknij tutaj, aby pobrać aplikację w wersji iOS</mj-social-element>
+        </mj-social>
+        <br />
+        <mj-social icon-height="25px" mode="horizontal" align="left" color="#ea1c0a">
+<mj-social-element href="https://play.google.com/store/apps/details?id=com.foton.home.eu" src="http://oupl.mj.is/tplimg/oupl/b/8xzq/2h6xq.png" name="cta" padding="0 10px 0 20px">Kliknij tutaj, aby pobrać aplikację w wersji Android</mj-social-element>
+</mj-social>
+
+        <br /><br /><br />
+        <mj-text>Pozdrawiamy,<br />Ekipa FOTON Technik</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Disclaimer -->
+    <mj-section padding="0px 10px">
+      <mj-column padding-bottom="49px">
+        <mj-spacer height="2px" container-background-color="#e8e8e8"></mj-spacer>
+
+        <mj-spacer height="10px"></mj-spacer>
+
+        <mj-text font-size="14px" line-height="18px" color="#8f9192" padding-bottom="0">
+          Informacja prawna:<br />Powyższa wiadomość została wysłana przez FOTON Technik spółkę z ograniczoną odpowiedzialnością, zarejestrowaną w Warszawie przy ul. Roentgena 7, numer KRS 0000582429. Treść wiadomości, jak i załączników (jeżeli występują) to informacje poufne i przeznaczone wyłącznie dla osób będących adresatem niniejszej wiadomości. Jeżeli otrzymałeś tę wiadomość omyłkowo, prosimy o bezzwłoczny kontakt z nami, a także o usunięcie tej wiadomości i jej ewentualnych kopii z Twojej poczty elektronicznej. Każde nieautoryzowane kopiowanie, ujawnianie lub rozpowszechnianie informacji zawartych w wiadomości jest prawnie zabronione. W gestii adresata pozostaje weryfikacja autentyczności wiadomości, przed podjęciem działań dotyczących jej treści.</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Bottom strip -->
+    <mj-section padding="0px 10px">
+      <mj-section css-class="stripe-1 footer-stripe" padding="2px 0"></mj-section>
+      <mj-section css-class="stripe-2 footer-stripe" padding="2px 0"></mj-section>
+      <mj-section css-class="stripe-3 footer-stripe" padding="2px 0"></mj-section>
+    </mj-section>
+
+  </mj-body>
+</mjml>
