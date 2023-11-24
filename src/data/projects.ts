@@ -532,6 +532,14 @@ export const projects: WebProject[] = [
 		title: 'Dan Ariely MIT',
 		description: "Dan Ariely's MIT page - HTML, SVG, SCSS",
 		skip: false
+	},
+	{
+		url: 'https://edukartgo.com',
+		image: '/images/web-apps/Kinetik-STEAM-Education-Kit.jpg',
+		index: 63,
+		title: 'Kinetik STEAM Education Kit',
+		description: 'Typescript, SVG, React, Next.js, Emotion',
+		skip: false
 	}
 ];
 
@@ -673,6 +681,48 @@ export const automotiveProjects: ExtendedProject[] = [
 		imageWidth: 1536,
 		imageHeight: 411
 	}
+	// {
+	// 	url: '',
+	// 	index: 2,
+	// 	title: 'Motorcycle Dashboard',
+	// 	description: 'Dashboard for the electric motorcycle built by Kinetik Automotive',
+	// 	details: 'Typescript, SCSS, SVG, React, Redux, NodeJS, Express, WebSocket',
+	// 	images: [
+	// 		'motorcycle-dashboard01.jpg',
+	// 		'motorcycle-dashboard02.jpg',
+	// 		'motorcycle-dashboard03.jpg',
+	// 		'motorcycle-dashboard04.jpg'
+	// 	],
+	// 	imageWidth: 1600,
+	// 	imageHeight: 960
+	// },
+	// {
+	// 	url: '',
+	// 	index: 3,
+	// 	title: 'GoKart Telemetry',
+	// 	description: "Cloud-based telemetry system built for the Kinetik's E-Go-Kart",
+	// 	details: 'Typescript, SCSS, SVG, React, React Query, NodeJS, Express, WebSocket, NextJS, Google Maps,',
+	// 	images: [
+	// 		'telemetry1.png',
+	// 		'telemetry2.jpg',
+	// 		'telemetry3.jpg',
+	// 		'telemetry4.jpg',
+	// 		'telemetry5.jpg',
+	// 		'telemetry6.jpg',
+	// 		'telemetry7.jpg',
+	// 		'telemetry8.jpg',
+	// 		'telemetry9.jpg',
+	// 		'telemetry10.jpg',
+	// 		'telemetry11.jpg',
+	// 		'telemetry12.jpg',
+	// 		'telemetry13.jpg',
+	// 		'telemetry14.jpg',
+	// 		'telemetry15.jpg',
+	// 		'telemetry16.jpg'
+	// 	],
+	// 	imageWidth: 1600,
+	// 	imageHeight: 960
+	// }
 ];
 
 export const statsItems: SubPage[] = [
