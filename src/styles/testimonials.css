@@ -92,6 +92,8 @@
 	}
 
 	& .swiper-slide {
+		width: calc(100% - 2rem);
+		max-width: var(--shell-width);
 		height: auto;
 		box-sizing: border-box;
 	}
@@ -135,9 +137,28 @@
 
 @media (--mobile) {
 	.c-testimonial__head {
-		& p,
+		padding-left: 4rem;
+
+		& p {
+			font-size: 0.875rem;
+			line-height: 1.2;
+		}
+
 		& h4 {
-			font-size: 1rem;
+			display: none;
+		}
+
+		& img {
+			width: 3rem;
+		}
+	}
+
+	.c-testimonial__body {
+		font-size: 0.875rem;
+		line-height: 1.2;
+
+		& time {
+			display: none;
 		}
 	}
 
