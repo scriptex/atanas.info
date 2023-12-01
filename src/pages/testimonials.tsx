@@ -2,8 +2,8 @@ import Image from 'next/image';
 import format from 'date-fns/format';
 import { useState, FC } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Thumbs, Keyboard, Autoplay } from 'swiper/modules';
 import type { Swiper as SwiperInstance } from 'swiper';
+import { Thumbs, Keyboard, Autoplay, EffectCoverflow } from 'swiper/modules';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import testimonials from '@data/lotties/testimonials.json';
@@ -30,11 +30,24 @@ type PaginationProps = DataProps &
 
 const List: FC<ListProps> = ({ data, swiper }) => (
 	<Swiper
+		loop
+		effect="coverflow"
 		thumbs={{ swiper }}
-		modules={[Thumbs, Keyboard, Autoplay]}
+		modules={[Thumbs, Keyboard, Autoplay, EffectCoverflow]}
 		autoplay={{ delay: 10000 }}
 		keyboard
 		className="c-testimonials__list"
+		grabCursor
+		initialSlide={Math.floor(Math.random() * data.length)}
+		slidesPerView="auto"
+		centeredSlides
+		coverflowEffect={{
+			depth: 100,
+			rotate: 0,
+			stretch: 0,
+			modifier: 2,
+			slideShadows: true
+		}}
 	>
 		{data.map(item => {
 			const date = new Date(item.date);
@@ -87,6 +100,7 @@ export const Testimonials: FC<Props> = ({ data, funding, partners }) => {
 			<Section
 				id="testimonials"
 				title="Testimonials"
+				hasShell={false}
 				hasButton
 				additionalElements={
 					<Animation data={testimonials} width={150} height={150} className="c-section__animation" />

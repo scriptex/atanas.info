@@ -563,11 +563,11 @@ exports[`Testimonials component Should render the Testimonials component 1`] = `
       class="c-section c-section--testimonials"
       id="testimonials"
     >
-      <div
-        class="o-shell"
+      <header
+        class="c-section__header"
       >
-        <header
-          class="c-section__header"
+        <div
+          class="o-shell"
         >
           <div
             class="c-section__animation"
@@ -576,247 +576,72 @@ exports[`Testimonials component Should render the Testimonials component 1`] = `
           <h2>
             Testimonials
           </h2>
-        </header>
-        <div
-          class="lines"
-        >
-          <div
-            class="line line--vertical"
-          />
-          <div
-            class="line line--vertical"
-          />
-          <div
-            class="line line--vertical"
-          />
         </div>
+      </header>
+      <div
+        class="lines"
+      >
         <div
-          class="lines"
+          class="line line--vertical"
+        />
+        <div
+          class="line line--vertical"
+        />
+        <div
+          class="line line--vertical"
+        />
+      </div>
+      <div
+        class="lines"
+      >
+        <div
+          class="line line--horizontal"
+        />
+        <div
+          class="line line--horizontal"
+        />
+        <div
+          class="line line--horizontal"
+        />
+      </div>
+      <div
+        class="c-section__body"
+      >
+        <div
+          data-testid="swiper-testid"
         >
           <div
-            class="line line--horizontal"
-          />
-          <div
-            class="line line--horizontal"
-          />
-          <div
-            class="line line--horizontal"
-          />
-        </div>
-        <div
-          class="c-section__body"
-        >
-          <div
-            data-testid="swiper-testid"
+            data-testid="swiper-slide-testid"
           >
             <div
-              data-testid="swiper-slide-testid"
+              class="c-testimonial"
             >
-              <div
-                class="c-testimonial"
-              >
-                <a
-                  class="c-testimonial__head"
-                  href="https://example.com/authorUrl/1"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <img
-                    alt="Author name 1"
-                    data-nimg="1"
-                    decoding="async"
-                    height="80"
-                    loading="lazy"
-                    src="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F1&w=256&q=75"
-                    srcset="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F1&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F1&w=256&q=75 2x"
-                    style="color: transparent;"
-                    width="80"
-                  />
-                  <h3>
-                    Author name 1
-                  </h3>
-                  <h4>
-                    Author title 1
-                  </h4>
-                  <p>
-                    Author relationship 1
-                  </p>
-                  <svg
-                    class="c-svg-external-link"
-                  >
-                    <use
-                      xlink:href="#svg-external-link"
-                    />
-                  </svg>
-                </a>
-                <div
-                  class="c-testimonial__body"
-                >
-                  <time
-                    datetime="2023-11-11T00:00:00.000Z"
-                  >
-                    Nov 11th, 2023
-                  </time>
-                  <div
-                    class="c-testimonial__content"
-                  >
-                    Testimonial content 1
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              data-testid="swiper-slide-testid"
-            >
-              <div
-                class="c-testimonial"
-              >
-                <a
-                  class="c-testimonial__head"
-                  href="https://example.com/authorUrl/2"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <img
-                    alt="Author name 2"
-                    data-nimg="1"
-                    decoding="async"
-                    height="80"
-                    loading="lazy"
-                    src="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F2&w=256&q=75"
-                    srcset="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F2&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F2&w=256&q=75 2x"
-                    style="color: transparent;"
-                    width="80"
-                  />
-                  <h3>
-                    Author name 2
-                  </h3>
-                  <h4>
-                    Author title 2
-                  </h4>
-                  <p>
-                    Author relationship 2
-                  </p>
-                  <svg
-                    class="c-svg-external-link"
-                  >
-                    <use
-                      xlink:href="#svg-external-link"
-                    />
-                  </svg>
-                </a>
-                <div
-                  class="c-testimonial__body"
-                >
-                  <time
-                    datetime="2023-12-12T00:00:00.000Z"
-                  >
-                    Dec 12th, 2023
-                  </time>
-                  <div
-                    class="c-testimonial__content"
-                  >
-                    Testimonial content 2
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            data-testid="swiper-testid"
-          >
-            <div
-              data-testid="swiper-slide-testid"
-            >
-              <img
-                alt="Author name 1"
-                data-nimg="1"
-                decoding="async"
-                height="80"
-                loading="lazy"
-                src="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F1&w=256&q=75"
-                srcset="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F1&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F1&w=256&q=75 2x"
-                style="color: transparent;"
-                width="80"
-              />
-            </div>
-            <div
-              data-testid="swiper-slide-testid"
-            >
-              <img
-                alt="Author name 2"
-                data-nimg="1"
-                decoding="async"
-                height="80"
-                loading="lazy"
-                src="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F2&w=256&q=75"
-                srcset="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F2&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F2&w=256&q=75 2x"
-                style="color: transparent;"
-                width="80"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="c-section__actions"
-        >
-          <button
-            class="c-btn"
-            type="button"
-          >
-            Get in touch
-          </button>
-          <ul
-            class="c-section__actions-list"
-          >
-            <li>
-              <button
-                class="c-btn c-section__actions-close"
-                type="button"
-              >
-                Close
-              </button>
-            </li>
-            <li>
-              <button
-                class="c-btn"
-                type="button"
-              >
-                <svg
-                  class="c-section__actions-icon"
-                >
-                  <use
-                    xlink:href="#svg-email"
-                  />
-                </svg>
-                <span>
-                  Contact me
-                </span>
-                <strong>
-                  directly
-                </strong>
-              </button>
-            </li>
-            <li>
               <a
-                class="c-btn"
-                href="https://app.usebraintrust.com/talent/782/"
+                class="c-testimonial__head"
+                href="https://example.com/authorUrl/1"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <svg
-                  class="c-section__actions-icon"
-                >
-                  <use
-                    xlink:href="#svg-braintrust"
-                  />
-                </svg>
-                <span>
-                  Hire me on
-                </span>
-                <strong>
-                  Braintrust
-                </strong>
+                <img
+                  alt="Author name 1"
+                  data-nimg="1"
+                  decoding="async"
+                  height="80"
+                  loading="lazy"
+                  src="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F1&w=256&q=75"
+                  srcset="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F1&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F1&w=256&q=75 2x"
+                  style="color: transparent;"
+                  width="80"
+                />
+                <h3>
+                  Author name 1
+                </h3>
+                <h4>
+                  Author title 1
+                </h4>
+                <p>
+                  Author relationship 1
+                </p>
                 <svg
                   class="c-svg-external-link"
                 >
@@ -825,27 +650,54 @@ exports[`Testimonials component Should render the Testimonials component 1`] = `
                   />
                 </svg>
               </a>
-            </li>
-            <li>
+              <div
+                class="c-testimonial__body"
+              >
+                <time
+                  datetime="2023-11-11T00:00:00.000Z"
+                >
+                  Nov 11th, 2023
+                </time>
+                <div
+                  class="c-testimonial__content"
+                >
+                  Testimonial content 1
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-testid="swiper-slide-testid"
+          >
+            <div
+              class="c-testimonial"
+            >
               <a
-                class="c-btn"
-                href="https://www.toptal.com/resume/atanas-atanasov"
+                class="c-testimonial__head"
+                href="https://example.com/authorUrl/2"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <svg
-                  class="c-section__actions-icon"
-                >
-                  <use
-                    xlink:href="#svg-toptal"
-                  />
-                </svg>
-                <span>
-                  Hire me on
-                </span>
-                <strong>
-                  Toptal
-                </strong>
+                <img
+                  alt="Author name 2"
+                  data-nimg="1"
+                  decoding="async"
+                  height="80"
+                  loading="lazy"
+                  src="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F2&w=256&q=75"
+                  srcset="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F2&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F2&w=256&q=75 2x"
+                  style="color: transparent;"
+                  width="80"
+                />
+                <h3>
+                  Author name 2
+                </h3>
+                <h4>
+                  Author title 2
+                </h4>
+                <p>
+                  Author relationship 2
+                </p>
                 <svg
                   class="c-svg-external-link"
                 >
@@ -854,9 +706,157 @@ exports[`Testimonials component Should render the Testimonials component 1`] = `
                   />
                 </svg>
               </a>
-            </li>
-          </ul>
+              <div
+                class="c-testimonial__body"
+              >
+                <time
+                  datetime="2023-12-12T00:00:00.000Z"
+                >
+                  Dec 12th, 2023
+                </time>
+                <div
+                  class="c-testimonial__content"
+                >
+                  Testimonial content 2
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div
+          data-testid="swiper-testid"
+        >
+          <div
+            data-testid="swiper-slide-testid"
+          >
+            <img
+              alt="Author name 1"
+              data-nimg="1"
+              decoding="async"
+              height="80"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F1&w=256&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F1&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F1&w=256&q=75 2x"
+              style="color: transparent;"
+              width="80"
+            />
+          </div>
+          <div
+            data-testid="swiper-slide-testid"
+          >
+            <img
+              alt="Author name 2"
+              data-nimg="1"
+              decoding="async"
+              height="80"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F2&w=256&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F2&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2FauthorImage%2F2&w=256&q=75 2x"
+              style="color: transparent;"
+              width="80"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="c-section__actions"
+      >
+        <button
+          class="c-btn"
+          type="button"
+        >
+          Get in touch
+        </button>
+        <ul
+          class="c-section__actions-list"
+        >
+          <li>
+            <button
+              class="c-btn c-section__actions-close"
+              type="button"
+            >
+              Close
+            </button>
+          </li>
+          <li>
+            <button
+              class="c-btn"
+              type="button"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  xlink:href="#svg-email"
+                />
+              </svg>
+              <span>
+                Contact me
+              </span>
+              <strong>
+                directly
+              </strong>
+            </button>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://app.usebraintrust.com/talent/782/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  xlink:href="#svg-braintrust"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Braintrust
+              </strong>
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://www.toptal.com/resume/atanas-atanasov"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
+              >
+                <use
+                  xlink:href="#svg-toptal"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Toptal
+              </strong>
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -1991,11 +1991,11 @@ exports[`Testimonials component Should render the Testimonials component 2`] = `
       class="c-section c-section--testimonials"
       id="testimonials"
     >
-      <div
-        class="o-shell"
+      <header
+        class="c-section__header"
       >
-        <header
-          class="c-section__header"
+        <div
+          class="o-shell"
         >
           <div
             class="c-section__animation"
@@ -2004,143 +2004,143 @@ exports[`Testimonials component Should render the Testimonials component 2`] = `
           <h2>
             Testimonials
           </h2>
-        </header>
-        <div
-          class="lines"
-        >
-          <div
-            class="line line--vertical"
-          />
-          <div
-            class="line line--vertical"
-          />
-          <div
-            class="line line--vertical"
-          />
         </div>
+      </header>
+      <div
+        class="lines"
+      >
         <div
-          class="lines"
-        >
-          <div
-            class="line line--horizontal"
-          />
-          <div
-            class="line line--horizontal"
-          />
-          <div
-            class="line line--horizontal"
-          />
-        </div>
+          class="line line--vertical"
+        />
         <div
-          class="c-section__body"
-        >
-          <div
-            data-testid="swiper-testid"
-          />
-          <div
-            data-testid="swiper-testid"
-          />
-        </div>
+          class="line line--vertical"
+        />
         <div
-          class="c-section__actions"
+          class="line line--vertical"
+        />
+      </div>
+      <div
+        class="lines"
+      >
+        <div
+          class="line line--horizontal"
+        />
+        <div
+          class="line line--horizontal"
+        />
+        <div
+          class="line line--horizontal"
+        />
+      </div>
+      <div
+        class="c-section__body"
+      >
+        <div
+          data-testid="swiper-testid"
+        />
+        <div
+          data-testid="swiper-testid"
+        />
+      </div>
+      <div
+        class="c-section__actions"
+      >
+        <button
+          class="c-btn"
+          type="button"
         >
-          <button
-            class="c-btn"
-            type="button"
-          >
-            Get in touch
-          </button>
-          <ul
-            class="c-section__actions-list"
-          >
-            <li>
-              <button
-                class="c-btn c-section__actions-close"
-                type="button"
+          Get in touch
+        </button>
+        <ul
+          class="c-section__actions-list"
+        >
+          <li>
+            <button
+              class="c-btn c-section__actions-close"
+              type="button"
+            >
+              Close
+            </button>
+          </li>
+          <li>
+            <button
+              class="c-btn"
+              type="button"
+            >
+              <svg
+                class="c-section__actions-icon"
               >
-                Close
-              </button>
-            </li>
-            <li>
-              <button
-                class="c-btn"
-                type="button"
+                <use
+                  xlink:href="#svg-email"
+                />
+              </svg>
+              <span>
+                Contact me
+              </span>
+              <strong>
+                directly
+              </strong>
+            </button>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://app.usebraintrust.com/talent/782/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
               >
-                <svg
-                  class="c-section__actions-icon"
-                >
-                  <use
-                    xlink:href="#svg-email"
-                  />
-                </svg>
-                <span>
-                  Contact me
-                </span>
-                <strong>
-                  directly
-                </strong>
-              </button>
-            </li>
-            <li>
-              <a
-                class="c-btn"
-                href="https://app.usebraintrust.com/talent/782/"
-                rel="noopener noreferrer"
-                target="_blank"
+                <use
+                  xlink:href="#svg-braintrust"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Braintrust
+              </strong>
+              <svg
+                class="c-svg-external-link"
               >
-                <svg
-                  class="c-section__actions-icon"
-                >
-                  <use
-                    xlink:href="#svg-braintrust"
-                  />
-                </svg>
-                <span>
-                  Hire me on
-                </span>
-                <strong>
-                  Braintrust
-                </strong>
-                <svg
-                  class="c-svg-external-link"
-                >
-                  <use
-                    xlink:href="#svg-external-link"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a
-                class="c-btn"
-                href="https://www.toptal.com/resume/atanas-atanasov"
-                rel="noopener noreferrer"
-                target="_blank"
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              class="c-btn"
+              href="https://www.toptal.com/resume/atanas-atanasov"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                class="c-section__actions-icon"
               >
-                <svg
-                  class="c-section__actions-icon"
-                >
-                  <use
-                    xlink:href="#svg-toptal"
-                  />
-                </svg>
-                <span>
-                  Hire me on
-                </span>
-                <strong>
-                  Toptal
-                </strong>
-                <svg
-                  class="c-svg-external-link"
-                >
-                  <use
-                    xlink:href="#svg-external-link"
-                  />
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+                <use
+                  xlink:href="#svg-toptal"
+                />
+              </svg>
+              <span>
+                Hire me on
+              </span>
+              <strong>
+                Toptal
+              </strong>
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
