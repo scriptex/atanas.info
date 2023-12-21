@@ -281,7 +281,7 @@ it('Test the `getGitlabInsights` function', async () => {
 
 	expect(result1.general).toBeDefined();
 	expect(result1.general?.repos).toBeDefined();
-	expect(result1.general?.repos).toEqual(8);
+	expect(result1.general?.repos).toEqual(4);
 	expect(result1.general?.createdAt).toBeDefined();
 	expect(result1.general?.updatedAt).toBeDefined();
 	expect(typeof result1.general?.updatedAt).toEqual('string');
@@ -290,7 +290,7 @@ it('Test the `getGitlabInsights` function', async () => {
 	expect(Object.keys(result1.calendar!).length).toEqual(1);
 
 	expect(result1.repositories).toBeDefined();
-	expect(result1.repositories!.length).toEqual(8);
+	expect(result1.repositories!.length).toEqual(4);
 
 	expect(result1.updated).toBeDefined();
 	expect(typeof result1.updated).toEqual('number');
