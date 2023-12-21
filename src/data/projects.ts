@@ -246,7 +246,7 @@ export const projects: WebProject[] = [
 		skip: false
 	},
 	{
-		url: 'https://pascoe.cn/',
+		url: 'https://pascoe.de/',
 		image: '/images/web-apps/Pascoe.jpg',
 		index: 27,
 		title: 'Pascoe',
