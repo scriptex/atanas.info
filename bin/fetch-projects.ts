@@ -52,7 +52,7 @@ const createProjectsIndex = (projects: Project[]) => {
 	try {
 		const projects: Project[] = (await getGithubRepositories())
 			.filter(repo => !repo.private)
-			.filter(repo => ['scriptex', 'three11'].includes(repo.owner.login))
+			.filter(repo => ['scriptex'].includes(repo.owner.login))
 			.filter(repo => !['uptime'].includes(repo.name))
 			.map(repo => ({
 				name: repo.name,

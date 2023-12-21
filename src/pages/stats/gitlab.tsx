@@ -130,16 +130,16 @@ export const GitlabStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 								<div className="c-calendar__outer">
 									<div className="c-calendar c-calendar--gitlab">
 										<div className="c-calendar__entry">
-											<h4>Public Gitlab profile</h4>
+											{/* <h4>Public Gitlab profile</h4> */}
 
 											<div ref={calendarPlaceholder1} />
 										</div>
 
-										<div className="c-calendar__entry">
+										{/* <div className="c-calendar__entry">
 											<h4>Private Gitlab profile</h4>
 
 											<div ref={calendarPlaceholder2} />
-										</div>
+										</div> */}
 									</div>
 								</div>
 							</div>
