@@ -4958,7 +4958,7 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-doiuse@^6.0.1:
+doiuse@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/doiuse/-/doiuse-6.0.2.tgz#0161e68a0bbc9525d3cebdfcbe5adb90023793e2"
   integrity sha512-eBTs23NOX+EAYPr4RbCR6J4DRW/TML3uMo37y0X1whlkersDYFCk9HmCl09KX98cis22VKsV1QaxfVNauJ3NBw==
@@ -7707,6 +7707,11 @@ lodash.merge@^4.6.2:
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
 
+lodash.pick@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/lodash.pick/-/lodash.pick-4.4.0.tgz#52f05610fff9ded422611441ed1fc123a03001b3"
+  integrity sha512-hXt6Ul/5yWjfklSGvLQl8vM//l3FtyHZeuelpzK6mm99pNvN9yTDruNZPEJZD1oWrqo+izBmB7oUfWgcCX7s4Q==
+
 lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
@@ -9485,7 +9490,7 @@ postcss@8.4.27:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-postcss@8.4.31, postcss@^8.4.16, postcss@^8.4.21, postcss@^8.4.28:
+postcss@8.4.31, postcss@^8.4.21, postcss@^8.4.28:
   version "8.4.31"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.31.tgz#92b451050a9f914da6755af352bdc0192508656d"
   integrity sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==
@@ -9494,7 +9499,7 @@ postcss@8.4.31, postcss@^8.4.16, postcss@^8.4.21, postcss@^8.4.28:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-postcss@8.4.32:
+postcss@8.4.32, postcss@^8.4.32:
   version "8.4.32"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.32.tgz#1dac6ac51ab19adb21b8b34fd2d93a86440ef6c9"
   integrity sha512-D/kj5JNu6oo2EIy+XL/26JEDTlIbB8hw85G8StOE6L74RQAVVP5rej6wxCNqyMbR4RkPfqvezVbPw81Ngd6Kcw==
@@ -10846,14 +10851,14 @@ stylelint-config-recommended@14.0.0:
   resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-14.0.0.tgz#b395c7014838d2aaca1755eebd914d0bb5274994"
   integrity sha512-jSkx290CglS8StmrLp2TxAppIajzIBZKYm3IxT89Kg6fGlxbPiTiyH9PS5YUuVAFwaJLl1ikiXX0QWjI0jmgZQ==
 
-stylelint-no-unsupported-browser-features@7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-no-unsupported-browser-features/-/stylelint-no-unsupported-browser-features-7.0.0.tgz#91834a0f285da7f91116515d79c4b03531ba5d44"
-  integrity sha512-O5VYlBhr+lpJ6jeTJSy+SMbHJhW5h5EJxsoicYcTi/07m45V/CF1mQidwRQLjv8y9BFQMpioWz60O89IkmbaNw==
+stylelint-no-unsupported-browser-features@8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-no-unsupported-browser-features/-/stylelint-no-unsupported-browser-features-8.0.0.tgz#6ba3a52787beff1e681c165548bdc215f10f3b94"
+  integrity sha512-XrXaizW90HdswC+2V1XJXsvNrMUt/bk8OJ7ZDn3nKZzE5NAd4rmAIo/igKuGzHA2a6vx5FplhD5VOqSLYDPnYg==
   dependencies:
-    doiuse "^6.0.1"
-    lodash "^4.17.15"
-    postcss "^8.4.16"
+    doiuse "^6.0.2"
+    lodash.pick "^4.4.0"
+    postcss "^8.4.32"
 
 stylelint@15.11.0:
   version "15.11.0"
