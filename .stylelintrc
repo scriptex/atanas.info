@@ -2,7 +2,6 @@
 	"extends": ["stylelint-config-recommended"],
 	"plugins": ["stylelint-no-unsupported-browser-features"],
 	"rules": {
-		"indentation": null,
 		"at-rule-no-unknown": null,
 		"length-zero-no-unit": null,
 		"function-no-unknown": null,
@@ -14,8 +13,6 @@
 		"at-rule-empty-line-before": null,
 		"no-descending-specificity": null,
 		"declaration-empty-line-before": null,
-		"value-list-comma-newline-after": null,
-		"declaration-colon-newline-after": null,
 		"custom-property-empty-line-before": null
 	}
 }
