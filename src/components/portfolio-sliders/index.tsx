@@ -48,7 +48,7 @@ export const PortfolioSliders: FC<Readonly<Props>> = ({ data, folder, className,
 											slidesToShow: 1
 										}
 									}
-							  ]
+								]
 					}
 				>
 					{app.images.map((img: string, j: number) => (
