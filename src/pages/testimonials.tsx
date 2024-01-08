@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import format from 'date-fns/format';
+import { format } from 'date-fns/format';
 import { useState, FC } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperInstance } from 'swiper';

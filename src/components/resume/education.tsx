@@ -1,4 +1,4 @@
-import format from 'date-fns/format';
+import { format } from 'date-fns/format';
 import { FC, Fragment } from 'react';
 
 import { ResumeEntry } from '@components';

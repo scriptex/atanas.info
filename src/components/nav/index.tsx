@@ -79,7 +79,7 @@ export const Nav: FC<Readonly<Props>> = ({ active = -1, inline = false, onClick,
 									</li>
 								))}
 							</ul>
-					  ))}
+						))}
 			</div>
 		</nav>
 	);
