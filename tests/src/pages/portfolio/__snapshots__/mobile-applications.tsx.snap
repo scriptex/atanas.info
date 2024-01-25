@@ -2751,7 +2751,16 @@ exports[`PortfolioMobileApps component Should render the PortfolioMobileApps com
             </a>
             <div
               class="slick-slider slick-initialized"
+              dir="ltr"
             >
+              <button
+                class="slick-arrow slick-prev"
+                data-role="none"
+                style="display: block;"
+                type="button"
+              >
+                 Previous
+              </button>
               <div
                 class="slick-list"
               >
@@ -2759,6 +2768,58 @@ exports[`PortfolioMobileApps component Should render the PortfolioMobileApps com
                   class="slick-track"
                   style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
                 >
+                  <div
+                    aria-hidden="true"
+                    class="slick-slide slick-cloned"
+                    data-index="-2"
+                    style="width: 0px;"
+                    tabindex="-1"
+                  >
+                    <div>
+                      <div
+                        style="width: 100%; display: inline-block;"
+                        tabindex="-1"
+                      >
+                        <img
+                          alt="E.ON Home for iPad screenshot 1"
+                          data-nimg="1"
+                          decoding="async"
+                          height="1716"
+                          loading="lazy"
+                          src="/_next/image?url=%2Fimages%2Fmobile-apps%2Feon-home-ipad-dark.jpg&w=3840&q=75"
+                          srcset="/_next/image?url=%2Fimages%2Fmobile-apps%2Feon-home-ipad-dark.jpg&w=1920&q=75 1x, /_next/image?url=%2Fimages%2Fmobile-apps%2Feon-home-ipad-dark.jpg&w=3840&q=75 2x"
+                          style="color: transparent;"
+                          width="1286"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    class="slick-slide slick-cloned"
+                    data-index="-1"
+                    style="width: 0px;"
+                    tabindex="-1"
+                  >
+                    <div>
+                      <div
+                        style="width: 100%; display: inline-block;"
+                        tabindex="-1"
+                      >
+                        <img
+                          alt="E.ON Home for iPad screenshot 2"
+                          data-nimg="1"
+                          decoding="async"
+                          height="1716"
+                          loading="lazy"
+                          src="/_next/image?url=%2Fimages%2Fmobile-apps%2Feon-home-ipad-light.jpg&w=3840&q=75"
+                          srcset="/_next/image?url=%2Fimages%2Fmobile-apps%2Feon-home-ipad-light.jpg&w=1920&q=75 1x, /_next/image?url=%2Fimages%2Fmobile-apps%2Feon-home-ipad-light.jpg&w=3840&q=75 2x"
+                          style="color: transparent;"
+                          width="1286"
+                        />
+                      </div>
+                    </div>
+                  </div>
                   <div
                     aria-hidden="false"
                     class="slick-slide slick-active slick-current"
@@ -2811,8 +2872,68 @@ exports[`PortfolioMobileApps component Should render the PortfolioMobileApps com
                       </div>
                     </div>
                   </div>
+                  <div
+                    aria-hidden="true"
+                    class="slick-slide slick-cloned"
+                    data-index="2"
+                    style="width: 0px;"
+                    tabindex="-1"
+                  >
+                    <div>
+                      <div
+                        style="width: 100%; display: inline-block;"
+                        tabindex="-1"
+                      >
+                        <img
+                          alt="E.ON Home for iPad screenshot 1"
+                          data-nimg="1"
+                          decoding="async"
+                          height="1716"
+                          loading="lazy"
+                          src="/_next/image?url=%2Fimages%2Fmobile-apps%2Feon-home-ipad-dark.jpg&w=3840&q=75"
+                          srcset="/_next/image?url=%2Fimages%2Fmobile-apps%2Feon-home-ipad-dark.jpg&w=1920&q=75 1x, /_next/image?url=%2Fimages%2Fmobile-apps%2Feon-home-ipad-dark.jpg&w=3840&q=75 2x"
+                          style="color: transparent;"
+                          width="1286"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    class="slick-slide slick-cloned"
+                    data-index="3"
+                    style="width: 0px;"
+                    tabindex="-1"
+                  >
+                    <div>
+                      <div
+                        style="width: 100%; display: inline-block;"
+                        tabindex="-1"
+                      >
+                        <img
+                          alt="E.ON Home for iPad screenshot 2"
+                          data-nimg="1"
+                          decoding="async"
+                          height="1716"
+                          loading="lazy"
+                          src="/_next/image?url=%2Fimages%2Fmobile-apps%2Feon-home-ipad-light.jpg&w=3840&q=75"
+                          srcset="/_next/image?url=%2Fimages%2Fmobile-apps%2Feon-home-ipad-light.jpg&w=1920&q=75 1x, /_next/image?url=%2Fimages%2Fmobile-apps%2Feon-home-ipad-light.jpg&w=3840&q=75 2x"
+                          style="color: transparent;"
+                          width="1286"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <button
+                class="slick-arrow slick-next"
+                data-role="none"
+                style="display: block;"
+                type="button"
+              >
+                 Next
+              </button>
             </div>
           </div>
           <div
@@ -2851,7 +2972,16 @@ exports[`PortfolioMobileApps component Should render the PortfolioMobileApps com
             </a>
             <div
               class="slick-slider slick-initialized"
+              dir="ltr"
             >
+              <button
+                class="slick-arrow slick-prev"
+                data-role="none"
+                style="display: block;"
+                type="button"
+              >
+                 Previous
+              </button>
               <div
                 class="slick-list"
               >
@@ -2859,6 +2989,58 @@ exports[`PortfolioMobileApps component Should render the PortfolioMobileApps com
                   class="slick-track"
                   style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
                 >
+                  <div
+                    aria-hidden="true"
+                    class="slick-slide slick-cloned"
+                    data-index="-2"
+                    style="width: 0px;"
+                    tabindex="-1"
+                  >
+                    <div>
+                      <div
+                        style="width: 100%; display: inline-block;"
+                        tabindex="-1"
+                      >
+                        <img
+                          alt="Foton Home for iPad screenshot 1"
+                          data-nimg="1"
+                          decoding="async"
+                          height="1716"
+                          loading="lazy"
+                          src="/_next/image?url=%2Fimages%2Fmobile-apps%2Ffoton-home-ipad-light.jpg&w=3840&q=75"
+                          srcset="/_next/image?url=%2Fimages%2Fmobile-apps%2Ffoton-home-ipad-light.jpg&w=1920&q=75 1x, /_next/image?url=%2Fimages%2Fmobile-apps%2Ffoton-home-ipad-light.jpg&w=3840&q=75 2x"
+                          style="color: transparent;"
+                          width="1286"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    class="slick-slide slick-cloned"
+                    data-index="-1"
+                    style="width: 0px;"
+                    tabindex="-1"
+                  >
+                    <div>
+                      <div
+                        style="width: 100%; display: inline-block;"
+                        tabindex="-1"
+                      >
+                        <img
+                          alt="Foton Home for iPad screenshot 2"
+                          data-nimg="1"
+                          decoding="async"
+                          height="1716"
+                          loading="lazy"
+                          src="/_next/image?url=%2Fimages%2Fmobile-apps%2Ffoton-home-ipad-dark.jpg&w=3840&q=75"
+                          srcset="/_next/image?url=%2Fimages%2Fmobile-apps%2Ffoton-home-ipad-dark.jpg&w=1920&q=75 1x, /_next/image?url=%2Fimages%2Fmobile-apps%2Ffoton-home-ipad-dark.jpg&w=3840&q=75 2x"
+                          style="color: transparent;"
+                          width="1286"
+                        />
+                      </div>
+                    </div>
+                  </div>
                   <div
                     aria-hidden="false"
                     class="slick-slide slick-active slick-current"
@@ -2911,8 +3093,68 @@ exports[`PortfolioMobileApps component Should render the PortfolioMobileApps com
                       </div>
                     </div>
                   </div>
+                  <div
+                    aria-hidden="true"
+                    class="slick-slide slick-cloned"
+                    data-index="2"
+                    style="width: 0px;"
+                    tabindex="-1"
+                  >
+                    <div>
+                      <div
+                        style="width: 100%; display: inline-block;"
+                        tabindex="-1"
+                      >
+                        <img
+                          alt="Foton Home for iPad screenshot 1"
+                          data-nimg="1"
+                          decoding="async"
+                          height="1716"
+                          loading="lazy"
+                          src="/_next/image?url=%2Fimages%2Fmobile-apps%2Ffoton-home-ipad-light.jpg&w=3840&q=75"
+                          srcset="/_next/image?url=%2Fimages%2Fmobile-apps%2Ffoton-home-ipad-light.jpg&w=1920&q=75 1x, /_next/image?url=%2Fimages%2Fmobile-apps%2Ffoton-home-ipad-light.jpg&w=3840&q=75 2x"
+                          style="color: transparent;"
+                          width="1286"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    class="slick-slide slick-cloned"
+                    data-index="3"
+                    style="width: 0px;"
+                    tabindex="-1"
+                  >
+                    <div>
+                      <div
+                        style="width: 100%; display: inline-block;"
+                        tabindex="-1"
+                      >
+                        <img
+                          alt="Foton Home for iPad screenshot 2"
+                          data-nimg="1"
+                          decoding="async"
+                          height="1716"
+                          loading="lazy"
+                          src="/_next/image?url=%2Fimages%2Fmobile-apps%2Ffoton-home-ipad-dark.jpg&w=3840&q=75"
+                          srcset="/_next/image?url=%2Fimages%2Fmobile-apps%2Ffoton-home-ipad-dark.jpg&w=1920&q=75 1x, /_next/image?url=%2Fimages%2Fmobile-apps%2Ffoton-home-ipad-dark.jpg&w=3840&q=75 2x"
+                          style="color: transparent;"
+                          width="1286"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <button
+                class="slick-arrow slick-next"
+                data-role="none"
+                style="display: block;"
+                type="button"
+              >
+                 Next
+              </button>
             </div>
           </div>
         </div>

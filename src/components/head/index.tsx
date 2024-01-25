@@ -125,199 +125,199 @@ export const Head: FC = () => (
 		<link rel="icon" type="image/png" href="/images/favicon/favicon-128x128.png" sizes="128x128" />
 
 		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon/favicon.ico" />
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2048x2732.png"
 			media="(device-width: 2048px) and (device-height: 2732 />and  (orientation: portrait)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2732x2048.png"
 			media="(device-width: 2732px) and (device-height: 2048px) and  (orientation: landscape)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1668x2388.png"
 			media="(device-width: 1668px) and (device-height: 2388px) and  (orientation: portrait)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2388x1668.png"
 			media="(device-width: 2388px) and (device-height: 1668px) and  (orientation: landscape)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1668x2224.png"
 			media="(device-width: 1668px) and (device-height: 2224px) and  (orientation: portrait)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2224x1668.png"
 			media="(device-width: 2224px) and (device-height: 1668px) and  (orientation: landscape)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1536x2048.png"
 			media="(device-width: 1536px) and (device-height: 2048px) and  (orientation: portrait)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2048x1536.png"
 			media="(device-width: 2048px) and (device-height: 1536px) and  (orientation: landscape)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1536x2048.png"
 			media="(device-width: 1536px) and (device-height: 2048px) and  (orientation: portrait)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2048x1536.png"
 			media="(device-width: 2048px and (device-height: 1536px) and  (orientation: landscape)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1242x2688.png"
 			media="(device-width: 1242px and (device-height: 2688px) and  (orientation: portrait)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2688x1242.png"
 			media="(device-width: 2688px) and (device-height: 142px) and  (orientation: landscape)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1125x2436.png"
 			media="(device-width: 1125px) and (device-height: 236px) and  (orientation: portrait)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2436x1125.png"
 			media="(device-width: 2436px) and (device-height: 1125px) and  (orientation: landscape)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-828x1792.png"
 			media="(device-width: 828px) and (device-height: 192px) and  (orientation: portrait)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1792x828.png"
 			media="(device-width: 1792px) and (device-height: 28px) and  (orientation: landscape)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1125x2436.png"
 			media="(device-width: 1125px) and (device-height: 236px) and  (orientation: portrait)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2436x1125.png"
 			media="(device-width: 2436px and (device-height: 1125px) and  (orientation: landscape)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1242x2208.png"
 			media="(device-width: 1242px and (device-height: 2208px) and  (orientation: portrait)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2208x1242.png"
 			media="(device-width: 2208px) and (device-height: 1242px) and  (orientation: landscape)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-750x1334.png"
 			media="(device-width: 750px) and (device-height: 134px) and  (orientation: portrait)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1334x750.png"
 			media="(device-width: 1334px and (device-height: 750px) and  (orientation: landscape)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1242x2208.png"
 			media="(device-width: 1242px and (device-height: 2208px) and  (orientation: portrait)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2208x1242.png"
 			media="(device-width: 2208px) and (device-height: 1242px) and  (orientation: landscape)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-750x1334.png"
 			media="(device-width: 750px) and (device-height: 134px) and  (orientation: portrait)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1334x750.png"
 			media="(device-width: 1334px and (device-height: 750px) and  (orientation: landscape)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1242x2208.png"
 			media="(device-width: 1242px and (device-height: 2208px) and  (orientation: portrait)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2208x1242.png"
 			media="(device-width: 2208px) and (device-height: 1242px) and  (orientation: landscape)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-750x1334.png"
 			media="(device-width: 750px) and (device-height: 134px) and  (orientation: portrait)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1334x750.png"
 			media="(device-width: 1334px) and (device-height: 50px) and  (orientation: landscape)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-640x1136.png"
 			media="(device-width: 640px) and (device-height: 136px) and  (orientation: portrait)"
 		/>
-		
+
 		<link
 			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1136x640.png"
 			media="(device-width: 1136px) and (device-height: 640px) and  (orientation: landscape)"
 		/>
-		
+
 		<link rel="manifest" href="/manifest.json" />
 	</NextHead>
 );
