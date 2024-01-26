@@ -5,9 +5,14 @@ import { asyncForEach, saveInsights } from './utils';
 
 const setOwner = (repo: any, owner: string): any => ({ ...repo, owner });
 
-export const getCalendar = async () => {
-	const calendar1 = await fetch('https://gitlab.com/users/scriptex/calendar.json').then(r => r.json());
-	const calendar2 = await fetch('https://gitlab.com/users/scriptex_dmarcian/calendar.json').then(r => r.json());
+export const getCalendar = async (): Promise<Record<string, number>> => {
+	const calendar1: Record<string, number> = await fetch('https://gitlab.com/users/scriptex/calendar.json').then(r =>
+		r.json()
+	);
+
+	const calendar2: Record<string, number> = await fetch(
+		'https://gitlab.com/users/scriptex_dmarcian/calendar.json'
+	).then(r => r.json());
 
 	const keys = [...Object.keys(calendar1), ...Object.keys(calendar2)];
 
