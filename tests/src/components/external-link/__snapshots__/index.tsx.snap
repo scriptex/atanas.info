@@ -2,7 +2,24 @@
 
 exports[`ExternalLink component Should render the ExternalLink component 1`] = `
 <DocumentFragment>
+  <a>
+    <svg
+      class="c-svg-external-link"
+    >
+      <use
+        xlink:href="#svg-external-link"
+      />
+    </svg>
+  </a>
+</DocumentFragment>
+`;
+
+exports[`ExternalLink component Should unmount the ExternalLink component 1`] = `<DocumentFragment />`;
+
+exports[`Unknown component Should render the Unknown component 1`] = `
+<DocumentFragment>
   <a
+    href="https://atanas.info"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -17,4 +34,4 @@ exports[`ExternalLink component Should render the ExternalLink component 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ExternalLink component Should unmount the ExternalLink component 1`] = `<DocumentFragment />`;
+exports[`Unknown component Should unmount the Unknown component 1`] = `<DocumentFragment />`;

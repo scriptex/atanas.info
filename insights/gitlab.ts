@@ -5,22 +5,52 @@ import { asyncForEach, saveInsights } from './utils';
 
 const setOwner = (repo: any, owner: string): any => ({ ...repo, owner });
 
+export const getCalendar = async () => {
+	const calendar1 = await fetch('https://gitlab.com/users/scriptex/calendar.json').then(r => r.json());
+	const calendar2 = await fetch('https://gitlab.com/users/scriptex_dmarcian/calendar.json').then(r => r.json());
+
+	const keys = [...Object.keys(calendar1), ...Object.keys(calendar2)];
+
+	return keys.reduce((acc, key) => {
+		const value1 = calendar1[key];
+		const value2 = calendar2[key];
+
+		let result = undefined;
+
+		if (typeof value1 === 'undefined') {
+			result = value2;
+		} else if (typeof value2 === 'undefined') {
+			result = value1;
+		} else {
+			result = value1 + value2;
+		}
+
+		return {
+			...acc,
+			[key]: result
+		};
+	}, {});
+};
+
 export const getGitlabInsights = async (): Promise<GitlabInsights> => {
 	log('atanas.info: Getting insights data from Gitlab...');
 
 	try {
-		log('atanas.info: Getting data for user Scriptex from Gitlab...');
+		log('atanas.info: Getting data for user "scriptex" from Gitlab...');
 		const user = await gitlab('users/1896847');
+		const args = 'projects?per_page=100&statistics=true';
 
-		log('atanas.info: Getting projects for user Scriptex from Gitlab...');
-		const userProjects1 = await gitlab(`users/${user.id}/projects?per_page=100&statistics=true`);
-		const userProjects2 = await gitlab(`users/${user.id}/projects?per_page=100&statistics=true&page=2`);
+		log('atanas.info: Getting projects for user "scriptex" from Gitlab...');
+		const userProjects1 = await gitlab(`users/${user.id}/${args}`);
+		const userProjects2 = await gitlab(`users/${user.id}/${args}&page=2`);
+		const userProjects3 = await gitlab(`users/${user.id}/${args}&page=3`);
 
-		const calendar = await fetch('https://gitlab.com/users/scriptex/calendar.json').then(r => r.json());
+		const calendar = await getCalendar();
 
 		const projects = [
 			...userProjects1.map((project: any) => setOwner(project, 'scriptex')),
-			...userProjects2.map((project: any) => setOwner(project, 'scriptex'))
+			...userProjects2.map((project: any) => setOwner(project, 'scriptex')),
+			...userProjects3.map((project: any) => setOwner(project, 'scriptex'))
 		];
 		const repositories: any[] = [];
 

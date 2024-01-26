@@ -4,12 +4,17 @@ import { Icon } from '@components';
 
 type Props = AnchorHTMLAttributes<HTMLAnchorElement>;
 
-export const ExternalLink: FC<Readonly<Props>> = ({ children, className, ...rest }: Props) => (
-	<a rel="noopener noreferrer" target="_blank" className={className} {...rest}>
-		{children}
+export const ExternalLink: FC<Readonly<Props>> = ({ children, className, ...rest }: Props) => {
+	const { href } = rest;
+	const props = !href ? {} : { rel: 'noopener noreferrer', target: '_blank', className, ...rest };
 
-		<Icon name="svg-external-link" className="c-svg-external-link" />
-	</a>
-);
+	return (
+		<a {...props}>
+			{children}
+
+			<Icon name="svg-external-link" className="c-svg-external-link" />
+		</a>
+	);
+};
 
 export default ExternalLink;
