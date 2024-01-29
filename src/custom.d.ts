@@ -62,4 +62,7 @@ interface Window {
 	dataLayer: {
 		push: (...args: any[]) => void;
 	};
+	kofiWidgetOverlay: {
+		draw: (username: string, settings: Record<string, string>) => null;
+	};
 }
