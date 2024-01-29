@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/react';
 import { Fira_Sans } from 'next/font/google';
 import type { AppProps } from 'next/app';
@@ -68,6 +69,18 @@ export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppP
 			</AppContext.Provider>
 
 			<Analytics />
+
+			<Script
+				src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"
+				onLoad={() => {
+					window.kofiWidgetOverlay?.draw('scriptex', {
+						type: 'floating-chat',
+						'floating-chat.donateButton.text': 'Tip me',
+						'floating-chat.donateButton.background-color': '#ef4c23',
+						'floating-chat.donateButton.text-color': '#fff'
+					});
+				}}
+			/>
 		</>
 	);
 };
