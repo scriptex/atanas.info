@@ -73,7 +73,7 @@ export const NPMStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps
 						<h3>Statistics for NPM packages</h3>
 
 						<h6>
-							Total downloads: <strong>{sum as unknown as number}</strong>
+							Total downloads for the past year: <strong>{sum as unknown as number}</strong>
 						</h6>
 
 						<PackagesList data={packages} />
