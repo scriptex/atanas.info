@@ -119,6 +119,8 @@
 
 .c-resume__experience {
 	&:not(:last-child) {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
 		border-bottom: 1px dashed;
 		margin-bottom: 1.25em;
 	}
@@ -284,7 +286,8 @@
 	.c-partners,
 	.c-resume__head,
 	.c-section__header,
-	.c-section__actions {
+	.c-section__actions,
+	[id^='kofi-widget-overlay'] {
 		display: none !important;
 	}
 
