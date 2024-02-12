@@ -31,10 +31,14 @@ const uploadOptions = (name: string): UploadApiOptions => ({
 	invalidate: true
 });
 
+async function delay(time: number): Promise<void> {
+	return new Promise(resolve => setTimeout(resolve, time));
+}
+
 async function createScreenshot(url: string, name: string, timeout = 2000): Promise<UploadApiResponse | null> {
 	log(`atanas.info: Launching new browser for ${name}...`);
 	const browser = await puppeteer.launch({
-		headless: 'new',
+		headless: true,
 		args: ['--no-sandbox']
 	});
 
@@ -50,7 +54,8 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 
 	log(`atanas.info: Navigating to ${url} for ${name}...`);
 	await page.goto(url, { waitUntil: 'networkidle0' });
-	await page.waitForTimeout(timeout);
+
+	await delay(timeout);
 
 	log(`atanas.info: Taking screenshot for ${name}...`);
 	const shotResult = await page

@@ -125,8 +125,7 @@ export const projects: WebProject[] = [
 		skip: false
 	},
 	{
-		url: 'https://kinetik-e.com/',
-		// url: https://kinetik-championship.com/,
+		url: 'https://kinetik-championship.com/',
 		image: '/images/web-apps/Kinetik-Electric-Karting-Championship.jpg',
 		index: 12,
 		title: 'Kinetik Electric Karting Championship',

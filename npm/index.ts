@@ -1,5 +1,4 @@
 import info, { Package } from 'package-info';
-import npmtotal from 'npmtotal';
 
 import { log } from '@scripts/shared';
 import { saveInsights } from '@insights/utils';
@@ -19,30 +18,46 @@ export const run = async (): Promise<NPMResult> => {
 	try {
 		log('atanas.info: Fetching data from NPM. Please wait...');
 
-		const { sum, stats } = await npmtotal('scriptex', { startDate: '2017-01-01' });
+		const today = new Date();
+		const endDate = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
 
-		const packages = [...stats].sort(([a], [b]) => {
-			if (a > b) {
-				return 1;
-			}
+		const own = await fetch('https://api.npms.io/v2/search?q=author:scriptex&size=250&from=0').then(r => r.json());
+		const co = await fetch('https://api.npms.io/v2/search?q=maintainer:scriptex&size=250&from=0').then(r =>
+			r.json()
+		);
+		const names = Array.from(new Set([...own.results, ...co.results].map(p => p.package.name))).toSorted((a, b) =>
+			a > b ? 1 : a < b ? -1 : 0
+		);
 
-			if (a < b) {
-				return -1;
-			}
+		const data = [];
 
-			return 0;
-		});
+		for (const name of names) {
+			const count = await fetch(`https://api.npmjs.org/downloads/range/2017-01-01:${endDate}/${name}`)
+				.then(r => r.json())
+				.then(response =>
+					response.downloads
+						.map((item: Record<string, number>) => item.downloads)
+						.reduce((sum: number, curr: number) => sum + curr, 0)
+				);
+
+			data.push({
+				name,
+				count
+			});
+		}
+
+		const sum = data.reduce((sum, curr) => sum + curr.count, 0);
 
 		result.sum = sum;
 
-		for (const entry of packages) {
-			const [name, downloads] = entry;
+		for (const item of data) {
+			const { name, count } = item;
 
 			log(`atanas.info: Fetching data for the ${name} package. Please wait...`);
 
 			const packageInfo = await info(name);
 
-			result[name] = { ...packageInfo, downloads, homepage: `https://www.npmjs.com/package/${name}` };
+			result[name] = { ...packageInfo, downloads: count, homepage: `https://www.npmjs.com/package/${name}` };
 		}
 
 		log('atanas.info: Successfully saved stats for NPM packages');
