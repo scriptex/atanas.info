@@ -2101,11 +2101,6 @@
     "@testing-library/dom" "^9.0.0"
     "@types/react-dom" "^18.0.0"
 
-"@testing-library/user-event@^14.3.0":
-  version "14.5.2"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-14.5.2.tgz#db7257d727c891905947bd1c1a99da20e03c2ebd"
-  integrity sha512-YAh82Wh4TIrxYLmfGcixwD18oIjyC1pFQC2Y01F2lzV2HTMiYrI0nze0FD0ocB//CKS/7jIUgae+adPqxK5yCQ==
-
 "@tootallnate/once@2":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-2.0.0.tgz#f544a148d3ab35801c1f633a7441fd87c2e484bf"
@@ -9656,12 +9651,11 @@ react-round-carousel@1.5.0:
     touchsweep "2.1.0"
     uuid "9.0.0"
 
-react-slick@0.30.1:
-  version "0.30.1"
-  resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.30.1.tgz#9584e83282f6b70f26ceeac0a687870c8ca1618e"
-  integrity sha512-xtxWBIJH9CvcleAfcZD5A78YtqfHYRMAIkn/AQZFk6Qh/HP/DUtbd3BqHvPKS/Oz0yuINM3YMtw0xLfXvQjeMA==
+react-slick@0.30.2:
+  version "0.30.2"
+  resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.30.2.tgz#b28e992f9c519bb516a0af8d37e82cb59fee08ce"
+  integrity sha512-XvQJi7mRHuiU3b9irsqS9SGIgftIfdV5/tNcURTb5LdIokRA5kIIx3l4rlq2XYHfxcSntXapoRg/GxaVOM1yfg==
   dependencies:
-    "@testing-library/user-event" "^14.3.0"
     classnames "^2.2.5"
     enquire.js "^2.1.6"
     json2mq "^0.2.0"
