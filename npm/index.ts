@@ -25,7 +25,7 @@ export const run = async (): Promise<NPMResult> => {
 		const co = await fetch('https://api.npms.io/v2/search?q=maintainer:scriptex&size=250&from=0').then(r =>
 			r.json()
 		);
-		const names = Array.from(new Set([...own.results, ...co.results].map(p => p.package.name))).toSorted((a, b) =>
+		const names = Array.from(new Set([...own.results, ...co.results].map(p => p.package.name))).sort((a, b) =>
 			a > b ? 1 : a < b ? -1 : 0
 		);
 
