@@ -189,7 +189,7 @@ export const projects: WebProject[] = [
 		skip: false
 	},
 	{
-		url: 'https://paternalismforgood.com/',
+		url: '',
 		image: '/images/web-apps/Paternalism-For-Good.jpg',
 		index: 20,
 		title: 'Paternalism For Good',
