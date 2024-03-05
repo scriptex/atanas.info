@@ -539,6 +539,14 @@ export const projects: WebProject[] = [
 		title: 'Kinetik STEAM Education Kit',
 		description: 'Typescript, SVG, React, Next.js, Emotion',
 		skip: false
+	},
+	{
+		url: 'https://kinetik-e.com/',
+		image: '/images/web-apps/Kinetik-Electric-Karting-Championship.jpg',
+		index: 12,
+		title: 'Kinetik Electric Karting Championship',
+		description: 'HTML5, SVG, CSS3, Javascript, React, Styled Components',
+		skip: false
 	}
 ];
 
