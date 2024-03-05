@@ -92,7 +92,7 @@
 		}
 
 		& .o-grid {
-			max-height: 201.5rem;
+			max-height: 208rem;
 			justify-content: flex-start;
 			overflow: hidden;
 			transition: max-height var(--timing) var(--easing);
@@ -173,7 +173,7 @@
 @media (--tablet-landscape) {
 	.c-section--skills {
 		& .c-section__wrapper .o-grid {
-			max-height: 266.5rem;
+			max-height: 273.5rem;
 		}
 	}
 }
@@ -181,7 +181,7 @@
 @media (--tablet-portrait) {
 	.c-section--skills {
 		& .c-section__wrapper .o-grid {
-			max-height: 397rem;
+			max-height: 410rem;
 		}
 	}
 
@@ -195,7 +195,7 @@
 @media (--mobile) {
 	.c-section--skills {
 		& .c-section__wrapper .o-grid {
-			max-height: 610rem;
+			max-height: 630rem;
 		}
 
 		& .o-grid__item + .o-grid__item {

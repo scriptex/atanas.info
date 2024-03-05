@@ -158,6 +158,13 @@ export const skills: ForceNode[] = [
 		...defaultForceNodeSize
 	},
 	{
+		text: 'ClickUp',
+		icon: 'clickup',
+		fill: '#7B68EE',
+		since: 2024,
+		...defaultForceNodeSize
+	},
+	{
 		text: 'Confluence',
 		icon: 'confluence',
 		fill: '#172B4D',
@@ -501,6 +508,13 @@ export const skills: ForceNode[] = [
 		...defaultForceNodeSize
 	},
 	{
+		text: 'Miro',
+		icon: 'miro',
+		fill: '#050038',
+		since: 2022,
+		...defaultForceNodeSize
+	},
+	{
 		text: 'MS Excel',
 		icon: 'microsoftexcel',
 		fill: '#217346',
@@ -655,6 +669,13 @@ export const skills: ForceNode[] = [
 		...defaultForceNodeSize
 	},
 	{
+		text: 'React Hook Form',
+		icon: 'reacthookform',
+		fill: '#EC5990',
+		since: 2020,
+		...defaultForceNodeSize
+	},
+	{
 		text: 'React Router',
 		icon: 'reactrouter',
 		fill: '#CA4245',
@@ -714,6 +735,13 @@ export const skills: ForceNode[] = [
 		text: 'Solidity',
 		icon: 'solidity',
 		fill: '#363636',
+		since: 2022,
+		...defaultForceNodeSize
+	},
+	{
+		text: 'Storybook',
+		icon: 'storybook',
+		fill: '#FF4785',
 		since: 2022,
 		...defaultForceNodeSize
 	},
