@@ -2,19 +2,19 @@ import { TimelineItem } from '@scripts/cms';
 
 export const timelineItems: TimelineItem[] = [
 	{
+		content: '<p>Timeline 1 content</p>',
 		date: 'Timeline 1 date',
 		icon: 'personal',
 		index: 0,
-		title: '<p>Timeline 1 title</p>',
 		location: 'Kardjali, Bulgaria',
-		content: '<p>Timeline 1 content</p>'
+		title: '<p>Timeline 1 title</p>'
 	},
 	{
+		content: '<p>Timeline 2 content</p>',
 		date: 'Timeline 2 date',
 		icon: 'personal',
 		index: 1,
-		title: '<p>Timeline 2 title</p>',
 		location: 'Kardjali, Bulgaria',
-		content: '<p>Timeline 2 content</p>'
+		title: '<p>Timeline 2 title</p>'
 	}
 ];

@@ -3,48 +3,48 @@ import type { Education, OwnerDetails, ResumeLink, ResumeMore, ResumeSkills } fr
 export const resumeLinks: ResumeLink[] = [
 	{
 		icon: 'mail',
-		text: 'someone@example.com',
-		index: 0
+		index: 0,
+		text: 'someone@example.com'
 	},
 	{
 		icon: 'link',
-		text: 'example.com',
-		index: 1
+		index: 1,
+		text: 'example.com'
 	},
 	{
 		icon: 'link',
-		text: 'linkedin.com/in/$USER',
-		index: 2
+		index: 2,
+		text: 'linkedin.com/in/$USER'
 	},
 	{
 		icon: 'link',
-		text: 'github.com/$USER',
-		index: 3
+		index: 3,
+		text: 'github.com/$USER'
 	},
 	{
 		icon: 'location',
-		text: 'Earth',
-		index: 4
+		index: 4,
+		text: 'Earth'
 	}
 ];
 
 export const resumeOwner: OwnerDetails = {
 	alt: 'Owner alt',
-	name: 'Owner name',
-	index: 0,
-	title: 'Owner title',
 	image: 'https://example.com/image.png',
-	summary: 'Owner summary',
+	index: 0,
+	name: 'Owner name',
 	privateGitlabCalendar: {
 		test1: 1,
 		test2: 2
-	}
+	},
+	summary: 'Owner summary',
+	title: 'Owner title'
 };
 
 export const resumeEducation: Education[] = [
 	{
-		index: 0,
 		degree: 'Education degree',
+		index: 0,
 		period: 'Education period',
 		school: 'Education school'
 	}
@@ -52,16 +52,16 @@ export const resumeEducation: Education[] = [
 
 export const resumeSkills: ResumeSkills[] = [
 	{
+		content: ['Skill 1', 'Skill 2', 'Skill 3'],
 		index: 0,
-		title: 'Skills group 1',
-		content: ['Skill 1', 'Skill 2', 'Skill 3']
+		title: 'Skills group 1'
 	}
 ];
 
 export const resumeMore: ResumeMore[] = [
 	{
+		content: '<p>Resume more 1 content</p>',
 		index: 0,
-		title: 'Resume more 1 Title',
-		content: '<p>Resume more 1 content</p>'
+		title: 'Resume more 1 Title'
 	}
 ];

@@ -1,7 +1,5 @@
-// @ts-ignore
 const paintNameBlotto = 'blotto';
 
-// @ts-ignore
 registerPaint(
 	paintNameBlotto,
 	class {
@@ -17,7 +15,7 @@ registerPaint(
 
 		public paint(
 			ctx: CanvasRenderingContext2D,
-			{ width, height }: Record<string, number>,
+			{ height, width }: Record<string, number>,
 			props: Map<string, string>
 		) {
 			const tileSize = parseInt(props.get(`--${paintNameBlotto}-tile-size`)!);

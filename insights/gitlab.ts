@@ -1,6 +1,7 @@
 import { log } from '@scripts/shared';
-import { gitlab } from './client';
 import type { GitlabInsights } from '@scripts/types';
+
+import { gitlab } from './client';
 import { asyncForEach, saveInsights } from './utils';
 
 const setOwner = (repo: any, owner: string): any => ({ ...repo, owner });
@@ -64,30 +65,30 @@ export const getGitlabInsights = async (): Promise<GitlabInsights> => {
 			log('-----');
 			log(`atanas.info: Getting data for project ${project.name}`);
 			repositories.push({
-				name: project.name,
-				private: project.visibility === 'private',
-				fork: project.forks_count,
+				contributions: project.commit_count,
 				createdAt: project.created_at,
-				updated_at: project.last_activity_at,
+				fork: project.forks_count,
+				issues: project.open_issues_count,
+				languages: await gitlab(`projects/${project.id}/languages`),
+				name: project.name,
+				owner: project.owner,
+				private: project.visibility === 'private',
 				size: project.statistics?.repository_size,
 				stargazers: project.star_count,
-				languages: await gitlab(`projects/${project.id}/languages`),
-				issues: project.open_issues_count,
-				contributions: project.commit_count,
-				owner: project.owner
+				updated_at: project.last_activity_at
 			});
 		});
 
 		const result = {
+			calendar,
 			error: false,
 			general: {
-				repos: projects.length,
 				createdAt: user.created_at,
+				repos: projects.length,
 				updatedAt: new Date().toISOString()
 			},
-			updated: new Date().getTime(),
-			calendar,
-			repositories
+			repositories,
+			updated: new Date().getTime()
 		};
 
 		await saveInsights(result, 'Gitlab');
@@ -95,11 +96,11 @@ export const getGitlabInsights = async (): Promise<GitlabInsights> => {
 		return result;
 	} catch (e) {
 		const result = {
+			calendar: null,
 			error: true,
 			general: null,
-			updated: new Date().getTime(),
-			calendar: null,
-			repositories: null
+			repositories: null,
+			updated: new Date().getTime()
 		};
 
 		await saveInsights(result, 'Gitlab');

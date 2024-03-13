@@ -1,20 +1,21 @@
-import Script from 'next/script';
+import { ComponentType, FC, useEffect, useMemo, useState } from 'react';
+
 import { Analytics } from '@vercel/analytics/react';
-import { Fira_Sans } from 'next/font/google';
 import type { AppProps } from 'next/app';
-import { FC, useMemo, useState, useEffect, ComponentType } from 'react';
+import { Fira_Sans } from 'next/font/google';
+import Script from 'next/script';
 
 import { Head } from '@components';
 import { AppContext } from '@data/context';
-import { Theme, onThemeChange, setThemeClassName } from '@scripts/shared';
+import { onThemeChange, setThemeClassName, Theme } from '@scripts/shared';
 
 import '@styles/index.css';
 
 type ExtendedAppProps = AppProps & { Component: ComponentType };
 
 const titleFont = Fira_Sans({
-	weight: ['400', '700'],
-	subsets: ['latin', 'cyrillic']
+	subsets: ['latin', 'cyrillic'],
+	weight: ['400', '700']
 });
 
 export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppProps) => {
@@ -24,7 +25,7 @@ export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppP
 	useEffect(() => {
 		setThemeClassName(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
-		onThemeChange(({ media, matches }) => {
+		onThemeChange(({ matches, media }) => {
 			if (!matches) {
 				return;
 			}
@@ -58,7 +59,7 @@ export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppP
 		<>
 			<Head />
 
-			<style jsx={undefined} global={undefined}>{`
+			<style global={undefined} jsx={undefined}>{`
 				:root {
 					--font-fira-sans: ${titleFont.style.fontFamily};
 				}
@@ -71,15 +72,15 @@ export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppP
 			<Analytics />
 
 			<Script
-				src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"
 				onLoad={() => {
 					window.kofiWidgetOverlay?.draw('scriptex', {
-						type: 'floating-chat',
-						'floating-chat.donateButton.text': 'Tip me',
 						'floating-chat.donateButton.background-color': '#ef4c23',
-						'floating-chat.donateButton.text-color': '#fff'
+						'floating-chat.donateButton.text': 'Tip me',
+						'floating-chat.donateButton.text-color': '#fff',
+						type: 'floating-chat'
 					});
 				}}
+				src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"
 			/>
 		</>
 	);

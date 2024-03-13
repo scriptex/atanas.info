@@ -1,12 +1,12 @@
-// @ts-ignore
+/* eslint-disable prefer-const */
+
 type Bubble = {
+	color: string;
+	r: number;
 	x: number;
 	y: number;
-	r: number;
-	color: string;
 };
 
-// @ts-ignore
 registerPaint(
 	'bubbles',
 	class {
@@ -22,16 +22,14 @@ registerPaint(
 
 		public paint(
 			c: CanvasRenderingContext2D,
-			{ width: w, height: h }: Record<string, number>,
+			{ height: h, width: w }: Record<string, number>,
 			props: Map<string, string>
 		) {
 			let [
-				// eslint-disable-next-line prefer-const
 				colors = ['#ef4c23', '#ff8d71'],
 				minRadius = 10,
 				maxRadius = 60,
 				numCircles = 50,
-				// eslint-disable-next-line prefer-const
 				background = '#000'
 			] = this.parseProps(props);
 
@@ -49,10 +47,10 @@ registerPaint(
 
 			for (let i = 0, max = numCircles; i < max; i++) {
 				this.drawCircle(c, {
-					x: this.rand(0, w),
-					y: this.rand(0, h),
+					color: (colors as string[])[this.rand(0, (colors as string[]).length - 1)],
 					r: this.rand(minRadius, maxRadius),
-					color: (colors as string[])[this.rand(0, (colors as string[]).length - 1)]
+					x: this.rand(0, w),
+					y: this.rand(0, h)
 				});
 			}
 		}
@@ -86,7 +84,7 @@ registerPaint(
 		}
 
 		private drawCircle(c: CanvasRenderingContext2D, bubble: Bubble): void {
-			const { x, y, r }: Bubble = bubble;
+			const { r, x, y }: Bubble = bubble;
 
 			c.beginPath();
 			c.arc(x, y, r, 0, Math.PI * 2, false);
@@ -107,7 +105,7 @@ registerPaint(
 			c.closePath();
 		}
 
-		private drawGradient(c: CanvasRenderingContext2D, { x, y, r, color }: Bubble): CanvasGradient {
+		private drawGradient(c: CanvasRenderingContext2D, { color, r, x, y }: Bubble): CanvasGradient {
 			try {
 				const grd: CanvasGradient = c.createRadialGradient(x, y, 0, x, y, r);
 
@@ -117,10 +115,10 @@ registerPaint(
 				return grd;
 			} catch (error) {
 				return this.drawGradient(c, {
-					x,
-					y,
+					color: 'black',
 					r,
-					color: 'black'
+					x,
+					y
 				});
 			}
 		}

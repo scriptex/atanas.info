@@ -1,16 +1,17 @@
+import { getStaticPaths, OpenSourceProject } from '@pages/blog/[slug]';
+
 import { snapshotTest } from '@test-config/helpers';
 import { articles, funding, partners } from '@test-config/mocks';
-import { getStaticPaths, OpenSourceProject } from '@pages/blog/[slug]';
 
 const testSlug = 'testing-websockets-with-cypress';
 
 snapshotTest(
 	() => (
 		<OpenSourceProject
-			post={{ slug: testSlug, content: 'This is a test content' }}
-			funding={funding}
 			articles={articles}
+			funding={funding}
 			partners={partners}
+			post={{ content: 'This is a test content', slug: testSlug }}
 		/>
 	),
 	undefined,
@@ -20,10 +21,10 @@ snapshotTest(
 snapshotTest(
 	() => (
 		<OpenSourceProject
-			post={{ slug: 'nonexistent-post', content: 'This post is missing' }}
-			funding={funding}
 			articles={articles}
+			funding={funding}
 			partners={partners}
+			post={{ content: 'This post is missing', slug: 'nonexistent-post' }}
 		/>
 	),
 	undefined,

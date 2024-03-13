@@ -1,56 +1,58 @@
 import type { FC } from 'react';
+
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import resume from '@data/lotties/resume.json';
-import type { ResumePageData } from '@scripts/types';
 import {
-	getFundingFromCMS,
-	getPartnersFromCMS,
-	getEducationFromCMS,
-	getStrengthsFromCMS,
-	getExperienceFromCMS,
-	getResumeMoreFromCMS,
-	getResumeLinksFromCMS,
-	getCertificatesFromCMS,
-	getOwnerDetailsFromCMS,
-	getResumeSkillsFromCMS
-} from '@scripts/cms';
-import {
-	Lines,
-	Title,
+	Animation,
 	Button,
 	Layout,
-	Section,
-	Animation,
-	ResumeMore,
-	ResumeTitle,
-	ResumeSkills,
-	ResumeSummary,
+	Lines,
 	ResumeEducation,
+	ResumeExperience,
+	ResumeMore,
+	ResumeSkills,
 	ResumeStrengths,
-	ResumeExperience
+	ResumeSummary,
+	ResumeTitle,
+	Section,
+	Title
 } from '@components';
+import {
+	getCertificatesFromCMS,
+	getEducationFromCMS,
+	getExperienceFromCMS,
+	getFundingFromCMS,
+	getOwnerDetailsFromCMS,
+	getPartnersFromCMS,
+	getResumeLinksFromCMS,
+	getResumeMoreFromCMS,
+	getResumeSkillsFromCMS,
+	getStrengthsFromCMS
+} from '@scripts/cms';
+import type { ResumePageData } from '@scripts/types';
+
+import resume from '@data/lotties/resume.json';
 
 export const Resume: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, funding, partners }) => (
 	<Layout funding={funding} partners={partners}>
 		<Title text="Resume" />
 
 		<Section
-			id="resume"
-			title="Resume"
 			actions={
 				<>
-					<Button type="button" onClick={() => window.print()} className="c-btn--print">
+					<Button className="c-btn--print" onClick={() => window.print()} type="button">
 						<i className="icon-print"></i> Print
 					</Button>
 
-					<Button type="anchor" href="/resume.pdf" download>
+					<Button download href="/resume.pdf" type="anchor">
 						<i className="icon-download"></i> Download
 					</Button>
 				</>
 			}
+			additionalElements={<Animation className="c-section__animation" data={resume} height={150} width={150} />}
 			hasButton
-			additionalElements={<Animation data={resume} width={150} height={150} className="c-section__animation" />}
+			id="resume"
+			title="Resume"
 		>
 			<Lines />
 
@@ -59,16 +61,16 @@ export const Resume: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ dat
 					<ResumeTitle
 						alt={data.owner.alt}
 						data={data.links}
+						image={data.owner.image}
 						name={data.owner.name}
 						title={data.owner.title}
-						image={data.owner.image}
 					/>
 				)}
 
 				<div className="c-resume__content">
 					<ResumeSummary content={data.owner.summary} />
 
-					<ResumeEducation education={data.education} certificates={data.certificates} />
+					<ResumeEducation certificates={data.certificates} education={data.education} />
 
 					<ResumeExperience data={data.experience} />
 				</div>
@@ -88,14 +90,14 @@ export const Resume: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ dat
 export const getStaticProps: GetStaticProps<ResumePageData> = async () => ({
 	props: {
 		data: {
-			more: await getResumeMoreFromCMS(),
+			certificates: await getCertificatesFromCMS(),
+			education: await getEducationFromCMS(),
+			experience: await getExperienceFromCMS(),
 			links: await getResumeLinksFromCMS(),
+			more: await getResumeMoreFromCMS(),
 			owner: await getOwnerDetailsFromCMS(),
 			skills: await getResumeSkillsFromCMS(),
-			education: await getEducationFromCMS(),
-			strengths: await getStrengthsFromCMS(),
-			experience: await getExperienceFromCMS(),
-			certificates: await getCertificatesFromCMS()
+			strengths: await getStrengthsFromCMS()
 		},
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()

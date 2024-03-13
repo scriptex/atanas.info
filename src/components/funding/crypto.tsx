@@ -1,5 +1,6 @@
-import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { FC, useEffect, useState } from 'react';
+
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import { Button, Icon } from '@components';
 import { composeClassName } from '@scripts/shared';
@@ -30,12 +31,12 @@ export const FundingCrypto: FC<Readonly<Props>> = ({ name, title, wallet }: Prop
 	}, [copied]);
 
 	return (
-		<CopyToClipboard text={wallet} onCopy={() => setCopied(true)}>
+		<CopyToClipboard onCopy={() => setCopied(true)} text={wallet}>
 			<div className={composeClassName('c-funding__crypto', [name])}>
 				<h6>{title}</h6>
 
-				<Button type="button" title={title} unstyled>
-					<Icon name={`svg-${name}`} className="c-funding__crypto-icon" />
+				<Button title={title} type="button" unstyled>
+					<Icon className="c-funding__crypto-icon" name={`svg-${name}`} />
 				</Button>
 
 				{copied ? (

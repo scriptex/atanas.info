@@ -1,13 +1,11 @@
-// @ts-ignore
 type Circle = {
+	alpha: number;
+	color: string;
+	r: number;
 	x: number;
 	y: number;
-	r: number;
-	color: string;
-	alpha: number;
 };
 
-// @ts-ignore
 registerPaint(
 	'circles',
 	class {
@@ -17,7 +15,7 @@ registerPaint(
 
 		public paint(
 			ctx: CanvasRenderingContext2D,
-			{ width: w, height: h }: Record<string, number>,
+			{ height: h, width: w }: Record<string, number>,
 			props: Map<string, string>
 		): void {
 			const [
@@ -31,11 +29,11 @@ registerPaint(
 
 			for (let i = 0, max = numCircles as number; i < max; i++) {
 				this.drawCircle(ctx, {
-					x: this.rand(0, w),
-					y: this.rand(0, h),
-					r: this.rand(minRadius as number, maxRadius as number),
+					alpha: this.rand(minOpacity as number, maxOpacity as number),
 					color: (colors as string[])[this.rand(0, (colors as string[]).length - 1)],
-					alpha: this.rand(minOpacity as number, maxOpacity as number)
+					r: this.rand(minRadius as number, maxRadius as number),
+					x: this.rand(0, w),
+					y: this.rand(0, h)
 				});
 			}
 		}

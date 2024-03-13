@@ -1,18 +1,19 @@
-import Link from 'next/link';
-import type { GetStaticProps, InferGetStaticPropsType } from 'next';
-import { FC, useRef, useState, useEffect, MutableRefObject } from 'react';
+import { FC, MutableRefObject, useEffect, useRef, useState } from 'react';
 
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import Link from 'next/link';
+
+import { Button, GithubSkyline, Layout, Loader, Section, StatsEntry, StatsError, Title } from '@components';
 import { Routes } from '@data/routes';
-import { formatDate } from '@scripts/shared';
 import { getData, queryGithub } from '@lib/mongodb';
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
-import { YEARS, GeneralInsight, sectionStatsProps } from '@scripts/stats';
+import { formatDate } from '@scripts/shared';
+import { GeneralInsight, sectionStatsProps, YEARS } from '@scripts/stats';
 import type { GithubInsights, GithubProfileData, GithubRepository, GithubStatsPageData } from '@scripts/types';
-import { Title, Button, Layout, Loader, Section, StatsEntry, StatsError, GithubSkyline } from '@components';
 
 const extractGithubData = ({
-	general,
 	calendar,
+	general,
 	repositories
 }: Pick<GithubInsights, 'general' | 'calendar' | 'repositories'>): GeneralInsight[] => {
 	if (!general || !calendar || !repositories) {
@@ -120,7 +121,7 @@ const GithubCalendar: FC<Props> = ({ data: { markup, stylesheet }, error, loadin
 			</div>
 		) : (
 			<div className="c-calendar__outer">
-				<link rel="stylesheet" href={stylesheet} />
+				<link href={stylesheet} rel="stylesheet" />
 
 				<div className="c-calendar c-calendar--github" dangerouslySetInnerHTML={{ __html: markup }} />
 			</div>
@@ -141,8 +142,8 @@ const GithubSkylineComponent: FC = () => {
 
 				<ul>
 					{YEARS.map((year: string, index: number) => (
-						<li key={year} className={current === index ? 'current' : undefined}>
-							<Button type="button" onClick={() => setCurrent(index)} className="c-btn--small">
+						<li className={current === index ? 'current' : undefined} key={year}>
+							<Button className="c-btn--small" onClick={() => setCurrent(index)} type="button">
 								{year}
 							</Button>
 						</li>
@@ -151,7 +152,7 @@ const GithubSkylineComponent: FC = () => {
 			</nav>
 
 			{YEARS.map((year: string, index: number) =>
-				index === current ? <GithubSkyline key={year} file={`${year}.stl`} index={index} /> : null
+				index === current ? <GithubSkyline file={`${year}.stl`} index={index} key={year} /> : null
 			)}
 		</div>
 	);
@@ -207,7 +208,7 @@ export const GithubStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 			<Section
 				{...sectionStatsProps}
 				actions={
-					<Link href={Routes.STATS} className="c-btn">
+					<Link className="c-btn" href={Routes.STATS}>
 						Go back
 					</Link>
 				}

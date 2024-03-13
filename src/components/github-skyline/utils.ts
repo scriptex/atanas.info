@@ -1,19 +1,20 @@
-import { GridMaterial } from '@babylonjs/materials';
 import { SceneEventArgs } from 'react-babylonjs';
+
 import {
-	Mesh,
 	Color3,
 	Color4,
-	Vector3,
-	Texture,
 	CubeTexture,
+	Mesh,
 	MeshBuilder,
+	Scene as SceneCore,
 	SceneLoader,
 	StandardMaterial,
-	Scene as SceneCore
+	Texture,
+	Vector3
 } from '@babylonjs/core';
+import { GridMaterial } from '@babylonjs/materials';
 
-import { SIZE, ROOT } from './constants';
+import { ROOT, SIZE } from './constants';
 
 export type GithubSkylineProps = {
 	readonly file: string;
@@ -26,8 +27,8 @@ export const onSceneMount = (args: SceneEventArgs, props: GithubSkylineProps, on
 		const skySphere = Mesh.CreateSphere('skySphere', 8, SIZE, scene);
 		const skySphereMaterial = new StandardMaterial('skySphereMaterial', scene);
 		const ground = MeshBuilder.CreateGround('ground', {
-			width: SIZE,
-			height: SIZE
+			height: SIZE,
+			width: SIZE
 		});
 		const groundMaterial = new GridMaterial('groundMaterial', scene);
 

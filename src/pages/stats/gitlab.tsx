@@ -1,16 +1,17 @@
-import Link from 'next/link';
-import { FC, useRef, useEffect } from 'react';
+import { FC, useEffect, useRef } from 'react';
+
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import Link from 'next/link';
 
-import { Routes } from '@data/routes';
-import { Ref, formatDate } from '@scripts/shared';
-import { getData, queryGitlab } from '@lib/mongodb';
-import { addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import { Layout, Section, StatsEntry, StatsError, Title } from '@components';
-import type { GitlabInsights, GitlabRepository, GitlabStatsPageData } from '@scripts/types';
+import { Routes } from '@data/routes';
+import { getData, queryGitlab } from '@lib/mongodb';
 import { getFundingFromCMS, getOwnerDetailsFromCMS, getPartnersFromCMS } from '@scripts/cms';
+import { formatDate, Ref } from '@scripts/shared';
+import { addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
+import type { GitlabInsights, GitlabRepository, GitlabStatsPageData } from '@scripts/types';
 
-const extractGitlabData = ({ general, calendar, repositories }: GitlabInsights): GeneralInsight[] => {
+const extractGitlabData = ({ calendar, general, repositories }: GitlabInsights): GeneralInsight[] => {
 	if (!repositories || !general || !calendar) {
 		return [];
 	}
@@ -63,12 +64,12 @@ const extractGitlabData = ({ general, calendar, repositories }: GitlabInsights):
 };
 
 export const GitlabStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({
+	calendarData,
 	data,
 	funding,
-	partners,
-	calendarData
+	partners
 }) => {
-	const { error, calendar, updated }: GitlabInsights = data;
+	const { calendar, error, updated }: GitlabInsights = data;
 	const blocks = extractGitlabData(data);
 	const timeout: Ref<NodeJS.Timeout> = useRef(null);
 	const calendarPlaceholder1: Ref<HTMLDivElement> = useRef(null);
@@ -107,7 +108,7 @@ export const GitlabStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 			<Section
 				{...sectionStatsProps}
 				actions={
-					<Link href={Routes.STATS} className="c-btn">
+					<Link className="c-btn" href={Routes.STATS}>
 						Go back
 					</Link>
 				}
@@ -153,10 +154,10 @@ export const GitlabStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 
 export const getStaticProps: GetStaticProps<GitlabStatsPageData> = async () => ({
 	props: {
+		calendarData: (await getOwnerDetailsFromCMS()).privateGitlabCalendar,
 		data: (await getData<GitlabInsights>('Insights', queryGitlab)).props.data,
 		funding: await getFundingFromCMS(),
-		partners: await getPartnersFromCMS(),
-		calendarData: (await getOwnerDetailsFromCMS()).privateGitlabCalendar
+		partners: await getPartnersFromCMS()
 	}
 });
 

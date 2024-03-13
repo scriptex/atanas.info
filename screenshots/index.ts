@@ -1,13 +1,14 @@
 #!/usr/bin/env ts-node-script
 
-import * as puppeteer from 'puppeteer';
-import { config as dotenvConfig } from 'dotenv';
 import { v2 as cloudinary, UploadApiOptions, UploadApiResponse } from 'cloudinary';
+import { config as dotenvConfig } from 'dotenv';
+import * as puppeteer from 'puppeteer';
 
-import { log } from '@scripts/shared';
-import * as pckg from '../package.json';
-import { WebProject, projects } from '@data/projects';
+import { projects, WebProject } from '@data/projects';
 import clientPromise, { queryCloudinary, queryScreenshots } from '@lib/mongodb';
+import { log } from '@scripts/shared';
+
+import * as pckg from '../package.json';
 
 if (!projects?.length) {
 	log('atanas.info: No web projects found.');
@@ -19,16 +20,16 @@ dotenvConfig({
 });
 
 cloudinary.config({
-	cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
 	api_key: process.env.CLOUDINARY_API_KEY,
-	api_secret: process.env.CLOUDINARY_API_SECRET
+	api_secret: process.env.CLOUDINARY_API_SECRET,
+	cloud_name: process.env.CLOUDINARY_CLOUD_NAME
 });
 
 const FOLDER: string = pckg.name;
 
 const uploadOptions = (name: string): UploadApiOptions => ({
-	public_id: `${FOLDER}/${name}`,
-	invalidate: true
+	invalidate: true,
+	public_id: `${FOLDER}/${name}`
 });
 
 async function delay(time: number): Promise<void> {
@@ -38,8 +39,8 @@ async function delay(time: number): Promise<void> {
 async function createScreenshot(url: string, name: string, timeout = 2000): Promise<UploadApiResponse | null> {
 	log(`atanas.info: Launching new browser for ${name}...`);
 	const browser = await puppeteer.launch({
-		headless: true,
-		args: ['--no-sandbox']
+		args: ['--no-sandbox'],
+		headless: true
 	});
 
 	log(`atanas.info: Opening new browser page for ${name}...`);
@@ -48,8 +49,8 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 	page.setDefaultNavigationTimeout(0);
 
 	await page.setViewport({
-		width: 1280,
-		height: 1000
+		height: 1000,
+		width: 1280
 	});
 
 	log(`atanas.info: Navigating to ${url} for ${name}...`);
@@ -60,8 +61,8 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 	log(`atanas.info: Taking screenshot for ${name}...`);
 	const shotResult = await page
 		.screenshot({
-			type: 'jpeg',
-			fullPage: false
+			fullPage: false,
+			type: 'jpeg'
 		})
 		.then(res => res)
 		.catch((e: Error) => {

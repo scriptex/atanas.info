@@ -1,8 +1,9 @@
 import { act } from '@testing-library/react';
 
 import { GitlabStats } from '@pages/stats/gitlab';
-import { test, snapshotTest } from '@test-config/helpers';
+
 import type { GitlabInsights } from '@scripts/types';
+import { snapshotTest, test } from '@test-config/helpers';
 import { funding, partners, resumeOwner } from '@test-config/mocks';
 
 jest.mock('@lib/mongodb', () => ({
@@ -10,48 +11,48 @@ jest.mock('@lib/mongodb', () => ({
 }));
 
 const dataFull: GitlabInsights = {
-	error: false,
-	general: {
-		repos: 119,
-		createdAt: '2018-01-03T11:47:34.435Z',
-		updatedAt: '2023-02-02T06:19:53.898Z'
-	},
-	updated: 1675318793898,
 	calendar: {
 		'2022-02-03': 1
 	},
+	error: false,
+	general: {
+		createdAt: '2018-01-03T11:47:34.435Z',
+		repos: 119,
+		updatedAt: '2023-02-02T06:19:53.898Z'
+	},
 	repositories: [
 		{
-			name: 'kinetik',
-			private: true,
-			fork: 0,
 			createdAt: '2022-09-13T06:19:08.896Z',
-			updated_at: '2022-09-13T07:26:00.685Z',
+			fork: 0,
+			issues: 0,
+			languages: {
+				JavaScript: 7.7,
+				SCSS: 6.1,
+				Vue: 86.11
+			},
+			name: 'kinetik',
+			owner: 'scriptex',
+			private: true,
 			size: 323391324,
 			stargazers: 0,
-			languages: {
-				Vue: 86.11,
-				JavaScript: 7.7,
-				SCSS: 6.1
-			},
-			issues: 0,
-			owner: 'scriptex'
+			updated_at: '2022-09-13T07:26:00.685Z'
 		}
-	]
+	],
+	updated: 1675318793898
 };
 
 const dataEmpty: GitlabInsights = {
+	calendar: null,
 	error: false,
 	general: null,
-	updated: 1675318793898,
-	calendar: null,
-	repositories: null
+	repositories: null,
+	updated: 1675318793898
 };
 
 const calendarData = resumeOwner.privateGitlabCalendar;
 
 snapshotTest(
-	() => <GitlabStats data={dataFull} funding={funding} partners={partners} calendarData={calendarData} />,
+	() => <GitlabStats calendarData={calendarData} data={dataFull} funding={funding} partners={partners} />,
 	undefined,
 	'GitlabStats'
 );
@@ -59,10 +60,10 @@ snapshotTest(
 snapshotTest(
 	() => (
 		<GitlabStats
+			calendarData={calendarData}
 			data={{ ...dataFull, updated: null }}
 			funding={funding}
 			partners={partners}
-			calendarData={calendarData}
 		/>
 	),
 	undefined,
@@ -70,7 +71,7 @@ snapshotTest(
 );
 
 snapshotTest(
-	() => <GitlabStats data={dataEmpty} funding={funding} partners={partners} calendarData={calendarData} />,
+	() => <GitlabStats calendarData={calendarData} data={dataEmpty} funding={funding} partners={partners} />,
 	undefined,
 	'GitlabStats'
 );
@@ -79,7 +80,7 @@ it('Test the GitlabStats page with fake timers', async () => {
 	jest.useFakeTimers();
 
 	const GitlabStatsComponent = () => (
-		<GitlabStats data={dataFull} funding={funding} partners={partners} calendarData={calendarData} />
+		<GitlabStats calendarData={calendarData} data={dataFull} funding={funding} partners={partners} />
 	);
 
 	const { asFragment } = await test(GitlabStatsComponent);

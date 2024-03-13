@@ -1,8 +1,9 @@
-import fs from 'node:fs';
-import { join } from 'node:path';
 import matter from 'gray-matter';
 import markdownIt from 'markdown-it';
 import markdownItPrism from 'markdown-it-prism';
+
+import fs from 'node:fs';
+import { join } from 'node:path';
 
 const MarkdownIt = new markdownIt({
 	html: true
@@ -21,7 +22,7 @@ export const getPostBySlug = (folder: string, slug: string, fields: string[] = [
 	const realSlug = slug?.replace(/\.md$/, '') ?? '';
 	const fullPath = join(postsDirectory(folder), `${realSlug}.md`);
 	const fileContents = fs.readFileSync(fullPath, 'utf8');
-	const { data, content } = matter(fileContents);
+	const { content, data } = matter(fileContents);
 
 	fields.forEach(field => {
 		if (field === 'slug') {

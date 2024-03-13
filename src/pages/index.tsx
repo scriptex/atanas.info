@@ -1,13 +1,15 @@
-import useInterval from 'use-interval';
-import { FC, useRef, useState, useEffect } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
+
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import useInterval from 'use-interval';
+
+import { Animation, Layout, Section, Title } from '@components';
+import { getFundingFromCMS, getPartnersFromCMS, getTitlesFromCMS } from '@scripts/cms';
+import type { HomePageProps } from '@scripts/types';
 
 import hello from '@data/lotties/hello.json';
-import type { HomePageProps } from '@scripts/types';
-import { Title, Layout, Section, Animation } from '@components';
-import { getFundingFromCMS, getPartnersFromCMS, getTitlesFromCMS } from '@scripts/cms';
 
-export const Home: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ titles, funding, partners }) => {
+export const Home: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners, titles }) => {
 	const canvasRef = useRef<HTMLDivElement>(null);
 	const [activeIndex, setActiveIndex] = useState(0);
 
@@ -19,7 +21,7 @@ export const Home: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ title
 		const canvas = canvasRef.current;
 
 		import('@scripts/canvas')
-			.then(({ initCanvas, createDots }) => {
+			.then(({ createDots, initCanvas }) => {
 				createDots(initCanvas('canvas'));
 			})
 			.catch(console.error);
@@ -32,21 +34,21 @@ export const Home: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ title
 	}, []);
 
 	return (
-		<Layout main="o-main--high" funding={funding} partners={partners}>
+		<Layout funding={funding} main="o-main--high" partners={partners}>
 			<Title text="" />
 
-			<Section id="hello" hasShell={false} hasButton={false}>
+			<Section hasButton={false} hasShell={false} id="hello">
 				<div className="c-canvas" id="canvas" ref={canvasRef} />
 
 				<div className="c-slider">
 					<h1>
-						<Animation data={hello} width={100} height={100} className="c-slider__animation" />I am Atanas
+						<Animation className="c-slider__animation" data={hello} height={100} width={100} />I am Atanas
 						Atanasov
 					</h1>
 
 					<h2>
 						{titles.map((title: string, index: number) => (
-							<span key={title} className={index === activeIndex ? 'current' : undefined}>
+							<span className={index === activeIndex ? 'current' : undefined} key={title}>
 								{title}
 							</span>
 						))}
@@ -59,9 +61,9 @@ export const Home: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ title
 
 export const getStaticProps: GetStaticProps<HomePageProps> = async () => ({
 	props: {
-		titles: await getTitlesFromCMS(),
 		funding: await getFundingFromCMS(),
-		partners: await getPartnersFromCMS()
+		partners: await getPartnersFromCMS(),
+		titles: await getTitlesFromCMS()
 	}
 });
 

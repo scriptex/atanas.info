@@ -2,15 +2,15 @@ import type { Video } from '@scripts/cms';
 
 export const videos: Video[] = [
 	{
-		url: 'https://example.com/videos/1',
+		description: 'Video 1 Description',
 		index: 0,
 		title: 'Video 1 Title',
-		description: 'Video 1 Description'
+		url: 'https://example.com/videos/1'
 	},
 	{
-		url: 'https://example.com/videos/2',
+		description: 'Video 2 Description',
 		index: 1,
 		title: 'Video 2 Title',
-		description: 'Video 2 Description'
+		url: 'https://example.com/videos/2'
 	}
 ];

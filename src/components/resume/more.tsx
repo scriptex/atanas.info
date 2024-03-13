@@ -12,7 +12,7 @@ export const ResumeMore: FC<Readonly<Props>> = ({ data }: Props) => (
 
 		<ul className="c-resume__strengths">
 			{data.map((item: IResumeMore) => (
-				<li key={item.index} dangerouslySetInnerHTML={{ __html: item.content }} />
+				<li dangerouslySetInnerHTML={{ __html: item.content }} key={item.index} />
 			))}
 		</ul>
 	</div>

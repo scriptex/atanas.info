@@ -7,7 +7,7 @@ type Props = {
 	title: string;
 };
 
-export const StatsEntry: FC<Readonly<Props>> = ({ title, data }: Props) => (
+export const StatsEntry: FC<Readonly<Props>> = ({ data, title }: Props) => (
 	<div className="c-section__entry c-section__entry--no-background">
 		<div className="o-shell">
 			{title && <h3>{title}</h3>}

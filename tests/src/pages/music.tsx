@@ -1,6 +1,6 @@
 import { Music } from '@pages/music';
+import { mockAudioContext, snapshotTest } from '@test-config/helpers';
 import { funding, partners } from '@test-config/mocks';
-import { snapshotTest, mockAudioContext } from '@test-config/helpers';
 
 jest.mock('@lib/mongodb', () => ({
 	getData: jest.fn(() => Promise.resolve({ props: { data: [] } }))
@@ -13,12 +13,12 @@ beforeEach(() => {
 
 const data = [
 	{
-		url: 'https://dl.dropbox.com/s/fh1igvfnzzucnmh/Scriptex_-_01_-_La_Playa%28Invader__2004%29.mp3?dl=0',
-		metaData: { artist: 'Scriptex', title: 'La Playa' }
+		metaData: { artist: 'Scriptex', title: 'La Playa' },
+		url: 'https://dl.dropbox.com/s/fh1igvfnzzucnmh/Scriptex_-_01_-_La_Playa%28Invader__2004%29.mp3?dl=0'
 	},
 	{
-		url: 'https://dl.dropbox.com/s/p8o4hpat99va06b/Scriptex_-_02_-_Clash%28Invader__2004%29.mp3?dl=0',
-		metaData: { artist: 'Scriptex', title: 'Clash' }
+		metaData: { artist: 'Scriptex', title: 'Clash' },
+		url: 'https://dl.dropbox.com/s/p8o4hpat99va06b/Scriptex_-_02_-_Clash%28Invader__2004%29.mp3?dl=0'
 	}
 ];
 

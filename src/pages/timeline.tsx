@@ -1,28 +1,31 @@
 import type { FC } from 'react';
+
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import timeline from '@data/lotties/timeline.json';
+import { Animation, Icon, Layout, Section, Title } from '@components';
+import { getFundingFromCMS, getPartnersFromCMS, getTimelineFromCMS, TimelineItem } from '@scripts/cms';
 import type { TimelinePageData } from '@scripts/types';
-import { Layout, Section, Animation, Title, Icon } from '@components';
-import { TimelineItem, getFundingFromCMS, getPartnersFromCMS, getTimelineFromCMS } from '@scripts/cms';
+
+import timeline from '@data/lotties/timeline.json';
 
 export const Timeline: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, funding, partners }) => (
 	<Layout funding={funding} partners={partners}>
 		<Title text="Timeline" />
 
 		<Section
+			additionalElements={<Animation className="c-section__animation" data={timeline} height={32} width={367} />}
+			hasButton
 			id="timeline"
 			title="Timeline"
-			hasButton
-			additionalElements={<Animation data={timeline} width={367} height={32} className="c-section__animation" />}
 		>
 			<VerticalTimeline>
 				{data.map((item: TimelineItem) => (
 					<VerticalTimelineElement
-						key={item.index}
 						date={item.date}
-						icon={<Icon name={`svg-${item.icon}`} className="vertical-timeline__icon" />}
+						icon={<Icon className="vertical-timeline__icon" name={`svg-${item.icon}`} />}
+						key={item.index}
 					>
 						<div
 							className="vertical-timeline-element-title"

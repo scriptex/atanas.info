@@ -1,11 +1,13 @@
+import { FC, useEffect, useRef, useState } from 'react';
+
 import gsap from 'gsap';
-import { FC, useRef, useState, useEffect } from 'react';
 
 import { Button } from '@components';
+import type { FundingNetwork as FundingNetworkType } from '@scripts/cms';
+import { composeClassName } from '@scripts/shared';
+
 import { FundingCrypto } from './crypto';
 import { FundingNetwork } from './network';
-import { composeClassName } from '@scripts/shared';
-import type { FundingNetwork as FundingNetworkType } from '@scripts/cms';
 
 type Props = {
 	data: FundingNetworkType[];
@@ -29,13 +31,13 @@ export const Funding: FC<Readonly<Props>> = ({ data }) => {
 
 	return (
 		<div className={composeClassName('c-funding', open ? ['open'] : [])}>
-			<Button type="button" onClick={() => setOpen(true)} className="c-btn--small">
+			<Button className="c-btn--small" onClick={() => setOpen(true)} type="button">
 				Sponsor me
 			</Button>
 
 			<button className="c-funding__backdrop" onClick={() => setOpen(false)} />
 
-			<svg viewBox="-100 -100 700 700" ref={knob} className="c-funding__knob">
+			<svg className="c-funding__knob" ref={knob} viewBox="-100 -100 700 700">
 				<g>
 					{data.map((network: FundingNetworkType) => (
 						<FundingNetwork key={network.index} {...network} />
@@ -45,7 +47,7 @@ export const Funding: FC<Readonly<Props>> = ({ data }) => {
 				<g className="c-funding__trigger" onClick={() => setOpen(false)}>
 					<circle cx="250" cy="250" r="30" />
 
-					<text textAnchor="middle" x="250" y="260" fill="var(--color-primary)" fontSize="2.5em">
+					<text fill="var(--color-primary)" fontSize="2.5em" textAnchor="middle" x="250" y="260">
 						{open ? '-' : '+'}
 					</text>
 				</g>

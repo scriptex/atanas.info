@@ -1,16 +1,17 @@
-import Link from 'next/link';
-import Image from 'next/image';
 import type { FC } from 'react';
-import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import { Routes } from '@data/routes';
-import type { WebProject } from '@data/projects';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+
+import { ExternalLink, Icon, Layout, Loader, Section, SectionNav, Title } from '@components';
 import { portfolioSectionProps } from '@data/pages';
+import type { WebProject } from '@data/projects';
+import { Routes } from '@data/routes';
 import { getData, queryScreenshots } from '@lib/mongodb';
-import type { PortfolioWebAppsPageData } from '@scripts/types';
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
-import { Icon, Layout, Loader, Section, SectionNav, ExternalLink, Title } from '@components';
-import { usePagination, useNetworkState, composeClassName, useCurrentPageParam } from '@scripts/shared';
+import { composeClassName, useCurrentPageParam, useNetworkState, usePagination } from '@scripts/shared';
+import type { PortfolioWebAppsPageData } from '@scripts/types';
 
 export const PortfolioWebApps: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({
 	data = [],
@@ -19,7 +20,7 @@ export const PortfolioWebApps: FC<Readonly<InferGetStaticPropsType<typeof getSta
 }) => {
 	const page = useCurrentPageParam();
 	const online = useNetworkState();
-	const { menu, items } = usePagination(data);
+	const { items, menu } = usePagination(data);
 
 	return !items ? null : (
 		<Layout funding={funding} partners={partners}>
@@ -28,7 +29,7 @@ export const PortfolioWebApps: FC<Readonly<InferGetStaticPropsType<typeof getSta
 			<Section
 				{...portfolioSectionProps}
 				actions={
-					<Link href={Routes.PORTFOLIO} className="c-btn">
+					<Link className="c-btn" href={Routes.PORTFOLIO}>
 						Go back
 					</Link>
 				}
@@ -38,22 +39,22 @@ export const PortfolioWebApps: FC<Readonly<InferGetStaticPropsType<typeof getSta
 				<div className="c-section__body">
 					{items[page - 1]?.map((project: WebProject) => (
 						<ExternalLink
-							key={project.index}
-							href={project.url}
 							className={composeClassName('', [], [!project.url ? 'disabled' : ''])}
+							href={project.url}
+							key={project.index}
 						>
 							<Loader />
 
 							{online || !project.url ? (
 								<Image
-									src={project.image}
 									alt={project.title}
-									width="1280"
 									height="1000"
 									loading="lazy"
+									src={project.image}
+									width="1280"
 								/>
 							) : (
-								<Icon name="svg-disconnected " className="svg-disconnected" />
+								<Icon className="svg-disconnected" name="svg-disconnected " />
 							)}
 
 							<section>
@@ -69,7 +70,7 @@ export const PortfolioWebApps: FC<Readonly<InferGetStaticPropsType<typeof getSta
 					))}
 				</div>
 
-				<SectionNav data={menu ?? []} name="title" small route={Routes.PORTFOLIO_WEB_APPS} active={page} />
+				<SectionNav active={page} data={menu ?? []} name="title" route={Routes.PORTFOLIO_WEB_APPS} small />
 			</Section>
 		</Layout>
 	);

@@ -1,4 +1,3 @@
-// @ts-ignore
 registerPaint(
 	'slanted-background',
 	class {
@@ -14,7 +13,7 @@ registerPaint(
 
 		public paint(
 			ctx: CanvasRenderingContext2D,
-			{ width, height }: Record<string, number>,
+			{ height, width }: Record<string, number>,
 			properties: Map<string, string>
 		): void {
 			const color: string = properties.get('--slanted-background-color')!;

@@ -1,11 +1,12 @@
 import type { FC } from 'react';
+
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import { portfolioItems } from '@data/projects';
-import { portfolioSectionProps } from '@data/pages';
-import type { PortfolioPageData } from '@scripts/types';
 import { Layout, Section, SectionGrid, Title } from '@components';
+import { portfolioSectionProps } from '@data/pages';
+import { portfolioItems } from '@data/projects';
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
+import type { PortfolioPageData } from '@scripts/types';
 
 export const Portfolio: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners }) => (
 	<Layout funding={funding} partners={partners}>

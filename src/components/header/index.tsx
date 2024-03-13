@@ -1,9 +1,10 @@
-import Link from 'next/link';
 import { FC, useState } from 'react';
 
+import Link from 'next/link';
+
+import { Button, Icon, Nav, ThemeSwitcher } from '@components';
 import { Routes } from '@data/routes';
 import { composeClassName } from '@scripts/shared';
-import { Nav, Icon, Button, ThemeSwitcher } from '@components';
 
 export const Header: FC = () => {
 	const [open, setOpen] = useState(false);
@@ -11,20 +12,20 @@ export const Header: FC = () => {
 
 	return (
 		<header className={composeClassName('c-header', open ? ['open'] : [])}>
-			<Link href={Routes.HOME} className="c-logo" title="Back to homepage">
-				<Icon name="svg-logo" className="c-svg-logo" />
+			<Link className="c-logo" href={Routes.HOME} title="Back to homepage">
+				<Icon className="c-svg-logo" name="svg-logo" />
 			</Link>
 
 			<div className="c-header__actions">
 				<Button
-					type="button"
+					aria-label="Toggle menu"
+					className="c-nav__toggle"
 					onClick={(): void => {
 						setOpen(!open);
 						setActive(-1);
 					}}
+					type="button"
 					unstyled
-					className="c-nav__toggle"
-					aria-label="Toggle menu"
 				>
 					<span></span>
 

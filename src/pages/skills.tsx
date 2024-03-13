@@ -1,11 +1,12 @@
-import { FC, useState, useEffect } from 'react';
+import { FC, useEffect, useState } from 'react';
+
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import { composeClassName } from '@scripts/shared';
+import { Button, Icon, Layout, Lines, Section, Title } from '@components';
 import { ForceNode, skills } from '@data/skills-list';
-import type { SkillsPageData } from '@scripts/types';
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
-import { Icon, Lines, Button, Section, Layout, Title } from '@components';
+import { composeClassName } from '@scripts/shared';
+import type { SkillsPageData } from '@scripts/types';
 
 export const Skills: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners }) => {
 	const [showTable, setShowTable] = useState(false);
@@ -29,33 +30,33 @@ export const Skills: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ fun
 			<Title text="Skills" />
 
 			<Section
-				id="skills"
-				title="Skills"
 				actions={
-					<Button type="button" onClick={() => setShowTable(!showTable)}>
+					<Button onClick={() => setShowTable(!showTable)} type="button">
 						{showTable ? 'Interactive' : 'Static'} mode
 					</Button>
 				}
-				subtitle={showTable ? undefined : 'Drag the bubbles to play'}
-				hasButton
 				className="bubbles"
+				hasButton
+				id="skills"
+				subtitle={showTable ? undefined : 'Drag the bubbles to play'}
+				title="Skills"
 			>
 				<div className={showTable ? 'c-section__wrapper' : 'c-section__container'}>
 					<Lines />
 
-					<div id="skills-graph" className={showTable ? 'is--hidden' : undefined}></div>
+					<div className={showTable ? 'is--hidden' : undefined} id="skills-graph"></div>
 
 					<div className={composeClassName('o-grid', [], showTable ? [] : ['is--hidden'])}>
 						{skills.map((skill: ForceNode) => (
-							<div key={skill.text} className="o-grid__item xs-12 sm-6 md-4 lg-3">
+							<div className="o-grid__item xs-12 sm-6 md-4 lg-3" key={skill.text}>
 								<div className="c-skill">
 									<figure style={{ backgroundColor: skill.fill }}>
 										<Icon
+											className="c-skill__icon"
 											fill={skill.iconFill}
+											height={skill.height}
 											name={`svg-${skill.icon}`}
 											width={skill.width}
-											height={skill.height}
-											className="c-skill__icon"
 										/>
 									</figure>
 

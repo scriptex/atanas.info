@@ -1,13 +1,14 @@
-import Link from 'next/link';
 import type { FC } from 'react';
+
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import Link from 'next/link';
 
-import { blogProps } from '@data/pages';
-import type { BlogPageData } from '@scripts/types';
 import { Layout, Loader, Section, Title } from '@components';
+import { blogProps } from '@data/pages';
 import { Article, getArticlesFromCMS, getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
+import type { BlogPageData } from '@scripts/types';
 
-export const Blog: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, articles, partners }) => (
+export const Blog: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ articles, funding, partners }) => (
 	<Layout funding={funding} partners={partners}>
 		<Title text="Blog" />
 
@@ -16,11 +17,11 @@ export const Blog: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ fundi
 				{articles
 					.filter((article: Article) => !article.external)
 					.map((article: Article) => (
-						<div key={article.index} className="o-grid__item xs-12 sm-6">
+						<div className="o-grid__item xs-12 sm-6" key={article.index}>
 							<Link
+								className="c-article-link fullsize-background"
 								href={article.url}
 								style={{ backgroundImage: `url(${article.image?.fields.file?.url})` }}
-								className="c-article-link fullsize-background"
 							>
 								<strong>{article.title}</strong>
 							</Link>
@@ -35,8 +36,8 @@ export const Blog: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ fundi
 
 export const getStaticProps: GetStaticProps<BlogPageData> = async () => ({
 	props: {
-		funding: await getFundingFromCMS(),
 		articles: await getArticlesFromCMS(),
+		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });

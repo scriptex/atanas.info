@@ -228,6 +228,10 @@ export const openSourceProjectsList = [
 		title: 'scriptex/react-svg-donuts'
 	},
 	{
+		url: '/portfolio/open-source/react-template-ts',
+		title: 'scriptex/react-template-ts'
+	},
+	{
 		url: '/portfolio/open-source/rollup-mpa',
 		title: 'scriptex/rollup-mpa'
 	},

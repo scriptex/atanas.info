@@ -1,14 +1,15 @@
+import { MutableRefObject, useEffect, useMemo, useState } from 'react';
+
 import { format } from 'date-fns/format';
 import { useSearchParams } from 'next/navigation';
-import { useState, useEffect, MutableRefObject, useMemo } from 'react';
 
 import type { Project } from '@data/projects';
 
 export type Theme = 'dark' | 'light';
 export type Ref<T> = MutableRefObject<T | null>;
 export type PaginationData<T> = {
-	menu: Project[] | undefined;
 	items: T[][] | undefined;
+	menu: Project[] | undefined;
 };
 
 export const random = (): number => {
@@ -87,13 +88,13 @@ export const usePagination = <T>(data: T[], size = 10): PaginationData<T> => {
 	}, []);
 
 	return {
+		items,
 		menu: items?.map((_, i) => ({
-			url: '',
+			description: '',
 			index: i,
 			title: (i + 1).toString(),
-			description: ''
-		})),
-		items
+			url: ''
+		}))
 	};
 };
 

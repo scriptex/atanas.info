@@ -1,13 +1,14 @@
+import { FC, useMemo } from 'react';
+
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { FC, useMemo } from 'react';
 
 import { Icon } from '@components';
 import { Routes } from '@data/routes';
 
 import type { AnchorProps } from './types';
 
-export const Anchor: FC<Readonly<AnchorProps>> = ({ rel, href, title, content, onClick, ...rest }: AnchorProps) => {
+export const Anchor: FC<Readonly<AnchorProps>> = ({ content, href, onClick, rel, title, ...rest }: AnchorProps) => {
 	const { pathname } = useRouter();
 	const isActive = useMemo(
 		() => (href === Routes.HOME ? pathname === href : pathname.includes(href)),
@@ -18,10 +19,10 @@ export const Anchor: FC<Readonly<AnchorProps>> = ({ rel, href, title, content, o
 		<a href={href} title={title} {...rest} onClick={onClick}>
 			{content}
 
-			<Icon name="svg-external-link" className="c-svg-external-link" />
+			<Icon className="c-svg-external-link" name="svg-external-link" />
 		</a>
 	) : (
-		<Link href={href} title={title} onClick={onClick} className={isActive ? 'active' : undefined}>
+		<Link className={isActive ? 'active' : undefined} href={href} onClick={onClick} title={title}>
 			{content}
 		</Link>
 	);

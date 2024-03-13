@@ -1,7 +1,7 @@
+import { LinkedInBadge, SocialMusic } from '@components';
+import type { LastFMAlbum } from '@insights/utils';
 import { snapshotTest } from '@test-config/helpers';
 import { lastFmInsights } from '@test-config/mocks';
-import type { LastFMAlbum } from '@insights/utils';
-import { SocialMusic, LinkedInBadge } from '@components';
 
 snapshotTest(LinkedInBadge);
 

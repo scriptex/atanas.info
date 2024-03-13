@@ -1,19 +1,21 @@
-import Image from 'next/image';
-import Slider from 'react-slick';
 import type { FC } from 'react';
 
+import Slider from 'react-slick';
+
+import Image from 'next/image';
+
+import { ExternalLink, Loader } from '@components';
 import { ExtendedProject } from '@data/projects';
 import { composeClassName } from '@scripts/shared';
-import { Loader, ExternalLink } from '@components';
 
 type Props = {
+	className?: string;
 	data: ExtendedProject[];
 	folder: string;
-	className?: string;
 	slidesToShow: number;
 };
 
-export const PortfolioSliders: FC<Readonly<Props>> = ({ data, folder, className, slidesToShow }: Props) => (
+export const PortfolioSliders: FC<Readonly<Props>> = ({ className, data, folder, slidesToShow }: Props) => (
 	<div className="c-section__sliders">
 		{data.map((app: ExtendedProject) => (
 			<div className={composeClassName('c-section__slider', [], [className])} key={app.index}>
@@ -32,12 +34,9 @@ export const PortfolioSliders: FC<Readonly<Props>> = ({ data, folder, className,
 				</ExternalLink>
 
 				<Slider
-					dots={false}
-					speed={500}
-					infinite
 					autoplaySpeed={5000}
-					slidesToShow={slidesToShow}
-					slidesToScroll={1}
+					dots={false}
+					infinite
 					responsive={
 						!app.adjustable
 							? []
@@ -50,15 +49,18 @@ export const PortfolioSliders: FC<Readonly<Props>> = ({ data, folder, className,
 									}
 								]
 					}
+					slidesToScroll={1}
+					slidesToShow={slidesToShow}
+					speed={500}
 				>
 					{app.images.map((img: string, j: number) => (
 						<div key={img}>
 							<Image
-								src={`/images/${folder}/${img}`}
 								alt={`${app.title} screenshot ${j + 1}`}
-								width={app.imageWidth}
 								height={app.imageHeight}
 								loading="lazy"
+								src={`/images/${folder}/${img}`}
+								width={app.imageWidth}
 							/>
 						</div>
 					))}

@@ -1,9 +1,10 @@
-import type { Document } from '@contentful/rich-text-types';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+import type { Document } from '@contentful/rich-text-types';
 import { Asset, createClient, EntryCollection, EntrySkeletonType } from 'contentful';
 
-import type { Partner } from './types';
 import type { ForceNode } from '@data/skills-list';
+
+import type { Partner } from './types';
 
 type CMSType =
 	| 'bio'
@@ -28,110 +29,110 @@ type CMSType =
 type RawCMSData = EntryCollection<EntrySkeletonType, undefined, string>;
 
 export type BioEntry = {
-	title: string | undefined;
 	content: string;
+	title: string | undefined;
 };
 
 export type Article = Readonly<{
-	url: string;
-	title: string;
-	image?: Asset;
-	index: number;
 	external: boolean;
 	externalImage?: string;
+	image?: Asset;
+	index: number;
+	title: string;
+	url: string;
 }>;
 
 export type TimelineItem = Readonly<{
+	content: string;
 	date: string;
 	icon: 'work' | 'education' | 'personal';
 	index: number;
-	title: string;
-	content: string;
 	location: string;
+	title: string;
 }>;
 
 export type ResumeLink = Readonly<{
 	icon: 'mail' | 'link' | 'location';
-	text: string;
 	index: number;
+	text: string;
 }>;
 
 export type OwnerDetails = Readonly<{
 	alt: string;
-	name: string;
-	index: number;
-	title: string;
 	image: string;
-	summary: string;
+	index: number;
+	name: string;
 	privateGitlabCalendar: Record<string, number>;
+	summary: string;
+	title: string;
 }>;
 
 export type Education = Readonly<{
-	index: number;
 	degree: string;
+	index: number;
 	period: string;
 	school: string;
 }>;
 
 export type Certificate = Readonly<{
-	pdf: string;
 	date: string;
 	image: string;
 	index: number;
+	pdf: string;
 	title: string;
 }>;
 
 export type Experience = Readonly<{
-	index: number;
-	title: string;
-	period: string;
 	details: string;
-	project: string;
+	index: number;
 	location: string;
+	period: string;
+	project: string;
+	title: string;
 }>;
 
 export type ResumeSkills = Readonly<{
+	content: string[];
 	index: number;
 	title: string;
-	content: string[];
 }>;
 
 export type Strength = Readonly<{
+	content: string;
 	icon: 'share' | 'star' | 'brush' | 'clock';
 	index: number;
 	title: string;
-	content: string;
 }>;
 
 export type ResumeMore = Readonly<{
+	content: string;
 	index: number;
 	title: string;
-	content: string;
 }>;
 
 export type ResumeData = Readonly<{
-	more: ResumeMore[];
+	certificates: Certificate[];
+	education: Education[];
+	experience: Experience[];
 	links: ResumeLink[];
+	more: ResumeMore[];
 	owner: OwnerDetails;
 	skills: ResumeSkills[];
-	education: Education[];
 	strengths: Strength[];
-	experience: Experience[];
-	certificates: Certificate[];
 }>;
 
 export type Slide = Readonly<{
-	url: string;
+	description: string;
 	index: number;
 	title: string;
-	description: string;
+	url: string;
 }>;
 
 export type Video = Readonly<{
-	url: string;
+	description: string;
 	index: number;
 	title: string;
-	description: string;
+	url: string;
 }>;
 
 export type CMSPartner = Omit<Partner, 'image'> &
@@ -141,41 +142,41 @@ export type CMSPartner = Omit<Partner, 'image'> &
 
 export type Occupation = Omit<ForceNode, 'text'> &
 	Readonly<{
-		name: string;
 		index: number;
+		name: string;
 	}>;
 
 export type FundingNetwork = Readonly<{
-	url: string;
-	name: string;
 	index: number;
 	matrix: string;
+	name: string;
+	url: string;
 }>;
 
 type SharedTestimonial = Readonly<{
+	authorName: string;
+	authorRelationship: string;
+	authorTitle: string;
+	authorUrl: string;
 	date: string;
 	index: number;
-	authorUrl: string;
-	authorName: string;
-	authorTitle: string;
-	authorRelationship: string;
 }>;
 
 type CMSTestimonial = SharedTestimonial &
 	Readonly<{
-		image: Asset;
 		content: Document;
+		image: Asset;
 	}>;
 
 export type Testimonial = SharedTestimonial &
 	Readonly<{
-		image: string;
 		content: string;
+		image: string;
 	}>;
 
 const client = createClient({
-	space: process.env.CONTENTFUL_SPACE_ID!,
-	accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!
+	accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
+	space: process.env.CONTENTFUL_SPACE_ID!
 });
 
 const getHTMLString = <T extends Document>(data?: T): string => (data ? documentToHtmlString(data) : '');
@@ -186,10 +187,10 @@ const getCMSData = async (type: CMSType): Promise<RawCMSData> => {
 
 	if (!content_type) {
 		return {
-			skip: 0,
+			items: [],
 			limit: 0,
-			total: 0,
-			items: []
+			skip: 0,
+			total: 0
 		};
 	}
 
@@ -202,9 +203,9 @@ export const getBioFromCMS = async (): Promise<BioEntry[]> => {
 
 		return data.items
 			.map(item => item.fields)
-			.map(({ title, content }) => ({
-				title: title?.toString(),
-				content: getHTMLString(content as Document)
+			.map(({ content, title }) => ({
+				content: getHTMLString(content as Document),
+				title: title?.toString()
 			}));
 	} catch (error: unknown) {
 		return [];
@@ -240,11 +241,11 @@ export const getTimelineFromCMS = async (): Promise<TimelineItem[]> => {
 			data.items
 				.map(item => item.fields)
 				.map(
-					({ title, content, ...rest }) =>
+					({ content, title, ...rest }) =>
 						({
 							...rest,
-							title: getHTMLString(title as Document),
-							content: getHTMLString(content as Document)
+							content: getHTMLString(content as Document),
+							title: getHTMLString(title as Document)
 						}) as TimelineItem
 				) ?? []
 		);
@@ -281,12 +282,12 @@ export const getOwnerDetailsFromCMS = async (): Promise<OwnerDetails> => {
 	} catch (error: unknown) {
 		return {
 			alt: '',
-			name: '',
 			image: '',
 			index: 0,
-			title: '',
+			name: '',
+			privateGitlabCalendar: {},
 			summary: '',
-			privateGitlabCalendar: {}
+			title: ''
 		};
 	}
 };
@@ -309,8 +310,8 @@ export const getCertificatesFromCMS = async (): Promise<Certificate[]> => {
 			item =>
 				({
 					...item.fields,
-					pdf: `https:${(item.fields.pdf as Asset).fields.file?.url}`,
-					image: `https:${(item.fields.image as Asset).fields.file?.url}`
+					image: `https:${(item.fields.image as Asset).fields.file?.url}`,
+					pdf: `https:${(item.fields.pdf as Asset).fields.file?.url}`
 				}) as Certificate
 		);
 	} catch (error: unknown) {
@@ -396,12 +397,12 @@ export const getPartnersFromCMS = async (): Promise<Partner[]> => {
 		const data = await getCMSData('partner');
 
 		return data.items.map(item => {
-			const { name, image, index } = item.fields as CMSPartner;
+			const { image, index, name } = item.fields as CMSPartner;
 
 			return {
-				name,
+				image: image.fields.file?.url as string,
 				index,
-				image: image.fields.file?.url as string
+				name
 			};
 		});
 	} catch (error: unknown) {
@@ -443,13 +444,13 @@ export const getTestimonialsFromCMS = async (): Promise<Testimonial[]> => {
 
 		return data.items
 			.map(item => {
-				const { image, content, ...rest } = item.fields as CMSTestimonial;
+				const { content, image, ...rest } = item.fields as CMSTestimonial;
 				const imageURL = image.fields.file?.url;
 
 				return {
 					...rest,
-					image: `https://${imageURL}`,
-					content: getHTMLString(content)
+					content: getHTMLString(content),
+					image: `https://${imageURL}`
 				};
 			})
 			.sort((a: Testimonial, b: Testimonial) => {

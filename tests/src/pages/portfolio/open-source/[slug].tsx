@@ -1,12 +1,13 @@
+import { getStaticPaths, OpenSourceProject } from '@pages/portfolio/open-source/[slug]';
+
 import { snapshotTest } from '@test-config/helpers';
 import { funding, partners } from '@test-config/mocks';
-import { getStaticPaths, OpenSourceProject } from '@pages/portfolio/open-source/[slug]';
 
 jest.mock('next/router', () => ({
 	...jest.requireActual('next/router'),
 	useRouter: jest.fn(() => ({
-		pathname: '/',
-		isFallback: false
+		isFallback: false,
+		pathname: '/'
 	}))
 }));
 
@@ -15,9 +16,9 @@ const testSlug = '2048';
 snapshotTest(
 	() => (
 		<OpenSourceProject
-			post={{ slug: testSlug, content: 'This is a test content' }}
 			funding={funding}
 			partners={partners}
+			post={{ content: 'This is a test content', slug: testSlug }}
 		/>
 	),
 	undefined,
@@ -27,9 +28,9 @@ snapshotTest(
 snapshotTest(
 	() => (
 		<OpenSourceProject
-			post={{ slug: 'nonexistent-post', content: 'This post is missing' }}
 			funding={funding}
 			partners={partners}
+			post={{ content: 'This post is missing', slug: 'nonexistent-post' }}
 		/>
 	),
 	undefined,
@@ -38,7 +39,7 @@ snapshotTest(
 
 snapshotTest(
 	() => (
-		<OpenSourceProject post={{ slug: '', content: 'This post is missing' }} funding={funding} partners={partners} />
+		<OpenSourceProject funding={funding} partners={partners} post={{ content: 'This post is missing', slug: '' }} />
 	),
 	undefined,
 	'OpenSourceProject'

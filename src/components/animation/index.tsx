@@ -1,23 +1,24 @@
 import { FC, useEffect, useRef } from 'react';
+
 import lottie, { AnimationConfig, AnimationItem } from 'lottie-web';
 
 type Props = {
+	className: string;
 	data: unknown;
-	width: number;
 	height: number;
 	options?: Omit<AnimationConfig, 'animationData'>;
-	className: string;
+	width: number;
 };
 
 const defaultOptions = {
-	loop: true,
 	autoplay: true,
+	loop: true,
 	rendererSettings: {
 		preserveAspectRatio: 'xMidYMid slice'
 	}
 };
 
-export const Animation: FC<Readonly<Props>> = ({ data: animationData, width, height, options, className }: Props) => {
+export const Animation: FC<Readonly<Props>> = ({ className, data: animationData, height, options, width }: Props) => {
 	const element = useRef<HTMLDivElement>(null);
 	const lottieInstance = useRef<AnimationItem | null>(null);
 
@@ -36,7 +37,7 @@ export const Animation: FC<Readonly<Props>> = ({ data: animationData, width, hei
 	}, [animationData, options]);
 
 	return (
-		<div className={className} style={{ width, height, marginLeft: 'auto', marginRight: 'auto' }} ref={element} />
+		<div className={className} ref={element} style={{ height, marginLeft: 'auto', marginRight: 'auto', width }} />
 	);
 };
 

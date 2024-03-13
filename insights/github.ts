@@ -1,7 +1,8 @@
 import { log } from '@scripts/shared';
-import { github } from './client';
 import type { GithubInsights } from '@scripts/types';
-import { asyncForEach, saveInsights, getContributions } from './utils';
+
+import { github } from './client';
+import { asyncForEach, getContributions, saveInsights } from './utils';
 
 export const getGithubRepositories = async (): Promise<any[]> => {
 	const repos1 = await github.get({ path: '/user/repos?per_page=100' });
@@ -29,39 +30,39 @@ export const getGithubInsights = async (): Promise<GithubInsights> => {
 			const contributions = await github.get({ path: `/repos/${full_name}/contributors` });
 
 			repositories.push({
+				contributions: contributions.map((item: any) => ({
+					count: item.contributions,
+					user: item.login
+				})),
+				createdAt: repo.created_at,
+				fork: repo.fork,
+				has_pages: repo.has_pages,
+				issues: repo.open_issues_count,
+				language: repo.language,
 				name: repo.name,
 				private: repo.private,
-				fork: repo.fork,
-				createdAt: repo.created_at,
-				updated_at: repo.updated_at,
 				size: repo.size,
 				stargazers: repo.stargazers_count,
-				watchers: repo.watchers_count,
-				language: repo.language,
-				issues: repo.open_issues_count,
-				contributions: contributions.map((item: any) => ({
-					user: item.login,
-					count: item.contributions
-				})),
-				has_pages: repo.has_pages
+				updated_at: repo.updated_at,
+				watchers: repo.watchers_count
 			});
 		});
 
 		const general = {
-			publicRepos: user.public_repos,
-			privateRepos: user.total_private_repos,
-			publicGists: user.public_gists,
-			privateGists: user.private_gists,
+			createdAt: user.created_at,
 			followers: user.followers,
 			following: user.following,
-			createdAt: user.created_at,
+			privateGists: user.private_gists,
+			privateRepos: user.total_private_repos,
+			publicGists: user.public_gists,
+			publicRepos: user.public_repos,
 			updatedAt: user.updated_at
 		};
 
 		const result = {
+			calendar,
 			error: false,
 			general,
-			calendar,
 			repositories,
 			updated: new Date().getTime()
 		};
@@ -71,9 +72,9 @@ export const getGithubInsights = async (): Promise<GithubInsights> => {
 		return result;
 	} catch (e) {
 		const result = {
+			calendar: null,
 			error: true,
 			general: null,
-			calendar: null,
 			repositories: null,
 			updated: new Date().getTime()
 		};

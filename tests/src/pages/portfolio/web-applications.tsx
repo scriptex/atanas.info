@@ -1,6 +1,7 @@
+import { PortfolioWebApps } from '@pages/portfolio/web-applications';
+
 import * as shared from '@scripts/shared';
 import { snapshotTest } from '@test-config/helpers';
-import { PortfolioWebApps } from '@pages/portfolio/web-applications';
 import { funding, partners } from '@test-config/mocks';
 
 jest.mock('@lib/mongodb', () => ({
@@ -12,20 +13,20 @@ snapshotTest(
 		<PortfolioWebApps
 			data={[
 				{
-					url: 'https://example.com',
-					title: 'Test web app 1',
 					description: 'This is just a testing web app',
-					skip: false,
 					image: '/images/test.png',
-					index: 0
+					index: 0,
+					skip: false,
+					title: 'Test web app 1',
+					url: 'https://example.com'
 				},
 				{
-					url: '',
-					title: 'Test web app 2',
 					description: 'This is just a testing web app',
-					skip: false,
 					image: '/images/test.png',
-					index: 1
+					index: 1,
+					skip: false,
+					title: 'Test web app 2',
+					url: ''
 				}
 			]}
 			funding={funding}
@@ -43,20 +44,20 @@ snapshotTest(
 		<PortfolioWebApps
 			data={[
 				{
-					url: 'https://example.com',
-					title: 'Test web app 1',
 					description: 'This is just a testing web app',
-					skip: false,
 					image: '/images/test.png',
-					index: 0
+					index: 0,
+					skip: false,
+					title: 'Test web app 1',
+					url: 'https://example.com'
 				},
 				{
-					url: '',
-					title: 'Test web app 2',
 					description: 'This is just a testing web app',
-					skip: false,
 					image: '/images/test.png',
-					index: 1
+					index: 1,
+					skip: false,
+					title: 'Test web app 2',
+					url: ''
 				}
 			]}
 			funding={funding}

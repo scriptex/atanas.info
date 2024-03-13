@@ -1,22 +1,23 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { AnchorHTMLAttributes, ButtonHTMLAttributes, FC, useMemo } from 'react';
+
 import Link, { LinkProps as ILinkProps } from 'next/link';
-import { FC, useMemo, AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
 
 import { composeClassName } from '@scripts/shared';
 import type { ReactChildren } from '@scripts/types';
 
 type CustomProps = {
-	unstyled?: boolean;
 	className?: string;
+	unstyled?: boolean;
 };
 
-type LinkProps = CustomProps & ILinkProps & { type: 'link'; children: ReactChildren };
+type LinkProps = CustomProps & ILinkProps & { children: ReactChildren; type: 'link' };
 type AnchorProps = CustomProps & AnchorHTMLAttributes<HTMLAnchorElement> & { type: 'anchor' };
 type ButtonProps = CustomProps & ButtonHTMLAttributes<HTMLButtonElement> & { type: 'button' | 'reset' | 'submit' };
 
 type Props = LinkProps | AnchorProps | ButtonProps;
 
-const getClassName = <T extends Props>({ unstyled, className }: T): string | undefined => {
+const getClassName = <T extends Props>({ className, unstyled }: T): string | undefined => {
 	if (unstyled) {
 		return className;
 	}
@@ -25,19 +26,19 @@ const getClassName = <T extends Props>({ unstyled, className }: T): string | und
 };
 
 const AnchorButton: FC<Readonly<AnchorProps>> = (props: AnchorProps) => {
-	const { type, unstyled, children, ...rest } = props;
+	const { children, type, unstyled, ...rest } = props;
 
 	return <a {...rest}>{children}</a>;
 };
 
 const LinkButton: FC<Readonly<LinkProps>> = (props: LinkProps) => {
-	const { type, unstyled, children, ...rest } = props;
+	const { children, type, unstyled, ...rest } = props;
 
 	return <Link {...rest}>{children}</Link>;
 };
 
 const DefaultButton: FC<Readonly<ButtonProps>> = (props: ButtonProps) => {
-	const { unstyled, children, ...rest } = props;
+	const { children, unstyled, ...rest } = props;
 
 	return <button {...rest}>{children}</button>;
 };

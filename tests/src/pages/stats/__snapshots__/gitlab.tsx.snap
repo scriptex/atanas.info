@@ -362,14 +362,6 @@ exports[`GitlabStats component Should render the GitlabStats component 1`] = `
           </li>
           <li>
             <a
-              href="/interactive-resume"
-              title="My interactive resume"
-            >
-              Interactive resume
-            </a>
-          </li>
-          <li>
-            <a
               href="/portfolio"
               title="My portfolio"
             >
@@ -571,7 +563,7 @@ exports[`GitlabStats component Should render the GitlabStats component 1`] = `
         >
           <div
             class="c-section__animation"
-            style="width: 150px; height: 150px; margin-left: auto; margin-right: auto;"
+            style="height: 150px; margin-left: auto; margin-right: auto; width: 150px;"
           />
           <h2>
             Stats
@@ -595,7 +587,7 @@ exports[`GitlabStats component Should render the GitlabStats component 1`] = `
                 Used languages:
               </span>
               <strong>
-                Vue, JavaScript, SCSS
+                JavaScript, SCSS, Vue
               </strong>
             </li>
             <li>
@@ -970,14 +962,6 @@ exports[`GitlabStats component Should render the GitlabStats component 1`] = `
             title="My resume"
           >
             Resume
-          </a>
-        </li>
-        <li>
-          <a
-            href="/interactive-resume"
-            title="My interactive resume"
-          >
-            Interactive resume
           </a>
         </li>
         <li>
@@ -1357,31 +1341,106 @@ exports[`GitlabStats component Should render the GitlabStats component 1`] = `
         </div>
       </div>
       <div
-        class="c-footer__referral"
+        class="c-referrals"
       >
-        <svg />
-        <div>
-          <h5>
-            Access the world's best freelance jobs.
-          </h5>
-          <p>
-            Your work. Your network. Your future.
-          </p>
-          <a
-            class="c-btn c-btn--small"
-            href="https://app.usebraintrust.com/r/atanas1/"
-            rel="noopener noreferrer"
-            target="_blank"
+        <div
+          class="c-referral"
+        >
+          <div
+            class="c-referral__animation"
+            style="height: 120px; margin-left: auto; margin-right: auto; width: 120px;"
+          />
+          <div
+            class="c-referral__content"
           >
-            Apply to Braintrust
-            <svg
-              class="c-svg-external-link"
+            <h5>
+              Access the world's best freelance jobs
+            </h5>
+            <p>
+              Your work. Your network. Your future.
+            </p>
+            <a
+              class="c-btn c-btn--small"
+              href="https://app.usebraintrust.com/r/atanas1/"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <use
-                xlink:href="#svg-external-link"
-              />
-            </svg>
-          </a>
+              Apply to Braintrust
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div
+          class="c-referral"
+        >
+          <div
+            class="c-referral__animation"
+            style="height: 120px; margin-left: auto; margin-right: auto; width: 120px;"
+          />
+          <div
+            class="c-referral__content"
+          >
+            <h5>
+              Hire the Top 3% of Freelance Talent®
+            </h5>
+            <p>
+              Trusted by leading brands and startups.
+            </p>
+            <a
+              class="c-btn c-btn--small"
+              href="https://www.toptal.com/qZg2WZ/worlds-top-talent"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Hire top talent
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div
+          class="c-referral"
+        >
+          <div
+            class="c-referral__animation"
+            style="height: 120px; margin-left: auto; margin-right: auto; width: 120px;"
+          />
+          <div
+            class="c-referral__content"
+          >
+            <h5>
+              Hire top tech, design, marketing talent
+            </h5>
+            <p>
+              Innovate, fast.
+            </p>
+            <a
+              class="c-btn c-btn--small"
+              href="https://app.usebraintrust.com/r/atanas1/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Hire on Braintrust
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -1751,14 +1810,6 @@ exports[`GitlabStats component Should render the GitlabStats component 2`] = `
           </li>
           <li>
             <a
-              href="/interactive-resume"
-              title="My interactive resume"
-            >
-              Interactive resume
-            </a>
-          </li>
-          <li>
-            <a
               href="/portfolio"
               title="My portfolio"
             >
@@ -1960,7 +2011,7 @@ exports[`GitlabStats component Should render the GitlabStats component 2`] = `
         >
           <div
             class="c-section__animation"
-            style="width: 150px; height: 150px; margin-left: auto; margin-right: auto;"
+            style="height: 150px; margin-left: auto; margin-right: auto; width: 150px;"
           />
           <h2>
             Stats
@@ -1984,7 +2035,7 @@ exports[`GitlabStats component Should render the GitlabStats component 2`] = `
                 Used languages:
               </span>
               <strong>
-                Vue, JavaScript, SCSS
+                JavaScript, SCSS, Vue
               </strong>
             </li>
             <li>
@@ -2363,14 +2414,6 @@ exports[`GitlabStats component Should render the GitlabStats component 2`] = `
         </li>
         <li>
           <a
-            href="/interactive-resume"
-            title="My interactive resume"
-          >
-            Interactive resume
-          </a>
-        </li>
-        <li>
-          <a
             href="/portfolio"
             title="My portfolio"
           >
@@ -2746,31 +2789,106 @@ exports[`GitlabStats component Should render the GitlabStats component 2`] = `
         </div>
       </div>
       <div
-        class="c-footer__referral"
+        class="c-referrals"
       >
-        <svg />
-        <div>
-          <h5>
-            Access the world's best freelance jobs.
-          </h5>
-          <p>
-            Your work. Your network. Your future.
-          </p>
-          <a
-            class="c-btn c-btn--small"
-            href="https://app.usebraintrust.com/r/atanas1/"
-            rel="noopener noreferrer"
-            target="_blank"
+        <div
+          class="c-referral"
+        >
+          <div
+            class="c-referral__animation"
+            style="height: 120px; margin-left: auto; margin-right: auto; width: 120px;"
+          />
+          <div
+            class="c-referral__content"
           >
-            Apply to Braintrust
-            <svg
-              class="c-svg-external-link"
+            <h5>
+              Access the world's best freelance jobs
+            </h5>
+            <p>
+              Your work. Your network. Your future.
+            </p>
+            <a
+              class="c-btn c-btn--small"
+              href="https://app.usebraintrust.com/r/atanas1/"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <use
-                xlink:href="#svg-external-link"
-              />
-            </svg>
-          </a>
+              Apply to Braintrust
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div
+          class="c-referral"
+        >
+          <div
+            class="c-referral__animation"
+            style="height: 120px; margin-left: auto; margin-right: auto; width: 120px;"
+          />
+          <div
+            class="c-referral__content"
+          >
+            <h5>
+              Hire the Top 3% of Freelance Talent®
+            </h5>
+            <p>
+              Trusted by leading brands and startups.
+            </p>
+            <a
+              class="c-btn c-btn--small"
+              href="https://www.toptal.com/qZg2WZ/worlds-top-talent"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Hire top talent
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div
+          class="c-referral"
+        >
+          <div
+            class="c-referral__animation"
+            style="height: 120px; margin-left: auto; margin-right: auto; width: 120px;"
+          />
+          <div
+            class="c-referral__content"
+          >
+            <h5>
+              Hire top tech, design, marketing talent
+            </h5>
+            <p>
+              Innovate, fast.
+            </p>
+            <a
+              class="c-btn c-btn--small"
+              href="https://app.usebraintrust.com/r/atanas1/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Hire on Braintrust
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -3140,14 +3258,6 @@ exports[`GitlabStats component Should render the GitlabStats component 3`] = `
           </li>
           <li>
             <a
-              href="/interactive-resume"
-              title="My interactive resume"
-            >
-              Interactive resume
-            </a>
-          </li>
-          <li>
-            <a
               href="/portfolio"
               title="My portfolio"
             >
@@ -3349,7 +3459,7 @@ exports[`GitlabStats component Should render the GitlabStats component 3`] = `
         >
           <div
             class="c-section__animation"
-            style="width: 150px; height: 150px; margin-left: auto; margin-right: auto;"
+            style="height: 150px; margin-left: auto; margin-right: auto; width: 150px;"
           />
           <h2>
             Stats
@@ -3630,14 +3740,6 @@ exports[`GitlabStats component Should render the GitlabStats component 3`] = `
             title="My resume"
           >
             Resume
-          </a>
-        </li>
-        <li>
-          <a
-            href="/interactive-resume"
-            title="My interactive resume"
-          >
-            Interactive resume
           </a>
         </li>
         <li>
@@ -4017,31 +4119,106 @@ exports[`GitlabStats component Should render the GitlabStats component 3`] = `
         </div>
       </div>
       <div
-        class="c-footer__referral"
+        class="c-referrals"
       >
-        <svg />
-        <div>
-          <h5>
-            Access the world's best freelance jobs.
-          </h5>
-          <p>
-            Your work. Your network. Your future.
-          </p>
-          <a
-            class="c-btn c-btn--small"
-            href="https://app.usebraintrust.com/r/atanas1/"
-            rel="noopener noreferrer"
-            target="_blank"
+        <div
+          class="c-referral"
+        >
+          <div
+            class="c-referral__animation"
+            style="height: 120px; margin-left: auto; margin-right: auto; width: 120px;"
+          />
+          <div
+            class="c-referral__content"
           >
-            Apply to Braintrust
-            <svg
-              class="c-svg-external-link"
+            <h5>
+              Access the world's best freelance jobs
+            </h5>
+            <p>
+              Your work. Your network. Your future.
+            </p>
+            <a
+              class="c-btn c-btn--small"
+              href="https://app.usebraintrust.com/r/atanas1/"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <use
-                xlink:href="#svg-external-link"
-              />
-            </svg>
-          </a>
+              Apply to Braintrust
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div
+          class="c-referral"
+        >
+          <div
+            class="c-referral__animation"
+            style="height: 120px; margin-left: auto; margin-right: auto; width: 120px;"
+          />
+          <div
+            class="c-referral__content"
+          >
+            <h5>
+              Hire the Top 3% of Freelance Talent®
+            </h5>
+            <p>
+              Trusted by leading brands and startups.
+            </p>
+            <a
+              class="c-btn c-btn--small"
+              href="https://www.toptal.com/qZg2WZ/worlds-top-talent"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Hire top talent
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div
+          class="c-referral"
+        >
+          <div
+            class="c-referral__animation"
+            style="height: 120px; margin-left: auto; margin-right: auto; width: 120px;"
+          />
+          <div
+            class="c-referral__content"
+          >
+            <h5>
+              Hire top tech, design, marketing talent
+            </h5>
+            <p>
+              Innovate, fast.
+            </p>
+            <a
+              class="c-btn c-btn--small"
+              href="https://app.usebraintrust.com/r/atanas1/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Hire on Braintrust
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -4417,14 +4594,6 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
           </li>
           <li>
             <a
-              href="/interactive-resume"
-              title="My interactive resume"
-            >
-              Interactive resume
-            </a>
-          </li>
-          <li>
-            <a
               href="/portfolio"
               title="My portfolio"
             >
@@ -4626,7 +4795,7 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
         >
           <div
             class="c-section__animation"
-            style="width: 150px; height: 150px; margin-left: auto; margin-right: auto;"
+            style="height: 150px; margin-left: auto; margin-right: auto; width: 150px;"
           />
           <h2>
             Stats
@@ -4650,7 +4819,7 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
                 Used languages:
               </span>
               <strong>
-                Vue, JavaScript, SCSS
+                JavaScript, SCSS, Vue
               </strong>
             </li>
             <li>
@@ -5025,14 +5194,6 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
             title="My resume"
           >
             Resume
-          </a>
-        </li>
-        <li>
-          <a
-            href="/interactive-resume"
-            title="My interactive resume"
-          >
-            Interactive resume
           </a>
         </li>
         <li>
@@ -5412,31 +5573,106 @@ exports[`Test the GitlabStats page with fake timers 1`] = `
         </div>
       </div>
       <div
-        class="c-footer__referral"
+        class="c-referrals"
       >
-        <svg />
-        <div>
-          <h5>
-            Access the world's best freelance jobs.
-          </h5>
-          <p>
-            Your work. Your network. Your future.
-          </p>
-          <a
-            class="c-btn c-btn--small"
-            href="https://app.usebraintrust.com/r/atanas1/"
-            rel="noopener noreferrer"
-            target="_blank"
+        <div
+          class="c-referral"
+        >
+          <div
+            class="c-referral__animation"
+            style="height: 120px; margin-left: auto; margin-right: auto; width: 120px;"
+          />
+          <div
+            class="c-referral__content"
           >
-            Apply to Braintrust
-            <svg
-              class="c-svg-external-link"
+            <h5>
+              Access the world's best freelance jobs
+            </h5>
+            <p>
+              Your work. Your network. Your future.
+            </p>
+            <a
+              class="c-btn c-btn--small"
+              href="https://app.usebraintrust.com/r/atanas1/"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <use
-                xlink:href="#svg-external-link"
-              />
-            </svg>
-          </a>
+              Apply to Braintrust
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div
+          class="c-referral"
+        >
+          <div
+            class="c-referral__animation"
+            style="height: 120px; margin-left: auto; margin-right: auto; width: 120px;"
+          />
+          <div
+            class="c-referral__content"
+          >
+            <h5>
+              Hire the Top 3% of Freelance Talent®
+            </h5>
+            <p>
+              Trusted by leading brands and startups.
+            </p>
+            <a
+              class="c-btn c-btn--small"
+              href="https://www.toptal.com/qZg2WZ/worlds-top-talent"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Hire top talent
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div
+          class="c-referral"
+        >
+          <div
+            class="c-referral__animation"
+            style="height: 120px; margin-left: auto; margin-right: auto; width: 120px;"
+          />
+          <div
+            class="c-referral__content"
+          >
+            <h5>
+              Hire top tech, design, marketing talent
+            </h5>
+            <p>
+              Innovate, fast.
+            </p>
+            <a
+              class="c-btn c-btn--small"
+              href="https://app.usebraintrust.com/r/atanas1/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Hire on Braintrust
+              <svg
+                class="c-svg-external-link"
+              >
+                <use
+                  xlink:href="#svg-external-link"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>

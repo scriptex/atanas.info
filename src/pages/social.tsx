@@ -1,15 +1,17 @@
-import Script from 'next/script';
 import type { FC } from 'react';
+
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import Script from 'next/script';
+
+import { Animation, Icon, Layout, Lines, LinkedInBadge, Section, SocialMusic, Title } from '@components';
+import { SocialItem, socialItems } from '@data/social';
+import type { LastFMInsights } from '@insights/utils';
+import { getData, queryLastFM } from '@lib/mongodb';
+import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
+import { useNetworkState } from '@scripts/shared';
+import type { SocialPageData } from '@scripts/types';
 
 import socialMedia from '@data/lotties/social-media.json';
-import { useNetworkState } from '@scripts/shared';
-import type { LastFMInsights } from '@insights/utils';
-import type { SocialPageData } from '@scripts/types';
-import { getData, queryLastFM } from '@lib/mongodb';
-import { SocialItem, socialItems } from '@data/social';
-import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
-import { Icon, Lines, Layout, Section, Animation, SocialMusic, LinkedInBadge, Title } from '@components';
 
 export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data, funding, partners }) => {
 	const online = useNetworkState();
@@ -19,17 +21,17 @@ export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>
 			<Title text="Social" />
 
 			<Section
+				additionalElements={
+					<Animation className="c-section__animation" data={socialMedia} height={150} width={150} />
+				}
+				hasButton
+				hasShell={false}
 				id="social"
 				title="Social"
-				hasShell={false}
-				hasButton
-				additionalElements={
-					<Animation data={socialMedia} width={150} height={150} className="c-section__animation" />
-				}
 			>
-				<Script src="//platform.twitter.com/widgets.js" async defer />
+				<Script async defer src="//platform.twitter.com/widgets.js" />
 
-				<Script src="//profile.codersrank.io/widget/widget.js" async defer />
+				<Script async defer src="//profile.codersrank.io/widget/widget.js" />
 
 				<Lines />
 
@@ -43,13 +45,13 @@ export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>
 							</div>
 
 							{socialItems.map((item: SocialItem) => (
-								<div key={item.index} className="o-grid__item xs-12 sm-6">
+								<div className="o-grid__item xs-12 sm-6" key={item.index}>
 									<h3>{item.title}</h3>
 
 									{online ? (
 										item.element
 									) : (
-										<Icon name="svg-disconnected " className="svg-disconnected" />
+										<Icon className="svg-disconnected" name="svg-disconnected " />
 									)}
 								</div>
 							))}
@@ -61,7 +63,7 @@ export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>
 					<h2>Social feed</h2>
 				</header>
 
-				<Script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer />
+				<Script data-use-service-core defer src="https://static.elfsight.com/platform/platform.js" />
 
 				<div className="elfsight-app-6509195d-9c2d-4028-aad0-bfe6cc2c0676" />
 

@@ -1,5 +1,5 @@
-import * as shared from '@scripts/shared';
 import { Social } from '@pages/social';
+import * as shared from '@scripts/shared';
 import { snapshotTest, test } from '@test-config/helpers';
 import { funding, lastFmInsights, partners } from '@test-config/mocks';
 

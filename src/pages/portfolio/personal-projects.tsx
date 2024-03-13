@@ -1,13 +1,14 @@
-import Link from 'next/link';
 import type { FC } from 'react';
-import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import { Routes } from '@data/routes';
-import { personalProjects } from '@data/projects';
-import { useCurrentPageParam } from '@scripts/shared';
-import { portfolioSectionProps } from '@data/pages';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import Link from 'next/link';
+
 import { Layout, Section, SectionGrid, Title } from '@components';
+import { portfolioSectionProps } from '@data/pages';
+import { personalProjects } from '@data/projects';
+import { Routes } from '@data/routes';
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
+import { useCurrentPageParam } from '@scripts/shared';
 import type { PortfolioPersonalProjectsPageData } from '@scripts/types';
 
 export const PortfolioPersonalProjects: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
@@ -23,7 +24,7 @@ export const PortfolioPersonalProjects: FC<InferGetStaticPropsType<typeof getSta
 			<Section
 				{...portfolioSectionProps}
 				actions={
-					<Link href={Routes.PORTFOLIO} className="c-btn">
+					<Link className="c-btn" href={Routes.PORTFOLIO}>
 						Go back
 					</Link>
 				}
@@ -32,10 +33,10 @@ export const PortfolioPersonalProjects: FC<InferGetStaticPropsType<typeof getSta
 
 				<SectionGrid<true>
 					data={personalProjects}
-					page={page}
-					route={Routes.PORTFOLIO_PERSONAL_PROJECTS}
 					linkType="external"
+					page={page}
 					pagination
+					route={Routes.PORTFOLIO_PERSONAL_PROJECTS}
 				/>
 			</Section>
 		</Layout>

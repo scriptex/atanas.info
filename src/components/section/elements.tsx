@@ -1,8 +1,8 @@
 import { FC, useContext, useState } from 'react';
 
+import { Button, ExternalLink, Icon } from '@components';
 import { AppContext } from '@data/context';
 import { composeClassName } from '@scripts/shared';
-import { Icon, Button, ExternalLink } from '@components';
 
 import type { Props } from './types';
 
@@ -11,13 +11,13 @@ const HeaderWrapper: FC<Pick<Props, 'children' | 'hasShell'>> = ({ children, has
 };
 
 export const SectionElements: FC<Readonly<Props>> = ({
-	title,
 	actions,
+	additionalElements,
 	children,
-	subtitle,
-	hasShell = true,
 	hasButton = true,
-	additionalElements
+	hasShell = true,
+	subtitle,
+	title
 }: Props) => {
 	const [open, setOpen] = useState(false);
 	const { setContactVisible } = useContext(AppContext);
@@ -41,26 +41,26 @@ export const SectionElements: FC<Readonly<Props>> = ({
 
 			{hasButton && (
 				<div className="c-section__actions">
-					<Button type="button" onClick={() => setOpen(!open)}>
+					<Button onClick={() => setOpen(!open)} type="button">
 						Get in touch
 					</Button>
 
 					<ul className={composeClassName('c-section__actions-list', open ? ['open'] : [])}>
 						<li>
-							<Button type="button" onClick={onClose} className="c-section__actions-close">
+							<Button className="c-section__actions-close" onClick={onClose} type="button">
 								Close
 							</Button>
 						</li>
 
 						<li>
 							<Button
-								type="button"
 								onClick={() => {
 									onClose();
 									setContactVisible(true);
 								}}
+								type="button"
 							>
-								<Icon name="svg-email" className="c-section__actions-icon" />
+								<Icon className="c-section__actions-icon" name="svg-email" />
 								<span>Contact me</span>
 								<strong>directly</strong>
 							</Button>
@@ -68,11 +68,11 @@ export const SectionElements: FC<Readonly<Props>> = ({
 
 						<li>
 							<ExternalLink
-								href="https://app.usebraintrust.com/talent/782/"
 								className="c-btn"
+								href="https://app.usebraintrust.com/talent/782/"
 								onClick={onClose}
 							>
-								<Icon name="svg-braintrust" className="c-section__actions-icon" />
+								<Icon className="c-section__actions-icon" name="svg-braintrust" />
 								<span>Hire me on</span>
 								<strong>Braintrust</strong>
 							</ExternalLink>
@@ -80,11 +80,11 @@ export const SectionElements: FC<Readonly<Props>> = ({
 
 						<li>
 							<ExternalLink
-								href="https://www.toptal.com/resume/atanas-atanasov"
 								className="c-btn"
+								href="https://www.toptal.com/resume/atanas-atanasov"
 								onClick={onClose}
 							>
-								<Icon name="svg-toptal" className="c-section__actions-icon" />
+								<Icon className="c-section__actions-icon" name="svg-toptal" />
 								<span>Hire me on</span>
 								<strong>Toptal</strong>
 							</ExternalLink>

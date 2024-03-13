@@ -1,9 +1,9 @@
 import { act } from '@testing-library/react';
 
-import { Status } from '@scripts/types';
 import { Contact } from '@components';
 import { AppContext } from '@data/context';
-import { test, mockFetch, snapshotTest } from '@test-config/helpers';
+import { Status } from '@scripts/types';
+import { mockFetch, snapshotTest, test } from '@test-config/helpers';
 
 const fetch = global.fetch;
 const context = { contactVisible: true, setContactVisible: jest.fn() };

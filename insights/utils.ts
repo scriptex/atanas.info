@@ -1,30 +1,30 @@
 import { load } from 'cheerio';
 import type { LastFMImage, LastFMUserResponse } from 'lastfm-node-client';
 
+import clientPromise, { Query, queryGithub, queryGitlab, queryLastFM, queryNPM } from '@lib/mongodb';
 import { log } from '@scripts/shared';
-import clientPromise, { Query, queryNPM, queryGithub, queryGitlab, queryLastFM } from '@lib/mongodb';
 
 export type Project = {
-	readonly url: string;
 	readonly name: string;
+	readonly url: string;
 };
 
 export type Contribution = {
-	count: number | null;
 	color: string;
+	count: number | null;
 };
 
 export type LastFMAlbum = {
-	name: string;
-	images: LastFMImage[];
 	artist: string;
+	images: LastFMImage[];
+	name: string;
 };
 
 export type LastFMInsights = {
-	info: LastFMUserResponse | null;
 	error: boolean;
-	updated: number;
+	info: LastFMUserResponse | null;
 	topAlbums: LastFMAlbum[];
+	updated: number;
 	weeklyAlbumChart: LastFMAlbum[];
 };
 
@@ -61,8 +61,8 @@ export const getContributions = async (url = 'https://github.com/scriptex'): Pro
 					return {
 						...data,
 						[date]: {
-							count: parseInt($(rect).text()[0], 10),
-							color: $(rect).attr('fill')
+							color: $(rect).attr('fill'),
+							count: parseInt($(rect).text()[0], 10)
 						}
 					};
 				}, {});

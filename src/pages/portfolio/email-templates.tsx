@@ -1,15 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from 'next/link';
-import Modal from 'react-modal';
 import { FC, useState } from 'react';
-import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import { Routes } from '@data/routes';
-import { emailTemplates } from '@data/projects';
-import { portfolioSectionProps } from '@data/pages';
+import Modal from 'react-modal';
+
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import Link from 'next/link';
+
 import { Button, Layout, Section, Title } from '@components';
-import type { PortfolioEmailTemplatesPageData } from '@scripts/types';
+import { portfolioSectionProps } from '@data/pages';
+import { emailTemplates } from '@data/projects';
+import { Routes } from '@data/routes';
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
+import type { PortfolioEmailTemplatesPageData } from '@scripts/types';
 
 type Props = {
 	template: string;
@@ -22,13 +24,13 @@ const PortfolioEmailTemplate: FC<Readonly<Props>> = ({ template }: Props) => {
 
 	return (
 		<>
-			<Button type="button" onClick={toggle} unstyled>
+			<Button onClick={toggle} type="button" unstyled>
 				<iframe src={template} style={{ pointerEvents: 'none' }} title={template} />
 			</Button>
 
-			<Modal isOpen={open} onRequestClose={toggle} ariaHideApp={false}>
+			<Modal ariaHideApp={false} isOpen={open} onRequestClose={toggle}>
 				<div className="o-shell">
-					<Button type="button" onClick={toggle} unstyled>
+					<Button onClick={toggle} type="button" unstyled>
 						&times;
 					</Button>
 
@@ -46,7 +48,7 @@ export const PortfolioEmailTemplates: FC<InferGetStaticPropsType<typeof getStati
 		<Section
 			{...portfolioSectionProps}
 			actions={
-				<Link href={Routes.PORTFOLIO} className="c-btn">
+				<Link className="c-btn" href={Routes.PORTFOLIO}>
 					Go back
 				</Link>
 			}
@@ -55,7 +57,7 @@ export const PortfolioEmailTemplates: FC<InferGetStaticPropsType<typeof getStati
 
 			<div className="c-email-templates">
 				{emailTemplates.map(template => (
-					<PortfolioEmailTemplate template={template} key={template} />
+					<PortfolioEmailTemplate key={template} template={template} />
 				))}
 			</div>
 		</Section>

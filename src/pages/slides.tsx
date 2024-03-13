@@ -1,11 +1,13 @@
 import { FC, useState } from 'react';
+
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import presentation from '@data/lotties/presentation.json';
+import { Animation, Layout, Loader, Section, SectionNav, Title } from '@components';
+import { getFundingFromCMS, getPartnersFromCMS, getSlidesFromCMS, Slide } from '@scripts/cms';
 import { composeClassName } from '@scripts/shared';
 import type { SlidesPageData } from '@scripts/types';
-import { Loader, Section, Animation, SectionNav, Layout, Title } from '@components';
-import { Slide, getFundingFromCMS, getPartnersFromCMS, getSlidesFromCMS } from '@scripts/cms';
+
+import presentation from '@data/lotties/presentation.json';
 
 export const Slides: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, funding, partners }) => {
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -15,33 +17,33 @@ export const Slides: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ dat
 			<Title text="Slides" />
 
 			<Section
+				additionalElements={
+					<Animation className="c-section__animation" data={presentation} height={150} width={150} />
+				}
+				className="fullsize-background"
+				hasButton
 				id="slides"
 				style={{ backgroundImage: 'url(images/temp/presentation.jpg)' }}
 				title="Slides"
-				className="fullsize-background"
-				hasButton
-				additionalElements={
-					<Animation data={presentation} width={150} height={150} className="c-section__animation" />
-				}
 			>
-				<SectionNav name="title" data={data} active={activeIndex} onClick={setActiveIndex} />
+				<SectionNav active={activeIndex} data={data} name="title" onClick={setActiveIndex} />
 
 				<div className="c-section__body">
 					{data.map((slide: Slide, index: number) => (
 						<div
-							key={slide.title}
 							className={composeClassName(
 								'c-section__frame',
 								[],
 								activeIndex === index ? ['current'] : []
 							)}
+							key={slide.title}
 						>
 							<Loader />
 
 							<iframe
+								loading="lazy"
 								src={`${slide.url}/embed?start=false&loop=false&delayms=3000`}
 								title={slide.description}
-								loading="lazy"
 							/>
 						</div>
 					))}

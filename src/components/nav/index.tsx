@@ -1,10 +1,10 @@
-import { FC, useMemo, useCallback } from 'react';
+import { FC, useCallback, useMemo } from 'react';
 
-import { composeClassName } from '@scripts/shared';
+import { Button } from '@components';
 import { MenuItem, menuItems } from '@data/menu';
+import { composeClassName } from '@scripts/shared';
 
 import { Anchor } from './anchor';
-import { Button } from '@components';
 import type { Props } from './types';
 
 const menuItemsWithDropdown = menuItems.filter(item => item.links?.length && item.links?.length > 0);
@@ -25,21 +25,21 @@ export const Nav: FC<Readonly<Props>> = ({ active = -1, inline = false, onClick,
 			<div className={inline ? 'o-shell' : 'c-nav__inner'}>
 				<ul>
 					{menuItems.map(({ links, ...rest }: MenuItem, index: number) => (
-						<li key={rest.index} className={active === index ? 'is--active' : undefined}>
+						<li className={active === index ? 'is--active' : undefined} key={rest.index}>
 							<Anchor {...rest} onClick={anchorClick} />
 
 							{links && links.length > 0 && (
 								<>
 									{inline ? null : (
 										<Button
-											type="button"
+											aria-label="Click to open dropdown"
 											onClick={() => {
 												const noActive = active === -1;
 
 												typeof setActive === 'function' && setActive(noActive ? index : -1);
 											}}
+											type="button"
 											unstyled
-											aria-label="Click to open dropdown"
 										/>
 									)}
 
@@ -61,15 +61,15 @@ export const Nav: FC<Readonly<Props>> = ({ active = -1, inline = false, onClick,
 				{inline
 					? null
 					: menuItemsWithDropdown.map(item => (
-							<ul key={item.index} className={item.index === active ? 'is--visible' : undefined}>
+							<ul className={item.index === active ? 'is--visible' : undefined} key={item.index}>
 								<li>
 									<Button
-										type="button"
+										aria-label="Click to close dropdown"
 										onClick={() => {
 											typeof setActive === 'function' && setActive(-1);
 										}}
+										type="button"
 										unstyled
-										aria-label="Click to close dropdown"
 									/>
 								</li>
 

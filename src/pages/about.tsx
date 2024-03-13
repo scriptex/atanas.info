@@ -1,14 +1,16 @@
-import Image from 'next/image';
 import type { FC } from 'react';
-import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import book from '@data/lotties/book.json';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import Image from 'next/image';
+
+import { Animation, Icon, Layout, Section, Title } from '@components';
+import { BioEntry, getBioFromCMS, getFundingFromCMS, getOwnerDetailsFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { useNetworkState } from '@scripts/shared';
 import type { AboutPageProps } from '@scripts/types';
-import { Icon, Title, Layout, Section, Animation } from '@components';
-import { BioEntry, getBioFromCMS, getFundingFromCMS, getOwnerDetailsFromCMS, getPartnersFromCMS } from '@scripts/cms';
 
-export const About: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ bio, owner, partners, funding }) => {
+import book from '@data/lotties/book.json';
+
+export const About: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ bio, funding, owner, partners }) => {
 	const online = useNetworkState();
 
 	return (
@@ -16,17 +18,17 @@ export const About: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ bio,
 			<Title text="About" />
 
 			<Section
+				additionalElements={<Animation className="c-section__animation" data={book} height={200} width={200} />}
+				className="c-article fullsize-background"
+				hasButton
 				id="about"
 				style={{ backgroundImage: 'url(/images/temp/desktop.jpg)' }}
 				title="About me"
-				className="c-article fullsize-background"
-				hasButton
-				additionalElements={<Animation data={book} width={200} height={200} className="c-section__animation" />}
 			>
 				{online ? (
-					<Image alt={owner.alt} src={owner.image} width={240} height={240} loading="lazy" />
+					<Image alt={owner.alt} height={240} loading="lazy" src={owner.image} width={240} />
 				) : (
-					<Icon name="svg-disconnected " className="svg-disconnected" width={240} height={240} />
+					<Icon className="svg-disconnected" height={240} name="svg-disconnected " width={240} />
 				)}
 
 				{bio.map((item: BioEntry, index: number) => (
@@ -48,8 +50,8 @@ export const About: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ bio,
 export const getStaticProps: GetStaticProps<AboutPageProps> = async () => ({
 	props: {
 		bio: await getBioFromCMS(),
-		owner: await getOwnerDetailsFromCMS(),
 		funding: await getFundingFromCMS(),
+		owner: await getOwnerDetailsFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });

@@ -1,15 +1,16 @@
-import { format } from 'date-fns/format';
 import { FC, Fragment } from 'react';
+
+import { format } from 'date-fns/format';
 
 import { ResumeEntry } from '@components';
 import type { Certificate, Education } from '@scripts/cms';
 
 type Props = {
-	education: Education[];
 	certificates: Certificate[];
+	education: Education[];
 };
 
-export const ResumeEducation: FC<Readonly<Props>> = ({ education, certificates }: Props) => (
+export const ResumeEducation: FC<Readonly<Props>> = ({ certificates, education }: Props) => (
 	<div className="c-resume__block">
 		<div className="o-grid">
 			<div className="o-grid__item xs-12 sm-6">
@@ -21,7 +22,7 @@ export const ResumeEducation: FC<Readonly<Props>> = ({ education, certificates }
 							<strong>{item.degree}</strong>
 						</p>
 
-						<ResumeEntry place={item.school} period={item.period} />
+						<ResumeEntry period={item.period} place={item.school} />
 					</Fragment>
 				))}
 			</div>

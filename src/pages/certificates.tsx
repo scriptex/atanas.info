@@ -1,30 +1,32 @@
-import Image from 'next/image';
 import type { FC } from 'react';
+
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import Image from 'next/image';
+
+import { Animation, ExternalLink, Layout, Loader, Section, Title } from '@components';
+import { Certificate, getCertificatesFromCMS, getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
+import type { CertificatesPageProps } from '@scripts/types';
 
 import certificate from '@data/lotties/certificate.json';
-import type { CertificatesPageProps } from '@scripts/types';
-import { Layout, Loader, Section, Animation, ExternalLink, Title } from '@components';
-import { Certificate, getCertificatesFromCMS, getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 
 export const Certificates: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, funding, partners }) => (
 	<Layout funding={funding} partners={partners}>
 		<Title text="Certificates" />
 
 		<Section
+			additionalElements={
+				<Animation className="c-section__animation" data={certificate} height={150} width={150} />
+			}
+			hasButton
 			id="certificates"
 			title="Certificates"
-			hasButton
-			additionalElements={
-				<Animation data={certificate} width={150} height={150} className="c-section__animation" />
-			}
 		>
 			<div className="c-section__body o-grid">
 				{data.map((item: Certificate) => (
 					<div className="o-grid__item xs-12 sm-6" key={item.index}>
-						<ExternalLink href={item.pdf} className="c-certificate">
+						<ExternalLink className="c-certificate" href={item.pdf}>
 							<Loader />
-							<Image src={item.image} alt={item.title} width="818" height="578" loading="lazy" />
+							<Image alt={item.title} height="578" loading="lazy" src={item.image} width="818" />
 						</ExternalLink>
 					</div>
 				))}

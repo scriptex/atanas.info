@@ -1,92 +1,92 @@
 import { ExternalLink } from '@components';
 
 export type SocialItem = {
+	element: JSX.Element;
 	index: number;
 	title: string;
-	element: JSX.Element;
 };
 
 export const socialItems: SocialItem[] = [
 	{
+		element: <codersrank-widget branding={false} username="scriptex" />,
 		index: 0,
-		title: 'Codersrank Profile',
-		element: <codersrank-widget username="scriptex" branding={false} />
+		title: 'Codersrank Profile'
 	},
 	{
-		index: 1,
-		title: 'Github Profile',
 		element: (
 			<iframe
+				className="github-frame"
+				height={400}
+				loading="lazy"
 				src="https://github.com/sponsors/scriptex/card"
 				title="Sponsor scriptex"
 				width={600}
-				height={400}
-				loading="lazy"
-				className="github-frame"
 			/>
-		)
+		),
+		index: 1,
+		title: 'Github Profile'
 	},
 	{
-		index: 2,
-		title: 'Twitter Profile',
 		element: (
 			<a
-				href="//twitter.com/scriptexbg"
-				data-dnt="true"
 				className="twitter-timeline"
-				data-theme="dark"
+				data-dnt="true"
 				data-height={400}
+				data-theme="dark"
+				href="//twitter.com/scriptexbg"
 			>
 				@scriptexbg on Twitter
 			</a>
-		)
+		),
+		index: 2,
+		title: 'Twitter Profile'
 	},
 	{
-		index: 3,
-		title: 'YouTube Channel',
 		element: (
 			<iframe
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				className="youtube-frame"
+				height={400}
+				loading="lazy"
 				src="https://www.youtube.com/embed/?list=PLgLu3XOevO8_G7n5n9Mmoe-xPwuwpGDYr"
 				title="YouTube video player"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				height={400}
-				loading="lazy"
-				className="youtube-frame"
 			/>
-		)
+		),
+		index: 3,
+		title: 'YouTube Channel'
 	},
 	{
-		index: 4,
-		title: 'Spotify playlist',
 		element: (
 			<iframe
-				src="https://open.spotify.com/embed/playlist/37i9dQZF1EpzZomgLqaOnp?theme=0"
-				title="Spotify playlist"
 				allow="encrypted-media"
-				width="100%"
+				className="spotify-frame"
 				height={400}
 				loading="lazy"
-				className="spotify-frame"
+				src="https://open.spotify.com/embed/playlist/37i9dQZF1EpzZomgLqaOnp?theme=0"
+				title="Spotify playlist"
+				width="100%"
 			/>
-		)
+		),
+		index: 4,
+		title: 'Spotify playlist'
 	},
 	{
-		index: 5,
-		title: 'Stackoverflow flair',
 		element: (
 			<div className="stackoverflow-frame">
 				<ExternalLink href="https://stackoverflow.com/users/4140082/atanas-atanasov">
 					{/* eslint-disable-next-line @next/next/no-img-element */}
 					<img
-						src="https://stackoverflow.com/users/flair/4140082.png"
 						alt="profile for Atanas Atanasov at Stack Overflow, Q&amp;A for professional and enthusiast programmers"
-						title="profile for Atanas Atanasov at Stack Overflow, Q&amp;A for professional and enthusiast programmers"
-						width={208}
 						height={58}
 						loading="lazy"
+						src="https://stackoverflow.com/users/flair/4140082.png"
+						title="profile for Atanas Atanasov at Stack Overflow, Q&amp;A for professional and enthusiast programmers"
+						width={208}
 					/>
 				</ExternalLink>
 			</div>
-		)
+		),
+		index: 5,
+		title: 'Stackoverflow flair'
 	}
 ];

@@ -1,29 +1,30 @@
 import type { ReactNode } from 'react';
 
-import type { ForceNode } from '@data/skills-list';
 import type { WebProject } from '@data/projects';
+import type { ForceNode } from '@data/skills-list';
 import type { LastFMInsights } from '@insights/utils';
+
 import type {
-	Slide,
-	Video,
 	Article,
 	BioEntry,
-	ResumeData,
 	Certificate,
-	Testimonial,
+	FundingNetwork,
 	OwnerDetails,
+	ResumeData,
+	Slide,
+	Testimonial,
 	TimelineItem,
-	FundingNetwork
+	Video
 } from './cms';
 
 export type Nullable<T> = T | null;
 
 export type Track = {
-	url: string;
 	metaData: {
-		title: string;
 		artist: string;
+		title: string;
 	};
+	url: string;
 };
 
 export type GithubCount = {
@@ -35,60 +36,60 @@ export type GithubContribution = GithubCount & {
 };
 
 export type GithubRepository = {
+	contributions: GithubContribution[];
+	createdAt: string;
+	fork: boolean;
+	has_pages: boolean;
+	issues: number;
+	language: string | null;
 	name: string;
 	private: boolean;
-	fork: boolean;
-	createdAt: string;
-	updated_at: string;
 	size: number;
 	stargazers: number;
+	updated_at: string;
 	watchers: number;
-	language: string | null;
-	issues: number;
-	contributions: GithubContribution[];
-	has_pages: boolean;
 };
 
 export type GithubInsights = {
+	calendar: Nullable<Record<string, GithubCount>>;
 	error: boolean;
 	general: Nullable<{
-		publicRepos: number;
-		privateRepos: number;
-		publicGists: number;
-		privateGists: number;
+		createdAt: string;
 		followers: number;
 		following: number;
-		createdAt: string;
+		privateGists: number;
+		privateRepos: number;
+		publicGists: number;
+		publicRepos: number;
 		updatedAt: string;
 	}>;
-	updated: Nullable<number>;
-	calendar: Nullable<Record<string, GithubCount>>;
 	repositories: Nullable<GithubRepository[]>;
+	updated: Nullable<number>;
 };
 
 export type GitlabRepository = {
-	name: string;
-	private: boolean;
-	fork: number;
 	createdAt: string;
-	updated_at: string;
+	fork: number;
+	issues?: number;
+	languages: Record<string, number | void>;
+	name: string;
+	owner: string;
+	private: boolean;
 	size?: number;
 	stargazers: number;
-	languages: Record<string, number | void>;
-	issues?: number;
-	owner: string;
+	updated_at: string;
 };
 
 export type GitlabInsights = {
+	calendar: Nullable<Record<string, number>>;
 	error: boolean;
 	general: Nullable<{
-		repos: number;
 		createdAt: string;
+		repos: number;
 		updatedAt: string;
 	}>;
-	updated: Nullable<number>;
-	calendar: Nullable<Record<string, number>>;
 	repositories: Nullable<GitlabRepository[]>;
+	updated: Nullable<number>;
 };
 
 export type ReactChild = string | ReactNode | ReactNode[];
@@ -96,15 +97,15 @@ export type ReactChild = string | ReactNode | ReactNode[];
 export type ReactChildren = ReactChild | ReactChild[];
 
 export enum Status {
+	DEFAULT = 'DEFAULT',
 	ERROR = 'ERROR',
-	SUCCESS = 'SUCCESS',
-	DEFAULT = 'DEFAULT'
+	SUCCESS = 'SUCCESS'
 }
 
 export type FormData = {
 	email: string;
-	message: string;
 	honeypot: string;
+	message: string;
 };
 
 export type GithubProfileData = {
@@ -113,13 +114,13 @@ export type GithubProfileData = {
 };
 
 export type Package = {
+	author: string;
+	description: string;
+	downloads: number;
+	homepage: string;
+	license: string;
 	name: string;
 	version: string;
-	description: string;
-	license: string;
-	homepage: string;
-	author: string;
-	downloads: number;
 };
 
 export type Packages<T = Record<string, Package>> = {
@@ -135,9 +136,9 @@ export type WithError = {
 };
 
 export type Partner = {
-	name: string;
-	index: number;
 	image?: string;
+	index: number;
+	name: string;
 };
 
 export type SharedPageProps = {
@@ -227,8 +228,8 @@ export type GithubStatsPageData = SharedPageProps & {
 };
 
 export type GitlabStatsPageData = SharedPageProps & {
-	data: GitlabInsights;
 	calendarData: Record<string, number>;
+	data: GitlabInsights;
 };
 
 export type StatsPageData = SharedPageProps; //NOSONAR

@@ -1,11 +1,11 @@
 import type { FC } from 'react';
 
 type Props = {
-	place: string;
 	period: string;
+	place: string;
 };
 
-export const ResumeEntry: FC<Readonly<Props>> = ({ place, period }: Props) => (
+export const ResumeEntry: FC<Readonly<Props>> = ({ period, place }: Props) => (
 	<ul className="c-resume__list">
 		<li>
 			<i className="icon-calendar"></i>

@@ -1,5 +1,6 @@
-import Image from 'next/image';
 import type { FC } from 'react';
+
+import Image from 'next/image';
 
 import type { Partner } from '@scripts/types';
 
@@ -18,11 +19,11 @@ export const Partners: FC<Props> = ({ data = [] }: Props) =>
 						partner.image ? (
 							<li key={partner.index}>
 								<Image
-									src={partner.image}
 									alt={`${partner.name} brand image`}
+									height={200}
+									src={partner.image}
 									title={partner.name}
 									width={200}
-									height={200}
 								/>
 							</li>
 						) : null

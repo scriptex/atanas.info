@@ -14,11 +14,11 @@ type EffectiveConnectionType = '2g' | '3g' | '4g' | 'slow-2g';
 type ConnectionType = 'bluetooth' | 'cellular' | 'ethernet' | 'mixed' | 'none' | 'other' | 'unknown' | 'wifi' | 'wimax';
 
 interface NetworkInformation extends EventTarget {
-	readonly rtt?: Millisecond;
-	readonly type?: ConnectionType;
-	readonly saveData?: boolean;
 	readonly downLink?: Megabit;
 	readonly downLinkMax?: Megabit;
 	readonly effectiveType?: EffectiveConnectionType;
 	onchange?: EventListener;
+	readonly rtt?: Millisecond;
+	readonly saveData?: boolean;
+	readonly type?: ConnectionType;
 }

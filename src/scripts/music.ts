@@ -1,13 +1,13 @@
-import { createNoise2D } from 'simplex-noise';
 import { Power4, TweenMax } from 'gsap';
+import { createNoise2D } from 'simplex-noise';
 
-import { random, onThemeChange } from './shared';
+import { onThemeChange, random } from './shared';
 
 let src: MediaElementAudioSourceNode;
 
 export type MusicFunctions = {
-	onPlay: () => void;
 	onPause: () => void;
+	onPlay: () => void;
 };
 
 export const music = (container: HTMLDivElement): MusicFunctions => {
@@ -178,9 +178,9 @@ export const music = (container: HTMLDivElement): MusicFunctions => {
 	createCircles();
 
 	return {
-		onPlay: createVis,
 		onPause: () => {
 			isPause = true;
-		}
+		},
+		onPlay: createVis
 	};
 };

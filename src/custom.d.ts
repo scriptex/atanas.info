@@ -1,3 +1,5 @@
+declare module 'scriptex-socials';
+
 declare module '*.svg?url' {
 	const content: string;
 	export default content;
@@ -40,15 +42,15 @@ declare module '@codersrank/timeline/codersrank-timeline.min' {
 
 declare namespace JSX {
 	interface IntrinsicElements {
-		'social-links': HTMLAttributes;
-		'codersrank-widget': HTMLAttributes;
-		'codersrank-summary': HTMLAttributes;
-		'codersrank-timeline': HTMLAttributes;
 		'codersrank-activity': HTMLAttributes;
 		'codersrank-education': HTMLAttributes;
 		'codersrank-portfolio': HTMLAttributes;
 		'codersrank-skills-chart': HTMLAttributes;
+		'codersrank-summary': HTMLAttributes;
+		'codersrank-timeline': HTMLAttributes;
+		'codersrank-widget': HTMLAttributes;
 		'codersrank-work-experience': HTMLAttributes;
+		'social-links': HTMLAttributes;
 	}
 }
 
@@ -66,3 +68,7 @@ interface Window {
 		draw: (username: string, settings: Record<string, string>) => null;
 	};
 }
+
+type ClassLike<T> = new (...args: any[]) => T;
+
+declare const registerPaint: (name: string, fn: ClassLike<any>) => void;
