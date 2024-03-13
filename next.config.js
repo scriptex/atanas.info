@@ -1,9 +1,9 @@
-const withPWA = require('next-pwa')({
-	dest: 'public',
-	disable: process.env.NODE_ENV === 'development'
+const withSerwist = require('@serwist/next').default({
+	swSrc: 'src/sw.ts',
+	swDest: 'public/sw.js'
 });
 
-module.exports = withPWA({
+module.exports = withSerwist({
 	images: {
 		domains: ['res.cloudinary.com', 'images.ctfassets.net', 'media.licdn.com'],
 		unoptimized: true
