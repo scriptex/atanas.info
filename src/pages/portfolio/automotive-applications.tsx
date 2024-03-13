@@ -1,13 +1,14 @@
-import Link from 'next/link';
 import type { FC } from 'react';
-import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import { Routes } from '@data/routes';
-import { automotiveProjects } from '@data/projects';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import Link from 'next/link';
+
+import { Layout, PortfolioSliders, Section, Title } from '@components';
 import { portfolioSectionProps } from '@data/pages';
-import type { PortfolioAutomotiveAppsPageData } from '@scripts/types';
+import { automotiveProjects } from '@data/projects';
+import { Routes } from '@data/routes';
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
-import { Layout, Section, PortfolioSliders, Title } from '@components';
+import type { PortfolioAutomotiveAppsPageData } from '@scripts/types';
 
 export const PortfolioAutomotiveApps: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners }) => (
 	<Layout funding={funding} partners={partners}>
@@ -16,7 +17,7 @@ export const PortfolioAutomotiveApps: FC<InferGetStaticPropsType<typeof getStati
 		<Section
 			{...portfolioSectionProps}
 			actions={
-				<Link href={Routes.PORTFOLIO} className="c-btn">
+				<Link className="c-btn" href={Routes.PORTFOLIO}>
 					Go back
 				</Link>
 			}
@@ -24,10 +25,10 @@ export const PortfolioAutomotiveApps: FC<InferGetStaticPropsType<typeof getStati
 			<h3>Automotive projects</h3>
 
 			<PortfolioSliders
+				className="c-section__slider--fullwidth"
 				data={automotiveProjects}
 				folder="automotive-apps"
 				slidesToShow={1}
-				className="c-section__slider--fullwidth"
 			/>
 		</Section>
 	</Layout>

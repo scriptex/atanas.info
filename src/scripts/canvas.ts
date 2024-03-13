@@ -6,11 +6,11 @@ export type Dots = d3.Selection<SVGCircleElement, any, SVGSVGElement, any>;
 export type Canvas = d3.Selection<SVGSVGElement, unknown, HTMLElement, any>;
 
 type Data = {
-	r?: number;
+	color: d3.HSLColor | string;
 	cx: number;
 	cy: number;
 	op?: number;
-	color: d3.HSLColor | string;
+	r?: number;
 };
 
 let circleIndex = 0;
@@ -18,7 +18,7 @@ let circleIndex = 0;
 const rand = (modifier: number): number => random() * modifier;
 const eventType: string = 'ontouchstart' in document ? 'touchmove' : 'mousemove';
 const dispatcher: d3.Dispatch<EventTarget> = d3.dispatch('remove-circle');
-const { innerWidth, innerHeight } = window;
+const { innerHeight, innerWidth } = window;
 
 dispatcher.on('remove-circle', (canvas: Canvas) => {
 	const newCircle = canvas.append('circle');
@@ -88,11 +88,11 @@ export const generateCircleData = (count: number): Data[] =>
 		const color = d3.hsl((circleIndex = (circleIndex + 1) % 360), 1, 0.5);
 
 		return {
+			color,
 			cx,
 			cy,
-			r,
 			op,
-			color
+			r
 		};
 	});
 

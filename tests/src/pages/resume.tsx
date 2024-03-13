@@ -1,16 +1,16 @@
 import { Resume } from '@pages/resume';
 import { snapshotTest } from '@test-config/helpers';
 import {
-	funding,
-	partners,
-	strengths,
-	experience,
 	certificates,
-	resumeMore as more,
+	resumeEducation as education,
+	experience,
+	funding,
 	resumeLinks as links,
+	resumeMore as more,
 	resumeOwner as owner,
+	partners,
 	resumeSkills as skills,
-	resumeEducation as education
+	strengths
 } from '@test-config/mocks';
 
 window.print = jest.fn();
@@ -19,14 +19,14 @@ snapshotTest(
 	() => (
 		<Resume
 			data={{
-				more,
-				links,
-				owner,
-				skills,
-				strengths,
+				certificates,
 				education,
 				experience,
-				certificates
+				links,
+				more,
+				owner,
+				skills,
+				strengths
 			}}
 			funding={funding}
 			partners={partners}

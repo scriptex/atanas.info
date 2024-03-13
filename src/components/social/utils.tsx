@@ -7,12 +7,12 @@ export const filteredData = (data: LastFMAlbum[]): CarouselItem[] =>
 		.filter((album: LastFMAlbum) => !!album?.images?.[2]?.['#text'])
 		.map(album => ({
 			alt: album?.name,
-			image: album?.images?.[2]?.['#text'],
 			content: (
 				<>
 					<strong>{album?.name}</strong>
 
 					<span>{album?.artist}</span>
 				</>
-			)
+			),
+			image: album?.images?.[2]?.['#text']
 		}));

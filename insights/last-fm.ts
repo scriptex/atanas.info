@@ -1,13 +1,14 @@
 import type {
 	LastFMTopAlbumResponse,
 	LastFMTopAlbumsResponse,
-	LastFMWeeklyAlbumResponse,
-	LastFMWeeklyAlbumChartResponse
+	LastFMWeeklyAlbumChartResponse,
+	LastFMWeeklyAlbumResponse
 } from 'lastfm-node-client';
 
 import { log } from '@scripts/shared';
+
 import { lastFm } from './client';
-import { LastFMInsights, asyncForEach, saveInsights } from './utils';
+import { asyncForEach, LastFMInsights, saveInsights } from './utils';
 
 const ITEMS_LIMIT = 20;
 
@@ -19,8 +20,8 @@ export const getLastFMInsights = async (): Promise<LastFMInsights> => {
 
 		const topAlbums = await lastFm
 			.userGetTopAlbums({
-				user: 'scriptex',
-				period: '1month'
+				period: '1month',
+				user: 'scriptex'
 			})
 			.then((r: LastFMTopAlbumsResponse) => r.topalbums.album.slice(0, ITEMS_LIMIT));
 
@@ -30,29 +31,29 @@ export const getLastFMInsights = async (): Promise<LastFMInsights> => {
 			})
 			.then((r: LastFMWeeklyAlbumChartResponse) => r.weeklyalbumchart.album.slice(0, ITEMS_LIMIT));
 
-		await asyncForEach(weeklyAlbumChart, async ({ name, artist }: LastFMWeeklyAlbumResponse, index: number) => {
+		await asyncForEach(weeklyAlbumChart, async ({ artist, name }: LastFMWeeklyAlbumResponse, index: number) => {
 			weeklyAlbumChart[index].apiDetails = await lastFm.albumGetInfo({
-				lang: 'en',
 				album: name,
 				artist: artist['#text'],
-				username: 'scriptex',
-				autocorrect: 1
+				autocorrect: 1,
+				lang: 'en',
+				username: 'scriptex'
 			});
 		});
 
 		const result: LastFMInsights = {
-			info,
 			error: false,
-			updated: new Date().getTime(),
+			info,
 			topAlbums: topAlbums.map((item: LastFMTopAlbumResponse) => ({
-				name: item.name,
+				artist: item.artist.name,
 				images: item.image,
-				artist: item.artist.name
+				name: item.name
 			})),
+			updated: new Date().getTime(),
 			weeklyAlbumChart: weeklyAlbumChart.map((item: LastFMWeeklyAlbumResponse) => ({
-				name: item.name,
+				artist: item.artist['#text'],
 				images: item.apiDetails.album.image,
-				artist: item.artist['#text']
+				name: item.name
 			}))
 		};
 
@@ -61,10 +62,10 @@ export const getLastFMInsights = async (): Promise<LastFMInsights> => {
 		return result;
 	} catch (e) {
 		const result: LastFMInsights = {
-			info: null,
 			error: true,
-			updated: new Date().getTime(),
+			info: null,
 			topAlbums: [],
+			updated: new Date().getTime(),
 			weeklyAlbumChart: []
 		};
 

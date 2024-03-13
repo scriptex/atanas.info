@@ -1,11 +1,11 @@
 import info, { Package } from 'package-info';
 
-import { log } from '@scripts/shared';
 import { saveInsights } from '@insights/utils';
+import { log } from '@scripts/shared';
 
 export type NPMPackage = Package & {
-	homepage: string;
 	downloads: number;
+	homepage: string;
 };
 
 export type NPMResult = {
@@ -49,8 +49,8 @@ export const run = async (): Promise<NPMResult> => {
 				);
 
 			data.push({
-				name,
-				count
+				count,
+				name
 			});
 		}
 
@@ -59,7 +59,7 @@ export const run = async (): Promise<NPMResult> => {
 		result.sum = sum;
 
 		for (const item of data) {
-			const { name, count } = item;
+			const { count, name } = item;
 
 			log(`atanas.info: Fetching data for the ${name} package. Please wait...`);
 

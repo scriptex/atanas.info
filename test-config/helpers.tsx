@@ -1,5 +1,7 @@
-import { act } from 'react-dom/test-utils';
 import type { FC } from 'react';
+
+import { act } from 'react-dom/test-utils';
+
 import { render, RenderResult, waitFor } from '@testing-library/react';
 
 import * as shared from '@scripts/shared';
@@ -47,7 +49,7 @@ export const snapshotTest = (Component: ComponentType, buttonSelector?: string, 
 		});
 
 		it(`Should unmount the ${name} component`, async () => {
-			const { unmount, asFragment } = await test(Component);
+			const { asFragment, unmount } = await test(Component);
 
 			unmount();
 
@@ -83,9 +85,9 @@ export const mockAudioContext = (): jest.Mock => {
 
 	const mockedAudioContext = jest.fn(() => ({
 		createAnalyser: mockcreateAnalyser,
-		createOscillator: mockcreateOscillator,
 		createChannelSplitter: mockcreateChannelSplitter,
-		createMediaElementSource: mockcreateMediaElementSource
+		createMediaElementSource: mockcreateMediaElementSource,
+		createOscillator: mockcreateOscillator
 	}));
 
 	return mockedAudioContext;

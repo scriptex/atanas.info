@@ -2,13 +2,13 @@
 
 import { existsSync, unlinkSync, writeFileSync } from 'node:fs';
 
-import { log } from '@scripts/shared';
 import { getGithubRepositories } from '@insights/github';
+import { log } from '@scripts/shared';
 
 type Project = {
-	name: string;
 	branch: string;
 	full_name: string;
+	name: string;
 };
 
 const fetchProject = async (repo: string, branch = 'master', file = 'README.md'): Promise<string> => {
@@ -55,9 +55,9 @@ const createProjectsIndex = (projects: Project[]) => {
 			.filter(repo => ['scriptex'].includes(repo.owner.login))
 			.filter(repo => !['uptime'].includes(repo.name))
 			.map(repo => ({
-				name: repo.name,
 				branch: repo.default_branch,
-				full_name: repo.full_name
+				full_name: repo.full_name,
+				name: repo.name
 			}));
 
 		saveProject(

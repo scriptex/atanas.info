@@ -1,14 +1,12 @@
-import * as insightsUtils from '@insights/utils';
-
-import { run } from '@insights/index';
-import { getGitlabInsights } from '@insights/gitlab';
-import { getLastFMInsights } from '@insights/last-fm';
 import { getGithubInsights, getGithubRepositories } from '@insights/github';
-import { queryNPM, queryGithub, queryGitlab, queryLastFM } from '@lib/mongodb';
+import { getGitlabInsights } from '@insights/gitlab';
+import { run } from '@insights/index';
+import { getLastFMInsights } from '@insights/last-fm';
+import * as insightsUtils from '@insights/utils';
+import { queryGithub, queryGitlab, queryLastFM, queryNPM } from '@lib/mongodb';
 
 jest.mock('@lib/mongodb', () => ({
 	__esModule: true,
-	getData: jest.fn(() => Promise.resolve({ props: { data: [] } })),
 	default: Promise.resolve({
 		db: () => ({
 			collection: () => ({
@@ -16,7 +14,8 @@ jest.mock('@lib/mongodb', () => ({
 				updateOne: jest.fn(() => Promise.resolve({ success: true }))
 			})
 		})
-	})
+	}),
+	getData: jest.fn(() => Promise.resolve({ props: { data: [] } }))
 }));
 
 jest.mock('@insights/client', () => ({
@@ -25,49 +24,49 @@ jest.mock('@insights/client', () => ({
 			if (path.startsWith('/user/repos')) {
 				return [
 					{
-						size: 100,
+						full_name: 'test/test-repo',
 						owner: {
 							login: 'test'
 						},
-						full_name: 'test/test-repo'
+						size: 100
 					}
 				];
 			}
 
 			if (path.startsWith('/users/scriptex')) {
 				return {
-					size: 100,
+					created_at: '2008-01-14T04:33:35Z',
 					followers: 20,
 					following: 0,
-					created_at: '2008-01-14T04:33:35Z',
-					updated_at: '2008-01-14T04:33:35Z',
+					public_gists: 1,
 					public_repos: 2,
-					public_gists: 1
+					size: 100,
+					updated_at: '2008-01-14T04:33:35Z'
 				};
 			}
 
 			if (path.startsWith('repos') && !path.endsWith('/contributors')) {
 				return {
-					name: 'Test Repo',
-					fork: false,
-					size: 108,
-					private: false,
-					language: null,
-					has_pages: false,
 					created_at: '2011-01-26T19:01:12Z',
-					updated_at: '2011-01-26T19:14:43Z',
-					watchers_count: 80,
+					fork: false,
+					has_pages: false,
+					language: null,
+					name: 'Test Repo',
+					open_issues_count: 0,
+					private: false,
+					size: 108,
 					stargazers_count: 80,
-					open_issues_count: 0
+					updated_at: '2011-01-26T19:14:43Z',
+					watchers_count: 80
 				};
 			}
 
 			if (path.endsWith('/contributors')) {
 				return [
 					{
-						size: 100,
+						contributions: 32,
 						login: 'test',
-						contributions: 32
+						size: 100
 					}
 				];
 			}
@@ -78,8 +77,8 @@ jest.mock('@insights/client', () => ({
 	gitlab: (path: string) => {
 		if (path === 'users/1896847') {
 			return {
-				id: 'scriptex',
-				created_at: '2011-01-26T19:01:12Z'
+				created_at: '2011-01-26T19:01:12Z',
+				id: 'scriptex'
 			};
 		}
 
@@ -92,27 +91,27 @@ jest.mock('@insights/client', () => ({
 		if (path.includes('projects?per_page=100&statistics=true')) {
 			return [
 				{
-					name: 'Test Repo',
+					commit_count: 200,
 					created_at: '2011-01-26T19:01:12Z',
+					forks_count: 0,
+					last_activity_at: '2011-01-26T19:14:43Z',
+					name: 'Test Repo',
+					open_issues_count: 1,
 					star_count: 30,
-					visibility: 'public',
 					statistics: {
 						repository_size: 200
 					},
-					forks_count: 0,
-					commit_count: 200,
-					last_activity_at: '2011-01-26T19:14:43Z',
-					open_issues_count: 1
+					visibility: 'public'
 				},
 				{
-					name: 'Test Repo',
-					created_at: '2011-01-26T19:01:12Z',
-					star_count: 30,
-					visibility: 'public',
-					forks_count: 0,
 					commit_count: 200,
+					created_at: '2011-01-26T19:01:12Z',
+					forks_count: 0,
 					last_activity_at: '2011-01-26T19:14:43Z',
-					open_issues_count: 1
+					name: 'Test Repo',
+					open_issues_count: 1,
+					star_count: 30,
+					visibility: 'public'
 				}
 			];
 		}
@@ -124,49 +123,34 @@ jest.mock('@insights/client', () => ({
 		return {};
 	},
 	lastFm: {
-		userGetInfo: () =>
-			Promise.resolve({
-				user: {
-					name: 'scriptex',
-					age: '39',
-					subscriber: '',
-					realname: 'Atanas',
-					bootstrap: '',
-					playcount: '12345',
-					artist_count: '1234',
-					playlists: '10',
-					track_count: '100',
-					album_count: '1000',
-					image: [],
-					registered: {
-						unixtime: '123456789',
-						'#text': 123456789
-					},
-					country: 'Bulgaria',
-					gender: 'male',
-					url: 'https://atanas.info',
-					type: 'user'
-				}
-			}),
-		userGetWeeklyAlbumChart: () =>
-			Promise.resolve({
-				weeklyalbumchart: {
-					album: [
-						{
-							name: 'Test weekly album',
-							image: '/images/test.jpg',
-							artist: {
-								name: 'Test artist',
-								'#text': 'Test artist'
-							}
-						}
-					]
-				}
-			}),
 		albumGetInfo: () =>
 			Promise.resolve({
 				album: {
 					image: '/images/test.jpg'
+				}
+			}),
+		userGetInfo: () =>
+			Promise.resolve({
+				user: {
+					age: '39',
+					album_count: '1000',
+					artist_count: '1234',
+					bootstrap: '',
+					country: 'Bulgaria',
+					gender: 'male',
+					image: [],
+					name: 'scriptex',
+					playcount: '12345',
+					playlists: '10',
+					realname: 'Atanas',
+					registered: {
+						'#text': 123456789,
+						unixtime: '123456789'
+					},
+					subscriber: '',
+					track_count: '100',
+					type: 'user',
+					url: 'https://atanas.info'
 				}
 			}),
 		userGetTopAlbums: () =>
@@ -174,12 +158,27 @@ jest.mock('@insights/client', () => ({
 				topalbums: {
 					album: [
 						{
-							name: 'Test weekly album',
-							image: '/images/test.jpg',
 							artist: {
-								name: 'Test artist',
-								'#text': 'Test artist'
-							}
+								'#text': 'Test artist',
+								name: 'Test artist'
+							},
+							image: '/images/test.jpg',
+							name: 'Test weekly album'
+						}
+					]
+				}
+			}),
+		userGetWeeklyAlbumChart: () =>
+			Promise.resolve({
+				weeklyalbumchart: {
+					album: [
+						{
+							artist: {
+								'#text': 'Test artist',
+								name: 'Test artist'
+							},
+							image: '/images/test.jpg',
+							name: 'Test weekly album'
 						}
 					]
 				}
@@ -221,8 +220,8 @@ it('Test the `getGithubInsights` function', async () => {
 	jest.spyOn(insightsUtils, 'getContributions').mockReturnValue(
 		Promise.resolve({
 			'2022-01-30': {
-				count: 1,
-				color: 'red'
+				color: 'red',
+				count: 1
 			}
 		})
 	);
@@ -267,8 +266,8 @@ it('Test the `getGitlabInsights` function', async () => {
 			async json() {
 				return {
 					'2022-01-30': {
-						count: 1,
-						color: 'red'
+						color: 'red',
+						count: 1
 					}
 				};
 			}
@@ -342,12 +341,12 @@ it('Test the `sortProjects` function', () => {
 	expect(
 		insightsUtils.sortProjects([
 			{
-				url: '/test/url',
-				name: 'First'
+				name: 'First',
+				url: '/test/url'
 			},
 			{
-				url: '/test/url',
-				name: 'Second'
+				name: 'Second',
+				url: '/test/url'
 			}
 		])[0].name
 	).toEqual('First');
@@ -355,12 +354,12 @@ it('Test the `sortProjects` function', () => {
 	expect(
 		insightsUtils.sortProjects([
 			{
-				url: '/test/url',
-				name: 'Second'
+				name: 'Second',
+				url: '/test/url'
 			},
 			{
-				url: '/test/url',
-				name: 'First'
+				name: 'First',
+				url: '/test/url'
 			}
 		])[0].name
 	).toEqual('First');
@@ -368,12 +367,12 @@ it('Test the `sortProjects` function', () => {
 	expect(
 		insightsUtils.sortProjects([
 			{
-				url: '/test/url',
-				name: 'Third'
+				name: 'Third',
+				url: '/test/url'
 			},
 			{
-				url: '/test/url',
-				name: 'Third'
+				name: 'Third',
+				url: '/test/url'
 			}
 		])[0].name
 	).toEqual('Third');

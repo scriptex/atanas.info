@@ -1,7 +1,7 @@
-import * as shared from '@scripts/shared';
-import { funding, partners } from '@test-config/mocks';
 import { InteractiveResume } from '@pages/interactive-resume';
-import { test, snapshotTest } from '@test-config/helpers';
+import * as shared from '@scripts/shared';
+import { snapshotTest, test } from '@test-config/helpers';
+import { funding, partners } from '@test-config/mocks';
 
 snapshotTest(() => <InteractiveResume funding={funding} partners={partners} />, undefined, 'InteractiveResume');
 

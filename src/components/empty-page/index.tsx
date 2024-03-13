@@ -1,12 +1,12 @@
 import type { FC } from 'react';
 
+import { Layout, Lines, Title } from '@components';
 import type { FundingNetwork } from '@scripts/cms';
-import { Lines, Layout, Title } from '@components';
 import type { Partner, ReactChildren } from '@scripts/types';
 
 interface Props {
-	funding: FundingNetwork[];
 	children: ReactChildren;
+	funding: FundingNetwork[];
 	partners: Partner[];
 }
 
@@ -43,16 +43,16 @@ export const iconData = [
 	}
 ];
 
-export const EmptyPage: FC<Readonly<Props>> = ({ children, partners, funding }: Props) => (
-	<Layout main="o-main--high" funding={funding} partners={partners}>
+export const EmptyPage: FC<Readonly<Props>> = ({ children, funding, partners }: Props) => (
+	<Layout funding={funding} main="o-main--high" partners={partners}>
 		<Title text="" />
 
 		<div className="c-error-page">
 			<Lines />
 
 			<div className="o-shell o-shell--flex">
-				<svg width={380} height={500} viewBox="0 0 837 1045">
-					<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+				<svg height={500} viewBox="0 0 837 1045" width={380}>
+					<g fill="none" fillRule="evenodd" stroke="none" strokeWidth="1">
 						{iconData.map(options => (
 							<path key={options.index} {...options} />
 						))}

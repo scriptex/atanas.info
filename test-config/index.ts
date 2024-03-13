@@ -39,18 +39,17 @@ global.IntersectionObserver = class IntersectionObserver {
 };
 
 // prettier-ignore
-// @ts-ignore
 window.matchMedia = window.matchMedia || (() => ({
-	matches: false,
-	addListener: () => 'mocked matchMedia addListener',
-	removeListener: () => 'mocked matchMedia removeListener',
 	addEventListener: () => 'mocked matchMedia addEventListener',
+	addListener: () => 'mocked matchMedia addListener',
+	matches: false,
 	removeEventListener: () => 'mocked matchMedia removeEventListener',
+	removeListener: () => 'mocked matchMedia removeListener',
 }));
 
 window.crypto = {
 	...require('crypto'),
-	// @ts-ignore
+	// eslint-disable-next-line @typescript-eslint/no-var-requires
 	getRandomValues: (buffer: Buffer) => require('crypto').randomFillSync(buffer)
 };
 
@@ -79,9 +78,20 @@ jest.mock('gsap/Draggable', () => ({
 }));
 
 jest.mock('gitlab-calendar', () => ({
+	GitlabCalendar: jest.fn(() => 'Gitlab Calendar'),
 	__esModule: true,
-	default: jest.fn(() => 'Gitlab Calendar'),
-	GitlabCalendar: jest.fn(() => 'Gitlab Calendar')
+	default: jest.fn(() => 'Gitlab Calendar')
+}));
+
+jest.mock('swiper/react', () => ({
+	Swiper: ({ children }: any) => children,
+	SwiperSlide: ({ children }: any) => children
+}));
+
+jest.mock('swiper/modules', () => ({
+	Autoplay: () => null,
+	Keyboard: () => null,
+	Thumbs: () => null
 }));
 
 jest.mock('simplex-noise', () => ({
@@ -89,10 +99,10 @@ jest.mock('simplex-noise', () => ({
 }));
 
 jest.mock('../src/scripts/canvas', () => ({
-	createSVG: jest.fn(),
-	initCanvas: jest.fn(),
 	createDots: jest.fn(),
-	destroyDots: jest.fn()
+	createSVG: jest.fn(),
+	destroyDots: jest.fn(),
+	initCanvas: jest.fn()
 }));
 
 jest.mock('../src/scripts/force.ts', () => ({
@@ -131,7 +141,7 @@ jest.mock('next/font/google', () => ({
 jest.mock('contentful', () => ({
 	...jest.requireActual('contentful'),
 	createClient: jest.fn(() => ({
-		getEntries: jest.fn(() => Promise.resolve({ items: [] })),
-		getContentTypes: jest.fn(() => Promise.resolve([]))
+		getContentTypes: jest.fn(() => Promise.resolve([])),
+		getEntries: jest.fn(() => Promise.resolve({ items: [] }))
 	}))
 }));

@@ -1,15 +1,17 @@
-import Image from 'next/image';
+import { FC, useState } from 'react';
+
 import { format } from 'date-fns/format';
-import { useState, FC } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import type { Swiper as SwiperInstance } from 'swiper';
-import { Thumbs, Keyboard, Autoplay, EffectCoverflow } from 'swiper/modules';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import Image from 'next/image';
+import type { Swiper as SwiperInstance } from 'swiper';
+import { Autoplay, EffectCoverflow, Keyboard, Thumbs } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import { Animation, ExternalLink, Layout, Lines, Section, Title } from '@components';
+import { getFundingFromCMS, getPartnersFromCMS, getTestimonialsFromCMS } from '@scripts/cms';
+import type { TestimonialsPageProps } from '@scripts/types';
 
 import testimonials from '@data/lotties/testimonials.json';
-import type { TestimonialsPageProps } from '@scripts/types';
-import { Lines, Title, Layout, Section, Animation, ExternalLink } from '@components';
-import { getFundingFromCMS, getPartnersFromCMS, getTestimonialsFromCMS } from '@scripts/cms';
 
 import 'swiper/css';
 import 'swiper/css/thumbs';
@@ -30,24 +32,24 @@ type PaginationProps = DataProps &
 
 const List: FC<ListProps> = ({ data, swiper }) => (
 	<Swiper
-		loop
-		effect="coverflow"
-		thumbs={{ swiper }}
-		modules={[Thumbs, Keyboard, Autoplay, EffectCoverflow]}
 		autoplay={{ delay: 10000 }}
-		keyboard
-		className="c-testimonials__list"
-		grabCursor
-		initialSlide={Math.floor(Math.random() * data.length)}
-		slidesPerView="auto"
 		centeredSlides
+		className="c-testimonials__list"
 		coverflowEffect={{
 			depth: 100,
-			rotate: 0,
-			stretch: 0,
 			modifier: 2,
-			slideShadows: true
+			rotate: 0,
+			slideShadows: true,
+			stretch: 0
 		}}
+		effect="coverflow"
+		grabCursor
+		initialSlide={Math.floor(Math.random() * data.length)}
+		keyboard
+		loop
+		modules={[Thumbs, Keyboard, Autoplay, EffectCoverflow]}
+		slidesPerView="auto"
+		thumbs={{ swiper }}
 	>
 		{data.map(item => {
 			const date = new Date(item.date);
@@ -55,8 +57,8 @@ const List: FC<ListProps> = ({ data, swiper }) => (
 			return (
 				<SwiperSlide key={item.index}>
 					<div className="c-testimonial">
-						<ExternalLink href={item.authorUrl} className="c-testimonial__head">
-							<Image src={item.image} alt={item.authorName} width={80} height={80} />
+						<ExternalLink className="c-testimonial__head" href={item.authorUrl}>
+							<Image alt={item.authorName} height={80} src={item.image} width={80} />
 
 							<h3>{item.authorName}</h3>
 
@@ -81,10 +83,10 @@ const List: FC<ListProps> = ({ data, swiper }) => (
 );
 
 const Pagination: FC<PaginationProps> = ({ data, setSwiper }) => (
-	<Swiper modules={[Thumbs]} onSwiper={setSwiper} className="c-testimonials__pagination" slidesPerView="auto">
+	<Swiper className="c-testimonials__pagination" modules={[Thumbs]} onSwiper={setSwiper} slidesPerView="auto">
 		{data.map(item => (
 			<SwiperSlide key={item.index}>
-				<Image src={item.image} alt={item.authorName} width={80} height={80} />
+				<Image alt={item.authorName} height={80} src={item.image} width={80} />
 			</SwiperSlide>
 		))}
 	</Swiper>
@@ -98,13 +100,13 @@ export const Testimonials: FC<Props> = ({ data, funding, partners }) => {
 			<Title text="Testimonials" />
 
 			<Section
+				additionalElements={
+					<Animation className="c-section__animation" data={testimonials} height={150} width={150} />
+				}
+				hasButton
+				hasShell={false}
 				id="testimonials"
 				title="Testimonials"
-				hasShell={false}
-				hasButton
-				additionalElements={
-					<Animation data={testimonials} width={150} height={150} className="c-section__animation" />
-				}
 			>
 				<Lines />
 

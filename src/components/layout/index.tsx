@@ -1,18 +1,18 @@
 import type { FC } from 'react';
 
-import SVGSprite from '@src/sprite.svg';
+import { Contact, Footer, Header, Nav, Partners } from '@components';
 import type { FundingNetwork } from '@scripts/cms';
 import type { Partner, ReactChildren } from '@scripts/types';
-import { Nav, Contact, Header, Footer, Partners } from '@components';
+import SVGSprite from '@src/sprite.svg';
 
 type Props = {
-	main?: string;
-	funding: FundingNetwork[];
 	children: ReactChildren;
+	funding: FundingNetwork[];
+	main?: string;
 	partners: Partner[];
 };
 
-export const Layout: FC<Readonly<Props>> = ({ main, partners, children, funding }: Props) => (
+export const Layout: FC<Readonly<Props>> = ({ children, funding, main, partners }: Props) => (
 	<>
 		<SVGSprite />
 

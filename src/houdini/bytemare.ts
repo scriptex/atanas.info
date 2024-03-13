@@ -1,7 +1,5 @@
-// @ts-ignore
 const paintNameBytemare = 'bytemare';
 
-// @ts-ignore
 registerPaint(
 	paintNameBytemare,
 	class {
@@ -22,7 +20,7 @@ registerPaint(
 
 		public paint(
 			ctx: CanvasRenderingContext2D,
-			{ width, height }: Record<string, number>,
+			{ height, width }: Record<string, number>,
 			props: Map<string, string>
 		): void {
 			const gap = parseInt(props.get(`--${paintNameBytemare}-gap`)!);
@@ -46,29 +44,26 @@ registerPaint(
 					const xOffset = x * tileSize;
 
 					if (Math.random() > probability) {
-						// 1. Draw shape on the right side of the tower cap
-						ctx.fillStyle = colors[1]; // Change fill to darker color
-						ctx.beginPath(); // Start new path
-						ctx.lineTo(xOffset + tileSize, yOffset + gap); // Move to upper right
-						ctx.lineTo(Math.cos(this.radians) * outerRadius, Math.sin(this.radians) * outerRadius); // Draw line off canvas
-						ctx.lineTo(xOffset + tileSize, yOffset + tileSize); // Draw to lower right
-						ctx.lineTo(xOffset + gap, yOffset + tileSize); // Draw line to lower left
-						ctx.fill(); // Fill shape
+						ctx.fillStyle = colors[1];
+						ctx.beginPath();
+						ctx.lineTo(xOffset + tileSize, yOffset + gap);
+						ctx.lineTo(Math.cos(this.radians) * outerRadius, Math.sin(this.radians) * outerRadius);
+						ctx.lineTo(xOffset + tileSize, yOffset + tileSize);
+						ctx.lineTo(xOffset + gap, yOffset + tileSize);
+						ctx.fill();
 
-						// 2. Draw shape on the right side of the tower cap
-						ctx.fillStyle = colors[2]; // Change fill to darkest color
-						ctx.beginPath(); // Start new path
-						ctx.moveTo(xOffset + tileSize, yOffset + tileSize); // Move to lower right
-						ctx.lineTo(xOffset + gap, yOffset + tileSize); // Draw line to lower left
-						ctx.lineTo(Math.cos(this.radians) * outerRadius, Math.sin(this.radians) * outerRadius); // Draw line off canvas toward the lower left
-						ctx.lineTo(xOffset + tileSize, yOffset + tileSize); // Draw line back to lower right
-						ctx.fill(); // Fill shape
+						ctx.fillStyle = colors[2];
+						ctx.beginPath();
+						ctx.moveTo(xOffset + tileSize, yOffset + tileSize);
+						ctx.lineTo(xOffset + gap, yOffset + tileSize);
+						ctx.lineTo(Math.cos(this.radians) * outerRadius, Math.sin(this.radians) * outerRadius);
+						ctx.lineTo(xOffset + tileSize, yOffset + tileSize);
+						ctx.fill();
 
-						// 3. Draw the tower cap
-						ctx.fillStyle = colors[0]; // Change fill to the base color
-						ctx.beginPath(); // Start new path
-						ctx.rect(xOffset + gap, yOffset + gap, tileSize - gap, tileSize - gap); // Draw a rectangle
-						ctx.fill(); // Fill shape
+						ctx.fillStyle = colors[0];
+						ctx.beginPath();
+						ctx.rect(xOffset + gap, yOffset + gap, tileSize - gap, tileSize - gap);
+						ctx.fill();
 					}
 				}
 			}

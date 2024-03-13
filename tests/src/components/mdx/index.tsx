@@ -1,9 +1,9 @@
-import { Routes } from '@data/routes';
 import { MDX as Mdx } from '@components';
+import { Routes } from '@data/routes';
 import { snapshotTest } from '@test-config/helpers';
 
 snapshotTest(
-	() => <Mdx id="test" back={Routes.BLOG} title="Test" image="/images/test.jpg" content="Test content" />,
+	() => <Mdx back={Routes.BLOG} content="Test content" id="test" image="/images/test.jpg" title="Test" />,
 	undefined,
 	'MDX'
 );

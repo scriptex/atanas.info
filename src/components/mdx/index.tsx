@@ -1,35 +1,36 @@
-import Link from 'next/link';
-import Script from 'next/script';
 import type { FC } from 'react';
 
-import { Routes } from '@data/routes';
+import Link from 'next/link';
+import Script from 'next/script';
+
 import { Lines, Section } from '@components';
+import { Routes } from '@data/routes';
 
 type Props = {
-	id: string;
 	back: Routes;
-	title: string;
-	image?: string;
 	content: string;
+	id: string;
+	image?: string;
+	title: string;
 };
 
-export const MDX: FC<Readonly<Props>> = ({ id, back, title, image, content }: Props) => (
+export const MDX: FC<Readonly<Props>> = ({ back, content, id, image, title }: Props) => (
 	<Section
-		id={id}
-		title={title}
 		actions={
-			<Link href={back} className="c-btn">
+			<Link className="c-btn" href={back}>
 				Go back
 			</Link>
 		}
 		hasButton
+		id={id}
+		title={title}
 	>
-		<Script src="https://atanas-info.disqus.com/embed.js" async defer />
+		<Script async defer src="https://atanas-info.disqus.com/embed.js" />
 
 		<Lines />
 
 		{/* eslint-disable-next-line @next/next/no-img-element */}
-		{!!image && <img src={image} alt="" loading="lazy" />}
+		{!!image && <img alt="" loading="lazy" src={image} />}
 
 		<div className="c-blog-post">
 			<div className="c-blog-post__content" dangerouslySetInnerHTML={{ __html: content }} />

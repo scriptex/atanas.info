@@ -1,912 +1,912 @@
 export type ForceNode = {
-	readonly url?: string;
 	readonly fill: string;
-	readonly icon: string;
-	readonly text: string;
-	readonly width: number;
-	readonly since?: number;
 	readonly height: number;
+	readonly icon: string;
 	readonly iconFill?: string;
+	readonly since?: number;
+	readonly text: string;
+	readonly url?: string;
+	readonly width: number;
 };
 
 export const defaultForceNodeSize: Pick<ForceNode, 'width' | 'height'> = {
-	width: 34,
-	height: 34
+	height: 34,
+	width: 34
 };
 
 export const skills: ForceNode[] = [
 	{
-		text: 'Adobe Illustrator',
-		icon: 'adobeillustrator',
 		fill: '#FF9A00',
+		icon: 'adobeillustrator',
 		since: 2014,
+		text: 'Adobe Illustrator',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Adobe Photoshop',
-		icon: 'adobephotoshop',
 		fill: '#31A8FF',
+		icon: 'adobephotoshop',
 		since: 2012,
+		text: 'Adobe Photoshop',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Adobe XD',
-		icon: 'adobexd',
 		fill: '#FF61F6',
+		icon: 'adobexd',
 		since: 2018,
+		text: 'Adobe XD',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Affinity Designer',
-		icon: 'affinitydesigner',
 		fill: '#1B72BE',
+		icon: 'affinitydesigner',
 		since: 2018,
+		text: 'Affinity Designer',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Agile',
+		fill: '#fff',
 		icon: 'agile',
-		fill: '#fff',
 		since: 2011,
+		text: 'Agile',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Amazon Web Services',
-		icon: 'amazonaws',
 		fill: '#232F3E',
+		icon: 'amazonaws',
 		since: 2019,
+		text: 'Amazon Web Services',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Angular',
-		icon: 'angular',
 		fill: '#DD0031',
+		icon: 'angular',
 		since: 2017,
+		text: 'Angular',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Angular JS',
-		icon: 'angularjs',
 		fill: '#E23237',
+		icon: 'angularjs',
 		since: 2014,
+		text: 'Angular JS',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Apache Cordova',
-		icon: 'apachecordova',
 		fill: '#E8E8E8',
-		since: 2014,
+		icon: 'apachecordova',
 		iconFill: '#000',
+		since: 2014,
+		text: 'Apache Cordova',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Azure DevOps',
-		icon: 'azuredevops',
 		fill: '#0078D7',
+		icon: 'azuredevops',
 		since: 2019,
+		text: 'Azure DevOps',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Azure Functions',
-		icon: 'azurefunctions',
 		fill: '#0062AD',
+		icon: 'azurefunctions',
 		since: 2019,
+		text: 'Azure Functions',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Babel',
-		icon: 'babel',
 		fill: '#F9DC3E',
-		since: 2015,
+		icon: 'babel',
 		iconFill: '#000',
+		since: 2015,
+		text: 'Babel',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'BabylonJS',
+		fill: '#fff',
 		icon: 'babylonjs',
-		fill: '#fff',
 		since: 2018,
+		text: 'BabylonJS',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'BackboneJS',
-		icon: 'backbonedotjs',
 		fill: '#0071B5',
+		icon: 'backbonedotjs',
 		since: 2013,
+		text: 'BackboneJS',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'BEM',
+		fill: '#000',
 		icon: 'bem',
-		fill: '#000',
 		since: 2013,
+		text: 'BEM',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Bootstrap',
-		icon: 'bootstrap',
 		fill: '#7952B3',
+		icon: 'bootstrap',
 		since: 2012,
+		text: 'Bootstrap',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Bulma',
-		icon: 'bulma',
 		fill: '#00D1B2',
+		icon: 'bulma',
 		since: 2012,
+		text: 'Bulma',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Canva',
-		icon: 'canva',
 		fill: '#00C4CC',
+		icon: 'canva',
 		since: 2018,
+		text: 'Canva',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Chart JS',
-		icon: 'chartdotjs',
 		fill: '#FF6384',
+		icon: 'chartdotjs',
 		since: 2014,
+		text: 'Chart JS',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Circle CI',
-		icon: 'circleci',
 		fill: '#343434',
+		icon: 'circleci',
 		since: 2019,
+		text: 'Circle CI',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'ClickUp',
-		icon: 'clickup',
 		fill: '#7B68EE',
+		icon: 'clickup',
 		since: 2024,
+		text: 'ClickUp',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Confluence',
-		icon: 'confluence',
 		fill: '#172B4D',
+		icon: 'confluence',
 		since: 2017,
+		text: 'Confluence',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Contentful',
-		icon: 'contentful',
 		fill: '#2478CC',
+		icon: 'contentful',
 		since: 2023,
+		text: 'Contentful',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'CSS3',
-		icon: 'css3',
 		fill: '#1572B6',
+		icon: 'css3',
 		since: 2010,
+		text: 'CSS3',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'CSS Modules',
+		fill: '#000',
 		icon: 'cssmodules',
-		fill: '#000',
 		since: 2018,
+		text: 'CSS Modules',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Cypress',
-		icon: 'cypress',
 		fill: '#17202C',
+		icon: 'cypress',
 		since: 2021,
+		text: 'Cypress',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'D3.js',
-		icon: 'd3dotjs',
 		fill: '#F9A03C',
+		icon: 'd3dotjs',
 		since: 2012,
+		text: 'D3.js',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Dart',
-		icon: 'dart',
 		fill: '#0175C2',
+		icon: 'dart',
 		since: 2022,
+		text: 'Dart',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Deno',
+		fill: '#000',
 		icon: 'deno',
-		fill: '#000',
 		since: 2020,
+		text: 'Deno',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'ESLint',
-		icon: 'eslint',
 		fill: '#4B32C3',
+		icon: 'eslint',
 		since: 2016,
+		text: 'ESLint',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Expo',
-		icon: 'expo',
 		fill: '#000020',
+		icon: 'expo',
 		since: 2019,
+		text: 'Expo',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Express JS',
+		fill: '#000',
 		icon: 'express',
-		fill: '#000',
 		since: 2017,
+		text: 'Express JS',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Figma',
-		icon: 'figma',
 		fill: '#F24E1E',
+		icon: 'figma',
 		since: 2020,
+		text: 'Figma',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Firebase',
-		icon: 'firebase',
 		fill: '#FFCA28',
-		since: 2018,
+		icon: 'firebase',
 		iconFill: '#000',
+		since: 2018,
+		text: 'Firebase',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Flutter',
-		icon: 'flutter',
 		fill: '#02569B',
+		icon: 'flutter',
 		since: 2022,
+		text: 'Flutter',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Foundation',
-		icon: 'foundation',
-		width: 24,
-		height: 35,
 		fill: '#141e1f',
-		since: 2013
+		height: 35,
+		icon: 'foundation',
+		since: 2013,
+		text: 'Foundation',
+		width: 24
 	},
 	{
-		text: 'Gatsby',
-		icon: 'gatsby',
 		fill: '#663399',
+		icon: 'gatsby',
 		since: 2019,
+		text: 'Gatsby',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'GIT',
-		icon: 'git',
 		fill: '#F05032',
+		icon: 'git',
 		since: 2011,
+		text: 'GIT',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Github Actions',
-		icon: 'githubactions',
 		fill: '#2088FF',
+		icon: 'githubactions',
 		since: 2020,
+		text: 'Github Actions',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Github Pages',
-		icon: 'githubpages',
 		fill: '#222222',
+		icon: 'githubpages',
 		since: 2014,
+		text: 'Github Pages',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Gitlab CI/CD',
-		icon: 'gitlab',
 		fill: '#FC6D26',
+		icon: 'gitlab',
 		since: 2017,
+		text: 'Gitlab CI/CD',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Gnu Bash',
-		icon: 'gnubash',
 		fill: '#4EAA25',
+		icon: 'gnubash',
 		since: 2015,
+		text: 'Gnu Bash',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Google Analytics',
-		icon: 'googleanalytics',
 		fill: '#E37400',
+		icon: 'googleanalytics',
 		since: 2018,
+		text: 'Google Analytics',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Google Chrome',
+		fill: '#4285F4',
 		icon: 'googlechrome',
-		fill: '#4285F4',
 		since: 2011,
+		text: 'Google Chrome',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Google Fonts',
+		fill: '#4285F4',
 		icon: 'googlefonts',
-		fill: '#4285F4',
 		since: 2014,
+		text: 'Google Fonts',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Google Maps',
+		fill: '#4285F4',
 		icon: 'googlemaps',
-		fill: '#4285F4',
 		since: 2016,
+		text: 'Google Maps',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Google Tag Manager',
-		icon: 'googletagmanager',
 		fill: '#246FDB',
+		icon: 'googletagmanager',
 		since: 2020,
+		text: 'Google Tag Manager',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Grunt',
-		icon: 'grunt',
 		fill: '#FAA918',
-		since: 2013,
+		icon: 'grunt',
 		iconFill: '#000',
+		since: 2013,
+		text: 'Grunt',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Gulp',
-		icon: 'gulp',
 		fill: '#CF4647',
+		icon: 'gulp',
 		since: 2013,
+		text: 'Gulp',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Handlebars',
-		icon: 'handlebarsdotjs',
 		fill: '#000000',
+		icon: 'handlebarsdotjs',
 		since: 2013,
+		text: 'Handlebars',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Highcharts',
-		icon: 'highcharts',
 		fill: '#3a3a4f',
+		icon: 'highcharts',
 		since: 2016,
+		text: 'Highcharts',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Homebrew',
-		icon: 'homebrew',
 		fill: '#FBB040',
-		since: 2018,
+		icon: 'homebrew',
 		iconFill: '#000',
+		since: 2018,
+		text: 'Homebrew',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Houdini',
-		icon: 'houdini',
 		fill: '#FF4713',
+		icon: 'houdini',
 		since: 2020,
+		text: 'Houdini',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'HTML5',
-		icon: 'html5',
 		fill: '#E34F26',
+		icon: 'html5',
 		since: 2010,
+		text: 'HTML5',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'i18next',
-		icon: 'i18next',
 		fill: '#26A69A',
+		icon: 'i18next',
 		since: 2018,
+		text: 'i18next',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Ionic',
-		icon: 'ionic',
 		fill: '#3880FF',
+		icon: 'ionic',
 		since: 2014,
+		text: 'Ionic',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Javascript',
-		icon: 'javascript',
 		fill: '#F7DF1E',
-		since: 2011,
+		icon: 'javascript',
 		iconFill: '#000',
+		since: 2011,
+		text: 'Javascript',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Jest',
-		icon: 'jest',
 		fill: '#C21325',
+		icon: 'jest',
 		since: 2017,
+		text: 'Jest',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Jira',
-		icon: 'jira',
 		fill: '#0052CC',
+		icon: 'jira',
 		since: 2017,
+		text: 'Jira',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'jQuery',
-		icon: 'jquery',
 		fill: '#0769AD',
+		icon: 'jquery',
 		since: 2011,
+		text: 'jQuery',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'JSON',
+		fill: '#000',
 		icon: 'json',
-		fill: '#000',
 		since: 2013,
+		text: 'JSON',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'LESS',
-		icon: 'less',
 		fill: '#1D365D',
+		icon: 'less',
 		since: 2012,
+		text: 'LESS',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Linux',
-		icon: 'linux',
 		fill: '#FCC624',
-		since: 2018,
+		icon: 'linux',
 		iconFill: '#000',
+		since: 2018,
+		text: 'Linux',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Lodash',
-		icon: 'lodash',
 		fill: '#3492FF',
+		icon: 'lodash',
 		since: 2015,
+		text: 'Lodash',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'MacOS',
+		fill: '#000',
 		icon: 'macos',
-		fill: '#000',
 		since: 2017,
+		text: 'MacOS',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Mailchimp',
-		icon: 'mailchimp',
 		fill: '#FFE01B',
-		since: 2019,
+		icon: 'mailchimp',
 		iconFill: '#000',
+		since: 2019,
+		text: 'Mailchimp',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'MAMP',
-		icon: 'mamp',
 		fill: '#02749C',
+		icon: 'mamp',
 		since: 2017,
+		text: 'MAMP',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Markdown',
+		fill: '#000',
 		icon: 'markdown',
-		fill: '#000',
 		since: 2014,
+		text: 'Markdown',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'MDX',
-		icon: 'mdx',
 		fill: '#1B1F24',
+		icon: 'mdx',
 		since: 2020,
+		text: 'MDX',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Miro',
-		icon: 'miro',
 		fill: '#050038',
+		icon: 'miro',
 		since: 2022,
+		text: 'Miro',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'MS Excel',
-		icon: 'microsoftexcel',
 		fill: '#217346',
+		icon: 'microsoftexcel',
 		since: 2010,
+		text: 'MS Excel',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'MS PowerPoint',
-		icon: 'microsoftpowerpoint',
 		fill: '#B7472A',
+		icon: 'microsoftpowerpoint',
 		since: 2010,
+		text: 'MS PowerPoint',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'MS Word',
-		icon: 'microsoftword',
 		fill: '#2B579A',
+		icon: 'microsoftword',
 		since: 2010,
+		text: 'MS Word',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'MJML',
-		icon: 'mjml',
 		fill: '#F25F4A',
+		icon: 'mjml',
 		since: 2019,
+		text: 'MJML',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Mocha',
-		icon: 'mocha',
 		fill: '#8D6748',
+		icon: 'mocha',
 		since: 2021,
+		text: 'Mocha',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Mongo DB',
-		icon: 'mongodb',
 		fill: '#47A248',
+		icon: 'mongodb',
 		since: 2019,
+		text: 'Mongo DB',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Netlify',
-		icon: 'netlify',
 		fill: '#00C7B7',
+		icon: 'netlify',
 		since: 2019,
+		text: 'Netlify',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Next JS',
+		fill: '#000',
 		icon: 'nextdotjs',
-		fill: '#000',
 		since: 2020,
+		text: 'Next JS',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Node JS',
-		icon: 'nodedotjs',
 		fill: '#339933',
+		icon: 'nodedotjs',
 		since: 2016,
+		text: 'Node JS',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Nuxt JS',
-		icon: 'nuxtdotjs',
 		fill: '#00DC82',
+		icon: 'nuxtdotjs',
 		since: 2018,
+		text: 'Nuxt JS',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Parcel Bundler',
-		icon: 'parcel',
 		fill: '#7d7d7d',
+		icon: 'parcel',
 		since: 2019,
+		text: 'Parcel Bundler',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Photopea',
-		icon: 'photopea',
 		fill: '#18A497',
+		icon: 'photopea',
 		since: 2020,
+		text: 'Photopea',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'PHP',
-		icon: 'php',
 		fill: '#777BB4',
+		icon: 'php',
 		since: 2013,
+		text: 'PHP',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'PostCSS',
-		icon: 'postcss',
 		fill: '#DD3A0A',
+		icon: 'postcss',
 		since: 2014,
+		text: 'PostCSS',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'PostgreSQL',
-		icon: 'postgresql',
 		fill: '#4169E1',
+		icon: 'postgresql',
 		since: 2023,
+		text: 'PostgreSQL',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'PostHTML',
-		icon: 'posthtml',
 		fill: '#fff',
+		icon: 'posthtml',
 		since: 2016,
+		text: 'PostHTML',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Postman',
-		icon: 'postman',
 		fill: '#FF6C37',
+		icon: 'postman',
 		since: 2019,
+		text: 'Postman',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Prettier',
-		icon: 'prettier',
 		fill: '#F7B93E',
+		icon: 'prettier',
 		since: 2014,
+		text: 'Prettier',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Prisma',
-		icon: 'prisma',
 		fill: '#2D3748',
+		icon: 'prisma',
 		since: 2023,
+		text: 'Prisma',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Preact',
-		icon: 'preact',
 		fill: '#673AB8',
+		icon: 'preact',
 		since: 2022,
+		text: 'Preact',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Puppeteer',
-		icon: 'puppeteer',
 		fill: '#40B5A4',
+		icon: 'puppeteer',
 		since: 2019,
+		text: 'Puppeteer',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'React',
-		icon: 'react',
 		fill: '#61DAFB',
+		icon: 'react',
 		since: 2016,
+		text: 'React',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'React Hook Form',
-		icon: 'reacthookform',
 		fill: '#EC5990',
+		icon: 'reacthookform',
 		since: 2020,
+		text: 'React Hook Form',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'React Router',
-		icon: 'reactrouter',
 		fill: '#CA4245',
+		icon: 'reactrouter',
 		since: 2016,
+		text: 'React Router',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Redux',
-		icon: 'redux',
 		fill: '#764ABC',
+		icon: 'redux',
 		since: 2016,
+		text: 'Redux',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Redux Saga',
-		icon: 'reduxsaga',
 		fill: '#999999',
+		icon: 'reduxsaga',
 		since: 2018,
+		text: 'Redux Saga',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Renovate',
-		icon: 'renovatebot',
 		fill: '#1A1F6C',
+		icon: 'renovatebot',
 		since: 2017,
+		text: 'Renovate',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Rollup',
-		icon: 'rollupdotjs',
 		fill: '#EC4A3F',
+		icon: 'rollupdotjs',
 		since: 2018,
+		text: 'Rollup',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'SASS',
-		icon: 'sass',
 		fill: '#CC6699',
+		icon: 'sass',
 		since: 2012,
+		text: 'SASS',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Sentry',
-		icon: 'sentry',
 		fill: '#362D59',
+		icon: 'sentry',
 		since: 2019,
+		text: 'Sentry',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Sketch',
-		icon: 'sketch',
 		fill: '#F7B500',
+		icon: 'sketch',
 		since: 2017,
+		text: 'Sketch',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Solidity',
-		icon: 'solidity',
 		fill: '#363636',
+		icon: 'solidity',
 		since: 2022,
+		text: 'Solidity',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Storybook',
-		icon: 'storybook',
 		fill: '#FF4785',
+		icon: 'storybook',
 		since: 2022,
+		text: 'Storybook',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Styled Components',
-		icon: 'styledcomponents',
 		fill: '#DB7093',
+		icon: 'styledcomponents',
 		since: 2018,
+		text: 'Styled Components',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Stylelint',
-		icon: 'stylelint',
 		fill: '#263238',
+		icon: 'stylelint',
 		since: 2017,
+		text: 'Stylelint',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Stylus',
-		icon: 'stylus',
 		fill: '#333',
+		icon: 'stylus',
 		since: 2019,
+		text: 'Stylus',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Sublime Text',
-		icon: 'sublimetext',
 		fill: '#FF9800',
+		icon: 'sublimetext',
 		since: 2010,
+		text: 'Sublime Text',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Subversion',
-		icon: 'subversion',
 		fill: '#809CC9',
+		icon: 'subversion',
 		since: 2010,
+		text: 'Subversion',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'SVG',
-		icon: 'svg',
 		fill: '#FFB13B',
+		icon: 'svg',
 		since: 2011,
+		text: 'SVG',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'SVGO',
-		icon: 'svgo',
 		fill: '#3E7FC1',
+		icon: 'svgo',
 		since: 2018,
+		text: 'SVGO',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Swagger',
-		icon: 'swagger',
 		fill: '#85EA2D',
-		since: 2019,
+		icon: 'swagger',
 		iconFill: '#000',
+		since: 2019,
+		text: 'Swagger',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Swiper',
-		icon: 'swiper',
 		fill: '#6332F6',
+		icon: 'swiper',
 		since: 2017,
+		text: 'Swiper',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Tailwind CSS',
-		icon: 'tailwindcss',
 		fill: '#06B6D4',
+		icon: 'tailwindcss',
 		since: 2023,
+		text: 'Tailwind CSS',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Testing Library',
-		icon: 'testinglibrary',
 		fill: '#E33332',
+		icon: 'testinglibrary',
 		since: 2021,
+		text: 'Testing Library',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Travis CI',
-		icon: 'travisci',
 		fill: '#3EAAAF',
-		since: 2017,
+		icon: 'travisci',
 		iconFill: '#000',
+		since: 2017,
+		text: 'Travis CI',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'TS-Node',
+		fill: '#3178C6',
 		icon: 'tsnode',
-		fill: '#3178C6',
 		since: 2020,
+		text: 'TS-Node',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Typescript',
-		icon: 'typescript',
 		fill: '#3178C6',
+		icon: 'typescript',
 		since: 2017,
+		text: 'Typescript',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Vercel',
-		icon: 'vercel',
 		fill: '#000',
+		icon: 'vercel',
 		since: 2019,
+		text: 'Vercel',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Visual Studio Code',
-		icon: 'visualstudiocode',
 		fill: '#007ACC',
+		icon: 'visualstudiocode',
 		since: 2017,
+		text: 'Visual Studio Code',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Vite',
-		icon: 'vite',
 		fill: '#646CFF',
+		icon: 'vite',
 		since: 2022,
+		text: 'Vite',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Vue',
+		fill: '#4FC08D',
 		icon: 'vuedotjs',
-		fill: '#4FC08D',
 		since: 2016,
+		text: 'Vue',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'VuePress',
+		fill: '#4FC08D',
 		icon: 'vuepress',
-		fill: '#4FC08D',
 		since: 2019,
+		text: 'VuePress',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Webpack',
-		icon: 'webpack',
 		fill: '#8DD6F9',
-		since: 2015,
+		icon: 'webpack',
 		iconFill: '#000',
+		since: 2015,
+		text: 'Webpack',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'WordPress',
-		icon: 'wordpress',
 		fill: '#21759B',
+		icon: 'wordpress',
 		since: 2013,
+		text: 'WordPress',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'XAMPP',
-		icon: 'xampp',
 		fill: '#FB7A24',
+		icon: 'xampp',
 		since: 2013,
+		text: 'XAMPP',
 		...defaultForceNodeSize
 	},
 	{
-		text: 'Yarn',
-		icon: 'yarn',
 		fill: '#2C8EBB',
+		icon: 'yarn',
 		since: 2016,
+		text: 'Yarn',
 		...defaultForceNodeSize
 	}
 ];

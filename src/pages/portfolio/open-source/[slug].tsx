@@ -1,12 +1,13 @@
-import ErrorPage from 'next/error';
 import type { FC } from 'react';
-import { useRouter } from 'next/router';
-import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import { Routes } from '@data/routes';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import ErrorPage from 'next/error';
+import { useRouter } from 'next/router';
+
+import { Layout, MDX as Mdx, Title } from '@components';
 import { openSourceProjects } from '@data/pages';
-import { MDX as Mdx, Layout, Title } from '@components';
-import { getPostBySlug, getAllPosts } from '@lib/markdown';
+import { Routes } from '@data/routes';
+import { getAllPosts, getPostBySlug } from '@lib/markdown';
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import type { PortfolioOpenSourceProjectPageData } from '@scripts/types';
 
@@ -17,11 +18,11 @@ type Params = {
 };
 
 type StaticPaths = {
-	paths: Params[];
 	fallback: boolean;
+	paths: Params[];
 };
 
-export const OpenSourceProject: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ post, funding, partners }) => {
+export const OpenSourceProject: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners, post }) => {
 	const router = useRouter();
 
 	if (!router.isFallback && !post?.slug) {
@@ -39,11 +40,11 @@ export const OpenSourceProject: FC<InferGetStaticPropsType<typeof getStaticProps
 			<Title text="Open Source" />
 
 			<Mdx
-				id="blog-post"
 				back={Routes.PORTFOLIO_OPEN_SOURCE_PROJECTS}
-				title={post.slug}
-				image={match?.image}
 				content={post.content}
+				id="blog-post"
+				image={match?.image}
+				title={post.slug}
 			/>
 		</Layout>
 	);
@@ -51,9 +52,9 @@ export const OpenSourceProject: FC<InferGetStaticPropsType<typeof getStaticProps
 
 export const getStaticProps: GetStaticProps<PortfolioOpenSourceProjectPageData> = async ({ params }) => ({
 	props: {
-		post: getPostBySlug('src/data/open-source-projects', params?.slug as string, ['slug', 'content']),
 		funding: await getFundingFromCMS(),
-		partners: await getPartnersFromCMS()
+		partners: await getPartnersFromCMS(),
+		post: getPostBySlug('src/data/open-source-projects', params?.slug as string, ['slug', 'content'])
 	}
 });
 
@@ -61,8 +62,8 @@ export const getStaticPaths = async (): Promise<StaticPaths> => {
 	const posts = getAllPosts('src/data/open-source-projects', ['slug']);
 
 	return {
-		paths: posts.map(({ slug }) => ({ params: { slug } })),
-		fallback: false
+		fallback: false,
+		paths: posts.map(({ slug }) => ({ params: { slug } }))
 	};
 };
 

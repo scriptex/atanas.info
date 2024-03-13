@@ -5,17 +5,17 @@ jest.mock('@data/menu', () => ({
 	...jest.requireActual('@data/menu'),
 	menuItems: [
 		{
+			content: 'Home',
 			href: '/',
 			index: 0,
-			title: 'Home',
-			content: 'Home'
+			title: 'Home'
 		},
 		{
-			rel: 'noopener noreferrer',
+			content: 'Send mail',
 			href: 'mailto:someone@example.com',
 			index: 1,
-			title: 'Send mail',
-			content: 'Send mail'
+			rel: 'noopener noreferrer',
+			title: 'Send mail'
 		}
 	]
 }));

@@ -2,42 +2,42 @@ import type { FC } from 'react';
 
 import { Button } from '@components';
 import { Routes } from '@data/routes';
+import { Article, Slide, Video } from '@scripts/cms';
 import { composeClassName } from '@scripts/shared';
-import { Slide, Video, Article } from '@scripts/cms';
 
 type AllowedDataTypes = Video | Slide | Article;
 
 type Props = {
-	name: 'title';
-	data: Array<AllowedDataTypes>;
-	small?: boolean;
-	route?: Routes;
 	active: number;
+	data: Array<AllowedDataTypes>;
+	name: 'title';
 	onClick?: (index: number) => void;
+	route?: Routes;
+	small?: boolean;
 };
 
-export const SectionNav: FC<Readonly<Props>> = ({ name, data, small = false, route, active, onClick }: Props) => (
+export const SectionNav: FC<Readonly<Props>> = ({ active, data, name, onClick, route, small = false }: Props) => (
 	<nav className={composeClassName('c-section__nav', small ? ['small'] : [])}>
 		<ul>
 			{data.map((item: AllowedDataTypes, index: number) => (
 				<li
-					key={item.index}
 					className={active === index + (typeof onClick === 'function' ? 0 : 1) ? 'current' : undefined}
+					key={item.index}
 				>
 					{typeof onClick === 'function' ? (
 						<Button
-							type="button"
-							onClick={() => onClick(index)}
-							className={small ? 'c-btn--small' : undefined}
 							aria-label={`Switch to ${item[name]}`}
+							className={small ? 'c-btn--small' : undefined}
+							onClick={() => onClick(index)}
+							type="button"
 						>
 							{item[name]}
 						</Button>
 					) : (
 						<Button
-							type="link"
-							href={`${route}?page=${index + 1}`}
 							className={small ? 'c-btn--small' : undefined}
+							href={`${route}?page=${index + 1}`}
+							type="link"
 						>
 							{item[name]}
 						</Button>

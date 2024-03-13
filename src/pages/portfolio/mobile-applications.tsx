@@ -1,13 +1,14 @@
-import Link from 'next/link';
 import type { FC } from 'react';
-import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import { Routes } from '@data/routes';
-import { mobileApps } from '@data/projects';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import Link from 'next/link';
+
+import { Layout, PortfolioSliders, Section, Title } from '@components';
 import { portfolioSectionProps } from '@data/pages';
-import type { PortfolioMobileAppsPageData } from '@scripts/types';
+import { mobileApps } from '@data/projects';
+import { Routes } from '@data/routes';
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
-import { Layout, Section, PortfolioSliders, Title } from '@components';
+import type { PortfolioMobileAppsPageData } from '@scripts/types';
 
 export const PortfolioMobileApps: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners }) => (
 	<Layout funding={funding} partners={partners}>
@@ -16,7 +17,7 @@ export const PortfolioMobileApps: FC<InferGetStaticPropsType<typeof getStaticPro
 		<Section
 			{...portfolioSectionProps}
 			actions={
-				<Link href={Routes.PORTFOLIO} className="c-btn">
+				<Link className="c-btn" href={Routes.PORTFOLIO}>
 					Go back
 				</Link>
 			}

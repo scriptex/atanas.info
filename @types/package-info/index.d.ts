@@ -1,11 +1,11 @@
 declare module 'package-info' {
 	export type Package = {
+		author: string;
+		description: string;
+		homepage: string;
+		license: string;
 		name: string;
 		version: string;
-		description: string;
-		license: string;
-		homepage: string;
-		author: string;
 	};
 
 	export default function info(name: string): Promise<Package>;

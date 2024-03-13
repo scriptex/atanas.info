@@ -1,5 +1,6 @@
-import Image from 'next/image';
 import type { FC } from 'react';
+
+import Image from 'next/image';
 
 import { ExternalLink } from '@components';
 
@@ -7,11 +8,11 @@ export const LinkedInBadge: FC = () => (
 	<div className="linkedin-badge bubbles">
 		<div className="linkedin-badge__content">
 			<Image
-				src="/images/temp/atanas.jpg"
 				alt="Atanas Atanasov smiling dressed in a green t-shirt"
-				width={240}
 				height={240}
 				loading="lazy"
+				src="/images/temp/atanas.jpg"
+				width={240}
 			/>
 
 			<h4>
@@ -27,7 +28,7 @@ export const LinkedInBadge: FC = () => (
 				</ExternalLink>
 			</h5>
 
-			<ExternalLink href="https://linkedin.com/in/scriptex" className="c-btn c-btn--small">
+			<ExternalLink className="c-btn c-btn--small" href="https://linkedin.com/in/scriptex">
 				View profile
 			</ExternalLink>
 		</div>

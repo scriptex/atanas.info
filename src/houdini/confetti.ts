@@ -1,7 +1,5 @@
-// @ts-ignore
 const getRandom = (min: number, max: number): number => Math.floor(Math.random() * (max - min + 1)) + min;
 
-// @ts-ignore
 registerPaint(
 	'confetti',
 	class {
@@ -11,7 +9,7 @@ registerPaint(
 
 		public paint(
 			ctx: CanvasRenderingContext2D,
-			{ width, height }: Record<string, number>,
+			{ height, width }: Record<string, number>,
 			props: Map<string, string>
 		) {
 			const amount = Number(props.get('--confetti-amount')!);

@@ -1,18 +1,20 @@
 import type { FC } from 'react';
+
 import Carousel from 'react-round-carousel';
 
-import { formatDate } from '@scripts/shared';
 import { ExternalLink, StatsEntry } from '@components';
-import { filteredData } from './utils';
 import type { LastFMAlbum, LastFMInsights } from '@insights/utils';
+import { formatDate } from '@scripts/shared';
+
+import { filteredData } from './utils';
 
 type Props = {
+	condition: boolean;
 	data: LastFMAlbum[];
 	period: 'week' | 'month';
-	condition: boolean;
 };
 
-const SocialMusicCarousel: FC<Readonly<Props>> = ({ data, period, condition }: Props) =>
+const SocialMusicCarousel: FC<Readonly<Props>> = ({ condition, data, period }: Props) =>
 	condition ? (
 		<div className="o-grid__item xs-12">
 			<h3>Top albums for last {period}:</h3>
@@ -22,7 +24,7 @@ const SocialMusicCarousel: FC<Readonly<Props>> = ({ data, period, condition }: P
 	) : null;
 
 export const SocialMusic: FC<Readonly<{ data: LastFMInsights }>> = ({ data }) => {
-	const { info, error, updated, topAlbums, weeklyAlbumChart } = data;
+	const { error, info, topAlbums, updated, weeklyAlbumChart } = data;
 	const topAlbumsLength = topAlbums.length;
 	const weeklyAlbumChartLength = weeklyAlbumChart.length;
 	const hasNoData = topAlbumsLength + weeklyAlbumChartLength === 0;
@@ -39,7 +41,6 @@ export const SocialMusic: FC<Readonly<{ data: LastFMInsights }>> = ({ data }) =>
 			{info?.user && (
 				<div className="c-section--stats">
 					<StatsEntry
-						title=""
 						data={[
 							{ index: 0, title: 'Last.FM username', value: info.user.name },
 							{ index: 1, title: 'Total albums', value: info.user.album_count },
@@ -52,6 +53,7 @@ export const SocialMusic: FC<Readonly<{ data: LastFMInsights }>> = ({ data }) =>
 								value: formatDate(info.user.registered['#text'] * 1000, 'yyyy')
 							}
 						]}
+						title=""
 					/>
 				</div>
 			)}
@@ -60,12 +62,12 @@ export const SocialMusic: FC<Readonly<{ data: LastFMInsights }>> = ({ data }) =>
 				<div className="o-shell">
 					<div className="o-grid">
 						<SocialMusicCarousel
+							condition={weeklyAlbumChartLength > 0}
 							data={weeklyAlbumChart}
 							period="week"
-							condition={weeklyAlbumChartLength > 0}
 						/>
 
-						<SocialMusicCarousel data={topAlbums} period="month" condition={topAlbumsLength > 0} />
+						<SocialMusicCarousel condition={topAlbumsLength > 0} data={topAlbums} period="month" />
 					</div>
 				</div>
 			</div>

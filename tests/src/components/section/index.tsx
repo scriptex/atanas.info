@@ -1,19 +1,19 @@
-import { videos } from '@test-config/mocks';
+import { Section, SectionGrid, SectionNav } from '@components';
 import { statsItems } from '@data/projects';
 import { snapshotTest } from '@test-config/helpers';
-import { Section, SectionNav, SectionGrid } from '@components';
+import { videos } from '@test-config/mocks';
 
 snapshotTest(
 	() => (
 		<Section
+			actions={<div />}
+			additionalElements={<div />}
+			className="c-section-test"
 			id="test"
+			shellClass="c-shell-test"
+			style={{ color: 'rebeccapurple' }}
+			subtitle="Test subtitle"
 			title="Test title"
-			style={{ color: 'rebeccapurple' }}
-			actions={<div />}
-			subtitle="Test subtitle"
-			className="c-section-test"
-			shellClass="c-shell-test"
-			additionalElements={<div />}
 		>
 			<h1>This is a test title</h1>
 		</Section>
@@ -25,14 +25,14 @@ snapshotTest(
 snapshotTest(
 	() => (
 		<Section
-			id="test"
-			style={{ color: 'rebeccapurple' }}
 			actions={<div />}
+			additionalElements={<div />}
+			className="c-section-test"
+			hasButton={false}
+			id="test"
+			shellClass="c-shell-test"
+			style={{ color: 'rebeccapurple' }}
 			subtitle="Test subtitle"
-			hasButton={false}
-			className="c-section-test"
-			shellClass="c-shell-test"
-			additionalElements={<div />}
 		>
 			<h1>This is a test title</h1>
 		</Section>
@@ -44,14 +44,14 @@ snapshotTest(
 snapshotTest(
 	() => (
 		<Section
-			id="test"
-			style={{ color: 'rebeccapurple' }}
 			actions={<div />}
-			hasShell={false}
-			hasButton={false}
-			className="c-section-test"
-			shellClass="c-shell-test"
 			additionalElements={<div />}
+			className="c-section-test"
+			hasButton={false}
+			hasShell={false}
+			id="test"
+			shellClass="c-shell-test"
+			style={{ color: 'rebeccapurple' }}
 		>
 			<h1>This is a test title</h1>
 		</Section>
@@ -63,14 +63,14 @@ snapshotTest(
 snapshotTest(
 	() => (
 		<Section
-			id="test"
-			style={{ color: 'rebeccapurple' }}
 			actions={<div />}
-			hasShell={false}
+			additionalElements={<div />}
+			className="c-section-test"
 			hasButton
-			className="c-section-test"
+			hasShell={false}
+			id="test"
 			shellClass="c-shell-test"
-			additionalElements={<div />}
+			style={{ color: 'rebeccapurple' }}
 		>
 			<h1>This is a test title</h1>
 		</Section>
@@ -79,7 +79,7 @@ snapshotTest(
 	'Section'
 );
 
-snapshotTest(() => <SectionNav name="title" data={videos} active={0} onClick={jest.fn()} />, '.c-btn', 'Section');
+snapshotTest(() => <SectionNav active={0} data={videos} name="title" onClick={jest.fn()} />, '.c-btn', 'Section');
 
 snapshotTest(() => <SectionGrid data={statsItems} />, undefined, 'Section');
 

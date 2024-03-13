@@ -1,7 +1,8 @@
 import { intervalToDuration } from 'date-fns/intervalToDuration';
 
-import statistics from '@data/lotties/statistics.json';
 import { Animation } from '@components';
+
+import statistics from '@data/lotties/statistics.json';
 
 export type GeneralInsight = {
 	readonly index: number;
@@ -12,8 +13,8 @@ export type GeneralInsight = {
 export const START_YEAR = 2013;
 
 export const { years } = intervalToDuration({
-	start: new Date(START_YEAR, 0, 0, 0, 0, 0),
-	end: new Date(new Date().getFullYear(), 0, 0, 0, 0, 0)
+	end: new Date(new Date().getFullYear(), 0, 0, 0, 0, 0),
+	start: new Date(START_YEAR, 0, 0, 0, 0, 0)
 });
 
 export const YEARS: string[] = Array(years)
@@ -38,8 +39,8 @@ export const addTitles = (selector: string, getTitle: (rect: SVGRectElement) => 
 };
 
 export const sectionStatsProps = {
-	id: 'stats',
-	title: 'Stats',
+	additionalElements: <Animation className="c-section__animation" data={statistics} height={150} width={150} />,
 	hasButton: true,
-	additionalElements: <Animation data={statistics} width={150} height={150} className="c-section__animation" />
+	id: 'stats',
+	title: 'Stats'
 };

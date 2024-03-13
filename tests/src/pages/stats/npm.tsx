@@ -1,30 +1,31 @@
 import type { ComponentProps } from 'react';
 
 import { NPMStats } from '@pages/stats/npm';
+
+import type { Package, WithError, WithSum } from '@scripts/types';
 import { snapshotTest } from '@test-config/helpers';
 import { funding, partners } from '@test-config/mocks';
-import type { Package, WithError, WithSum } from '@scripts/types';
 
 type Data = Record<string, Package> & WithSum & WithError;
 
 const data = {
 	'test-package1': {
-		name: 'test-package1',
-		version: '1.0.0',
-		description: 'A testing package',
-		license: 'MIT',
-		homepage: 'https://www.npmjs.com/package/test-package1',
 		author: 'test',
-		downloads: 1431
+		description: 'A testing package',
+		downloads: 1431,
+		homepage: 'https://www.npmjs.com/package/test-package1',
+		license: 'MIT',
+		name: 'test-package1',
+		version: '1.0.0'
 	},
 	'test-package2': {
-		name: 'test-package2',
-		version: '1.0.0',
-		description: 'A testing package',
-		license: 'MIT',
-		homepage: 'https://www.npmjs.com/package/test-package2',
 		author: 'test,another',
-		downloads: 1431
+		description: 'A testing package',
+		downloads: 1431,
+		homepage: 'https://www.npmjs.com/package/test-package2',
+		license: 'MIT',
+		name: 'test-package2',
+		version: '1.0.0'
 	}
 } as unknown as Data;
 

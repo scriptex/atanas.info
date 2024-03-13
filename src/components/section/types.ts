@@ -1,17 +1,17 @@
-import type { ReactNode, CSSProperties } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 
 import type { ReactChildren } from '@scripts/types';
 
 export type Props = {
-	id: string;
-	title?: string;
-	style?: CSSProperties;
 	actions?: ReactNode;
-	children: ReactChildren;
-	subtitle?: string;
-	hasShell?: boolean;
-	hasButton?: boolean;
-	className?: string;
-	shellClass?: string;
 	additionalElements?: ReactNode;
+	children: ReactChildren;
+	className?: string;
+	hasButton?: boolean;
+	hasShell?: boolean;
+	id: string;
+	shellClass?: string;
+	style?: CSSProperties;
+	subtitle?: string;
+	title?: string;
 };

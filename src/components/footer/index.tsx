@@ -1,9 +1,16 @@
 import { FC, useEffect } from 'react';
 
+import { Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import { ExternalLink, Funding, Referral } from '@components';
 import { updatedAt } from '@data/updated-at';
-import { formatDate } from '@scripts/shared';
 import type { FundingNetwork } from '@scripts/cms';
-import { Funding, ExternalLink, Referral } from '@components';
+import { formatDate } from '@scripts/shared';
+
+import BraintrustHire from '@data/lotties/hire1.json';
+import ToptalHire from '@data/lotties/hire2.json';
+import BraintrustTalent from '@data/lotties/talent.json';
 
 type Props = {
 	funding: FundingNetwork[];
@@ -11,7 +18,6 @@ type Props = {
 
 export const Footer: FC<Readonly<Props>> = ({ funding }) => {
 	useEffect(() => {
-		// @ts-ignore
 		import('scriptex-socials');
 	}, []);
 
@@ -42,7 +48,39 @@ export const Footer: FC<Readonly<Props>> = ({ funding }) => {
 
 				<Funding data={funding} />
 
-				<Referral />
+				<div className="c-referrals">
+					<Swiper autoplay={{ delay: 10000 }} loop modules={[Autoplay]}>
+						<SwiperSlide>
+							<Referral
+								animation={BraintrustTalent}
+								button="Apply to Braintrust"
+								href="https://app.usebraintrust.com/r/atanas1/"
+								subtitle="Your work. Your network. Your future."
+								title="Access the world's best freelance jobs"
+							/>
+						</SwiperSlide>
+
+						<SwiperSlide>
+							<Referral
+								animation={ToptalHire}
+								button="Hire top talent"
+								href="https://www.toptal.com/qZg2WZ/worlds-top-talent"
+								subtitle="Trusted by leading brands and startups."
+								title="Hire the Top 3% of Freelance Talent®"
+							/>
+						</SwiperSlide>
+
+						<SwiperSlide>
+							<Referral
+								animation={BraintrustHire}
+								button="Hire on Braintrust"
+								href="https://app.usebraintrust.com/r/atanas1/"
+								subtitle="Innovate, fast."
+								title="Hire top tech, design, marketing talent"
+							/>
+						</SwiperSlide>
+					</Swiper>
+				</div>
 			</div>
 		</footer>
 	);

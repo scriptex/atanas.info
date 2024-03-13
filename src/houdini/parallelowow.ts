@@ -1,7 +1,5 @@
-// @ts-ignore
 const paintNameParallelOwOw = 'parallelowow';
 
-// @ts-ignore
 registerPaint(
 	paintNameParallelOwOw,
 	class {
@@ -17,7 +15,7 @@ registerPaint(
 
 		public paint(
 			ctx: CanvasRenderingContext2D,
-			{ width, height }: Record<string, number>,
+			{ height, width }: Record<string, number>,
 			props: Map<string, string>
 		): void {
 			const tileWidth = parseInt(props.get(`--${paintNameParallelOwOw}-tile-width`)!, 10);
@@ -50,7 +48,6 @@ registerPaint(
 					if (Math.random() > probability) {
 						const xOffset = x * tileWidth - y * tileHeight;
 
-						// Helpers!
 						const upperLeftX = xOffset;
 						const upperLeftY = yOffset;
 						const upperRightX = xOffset + tileWidth;
@@ -60,7 +57,6 @@ registerPaint(
 						const lowerLeftX = xOffset - tileHeight;
 						const lowerLeftY = lowerRightY;
 
-						// 1. Draw shape on the right side of the parallelogram
 						ctx.fillStyle = baseColors[1];
 						ctx.beginPath();
 						ctx.moveTo(upperRightX, upperRightY);
@@ -73,7 +69,6 @@ registerPaint(
 							ctx.stroke();
 						}
 
-						// 2. Draw shape on the lower left side of the parallelogram
 						ctx.fillStyle = baseColors[2];
 						ctx.beginPath();
 						ctx.moveTo(lowerRightX, lowerRightY);
@@ -87,7 +82,6 @@ registerPaint(
 							ctx.stroke();
 						}
 
-						// 3. Draw parallelogram cap
 						ctx.fillStyle = baseColors[0];
 						ctx.beginPath();
 						ctx.moveTo(upperLeftX, upperLeftY);

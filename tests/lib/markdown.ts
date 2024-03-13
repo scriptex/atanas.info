@@ -1,7 +1,7 @@
-import { join } from 'node:path';
 import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
-import { getAllPosts, getPostSlugs, getPostBySlug, markdownToHtml, postsDirectory } from '@lib/markdown';
+import { getAllPosts, getPostBySlug, getPostSlugs, markdownToHtml, postsDirectory } from '@lib/markdown';
 
 const postsFolder = 'src/data/posts';
 
@@ -28,8 +28,8 @@ it('Test the `getPostBySlug` function', () => {
 
 	expect(getPostBySlug(postsFolder, post)).toEqual({});
 	expect(getPostBySlug(postsFolder, post, ['slug'])).toEqual({ slug: post });
-	expect(getPostBySlug(postsFolder, post, ['slug', 'content'])).toEqual({ slug: post, content });
-	expect(getPostBySlug(postsFolder, post, ['slug', 'content', 'date'])).toEqual({ slug: post, content });
+	expect(getPostBySlug(postsFolder, post, ['slug', 'content'])).toEqual({ content, slug: post });
+	expect(getPostBySlug(postsFolder, post, ['slug', 'content', 'date'])).toEqual({ content, slug: post });
 });
 
 it('Test the `getAllPosts` function', () => {

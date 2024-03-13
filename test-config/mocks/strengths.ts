@@ -2,9 +2,9 @@ import { Strength } from '@scripts/cms';
 
 export const strengths: Strength[] = [
 	{
-		title: 'Strength 1 title',
-		index: 0,
+		content: 'Strength 1 content',
 		icon: 'clock',
-		content: 'Strength 1 content'
+		index: 0,
+		title: 'Strength 1 title'
 	}
 ];

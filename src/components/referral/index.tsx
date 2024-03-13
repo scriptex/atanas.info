@@ -1,22 +1,31 @@
 import type { FC } from 'react';
 
-import Infographic from '@svg/braintrust-referral.svg';
-import { ExternalLink } from '@components';
+import { Animation, ExternalLink } from '@components';
 
-export const FooterReferral: FC = () => (
-	<div className="c-footer__referral">
-		<Infographic />
+import 'swiper/css';
 
-		<div>
-			<h5>Access the world&apos;s best freelance jobs.</h5>
+type Props = {
+	animation: unknown;
+	button: string;
+	href: string;
+	subtitle: string;
+	title: string;
+};
 
-			<p>Your work. Your network. Your future.</p>
+export const Referral: FC<Readonly<Props>> = ({ animation, button, href, subtitle, title }) => (
+	<div className="c-referral">
+		<Animation className="c-referral__animation" data={animation} height={120} width={120} />
 
-			<ExternalLink href="https://app.usebraintrust.com/r/atanas1/" className="c-btn c-btn--small">
-				Apply to Braintrust
+		<div className="c-referral__content">
+			<h5>{title}</h5>
+
+			<p>{subtitle}</p>
+
+			<ExternalLink className="c-btn c-btn--small" href={href}>
+				{button}
 			</ExternalLink>
 		</div>
 	</div>
 );
 
-export default FooterReferral;
+export default Referral;

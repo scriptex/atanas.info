@@ -1,19 +1,19 @@
 #!/usr/bin/env ts-node-script
 
-import { log } from '@scripts/shared';
 import { Track, music as tracks } from '@data/music';
 import clientPromise, { queryMusic } from '@lib/mongodb';
+import { log } from '@scripts/shared';
 
 (async () => {
 	const data = tracks.map((track: Track) => {
 		const url = track.url.replace('www', 'dl');
 
 		return {
-			url,
 			metaData: {
 				artist: track.artist,
 				title: track.name
-			}
+			},
+			url
 		};
 	});
 

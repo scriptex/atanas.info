@@ -17,7 +17,7 @@ export const ResumeExperience: FC<Readonly<Props>> = ({ data }: Props) => (
 
 				<div className="c-resume__experience-title" dangerouslySetInnerHTML={{ __html: item.project }} />
 
-				<ResumeEntry place={item.location} period={item.period} />
+				<ResumeEntry period={item.period} place={item.location} />
 
 				<div className="c-resume__experience-details" dangerouslySetInnerHTML={{ __html: item.details }} />
 			</div>

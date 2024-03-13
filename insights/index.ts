@@ -1,6 +1,7 @@
 #!/usr/bin/env ts-node-script
 
 import { log } from '@scripts/shared';
+
 import { getGithubInsights } from './github';
 import { getGitlabInsights } from './gitlab';
 import { getLastFMInsights } from './last-fm';

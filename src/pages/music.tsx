@@ -1,12 +1,13 @@
-import { FC, useRef, useState, useEffect } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
+
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import { getData, queryMusic } from '@lib/mongodb';
-import { music, MusicFunctions } from '@scripts/music';
-import { Ref, composeClassName } from '@scripts/shared';
-import type { MusicPageProps, Track } from '@scripts/types';
 import { Button, Layout, Section, Title } from '@components';
+import { getData, queryMusic } from '@lib/mongodb';
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
+import { music, MusicFunctions } from '@scripts/music';
+import { composeClassName, Ref } from '@scripts/shared';
+import type { MusicPageProps, Track } from '@scripts/types';
 
 const getTrackArtist = (data: string): string => {
 	const result = data.replace('Scriptex', '').trim();
@@ -39,53 +40,53 @@ export const Music: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>>
 	}, []);
 
 	return (
-		<Layout main="o-main--high" funding={funding} partners={partners}>
+		<Layout funding={funding} main="o-main--high" partners={partners}>
 			<Title text="Music" />
 
-			<Section id="music" hasButton>
+			<Section hasButton id="music">
 				<div
-					ref={container}
 					className={composeClassName('c-music', [visible ? 'list-visible' : '', playing ? 'playing' : ''])}
+					ref={container}
 				>
-					<audio ref={audio} src={source.url} hidden controls crossOrigin="anonymous">
+					<audio controls crossOrigin="anonymous" hidden ref={audio} src={source.url}>
 						<track kind="captions" />
 					</audio>
 
 					<canvas ref={canvas} />
 
-					<Button type="button" onClick={() => setVisible(!visible)} unstyled className="c-music__menu">
+					<Button className="c-music__menu" onClick={() => setVisible(!visible)} type="button" unstyled>
 						{visible ? 'Close track list' : 'Pick a track'}
 					</Button>
 
 					<Button
-						type="button"
+						className="c-music__btn c-music__btn--pause"
 						onClick={() => {
 							setPlaying(false);
 							setVisible(false);
 							audio.current?.pause();
 							functions?.onPause();
 						}}
+						type="button"
 						unstyled
-						className="c-music__btn c-music__btn--pause"
 					>
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 							<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
 						</svg>
 						Pause
 					</Button>
 
 					<Button
-						type="button"
+						className="c-music__btn c-music__btn--play"
 						onClick={() => {
 							setPlaying(true);
 							setVisible(false);
 							functions?.onPlay();
 							audio.current?.play();
 						}}
+						type="button"
 						unstyled
-						className="c-music__btn c-music__btn--play"
 					>
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 							<path d="M8 5v14l11-7z" />
 						</svg>
 						Play
@@ -94,7 +95,7 @@ export const Music: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>>
 					<div className="c-music__tracks">
 						{data.map(track => (
 							<Button
-								type="button"
+								className={track.url === source.url ? 'active' : undefined}
 								key={track.url}
 								onClick={async () => {
 									await Promise.resolve(setSource(track));
@@ -103,8 +104,8 @@ export const Music: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>>
 									functions?.onPlay();
 									audio.current?.play();
 								}}
+								type="button"
 								unstyled
-								className={track.url === source.url ? 'active' : undefined}
 							>
 								<span>
 									{track.metaData.title}

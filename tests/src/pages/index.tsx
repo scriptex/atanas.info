@@ -1,18 +1,18 @@
 import { act } from '@testing-library/react';
 
 import { Home } from '@pages/index';
+import { snapshotTest, test } from '@test-config/helpers';
 import { funding, partners } from '@test-config/mocks';
-import { test, snapshotTest } from '@test-config/helpers';
 
 jest.useFakeTimers();
 
 const titles = ['Title 1', 'Title 2'];
 
-snapshotTest(() => <Home titles={[]} funding={funding} partners={partners} />, undefined, 'Home');
-snapshotTest(() => <Home titles={titles} funding={funding} partners={partners} />, undefined, 'Home');
+snapshotTest(() => <Home funding={funding} partners={partners} titles={[]} />, undefined, 'Home');
+snapshotTest(() => <Home funding={funding} partners={partners} titles={titles} />, undefined, 'Home');
 
 it('Should test the Home page', async () => {
-	const HomeComponent = () => <Home titles={titles} funding={funding} partners={partners} />;
+	const HomeComponent = () => <Home funding={funding} partners={partners} titles={titles} />;
 
 	const { asFragment } = await test(HomeComponent);
 

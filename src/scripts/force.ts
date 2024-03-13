@@ -1,21 +1,22 @@
 import { range } from 'd3-array';
-import { randomUniform } from 'd3-random';
-import { drag, D3DragEvent } from 'd3-drag';
-import { select, Selection } from 'd3-selection';
+import { D3DragEvent, drag } from 'd3-drag';
 import {
-	forceX,
-	forceY,
-	forceLink,
-	Simulation,
 	forceCenter,
 	forceCollide,
+	forceLink,
 	forceManyBody,
 	forceSimulation,
+	forceX,
+	forceY,
+	Simulation,
 	SimulationLinkDatum,
 	SimulationNodeDatum
 } from 'd3-force';
+import { randomUniform } from 'd3-random';
+import { select, Selection } from 'd3-selection';
 
 import type { ForceNode } from '@data/skills-list';
+
 import { Canvas, createSVG } from './canvas';
 
 type Node = ForceNode & Readonly<{ r: number }>;
@@ -24,13 +25,13 @@ type LinkedNode = SimulationNodeDatum & Node;
 
 type Link<T> = {
 	index?: number;
-	target: T;
 	source: T;
+	target: T;
 };
 
 type Data = {
-	nodes: Node[];
 	links: Link<LinkedNode>[];
+	nodes: Node[];
 };
 
 type ForceGraphType = 'skills' | 'occupation';
@@ -78,14 +79,14 @@ export const renderForceDirectedGraph = (id: string, items: ForceNode[], type: F
 	};
 
 	renderSkills({
-		nodes: items.map(item => ({
-			r: type === 'skills' ? 30 : 100,
-			...item
-		})),
 		links: range(0, all).map(() => ({
 			source: ~~randomUniform(all)(),
 			target: ~~randomUniform(all)()
-		})) as unknown as Link<LinkedNode>[]
+		})) as unknown as Link<LinkedNode>[],
+		nodes: items.map(item => ({
+			r: type === 'skills' ? 30 : 100,
+			...item
+		}))
 	});
 };
 
@@ -153,7 +154,7 @@ export const createNodes = (
 
 	nodes.each(function (d) {
 		const group = select(this.parentNode as Element);
-		const { width, height } = d;
+		const { height, width } = d;
 
 		let link: Selection<HTMLAnchorElement, unknown, null, undefined> | null = null;
 

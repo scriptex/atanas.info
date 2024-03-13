@@ -1,9 +1,10 @@
 import { act } from '@testing-library/react';
 
 import { GithubStats } from '@pages/stats/github';
+
+import type { GithubContribution, GithubCount, GithubInsights } from '@scripts/types';
+import { mockFetch, snapshotTest, test } from '@test-config/helpers';
 import { funding, partners } from '@test-config/mocks';
-import { test, mockFetch, snapshotTest } from '@test-config/helpers';
-import type { GithubCount, GithubInsights, GithubContribution } from '@scripts/types';
 
 jest.mock('@lib/mongodb', () => ({
 	getData: jest.fn(() => Promise.resolve({ props: { data: [] } }))
@@ -15,51 +16,51 @@ mockFetch({
 });
 
 const dataFull: GithubInsights = {
-	error: false,
-	general: {
-		publicRepos: 82,
-		privateRepos: 17,
-		publicGists: 10,
-		privateGists: 4,
-		followers: 103,
-		following: 1,
-		createdAt: '2013-06-03T18:11:48Z',
-		updatedAt: '2023-01-30T20:53:21Z'
-	},
 	calendar: {
 		'2022-01-30': { count: 1 }
 	},
-	updated: 1675318748477,
+	error: false,
+	general: {
+		createdAt: '2013-06-03T18:11:48Z',
+		followers: 103,
+		following: 1,
+		privateGists: 4,
+		privateRepos: 17,
+		publicGists: 10,
+		publicRepos: 82,
+		updatedAt: '2023-01-30T20:53:21Z'
+	},
 	repositories: [
 		{
-			name: '2048',
-			private: false,
-			fork: false,
-			createdAt: '2019-03-10T13:26:48Z',
-			updated_at: '2023-01-09T16:17:55Z',
-			size: 6581,
-			stargazers: 10,
-			watchers: 10,
-			language: 'TypeScript',
-			issues: 0,
 			contributions: [
-				{ user: 'renovate-bot', count: 850 },
-				{ user: 'scriptex', count: 694 },
-				{ user: 'renovate[bot]', count: 161 },
-				{ user: 'dependabot[bot]', count: 16 },
+				{ count: 850, user: 'renovate-bot' },
+				{ count: 694, user: 'scriptex' },
+				{ count: 161, user: 'renovate[bot]' },
+				{ count: 16, user: 'dependabot[bot]' },
 				{ user: 'ImgBotApp' } as unknown as GithubContribution
 			],
-			has_pages: true
+			createdAt: '2019-03-10T13:26:48Z',
+			fork: false,
+			has_pages: true,
+			issues: 0,
+			language: 'TypeScript',
+			name: '2048',
+			private: false,
+			size: 6581,
+			stargazers: 10,
+			updated_at: '2023-01-09T16:17:55Z',
+			watchers: 10
 		}
-	]
+	],
+	updated: 1675318748477
 };
 
 const dataEmpty: GithubInsights = {
+	calendar: null,
 	error: false,
 	general: null,
-	updated: 1675318748477,
-	calendar: null,
-	repositories: null
+	repositories: null,
+	updated: 1675318748477
 };
 
 snapshotTest(
@@ -81,14 +82,14 @@ snapshotTest(
 		<GithubStats
 			data={{
 				...dataFull,
-				updated: null,
 				repositories: dataFull.repositories!.map(r => ({
 					...r,
 					contributions: r.contributions.map(c => ({
 						...c,
 						user: 'test'
 					}))
-				}))
+				})),
+				updated: null
 			}}
 			funding={funding}
 			partners={partners}
@@ -136,7 +137,7 @@ snapshotTest(
 it('Test the GithubStats page with fake timers', async () => {
 	jest.useFakeTimers();
 
-	const GithubStatsComponent = () => <GithubStats funding={funding} data={dataFull} partners={partners} />;
+	const GithubStatsComponent = () => <GithubStats data={dataFull} funding={funding} partners={partners} />;
 
 	const { asFragment } = await test(GithubStatsComponent);
 

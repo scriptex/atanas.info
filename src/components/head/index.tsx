@@ -1,40 +1,41 @@
-import NextHead from 'next/head';
 import type { FC } from 'react';
+
+import NextHead from 'next/head';
 
 export const Head: FC = () => (
 	<NextHead>
 		<meta
-			name="viewport"
 			content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
+			name="viewport"
 		/>
 
 		<meta
-			name="description"
 			content="Atanas Atanasov - Frontend Team Lead and Senior Javascript/Typescript Engineer: Single Page Applications, Vue, React, Angular, NodeJS | Professional web and mobile development services"
+			name="description"
 		/>
 
 		<meta
-			name="keywords"
 			content="React Development, NodeJS Development, Typescript Development, Web Development, WordPress Development, HTML Development, Website Development, Javascript Development, WordPress, WP, JS, Javascript, Vue, Vue.js, VueJS, Nuxt, React, ReactJS, React JS, Node, NodeJS, Single Page Apps, Single Page Application, CSS, CSS3, ES5, ES6, ES7, Website, Development"
+			name="keywords"
 		/>
 
-		<meta name="copyright" content="Atanas Atanasov" />
+		<meta content="Atanas Atanasov" name="copyright" />
 
-		<meta name="language" content="EN" />
+		<meta content="EN" name="language" />
 
-		<meta name="robots" content="index, follow" />
+		<meta content="index, follow" name="robots" />
 
-		<meta name="author" content="Atanas Atanasov, hi@atanas.info" />
+		<meta content="Atanas Atanasov, hi@atanas.info" name="author" />
 
-		<meta name="designer" content="Atanas Atanasov" />
+		<meta content="Atanas Atanasov" name="designer" />
 
-		<meta name="coverage" content="Worldwide" />
+		<meta content="Worldwide" name="coverage" />
 
-		<meta name="distribution" content="Worldwide" />
+		<meta content="Worldwide" name="distribution" />
 
-		<meta name="rating" content="General" />
+		<meta content="General" name="rating" />
 
-		<meta name="revisit-after" content="7 days" />
+		<meta content="7 days" name="revisit-after" />
 
 		<meta content="0" httpEquiv="Expires" />
 
@@ -54,274 +55,274 @@ export const Head: FC = () => (
 		<meta content="https://atanas.info/images/temp/atanas.jpg" property="og:image" />
 
 		<meta
-			property="og:description"
 			content="Atanas Atanasov - Frontend Team Lead and Senior Javascript/Typescript Engineer: Single Page Applications, Vue, React, Angular, NodeJS | Professional web and mobile development services"
+			property="og:description"
 		/>
 
-		<meta name="application-name" content="Atanas Atanasov" />
+		<meta content="Atanas Atanasov" name="application-name" />
 
-		<meta name="mobile-web-app-capable" content="yes" />
+		<meta content="yes" name="mobile-web-app-capable" />
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta content="yes" name="apple-mobile-web-app-capable" />
 
-		<meta name="apple-mobile-web-app-title" content="Atanas Atanasov" />
+		<meta content="Atanas Atanasov" name="apple-mobile-web-app-title" />
 
-		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+		<meta content="default" name="apple-mobile-web-app-status-bar-style" />
 
-		<meta name="format-detection" content="telephone=no" />
+		<meta content="telephone=no" name="format-detection" />
 
-		<meta name="msapplication-config" content="config.xml" />
+		<meta content="config.xml" name="msapplication-config" />
 
-		<meta name="msapplication-TileColor" content="#ef4c23" />
+		<meta content="#ef4c23" name="msapplication-TileColor" />
 
-		<meta name="msapplication-TileImage" content="/images/favicon/ms-tile-144x144.png" />
+		<meta content="/images/favicon/ms-tile-144x144.png" name="msapplication-TileImage" />
 
-		<meta name="msapplication-square70x70logo" content="/images/favicon/ms-tile-70x70.png" />
+		<meta content="/images/favicon/ms-tile-70x70.png" name="msapplication-square70x70logo" />
 
-		<meta name="msapplication-square150x150logo" content="/images/favicon/ms-tile-150x150.png" />
+		<meta content="/images/favicon/ms-tile-150x150.png" name="msapplication-square150x150logo" />
 
-		<meta name="msapplication-wide310x150logo" content="/images/favicon/ms-tile-310x150.png" />
+		<meta content="/images/favicon/ms-tile-310x150.png" name="msapplication-wide310x150logo" />
 
-		<meta name="msapplication-square310x310logo" content="/images/favicon/ms-tile-310x310.png" />
+		<meta content="/images/favicon/ms-tile-310x310.png" name="msapplication-square310x310logo" />
 
-		<meta name="theme-color" content="#ef4c23" />
+		<meta content="#ef4c23" name="theme-color" />
 
-		<meta name="twitter:card" content="summary" />
+		<meta content="summary" name="twitter:card" />
 
-		<meta name="twitter:url" content="https://atanas.info" />
+		<meta content="https://atanas.info" name="twitter:url" />
 
-		<meta name="twitter:title" content="Atanas Atanasov" />
+		<meta content="Atanas Atanasov" name="twitter:title" />
 
 		<meta
-			name="twitter:description"
 			content="Atanas Atanasov - Frontend Team Lead and Senior Javascript/Typescript Engineer: Single Page Applications, Vue, React, Angular, NodeJS | Professional web and mobile development services"
+			name="twitter:description"
 		/>
 
-		<meta name="twitter:image" content="https://atanas.info/images/temp/atanas.jpg" />
+		<meta content="https://atanas.info/images/temp/atanas.jpg" name="twitter:image" />
 
-		<meta name="twitter:creator" content="@scriptexbg" />
+		<meta content="@scriptexbg" name="twitter:creator" />
 
-		<link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon-57x57.png" sizes="57x57" />
+		<link href="/images/favicon/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" />
 
-		<link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon-114x114.png" sizes="114x114" />
+		<link href="/images/favicon/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" />
 
-		<link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon-72x72.png" sizes="72x72" />
+		<link href="/images/favicon/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" />
 
-		<link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon-144x144.png" sizes="144x144" />
+		<link href="/images/favicon/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" />
 
-		<link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon-60x60.png" sizes="60x60" />
+		<link href="/images/favicon/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" />
 
-		<link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon-120x120.png" sizes="120x120" />
+		<link href="/images/favicon/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
 
-		<link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon-76x76.png" sizes="76x76" />
+		<link href="/images/favicon/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
 
-		<link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon-152x152.png" sizes="152x152" />
+		<link href="/images/favicon/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
 
-		<link rel="icon" type="image/png" href="/images/favicon/favicon-196x196.png" sizes="196x196" />
+		<link href="/images/favicon/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png" />
 
-		<link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
+		<link href="/images/favicon/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png" />
 
-		<link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32" />
+		<link href="/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
 
-		<link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16" />
+		<link href="/images/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
 
-		<link rel="icon" type="image/png" href="/images/favicon/favicon-128x128.png" sizes="128x128" />
+		<link href="/images/favicon/favicon-128x128.png" rel="icon" sizes="128x128" type="image/png" />
 
-		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon/favicon.ico" />
+		<link href="/images/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2048x2732.png"
 			media="(device-width: 2048px) and (device-height: 2732 />and  (orientation: portrait)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2732x2048.png"
 			media="(device-width: 2732px) and (device-height: 2048px) and  (orientation: landscape)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1668x2388.png"
 			media="(device-width: 1668px) and (device-height: 2388px) and  (orientation: portrait)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2388x1668.png"
 			media="(device-width: 2388px) and (device-height: 1668px) and  (orientation: landscape)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1668x2224.png"
 			media="(device-width: 1668px) and (device-height: 2224px) and  (orientation: portrait)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2224x1668.png"
 			media="(device-width: 2224px) and (device-height: 1668px) and  (orientation: landscape)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1536x2048.png"
 			media="(device-width: 1536px) and (device-height: 2048px) and  (orientation: portrait)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2048x1536.png"
 			media="(device-width: 2048px) and (device-height: 1536px) and  (orientation: landscape)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1536x2048.png"
 			media="(device-width: 1536px) and (device-height: 2048px) and  (orientation: portrait)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2048x1536.png"
 			media="(device-width: 2048px and (device-height: 1536px) and  (orientation: landscape)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1242x2688.png"
 			media="(device-width: 1242px and (device-height: 2688px) and  (orientation: portrait)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2688x1242.png"
 			media="(device-width: 2688px) and (device-height: 142px) and  (orientation: landscape)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1125x2436.png"
 			media="(device-width: 1125px) and (device-height: 236px) and  (orientation: portrait)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2436x1125.png"
 			media="(device-width: 2436px) and (device-height: 1125px) and  (orientation: landscape)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-828x1792.png"
 			media="(device-width: 828px) and (device-height: 192px) and  (orientation: portrait)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1792x828.png"
 			media="(device-width: 1792px) and (device-height: 28px) and  (orientation: landscape)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1125x2436.png"
 			media="(device-width: 1125px) and (device-height: 236px) and  (orientation: portrait)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2436x1125.png"
 			media="(device-width: 2436px and (device-height: 1125px) and  (orientation: landscape)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1242x2208.png"
 			media="(device-width: 1242px and (device-height: 2208px) and  (orientation: portrait)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2208x1242.png"
 			media="(device-width: 2208px) and (device-height: 1242px) and  (orientation: landscape)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-750x1334.png"
 			media="(device-width: 750px) and (device-height: 134px) and  (orientation: portrait)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1334x750.png"
 			media="(device-width: 1334px and (device-height: 750px) and  (orientation: landscape)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1242x2208.png"
 			media="(device-width: 1242px and (device-height: 2208px) and  (orientation: portrait)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2208x1242.png"
 			media="(device-width: 2208px) and (device-height: 1242px) and  (orientation: landscape)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-750x1334.png"
 			media="(device-width: 750px) and (device-height: 134px) and  (orientation: portrait)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1334x750.png"
 			media="(device-width: 1334px and (device-height: 750px) and  (orientation: landscape)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1242x2208.png"
 			media="(device-width: 1242px and (device-height: 2208px) and  (orientation: portrait)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-2208x1242.png"
 			media="(device-width: 2208px) and (device-height: 1242px) and  (orientation: landscape)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-750x1334.png"
 			media="(device-width: 750px) and (device-height: 134px) and  (orientation: portrait)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1334x750.png"
 			media="(device-width: 1334px) and (device-height: 50px) and  (orientation: landscape)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-640x1136.png"
 			media="(device-width: 640px) and (device-height: 136px) and  (orientation: portrait)"
+			rel="apple-touch-startup-image"
 		/>
 
 		<link
-			rel="apple-touch-startup-image"
 			href="/images/launch-screens/launch-screen-1136x640.png"
 			media="(device-width: 1136px) and (device-height: 640px) and  (orientation: landscape)"
+			rel="apple-touch-startup-image"
 		/>
 
-		<link rel="manifest" href="/manifest.json" />
+		<link href="/manifest.json" rel="manifest" />
 	</NextHead>
 );
 

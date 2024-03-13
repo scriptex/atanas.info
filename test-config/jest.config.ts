@@ -1,41 +1,8 @@
+/* eslint-disable sort-keys */
+/* eslint-disable sort-keys-fix/sort-keys-fix */
 import type { Config } from '@jest/types';
 
 const config: Config.InitialOptions = {
-	preset: 'ts-jest',
-	moduleDirectories: ['node_modules', 'insights', 'lib', 'npm', 'screenshots', 'src', 'test-config', 'tests'],
-	moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-	moduleNameMapper: {
-		'\\.svg': '<rootDir>/test-config/svg.ts',
-		'\\.(css|scss)$': '<rootDir>/test-config/style-mock.ts',
-		'swiper/css': '<rootDir>/test-config/style-mock.ts',
-		'@lib(.*)': '<rootDir>/lib/$1',
-		'@npm': '<rootDir>/npm',
-		'@src(.*)': '<rootDir>/src/$1',
-		'@svg(.*)': '<rootDir>/src/svg/$1',
-		'@data(.*)': '<rootDir>/src/data/$1',
-		'@tests(.*)': '<rootDir>/tests/$1',
-		'@pages(.*)': '<rootDir>/src/pages/$1',
-		'@public(.*)': '<rootDir>/public/$1',
-		'@styles(.*)': '<rootDir>/src/styles/$1',
-		'@scripts(.*)': '<rootDir>/src/scripts/$1',
-		'@insights(.*)': '<rootDir>/insights/$1',
-		'@components': '<rootDir>/src/components',
-		'@test-config(.*)': '<rootDir>/test-config/$1'
-	},
-	setupFiles: ['jest-canvas-mock', '<rootDir>/test-config/index.ts'],
-	transform: {
-		'^.+\\.tsx?$': [
-			'ts-jest',
-			{
-				tsconfig: {
-					jsx: 'react-jsx'
-				}
-			}
-		]
-	},
-	verbose: false,
-	testRegex: '(/tests/.*|(\\.|/)(test|spec))\\.[jt]sx?$',
-	testPathIgnorePatterns: [],
 	collectCoverageFrom: [
 		'<rootDir>/insights/**/*.{ts,tsx}',
 		'<rootDir>/lib/**/*.{ts,tsx}',
@@ -51,19 +18,54 @@ const config: Config.InitialOptions = {
 		'!<rootDir>/src/pages/api/*',
 		'!<rootDir>/src/scripts/*'
 	],
+	coverageReporters: ['lcov', 'html', 'cobertura'],
 	coverageThreshold: {
 		global: {
-			lines: 75,
 			branches: 75,
 			functions: 75,
+			lines: 75,
 			statements: 75
 		}
 	},
-	coverageReporters: ['lcov', 'html', 'cobertura'],
 	globals: {
-		window: {},
-		navigator: {}
-	}
+		navigator: {},
+		window: {}
+	},
+	moduleDirectories: ['node_modules', 'insights', 'lib', 'npm', 'screenshots', 'src', 'test-config', 'tests'],
+	moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+	moduleNameMapper: {
+		'\\.(css|scss)$': '<rootDir>/test-config/style-mock.ts',
+		'\\.svg': '<rootDir>/test-config/svg.ts',
+		'@components': '<rootDir>/src/components',
+		'@data(.*)': '<rootDir>/src/data/$1',
+		'@insights(.*)': '<rootDir>/insights/$1',
+		'@lib(.*)': '<rootDir>/lib/$1',
+		'@npm': '<rootDir>/npm',
+		'@pages(.*)': '<rootDir>/src/pages/$1',
+		'@public(.*)': '<rootDir>/public/$1',
+		'@scripts(.*)': '<rootDir>/src/scripts/$1',
+		'@src(.*)': '<rootDir>/src/$1',
+		'@styles(.*)': '<rootDir>/src/styles/$1',
+		'@svg(.*)': '<rootDir>/src/svg/$1',
+		'@test-config(.*)': '<rootDir>/test-config/$1',
+		'@tests(.*)': '<rootDir>/tests/$1',
+		'swiper/css': '<rootDir>/test-config/style-mock.ts'
+	},
+	preset: 'ts-jest',
+	setupFiles: ['jest-canvas-mock', '<rootDir>/test-config/index.ts'],
+	testPathIgnorePatterns: [],
+	testRegex: '(/tests/.*|(\\.|/)(test|spec))\\.[jt]sx?$',
+	transform: {
+		'^.+\\.tsx?$': [
+			'ts-jest',
+			{
+				tsconfig: {
+					jsx: 'react-jsx'
+				}
+			}
+		]
+	},
+	verbose: false
 };
 
 export default config;

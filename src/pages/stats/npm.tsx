@@ -1,13 +1,14 @@
-import Link from 'next/link';
 import type { FC } from 'react';
-import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import Link from 'next/link';
+
+import { ExternalLink, Layout, Section, Title } from '@components';
 import { Routes } from '@data/routes';
-import { sectionStatsProps } from '@scripts/stats';
 import { getData, queryNPM } from '@lib/mongodb';
-import { Layout, Section, ExternalLink, Title } from '@components';
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
-import type { WithSum, WithError, Packages, NPMStatsPageProps } from '@scripts/types';
+import { sectionStatsProps } from '@scripts/stats';
+import type { NPMStatsPageProps, Packages, WithError, WithSum } from '@scripts/types';
 
 const PackagesList: FC<Readonly<Packages>> = ({ data }: Packages) => (
 	<div className="o-grid c-packages">
@@ -17,7 +18,7 @@ const PackagesList: FC<Readonly<Packages>> = ({ data }: Packages) => (
 
 			return (
 				<div className="o-grid__item xs-12 sm-6 md-4 lg-4" key={key}>
-					<ExternalLink href={item.homepage} className="c-package">
+					<ExternalLink className="c-package" href={item.homepage}>
 						<h4>{item.name}</h4>
 
 						<p>{item.description}</p>
@@ -49,7 +50,7 @@ export const NPMStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps
 		return null;
 	}
 
-	const { sum = null, error, ...packages } = data;
+	const { error, sum = null, ...packages } = data;
 
 	if (error || sum === null) {
 		return null;
@@ -62,7 +63,7 @@ export const NPMStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps
 			<Section
 				{...sectionStatsProps}
 				actions={
-					<Link href={Routes.STATS} className="c-btn">
+					<Link className="c-btn" href={Routes.STATS}>
 						Go back
 					</Link>
 				}

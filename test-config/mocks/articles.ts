@@ -4,16 +4,13 @@ import { Article } from '@scripts/cms';
 
 export const articles: Article[] = [
 	{
-		url: 'https://article.one/',
-		title: 'Article 1 title',
-		index: 0,
 		external: true,
-		externalImage: 'https://article.one/image.png'
+		externalImage: 'https://article.one/image.png',
+		index: 0,
+		title: 'Article 1 title',
+		url: 'https://article.one/'
 	},
 	{
-		url: 'https://article.two/',
-		title: 'Article 2 title',
-		index: 1,
 		external: false,
 		image: {
 			fields: {
@@ -21,6 +18,9 @@ export const articles: Article[] = [
 					url: 'https://article.two/image.png'
 				}
 			}
-		} as Asset
+		} as Asset,
+		index: 1,
+		title: 'Article 2 title',
+		url: 'https://article.two/'
 	}
 ];

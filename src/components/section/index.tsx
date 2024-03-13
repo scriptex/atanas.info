@@ -2,14 +2,14 @@ import type { FC } from 'react';
 
 import { composeClassName } from '@scripts/shared';
 
-import type { Props } from './types';
 import { SectionElements } from './elements';
+import type { Props } from './types';
 
 export const Section: FC<Readonly<Props>> = (props: Props) => {
-	const { id, style, hasShell = true, className, shellClass } = props;
+	const { className, hasShell = true, id, shellClass, style } = props;
 
 	return (
-		<section id={id} style={style} className={composeClassName('c-section', [id], [className])}>
+		<section className={composeClassName('c-section', [id], [className])} id={id} style={style}>
 			{hasShell ? (
 				<div className={composeClassName('o-shell', [], [shellClass])}>
 					<SectionElements {...props} />

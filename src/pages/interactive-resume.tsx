@@ -1,65 +1,67 @@
 import { FC, useEffect } from 'react';
+
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import resume from '@data/lotties/resume.json';
+import { Animation, Icon, Layout, Lines, Section, Title } from '@components';
+import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { useNetworkState } from '@scripts/shared';
 import type { InteractiveResumePageProps } from '@scripts/types';
-import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
-import { Icon, Lines, Layout, Section, Animation, Title } from '@components';
+
+import resume from '@data/lotties/resume.json';
 
 const items = [
 	{
+		element: <codersrank-activity branding="false" labels legend tooltip username="scriptex" />,
 		index: 0,
-		title: 'Activity',
-		element: <codersrank-activity labels legend tooltip branding="false" username="scriptex" />
+		title: 'Activity'
 	},
 	{
-		index: 1,
-		title: 'Education',
 		element: (
 			<codersrank-education
-				grid
 				branding="false"
-				username="scriptex"
-				education-section-title="Schools"
 				certificates-section-title="Certificates"
+				education-section-title="Schools"
+				grid
+				username="scriptex"
 			/>
-		)
+		),
+		index: 1,
+		title: 'Education'
 	},
 	{
+		element: <codersrank-portfolio branding="false" grid username="scriptex" />,
 		index: 2,
-		title: 'Portfolio',
-		element: <codersrank-portfolio grid branding="false" username="scriptex" />
+		title: 'Portfolio'
 	},
 	{
+		element: <codersrank-skills-chart branding="false" labels legend tooltip username="scriptex" />,
 		index: 3,
-		title: 'Skills',
-		element: <codersrank-skills-chart labels legend tooltip branding="false" username="scriptex" />
+		title: 'Skills'
 	},
 	{
+		element: <codersrank-summary username="scriptex" />,
 		index: 4,
-		title: 'Summary',
-		element: <codersrank-summary username="scriptex" />
+		title: 'Summary'
 	},
 	{
+		element: <codersrank-work-experience branding="false" grid logos username="scriptex" />,
 		index: 5,
-		title: 'Work',
-		element: <codersrank-work-experience grid logos branding="false" username="scriptex" />
+		title: 'Work'
 	},
 	{
+		element: <codersrank-timeline branding="false" type="workexperience" username="scriptex" />,
 		index: 6,
-		title: 'Work Experience Timeline',
-		element: <codersrank-timeline type="workexperience" branding="false" username="scriptex" />
+		title: 'Work Experience Timeline'
 	},
 	{
+		element: <codersrank-timeline branding="false" type="portfolio" username="scriptex" />,
 		index: 7,
-		title: 'Portfolio Timeline',
-		element: <codersrank-timeline type="portfolio" branding="false" username="scriptex" />
+		title: 'Portfolio Timeline'
 	},
 	{
+		element: <codersrank-timeline branding="false" type="technologies" username="scriptex" />,
 		index: 8,
-		title: 'Technologies Timeline',
-		element: <codersrank-timeline type="technologies" branding="false" username="scriptex" />
+		title: 'Technologies Timeline'
 	}
 ];
 
@@ -81,21 +83,21 @@ export const InteractiveResume: FC<InferGetStaticPropsType<typeof getStaticProps
 			<Title text="Interactive Resume" />
 
 			<Section
+				additionalElements={
+					<Animation className="c-section__animation" data={resume} height={150} width={150} />
+				}
+				hasButton
 				id="interactive-resume"
 				title="Interactive resume"
-				hasButton
-				additionalElements={
-					<Animation data={resume} width={150} height={150} className="c-section__animation" />
-				}
 			>
 				<Lines />
 
 				<div className="c-interactive-resume">
 					{items.map(item => (
-						<div key={item.index} className="c-interactive-resume__widget">
+						<div className="c-interactive-resume__widget" key={item.index}>
 							<h3>{item.title}</h3>
 
-							{online ? item.element : <Icon name="svg-disconnected " className="svg-disconnected" />}
+							{online ? item.element : <Icon className="svg-disconnected" name="svg-disconnected " />}
 						</div>
 					))}
 				</div>

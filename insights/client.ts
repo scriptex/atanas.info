@@ -1,6 +1,6 @@
+import { config as dotenvConfig } from 'dotenv';
 import LastFm from 'lastfm-node-client';
 import { GitHubClient } from 'universal-github-client';
-import { config as dotenvConfig } from 'dotenv';
 
 dotenvConfig({
 	path: '.env.local'
@@ -8,17 +8,17 @@ dotenvConfig({
 
 export const github = new GitHubClient({
 	base: 'https://api.github.com',
-	token: process.env.GITHUB_TOKEN!,
-	fetch
+	fetch,
+	token: process.env.GITHUB_TOKEN!
 });
 
 export const gitlab = (path: string, method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' = 'GET'): Promise<any> =>
 	fetch(`https://gitlab.com/api/v4/${path}`, {
-		method,
 		headers: {
-			'Content-Type': 'application/json',
-			Authorization: `Bearer ${process.env.GITLAB_TOKEN}`
-		}
+			Authorization: `Bearer ${process.env.GITLAB_TOKEN}`,
+			'Content-Type': 'application/json'
+		},
+		method
 	})
 		.then(res => res.json())
 		.catch((e: Error) => {

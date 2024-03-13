@@ -1,8 +1,8 @@
-import { act, waitFor, fireEvent } from '@testing-library/react';
+import { act, fireEvent, waitFor } from '@testing-library/react';
 
 import { Funding } from '@components';
+import { snapshotTest, test } from '@test-config/helpers';
 import { funding } from '@test-config/mocks';
-import { test, snapshotTest } from '@test-config/helpers';
 
 snapshotTest(() => <Funding data={funding} />, undefined, 'Gunding');
 

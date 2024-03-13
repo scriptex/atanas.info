@@ -1,9 +1,9 @@
-import { FC, useState, useContext, ChangeEvent, FormEvent, useCallback } from 'react';
+import { ChangeEvent, FC, FormEvent, useCallback, useContext, useState } from 'react';
 
 import { Button } from '@components';
-import { Status } from '@scripts/types';
 import { AppContext } from '@data/context';
 import { composeClassName } from '@scripts/shared';
+import { Status } from '@scripts/types';
 
 type Props = {
 	initialStatus?: Status;
@@ -36,8 +36,8 @@ export const Contact: FC<Readonly<Props>> = ({ initialStatus = Status.DEFAULT })
 
 			try {
 				const response = await fetch('/api/mail', {
-					method: 'POST',
-					body: JSON.stringify({ email, message, honeypot })
+					body: JSON.stringify({ email, honeypot, message }),
+					method: 'POST'
 				});
 				const result: ContactResult = await response.json();
 
@@ -56,9 +56,9 @@ export const Contact: FC<Readonly<Props>> = ({ initialStatus = Status.DEFAULT })
 	);
 
 	return (
-		<form onSubmit={onSubmit} className={composeClassName('c-contact', contactVisible ? ['visible'] : [])}>
+		<form className={composeClassName('c-contact', contactVisible ? ['visible'] : [])} onSubmit={onSubmit}>
 			<Button
-				type="button"
+				className="c-contact__close"
 				onClick={() => {
 					setEmail('');
 					setMessage('');
@@ -66,8 +66,8 @@ export const Contact: FC<Readonly<Props>> = ({ initialStatus = Status.DEFAULT })
 					setStatus(Status.DEFAULT);
 					setContactVisible(false);
 				}}
+				type="button"
 				unstyled
-				className="c-contact__close"
 			>
 				Close
 			</Button>
@@ -82,11 +82,11 @@ export const Contact: FC<Readonly<Props>> = ({ initialStatus = Status.DEFAULT })
 
 							<input
 								id="email"
-								type="email"
 								name="email"
-								value={email}
-								required
 								onChange={(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+								required
+								type="email"
+								value={email}
 							/>
 						</div>
 
@@ -94,17 +94,17 @@ export const Contact: FC<Readonly<Props>> = ({ initialStatus = Status.DEFAULT })
 							<label htmlFor="message">Message:</label>
 
 							<textarea
-								id="message"
 								cols={30}
-								rows={10}
+								id="message"
 								name="message"
-								value={message}
-								required
 								onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setMessage(e.target.value)}
+								required
+								rows={10}
+								value={message}
 							/>
 						</div>
 
-						<input type="hidden" name="field" value={honeypot} />
+						<input name="field" type="hidden" value={honeypot} />
 					</>
 				)}
 

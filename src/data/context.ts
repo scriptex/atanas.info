@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, createContext } from 'react';
+import { createContext, Dispatch, SetStateAction } from 'react';
 
 export const AppContext = createContext({
 	contactVisible: false,

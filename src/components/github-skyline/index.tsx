@@ -1,13 +1,16 @@
 /* eslint-disable react/no-unknown-property */
 import '@babylonjs/loaders';
-import { Vector3 } from '@babylonjs/core';
 import { FC, useEffect, useState } from 'react';
-import { Scene, Engine, SceneEventArgs } from 'react-babylonjs';
 
-import { SIZE } from './constants';
+import { Engine, Scene, SceneEventArgs } from 'react-babylonjs';
+
+import { Vector3 } from '@babylonjs/core';
+
 import { Button, Loader } from '@components';
 import { composeClassName } from '@scripts/shared';
-import { onSceneMount, GithubSkylineProps } from './utils';
+
+import { SIZE } from './constants';
+import { GithubSkylineProps, onSceneMount } from './utils';
 
 export const GithubSkyline: FC<Readonly<GithubSkylineProps>> = (props: GithubSkylineProps) => {
 	const [loading, setLoading] = useState(true);
@@ -25,36 +28,36 @@ export const GithubSkyline: FC<Readonly<GithubSkylineProps>> = (props: GithubSky
 		<div className={composeClassName('c-skyline__item', expanded ? ['expanded'] : [])}>
 			{loading && <Loader />}
 
-			<Button type="button" onClick={() => setExpanded(!expanded)} className="c-btn--small">
+			<Button className="c-btn--small" onClick={() => setExpanded(!expanded)} type="button">
 				{expanded ? 'Collapse' : 'Expand'}
 			</Button>
 
-			<Engine antialias adaptToDeviceRatio canvasId={`c-skyline__item-${props.index}`}>
+			<Engine adaptToDeviceRatio antialias canvasId={`c-skyline__item-${props.index}`}>
 				<Scene onSceneMount={(args: SceneEventArgs) => onSceneMount(args, props, () => setLoading(false))}>
 					<arcRotateCamera
-						fov={0.8}
-						name="camera"
-						beta={1}
-						minZ={0.1}
-						maxZ={SIZE}
 						alpha={-2}
-						target={Vector3.Zero()}
-						radius={75}
-						wheelPrecision={1}
-						upperBetaLimit={Math.PI / 2}
+						beta={1}
+						fov={0.8}
 						lowerRadiusLimit={50}
-						upperRadiusLimit={100}
+						maxZ={SIZE}
+						minZ={0.1}
+						name="camera"
 						panningSensibility={0}
+						radius={75}
+						target={Vector3.Zero()}
+						upperBetaLimit={Math.PI / 2}
+						upperRadiusLimit={100}
 						useAutoRotationBehavior
+						wheelPrecision={1}
 					/>
 
 					<autoRotationBehavior
 						idleRotationSpeed={-0.1}
-						idleRotationWaitTime={SIZE}
 						idleRotationSpinupTime={SIZE}
+						idleRotationWaitTime={SIZE}
 					/>
 
-					<hemisphericLight name="light" intensity={0.5} direction={new Vector3(0, 1, -1)} />
+					<hemisphericLight direction={new Vector3(0, 1, -1)} intensity={0.5} name="light" />
 				</Scene>
 			</Engine>
 		</div>

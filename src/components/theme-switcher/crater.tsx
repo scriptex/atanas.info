@@ -1,15 +1,15 @@
 import type { FC } from 'react';
 
 type Props = {
-	path: string;
 	circle: number;
+	path: string;
 	translate: string;
 };
 
-export const Crater: FC<Readonly<Props>> = ({ path, circle, translate }: Props) => (
+export const Crater: FC<Readonly<Props>> = ({ circle, path, translate }: Props) => (
 	<g transform={`translate(${translate})`}>
 		<circle cx={circle} cy={circle} r={circle} />
-		<path fill="#231F20" d={path} opacity=".12" />
+		<path d={path} fill="#231F20" opacity=".12" />
 	</g>
 );
 

@@ -1,10 +1,12 @@
-import { useEffect, type FC } from 'react';
+import { type FC, useEffect } from 'react';
+
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import working from '@data/lotties/working.json';
+import { Animation, Layout, Section, Title } from '@components';
+import { getFundingFromCMS, getOccupationFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import type { OccupationPageProps } from '@scripts/types';
-import { Layout, Section, Animation, Title } from '@components';
-import { getPartnersFromCMS, getOccupationFromCMS, getFundingFromCMS } from '@scripts/cms';
+
+import working from '@data/lotties/working.json';
 
 export const Occupation: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, funding, partners }) => {
 	useEffect(() => {
@@ -18,16 +20,16 @@ export const Occupation: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 			<Title text="Occupation" />
 
 			<Section
+				additionalElements={
+					<Animation className="c-section__animation" data={working} height={144} width={256} />
+				}
+				className="bubbles"
+				hasButton
 				id="occupation"
 				title="Current occupation"
-				hasButton
-				className="bubbles"
-				additionalElements={
-					<Animation data={working} width={256} height={144} className="c-section__animation" />
-				}
 			>
 				<div className="c-section__body">
-					<div id="occupation-graph" className="c-section__container" />
+					<div className="c-section__container" id="occupation-graph" />
 				</div>
 			</Section>
 		</Layout>

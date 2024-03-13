@@ -1,11 +1,13 @@
 import { FC, useState } from 'react';
+
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import videoCamera from '@data/lotties/video-camera.json';
+import { Animation, Layout, Lines, Loader, Section, SectionNav, Title } from '@components';
+import { getFundingFromCMS, getPartnersFromCMS, getVideosFromCMS, Video } from '@scripts/cms';
 import { composeClassName } from '@scripts/shared';
 import type { VideosPageData } from '@scripts/types';
-import { Video, getFundingFromCMS, getPartnersFromCMS, getVideosFromCMS } from '@scripts/cms';
-import { Lines, Loader, Layout, Section, Animation, SectionNav, Title } from '@components';
+
+import videoCamera from '@data/lotties/video-camera.json';
 
 export const Videos: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, funding, partners }) => {
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -15,34 +17,34 @@ export const Videos: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ dat
 			<Title text="Videos" />
 
 			<Section
+				additionalElements={
+					<Animation className="c-section__animation" data={videoCamera} height={150} width={150} />
+				}
+				className="c-section--slides"
+				hasButton
 				id="videos"
 				title="Videos"
-				hasButton
-				className="c-section--slides"
-				additionalElements={
-					<Animation data={videoCamera} width={150} height={150} className="c-section__animation" />
-				}
 			>
 				<Lines />
 
-				<SectionNav name="title" data={data} active={activeIndex} onClick={setActiveIndex} />
+				<SectionNav active={activeIndex} data={data} name="title" onClick={setActiveIndex} />
 
 				<div className="c-section__body">
 					{data.map((presentation: Video, index: number) => (
 						<div
-							key={presentation.index}
 							className={composeClassName(
 								'c-section__frame',
 								[],
 								activeIndex === index ? ['current'] : []
 							)}
+							key={presentation.index}
 						>
 							<Loader />
 
 							<iframe
+								loading="lazy"
 								src={`${presentation.url}/embed?start=false&loop=false&delayms=3000`}
 								title={presentation.description}
-								loading="lazy"
 							/>
 						</div>
 					))}
