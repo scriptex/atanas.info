@@ -17,7 +17,7 @@ export const PortfolioOpenSourceProjects: FC<InferGetStaticPropsType<typeof getS
 
 	return (
 		<Layout funding={funding} partners={partners}>
-			<Title text="Open Source | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+			<Title text="Open Source" />
 
 			<Section
 				{...portfolioSectionProps}

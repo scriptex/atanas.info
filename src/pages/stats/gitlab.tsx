@@ -102,7 +102,7 @@ export const GitlabStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 
 	return (
 		<Layout funding={funding} partners={partners}>
-			<Title text="Gitlab Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+			<Title text="Gitlab Stats" />
 
 			<Section
 				{...sectionStatsProps}

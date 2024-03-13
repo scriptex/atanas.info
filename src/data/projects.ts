@@ -45,7 +45,7 @@ export const projects: WebProject[] = [
 		skip: false
 	},
 	{
-		url: 'https://mama-culinar.com/',
+		url: '',
 		image: '/images/web-apps/Mama-Culinar.jpg',
 		index: 2,
 		title: 'Mama Culinar',

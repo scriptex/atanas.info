@@ -33,7 +33,7 @@ import {
 
 export const Resume: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, funding, partners }) => (
 	<Layout funding={funding} partners={partners}>
-		<Title text="Resume | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+		<Title text="Resume" />
 
 		<Section
 			id="resume"

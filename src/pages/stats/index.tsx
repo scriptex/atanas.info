@@ -9,7 +9,7 @@ import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 
 export const Stats: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners }) => (
 	<Layout funding={funding} partners={partners}>
-		<Title text="Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+		<Title text="Stats" />
 
 		<Section {...sectionStatsProps} hasShell={true}>
 			<SectionGrid data={statsItems} />

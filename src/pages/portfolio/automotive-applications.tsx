@@ -11,7 +11,7 @@ import { Layout, Section, PortfolioSliders, Title } from '@components';
 
 export const PortfolioAutomotiveApps: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners }) => (
 	<Layout funding={funding} partners={partners}>
-		<Title text="Automotive Applications | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+		<Title text="Automotive Applications" />
 
 		<Section
 			{...portfolioSectionProps}

@@ -9,7 +9,7 @@ import { Certificate, getCertificatesFromCMS, getFundingFromCMS, getPartnersFrom
 
 export const Certificates: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, funding, partners }) => (
 	<Layout funding={funding} partners={partners}>
-		<Title text="Certificates | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+		<Title text="Certificates" />
 
 		<Section
 			id="certificates"

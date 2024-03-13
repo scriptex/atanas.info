@@ -12,7 +12,7 @@ export const Videos: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ dat
 
 	return (
 		<Layout funding={funding} partners={partners}>
-			<Title text="Videos | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+			<Title text="Videos" />
 
 			<Section
 				id="videos"

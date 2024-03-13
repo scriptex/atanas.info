@@ -33,7 +33,7 @@ export const Home: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ title
 
 	return (
 		<Layout main="o-main--high" funding={funding} partners={partners}>
-			<Title text="Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+			<Title text="" />
 
 			<Section id="hello" hasShell={false} hasButton={false}>
 				<div className="c-canvas" id="canvas" ref={canvasRef} />
