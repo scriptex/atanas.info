@@ -95,7 +95,7 @@ export const Testimonials: FC<Props> = ({ data, funding, partners }) => {
 
 	return (
 		<Layout funding={funding} partners={partners}>
-			<Title text="Testimonials | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+			<Title text="Testimonials" />
 
 			<Section
 				id="testimonials"

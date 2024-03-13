@@ -57,7 +57,7 @@ export const NPMStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps
 
 	return (
 		<Layout funding={funding} partners={partners}>
-			<Title text="NPM Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+			<Title text="NPM Stats" />
 
 			<Section
 				{...sectionStatsProps}

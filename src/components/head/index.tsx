@@ -10,7 +10,7 @@ export const Head: FC = () => (
 
 		<meta
 			name="description"
-			content="Atanas Atanasov - Senior Javascript/Typescript Engineer: Single Page Applications, Vue, React, Angular, NodeJS | Professional web and mobile development services"
+			content="Atanas Atanasov - Frontend Team Lead and Senior Javascript/Typescript Engineer: Single Page Applications, Vue, React, Angular, NodeJS | Professional web and mobile development services"
 		/>
 
 		<meta
@@ -46,13 +46,16 @@ export const Head: FC = () => (
 
 		<meta content="website" property="og:type" />
 
-		<meta content="Atanas Atanasov | Senior Javascript/Typescript Engineer" property="og:title" />
+		<meta
+			content="Atanas Atanasov | Frontend Team Lead and Senior Javascript/Typescript Engineer"
+			property="og:title"
+		/>
 
 		<meta content="https://atanas.info/images/temp/atanas.jpg" property="og:image" />
 
 		<meta
 			property="og:description"
-			content="Atanas Atanasov - Senior Javascript/Typescript Engineer: Single Page Applications, Vue, React, Angular, NodeJS | Professional web and mobile development services"
+			content="Atanas Atanasov - Frontend Team Lead and Senior Javascript/Typescript Engineer: Single Page Applications, Vue, React, Angular, NodeJS | Professional web and mobile development services"
 		/>
 
 		<meta name="application-name" content="Atanas Atanasov" />
@@ -91,7 +94,7 @@ export const Head: FC = () => (
 
 		<meta
 			name="twitter:description"
-			content="Atanas Atanasov - Senior Javascript/Typescript Engineer: Single Page Applications, Vue, React, Angular, NodeJS | Professional web and mobile development services"
+			content="Atanas Atanasov - Frontend Team Lead and Senior Javascript/Typescript Engineer: Single Page Applications, Vue, React, Angular, NodeJS | Professional web and mobile development services"
 		/>
 
 		<meta name="twitter:image" content="https://atanas.info/images/temp/atanas.jpg" />

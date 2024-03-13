@@ -202,7 +202,7 @@ export const GithubStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 
 	return (
 		<Layout funding={funding} partners={partners}>
-			<Title text="Github Stats | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+			<Title text="Github Stats" />
 
 			<Section
 				{...sectionStatsProps}

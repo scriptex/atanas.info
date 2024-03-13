@@ -45,7 +45,7 @@ export const iconData = [
 
 export const EmptyPage: FC<Readonly<Props>> = ({ children, partners, funding }: Props) => (
 	<Layout main="o-main--high" funding={funding} partners={partners}>
-		<Title text="Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+		<Title text="" />
 
 		<div className="c-error-page">
 			<Lines />

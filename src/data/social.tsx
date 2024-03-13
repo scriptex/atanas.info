@@ -61,6 +61,7 @@ export const socialItems: SocialItem[] = [
 		element: (
 			<iframe
 				src="https://open.spotify.com/embed/playlist/37i9dQZF1EpzZomgLqaOnp?theme=0"
+				title="Spotify playlist"
 				allow="encrypted-media"
 				width="100%"
 				height={400}

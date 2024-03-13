@@ -23,7 +23,7 @@ export const PortfolioWebApps: FC<Readonly<InferGetStaticPropsType<typeof getSta
 
 	return !items ? null : (
 		<Layout funding={funding} partners={partners}>
-			<Title text="Web Applications | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+			<Title text="Web Applications" />
 
 			<Section
 				{...portfolioSectionProps}

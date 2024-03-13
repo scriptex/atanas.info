@@ -16,7 +16,7 @@ export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>
 
 	return (
 		<Layout funding={funding} partners={partners}>
-			<Title text="Social | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+			<Title text="Social" />
 
 			<Section
 				id="social"

@@ -9,7 +9,7 @@ import { TimelineItem, getFundingFromCMS, getPartnersFromCMS, getTimelineFromCMS
 
 export const Timeline: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, funding, partners }) => (
 	<Layout funding={funding} partners={partners}>
-		<Title text="Timeline | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+		<Title text="Timeline" />
 
 		<Section
 			id="timeline"

@@ -23,7 +23,7 @@ const PortfolioEmailTemplate: FC<Readonly<Props>> = ({ template }: Props) => {
 	return (
 		<>
 			<Button type="button" onClick={toggle} unstyled>
-				<iframe src={template} style={{ pointerEvents: 'none' }} />
+				<iframe src={template} style={{ pointerEvents: 'none' }} title={template} />
 			</Button>
 
 			<Modal isOpen={open} onRequestClose={toggle} ariaHideApp={false}>
@@ -32,7 +32,7 @@ const PortfolioEmailTemplate: FC<Readonly<Props>> = ({ template }: Props) => {
 						&times;
 					</Button>
 
-					<iframe src={template} />
+					<iframe src={template} title={template} />
 				</div>
 			</Modal>
 		</>
@@ -41,7 +41,7 @@ const PortfolioEmailTemplate: FC<Readonly<Props>> = ({ template }: Props) => {
 
 export const PortfolioEmailTemplates: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners }) => (
 	<Layout funding={funding} partners={partners}>
-		<Title text="Email Templates | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+		<Title text="Email Templates" />
 
 		<Section
 			{...portfolioSectionProps}

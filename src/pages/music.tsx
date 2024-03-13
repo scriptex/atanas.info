@@ -40,14 +40,16 @@ export const Music: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>>
 
 	return (
 		<Layout main="o-main--high" funding={funding} partners={partners}>
-			<Title text="Music | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+			<Title text="Music" />
 
 			<Section id="music" hasButton>
 				<div
 					ref={container}
 					className={composeClassName('c-music', [visible ? 'list-visible' : '', playing ? 'playing' : ''])}
 				>
-					<audio ref={audio} src={source.url} hidden controls crossOrigin="anonymous" />
+					<audio ref={audio} src={source.url} hidden controls crossOrigin="anonymous">
+						<track kind="captions" />
+					</audio>
 
 					<canvas ref={canvas} />
 
@@ -95,8 +97,7 @@ export const Music: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>>
 								type="button"
 								key={track.url}
 								onClick={async () => {
-									await setSource(track);
-
+									await Promise.resolve(setSource(track));
 									setPlaying(true);
 									setVisible(false);
 									functions?.onPlay();

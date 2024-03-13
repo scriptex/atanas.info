@@ -8,7 +8,7 @@ import { Article, getArticlesFromCMS, getFundingFromCMS, getPartnersFromCMS } fr
 
 export const Articles: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, articles, partners }) => (
 	<Layout funding={funding} partners={partners}>
-		<Title text="Articles | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+		<Title text="Articles" />
 
 		<Section id="articles" title="Articles" {...blogProps}>
 			<div className="c-section__body o-grid">

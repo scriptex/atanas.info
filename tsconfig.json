@@ -15,7 +15,7 @@
 		"isolatedModules": true,
 		"noEmitHelpers": true,
 		"jsx": "preserve",
-		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"lib": ["DOM", "DOM.Iterable", "ESNext", "WebWorker"],
 		"module": "ESNext",
 		"moduleResolution": "Node",
 		"noEmit": false,

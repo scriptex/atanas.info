@@ -26,7 +26,7 @@ export const Skills: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ fun
 
 	return (
 		<Layout funding={funding} partners={partners}>
-			<Title text="Skills | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+			<Title text="Skills" />
 
 			<Section
 				id="skills"

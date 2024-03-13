@@ -19,7 +19,7 @@ export const OpenSourceProject: FC<Readonly<InferGetStaticPropsType<typeof getSt
 
 	return (
 		<Layout funding={funding} partners={partners}>
-			<Title text={`${match?.title ?? post.slug} | Atanas Atanasov | Senior Javascript/Typescript Engineer`} />
+			<Title text={match?.title ?? post.slug} />
 
 			<Mdx
 				id="blog-post"

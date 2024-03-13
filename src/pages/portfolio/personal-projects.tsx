@@ -18,7 +18,7 @@ export const PortfolioPersonalProjects: FC<InferGetStaticPropsType<typeof getSta
 
 	return (
 		<Layout funding={funding} partners={partners}>
-			<Title text="Personal Projects | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+			<Title text="Personal Projects" />
 
 			<Section
 				{...portfolioSectionProps}

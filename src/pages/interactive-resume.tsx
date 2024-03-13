@@ -78,7 +78,7 @@ export const InteractiveResume: FC<InferGetStaticPropsType<typeof getStaticProps
 
 	return (
 		<Layout funding={funding} partners={partners}>
-			<Title text="Interactive Resume | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+			<Title text="Interactive Resume" />
 
 			<Section
 				id="interactive-resume"

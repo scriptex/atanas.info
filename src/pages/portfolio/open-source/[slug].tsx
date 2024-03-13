@@ -36,7 +36,7 @@ export const OpenSourceProject: FC<InferGetStaticPropsType<typeof getStaticProps
 
 	return (
 		<Layout funding={funding} partners={partners}>
-			<Title text="Open Source | Atanas Atanasov | Senior Javascript/Typescript Engineer" />
+			<Title text="Open Source" />
 
 			<Mdx
 				id="blog-post"
