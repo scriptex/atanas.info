@@ -1,4 +1,4 @@
-import { load } from 'cheerio';
+import { JSDOM } from 'jsdom';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { GithubProfileData } from '@scripts/types';
@@ -16,9 +16,13 @@ export default async function handler(_: NextApiRequest, res: NextApiResponse): 
 			res.json(emptyResponse);
 		}
 
-		const $ = load(html);
-		const markup = $('.js-yearly-contributions > div:first-child').html();
-		const stylesheet = $('link[href*="profile"]').attr('href');
+		const {
+			window: { document }
+		} = new JSDOM(html);
+
+		const markup = document.querySelector('.js-yearly-contributions > div:first-child')?.innerHTML;
+
+		const stylesheet = document.querySelector('link[href*="profile"]')?.getAttribute('href');
 
 		if (!markup || !stylesheet) {
 			res.json(emptyResponse);
