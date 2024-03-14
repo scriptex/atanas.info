@@ -362,6 +362,14 @@ exports[`Portfolio component Should render the Portfolio component 1`] = `
           </li>
           <li>
             <a
+              href="/interactive-resume"
+              title="My interactive resume"
+            >
+              Interactive resume
+            </a>
+          </li>
+          <li>
+            <a
               href="/portfolio"
               title="My portfolio"
             >
@@ -945,6 +953,14 @@ exports[`Portfolio component Should render the Portfolio component 1`] = `
             title="My resume"
           >
             Resume
+          </a>
+        </li>
+        <li>
+          <a
+            href="/interactive-resume"
+            title="My interactive resume"
+          >
+            Interactive resume
           </a>
         </li>
         <li>
