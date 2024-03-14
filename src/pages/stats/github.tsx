@@ -83,16 +83,23 @@ const extractGithubData = ({
 	].map((item, index) => ({ ...item, index }));
 };
 
-const registerMutationObeserer = (element: HTMLDivElement | null): MutationObserver =>
+const registerMutationObserver = (element: HTMLDivElement | null): MutationObserver =>
 	new MutationObserver(mutations => {
 		for (const mutation of mutations) {
 			if (mutation.type === 'childList' && !element?.classList.contains('js--titles-added')) {
-				const items = Array.from(element?.querySelectorAll('td .sr-only') ?? []);
+				const items = Array.from(element?.querySelectorAll('.ContributionCalendar-day') ?? []);
 
 				for (const item of items) {
-					const parent = item.parentNode as HTMLTableCellElement;
+					const id = item.id;
+					const tooltip = document.querySelector(`[for="${id}"]`);
 
-					parent.setAttribute('title', item.textContent ?? '');
+					if (tooltip) {
+						const title = tooltip.textContent ?? '';
+
+						item.setAttribute('title', title);
+
+						tooltip.parentNode?.removeChild(tooltip);
+					}
 				}
 
 				element?.classList.add('js--titles-added');
@@ -190,7 +197,7 @@ export const GithubStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 
 	useEffect(() => {
 		const { current } = calendarRef;
-		const observer: MutationObserver = registerMutationObeserer(current);
+		const observer: MutationObserver = registerMutationObserver(current);
 
 		if (current) {
 			observer.observe(current, { childList: true, subtree: true });
