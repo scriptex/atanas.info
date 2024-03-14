@@ -2,17 +2,18 @@
 	"extends": ["stylelint-config-recommended"],
 	"plugins": ["stylelint-no-unsupported-browser-features"],
 	"rules": {
-		"at-rule-no-unknown": null,
-		"length-zero-no-unit": null,
-		"function-no-unknown": null,
-		"alpha-value-notation": null,
-		"rule-empty-line-before": null,
-		"selector-class-pattern": null,
-		"custom-property-pattern": null,
-		"color-function-notation": null,
-		"at-rule-empty-line-before": null,
-		"no-descending-specificity": null,
-		"declaration-empty-line-before": null,
-		"custom-property-empty-line-before": null
+		"at-rule-no-unknown": [
+			true,
+			{
+				"ignoreAtRules": ["define-mixin", "extend", "for", "mixin"]
+			}
+		],
+		"function-no-unknown": [
+			true,
+			{
+				"ignoreFunctions": ["a", "color-mod", "shade"]
+			}
+		],
+		"no-descending-specificity": null
 	}
 }
