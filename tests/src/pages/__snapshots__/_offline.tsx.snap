@@ -362,6 +362,14 @@ exports[`OfflinePage component Should render the OfflinePage component 1`] = `
           </li>
           <li>
             <a
+              href="/interactive-resume"
+              title="My interactive resume"
+            >
+              Interactive resume
+            </a>
+          </li>
+          <li>
+            <a
               href="/portfolio"
               title="My portfolio"
             >
@@ -791,6 +799,14 @@ exports[`OfflinePage component Should render the OfflinePage component 1`] = `
             title="My resume"
           >
             Resume
+          </a>
+        </li>
+        <li>
+          <a
+            href="/interactive-resume"
+            title="My interactive resume"
+          >
+            Interactive resume
           </a>
         </li>
         <li>
