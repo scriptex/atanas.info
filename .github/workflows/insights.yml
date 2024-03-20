@@ -16,9 +16,9 @@ jobs:
                   node-version: 18
             - name: Build
               run: |
-                  yarn
-                  yarn insights
-                  yarn npm-stats
+                  npm ci
+                  npm run insights
+                  npm run npm-stats
               env:
                   MONGODB_URI: ${{ secrets.MONGODB_URI }}
                   NODE_OPTIONS: '--max_old_space_size=8192'

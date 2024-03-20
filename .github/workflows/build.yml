@@ -16,12 +16,12 @@ jobs:
             - name: Build
               run: |
                   node -v
-                  yarn
-                  yarn prettier
-                  yarn lint
-                  yarn build
-                  yarn test:coverage
-                  yarn type-coverage
+                  npm ci
+                  npm run prettier
+                  npm run lint
+                  npm run build
+                  npm run test:coverage
+                  npm run type-coverage
               env:
                   GTM_ID: ${{ secrets.GTM_ID }}
                   MONGODB_URI: ${{ secrets.MONGODB_URI }}
