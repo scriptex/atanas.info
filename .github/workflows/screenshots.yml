@@ -16,9 +16,9 @@ jobs:
                   node-version: 18
             - name: Build
               run: |
-                  yarn
-                  yarn screenshots
-                  yarn fetch-music
+                  npm ci
+                  npm run screenshots
+                  npm run fetch-music
               env:
                   MONGODB_URI: ${{ secrets.MONGODB_URI }}
                   NODE_OPTIONS: '--max_old_space_size=8192'
