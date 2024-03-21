@@ -32,14 +32,15 @@ export const socialItems: SocialItem[] = [
 				className="twitter-timeline"
 				data-dnt="true"
 				data-height={400}
+				data-lang="en"
 				data-theme="dark"
-				href="//twitter.com/scriptexbg"
+				href="//twitter.com/scriptexbg?ref_src=twsrc%5Etfw"
 			>
-				@scriptexbg on Twitter
+				Tweets by @scriptexbg
 			</a>
 		),
 		index: 2,
-		title: 'Twitter Profile'
+		title: 'Twitter Feed'
 	},
 	{
 		element: (
@@ -56,6 +57,11 @@ export const socialItems: SocialItem[] = [
 		title: 'YouTube Channel'
 	},
 	{
+		element: <div className="sk-instagram-feed" data-embed-id="25385561" />,
+		index: 4,
+		title: 'Instagram Feed'
+	},
+	{
 		element: (
 			<iframe
 				allow="encrypted-media"
@@ -67,8 +73,13 @@ export const socialItems: SocialItem[] = [
 				width="100%"
 			/>
 		),
-		index: 4,
+		index: 5,
 		title: 'Spotify playlist'
+	},
+	{
+		element: <div className="sk-ww-linkedin-profile-post" data-embed-id="25385560" />,
+		index: 6,
+		title: 'LinkedIn Feed'
 	},
 	{
 		element: (
@@ -86,7 +97,7 @@ export const socialItems: SocialItem[] = [
 				</ExternalLink>
 			</div>
 		),
-		index: 5,
+		index: 7,
 		title: 'Stackoverflow flair'
 	}
 ];

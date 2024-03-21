@@ -33,6 +33,10 @@ export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>
 
 				<Script async defer src="//profile.codersrank.io/widget/widget.js" />
 
+				<Script async defer src="//widgets.sociablekit.com/instagram-feed/widget.js" />
+
+				<Script async defer src="//widgets.sociablekit.com/linkedin-profile-posts/widget.js" />
+
 				<Lines />
 
 				<div className="c-section__entry c-section__entry--primary">
@@ -60,7 +64,7 @@ export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>
 				</div>
 
 				<header className="c-section__header">
-					<h2>Social feed</h2>
+					<h2>Combined Social feed</h2>
 				</header>
 
 				<Script data-use-service-core defer src="https://static.elfsight.com/platform/platform.js" />
