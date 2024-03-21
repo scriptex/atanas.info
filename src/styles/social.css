@@ -123,6 +123,277 @@
 		padding-top: 0;
 		margin-top: -6rem;
 	}
+
+	& .sk-instagram-feed {
+		font-family: inherit !important;
+		color: var(--color-primary);
+		height: 25rem !important;
+		position: relative;
+		border: 1px solid var(--color-primary);
+		margin: 0;
+		overflow: hidden;
+		border-radius: 0.25rem;
+		background-color: var(--color-secondary) !important;
+
+		& .first_loading_animation {
+			@mixin centered;
+			z-index: 1;
+
+			& img {
+				@mixin centered;
+				display: block;
+				margin: auto;
+			}
+		}
+
+		& .sk-ww-ig-feed-container {
+			height: 100%;
+			position: relative;
+			overflow: hidden auto;
+			-webkit-overflow-scrolling: touch;
+			z-index: 2;
+			border-radius: 0.25rem;
+		}
+
+		& .instagram-user-root-container {
+			color: inherit !important;
+			@mixin flex-row nowrap, flex-start, space-between;
+			padding: 1rem;
+			margin: 0;
+			border-radius: 0;
+		}
+
+		& .sk-instagram-profile-pic_container {
+			flex: 0 0 7.25rem;
+			padding-right: 1rem;
+		}
+
+		& .sk-instagram-profile-pic {
+			float: none !important;
+			margin: 0 !important;
+		}
+
+		& .sk-ig-profile-info {
+			width: auto;
+			flex: 1;
+			float: none;
+		}
+
+		& .sk_ig_feed_username_follow {
+			margin: 0;
+
+			& a {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			& p {
+				margin: 0;
+			}
+
+			& a,
+			& p {
+				color: inherit !important;
+			}
+		}
+
+		& .bio-description {
+			margin: 0;
+
+			& button {
+				color: inherit !important;
+				border-color: var(--color-action) !important;
+				background-color: var(--color-action) !important;
+			}
+		}
+
+		& .sk-ig-all-posts {
+			@mixin flex-row wrap, stretch, flex-start;
+			padding: 0 0.5rem;
+		}
+
+		& .sk-instagram-feed-item-sizer {
+			display: none;
+		}
+
+		& .sk-instagram-feed-item {
+			width: calc(100% / 3) !important;
+			max-width: calc(100% / 3);
+			flex: 0 0 calc(100% / 3);
+			padding: 0.5rem !important;
+			margin: 0 !important;
+			background: none;
+			border-radius: 0;
+		}
+
+		& .sk-ig-post-img {
+			width: 100% !important;
+			height: 0 !important;
+			padding-bottom: 100%;
+			border: 1px solid var(--color-primary);
+		}
+
+		& .sk-ig-play-btn {
+			top: 1rem;
+			right: 1rem;
+		}
+
+		& .sk-ig-bottom-btn-container {
+			padding: 0.5rem 0 0.25rem !important;
+
+			& button {
+				color: inherit !important;
+				border-color: var(--color-action) !important;
+				background-color: var(--color-action) !important;
+			}
+		}
+
+		& .sk_branding {
+			width: 0;
+			height: 0;
+			position: absolute;
+			overflow: hidden;
+			margin: -10px;
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	& .sk-ww-linkedin-profile-post {
+		font-family: inherit !important;
+		color: var(--color-primary) !important;
+		width: 100% !important;
+		height: 25rem !important;
+		border: 1px solid var(--color-primary);
+		margin: 0;
+		overflow: hidden auto;
+		-webkit-overflow-scrolling: touch;
+		background-color: var(--color-secondary) !important;
+		border-radius: 0.25rem;
+
+		& .first_loading_animation {
+			@mixin centered;
+			z-index: 1;
+
+			& img {
+				@mixin centered;
+				display: block;
+				margin: auto;
+			}
+		}
+
+		& .linkedin-profile-post-user-root-container {
+			@mixin flex-row nowrap, flex-start, flex-start;
+			position: relative;
+			z-index: 2;
+			padding: 1rem;
+			margin: 0;
+		}
+
+		& .linkedin-profile-post-profile-pic {
+			float: none;
+			margin: 0 1rem 0 0;
+		}
+
+		& .sk-linkedin-profile-post-profile-info {
+			flex: 1;
+		}
+
+		& .sk_facebook_posts_feed_username_follow {
+			margin: 0;
+
+			& a {
+				color: inherit !important;
+			}
+		}
+
+		& .sk-linkedin-profile-post-profile-counts {
+			margin: 0;
+		}
+
+		& .sk-follow-linkedin-btn {
+			margin: 0.25rem 0 0;
+			border-color: var(--color-action) !important;
+			background-color: var(--color-action) !important;
+		}
+
+		& .grid-linkedin-profile-post {
+			position: relative;
+			z-index: 2;
+			height: auto !important;
+		}
+
+		& .grid-sizer-linkedin-profile-post {
+			display: none;
+		}
+
+		& .grid-item-linkedin-profile-post {
+			width: auto !important;
+			position: static !important;
+			float: none;
+			padding: 0 1rem 1rem;
+		}
+
+		& .grid-content {
+			padding: 1rem !important;
+			margin: 0;
+		}
+
+		& .sk-linkedin-profile-post-bottom-btn-container {
+			padding: 0 0 0.5rem !important;
+
+			& button {
+				color: inherit !important;
+				border-color: var(--color-action) !important;
+				background-color: var(--color-action) !important;
+			}
+		}
+
+		& .sk_branding {
+			width: 0;
+			height: 0;
+			position: absolute;
+			overflow: hidden;
+			margin: -10px;
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}
+
+.sk-pop-ig-post {
+	font-family: var(--font-sans-serif) !important;
+	font-size: var(--font-size-base) !important;
+	color: var(--color-primary) !important;
+
+	& > div {
+		height: 100%;
+	}
+
+	& .sk_popup_column {
+		min-height: 0;
+		border-radius: 0.5rem 0 0 0.5rem !important;
+
+		& .ig_media {
+			min-height: 0;
+		}
+
+		& img.ig_media {
+			width: 100% !important;
+			height: 100% !important;
+			max-width: none;
+			max-height: none;
+			min-width: 0;
+			min-height: 0;
+			display: block;
+			margin: auto;
+			object-fit: cover !important;
+		}
+	}
+
+	& .sk_popup_column_media {
+		background: none !important;
+	}
 }
 
 @media (--tablet-landscape) {

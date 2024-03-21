@@ -19,10 +19,10 @@ export const LinkedInBadge: FC = () => (
 				<ExternalLink href="https://linkedin.com/in/scriptex">👨💻 Atanas Atanasov</ExternalLink>
 			</h4>
 
-			<h5>Lead Front-end Engineer / E.ON Home Project @E.ON</h5>
+			<h5>Lead Front-end Developer @dmarcian</h5>
 
 			<h5>
-				<ExternalLink href="https://www.linkedin.com/company/e-on">E.ON</ExternalLink> |
+				<ExternalLink href="https://www.linkedin.com/company/dmarcian">dmarcian</ExternalLink> |
 				<ExternalLink href="https://www.linkedin.com/school/university-of-economics-varna">
 					University of Economics - Varna
 				</ExternalLink>

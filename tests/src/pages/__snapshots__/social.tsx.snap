@@ -653,15 +653,15 @@ exports[`Social component Should render the Social component 1`] = `
                     </a>
                   </h4>
                   <h5>
-                    Lead Front-end Engineer / E.ON Home Project @E.ON
+                    Lead Front-end Developer @dmarcian
                   </h5>
                   <h5>
                     <a
-                      href="https://www.linkedin.com/company/e-on"
+                      href="https://www.linkedin.com/company/dmarcian"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      E.ON
+                      dmarcian
                       <svg
                         class="c-svg-external-link"
                       >
@@ -734,16 +734,17 @@ exports[`Social component Should render the Social component 1`] = `
               class="o-grid__item xs-12 sm-6"
             >
               <h3>
-                Twitter Profile
+                Twitter Feed
               </h3>
               <a
                 class="twitter-timeline"
                 data-dnt="true"
                 data-height="400"
+                data-lang="en"
                 data-theme="dark"
-                href="//twitter.com/scriptexbg"
+                href="//twitter.com/scriptexbg?ref_src=twsrc%5Etfw"
               >
-                @scriptexbg on Twitter
+                Tweets by @scriptexbg
               </a>
             </div>
             <div
@@ -765,6 +766,17 @@ exports[`Social component Should render the Social component 1`] = `
               class="o-grid__item xs-12 sm-6"
             >
               <h3>
+                Instagram Feed
+              </h3>
+              <div
+                class="sk-instagram-feed"
+                data-embed-id="25385561"
+              />
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6"
+            >
+              <h3>
                 Spotify playlist
               </h3>
               <iframe
@@ -775,6 +787,17 @@ exports[`Social component Should render the Social component 1`] = `
                 src="https://open.spotify.com/embed/playlist/37i9dQZF1EpzZomgLqaOnp?theme=0"
                 title="Spotify playlist"
                 width="100%"
+              />
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6"
+            >
+              <h3>
+                LinkedIn Feed
+              </h3>
+              <div
+                class="sk-ww-linkedin-profile-post"
+                data-embed-id="25385560"
               />
             </div>
             <div
@@ -816,7 +839,7 @@ exports[`Social component Should render the Social component 1`] = `
         class="c-section__header"
       >
         <h2>
-          Social feed
+          Combined Social feed
         </h2>
       </header>
       <div
@@ -2420,15 +2443,15 @@ exports[`Tests the Social page when offline 1`] = `
                     </a>
                   </h4>
                   <h5>
-                    Lead Front-end Engineer / E.ON Home Project @E.ON
+                    Lead Front-end Developer @dmarcian
                   </h5>
                   <h5>
                     <a
-                      href="https://www.linkedin.com/company/e-on"
+                      href="https://www.linkedin.com/company/dmarcian"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      E.ON
+                      dmarcian
                       <svg
                         class="c-svg-external-link"
                       >
@@ -2503,7 +2526,7 @@ exports[`Tests the Social page when offline 1`] = `
               class="o-grid__item xs-12 sm-6"
             >
               <h3>
-                Twitter Profile
+                Twitter Feed
               </h3>
               <svg
                 class="svg-disconnected"
@@ -2531,7 +2554,35 @@ exports[`Tests the Social page when offline 1`] = `
               class="o-grid__item xs-12 sm-6"
             >
               <h3>
+                Instagram Feed
+              </h3>
+              <svg
+                class="svg-disconnected"
+              >
+                <use
+                  xlink:href="#svg-disconnected "
+                />
+              </svg>
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6"
+            >
+              <h3>
                 Spotify playlist
+              </h3>
+              <svg
+                class="svg-disconnected"
+              >
+                <use
+                  xlink:href="#svg-disconnected "
+                />
+              </svg>
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6"
+            >
+              <h3>
+                LinkedIn Feed
               </h3>
               <svg
                 class="svg-disconnected"
@@ -2562,7 +2613,7 @@ exports[`Tests the Social page when offline 1`] = `
         class="c-section__header"
       >
         <h2>
-          Social feed
+          Combined Social feed
         </h2>
       </header>
       <div
