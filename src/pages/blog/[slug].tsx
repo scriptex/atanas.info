@@ -27,6 +27,7 @@ export const OpenSourceProject: FC<Readonly<InferGetStaticPropsType<typeof getSt
 				content={post.content}
 				id="blog-post"
 				image={match?.externalImage ?? match?.image?.fields.file?.url?.toString()}
+				slug={post.slug}
 				title={match?.title ?? post.slug ?? ''}
 			/>
 		</Layout>

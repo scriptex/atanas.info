@@ -113,7 +113,9 @@ social-links { /* stylelint-disable-line selector-type-no-unknown */
 	}
 }
 
-.theme-light .c-referrals {
-	color: var(--color-primary);
-	border: 1px solid;
+.theme-light {
+	& .c-referral {
+		color: var(--color-primary);
+		border: 1px solid;
+	}
 }
