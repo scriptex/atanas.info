@@ -58,3 +58,11 @@
 		}
 	}
 }
+
+.theme-light {
+	& .c-partners {
+		& img {
+			border: 1px solid var(--color-primary);
+		}
+	}
+}

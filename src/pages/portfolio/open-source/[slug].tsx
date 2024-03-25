@@ -44,6 +44,7 @@ export const OpenSourceProject: FC<InferGetStaticPropsType<typeof getStaticProps
 				content={post.content}
 				id="blog-post"
 				image={match?.image}
+				slug={post.slug}
 				title={post.slug}
 			/>
 		</Layout>

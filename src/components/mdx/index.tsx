@@ -1,7 +1,7 @@
-import type { FC } from 'react';
+import { FC, useMemo } from 'react';
 
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import Script from 'next/script';
 
 import { Lines, Section } from '@components';
 import { Routes } from '@data/routes';
@@ -11,33 +11,47 @@ type Props = {
 	content: string;
 	id: string;
 	image?: string;
+	slug: string;
 	title: string;
 };
 
-export const MDX: FC<Readonly<Props>> = ({ back, content, id, image, title }: Props) => (
-	<Section
-		actions={
-			<Link className="c-btn" href={back}>
-				Go back
-			</Link>
-		}
-		hasButton
-		id={id}
-		title={title}
-	>
-		<Script async defer src="https://atanas-info.disqus.com/embed.js" />
+const url = typeof window !== 'undefined' ? window.location.href : '';
 
-		<Lines />
+export const MDX: FC<Readonly<Props>> = ({ back, content, id, image, slug, title }: Props) => {
+	const DiscussionEmbed = dynamic<any>(() => import('disqus-react').then(mod => mod.DiscussionEmbed), { ssr: false });
 
-		{/* eslint-disable-next-line @next/next/no-img-element */}
-		{!!image && <img alt="" loading="lazy" src={image} />}
+	const disqusConfig = useMemo(
+		() => ({
+			identifier: slug,
+			title,
+			url
+		}),
+		[slug, title]
+	);
 
-		<div className="c-blog-post">
-			<div className="c-blog-post__content" dangerouslySetInnerHTML={{ __html: content }} />
+	return (
+		<Section
+			actions={
+				<Link className="c-btn" href={back}>
+					Go back
+				</Link>
+			}
+			hasButton
+			id={id}
+			title={title}
+		>
+			<Lines />
 
-			<div id="disqus_thread" />
-		</div>
-	</Section>
-);
+			{/* eslint-disable-next-line @next/next/no-img-element */}
+			{!!image && <img alt="" loading="lazy" src={image} />}
+
+			<div className="c-blog-post">
+				<div className="c-blog-post__content" dangerouslySetInnerHTML={{ __html: content }} />
+
+				<DiscussionEmbed config={disqusConfig} shortname="atanas-info" />
+			</div>
+		</Section>
+	);
+};
 
 export default MDX;
