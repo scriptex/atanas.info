@@ -724,6 +724,24 @@ exports[`OpenSourceProject component Should render the OpenSourceProject compone
           >
             Go back
           </a>
+          <br
+            class="visible-xs-block"
+          />
+          <a
+            class="c-btn"
+            href="https://github.com/scriptex/2048"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            View source
+            <svg
+              class="c-svg-external-link"
+            >
+              <use
+                xlink:href="#svg-external-link"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </section>

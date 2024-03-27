@@ -4,7 +4,7 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import ErrorPage from 'next/error';
 import { useRouter } from 'next/router';
 
-import { Layout, MDX as Mdx, Title } from '@components';
+import { ExternalLink, Layout, MDX as Mdx, Title } from '@components';
 import { openSourceProjects } from '@data/pages';
 import { Routes } from '@data/routes';
 import { getAllPosts, getPostBySlug } from '@lib/markdown';
@@ -40,6 +40,17 @@ export const OpenSourceProject: FC<InferGetStaticPropsType<typeof getStaticProps
 			<Title text="Open Source" />
 
 			<Mdx
+				additionalActions={
+					match ? (
+						<>
+							<br className="visible-xs-block" />
+
+							<ExternalLink className="c-btn" href={`https://github.com/${match?.text}`}>
+								View source
+							</ExternalLink>
+						</>
+					) : null
+				}
 				back={Routes.PORTFOLIO_OPEN_SOURCE_PROJECTS}
 				content={post.content}
 				id="blog-post"

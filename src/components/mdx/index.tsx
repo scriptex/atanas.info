@@ -1,4 +1,4 @@
-import { FC, useMemo } from 'react';
+import { FC, ReactNode, useMemo } from 'react';
 
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
@@ -7,6 +7,7 @@ import { Lines, Section } from '@components';
 import { Routes } from '@data/routes';
 
 type Props = {
+	additionalActions?: ReactNode;
 	back: Routes;
 	content: string;
 	id: string;
@@ -17,7 +18,7 @@ type Props = {
 
 const url = typeof window !== 'undefined' ? window.location.href : '';
 
-export const MDX: FC<Readonly<Props>> = ({ back, content, id, image, slug, title }: Props) => {
+export const MDX: FC<Readonly<Props>> = ({ additionalActions, back, content, id, image, slug, title }: Props) => {
 	const DiscussionEmbed = dynamic<any>(() => import('disqus-react').then(mod => mod.DiscussionEmbed), { ssr: false });
 
 	const disqusConfig = useMemo(
@@ -32,9 +33,13 @@ export const MDX: FC<Readonly<Props>> = ({ back, content, id, image, slug, title
 	return (
 		<Section
 			actions={
-				<Link className="c-btn" href={back}>
-					Go back
-				</Link>
+				<>
+					<Link className="c-btn" href={back}>
+						Go back
+					</Link>
+
+					{additionalActions}
+				</>
 			}
 			hasButton
 			id={id}
