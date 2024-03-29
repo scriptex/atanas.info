@@ -1,40 +1,77 @@
-import { JSDOM } from 'jsdom';
+import { ApolloClient, createHttpLink, gql, InMemoryCache } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import type { GithubProfileData } from '@scripts/types';
+import { GithubProfileData } from '@scripts/types';
 
 export default async function handler(_: NextApiRequest, res: NextApiResponse): Promise<void> {
-	const emptyResponse: GithubProfileData = {
-		markup: '',
-		stylesheet: ''
-	};
-
 	try {
-		const html = await fetch('https://github.com/scriptex').then(r => r.text());
+		const httpLink = createHttpLink({
+			uri: 'https://api.github.com/graphql'
+		});
 
-		if (!html) {
-			res.json(emptyResponse);
-		}
+		const authLink = setContext((_, { headers }) => ({
+			headers: {
+				...headers,
+				authorization: `Bearer ${process.env.GITHUB_TOKEN}`
+			}
+		}));
+
+		const client = new ApolloClient({
+			cache: new InMemoryCache(),
+			link: authLink.concat(httpLink)
+		});
 
 		const {
-			window: { document }
-		} = new JSDOM(html);
+			data: {
+				user: {
+					contributionsCollection: {
+						contributionCalendar: { totalContributions, weeks }
+					}
+				}
+			}
+		} = await client.query({
+			query: gql`
+				{
+					user(login: "scriptex") {
+						contributionsCollection {
+							contributionCalendar {
+								totalContributions
+								weeks {
+									contributionDays {
+										contributionCount
+										contributionLevel
+										date
+									}
+								}
+							}
+						}
+					}
+				}
+			`
+		});
 
-		const markup = document.querySelector('.js-yearly-contributions > div:first-child')?.innerHTML;
+		const levels = ['FIRST_QUARTILE', 'SECOND_QUARTILE', 'THIRD_QUARTILE', 'FOURTH_QUARTILE'];
 
-		const stylesheet = document.querySelector('link[href*="profile"]')?.getAttribute('href');
+		const result: GithubProfileData = {
+			days: weeks.reduce(
+				(list: Array<GithubProfileData['days']>, item: any) => [
+					...list,
+					...item.contributionDays.map((day: any) => ({
+						count: day.contributionCount,
+						date: day.date,
+						level: levels.findIndex(item => item === day.contributionLevel) + 1
+					}))
+				],
+				[]
+			),
+			totalContributions
+		};
 
-		if (!markup || !stylesheet) {
-			res.json(emptyResponse);
-		} else {
-			res.json({
-				markup,
-				stylesheet
-			});
-		}
+		res.json(result);
 	} catch (e) {
 		console.error(e);
 
-		res.json(emptyResponse);
+		res.json({});
 	}
 }

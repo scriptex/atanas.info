@@ -1,4 +1,4 @@
-import { FC, MutableRefObject, useEffect, useRef, useState } from 'react';
+import { FC, MutableRefObject, Ref, useEffect, useRef, useState } from 'react';
 
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
@@ -8,27 +8,16 @@ import { Routes } from '@data/routes';
 import { getData, queryGithub } from '@lib/mongodb';
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { formatDate } from '@scripts/shared';
-import { GeneralInsight, sectionStatsProps, YEARS } from '@scripts/stats';
+import { addTitles, GeneralInsight, sectionStatsProps, YEARS } from '@scripts/stats';
 import type { GithubInsights, GithubProfileData, GithubRepository, GithubStatsPageData } from '@scripts/types';
 
 const extractGithubData = ({
-	calendar,
 	general,
 	repositories
-}: Pick<GithubInsights, 'general' | 'calendar' | 'repositories'>): GeneralInsight[] => {
-	if (!general || !calendar || !repositories) {
+}: Pick<GithubInsights, 'general' | 'repositories'>): GeneralInsight[] => {
+	if (!general || !repositories) {
 		return [];
 	}
-
-	const calendarDates = Object.keys(calendar)
-		.reduce((result: string[], key: string) => {
-			if (Object.keys(calendar[key]).length === 0) {
-				return result;
-			}
-
-			return [...result, key];
-		}, [])
-		.reverse();
 
 	return [
 		{
@@ -45,7 +34,6 @@ const extractGithubData = ({
 		{ title: 'Following', value: general.following },
 		{ title: 'Joined date', value: formatDate(general.createdAt) },
 		{ title: 'Updated at', value: formatDate(general.updatedAt) },
-		{ title: 'Last active', value: formatDate(calendarDates[0]) },
 		{ title: 'Total repositories', value: repositories.length },
 		{ title: 'Private repositories', value: general.privateRepos },
 		{ title: 'Public repositories', value: general.publicRepos },
@@ -113,28 +101,71 @@ type Props = {
 	loading: boolean;
 };
 
-const GithubCalendar: FC<Props> = ({ data: { markup, stylesheet }, error, loading }: Props) => (
-	<>
-		<h3>Github contributions calendar</h3>
+const GithubCalendar: FC<Props> = ({ data, error, loading }: Props) => {
+	const timeout = useRef<NodeJS.Timeout | null>(null);
+	const calendarPlaceholder: Ref<HTMLDivElement> = useRef(null);
 
-		{loading ? (
-			<div className="c-calendar__outer c-calendar__outer--loading">
-				<Loader />
-			</div>
-		) : error || !markup || !stylesheet ? (
-			<div className="c-calendar__outer c-calendar__outer--error">
-				<p>Error fetching Github calendar data.</p>
-				<p>Please try again later.</p>
-			</div>
-		) : (
-			<div className="c-calendar__outer">
-				<link href={stylesheet} rel="stylesheet" />
+	useEffect(() => {
+		import('gitlab-calendar')
+			.then(({ GitlabCalendar }) => {
+				if (calendarPlaceholder.current && !!data.days) {
+					new GitlabCalendar( //NOSONAR
+						calendarPlaceholder.current,
+						data.days.reduce(
+							(result, item) => ({
+								...result,
+								[item.date]: item.count
+							}),
+							{}
+						),
+						{
+							legendValues: [
+								{ min: 0, title: 'No contributions' },
+								{ min: 1, title: '1-2 contributions' },
+								{ min: 3, title: '3-5 contributions' },
+								{ min: 6, title: '6-8 contributions' },
+								{ min: 9, title: '9+ contributions' }
+							]
+						}
+					);
+				}
+			})
+			.catch(console.error);
+	}, [data.days]);
 
-				<div className="c-calendar c-calendar--github" dangerouslySetInnerHTML={{ __html: markup }} />
-			</div>
-		)}
-	</>
-);
+	useEffect(() => {
+		timeout.current = setTimeout(() => {
+			addTitles('.c-calendar--github', (rect: SVGRectElement) => rect.getAttribute('title') ?? '');
+		}, 3000);
+
+		return () => {
+			if (timeout.current !== null) {
+				clearTimeout(timeout.current);
+			}
+		};
+	}, []);
+
+	return (
+		<>
+			<h3>Github contributions calendar</h3>
+
+			{loading ? (
+				<div className="c-calendar__outer c-calendar__outer--loading">
+					<Loader />
+				</div>
+			) : error || !data.days ? ( //NOSONAR
+				<div className="c-calendar__outer c-calendar__outer--error">
+					<p>Error fetching Github calendar data.</p>
+					<p>Please try again later.</p>
+				</div>
+			) : (
+				<div className="c-calendar__outer c-calendar--github">
+					<div ref={calendarPlaceholder} />
+				</div>
+			)}
+		</>
+	);
+};
 
 const GithubSkylineComponent: FC = () => {
 	const [current, setCurrent] = useState(-1);

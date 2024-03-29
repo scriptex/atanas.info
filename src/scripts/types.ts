@@ -109,8 +109,11 @@ export type FormData = {
 };
 
 export type GithubProfileData = {
-	markup?: string;
-	stylesheet?: string;
+	days?: Array<{
+		count: number;
+		date: string;
+	}>;
+	totalContributions?: number;
 };
 
 export type Package = {

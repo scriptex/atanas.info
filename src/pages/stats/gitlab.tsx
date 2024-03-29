@@ -71,19 +71,14 @@ export const GitlabStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 }) => {
 	const { calendar, error, updated }: GitlabInsights = data;
 	const blocks = extractGitlabData(data);
-	const timeout: Ref<NodeJS.Timeout> = useRef(null);
-	const calendarPlaceholder1: Ref<HTMLDivElement> = useRef(null);
-	const calendarPlaceholder2: Ref<HTMLDivElement> = useRef(null);
+	const timeout = useRef<NodeJS.Timeout | null>(null);
+	const calendarPlaceholder: Ref<HTMLDivElement> = useRef(null);
 
 	useEffect(() => {
 		import('gitlab-calendar')
 			.then(({ GitlabCalendar }) => {
-				if (calendarPlaceholder1.current && !!calendar) {
-					new GitlabCalendar(calendarPlaceholder1.current, calendar, {}); //NOSONAR
-				}
-
-				if (calendarPlaceholder2.current) {
-					new GitlabCalendar(calendarPlaceholder2.current, calendarData, {}); //NOSONAR
+				if (calendarPlaceholder.current && !!calendar) {
+					new GitlabCalendar(calendarPlaceholder.current, calendar, {}); //NOSONAR
 				}
 			})
 			.catch(console.error);
@@ -131,16 +126,8 @@ export const GitlabStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 								<div className="c-calendar__outer">
 									<div className="c-calendar c-calendar--gitlab">
 										<div className="c-calendar__entry">
-											{/* <h4>Public Gitlab profile</h4> */}
-
-											<div ref={calendarPlaceholder1} />
+											<div ref={calendarPlaceholder} />
 										</div>
-
-										{/* <div className="c-calendar__entry">
-											<h4>Private Gitlab profile</h4>
-
-											<div ref={calendarPlaceholder2} />
-										</div> */}
 									</div>
 								</div>
 							</div>
