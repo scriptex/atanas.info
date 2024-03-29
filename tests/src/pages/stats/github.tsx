@@ -11,9 +11,15 @@ jest.mock('@lib/mongodb', () => ({
 }));
 
 mockFetch({
-	markup: '<div><table><tr><td><span className="sr-only">Github calendar</span></td></tr></table></div>',
-	stylesheet: 'https://google.com/style.css'
-});
+	days: [
+		{
+			count: 1,
+			date: '2023-03-26',
+			level: 1
+		}
+	],
+	totalContributions: 854
+} as any);
 
 const dataFull: GithubInsights = {
 	calendar: {
