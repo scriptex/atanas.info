@@ -1,5 +1,6 @@
 import { JSDOM } from 'jsdom';
 import type { NextApiRequest, NextApiResponse } from 'next';
+import * as puppeteer from 'puppeteer';
 
 import type { GithubProfileData } from '@scripts/types';
 
@@ -10,7 +11,20 @@ export default async function handler(_: NextApiRequest, res: NextApiResponse): 
 	};
 
 	try {
-		const html = await fetch('https://github.com/scriptex').then(r => r.text());
+		const browser = await puppeteer.launch({
+			args: ['--no-sandbox'],
+			headless: true
+		});
+
+		const page = await browser.newPage();
+
+		await page.goto('https://github.com/scriptex', {
+			waitUntil: 'networkidle0'
+		});
+
+		await page.waitForSelector('.js-calendar-graph');
+
+		const html = await page.content();
 
 		if (!html) {
 			res.json(emptyResponse);
