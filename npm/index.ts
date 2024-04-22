@@ -12,6 +12,56 @@ export type NPMResult = {
 	sum?: number;
 } & Record<string, NPMPackage>;
 
+const names = [
+	'@three11/accordion',
+	'@three11/animate-top-offset',
+	'@three11/debounce',
+	'@three11/dom-helpers',
+	'@three11/extract-query-arg',
+	'@three11/infinite-scroll',
+	'@three11/istouch',
+	'@three11/optisize',
+	'@three11/scrollspy',
+	'animateme',
+	'async-array-prototype',
+	'attr-i18n',
+	'create-pwa',
+	'create-react-app-ts',
+	'dator',
+	'gitlab-calendar',
+	'hover-media-query',
+	'html-head-component',
+	'html5-form-validator',
+	'introscroll',
+	'itcss',
+	'itscss',
+	'lastfm-ts-api',
+	'localga',
+	'node-mysql-client',
+	'npm-maintainer',
+	'pass-score',
+	'postcss-watch-folder',
+	'random-splice',
+	'react-accordion-ts',
+	'react-dropper',
+	'react-round-carousel',
+	'react-svg-donuts',
+	'round-carousel-component',
+	'scriptex-socials',
+	'scss-goodies',
+	'simple-calendar-widget',
+	'svg-symbol-sprite',
+	'svg64',
+	'svgo-add-viewbox',
+	'svgo-viewbox',
+	'touchsweep',
+	'typed-usa-states',
+	'universal-github-client',
+	'webpack-mpa',
+	'webpack-mpa-next',
+	'webpack-mpa-ts'
+];
+
 export const run = async (): Promise<NPMResult> => {
 	const result: NPMResult = {};
 
@@ -20,22 +70,6 @@ export const run = async (): Promise<NPMResult> => {
 
 		const today = new Date();
 		const endDate = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
-
-		const own = await fetch('https://api.npms.io/v2/search?q=author:scriptex&size=250&from=0').then(r => r.json());
-		const co = await fetch('https://api.npms.io/v2/search?q=maintainer:scriptex&size=250&from=0').then(r =>
-			r.json()
-		);
-		const names = Array.from(new Set([...own.results, ...co.results].map(p => p.package.name))).sort((a, b) => {
-			if (a > b) {
-				return 1;
-			}
-
-			if (a < b) {
-				return -1;
-			}
-
-			return 0;
-		});
 
 		const data = [];
 
