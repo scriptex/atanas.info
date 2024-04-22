@@ -16,7 +16,7 @@ jobs:
                   node-version: 18
             - name: Build
               run: |
-                  npm ci
+                  yarn
                   yarn insights
                   yarn npm-stats
               env:

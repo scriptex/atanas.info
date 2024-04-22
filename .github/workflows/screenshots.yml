@@ -16,7 +16,7 @@ jobs:
                   node-version: 18
             - name: Build
               run: |
-                  npm ci
+                  yarn
                   yarn screenshots
                   yarn fetch-music
               env:
