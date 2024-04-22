@@ -1,15 +1,20 @@
-import { defaultCache } from '@serwist/next/browser';
-import type { PrecacheEntry } from '@serwist/precaching';
-import { installSerwist } from '@serwist/sw';
+import { defaultCache } from '@serwist/next/worker';
+import { PrecacheEntry, Serwist, SerwistGlobalConfig } from 'serwist';
 
-declare const self: ServiceWorkerGlobalScope & {
-	__SW_MANIFEST: (PrecacheEntry | string)[] | undefined;
-};
+declare global {
+	interface WorkerGlobalScope extends SerwistGlobalConfig {
+		__SW_MANIFEST: (PrecacheEntry | string)[] | undefined;
+	}
+}
 
-installSerwist({
+declare const self: ServiceWorkerGlobalScope;
+
+const serwist = new Serwist({
 	clientsClaim: true,
 	navigationPreload: true,
 	precacheEntries: self.__SW_MANIFEST,
 	runtimeCaching: defaultCache,
 	skipWaiting: true
 });
+
+serwist.addEventListeners();

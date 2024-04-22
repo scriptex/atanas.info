@@ -1,9 +1,11 @@
-const withSerwist = require('@serwist/next').default({
+import withSerwistInit from '@serwist/next';
+
+const withSerwist = withSerwistInit({
 	swSrc: 'src/sw.ts',
 	swDest: 'public/sw.js'
 });
 
-module.exports = withSerwist({
+export default withSerwist({
 	images: {
 		domains: ['res.cloudinary.com', 'images.ctfassets.net', 'media.licdn.com'],
 		unoptimized: true
