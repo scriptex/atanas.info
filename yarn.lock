@@ -11171,10 +11171,14 @@ schema-utils@^3.1.1, schema-utils@^3.2.0:
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
 
-scriptex-socials@1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/scriptex-socials/-/scriptex-socials-1.7.0.tgz#3e76af0d9e3cd47ff30bd7aba7b74c02d7caec40"
-  integrity sha512-4CrheGuwr8fUBWc1VCC9bu1vdjNfiX2MqVpKwmQoegv0D6Ha9Znyh2Gz0kVkRuwuXzfyOtW2h9dxKUHTKvpGlQ==
+scriptex-socials@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/scriptex-socials/-/scriptex-socials-1.8.0.tgz#91288d6df16ec3f75dde1da472f2af2925c14a12"
+  integrity sha512-l/ldo7B3CKDwh63Dubx5s3NQsqOE+CRMGy9wgVoEjAk7pAf8gQNr30LXRK+XKlximI79gvLsRycuMaFvQAMQGw==
+  dependencies:
+    cheerio "^1.0.0-rc.12"
+    commander "^12.0.0"
+    svgo "^3.3.2"
 
 scss-goodies@2.2.0:
   version "2.2.0"
@@ -11871,7 +11875,7 @@ svgo@3.0.2:
     csso "^5.0.5"
     picocolors "^1.0.0"
 
-svgo@3.3.2, svgo@^3.0.0, svgo@^3.0.2:
+svgo@3.3.2, svgo@^3.0.0, svgo@^3.0.2, svgo@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-3.3.2.tgz#ad58002652dffbb5986fc9716afe52d869ecbda8"
   integrity sha512-OoohrmuUlBs8B8o6MB2Aevn+pRIH9zDALSR+6hhqVfa6fRwG/Qw9VUMSMW9VNg2CFc/MTIfabtdOVl9ODIJjpw==
