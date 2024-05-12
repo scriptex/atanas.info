@@ -9527,7 +9527,12 @@ postcss-attribute-case-insensitive@^6.0.3:
   dependencies:
     postcss-selector-parser "^6.0.13"
 
-postcss-browser-comments@4.0.0, postcss-browser-comments@^4:
+postcss-browser-comments@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-browser-comments/-/postcss-browser-comments-5.0.0.tgz#c0c8bd4cf6d79b739ff7b9c08a95ea39b5687096"
+  integrity sha512-1qR8xqJPB0vmLV85FGA3/Kqf0qB70sZ2l3hQ3jm0ihwgzM644Fbfb47bcQes+GeQuZ+WJwsTHY1nWl66lTSRTg==
+
+postcss-browser-comments@^4:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/postcss-browser-comments/-/postcss-browser-comments-4.0.0.tgz#bcfc86134df5807f5d3c0eefa191d42136b5e72a"
   integrity sha512-X9X9/WN3KIvY9+hNERUqX9gncsgBA25XaeR+jshHz2j8+sYyHktHw1JdKuMjeLpGktXidqDhA7b/qm1mrBDmgg==
