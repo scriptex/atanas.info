@@ -1,4 +1,4 @@
-import { act } from '@testing-library/react';
+import { act } from 'react';
 
 import { Home } from '@pages/index';
 import { snapshotTest, test } from '@test-config/helpers';
@@ -18,9 +18,7 @@ it('Should test the Home page', async () => {
 
 	expect(asFragment()).toMatchSnapshot();
 
-	await act(async () => {
-		await jest.runOnlyPendingTimers(); //NOSONAR
-	});
+	act(() => jest.runOnlyPendingTimers());
 
 	expect(asFragment()).toMatchSnapshot();
 });

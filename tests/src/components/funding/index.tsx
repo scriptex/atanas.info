@@ -1,4 +1,6 @@
-import { act, fireEvent, waitFor } from '@testing-library/react';
+import { act } from 'react';
+
+import { fireEvent, waitFor } from '@testing-library/react';
 
 import { Funding } from '@components';
 import { snapshotTest, test } from '@test-config/helpers';
@@ -39,9 +41,7 @@ it('Should test the Funding lifecycle', async () => {
 		fireEvent.click(container.querySelector('.c-funding__crypto')!);
 	});
 
-	act(() => {
-		jest.runOnlyPendingTimers();
-	});
+	act(() => jest.runOnlyPendingTimers());
 
 	expect(asFragment()).toMatchSnapshot();
 

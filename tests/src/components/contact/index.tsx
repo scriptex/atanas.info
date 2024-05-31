@@ -1,4 +1,4 @@
-import { act } from '@testing-library/react';
+import { act } from 'react';
 
 import { Contact } from '@components';
 import { AppContext } from '@data/context';
@@ -35,17 +35,13 @@ it('Tests Contact submission', async () => {
 
 	mockFetch({ error: 'Something went wrong!' });
 
-	await act(async () => {
-		await form.submit();
-	});
+	await act(async () => await form.submit()); // NOSONAR
 
 	expect(asFragment()).toMatchSnapshot();
 
 	mockFetch({ success: true });
 
-	await act(async () => {
-		await form.submit();
-	});
+	await act(async () => await form.submit()); // NOSONAR
 
 	expect(asFragment()).toMatchSnapshot();
 });

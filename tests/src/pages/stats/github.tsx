@@ -1,4 +1,4 @@
-import { act } from '@testing-library/react';
+import { act } from 'react';
 
 import { GithubStats } from '@pages/stats/github';
 
@@ -147,9 +147,7 @@ it('Test the GithubStats page with fake timers', async () => {
 
 	const { asFragment } = await test(GithubStatsComponent);
 
-	act(() => {
-		jest.runOnlyPendingTimers();
-	});
+	act(() => jest.runOnlyPendingTimers());
 
 	expect(asFragment()).toMatchSnapshot();
 });
