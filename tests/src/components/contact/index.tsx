@@ -35,17 +35,13 @@ it('Tests Contact submission', async () => {
 
 	mockFetch({ error: 'Something went wrong!' });
 
-	await act(async () => {
-		await form.submit();
-	});
+	await act(async () => await form.submit()); // NOSONAR
 
 	expect(asFragment()).toMatchSnapshot();
 
 	mockFetch({ success: true });
 
-	await act(async () => {
-		await form.submit();
-	});
+	await act(async () => await form.submit()); // NOSONAR
 
 	expect(asFragment()).toMatchSnapshot();
 });

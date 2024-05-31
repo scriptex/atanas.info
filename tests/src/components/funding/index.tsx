@@ -41,9 +41,7 @@ it('Should test the Funding lifecycle', async () => {
 		fireEvent.click(container.querySelector('.c-funding__crypto')!);
 	});
 
-	act(() => {
-		jest.runOnlyPendingTimers();
-	});
+	act(() => jest.runOnlyPendingTimers());
 
 	expect(asFragment()).toMatchSnapshot();
 
