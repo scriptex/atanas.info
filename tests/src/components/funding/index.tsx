@@ -1,4 +1,6 @@
-import { act, fireEvent, waitFor } from '@testing-library/react';
+import { act } from 'react';
+
+import { fireEvent, waitFor } from '@testing-library/react';
 
 import { Funding } from '@components';
 import { snapshotTest, test } from '@test-config/helpers';

@@ -1,6 +1,5 @@
 import type { FC } from 'react';
-
-import { act } from 'react-dom/test-utils';
+import { act } from 'react';
 
 import { render, RenderResult, waitFor } from '@testing-library/react';
 
