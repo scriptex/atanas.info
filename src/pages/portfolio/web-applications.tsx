@@ -65,6 +65,12 @@ export const PortfolioWebApps: FC<Readonly<InferGetStaticPropsType<typeof getSta
 									<br />
 									{project.description}
 								</span>
+
+								{project.text && (
+									<strong>
+										<em>{project.text}</em>
+									</strong>
+								)}
 							</section>
 						</ExternalLink>
 					))}

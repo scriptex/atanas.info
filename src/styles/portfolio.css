@@ -84,6 +84,10 @@
 			& strong {
 				text-transform: uppercase;
 				display: block;
+
+				&:not(:first-child) {
+					padding-top: 1rem;
+				}
 			}
 
 			& span {
@@ -303,6 +307,10 @@
 
 				& strong {
 					flex: 0 0 100%;
+
+					&:not(:first-child) {
+						padding-top: 0.5rem;
+					}
 				}
 
 				&:hover {

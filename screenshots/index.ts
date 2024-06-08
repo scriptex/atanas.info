@@ -53,6 +53,8 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 		width: 1280
 	});
 
+	await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: 'dark' }]);
+
 	log(`atanas.info: Navigating to ${url} for ${name}...`);
 	await page.goto(url, { waitUntil: 'networkidle0' });
 
