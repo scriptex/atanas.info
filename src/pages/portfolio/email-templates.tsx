@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { FC, useState } from 'react';
 
 import Modal from 'react-modal';

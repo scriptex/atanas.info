@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-interface */
 declare interface Navigator extends NavigatorNetworkInformation {}
 declare interface WorkerNavigator extends NavigatorNetworkInformation {}
 
