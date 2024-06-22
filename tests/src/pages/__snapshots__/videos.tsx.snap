@@ -633,7 +633,7 @@ exports[`Videos component Should render the Videos component 1`] = `
           class="c-section__body"
         >
           <div
-            class="c-section__frame current"
+            class="c-section__frame c-section__frame--c-section__frame-video current"
           >
             <div
               class="c-loading"
@@ -642,14 +642,15 @@ exports[`Videos component Should render the Videos component 1`] = `
                 class="c-loader"
               />
             </div>
-            <iframe
-              loading="lazy"
-              src="https://example.com/videos/1/embed?start=false&loop=false&delayms=3000"
-              title="Video 1 Description"
+            <video
+              controls=""
+              preload="metadata"
+              src="https://example.com/videos/1"
+              title="Video 1 Title"
             />
           </div>
           <div
-            class="c-section__frame"
+            class="c-section__frame c-section__frame--c-section__frame-video"
           >
             <div
               class="c-loading"
@@ -658,10 +659,11 @@ exports[`Videos component Should render the Videos component 1`] = `
                 class="c-loader"
               />
             </div>
-            <iframe
-              loading="lazy"
-              src="https://example.com/videos/2/embed?start=false&loop=false&delayms=3000"
-              title="Video 2 Description"
+            <video
+              controls=""
+              preload="metadata"
+              src="https://example.com/videos/2"
+              title="Video 2 Title"
             />
           </div>
         </div>
@@ -2044,7 +2046,7 @@ exports[`Videos component Should render the Videos component 2`] = `
           class="c-section__body"
         >
           <div
-            class="c-section__frame current"
+            class="c-section__frame c-section__frame--c-section__frame-video current"
           >
             <div
               class="c-loading"
@@ -2053,14 +2055,15 @@ exports[`Videos component Should render the Videos component 2`] = `
                 class="c-loader"
               />
             </div>
-            <iframe
-              loading="lazy"
-              src="https://example.com/videos/1/embed?start=false&loop=false&delayms=3000"
-              title="Video 1 Description"
+            <video
+              controls=""
+              preload="metadata"
+              src="https://example.com/videos/1"
+              title="Video 1 Title"
             />
           </div>
           <div
-            class="c-section__frame"
+            class="c-section__frame c-section__frame--c-section__frame-video"
           >
             <div
               class="c-loading"
@@ -2069,10 +2072,11 @@ exports[`Videos component Should render the Videos component 2`] = `
                 class="c-loader"
               />
             </div>
-            <iframe
-              loading="lazy"
-              src="https://example.com/videos/2/embed?start=false&loop=false&delayms=3000"
-              title="Video 2 Description"
+            <video
+              controls=""
+              preload="metadata"
+              src="https://example.com/videos/2"
+              title="Video 2 Title"
             />
           </div>
         </div>
@@ -3455,7 +3459,7 @@ exports[`Videos component Should render the Videos component 3`] = `
           class="c-section__body"
         >
           <div
-            class="c-section__frame current"
+            class="c-section__frame c-section__frame--c-section__frame-video current"
           >
             <div
               class="c-loading"
@@ -3464,14 +3468,15 @@ exports[`Videos component Should render the Videos component 3`] = `
                 class="c-loader"
               />
             </div>
-            <iframe
-              loading="lazy"
-              src="https://example.com/videos/1/embed?start=false&loop=false&delayms=3000"
-              title="Video 1 Description"
+            <video
+              controls=""
+              preload="metadata"
+              src="https://example.com/videos/1"
+              title="Video 1 Title"
             />
           </div>
           <div
-            class="c-section__frame"
+            class="c-section__frame c-section__frame--c-section__frame-video"
           >
             <div
               class="c-loading"
@@ -3480,10 +3485,11 @@ exports[`Videos component Should render the Videos component 3`] = `
                 class="c-loader"
               />
             </div>
-            <iframe
-              loading="lazy"
-              src="https://example.com/videos/2/embed?start=false&loop=false&delayms=3000"
-              title="Video 2 Description"
+            <video
+              controls=""
+              preload="metadata"
+              src="https://example.com/videos/2"
+              title="Video 2 Title"
             />
           </div>
         </div>

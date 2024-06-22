@@ -408,7 +408,7 @@ export const projects: WebProject[] = withIndex([
 		image: '/images/web-apps/Hàla.jpg',
 		skip: false,
 		title: 'Demetry',
-		url: 'https://demetry.film/'
+		url: ''
 	},
 	{
 		description: 'Typescript, React, SCSS, Next.js, React Query',
@@ -500,6 +500,45 @@ export const projects: WebProject[] = withIndex([
 		skip: false,
 		title: 'Kinetik Electric Karting Championship',
 		url: 'https://kinetik-e.com/'
+	},
+	{
+		description: 'HTML5, SVG, CSS3, Javascript, jQuery',
+		image: '/images/web-apps/htmlBurger.jpg',
+		skip: false,
+		text: 'Built in collaboration with the htmlBurger team',
+		title: 'htmlBurger',
+		url: 'https://htmlburger.com/'
+	},
+	{
+		description: 'HTML5, SVG, CSS3, Javascript, jQuery',
+		image: '/images/web-apps/htmlBoutique.jpg',
+		skip: false,
+		text: 'Built in collaboration with the htmlBoutique team',
+		title: 'htmlBoutique',
+		url: 'https://htmlboutique.com/'
+	},
+	{
+		description: 'HTML5, SVG, CSS3, Javascript, jQuery',
+		image: '/images/web-apps/Graphic-Mama.jpeg',
+		skip: true,
+		text: 'Built in collaboration with the Graphic Mama team',
+		title: 'Graphic Mama',
+		url: 'https://graphicmama.com/'
+	},
+	{
+		description: 'HTML5, SVG, CSS3, Javascript, jQuery',
+		image: '/images/web-apps/Mail-Bakery.jpg',
+		skip: false,
+		text: 'Built in collaboration with the Mail Bakery team',
+		title: 'Mail Bakery',
+		url: 'https://mailbakery.com/'
+	},
+	{
+		description: 'HTML5, SVG, CSS3, Javascript, PHP, WordPress',
+		image: '/images/web-apps/Advanced-Hindsight.jpg',
+		skip: false,
+		title: 'Advanced Hindsight',
+		url: 'https://advanced-hindsight.com/'
 	}
 ]);
 

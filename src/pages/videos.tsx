@@ -30,24 +30,37 @@ export const Videos: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ dat
 				<SectionNav active={activeIndex} data={data} name="title" onClick={setActiveIndex} />
 
 				<div className="c-section__body">
-					{data.map((presentation: Video, index: number) => (
-						<div
-							className={composeClassName(
-								'c-section__frame',
-								[],
-								activeIndex === index ? ['current'] : []
-							)}
-							key={presentation.index}
-						>
-							<Loader />
+					{data.map((video: Video, index: number) => {
+						const isYouTube = video.url.includes('youtube');
 
-							<iframe
-								loading="lazy"
-								src={`${presentation.url}/embed?start=false&loop=false&delayms=3000`}
-								title={presentation.description}
-							/>
-						</div>
-					))}
+						return (
+							<div
+								className={composeClassName(
+									'c-section__frame',
+									isYouTube ? [] : ['c-section__frame-video'],
+									activeIndex === index ? ['current'] : []
+								)}
+								key={video.index}
+							>
+								<Loader />
+
+								{isYouTube ? (
+									<iframe
+										loading="lazy"
+										src={`${video.url}/embed?start=false&loop=false&delayms=3000`}
+										title={video.description}
+									/>
+								) : (
+									<video
+										controls
+										preload="metadata"
+										src={video.url.replace('.mov', '.mp4')}
+										title={video.title}
+									/> // NOSONAR
+								)}
+							</div>
+						);
+					})}
 				</div>
 			</Section>
 		</Layout>
