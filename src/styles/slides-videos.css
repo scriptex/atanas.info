@@ -35,6 +35,7 @@
 
 	/* prettier-ignore */
 	& iframe,
+	& video,
 	& lite-youtube { /* stylelint-disable-line selector-type-no-unknown */
 		max-width: none;
 		width: 100%;
@@ -86,6 +87,10 @@
 			opacity: 1;
 			visibility: visible;
 		}
+	}
+
+	& .c-section__frame-video {
+		padding-bottom: 56.25%;
 	}
 }
 
