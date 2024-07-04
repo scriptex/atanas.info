@@ -634,6 +634,37 @@ export const mobileApps: ExtendedProject[] = withIndex([
 		images: ['foton-home-ipad-light.jpg', 'foton-home-ipad-dark.jpg'],
 		title: 'Foton Home for iPad',
 		url: 'https://apps.apple.com/us/app/foton-home/id1525688620#?platform=ipad'
+	},
+	{
+		adjustable: true,
+		description: 'Notes, Reminders and Todos App for Android and iOS',
+		details: 'AngularJS, Ionic 1, Cordova, Firebase, JavaScript, CSS',
+		imageHeight: 1844,
+		imageWidth: 860,
+		images: [
+			'notabene-1.png',
+			'notabene-2.png',
+			'notabene-3.png',
+			'notabene-4.png',
+			'notabene-5.png',
+			'notabene-6.png',
+			'notabene-7.png',
+			'notabene-8.png',
+			'notabene-9.png',
+			'notabene-10.png'
+		],
+		title: 'Notabene',
+		url: 'https://github.com/scriptex/Notabene'
+	},
+	{
+		adjustable: true,
+		description: 'A game based on the popular 2048 game',
+		details: 'AngularJS, Ionic 1, Cordova, Firebase, JavaScript, CSS',
+		imageHeight: 1844,
+		imageWidth: 860,
+		images: ['evolution-1.png', 'evolution-2.png', 'evolution-3.png', 'evolution-4.png'],
+		title: 'Evolution',
+		url: 'https://github.com/scriptex/Evolution'
 	}
 ]);
 
