@@ -344,9 +344,9 @@ The bottom line is "Security is a process - improve, adapt, use CI/CD, automate.
 
 Pratim is a backend developer and developer advocate for SurrealDB.
 
-His talk was focused on privacy-friendly AI applications.
+Her talk was focused on privacy-friendly AI applications.
 
-According to his research, sending sensitive data (or any data) to AI is a privacy issue and this actually doesn't apply only to AI but to Apple, Google and similar.
+According to her research, sending sensitive data (or any data) to AI is a privacy issue and this actually doesn't apply only to AI but to Apple, Google and similar.
 
 Where is the "delete" button for your data in the cloud?
 
