@@ -52,7 +52,7 @@ export const Head: FC = () => (
 			property="og:title"
 		/>
 
-		<meta content="https://atanas.info/images/temp/atanas.jpg" property="og:image" />
+		<meta content="https://atanas.info/images/temp/atanas2.jpeg" property="og:image" />
 
 		<meta
 			content="Atanas Atanasov - Frontend Team Lead and Senior Javascript/Typescript Engineer: Single Page Applications, Vue, React, Angular, NodeJS | Professional web and mobile development services"
@@ -98,7 +98,7 @@ export const Head: FC = () => (
 			name="twitter:description"
 		/>
 
-		<meta content="https://atanas.info/images/temp/atanas.jpg" name="twitter:image" />
+		<meta content="https://atanas.info/images/temp/atanas2.jpeg" name="twitter:image" />
 
 		<meta content="@scriptexbg" name="twitter:creator" />
 
