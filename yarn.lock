@@ -1230,18 +1230,23 @@
     "@vercel/stega" "^0.1.2"
     json-pointer "^0.6.2"
 
-"@contentful/rich-text-html-renderer@16.6.1":
-  version "16.6.1"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-html-renderer/-/rich-text-html-renderer-16.6.1.tgz#84ed0006ec03cb37078df8b8730e3cab1399dc35"
-  integrity sha512-Te4rotpUmjVcdLoEsSukTkt6ssVLTtVe4Ftg1S8ANKuzo9I4+8VhZkgWS7H/G7f4FGMguAABVgN7ZqeiI5HCcw==
+"@contentful/rich-text-html-renderer@16.6.2":
+  version "16.6.2"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-html-renderer/-/rich-text-html-renderer-16.6.2.tgz#83cf24e799da7811b64530f68d4b4c744f2eae3f"
+  integrity sha512-Btzw1tT2zd3OcGkCcKc6/j41Ar46SLnoMBcfxgxOauQjd7LEIzjZCEoFrTC7DahejaYOxiY3FzggwHktpOb3Wg==
   dependencies:
-    "@contentful/rich-text-types" "^16.6.1"
+    "@contentful/rich-text-types" "^16.6.2"
     escape-html "^1.0.3"
 
-"@contentful/rich-text-types@^16.0.2", "@contentful/rich-text-types@^16.6.1":
+"@contentful/rich-text-types@^16.0.2":
   version "16.6.1"
   resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.6.1.tgz#d7a0890b885ab681028aa7f1085e219d8b2c51be"
   integrity sha512-Rb8QusSMSTMUP4dbpBDWgwGJoqKDYRxPcNXySP0URYTQ6pViJ2SXhVc81RJCgJ5Fb02n5ctbvDYGtcnBH8yhDw==
+
+"@contentful/rich-text-types@^16.6.2":
+  version "16.6.2"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.6.2.tgz#e036f332de2df5dfdae8f7de2c0b35eddaf68e9f"
+  integrity sha512-WMo+HVSudA4J1FwBnDZeYUbH4HaT5WWOZyeSZx2KEs/vN+nuDwRpIO9esuF9C/QY2pOBC09tpdq2WI4/1kfLHA==
 
 "@corex/deepmerge@^4.0.43":
   version "4.0.43"
