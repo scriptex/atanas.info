@@ -1230,12 +1230,12 @@
     "@vercel/stega" "^0.1.2"
     json-pointer "^0.6.2"
 
-"@contentful/rich-text-html-renderer@16.6.4":
-  version "16.6.4"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-html-renderer/-/rich-text-html-renderer-16.6.4.tgz#7644c3c5e00c06aa35106b6bc222d42ea2191bd8"
-  integrity sha512-N6gPZgfGMElPMRwvyQtEuOV3Ti+4oMGRQoVUag8ZZqy2oPzL2d2+qh2YCeDKSSVl7lBgl+HdyyorD3WqMj2eCQ==
+"@contentful/rich-text-html-renderer@16.6.6":
+  version "16.6.6"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-html-renderer/-/rich-text-html-renderer-16.6.6.tgz#52826ad5f1a6f6f351474ea4b12e0f40aef52667"
+  integrity sha512-c2j1mygxXR5cagw04scu/hhAwumQeXXSGM51DtqNdZ+g2NVe5dtYJB2EAlcHVWShIZ8y2kWT9KpzQ4wQezgTEA==
   dependencies:
-    "@contentful/rich-text-types" "^16.7.0"
+    "@contentful/rich-text-types" "^16.8.1"
     escape-html "^1.0.3"
 
 "@contentful/rich-text-types@^16.0.2":
@@ -1243,10 +1243,10 @@
   resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.6.1.tgz#d7a0890b885ab681028aa7f1085e219d8b2c51be"
   integrity sha512-Rb8QusSMSTMUP4dbpBDWgwGJoqKDYRxPcNXySP0URYTQ6pViJ2SXhVc81RJCgJ5Fb02n5ctbvDYGtcnBH8yhDw==
 
-"@contentful/rich-text-types@^16.7.0":
-  version "16.7.0"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.7.0.tgz#e9a5d59a94867536180a4e506b1745dfe04f83f0"
-  integrity sha512-SMW6JjJpp05CU5xBjIJp9azxFJ/bzcRzd2o9sF49C736m3aCxSobfuUIJz0dHw92MGsiFKAfzn5yTL3JMfqBqg==
+"@contentful/rich-text-types@^16.8.1":
+  version "16.8.1"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.8.1.tgz#4c3d17e235dfa37c5fb324470f119df29f621b96"
+  integrity sha512-HvH9GyL9ER+P+DR3SKAyqMXcqzUfs4BT9VGh0k8fZx2+e29fQQEL2SBGtvkY5pXNWc5eEC3ytzwAaR0CCTVTOw==
 
 "@corex/deepmerge@^4.0.43":
   version "4.0.43"
