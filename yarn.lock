@@ -2317,51 +2317,51 @@
     lodash "^4.17.21"
     request "^2.81.0"
 
-"@serwist/build@9.0.4":
-  version "9.0.4"
-  resolved "https://registry.yarnpkg.com/@serwist/build/-/build-9.0.4.tgz#598585a7ae9cde5a42983880d0044885876a5532"
-  integrity sha512-SaG4//zF/1aQuLipscGTr6Ehu5HxeHkh7heTJ0wLjqxY4b1CIpQ0Y6g3oAH8nU4Knm5dj58aQ53ucHJKXFcrzw==
+"@serwist/build@9.0.5":
+  version "9.0.5"
+  resolved "https://registry.yarnpkg.com/@serwist/build/-/build-9.0.5.tgz#428de88207f3329f616d7064fdd464de1f115c22"
+  integrity sha512-5al7u7qzhBognM5fNFIf02TyjkyTo8Lm5qB7UTaQGbFth1eN8naFG47cYROF83DHYb28virc+COkz8PdHr3wSg==
   dependencies:
     common-tags "1.8.2"
     fast-json-stable-stringify "2.1.0"
     fs-extra "11.2.0"
-    glob "11.0.0"
+    glob "10.4.5"
     pretty-bytes "6.1.1"
     rollup "4.18.1"
     source-map "0.8.0-beta.0"
     upath "2.0.1"
     zod "3.23.8"
 
-"@serwist/next@9.0.4":
-  version "9.0.4"
-  resolved "https://registry.yarnpkg.com/@serwist/next/-/next-9.0.4.tgz#16c45bd3ce898004193a0e301b234f7df90a53a5"
-  integrity sha512-VAQ/w29dV5NEGHpqREEEjzP1JwL6XQUWBVJInuP8HYf8eQ3CE+Je8XUgvYRLmuix8WbRsCx/pVd7g2YsthP0XA==
+"@serwist/next@9.0.5":
+  version "9.0.5"
+  resolved "https://registry.yarnpkg.com/@serwist/next/-/next-9.0.5.tgz#682e8584b60c2c53ca5bd68a6f4cf34106d7174f"
+  integrity sha512-jNzFzwlIpTKsRpcUBqmvqGjdZI5gYrhhT8o5PkS0qXT/Iw/NMNN4nTsgnhXt4kJilV/JG9zky4gebHvrHvAFDw==
   dependencies:
-    "@serwist/build" "9.0.4"
-    "@serwist/webpack-plugin" "9.0.4"
-    "@serwist/window" "9.0.4"
+    "@serwist/build" "9.0.5"
+    "@serwist/webpack-plugin" "9.0.5"
+    "@serwist/window" "9.0.5"
     chalk "5.3.0"
-    glob "11.0.0"
-    serwist "9.0.4"
+    glob "10.4.5"
+    serwist "9.0.5"
     zod "3.23.8"
 
-"@serwist/webpack-plugin@9.0.4":
-  version "9.0.4"
-  resolved "https://registry.yarnpkg.com/@serwist/webpack-plugin/-/webpack-plugin-9.0.4.tgz#a977368d58ee416d2cc7138f7615cb1fc0f2c6ba"
-  integrity sha512-35qU/pnC6O1b4/Pl5q2K+OWhhJOPN7vpuQtK+xDm7B1KlZDeZng9pKGKiRMwOP5Kz9bthKcbwQekAYCRqa14BQ==
+"@serwist/webpack-plugin@9.0.5":
+  version "9.0.5"
+  resolved "https://registry.yarnpkg.com/@serwist/webpack-plugin/-/webpack-plugin-9.0.5.tgz#ece7e34823675fd2a721b60f91c04f2170220bee"
+  integrity sha512-xkN+q/olJWT6Xq1sz69LPbpevYfLQmRmAUjVKg0GBiSB7cgwzTCB4zTGYabH+w/JMAEth7wdIo0TPd4WaCWWzg==
   dependencies:
-    "@serwist/build" "9.0.4"
+    "@serwist/build" "9.0.5"
     pretty-bytes "6.1.1"
     upath "2.0.1"
     zod "3.23.8"
 
-"@serwist/window@9.0.4":
-  version "9.0.4"
-  resolved "https://registry.yarnpkg.com/@serwist/window/-/window-9.0.4.tgz#817991d91b9e377fbce26ca33e58eebf688ee684"
-  integrity sha512-HDT1B3BNvz6KOWXVV+4xLV7crior67Roy8O+p/cV0wtiJGZcC5quEzQ46C4XBpTkKKtJftCBsCSG3js5mphmPw==
+"@serwist/window@9.0.5":
+  version "9.0.5"
+  resolved "https://registry.yarnpkg.com/@serwist/window/-/window-9.0.5.tgz#881e6b70366920f34559cb16237e1375e2879ba9"
+  integrity sha512-J1MR/eWPLA9PgA8z/i/NnjdNAGgPFzz11FPE/Cv5Gd8f/odgICYAQyDI/oWVu/cq4RA55pwToeuABCwpYnhyeg==
   dependencies:
     "@types/trusted-types" "2.0.7"
-    serwist "9.0.4"
+    serwist "9.0.5"
 
 "@sinclair/typebox@^0.27.8":
   version "0.27.8"
@@ -6657,19 +6657,7 @@ glob@10.3.10:
     minipass "^5.0.0 || ^6.0.2 || ^7.0.0"
     path-scurry "^1.10.1"
 
-glob@11.0.0:
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-11.0.0.tgz#6031df0d7b65eaa1ccb9b29b5ced16cea658e77e"
-  integrity sha512-9UiX/Bl6J2yaBbxKoEBRm4Cipxgok8kQYcOPEhScPwebu2I0HoQOuYdIO6S3hLuWoZgpDpwQZMzTFxgpkyT76g==
-  dependencies:
-    foreground-child "^3.1.0"
-    jackspeak "^4.0.1"
-    minimatch "^10.0.0"
-    minipass "^7.1.2"
-    package-json-from-dist "^1.0.0"
-    path-scurry "^2.0.0"
-
-glob@^10.3.10, glob@^10.3.3:
+glob@10.4.5, glob@^10.3.10, glob@^10.3.3:
   version "10.4.5"
   resolved "https://registry.yarnpkg.com/glob/-/glob-10.4.5.tgz#f4d9f0b90ffdbab09c9d77f5f29b4262517b0956"
   integrity sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==
@@ -7615,15 +7603,6 @@ jackspeak@^3.1.2:
   optionalDependencies:
     "@pkgjs/parseargs" "^0.11.0"
 
-jackspeak@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/jackspeak/-/jackspeak-4.0.1.tgz#9fca4ce961af6083e259c376e9e3541431f5287b"
-  integrity sha512-cub8rahkh0Q/bw1+GxP7aeSe29hHHn2V4m29nnDlvCdlgU+3UGxkZp7Z53jLUdpX3jdTO0nJZUDl3xvbWc2Xog==
-  dependencies:
-    "@isaacs/cliui" "^8.0.2"
-  optionalDependencies:
-    "@pkgjs/parseargs" "^0.11.0"
-
 jake@^10.8.5:
   version "10.9.1"
   resolved "https://registry.yarnpkg.com/jake/-/jake-10.9.1.tgz#8dc96b7fcc41cb19aa502af506da4e1d56f5e62b"
@@ -8462,11 +8441,6 @@ lru-cache@^10.2.0:
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.4.3.tgz#410fc8a17b70e598013df257c2446b7f3383f119"
   integrity sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==
 
-lru-cache@^11.0.0:
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-11.0.0.tgz#15d93a196f189034d7166caf9fe55e7384c98a21"
-  integrity sha512-Qv32eSV1RSCfhY3fpPE2GNZ8jgM9X7rdAfemLWqTUxwiyIC4jJ6Sy0fZ8H+oLWevO6i4/bizg7c8d8i6bxrzbA==
-
 lru-cache@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-5.1.1.tgz#1da27e6710271947695daf6848e847f01d84b920"
@@ -8755,13 +8729,6 @@ minimatch@9.0.3:
   version "9.0.3"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-9.0.3.tgz#a6e00c3de44c3a542bfaae70abfc22420a6da825"
   integrity sha512-RHiac9mvaRw0x3AYRgDC1CxAP7HTcNrrECeA8YYJeWnpo+2Q5CegtZjaotWTWxDG3UeGA1coE05iH1mPjT/2mg==
-  dependencies:
-    brace-expansion "^2.0.1"
-
-minimatch@^10.0.0:
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-10.0.1.tgz#ce0521856b453c86e25f2c4c0d03e6ff7ddc440b"
-  integrity sha512-ethXTt3SGGR+95gudmqJ1eNhRO7eGEGIgYA9vnPatK4/etz2MEVDno5GMCibdMTuBMyElzIlgxMna3K94XDIDQ==
   dependencies:
     brace-expansion "^2.0.1"
 
@@ -9687,14 +9654,6 @@ path-scurry@^1.10.1, path-scurry@^1.11.1:
   dependencies:
     lru-cache "^10.2.0"
     minipass "^5.0.0 || ^6.0.2 || ^7.0.0"
-
-path-scurry@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/path-scurry/-/path-scurry-2.0.0.tgz#9f052289f23ad8bf9397a2a0425e7b8615c58580"
-  integrity sha512-ypGJsmGtdXUOeM5u93TyeIEfEhM6s+ljAhrk5vAvSx8uyY/02OvrZnA0YNGUrPXfpJMgI1ODd3nwz8Npx4O4cg==
-  dependencies:
-    lru-cache "^11.0.0"
-    minipass "^7.1.2"
 
 path-type@^4.0.0:
   version "4.0.0"
@@ -11474,10 +11433,10 @@ server-only@^0.0.1:
   resolved "https://registry.yarnpkg.com/server-only/-/server-only-0.0.1.tgz#0f366bb6afb618c37c9255a314535dc412cd1c9e"
   integrity sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==
 
-serwist@9.0.4:
-  version "9.0.4"
-  resolved "https://registry.yarnpkg.com/serwist/-/serwist-9.0.4.tgz#a322b0f68c0bf2713a0329eab460c5f7bd1cb17b"
-  integrity sha512-lix5Hz5OFQjUqWeAIMLCOh7rYtcmQhz7v97zxfiXgONTVqImyGk5w+yaZrQiXZqABZD/i1uY1Ieb1h969lkLNw==
+serwist@9.0.5:
+  version "9.0.5"
+  resolved "https://registry.yarnpkg.com/serwist/-/serwist-9.0.5.tgz#8fcd8628b080c87b9709f23d441a76218fa52393"
+  integrity sha512-N2pf50MxsqHtL14FaLndXE2sbVvuBhyidruLvDrKIwGM0SOCTDBnWNnykLkgw1nDv4XEVgzqKtm8v1fdngPKtg==
   dependencies:
     idb "8.0.0"
 
