@@ -115,6 +115,10 @@
 		padding: 0;
 		margin: 0 0 1.25em 1.25em;
 	}
+
+	& li p:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .c-resume__experience {
@@ -181,6 +185,10 @@
 
 		& i {
 			margin-right: 1rem;
+		}
+
+		& p:last-child {
+			margin-bottom: 1rem;
 		}
 	}
 }
