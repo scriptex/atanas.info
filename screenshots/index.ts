@@ -102,7 +102,7 @@ function upload(shotResult: Uint8Array, options: UploadApiOptions, name: string)
 }
 
 async function createScreenshots(allPages: WebProject[]): Promise<void> {
-	const results: any[] = [];
+	const results: Array<UploadApiResponse | null> = [];
 
 	let newProjects: WebProject[] = [...projects];
 
