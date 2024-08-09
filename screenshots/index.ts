@@ -84,7 +84,7 @@ async function createScreenshot(url: string, name: string, timeout = 2000): Prom
 	}
 }
 
-function upload(shotResult: Buffer, options: UploadApiOptions, name: string): Promise<UploadApiResponse> {
+function upload(shotResult: Uint8Array, options: UploadApiOptions, name: string): Promise<UploadApiResponse> {
 	return new Promise((success, fail) => {
 		cloudinary.uploader
 			.upload_stream(options, (error, result) => {
