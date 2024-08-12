@@ -2919,14 +2919,7 @@
   dependencies:
     "@types/mjml-core" "*"
 
-"@types/node@*":
-  version "22.1.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.1.0.tgz#6d6adc648b5e03f0e83c78dc788c2b037d0ad94b"
-  integrity sha512-AOmuRF0R2/5j1knA3c6G3HOk523Ga+l+ZXltX8SF1+5oqcXijjfTd8fY3XRZqSihEu9XhtQnKYLmkFaoxgsJHw==
-  dependencies:
-    undici-types "~6.13.0"
-
-"@types/node@22.2.0":
+"@types/node@*", "@types/node@22.2.0":
   version "22.2.0"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-22.2.0.tgz#7cf046a99f0ba4d628ad3088cb21f790df9b0c5b"
   integrity sha512-bm6EG6/pCpkxDf/0gDNDdtDILMOHgaQBVOJGdwsqClnxA3xL6jtMv76rLBc006RVMWbmaf0xbmom4Z/5o2nRkQ==
@@ -4283,7 +4276,24 @@ cheerio-select@^2.1.0:
     domhandler "^5.0.3"
     domutils "^3.0.1"
 
-cheerio@1.0.0-rc.12, cheerio@^1.0.0-rc.12:
+cheerio@1.0.0, cheerio@^1.0.0-rc.12:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-1.0.0.tgz#1ede4895a82f26e8af71009f961a9b8cb60d6a81"
+  integrity sha512-quS9HgjQpdaXOvsZz82Oz7uxtXiy6UIsIQcpBj7HRw2M63Skasm9qlDocAM7jNuaxdhpPU7c4kJN+gA5MCu4ww==
+  dependencies:
+    cheerio-select "^2.1.0"
+    dom-serializer "^2.0.0"
+    domhandler "^5.0.3"
+    domutils "^3.1.0"
+    encoding-sniffer "^0.2.0"
+    htmlparser2 "^9.1.0"
+    parse5 "^7.1.2"
+    parse5-htmlparser2-tree-adapter "^7.0.0"
+    parse5-parser-stream "^7.1.2"
+    undici "^6.19.5"
+    whatwg-mimetype "^4.0.0"
+
+cheerio@1.0.0-rc.12:
   version "1.0.0-rc.12"
   resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-1.0.0-rc.12.tgz#788bf7466506b1c6bf5fae51d24a2c4d62e47683"
   integrity sha512-VqR8m68vM46BNnuZ5NtnGBKIE/DfN0cRIzg9n40EIq9NOv90ayxLBXA8fXC5gquFRGJSTRqBq25Jt2ECLR431Q==
@@ -5472,9 +5482,9 @@ ejs@^3.1.10, ejs@^3.1.6:
     jake "^10.8.5"
 
 electron-to-chromium@^1.5.4:
-  version "1.5.5"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.5.tgz#03bfdf422bdd2c05ee2657efedde21264a1a566b"
-  integrity sha512-QR7/A7ZkMS8tZuoftC/jfqNkZLQO779SSW3YuZHP4eXpj3EffGLFcB/Xu9AAZQzLccTiCV+EmUo3ha4mQ9wnlA==
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.6.tgz#c81d9938b5a877314ad370feb73b4e5409b36abd"
+  integrity sha512-jwXWsM5RPf6j9dPYzaorcBSUg6AiqocPEyMpkchkvntaH9HGfOOMZwxMJjDY/XEs3T5dM7uyH1VhRMkqUU9qVw==
 
 emittery@^0.13.1:
   version "0.13.1"
@@ -5490,6 +5500,14 @@ emoji-regex@^9.2.2:
   version "9.2.2"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-9.2.2.tgz#840c8803b0d8047f4ff0cf963176b32d4ef3ed72"
   integrity sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==
+
+encoding-sniffer@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/encoding-sniffer/-/encoding-sniffer-0.2.0.tgz#799569d66d443babe82af18c9f403498365ef1d5"
+  integrity sha512-ju7Wq1kg04I3HtiYIOrUrdfdDvkyO9s5XM8QAj/bN61Yo/Vb4vgJxy5vi4Yxk01gWHbrofpPtpxM8bKger9jhg==
+  dependencies:
+    iconv-lite "^0.6.3"
+    whatwg-encoding "^3.1.1"
 
 end-of-stream@^1.1.0, end-of-stream@^1.4.1:
   version "1.4.4"
@@ -6975,7 +6993,7 @@ husky@9.1.4:
   resolved "https://registry.yarnpkg.com/husky/-/husky-9.1.4.tgz#926fd19c18d345add5eab0a42b2b6d9a80259b34"
   integrity sha512-bho94YyReb4JV7LYWRWxZ/xr6TtOTt8cMfmQ39MQYJ7f/YE268s3GdghGwi+y4zAeqewE5zYLvuhV0M0ijsDEA==
 
-iconv-lite@0.6, iconv-lite@0.6.3:
+iconv-lite@0.6, iconv-lite@0.6.3, iconv-lite@^0.6.3:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.6.3.tgz#a52f80bf38da1952eb5c681790719871a1a72501"
   integrity sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==
@@ -9471,6 +9489,13 @@ parse5-htmlparser2-tree-adapter@^7.0.0:
     domhandler "^5.0.2"
     parse5 "^7.0.0"
 
+parse5-parser-stream@^7.1.2:
+  version "7.1.2"
+  resolved "https://registry.yarnpkg.com/parse5-parser-stream/-/parse5-parser-stream-7.1.2.tgz#d7c20eadc37968d272e2c02660fff92dd27e60e1"
+  integrity sha512-JyeQc9iwFLn5TbvvqACIF/VXG6abODeB3Fwmv/TGdLk2LfbWkaySGY72at4+Ty7EkPZj854u4CrICqNk2qIbow==
+  dependencies:
+    parse5 "^7.0.0"
+
 parse5@^7.0.0, parse5@^7.1.1, parse5@^7.1.2:
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-7.1.2.tgz#0736bebbfd77793823240a23b7fc5e010b7f8e32"
@@ -10253,9 +10278,9 @@ postcss-reporter@^7.0.0:
     thenby "^1.3.4"
 
 postcss-resolve-nested-selector@^0.1.4:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/postcss-resolve-nested-selector/-/postcss-resolve-nested-selector-0.1.5.tgz#799bce8b8cfc46958020dc1335a146abf951cbf6"
-  integrity sha512-tum2m18S22ZSNjXatMG0FSk5ZL83pTttymeJx5Gzxg7RU0s1jNDU9rXltro4osQrukjyNormcb07IEjqEyPNaA==
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/postcss-resolve-nested-selector/-/postcss-resolve-nested-selector-0.1.6.tgz#3d84dec809f34de020372c41b039956966896686"
+  integrity sha512-0sglIs9Wmkzbr8lQwEyIzlDOOC9bGmfVKcJTaxv3vMmd3uo4o4DerC3En0bnmgceeql9BfC8hRkp7cg0fjdVqw==
 
 postcss-safe-parser@^7.0.0:
   version "7.0.0"
@@ -12411,9 +12436,9 @@ uc.micro@^2.0.0, uc.micro@^2.1.0:
   integrity sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==
 
 uglify-js@^3.5.1:
-  version "3.19.1"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.19.1.tgz#2d5df6a0872c43da43187968308d7741d44b8056"
-  integrity sha512-y/2wiW+ceTYR2TSSptAhfnEtpLaQ4Ups5zrjB2d3kuVxHj16j/QJwPl5PvuGy9uARb39J0+iKxcRPvtpsx4A4A==
+  version "3.19.2"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.19.2.tgz#319ae26a5fbd18d03c7dc02496cfa1d6f1cd4307"
+  integrity sha512-S8KA6DDI47nQXJSi2ctQ629YzwOVs+bQML6DAtvy0wgNdpi+0ySpQK0g2pxBq2xfF2z3YCscu7NNA8nXT9PlIQ==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
@@ -12444,6 +12469,11 @@ undici@^5.12.0:
   integrity sha512-72RFADWFqKmUb2hmmvNODKL3p9hcB6Gt2DOQMis1SEBaV6a4MH8soBvzg+95CYhCKPFedut2JY9bMfrDl9D23g==
   dependencies:
     "@fastify/busboy" "^2.0.0"
+
+undici@^6.19.5:
+  version "6.19.7"
+  resolved "https://registry.yarnpkg.com/undici/-/undici-6.19.7.tgz#7d4cf26dc689838aa8b6753a3c5c4288fc1e0216"
+  integrity sha512-HR3W/bMGPSr90i8AAp2C4DM3wChFdJPLrWYpIS++LxS8K+W535qftjt+4MyjNYHeWabMj1nvtmLIi7l++iq91A==
 
 unicode-canonical-property-names-ecmascript@^2.0.0:
   version "2.0.0"

@@ -1,4 +1,5 @@
-import { TextEncoder } from 'util';
+/* eslint-disable @typescript-eslint/no-require-imports */
+import { TextEncoder } from 'node:util';
 
 import * as shared from '@scripts/shared';
 
@@ -49,7 +50,6 @@ window.matchMedia = window.matchMedia || (() => ({
 
 window.crypto = {
 	...require('crypto'),
-	// eslint-disable-next-line @typescript-eslint/no-var-requires
 	getRandomValues: (buffer: Buffer) => require('crypto').randomFillSync(buffer)
 };
 
@@ -84,8 +84,8 @@ jest.mock('gitlab-calendar', () => ({
 }));
 
 jest.mock('swiper/react', () => ({
-	Swiper: ({ children }: any) => children,
-	SwiperSlide: ({ children }: any) => children
+	Swiper: ({ children }: { children: HTMLDivElement }) => children,
+	SwiperSlide: ({ children }: { children: HTMLDivElement }) => children
 }));
 
 jest.mock('swiper/modules', () => ({

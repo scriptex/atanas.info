@@ -1,4 +1,4 @@
-import { load } from 'cheerio';
+import * as cheerio from 'cheerio';
 import type { LastFMImage, LastFMUserResponse } from 'lastfm-node-client';
 
 import clientPromise, { Query, queryGithub, queryGitlab, queryLastFM, queryNPM } from '@lib/mongodb';
@@ -30,9 +30,9 @@ export type LastFMInsights = {
 
 export type InsightsType = 'Github' | 'Gitlab' | 'NPM' | 'LastFM';
 
-export const asyncForEach = async <T>(
+export const asyncForEach = async <T, R>(
 	array: T[],
-	callback: (item: T, index: number, arr: T[]) => any
+	callback: (item: T, index: number, arr: T[]) => R
 ): Promise<void> => {
 	for (let index = 0; index < array.length; index++) {
 		await callback(array[index], index, array);
@@ -47,7 +47,7 @@ export const getContributions = async (url = 'https://github.com/scriptex'): Pro
 	await fetch(url)
 		.then(res => res.text())
 		.then((markup: string) => {
-			const $ = load(markup);
+			const $ = cheerio.load(markup);
 
 			return $('.ContributionCalendar-day')
 				.get()

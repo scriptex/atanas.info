@@ -1,10 +1,25 @@
 import { log } from '@scripts/shared';
-import type { GithubInsights } from '@scripts/types';
+import type { GithubInsights, GithubRepository } from '@scripts/types';
 
 import { github } from './client';
 import { asyncForEach, getContributions, saveInsights } from './utils';
 
-export const getGithubRepositories = async (): Promise<any[]> => {
+type SlimRepo = {
+	default_branch: string;
+	full_name: string;
+	name: string;
+	owner: {
+		login: string;
+	};
+	private: boolean;
+};
+
+type Contribution = {
+	contributions: number;
+	login: string;
+};
+
+export const getGithubRepositories = async (): Promise<SlimRepo[]> => {
 	const repos1 = await github.get({ path: '/user/repos?per_page=100' });
 	const repos2 = await github.get({ path: '/user/repos?page=2&per_page=100' });
 	const repos3 = await github.get({ path: '/user/repos?page=3&per_page=100' });
@@ -18,10 +33,10 @@ export const getGithubInsights = async (): Promise<GithubInsights> => {
 	try {
 		const user = await github.get({ path: '/users/scriptex' });
 		const calendar = await getContributions();
-		const repositories: any[] = [];
+		const repositories: GithubRepository[] = [];
 		const repos = await getGithubRepositories();
 
-		await asyncForEach(repos, async ({ full_name }: { full_name: string }): Promise<void> => {
+		await asyncForEach(repos, async ({ full_name }: SlimRepo): Promise<void> => {
 			log('-----');
 			log(`atanas.info: Getting insights data for ${full_name}...`);
 			const repo = await github.get({ path: `/repos/${full_name}` });
@@ -30,7 +45,7 @@ export const getGithubInsights = async (): Promise<GithubInsights> => {
 			const contributions = await github.get({ path: `/repos/${full_name}/contributors` });
 
 			repositories.push({
-				contributions: contributions.map((item: any) => ({
+				contributions: contributions.map((item: Contribution) => ({
 					count: item.contributions,
 					user: item.login
 				})),
@@ -70,7 +85,9 @@ export const getGithubInsights = async (): Promise<GithubInsights> => {
 		await saveInsights(result, 'Github');
 
 		return result;
-	} catch (e) {
+	} catch (e: unknown) {
+		console.error(e);
+
 		const result = {
 			calendar: null,
 			error: true,

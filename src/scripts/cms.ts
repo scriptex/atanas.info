@@ -208,6 +208,8 @@ export const getBioFromCMS = async (): Promise<BioEntry[]> => {
 				title: title?.toString()
 			}));
 	} catch (error: unknown) {
+		console.error(error);
+
 		return [];
 	}
 };
@@ -219,6 +221,8 @@ export const getTitlesFromCMS = async (): Promise<string[]> => {
 
 		return content?.[0] ?? [];
 	} catch (error: unknown) {
+		console.error(error);
+
 		return [];
 	}
 };
@@ -229,6 +233,8 @@ export const getArticlesFromCMS = async (): Promise<Article[]> => {
 
 		return data.items.map(item => item.fields as Article) ?? [];
 	} catch (error: unknown) {
+		console.error(error);
+
 		return [];
 	}
 };
@@ -250,6 +256,8 @@ export const getTimelineFromCMS = async (): Promise<TimelineItem[]> => {
 				) ?? []
 		);
 	} catch (error: unknown) {
+		console.error(error);
+
 		return [];
 	}
 };
@@ -260,6 +268,8 @@ export const getResumeLinksFromCMS = async (): Promise<ResumeLink[]> => {
 
 		return links.items.map(item => item.fields as ResumeLink) ?? [];
 	} catch (error: unknown) {
+		console.error(error);
+
 		return [];
 	}
 };
@@ -280,6 +290,8 @@ export const getOwnerDetailsFromCMS = async (): Promise<OwnerDetails> => {
 
 		return all[0];
 	} catch (error: unknown) {
+		console.error(error);
+
 		return {
 			alt: '',
 			image: '',
@@ -298,6 +310,8 @@ export const getEducationFromCMS = async (): Promise<Education[]> => {
 
 		return data.items.map(item => item.fields as Education);
 	} catch (error: unknown) {
+		console.error(error);
+
 		return [];
 	}
 };
@@ -315,6 +329,8 @@ export const getCertificatesFromCMS = async (): Promise<Certificate[]> => {
 				}) as Certificate
 		);
 	} catch (error: unknown) {
+		console.error(error);
+
 		return [];
 	}
 };
@@ -332,6 +348,8 @@ export const getExperienceFromCMS = async (): Promise<Experience[]> => {
 				}) as Experience
 		);
 	} catch (error: unknown) {
+		console.error(error);
+
 		return [];
 	}
 };
@@ -342,6 +360,8 @@ export const getResumeSkillsFromCMS = async (): Promise<ResumeSkills[]> => {
 
 		return data.items.map(item => item.fields as ResumeSkills);
 	} catch (error: unknown) {
+		console.error(error);
+
 		return [];
 	}
 };
@@ -352,6 +372,8 @@ export const getStrengthsFromCMS = async (): Promise<Strength[]> => {
 
 		return data.items.map(item => item.fields as Strength);
 	} catch (error: unknown) {
+		console.error(error);
+
 		return [];
 	}
 };
@@ -368,6 +390,8 @@ export const getResumeMoreFromCMS = async (): Promise<ResumeMore[]> => {
 				}) as ResumeMore
 		);
 	} catch (error: unknown) {
+		console.error(error);
+
 		return [];
 	}
 };
@@ -378,6 +402,8 @@ export const getSlidesFromCMS = async (): Promise<Slide[]> => {
 
 		return data.items.map(item => item.fields as Slide);
 	} catch (error: unknown) {
+		console.error(error);
+
 		return [];
 	}
 };
@@ -388,6 +414,8 @@ export const getVideosFromCMS = async (): Promise<Video[]> => {
 
 		return data.items.map(item => item.fields as Video);
 	} catch (error: unknown) {
+		console.error(error);
+
 		return [];
 	}
 };
@@ -406,6 +434,8 @@ export const getPartnersFromCMS = async (): Promise<Partner[]> => {
 			};
 		});
 	} catch (error: unknown) {
+		console.error(error);
+
 		return [];
 	}
 };
@@ -424,6 +454,8 @@ export const getOccupationFromCMS = async (): Promise<ForceNode[]> => {
 			};
 		});
 	} catch (error: unknown) {
+		console.error(error);
+
 		return [];
 	}
 };
@@ -434,6 +466,8 @@ export const getFundingFromCMS = async (): Promise<FundingNetwork[]> => {
 
 		return data.items.map(item => item.fields as FundingNetwork);
 	} catch (error: unknown) {
+		console.error(error);
+
 		return [];
 	}
 };
@@ -468,6 +502,8 @@ export const getTestimonialsFromCMS = async (): Promise<Testimonial[]> => {
 				return 0;
 			});
 	} catch (error: unknown) {
+		console.error(error);
+
 		return [];
 	}
 };

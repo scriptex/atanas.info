@@ -22,6 +22,7 @@ const dataFull: GitlabInsights = {
 	},
 	repositories: [
 		{
+			contributions: 10,
 			createdAt: '2022-09-13T06:19:08.896Z',
 			fork: 0,
 			issues: 0,
