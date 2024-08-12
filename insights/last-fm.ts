@@ -60,7 +60,9 @@ export const getLastFMInsights = async (): Promise<LastFMInsights> => {
 		await saveInsights(result, 'LastFM');
 
 		return result;
-	} catch (e) {
+	} catch (e: unknown) {
+		console.error(e);
+
 		const result: LastFMInsights = {
 			error: true,
 			info: null,

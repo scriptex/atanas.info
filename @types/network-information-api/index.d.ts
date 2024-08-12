@@ -1,5 +1,5 @@
-declare interface Navigator extends NavigatorNetworkInformation {}
-declare interface WorkerNavigator extends NavigatorNetworkInformation {}
+type Navigator = NavigatorNetworkInformation;
+type WorkerNavigator = NavigatorNetworkInformation;
 
 declare interface NavigatorNetworkInformation {
 	readonly connection?: NetworkInformation;

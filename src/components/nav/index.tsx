@@ -16,8 +16,13 @@ export const Nav: FC<Readonly<Props>> = ({ active = -1, inline = false, onClick,
 	);
 
 	const anchorClick = useCallback(() => {
-		typeof onClick === 'function' && onClick();
-		typeof setActive === 'function' && setActive(-1);
+		if (typeof onClick === 'function') {
+			onClick();
+		}
+
+		if (typeof setActive === 'function') {
+			setActive(-1);
+		}
 	}, [onClick, setActive]);
 
 	return (
@@ -36,7 +41,9 @@ export const Nav: FC<Readonly<Props>> = ({ active = -1, inline = false, onClick,
 											onClick={() => {
 												const noActive = active === -1;
 
-												typeof setActive === 'function' && setActive(noActive ? index : -1);
+												if (typeof setActive === 'function') {
+													setActive(noActive ? index : -1);
+												}
 											}}
 											type="button"
 											unstyled
@@ -66,7 +73,9 @@ export const Nav: FC<Readonly<Props>> = ({ active = -1, inline = false, onClick,
 									<Button
 										aria-label="Click to close dropdown"
 										onClick={() => {
-											typeof setActive === 'function' && setActive(-1);
+											if (typeof setActive === 'function') {
+												setActive(-1);
+											}
 										}}
 										type="button"
 										unstyled

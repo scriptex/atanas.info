@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import { TextEncoder } from 'util';
 
 import * as shared from '@scripts/shared';
@@ -49,7 +50,6 @@ window.matchMedia = window.matchMedia || (() => ({
 
 window.crypto = {
 	...require('crypto'),
-	// eslint-disable-next-line @typescript-eslint/no-var-requires
 	getRandomValues: (buffer: Buffer) => require('crypto').randomFillSync(buffer)
 };
 

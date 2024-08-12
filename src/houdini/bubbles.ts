@@ -113,7 +113,9 @@ registerPaint(
 				grd.addColorStop(1, color);
 
 				return grd;
-			} catch (error) {
+			} catch (e: unknown) {
+				console.error(e);
+
 				return this.drawGradient(c, {
 					color: 'black',
 					r,

@@ -47,7 +47,9 @@ export const Contact: FC<Readonly<Props>> = ({ initialStatus = Status.DEFAULT })
 				} else {
 					setStatus(Status.SUCCESS);
 				}
-			} catch (e) {
+			} catch (error: unknown) {
+				console.error(error);
+
 				setStatus(Status.ERROR);
 				setErrorMessage(genericErrorMessage);
 			}

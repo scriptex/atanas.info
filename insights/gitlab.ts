@@ -94,7 +94,9 @@ export const getGitlabInsights = async (): Promise<GitlabInsights> => {
 		await saveInsights(result, 'Gitlab');
 
 		return result;
-	} catch (e) {
+	} catch (e: unknown) {
+		console.error(e);
+
 		const result = {
 			calendar: null,
 			error: true,

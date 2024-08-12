@@ -70,7 +70,9 @@ export const getGithubInsights = async (): Promise<GithubInsights> => {
 		await saveInsights(result, 'Github');
 
 		return result;
-	} catch (e) {
+	} catch (e: unknown) {
+		console.error(e);
+
 		const result = {
 			calendar: null,
 			error: true,
