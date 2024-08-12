@@ -30,9 +30,9 @@ export type LastFMInsights = {
 
 export type InsightsType = 'Github' | 'Gitlab' | 'NPM' | 'LastFM';
 
-export const asyncForEach = async <T>(
+export const asyncForEach = async <T, R>(
 	array: T[],
-	callback: (item: T, index: number, arr: T[]) => any
+	callback: (item: T, index: number, arr: T[]) => R
 ): Promise<void> => {
 	for (let index = 0; index < array.length; index++) {
 		await callback(array[index], index, array);

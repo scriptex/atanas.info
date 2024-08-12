@@ -84,8 +84,8 @@ jest.mock('gitlab-calendar', () => ({
 }));
 
 jest.mock('swiper/react', () => ({
-	Swiper: ({ children }: any) => children,
-	SwiperSlide: ({ children }: any) => children
+	Swiper: ({ children }: { children: HTMLDivElement }) => children,
+	SwiperSlide: ({ children }: { children: HTMLDivElement }) => children
 }));
 
 jest.mock('swiper/modules', () => ({

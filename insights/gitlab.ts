@@ -1,10 +1,26 @@
 import { log } from '@scripts/shared';
-import type { GitlabInsights } from '@scripts/types';
+import type { GitlabInsights, GitlabRepository } from '@scripts/types';
 
 import { gitlab } from './client';
 import { asyncForEach, saveInsights } from './utils';
 
-const setOwner = (repo: any, owner: string): any => ({ ...repo, owner });
+type GitlabProject = {
+	commit_count: number;
+	created_at: string;
+	forks_count: number;
+	id: string;
+	last_activity_at: string;
+	name: string;
+	open_issues_count: number;
+	owner: string;
+	star_count: number;
+	statistics: {
+		repository_size: number;
+	};
+	visibility: string;
+};
+
+const setOwner = (repo: GitlabProject, owner: string): GitlabProject & { owner: string } => ({ ...repo, owner });
 
 export const getCalendar = async (): Promise<Record<string, number>> => {
 	const calendar1: Record<string, number> = await fetch('https://gitlab.com/users/scriptex/calendar.json').then(r =>
@@ -53,15 +69,15 @@ export const getGitlabInsights = async (): Promise<GitlabInsights> => {
 
 		const calendar = await getCalendar();
 
-		const projects = [
-			...userProjects1.map((project: any) => setOwner(project, 'scriptex')),
-			...userProjects2.map((project: any) => setOwner(project, 'scriptex')),
-			...userProjects3.map((project: any) => setOwner(project, 'scriptex'))
+		const projects: GitlabProject[] = [
+			...userProjects1.map((project: GitlabProject) => setOwner(project, 'scriptex')),
+			...userProjects2.map((project: GitlabProject) => setOwner(project, 'scriptex')),
+			...userProjects3.map((project: GitlabProject) => setOwner(project, 'scriptex'))
 		];
-		const repositories: any[] = [];
+		const repositories: GitlabRepository[] = [];
 
 		log('atanas.info: Getting projects data from Gitlab...');
-		await asyncForEach(projects, async (project: any) => {
+		await asyncForEach(projects, async (project: GitlabProject) => {
 			log('-----');
 			log(`atanas.info: Getting data for project ${project.name}`);
 			repositories.push({

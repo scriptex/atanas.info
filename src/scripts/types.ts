@@ -68,6 +68,7 @@ export type GithubInsights = {
 };
 
 export type GitlabRepository = {
+	contributions: number;
 	createdAt: string;
 	fork: number;
 	issues?: number;
