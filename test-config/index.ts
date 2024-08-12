@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
-import { TextEncoder } from 'util';
+import { TextEncoder } from 'node:util';
 
 import * as shared from '@scripts/shared';
 
