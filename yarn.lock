@@ -9693,12 +9693,12 @@ postcss-browser-comments@^4:
   resolved "https://registry.yarnpkg.com/postcss-browser-comments/-/postcss-browser-comments-4.0.0.tgz#bcfc86134df5807f5d3c0eefa191d42136b5e72a"
   integrity sha512-X9X9/WN3KIvY9+hNERUqX9gncsgBA25XaeR+jshHz2j8+sYyHktHw1JdKuMjeLpGktXidqDhA7b/qm1mrBDmgg==
 
-postcss-calc@10.0.1:
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-10.0.1.tgz#78dce1b90d04a7cb3a67ca7235c041a719762f50"
-  integrity sha512-pp1Z3FxtxA+xHAoWXcOXgnBN1WPu4ZiJ5LWGjKyf9MMreagAsaTUtnqFK1y1sHhyJddAkYTPu6XSuLgb3oYCjw==
+postcss-calc@10.0.2:
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-10.0.2.tgz#15f01635a27b9d38913a98c4ef2877f5b715b439"
+  integrity sha512-DT/Wwm6fCKgpYVI7ZEWuPJ4az8hiEHtCUeYjZXqU7Ou4QqYh1Df2yCQ7Ca6N7xqKPFkxN3fhf+u9KSoOCJNAjg==
   dependencies:
-    postcss-selector-parser "^6.1.1"
+    postcss-selector-parser "^6.1.2"
     postcss-value-parser "^4.2.0"
 
 postcss-calc@^8.2.3:
