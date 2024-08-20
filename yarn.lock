@@ -1153,10 +1153,10 @@
   resolved "https://registry.yarnpkg.com/@codersrank/work-experience/-/work-experience-0.9.8.tgz#2f00ae781c1e4efbde28e0a2b5c4cf60f5f8c421"
   integrity sha512-DTgDb05dLFkqr4U+TEgz1Xg4SGHHInSe8nrMrkItFRR2vkhe4kypJAAPCwYO0WiXBTIzs+r9vFJTlnKKoVjlug==
 
-"@contentful/content-source-maps@^0.6.0":
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/@contentful/content-source-maps/-/content-source-maps-0.6.1.tgz#a12828d287bdcd9f31c132f2a230bd1ac3005b77"
-  integrity sha512-IjsyhakG17OC5xtIa5agVRsnjjxiJf9HZjpDIV6Ix036Pd5YHJrbyyiF4KNEmLlIqe3hQ0kHGWEs9S/HfECmRQ==
+"@contentful/content-source-maps@^0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@contentful/content-source-maps/-/content-source-maps-0.11.0.tgz#8a3eedeb7e3959358dcfec2ad27330840ed8f9e8"
+  integrity sha512-eS/Bm1hzv5C3SyTpP08+sYVQ7fFcNUdANrLsotUWk+uC7WpponQIIY26R9QZhX7tE3r5Nq80Z+aR7uo5u31ksg==
   dependencies:
     "@vercel/stega" "^0.1.2"
     json-pointer "^0.6.2"
@@ -4565,12 +4565,12 @@ contentful-sdk-core@^8.3.1:
     p-throttle "^4.1.1"
     qs "^6.11.2"
 
-contentful@10.14.1:
-  version "10.14.1"
-  resolved "https://registry.yarnpkg.com/contentful/-/contentful-10.14.1.tgz#a639994acc56ffa40d1fd5d4fb308c752129c6bf"
-  integrity sha512-ZBmJwohQqldXW7sxBCcucKPLO6JdZK+G+aKVxA2EG2nKY13jY8DNSAk8cQS2tc7Wj9C14haQpzbzqKnErSQ8/w==
+contentful@10.15.0:
+  version "10.15.0"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-10.15.0.tgz#0f8cc2887f583b283f1326357777c4e4a0764c2f"
+  integrity sha512-gkkMRf2FK1SQHMs2UKOuIeCdBXQKF/fMzIRCDL038lUScyE6mvnPu8aHrAQuUZwfcd58J0cibqT+iqj+pAVyGA==
   dependencies:
-    "@contentful/content-source-maps" "^0.6.0"
+    "@contentful/content-source-maps" "^0.11.0"
     "@contentful/rich-text-types" "^16.0.2"
     axios "^1.7.4"
     contentful-resolve-response "^1.9.0"
