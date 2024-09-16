@@ -10,7 +10,7 @@
 	pointer-events: none;
 }
 
-.line {
+.line:not(.token) {
 	position: absolute;
 	overflow: hidden;
 
