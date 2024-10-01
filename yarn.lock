@@ -6372,10 +6372,10 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
-fdir@^6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/fdir/-/fdir-6.3.0.tgz#fcca5a23ea20e767b15e081ee13b3e6488ee0bb0"
-  integrity sha512-QOnuT+BOtivR77wYvCWHfGt9s4Pz1VIMbD463vegT5MLqNXy8rYFT/lPVEqf/bhYeT6qmqrNHhsX+rWwe3rOCQ==
+fdir@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/fdir/-/fdir-6.4.0.tgz#8e80ab4b18a2ac24beebf9d20d71e1bc2627dbae"
+  integrity sha512-3oB133prH1o4j/L5lLW7uOCF1PlD+/It2L0eL/iAqWMB91RBbqTewABqxhj0ibBd90EEmWZq7ntIWzVaWcXTGQ==
 
 figures@^1.0.1:
   version "1.7.0"
@@ -10163,15 +10163,15 @@ postcss-minify-selectors@^5.2.1:
   dependencies:
     postcss-selector-parser "^6.0.5"
 
-postcss-mixins@11.0.2:
-  version "11.0.2"
-  resolved "https://registry.yarnpkg.com/postcss-mixins/-/postcss-mixins-11.0.2.tgz#d47a09414ed9741739ed149751698ed4c9907514"
-  integrity sha512-8EQyQD4J5S/GoEC356CeA9I3e5njtjf90BHxlidxldTx9TU3z9Cf59SujZLbcNxWU5tJDBPUu3/DVJnzJ6lWHQ==
+postcss-mixins@11.0.3:
+  version "11.0.3"
+  resolved "https://registry.yarnpkg.com/postcss-mixins/-/postcss-mixins-11.0.3.tgz#edae34c010a3b42d94207309fe38683404e79575"
+  integrity sha512-HZa6DHlN7uCkp7GTFNvhpyK/Gi9+vrVG7FPl2oQdj+sXUuYo4ri9OsWBseTnvnLfWxRWOq8/VwcHcixtZPrRRg==
   dependencies:
     postcss-js "^4.0.1"
     postcss-simple-vars "^7.0.1"
     sugarss "^4.0.1"
-    tinyglobby "^0.2.6"
+    tinyglobby "^0.2.7"
 
 postcss-modules-extract-imports@^3.0.0:
   version "3.1.0"
@@ -12282,12 +12282,12 @@ tiny-glob@^0.2.8:
     globalyzer "0.1.0"
     globrex "^0.1.2"
 
-tinyglobby@^0.2.6:
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/tinyglobby/-/tinyglobby-0.2.6.tgz#950baf1462d0c0b443bc3d754d0d39c2e589aaae"
-  integrity sha512-NbBoFBpqfcgd1tCiO8Lkfdk+xrA7mlLR9zgvZcZWQQwU63XAfUePyd6wZBaU93Hqw347lHnwFzttAkemHzzz4g==
+tinyglobby@^0.2.7:
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/tinyglobby/-/tinyglobby-0.2.7.tgz#36f583c166ac2d91f47c799d6e2e256fdcfb3a56"
+  integrity sha512-qFWYeNxBQxrOTRHvGjlRdBamy8JFqu6c0bwRru9leE+q8J72tLtlT0L3v+2T7fbLXN7FGzDNBhXkWiJqHUHD9g==
   dependencies:
-    fdir "^6.3.0"
+    fdir "^6.4.0"
     picomatch "^4.0.2"
 
 tldts-core@^6.1.46:
