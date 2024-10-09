@@ -1,6 +1,6 @@
 # [atanas.info](https://atanas.info)
 
-[![Travis CI](https://travis-ci.com/scriptex/atanas.info.svg?branch=master)](https://travis-ci.com/scriptex/atanas.info)
+[![Build Status](https://app.travis-ci.com/scriptex/atanas.info.svg?token=nQobWyU44YU3KGNrqDnb)](https://app.travis-ci.com/scriptex/atanas.info)
 [![Circle CI](https://circleci.com/gh/scriptex/atanas.info.svg?style=svg)](https://circleci.com/gh/scriptex/atanas.info)
 [![Code quality & Build](https://github.com/scriptex/atanas.info/actions/workflows/build.yml/badge.svg)](https://github.com/scriptex/atanas.info/actions/workflows/build.yml)
 [![CodeQL](https://github.com/scriptex/atanas.info/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/scriptex/atanas.info/actions/workflows/codeql-analysis.yml)
@@ -69,7 +69,9 @@ A fullstack progressive web app built with
 
 ## FOSSA status
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fscriptex%2Fatanas.info.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fscriptex%2Fatanas.info?ref=badge_large)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fscriptex%2Fatanas.info.svg?type=shield&issueType=security)](https://app.fossa.com/projects/git%2Bgithub.com%2Fscriptex%2Fatanas.info?ref=badge_shield&issueType=security)
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fscriptex%2Fatanas.info.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fscriptex%2Fatanas.info?ref=badge_large&issueType=license)
 
 ## Code stats
 
