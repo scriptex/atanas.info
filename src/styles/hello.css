@@ -9,6 +9,16 @@
 	& h2 {
 		position: relative;
 	}
+
+	& h4 {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: 3;
+		padding: 1rem;
+		font-weight: 400;
+		font-style: italic;
+	}
 }
 
 .c-canvas {
@@ -37,6 +47,7 @@
 
 	& h2 {
 		width: 100%;
+		min-height: 4.75rem;
 		perspective: 50rem;
 		perspective-origin: 50% 10rem;
 	}
@@ -73,6 +84,7 @@
 
 		& h2 {
 			font-size: 1.5rem;
+			min-height: 6.25rem;
 		}
 	}
 }
