@@ -54,6 +54,8 @@ export const Home: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ fundi
 						))}
 					</h2>
 				</div>
+
+				<h4>I paint the pixels on your screen</h4>
 			</Section>
 		</Layout>
 	);
