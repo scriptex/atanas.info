@@ -4,10 +4,10 @@ import type { LastFMImage, LastFMUserResponse } from 'lastfm-node-client';
 import clientPromise, { Query, queryGithub, queryGitlab, queryLastFM, queryNPM } from '@lib/mongodb';
 import { log } from '@scripts/shared';
 
-export type Project = {
-	readonly name: string;
-	readonly url: string;
-};
+export type Project = Readonly<{
+	name: string;
+	url: string;
+}>;
 
 export type Contribution = {
 	color: string;

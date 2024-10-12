@@ -1,8 +1,8 @@
-export type Track = {
-	readonly artist: string;
-	readonly name: string;
-	readonly url: string;
-};
+export type Track = Readonly<{
+	artist: string;
+	name: string;
+	url: string;
+}>;
 
 export const music: Track[] = [
 	{

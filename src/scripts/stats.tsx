@@ -2,11 +2,11 @@ import { Animation } from '@components';
 
 import statistics from '@data/lotties/statistics.json';
 
-export type GeneralInsight = {
-	readonly index: number;
-	readonly title: string;
-	readonly value: string | number;
-};
+export type GeneralInsight = Readonly<{
+	index: number;
+	title: string;
+	value: string | number;
+}>;
 
 export const addTitles = (selector: string, getTitle: (rect: SVGRectElement) => string): void => {
 	const rects: SVGRectElement[] = Array.from(document.querySelectorAll(`${selector} rect`));

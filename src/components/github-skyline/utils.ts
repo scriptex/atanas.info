@@ -16,12 +16,12 @@ import { GridMaterial } from '@babylonjs/materials';
 
 import { SIZE } from './constants';
 
-export type GithubSkylineProps = {
-	readonly background: string | undefined;
-	readonly file: string | undefined;
-	readonly index: number;
-	readonly texture: string | undefined;
-};
+export type GithubSkylineProps = Readonly<{
+	background: string | undefined;
+	file: string | undefined;
+	index: number;
+	texture: string | undefined;
+}>;
 
 export const onSceneMount = (args: SceneEventArgs, props: GithubSkylineProps, onLoad: () => void): void => {
 	SceneLoader.Append('', props.file, args.scene, (scene: SceneCore) => {
