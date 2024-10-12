@@ -70,15 +70,21 @@ const dataEmpty: GithubInsights = {
 };
 
 snapshotTest(
-	() => <GithubStats data={dataFull} funding={funding} partners={partners} />,
+	() => <GithubStats data={dataFull} funding={funding} githubSkyline={null} partners={partners} />,
 	'.c-skyline__nav li:first-child .c-btn--small',
 	'GithubStats'
 );
 
-snapshotTest(() => <GithubStats data={dataEmpty} funding={funding} partners={partners} />, undefined, 'GithubStats');
+snapshotTest(
+	() => <GithubStats data={dataEmpty} funding={funding} githubSkyline={null} partners={partners} />,
+	undefined,
+	'GithubStats'
+);
 
 snapshotTest(
-	() => <GithubStats data={{ ...dataEmpty, error: true }} funding={funding} partners={partners} />,
+	() => (
+		<GithubStats data={{ ...dataEmpty, error: true }} funding={funding} githubSkyline={null} partners={partners} />
+	),
 	undefined,
 	'GithubStats'
 );
@@ -98,6 +104,7 @@ snapshotTest(
 				updated: null
 			}}
 			funding={funding}
+			githubSkyline={null}
 			partners={partners}
 		/>
 	),
@@ -115,6 +122,7 @@ snapshotTest(
 				}
 			}}
 			funding={funding}
+			githubSkyline={null}
 			partners={partners}
 		/>
 	),
@@ -133,6 +141,7 @@ snapshotTest(
 				}))
 			}}
 			funding={funding}
+			githubSkyline={null}
 			partners={partners}
 		/>
 	),
@@ -143,7 +152,9 @@ snapshotTest(
 it('Test the GithubStats page with fake timers', async () => {
 	jest.useFakeTimers();
 
-	const GithubStatsComponent = () => <GithubStats data={dataFull} funding={funding} partners={partners} />;
+	const GithubStatsComponent = () => (
+		<GithubStats data={dataFull} funding={funding} githubSkyline={null} partners={partners} />
+	);
 
 	const { asFragment } = await test(GithubStatsComponent);
 

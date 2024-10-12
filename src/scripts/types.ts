@@ -9,6 +9,7 @@ import type {
 	BioEntry,
 	Certificate,
 	FundingNetwork,
+	GithubSkylineData,
 	OwnerDetails,
 	ResumeData,
 	Slide,
@@ -229,6 +230,7 @@ export type PortfolioOpenSourcePageData = SharedPageProps; //NOSONAR
 
 export type GithubStatsPageData = SharedPageProps & {
 	data: GithubInsights;
+	githubSkyline: GithubSkylineData | null;
 };
 
 export type GitlabStatsPageData = SharedPageProps & {

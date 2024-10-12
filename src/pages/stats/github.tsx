@@ -1,14 +1,15 @@
 import { FC, MutableRefObject, Ref, useEffect, useRef, useState } from 'react';
 
+import { Asset } from 'contentful';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
 
 import { Button, GithubSkyline, Layout, Loader, Section, StatsEntry, StatsError, Title } from '@components';
 import { Routes } from '@data/routes';
 import { getData, queryGithub } from '@lib/mongodb';
-import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
+import { getFundingFromCMS, getGithubSkylineFromCMS, getPartnersFromCMS, GithubSkylineData } from '@scripts/cms';
 import { formatDate } from '@scripts/shared';
-import { addTitles, GeneralInsight, sectionStatsProps, YEARS } from '@scripts/stats';
+import { addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import type { GithubInsights, GithubProfileData, GithubRepository, GithubStatsPageData } from '@scripts/types';
 
 const extractGithubData = ({
@@ -167,8 +168,12 @@ const GithubCalendar: FC<Props> = ({ data, error, loading }: Props) => {
 	);
 };
 
-const GithubSkylineComponent: FC = () => {
+const GithubSkylineComponent: FC<{ data: GithubSkylineData | null }> = ({ data }) => {
 	const [current, setCurrent] = useState(-1);
+
+	if (!data) {
+		return null;
+	}
 
 	return (
 		<div className="c-skyline">
@@ -179,18 +184,26 @@ const GithubSkylineComponent: FC = () => {
 				</h4>
 
 				<ul>
-					{YEARS.map((year: string, index: number) => (
-						<li className={current === index ? 'current' : undefined} key={year}>
+					{data.years.map((year: Asset, index: number) => (
+						<li className={current === index ? 'current' : undefined} key={year.sys.id}>
 							<Button className="c-btn--small" onClick={() => setCurrent(index)} type="button">
-								{year}
+								{year.fields.file?.fileName?.toString().replace('.stl', '')}
 							</Button>
 						</li>
 					))}
 				</ul>
 			</nav>
 
-			{YEARS.map((year: string, index: number) =>
-				index === current ? <GithubSkyline file={`${year}.stl`} index={index} key={year} /> : null
+			{data.years.map((year: Asset, index: number) =>
+				index === current ? (
+					<GithubSkyline
+						background={data.background.fields.file?.url?.toString()}
+						file={year.fields.file?.url?.toString()}
+						index={index}
+						key={year.sys.id}
+						texture={data.texture.fields.file?.url?.toString()}
+					/>
+				) : null
 			)}
 		</div>
 	);
@@ -199,6 +212,7 @@ const GithubSkylineComponent: FC = () => {
 export const GithubStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({
 	data,
 	funding,
+	githubSkyline,
 	partners
 }) => {
 	const { error: statsError, updated, ...rest }: GithubInsights = data;
@@ -266,7 +280,7 @@ export const GithubStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 							<div className="o-shell" ref={calendarRef}>
 								<GithubCalendar data={githubProfileData} error={error} loading={loading} />
 
-								<GithubSkylineComponent />
+								<GithubSkylineComponent data={githubSkyline} />
 							</div>
 						</div>
 					</>
@@ -280,6 +294,7 @@ export const getStaticProps: GetStaticProps<GithubStatsPageData> = async () => (
 	props: {
 		data: (await getData('Insights', queryGithub)).props.data as GithubInsights,
 		funding: await getFundingFromCMS(),
+		githubSkyline: await getGithubSkylineFromCMS(),
 		partners: await getPartnersFromCMS()
 	}
 });
