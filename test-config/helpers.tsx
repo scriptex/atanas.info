@@ -5,7 +5,7 @@ import { render, RenderResult, waitFor } from '@testing-library/react';
 
 import * as shared from '@scripts/shared';
 
-type ComponentType = FC<Readonly<React.ComponentProps<any>>>;
+type ComponentType = FC<Readonly<React.ComponentProps<keyof JSX.IntrinsicElements>>>;
 
 export const test = async (Component: ComponentType): Promise<RenderResult> => {
 	let result!: RenderResult;
