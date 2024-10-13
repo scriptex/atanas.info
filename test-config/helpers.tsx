@@ -5,7 +5,7 @@ import { render, RenderResult, waitFor } from '@testing-library/react';
 
 import * as shared from '@scripts/shared';
 
-type ComponentType = FC<Readonly<React.ComponentProps<any>>>;
+type ComponentType = FC<Readonly<React.ComponentProps<keyof JSX.IntrinsicElements>>>;
 
 export const test = async (Component: ComponentType): Promise<RenderResult> => {
 	let result!: RenderResult;
@@ -92,10 +92,10 @@ export const mockAudioContext = (): jest.Mock => {
 	return mockedAudioContext;
 };
 
-export const mockFetch = (value: Record<string, string | boolean>): void => {
+export function mockFetch<T>(value: T): void {
 	global.fetch = jest.fn().mockImplementation(() =>
 		Promise.resolve({
 			json: () => Promise.resolve(value)
 		})
 	);
-};
+}

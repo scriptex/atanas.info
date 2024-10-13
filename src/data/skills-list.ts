@@ -1,13 +1,13 @@
-export type ForceNode = {
-	readonly fill: string;
-	readonly height: number;
-	readonly icon: string;
-	readonly iconFill?: string;
-	readonly since?: number;
-	readonly text: string;
-	readonly url?: string;
-	readonly width: number;
-};
+export type ForceNode = Readonly<{
+	fill: string;
+	height: number;
+	icon: string;
+	iconFill?: string;
+	since?: number;
+	text: string;
+	url?: string;
+	width: number;
+}>;
 
 export const defaultForceNodeSize: Pick<ForceNode, 'width' | 'height'> = {
 	height: 34,

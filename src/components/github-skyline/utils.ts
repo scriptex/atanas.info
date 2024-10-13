@@ -14,16 +14,17 @@ import {
 } from '@babylonjs/core';
 import { GridMaterial } from '@babylonjs/materials';
 
-import { ROOT, SIZE } from './constants';
+import { SIZE } from './constants';
 
-export type GithubSkylineProps = {
-	readonly file: string;
-	readonly index: number;
-};
+export type GithubSkylineProps = Readonly<{
+	background: string | undefined;
+	file: string | undefined;
+	index: number;
+	texture: string | undefined;
+}>;
 
 export const onSceneMount = (args: SceneEventArgs, props: GithubSkylineProps, onLoad: () => void): void => {
-	SceneLoader.Append(`${ROOT}/`, props.file, args.scene, (scene: SceneCore) => {
-		const cubeTexture = CubeTexture.CreateFromPrefilteredData(`${ROOT}/texture.dds`, scene);
+	SceneLoader.Append('', props.file, args.scene, (scene: SceneCore) => {
 		const skySphere = Mesh.CreateSphere('skySphere', 8, SIZE, scene);
 		const skySphereMaterial = new StandardMaterial('skySphereMaterial', scene);
 		const ground = MeshBuilder.CreateGround('ground', {
@@ -32,19 +33,28 @@ export const onSceneMount = (args: SceneEventArgs, props: GithubSkylineProps, on
 		});
 		const groundMaterial = new GridMaterial('groundMaterial', scene);
 
-		scene.environmentTexture = cubeTexture;
-		scene.environmentTexture.level = 2;
+		if (props.texture) {
+			const cubeTexture = CubeTexture.CreateFromPrefilteredData(props.texture, scene);
+
+			scene.environmentTexture = cubeTexture;
+			scene.environmentTexture.level = 2;
+		}
+
 		scene.clearColor = new Color4(0.01, 0.01, 0.01, 0);
 
 		skySphere.position = Vector3.Zero();
 		skySphere.position.y += 49;
 
 		skySphereMaterial.backFaceCulling = false;
-		skySphereMaterial.emissiveTexture = new Texture(`${ROOT}/bg.png`, scene);
-		skySphereMaterial.emissiveTexture.coordinatesMode = Texture.PROJECTION_MODE;
-		skySphereMaterial.emissiveTexture.updateSamplingMode(Texture.BILINEAR_SAMPLINGMODE);
-		skySphereMaterial.emissiveTexture.wrapU = Texture.MIRROR_ADDRESSMODE;
-		skySphereMaterial.emissiveTexture.wrapV = Texture.MIRROR_ADDRESSMODE;
+
+		if (props.background) {
+			skySphereMaterial.emissiveTexture = new Texture(props.background, scene);
+			skySphereMaterial.emissiveTexture.coordinatesMode = Texture.PROJECTION_MODE;
+			skySphereMaterial.emissiveTexture.updateSamplingMode(Texture.BILINEAR_SAMPLINGMODE);
+			skySphereMaterial.emissiveTexture.wrapU = Texture.MIRROR_ADDRESSMODE;
+			skySphereMaterial.emissiveTexture.wrapV = Texture.MIRROR_ADDRESSMODE;
+		}
+
 		skySphereMaterial.diffuseColor = Color3.Black();
 		skySphereMaterial.specularColor = Color3.Black();
 

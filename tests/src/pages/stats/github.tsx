@@ -2,7 +2,7 @@ import { act } from 'react';
 
 import { GithubStats } from '@pages/stats/github';
 
-import type { GithubContribution, GithubCount, GithubInsights } from '@scripts/types';
+import type { GithubContribution, GithubCount, GithubInsights, GithubProfileData } from '@scripts/types';
 import { mockFetch, snapshotTest, test } from '@test-config/helpers';
 import { funding, partners } from '@test-config/mocks';
 
@@ -10,16 +10,15 @@ jest.mock('@lib/mongodb', () => ({
 	getData: jest.fn(() => Promise.resolve({ props: { data: [] } }))
 }));
 
-mockFetch({
+mockFetch<GithubProfileData>({
 	days: [
 		{
 			count: 1,
-			date: '2023-03-26',
-			level: 1
+			date: '2023-03-26'
 		}
 	],
 	totalContributions: 854
-} as any);
+});
 
 const dataFull: GithubInsights = {
 	calendar: {
@@ -70,15 +69,21 @@ const dataEmpty: GithubInsights = {
 };
 
 snapshotTest(
-	() => <GithubStats data={dataFull} funding={funding} partners={partners} />,
+	() => <GithubStats data={dataFull} funding={funding} githubSkyline={null} partners={partners} />,
 	'.c-skyline__nav li:first-child .c-btn--small',
 	'GithubStats'
 );
 
-snapshotTest(() => <GithubStats data={dataEmpty} funding={funding} partners={partners} />, undefined, 'GithubStats');
+snapshotTest(
+	() => <GithubStats data={dataEmpty} funding={funding} githubSkyline={null} partners={partners} />,
+	undefined,
+	'GithubStats'
+);
 
 snapshotTest(
-	() => <GithubStats data={{ ...dataEmpty, error: true }} funding={funding} partners={partners} />,
+	() => (
+		<GithubStats data={{ ...dataEmpty, error: true }} funding={funding} githubSkyline={null} partners={partners} />
+	),
 	undefined,
 	'GithubStats'
 );
@@ -98,6 +103,7 @@ snapshotTest(
 				updated: null
 			}}
 			funding={funding}
+			githubSkyline={null}
 			partners={partners}
 		/>
 	),
@@ -115,6 +121,7 @@ snapshotTest(
 				}
 			}}
 			funding={funding}
+			githubSkyline={null}
 			partners={partners}
 		/>
 	),
@@ -133,6 +140,7 @@ snapshotTest(
 				}))
 			}}
 			funding={funding}
+			githubSkyline={null}
 			partners={partners}
 		/>
 	),
@@ -143,7 +151,9 @@ snapshotTest(
 it('Test the GithubStats page with fake timers', async () => {
 	jest.useFakeTimers();
 
-	const GithubStatsComponent = () => <GithubStats data={dataFull} funding={funding} partners={partners} />;
+	const GithubStatsComponent = () => (
+		<GithubStats data={dataFull} funding={funding} githubSkyline={null} partners={partners} />
+	);
 
 	const { asFragment } = await test(GithubStatsComponent);
 

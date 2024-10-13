@@ -24,7 +24,8 @@ type CMSType =
 	| 'resume link'
 	| 'resume more'
 	| 'testimonial'
-	| 'resume skills';
+	| 'resume skills'
+	| 'githubskyline';
 
 type RawCMSData = EntryCollection<EntrySkeletonType, undefined, string>;
 
@@ -173,6 +174,13 @@ export type Testimonial = SharedTestimonial &
 		content: string;
 		image: string;
 	}>;
+
+export type GithubSkylineData = {
+	background: Asset;
+	index: number;
+	texture: Asset;
+	years: Asset[];
+};
 
 const client = createClient({
 	accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
@@ -505,5 +513,17 @@ export const getTestimonialsFromCMS = async (): Promise<Testimonial[]> => {
 		console.error(error);
 
 		return [];
+	}
+};
+
+export const getGithubSkylineFromCMS = async (): Promise<GithubSkylineData | null> => {
+	try {
+		const data = await getCMSData('githubskyline');
+
+		return data.items[0].fields as GithubSkylineData;
+	} catch (error: unknown) {
+		console.error(error);
+
+		return null;
 	}
 };

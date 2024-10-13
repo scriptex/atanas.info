@@ -1,25 +1,12 @@
-import { intervalToDuration } from 'date-fns/intervalToDuration';
-
 import { Animation } from '@components';
 
 import statistics from '@data/lotties/statistics.json';
 
-export type GeneralInsight = {
-	readonly index: number;
-	readonly title: string;
-	readonly value: string | number;
-};
-
-export const START_YEAR = 2013;
-
-export const { years } = intervalToDuration({
-	end: new Date(new Date().getFullYear(), 0, 0, 0, 0, 0),
-	start: new Date(START_YEAR, 0, 0, 0, 0, 0)
-});
-
-export const YEARS: string[] = Array(years)
-	.fill(0)
-	.map((_: string, i: number) => `${START_YEAR + i}`);
+export type GeneralInsight = Readonly<{
+	index: number;
+	title: string;
+	value: string | number;
+}>;
 
 export const addTitles = (selector: string, getTitle: (rect: SVGRectElement) => string): void => {
 	const rects: SVGRectElement[] = Array.from(document.querySelectorAll(`${selector} rect`));
