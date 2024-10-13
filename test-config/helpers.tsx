@@ -92,10 +92,10 @@ export const mockAudioContext = (): jest.Mock => {
 	return mockedAudioContext;
 };
 
-export const mockFetch = (value: Record<string, string | boolean>): void => {
+export function mockFetch<T>(value: T): void {
 	global.fetch = jest.fn().mockImplementation(() =>
 		Promise.resolve({
 			json: () => Promise.resolve(value)
 		})
 	);
-};
+}
