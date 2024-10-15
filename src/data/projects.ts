@@ -436,14 +436,14 @@ export const projects: WebProject[] = withIndex([
 		image: '/images/web-apps/faraon-bg.jpg',
 		skip: false,
 		title: 'Faraon (Фараон)',
-		url: ''
+		url: 'https://web.archive.org/web/20120614075704/http://www.faraon-bg.com/'
 	},
 	{
 		description: 'HTML5, CSS3, Javascript, jQuery, PHP, WordPress',
 		image: '/images/web-apps/sirius-real-estate.png',
 		skip: false,
 		title: 'Sirius Real Estate',
-		url: ''
+		url: 'https://web.archive.org/web/20140530071325/http://www.siriusbg.ru/'
 	},
 	{
 		description: 'HTML5, CSS3, Javascript, jQuery, PHP, WordPress',
