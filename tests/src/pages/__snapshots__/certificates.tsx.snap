@@ -617,6 +617,157 @@ exports[`Certificates component Should render the Certificates component 1`] = `
             </a>
           </div>
         </div>
+        <header
+          class="c-section__header c-section__header--alt"
+        >
+          <h2>
+            Badges
+          </h2>
+        </header>
+        <div
+          class="c-section__body o-grid"
+        >
+          <div
+            class="o-grid__item xs-12 sm-6 md-4"
+          >
+            <div
+              class="c-badge"
+            >
+              <a
+                href="https://www.url1.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  alt=""
+                  data-nimg="1"
+                  decoding="async"
+                  height="300"
+                  loading="lazy"
+                  src="/_next/image?url=https%3A%2F%2Fwww.file1.com%2Fimage.png&w=640&q=75"
+                  srcset="/_next/image?url=https%3A%2F%2Fwww.file1.com%2Fimage.png&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Fwww.file1.com%2Fimage.png&w=640&q=75 2x"
+                  style="color: transparent;"
+                  width="300"
+                />
+                <svg
+                  class="c-svg-external-link"
+                >
+                  <use
+                    xlink:href="#svg-external-link"
+                  />
+                </svg>
+              </a>
+              <h4>
+                <a
+                  href="https://www.url1.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Badge 1
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </h4>
+              <h5>
+                Issued by 
+                <a
+                  href="https://www.issuer1.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Issuer 1
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </h5>
+              <p>
+                <em>
+                  Issued on Nov 30, 2020
+                </em>
+              </p>
+            </div>
+          </div>
+          <div
+            class="o-grid__item xs-12 sm-6 md-4"
+          >
+            <div
+              class="c-badge"
+            >
+              <a
+                href="https://www.url2.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  alt=""
+                  data-nimg="1"
+                  decoding="async"
+                  height="300"
+                  loading="lazy"
+                  src="/_next/image?url=https%3A%2F%2Fwww.file2.com%2Fimage.png&w=640&q=75"
+                  srcset="/_next/image?url=https%3A%2F%2Fwww.file2.com%2Fimage.png&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Fwww.file2.com%2Fimage.png&w=640&q=75 2x"
+                  style="color: transparent;"
+                  width="300"
+                />
+                <svg
+                  class="c-svg-external-link"
+                >
+                  <use
+                    xlink:href="#svg-external-link"
+                  />
+                </svg>
+              </a>
+              <h4>
+                <a
+                  href="https://www.url2.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Badge 2
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </h4>
+              <h5>
+                Issued by 
+                <a
+                  href="https://www.issuer2.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Issuer 2
+                  <svg
+                    class="c-svg-external-link"
+                  >
+                    <use
+                      xlink:href="#svg-external-link"
+                    />
+                  </svg>
+                </a>
+              </h5>
+              <p>
+                <em>
+                  Issued on Dec 01, 2020
+                </em>
+              </p>
+            </div>
+          </div>
+        </div>
         <div
           class="c-section__actions"
         >

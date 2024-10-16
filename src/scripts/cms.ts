@@ -8,6 +8,7 @@ import type { Partner } from './types';
 
 type CMSType =
 	| 'bio'
+	| 'badge'
 	| 'owner'
 	| 'slide'
 	| 'video'
@@ -180,6 +181,16 @@ export type GithubSkylineData = {
 	index: number;
 	texture: Asset;
 	years: Asset[];
+};
+
+export type Badge = {
+	date: string;
+	image: Asset;
+	index: number;
+	issuer: string;
+	issuerUrl: string;
+	title: string;
+	url: string;
 };
 
 const client = createClient({
@@ -525,5 +536,17 @@ export const getGithubSkylineFromCMS = async (): Promise<GithubSkylineData | nul
 		console.error(error);
 
 		return null;
+	}
+};
+
+export const getBadgesFromCMS = async (): Promise<Badge[]> => {
+	try {
+		const data = await getCMSData('badge');
+
+		return data.items.map(item => item.fields as Badge);
+	} catch (error: unknown) {
+		console.error(error);
+
+		return [];
 	}
 };

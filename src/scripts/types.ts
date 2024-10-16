@@ -6,6 +6,7 @@ import type { LastFMInsights } from '@insights/utils';
 
 import type {
 	Article,
+	Badge,
 	BioEntry,
 	Certificate,
 	FundingNetwork,
@@ -161,6 +162,7 @@ export type ArticlesPageProps = SharedPageProps & {
 };
 
 export type CertificatesPageProps = SharedPageProps & {
+	badges: Badge[];
 	data: Certificate[];
 };
 
