@@ -1,4 +1,5 @@
 export * from './articles';
+export * from './badges';
 export * from './certificates';
 export * from './experience';
 export * from './funding';
