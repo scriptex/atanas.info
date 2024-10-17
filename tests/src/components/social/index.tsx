@@ -1,7 +1,9 @@
 import { LinkedInBadge, SocialMusic } from '@components';
 import type { LastFMAlbum } from '@insights/utils';
-import { snapshotTest } from '@test-config/helpers';
-import { lastFmInsights } from '@test-config/mocks';
+import { mockFetch, snapshotTest } from '@test-config/helpers';
+import { lastFmInsights, recentTracks } from '@test-config/mocks';
+
+mockFetch(() => recentTracks);
 
 snapshotTest(LinkedInBadge);
 
