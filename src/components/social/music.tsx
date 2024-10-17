@@ -1,6 +1,11 @@
-import type { FC } from 'react';
+import { FC, useState } from 'react';
 
-import Carousel from 'react-round-carousel';
+import Carousel, { CarouselItem } from 'react-round-carousel';
+
+import { UTCDate } from '@date-fns/utc';
+import { formatDistance } from 'date-fns/formatDistance';
+import { LastFMRecentTrack, LastFMRecentTracksResponse } from 'lastfm-node-client';
+import useInterval from 'use-interval';
 
 import { ExternalLink, StatsEntry } from '@components';
 import type { LastFMAlbum, LastFMInsights } from '@insights/utils';
@@ -23,11 +28,52 @@ const SocialMusicCarousel: FC<Readonly<Props>> = ({ condition, data, period }: P
 		</div>
 	) : null;
 
+const toCarouselItems = (data: LastFMRecentTrack[]) =>
+	data
+		.slice(0, 30)
+		.map(item => ({
+			alt: `${item.artist['#text']} - ${item.name}`,
+			content: (
+				<>
+					<span>
+						{item.artist['#text']} - {item.name}
+					</span>
+
+					{item['@attr']?.nowplaying ? (
+						<strong>Now playing</strong>
+					) : item?.date?.uts ? (
+						<strong>{formatDistance(new UTCDate(), new UTCDate(Number(item.date.uts) * 1000))} ago</strong>
+					) : null}
+				</>
+			),
+			image: item.image.at(-1)?.['#text'] ?? ''
+		}))
+		.reduce(
+			(result: CarouselItem[], item: CarouselItem) =>
+				result.find(el => el.alt === item.alt) ? result : [...result, item],
+			[]
+		);
+
+const fetchRecentTracks = (update: (data: CarouselItem[]) => void) =>
+	fetch('/api/last-fm')
+		.then(r => r.json())
+		.then((r: LastFMRecentTracksResponse) => {
+			if (!r?.recenttracks?.track?.length) {
+				return;
+			}
+
+			update(toCarouselItems(r.recenttracks.track));
+		});
+
 export const SocialMusic: FC<Readonly<{ data: LastFMInsights }>> = ({ data }) => {
 	const { error, info, topAlbums, updated, weeklyAlbumChart } = data;
 	const topAlbumsLength = topAlbums.length;
 	const weeklyAlbumChartLength = weeklyAlbumChart.length;
 	const hasNoData = topAlbumsLength + weeklyAlbumChartLength === 0;
+
+	const [recentTracks, setRecentTracks] = useState<CarouselItem[]>([]);
+
+	useInterval(() => fetchRecentTracks(setRecentTracks), 30000, true);
 
 	return error || hasNoData ? null : (
 		<>
@@ -68,6 +114,14 @@ export const SocialMusic: FC<Readonly<{ data: LastFMInsights }>> = ({ data }) =>
 						/>
 
 						<SocialMusicCarousel condition={topAlbumsLength > 0} data={topAlbums} period="month" />
+
+						{recentTracks.length > 0 && (
+							<div className="o-grid__item xs-12">
+								<h3>Recent tracks:</h3>
+
+								<Carousel items={recentTracks} />
+							</div>
+						)}
 					</div>
 				</div>
 			</div>

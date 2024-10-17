@@ -7,6 +7,7 @@ export * from './lastfm-insights';
 export * from './occupation';
 export * from './resume';
 export * from './partners';
+export * from './recent-tracks';
 export * from './slides';
 export * from './strengths';
 export * from './testimonials';
