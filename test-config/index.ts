@@ -128,6 +128,10 @@ jest.mock('@vercel/analytics/react', () => ({
 	Analytics: jest.fn(() => 'Vercel Analytics')
 }));
 
+jest.mock('@vercel/speed-insights/next', () => ({
+	SpeedInsights: jest.fn(() => 'Vercel Speed Insights')
+}));
+
 jest.spyOn(shared, 'waitForElement').mockReturnValue(Promise.resolve(null));
 
 jest.mock('next/font/google', () => ({

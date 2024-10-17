@@ -1,6 +1,7 @@
 import { ComponentType, FC, useEffect, useMemo, useState } from 'react';
 
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { AppProps } from 'next/app';
 import { Fira_Sans } from 'next/font/google';
 import Script from 'next/script';
@@ -70,6 +71,8 @@ export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppP
 			</AppContext.Provider>
 
 			<Analytics />
+
+			<SpeedInsights />
 
 			<Script
 				onLoad={() => {
