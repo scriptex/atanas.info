@@ -407,6 +407,17 @@
 			position: static;
 		}
 	}
+
+	& .carousel ~ .c-loading {
+		@mixin flex-row nowrap, center, center;
+
+		position: absolute;
+		inset: 0;
+
+		& .c-loader {
+			transform: translateY(-2rem);
+		}
+	}
 }
 
 .c-recent-tracks__error,

@@ -64,12 +64,15 @@ const fetchRecentTracks = (
 	fetch('/api/last-fm')
 		.then(r => r.json())
 		.then((r: LastFMRecentTracksResponse) => {
-			if (!r?.recenttracks?.track?.length) {
-				return;
-			}
+			const hasError = 'error' in r;
 
-			setError('error' in r);
-			setData(toCarouselItems(r.recenttracks.track));
+			setError(hasError);
+
+			if (!r?.recenttracks?.track?.length) {
+				setData([]);
+			} else {
+				setData(hasError ? [] : toCarouselItems(r.recenttracks.track));
+			}
 		})
 		.catch(() => setError(true))
 		.finally(() => setLoading(false));
@@ -130,14 +133,17 @@ export const SocialMusic: FC<Readonly<{ data: LastFMInsights }>> = ({ data }) =>
 						<div className="o-grid__item xs-12 c-recent-tracks">
 							<h3>Recent tracks:</h3>
 
-							{recentTracksLoading ? (
+							{recentTracksLoading && recentTracks.length === 0 ? (
 								<Loader />
 							) : recentTracksError ? (
 								<p className="c-recent-tracks__error">Error fetching recent tracks.</p>
 							) : recentTracks.length === 0 ? (
 								<p className="c-recent-tracks__empty">No recent tracks to show.</p>
 							) : (
-								<Carousel items={recentTracks} />
+								<>
+									<Carousel items={recentTracks} />
+									{recentTracksLoading && <Loader />}
+								</>
 							)}
 						</div>
 					</div>
