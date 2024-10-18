@@ -68,7 +68,7 @@ const fetchRecentTracks = (
 
 			setError(hasError);
 
-			if (!r?.recenttracks?.track?.length) {
+			if (!r.recenttracks?.track?.length) {
 				setData([]);
 			} else {
 				setData(hasError ? [] : toCarouselItems(r.recenttracks.track));
