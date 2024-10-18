@@ -7,7 +7,7 @@ import { formatDistance } from 'date-fns/formatDistance';
 import { LastFMRecentTrack, LastFMRecentTracksResponse } from 'lastfm-node-client';
 import useInterval from 'use-interval';
 
-import { ExternalLink, StatsEntry } from '@components';
+import { ExternalLink, Loader, StatsEntry } from '@components';
 import type { LastFMAlbum, LastFMInsights } from '@insights/utils';
 import { formatDate } from '@scripts/shared';
 
@@ -41,7 +41,7 @@ const toCarouselItems = (data: LastFMRecentTrack[]) =>
 
 					{item['@attr']?.nowplaying ? (
 						<strong>Now playing</strong>
-					) : item?.date?.uts ? (
+					) : item.date?.uts ? (
 						<strong>{formatDistance(new UTCDate(), new UTCDate(Number(item.date.uts) * 1000))} ago</strong>
 					) : null}
 				</>
@@ -54,7 +54,13 @@ const toCarouselItems = (data: LastFMRecentTrack[]) =>
 			[]
 		);
 
-const fetchRecentTracks = (update: (data: CarouselItem[]) => void) =>
+const fetchRecentTracks = (
+	setData: (data: CarouselItem[]) => void,
+	setError: (value: boolean) => void,
+	setLoading: (value: boolean) => void
+) => {
+	setLoading(true);
+
 	fetch('/api/last-fm')
 		.then(r => r.json())
 		.then((r: LastFMRecentTracksResponse) => {
@@ -62,8 +68,12 @@ const fetchRecentTracks = (update: (data: CarouselItem[]) => void) =>
 				return;
 			}
 
-			update(toCarouselItems(r.recenttracks.track));
-		});
+			setError('error' in r);
+			setData(toCarouselItems(r.recenttracks.track));
+		})
+		.catch(() => setError(true))
+		.finally(() => setLoading(false));
+};
 
 export const SocialMusic: FC<Readonly<{ data: LastFMInsights }>> = ({ data }) => {
 	const { error, info, topAlbums, updated, weeklyAlbumChart } = data;
@@ -72,8 +82,10 @@ export const SocialMusic: FC<Readonly<{ data: LastFMInsights }>> = ({ data }) =>
 	const hasNoData = topAlbumsLength + weeklyAlbumChartLength === 0;
 
 	const [recentTracks, setRecentTracks] = useState<CarouselItem[]>([]);
+	const [recentTracksError, setRecentTracksError] = useState(false);
+	const [recentTracksLoading, setRecentTracksLoading] = useState(false);
 
-	useInterval(() => fetchRecentTracks(setRecentTracks), 30000, true);
+	useInterval(() => fetchRecentTracks(setRecentTracks, setRecentTracksError, setRecentTracksLoading), 30000, true);
 
 	return error || hasNoData ? null : (
 		<>
@@ -115,13 +127,19 @@ export const SocialMusic: FC<Readonly<{ data: LastFMInsights }>> = ({ data }) =>
 
 						<SocialMusicCarousel condition={topAlbumsLength > 0} data={topAlbums} period="month" />
 
-						{recentTracks.length > 0 && (
-							<div className="o-grid__item xs-12">
-								<h3>Recent tracks:</h3>
+						<div className="o-grid__item xs-12 c-recent-tracks">
+							<h3>Recent tracks:</h3>
 
+							{recentTracksLoading ? (
+								<Loader />
+							) : recentTracksError ? (
+								<p className="c-recent-tracks__error">Error fetching recent tracks.</p>
+							) : recentTracks.length === 0 ? (
+								<p className="c-recent-tracks__empty">No recent tracks to show.</p>
+							) : (
 								<Carousel items={recentTracks} />
-							</div>
-						)}
+							)}
+						</div>
 					</div>
 				</div>
 			</div>

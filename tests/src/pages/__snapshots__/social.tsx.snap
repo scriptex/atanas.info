@@ -1040,6 +1040,18 @@ exports[`Social component Should render the Social component 1`] = `
                 </button>
               </div>
             </div>
+            <div
+              class="o-grid__item xs-12 c-recent-tracks"
+            >
+              <h3>
+                Recent tracks:
+              </h3>
+              <p
+                class="c-recent-tracks__empty"
+              >
+                No recent tracks to show.
+              </p>
+            </div>
           </div>
         </div>
       </div>

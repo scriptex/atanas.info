@@ -7,9 +7,11 @@ export default async function handler(_: NextApiRequest, res: NextApiResponse): 
 		const result = await lastFm.userGetRecentTracks({ user: 'scriptex' });
 
 		res.json(result);
-	} catch (e) {
-		console.error(e);
+	} catch (error: any) {
+		console.error(error);
 
-		res.json({});
+		res.json({
+			error
+		});
 	}
 }
