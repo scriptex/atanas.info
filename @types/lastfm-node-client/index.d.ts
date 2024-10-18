@@ -120,6 +120,35 @@ declare module 'lastfm-node-client' {
 		};
 	};
 
+	export type LastFMRecentTrack = {
+		'@attr'?: {
+			nowplaying: 'true' | 'false';
+		};
+		album: {
+			'#text': string;
+			mbid: string;
+		};
+		artist: {
+			'#text': string;
+			mbid: string;
+		};
+		date?: {
+			#text: string;
+			uts: string;
+		};
+		image: LastFMImage[];
+		mbid: string;
+		name: string;
+		streamable: '0' | '1';
+		url: string;
+	};
+
+	export type LastFMRecentTracksResponse = {
+		recenttracks: {
+			track: LastFMRecentTrack[];
+		};
+	};
+
 	class LastFm {
 		constructor(key?: string);
 
@@ -129,6 +158,7 @@ declare module 'lastfm-node-client' {
 		public albumGetInfo: (
 			options: { album: string; artist: string } & LastFMDefaultOptions
 		) => Promise<LastFMAlbumResponse>;
+		public userGetRecentTracks: (options: LastFMUser) => Promise<LastFMRecentTracksResponse>;
 	}
 
 	export = LastFm;

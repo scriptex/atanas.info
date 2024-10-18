@@ -396,6 +396,39 @@
 	}
 }
 
+.c-recent-tracks {
+	position: relative;
+
+	& .c-loading {
+		position: relative;
+		margin: 5rem 0 2rem;
+
+		& .c-loader {
+			position: static;
+		}
+	}
+
+	& .carousel ~ .c-loading {
+		@mixin flex-row nowrap, center, center;
+
+		position: absolute;
+		inset: 0;
+
+		& .c-loader {
+			transform: translateY(-2rem);
+		}
+	}
+}
+
+.c-recent-tracks__error,
+.c-recent-tracks__empty {
+	color: var(--color-primary);
+	line-height: 1.25;
+	text-align: center;
+	padding: 1.875rem 0;
+	margin: 5rem 0 2rem !important;
+}
+
 @media (--tablet-landscape) {
 	.c-section--social {
 		& codersrank-widget {
