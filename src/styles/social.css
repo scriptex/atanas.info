@@ -28,6 +28,8 @@
 		width: 100%;
 		max-width: 40rem;
 		display: block;
+		border: 1px solid var(--color-primary);
+		border-radius: 0.25rem;
 	}
 
 	& .svg-disconnected {
@@ -41,7 +43,7 @@
 	}
 
 	& .c-section__entry--primary {
-		& .o-grid__item > :last-child:not(iframe) {
+		& .o-grid__item > :last-child:not(iframe):not([data-elfsight-app-lazy]) {
 			height: calc(100% - 4.025rem);
 
 			& iframe {
@@ -117,6 +119,35 @@
 				background: none !important;
 			}
 		}
+	}
+
+	& .eapps-twitter-feed,
+	& .eapps-instagram-feed,
+	& [class*='eapps-linkedin-feed'] {
+		height: 25rem;
+		border: 1px solid var(--color-primary);
+		overflow: hidden;
+		border-radius: 0.25rem;
+	}
+
+	& .eapps-twitter-feed-inner {
+		border-radius: 0;
+	}
+
+	& .eapps-twitter-feed-title {
+		display: none;
+	}
+
+	& .eapps-twitter-feed-container,
+	& .eapps-instagram-feed-container,
+	& [class*='eapps-linkedin-feed'] > div {
+		height: 100%;
+		overflow: hidden auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	& .eapps-twitter-feed-posts-item-user-image {
+		left: 0;
 	}
 
 	& .c-section--stats {

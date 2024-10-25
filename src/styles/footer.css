@@ -33,6 +33,35 @@
 	& .c-btn {
 		margin-top: 1.5rem;
 	}
+
+	& .eapps-paypal-button {
+		display: block;
+		padding-top: 1.5rem;
+
+		& .eapps-paypal-button-inner {
+			margin-bottom: -1.5rem;
+		}
+
+		& .eapps-paypal-button-form-cards,
+		& .eapps-paypal-button-form-error {
+			display: none;
+		}
+
+		& .eapps-paypal-button-form-caption {
+			font-size: 1rem;
+			color: var(--color-primary);
+			margin-bottom: 0.5rem;
+		}
+
+		& .eapps-paypal-button-container {
+			& > a {
+				width: 0;
+				max-height: 0;
+				clip: rect(0, 0, 0, 0);
+				overflow: hidden;
+			}
+		}
+	}
 }
 
 .c-referrals {

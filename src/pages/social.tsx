@@ -67,8 +67,6 @@ export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>
 					<h2>Combined Social feed</h2>
 				</header>
 
-				<Script data-use-service-core defer src="https://static.elfsight.com/platform/platform.js" />
-
 				<div className="elfsight-app-6509195d-9c2d-4028-aad0-bfe6cc2c0676" />
 
 				{online && <SocialMusic data={data} />}

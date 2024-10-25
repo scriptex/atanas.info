@@ -48,6 +48,8 @@ export const Footer: FC<Readonly<Props>> = ({ funding }) => {
 
 				<Funding data={funding} />
 
+				<div className="elfsight-app-42e44979-7e5f-4031-9231-8ea12a0806ed" data-elfsight-app-lazy />
+
 				<div className="c-referrals">
 					<Swiper autoplay={{ delay: 10000 }} loop modules={[Autoplay]}>
 						<SwiperSlide>

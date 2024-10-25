@@ -85,6 +85,8 @@ export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppP
 				}}
 				src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"
 			/>
+
+			<Script data-use-service-core defer src="https://static.elfsight.com/platform/platform.js" />
 		</>
 	);
 };
