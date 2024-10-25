@@ -1179,7 +1179,7 @@
   resolved "https://registry.yarnpkg.com/@codersrank/work-experience/-/work-experience-0.9.8.tgz#2f00ae781c1e4efbde28e0a2b5c4cf60f5f8c421"
   integrity sha512-DTgDb05dLFkqr4U+TEgz1Xg4SGHHInSe8nrMrkItFRR2vkhe4kypJAAPCwYO0WiXBTIzs+r9vFJTlnKKoVjlug==
 
-"@contentful/content-source-maps@^0.11.0":
+"@contentful/content-source-maps@^0.11.6":
   version "0.11.6"
   resolved "https://registry.yarnpkg.com/@contentful/content-source-maps/-/content-source-maps-0.11.6.tgz#a547e06953495576e065aa2896295d2f8cc3be49"
   integrity sha512-kiP0LcqAMj+Kvt+sLpI1KlqSh2isGkQXRulTEwKZGorXDTbSN3rWfFo/4ysHk2CvlWyF1NotNkB4Thz6LNiHTQ==
@@ -4657,12 +4657,12 @@ contentful-sdk-core@^8.3.1:
     p-throttle "^4.1.1"
     qs "^6.11.2"
 
-contentful@11.1.4:
-  version "11.1.4"
-  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.1.4.tgz#a49db3bdb84c375bf7e48fd8aa0029ea73cff109"
-  integrity sha512-mkXOkU/lrce8VlMf3ndXojxnOFqYymebKKP/tcBrA56jyZOldSI8/yLBMI/7YCdnivsGsR4VgPCaNZZ8aNI+fA==
+contentful@11.2.0:
+  version "11.2.0"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.2.0.tgz#43c89ede694e84c95aba18afd2fe1ae42a0ddb64"
+  integrity sha512-DP756jAPKUbTecefx5VoMfrysF1sZKNSxCTvFfHxq/TYSH3tbksDsLHH8Bzw2LQvnVLDV8G/GbzYYigD6Ji0QA==
   dependencies:
-    "@contentful/content-source-maps" "^0.11.0"
+    "@contentful/content-source-maps" "^0.11.6"
     "@contentful/rich-text-types" "^16.6.1"
     axios "^1.7.4"
     contentful-resolve-response "^1.9.0"
