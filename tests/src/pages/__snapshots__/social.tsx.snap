@@ -719,7 +719,7 @@ exports[`Social component Should render the Social component 1`] = `
               class="o-grid__item xs-12 sm-6"
             >
               <h3>
-                Github Profile
+                Github Sponsors Profile
               </h3>
               <iframe
                 class="github-frame"
@@ -734,18 +734,45 @@ exports[`Social component Should render the Social component 1`] = `
               class="o-grid__item xs-12 sm-6"
             >
               <h3>
-                Twitter Feed
+                X (Twitter) Feed
               </h3>
-              <a
-                class="twitter-timeline"
-                data-dnt="true"
-                data-height="400"
-                data-lang="en"
-                data-theme="dark"
-                href="//twitter.com/scriptexbg?ref_src=twsrc%5Etfw"
-              >
-                Tweets by @scriptexbg
-              </a>
+              <div
+                class="elfsight-app-66c4f997-1941-4133-86b6-8a6ab499ed03"
+                data-elfsight-app-lazy="true"
+              />
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6"
+            >
+              <h3>
+                Instagram Feed
+              </h3>
+              <div
+                class="elfsight-app-db464ddb-0c81-49f0-8036-d6ae51aae7d8"
+                data-elfsight-app-lazy="true"
+              />
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6"
+            >
+              <h3>
+                Personal LinkedIn Feed
+              </h3>
+              <div
+                class="sk-ww-linkedin-profile-post"
+                data-embed-id="25385560"
+              />
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6"
+            >
+              <h3>
+                Company LinkedIn Feed
+              </h3>
+              <div
+                class="elfsight-app-d9e21bd3-cca5-48d6-adb4-c5d7f94becdf"
+                data-elfsight-app-lazy="true"
+              />
             </div>
             <div
               class="o-grid__item xs-12 sm-6"
@@ -760,17 +787,6 @@ exports[`Social component Should render the Social component 1`] = `
                 loading="lazy"
                 src="https://www.youtube.com/embed/?list=PLgLu3XOevO8_G7n5n9Mmoe-xPwuwpGDYr"
                 title="YouTube video player"
-              />
-            </div>
-            <div
-              class="o-grid__item xs-12 sm-6"
-            >
-              <h3>
-                Instagram Feed
-              </h3>
-              <div
-                class="sk-instagram-feed"
-                data-embed-id="25385561"
               />
             </div>
             <div
@@ -793,18 +809,7 @@ exports[`Social component Should render the Social component 1`] = `
               class="o-grid__item xs-12 sm-6"
             >
               <h3>
-                LinkedIn Feed
-              </h3>
-              <div
-                class="sk-ww-linkedin-profile-post"
-                data-embed-id="25385560"
-              />
-            </div>
-            <div
-              class="o-grid__item xs-12 sm-6"
-            >
-              <h3>
-                Stackoverflow flair
+                Stack Overflow flair
               </h3>
               <div
                 class="stackoverflow-frame"
@@ -1693,6 +1698,10 @@ exports[`Social component Should render the Social component 1`] = `
         </div>
       </div>
       <div
+        class="elfsight-app-42e44979-7e5f-4031-9231-8ea12a0806ed"
+        data-elfsight-app-lazy="true"
+      />
+      <div
         class="c-referrals"
       >
         <div
@@ -2524,7 +2533,7 @@ exports[`Tests the Social page when offline 1`] = `
               class="o-grid__item xs-12 sm-6"
             >
               <h3>
-                Github Profile
+                Github Sponsors Profile
               </h3>
               <svg
                 class="svg-disconnected"
@@ -2538,21 +2547,7 @@ exports[`Tests the Social page when offline 1`] = `
               class="o-grid__item xs-12 sm-6"
             >
               <h3>
-                Twitter Feed
-              </h3>
-              <svg
-                class="svg-disconnected"
-              >
-                <use
-                  xlink:href="#svg-disconnected "
-                />
-              </svg>
-            </div>
-            <div
-              class="o-grid__item xs-12 sm-6"
-            >
-              <h3>
-                YouTube Channel
+                X (Twitter) Feed
               </h3>
               <svg
                 class="svg-disconnected"
@@ -2580,6 +2575,48 @@ exports[`Tests the Social page when offline 1`] = `
               class="o-grid__item xs-12 sm-6"
             >
               <h3>
+                Personal LinkedIn Feed
+              </h3>
+              <svg
+                class="svg-disconnected"
+              >
+                <use
+                  xlink:href="#svg-disconnected "
+                />
+              </svg>
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6"
+            >
+              <h3>
+                Company LinkedIn Feed
+              </h3>
+              <svg
+                class="svg-disconnected"
+              >
+                <use
+                  xlink:href="#svg-disconnected "
+                />
+              </svg>
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6"
+            >
+              <h3>
+                YouTube Channel
+              </h3>
+              <svg
+                class="svg-disconnected"
+              >
+                <use
+                  xlink:href="#svg-disconnected "
+                />
+              </svg>
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6"
+            >
+              <h3>
                 Spotify playlist
               </h3>
               <svg
@@ -2594,21 +2631,7 @@ exports[`Tests the Social page when offline 1`] = `
               class="o-grid__item xs-12 sm-6"
             >
               <h3>
-                LinkedIn Feed
-              </h3>
-              <svg
-                class="svg-disconnected"
-              >
-                <use
-                  xlink:href="#svg-disconnected "
-                />
-              </svg>
-            </div>
-            <div
-              class="o-grid__item xs-12 sm-6"
-            >
-              <h3>
-                Stackoverflow flair
+                Stack Overflow flair
               </h3>
               <svg
                 class="svg-disconnected"
@@ -3268,6 +3291,10 @@ exports[`Tests the Social page when offline 1`] = `
           </small>
         </div>
       </div>
+      <div
+        class="elfsight-app-42e44979-7e5f-4031-9231-8ea12a0806ed"
+        data-elfsight-app-lazy="true"
+      />
       <div
         class="c-referrals"
       >

@@ -24,23 +24,27 @@ export const socialItems: SocialItem[] = [
 			/>
 		),
 		index: 1,
-		title: 'Github Profile'
+		title: 'Github Sponsors Profile'
 	},
 	{
-		element: (
-			<a
-				className="twitter-timeline"
-				data-dnt="true"
-				data-height={400}
-				data-lang="en"
-				data-theme="dark"
-				href="//twitter.com/scriptexbg?ref_src=twsrc%5Etfw"
-			>
-				Tweets by @scriptexbg
-			</a>
-		),
+		element: <div className="elfsight-app-66c4f997-1941-4133-86b6-8a6ab499ed03" data-elfsight-app-lazy />,
 		index: 2,
-		title: 'Twitter Feed'
+		title: 'X (Twitter) Feed'
+	},
+	{
+		element: <div className="elfsight-app-db464ddb-0c81-49f0-8036-d6ae51aae7d8" data-elfsight-app-lazy />,
+		index: 3,
+		title: 'Instagram Feed'
+	},
+	{
+		element: <div className="sk-ww-linkedin-profile-post" data-embed-id="25385560" />,
+		index: 4,
+		title: 'Personal LinkedIn Feed'
+	},
+	{
+		element: <div className="elfsight-app-d9e21bd3-cca5-48d6-adb4-c5d7f94becdf" data-elfsight-app-lazy />,
+		index: 5,
+		title: 'Company LinkedIn Feed'
 	},
 	{
 		element: (
@@ -53,13 +57,8 @@ export const socialItems: SocialItem[] = [
 				title="YouTube video player"
 			/>
 		),
-		index: 3,
+		index: 6,
 		title: 'YouTube Channel'
-	},
-	{
-		element: <div className="sk-instagram-feed" data-embed-id="25385561" />,
-		index: 4,
-		title: 'Instagram Feed'
 	},
 	{
 		element: (
@@ -73,13 +72,8 @@ export const socialItems: SocialItem[] = [
 				width="100%"
 			/>
 		),
-		index: 5,
+		index: 7,
 		title: 'Spotify playlist'
-	},
-	{
-		element: <div className="sk-ww-linkedin-profile-post" data-embed-id="25385560" />,
-		index: 6,
-		title: 'LinkedIn Feed'
 	},
 	{
 		element: (
@@ -97,7 +91,7 @@ export const socialItems: SocialItem[] = [
 				</ExternalLink>
 			</div>
 		),
-		index: 7,
-		title: 'Stackoverflow flair'
+		index: 8,
+		title: 'Stack Overflow flair'
 	}
 ];
