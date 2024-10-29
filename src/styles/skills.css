@@ -173,7 +173,7 @@
 @media (--tablet-landscape) {
 	.c-section--skills {
 		& .c-section__wrapper .o-grid {
-			max-height: 273.5rem;
+			max-height: 279.5rem;
 		}
 	}
 }
@@ -181,7 +181,7 @@
 @media (--tablet-portrait) {
 	.c-section--skills {
 		& .c-section__wrapper .o-grid {
-			max-height: 410rem;
+			max-height: 416rem;
 		}
 	}
 
@@ -195,7 +195,7 @@
 @media (--mobile) {
 	.c-section--skills {
 		& .c-section__wrapper .o-grid {
-			max-height: 630rem;
+			max-height: 636rem;
 		}
 
 		& .o-grid__item + .o-grid__item {
