@@ -606,6 +606,13 @@ export const skills: ForceNode[] = [
 		...defaultForceNodeSize
 	},
 	{
+		fill: '#fff',
+		icon: 'playwright',
+		since: 2024,
+		text: 'Playwright',
+		...defaultForceNodeSize
+	},
+	{
 		fill: '#DD3A0A',
 		icon: 'postcss',
 		since: 2014,

@@ -2867,6 +2867,33 @@ exports[`Skills component Should render the Skills component 1`] = `
                 class="c-skill"
               >
                 <figure
+                  style="background-color: rgb(255, 255, 255);"
+                >
+                  <svg
+                    class="c-skill__icon"
+                    height="34"
+                    width="34"
+                  >
+                    <use
+                      xlink:href="#svg-playwright"
+                    />
+                  </svg>
+                </figure>
+                <p>
+                  <strong>
+                    Playwright
+                  </strong>
+                  Since 2024
+                </p>
+              </div>
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6 md-4 lg-3"
+            >
+              <div
+                class="c-skill"
+              >
+                <figure
                   style="background-color: rgb(221, 58, 10);"
                 >
                   <svg
@@ -7642,6 +7669,33 @@ exports[`Skills component Should render the Skills component 2`] = `
                     PHP
                   </strong>
                   Since 2013
+                </p>
+              </div>
+            </div>
+            <div
+              class="o-grid__item xs-12 sm-6 md-4 lg-3"
+            >
+              <div
+                class="c-skill"
+              >
+                <figure
+                  style="background-color: rgb(255, 255, 255);"
+                >
+                  <svg
+                    class="c-skill__icon"
+                    height="34"
+                    width="34"
+                  >
+                    <use
+                      xlink:href="#svg-playwright"
+                    />
+                  </svg>
+                </figure>
+                <p>
+                  <strong>
+                    Playwright
+                  </strong>
+                  Since 2024
                 </p>
               </div>
             </div>
