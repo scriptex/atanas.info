@@ -15,16 +15,18 @@
 const DateConstructor = Date;
 const globalObject = global as any;
 
-export const randomDate = '2018-12-31T23:59:59.000Z';
+const date = new Date();
+
+date.setDate(2);
+date.setMonth(2);
 
 export const onBeforeEach = (): void => {
 	globalObject.Date = jest.fn((...props) => {
 		if (props.length) {
-			// @ts-ignore
-			return new DateConstructor(...props);
+			return new DateConstructor(...(props as []));
 		}
 
-		return new DateConstructor(randomDate);
+		return new DateConstructor(date);
 	});
 
 	globalObject.Date.UTC = DateConstructor.UTC;
