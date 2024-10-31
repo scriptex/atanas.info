@@ -78,7 +78,7 @@ const createProjectsIndex = (projects: Project[]) => {
 					log('atanas.info: Failed fetching open source project ' + project + '. Error is: ' + err);
 				});
 		}
-	} catch (e: any) {
+	} catch (e: unknown) {
 		saveProject(
 			createProjectsIndex([]),
 			`src/data/open-source.ts`,

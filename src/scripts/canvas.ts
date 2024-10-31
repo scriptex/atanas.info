@@ -37,7 +37,7 @@ export const createSVG = (id: string, width: number, height: number): Canvas =>
 		.attr('preserveAspectRatio', 'xMinYMin meet')
 		.attr('viewBox', `0 0 ${width} ${height}`);
 
-export const drawCircle = (canvas: Canvas, data: Data): any => {
+export const drawCircle = (canvas: Canvas, data: Data): void => {
 	canvas
 		.append('circle')
 		.attr('cx', data.cx)
@@ -54,7 +54,7 @@ export const drawCircle = (canvas: Canvas, data: Data): any => {
 		.remove();
 };
 
-export const setCircleData = (canvas: Canvas, circle: SVGCircleElement, data: Data): any => {
+export const setCircleData = (canvas: Canvas, circle: SVGCircleElement, data: Data): void => {
 	d3.select(circle)
 		.attr('class', 'circle')
 		.attr('cx', () => data.cx)

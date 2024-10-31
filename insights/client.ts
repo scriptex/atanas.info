@@ -12,7 +12,7 @@ export const github = new GitHubClient({
 	token: process.env.GITHUB_TOKEN!
 });
 
-export const gitlab = (path: string, method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' = 'GET'): Promise<any> =>
+export const gitlab = <T>(path: string, method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' = 'GET'): Promise<T> =>
 	fetch(`https://gitlab.com/api/v4/${path}`, {
 		headers: {
 			Authorization: `Bearer ${process.env.GITLAB_TOKEN}`,
