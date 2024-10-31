@@ -69,6 +69,6 @@ interface Window {
 	};
 }
 
-type ClassLike<T> = new (...args: any[]) => T;
+type ClassLike<T> = new (...args: unknown[]) => T;
 
-declare const registerPaint: (name: string, fn: ClassLike<any>) => void;
+declare const registerPaint: (name: string, fn: ClassLike<unknown>) => void;

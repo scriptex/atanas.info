@@ -1,5 +1,6 @@
 import { PortfolioWebApps } from '@pages/portfolio/web-applications';
 
+import { WebProject } from '@data/projects';
 import * as shared from '@scripts/shared';
 import { snapshotTest } from '@test-config/helpers';
 import { funding, partners } from '@test-config/mocks';
@@ -72,5 +73,8 @@ jest.spyOn(shared, 'useNetworkState').mockImplementation(() => false);
 
 snapshotTest(() => <PortfolioWebApps data={[]} funding={funding} partners={partners} />, undefined, 'PortfolioWebApps');
 
-// @ts-ignore
-snapshotTest(() => <PortfolioWebApps funding={funding} partners={partners} />, undefined, 'PortfolioWebApps');
+snapshotTest(
+	() => <PortfolioWebApps data={undefined as unknown as WebProject[]} funding={funding} partners={partners} />,
+	undefined,
+	'PortfolioWebApps'
+);

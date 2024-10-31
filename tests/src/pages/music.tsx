@@ -7,7 +7,6 @@ jest.mock('@lib/mongodb', () => ({
 }));
 
 beforeEach(() => {
-	// @ts-ignore
 	window.AudioContext = mockAudioContext();
 });
 

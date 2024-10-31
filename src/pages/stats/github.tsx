@@ -8,7 +8,7 @@ import { Button, GithubSkyline, Layout, Loader, Section, StatsEntry, StatsError,
 import { Routes } from '@data/routes';
 import { getData, queryGithub } from '@lib/mongodb';
 import { getFundingFromCMS, getGithubSkylineFromCMS, getPartnersFromCMS, GithubSkylineData } from '@scripts/cms';
-import { formatDate } from '@scripts/shared';
+import { formatDate, getHoliday } from '@scripts/shared';
 import { addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import type { GithubInsights, GithubProfileData, GithubRepository, GithubStatsPageData } from '@scripts/types';
 
@@ -160,7 +160,7 @@ const GithubCalendar: FC<Props> = ({ data, error, loading }: Props) => {
 					<p>Please try again later.</p>
 				</div>
 			) : (
-				<div className="c-calendar__outer c-calendar--github">
+				<div className="c-calendar__outer c-calendar--github" data-holiday={getHoliday()}>
 					<div ref={calendarPlaceholder} />
 				</div>
 			)}

@@ -123,3 +123,19 @@ export const useCurrentPageParam = (): number => {
 
 	return page;
 };
+
+export const getHoliday = () => {
+	const today = new Date();
+	const day = today.getDate();
+	const month = today.getMonth();
+
+	if (month === 9 && day === 31) {
+		return 'halloween';
+	}
+
+	if (month === 11 && day >= 24 && day <= 26) {
+		return 'winter';
+	}
+
+	return undefined;
+};

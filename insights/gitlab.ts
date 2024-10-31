@@ -59,13 +59,13 @@ export const getGitlabInsights = async (): Promise<GitlabInsights> => {
 
 	try {
 		log('atanas.info: Getting data for user "scriptex" from Gitlab...');
-		const user = await gitlab('users/1896847');
+		const user = await gitlab<Record<string, string>>('users/1896847');
 		const args = 'projects?per_page=100&statistics=true';
 
 		log('atanas.info: Getting projects for user "scriptex" from Gitlab...');
-		const userProjects1 = await gitlab(`users/${user.id}/${args}`);
-		const userProjects2 = await gitlab(`users/${user.id}/${args}&page=2`);
-		const userProjects3 = await gitlab(`users/${user.id}/${args}&page=3`);
+		const userProjects1 = await gitlab<GitlabProject[]>(`users/${user.id}/${args}`);
+		const userProjects2 = await gitlab<GitlabProject[]>(`users/${user.id}/${args}&page=2`);
+		const userProjects3 = await gitlab<GitlabProject[]>(`users/${user.id}/${args}&page=3`);
 
 		const calendar = await getCalendar();
 

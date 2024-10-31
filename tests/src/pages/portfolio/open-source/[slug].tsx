@@ -45,8 +45,17 @@ snapshotTest(
 	'OpenSourceProject'
 );
 
-// @ts-ignore
-snapshotTest(() => <OpenSourceProject funding={funding} partners={partners} />, undefined, 'OpenSourceProject');
+snapshotTest(
+	() => (
+		<OpenSourceProject
+			funding={funding}
+			partners={partners}
+			post={undefined as unknown as Record<string, string>}
+		/>
+	),
+	undefined,
+	'OpenSourceProject'
+);
 
 it('Test the `getStaticPaths` function', async () => {
 	const result = await getStaticPaths();
