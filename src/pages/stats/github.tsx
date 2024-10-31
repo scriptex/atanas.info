@@ -8,7 +8,7 @@ import { Button, GithubSkyline, Layout, Loader, Section, StatsEntry, StatsError,
 import { Routes } from '@data/routes';
 import { getData, queryGithub } from '@lib/mongodb';
 import { getFundingFromCMS, getGithubSkylineFromCMS, getPartnersFromCMS, GithubSkylineData } from '@scripts/cms';
-import { formatDate } from '@scripts/shared';
+import { formatDate, getHoliday } from '@scripts/shared';
 import { addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
 import type { GithubInsights, GithubProfileData, GithubRepository, GithubStatsPageData } from '@scripts/types';
 
@@ -95,22 +95,6 @@ const registerMutationObserver = (element: HTMLDivElement | null): MutationObser
 			}
 		}
 	});
-
-const getHoliday = () => {
-	const today = new Date();
-	const day = today.getDate();
-	const month = today.getMonth();
-
-	if (month === 9 && day === 31) {
-		return 'halloween';
-	}
-
-	if (month === 11 && day >= 24 && day <= 26) {
-		return 'winter';
-	}
-
-	return undefined;
-};
 
 type Props = {
 	data: GithubProfileData;

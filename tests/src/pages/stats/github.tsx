@@ -2,17 +2,22 @@ import { act } from 'react';
 
 import { GithubStats } from '@pages/stats/github';
 
+import * as shared from '@scripts/shared';
 import type { GithubContribution, GithubCount, GithubInsights, GithubProfileData } from '@scripts/types';
 import { mockFetch, snapshotTest, test } from '@test-config/helpers';
 import { funding, partners } from '@test-config/mocks';
-import { onAfterEach, onBeforeEach } from '@test-config/utils';
 
 jest.mock('@lib/mongodb', () => ({
 	getData: jest.fn(() => Promise.resolve({ props: { data: [] } }))
 }));
 
-beforeEach(onBeforeEach);
-afterEach(onAfterEach);
+jest.spyOn(shared, 'getHoliday');
+
+(shared.getHoliday as jest.Mock).mockImplementation(() => undefined);
+
+afterAll(() => {
+	jest.clearAllMocks();
+});
 
 mockFetch<GithubProfileData>({
 	days: [
