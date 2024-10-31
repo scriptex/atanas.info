@@ -96,6 +96,22 @@ const registerMutationObserver = (element: HTMLDivElement | null): MutationObser
 		}
 	});
 
+const getHoliday = () => {
+	const today = new Date();
+	const day = today.getDate();
+	const month = today.getMonth();
+
+	if (month === 9 && day === 31) {
+		return 'halloween';
+	}
+
+	if (month === 11 && day >= 24 && day <= 26) {
+		return 'winter';
+	}
+
+	return undefined;
+};
+
 type Props = {
 	data: GithubProfileData;
 	error: boolean;
@@ -160,7 +176,7 @@ const GithubCalendar: FC<Props> = ({ data, error, loading }: Props) => {
 					<p>Please try again later.</p>
 				</div>
 			) : (
-				<div className="c-calendar__outer c-calendar--github">
+				<div className="c-calendar__outer c-calendar--github" data-holiday={getHoliday()}>
 					<div ref={calendarPlaceholder} />
 				</div>
 			)}

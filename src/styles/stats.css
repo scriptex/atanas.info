@@ -198,6 +198,14 @@
 		--color-calendar-graph-day-L2-bg: #5ad976;
 		--color-calendar-graph-day-L3-bg: #48bb10;
 		--color-calendar-graph-day-L4-bg: #119934;
+		--color-calendar-halloween-graph-day-L1-bg: #631c03;
+		--color-calendar-halloween-graph-day-L2-bg: #bd561d;
+		--color-calendar-halloween-graph-day-L3-bg: #fa7a18;
+		--color-calendar-halloween-graph-day-L4-bg: #fddf68;
+		--color-calendar-winter-graph-day-L1-bg: #0a3069;
+		--color-calendar-winter-graph-day-L2-bg: #0969da;
+		--color-calendar-winter-graph-day-L3-bg: #54aeff;
+		--color-calendar-winter-graph-day-L4-bg: #b6e3ff;
 	}
 }
 
@@ -216,6 +224,26 @@
 		@for $i from 0 to 4 {
 			&[data-level='$(i)'] {
 				fill: var(--color-calendar-graph-day-L$(i)-bg);
+			}
+		}
+	}
+
+	&[data-holiday='halloween'] {
+		& rect {
+			@for $i from 0 to 4 {
+				&[data-level='$(i)'] {
+					fill: var(--color-calendar-halloween-graph-day-L$(i)-bg);
+				}
+			}
+		}
+	}
+
+	&[data-holiday='winter'] {
+		& rect {
+			@for $i from 0 to 4 {
+				&[data-level='$(i)'] {
+					fill: var(--color-calendar-winter-graph-day-L$(i)-bg);
+				}
 			}
 		}
 	}
@@ -315,5 +343,21 @@
 
 	& .c-section__entry--no-background {
 		background-color: transparent;
+	}
+}
+
+.theme-light {
+	& .c-calendar--gitlab,
+	& .c-calendar--github {
+		& rect {
+			--color-calendar-halloween-graph-day-L1-bg: #631c03;
+			--color-calendar-halloween-graph-day-L2-bg: #bd561d;
+			--color-calendar-halloween-graph-day-L3-bg: #fa7a18;
+			--color-calendar-halloween-graph-day-L4-bg: #fddf68;
+			--color-calendar-winter-graph-day-L1-bg: #0a3069;
+			--color-calendar-winter-graph-day-L2-bg: #0969da;
+			--color-calendar-winter-graph-day-L3-bg: #54aeff;
+			--color-calendar-winter-graph-day-L4-bg: #b6e3ff;
+		}
 	}
 }
