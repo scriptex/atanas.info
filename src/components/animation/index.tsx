@@ -1,6 +1,6 @@
 import { FC, useEffect, useRef } from 'react';
 
-import lottie, { AnimationConfig, AnimationItem } from 'lottie-web';
+import { AnimationConfig, AnimationItem } from 'lottie-web';
 
 type Props = {
 	className: string;
@@ -23,14 +23,19 @@ export const Animation: FC<Readonly<Props>> = ({ className, data: animationData,
 	const lottieInstance = useRef<AnimationItem | null>(null);
 
 	useEffect(() => {
-		if (element.current) {
-			lottieInstance.current = lottie.loadAnimation({
-				animationData,
-				container: element.current,
-				...defaultOptions,
-				...options
-			});
-		}
+		(async () => {
+			const lottie = await import('lottie-web').then(m => m.default);
+
+			if (element.current) {
+				lottieInstance.current = lottie.loadAnimation({
+					animationData,
+					container: element.current,
+					...defaultOptions,
+					...options
+				});
+			}
+		})();
+
 		return () => {
 			lottieInstance.current?.destroy();
 		};
