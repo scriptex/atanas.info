@@ -604,6 +604,20 @@ exports[`Resume component Should render the Resume component 1`] = `
           />
         </div>
         <div
+          class="c-resume__controls"
+        >
+          <span>
+            Static
+          </span>
+          <input
+            checked=""
+            type="checkbox"
+          />
+          <span>
+            Interactive
+          </span>
+        </div>
+        <div
           class="c-resume"
         >
           <div
@@ -829,6 +843,14 @@ exports[`Resume component Should render the Resume component 1`] = `
               </ul>
             </div>
           </div>
+        </div>
+        <div
+          class="hidden"
+        >
+          <div
+            class="elfsight-app-a02ee9af-8b51-4a43-a53a-e38343b00992"
+            data-elfsight-app-lazy="true"
+          />
         </div>
         <div
           class="c-section__actions"
@@ -2206,6 +2228,20 @@ exports[`Resume component Should render the Resume component 2`] = `
           />
         </div>
         <div
+          class="c-resume__controls"
+        >
+          <span>
+            Static
+          </span>
+          <input
+            checked=""
+            type="checkbox"
+          />
+          <span>
+            Interactive
+          </span>
+        </div>
+        <div
           class="c-resume"
         >
           <div
@@ -2431,6 +2467,14 @@ exports[`Resume component Should render the Resume component 2`] = `
               </ul>
             </div>
           </div>
+        </div>
+        <div
+          class="hidden"
+        >
+          <div
+            class="elfsight-app-a02ee9af-8b51-4a43-a53a-e38343b00992"
+            data-elfsight-app-lazy="true"
+          />
         </div>
         <div
           class="c-section__actions"

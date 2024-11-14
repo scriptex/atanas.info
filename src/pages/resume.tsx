@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import { FC, useState } from 'react';
 
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
@@ -29,63 +29,80 @@ import {
 	getResumeSkillsFromCMS,
 	getStrengthsFromCMS
 } from '@scripts/cms';
+import { composeClassName } from '@scripts/shared';
 import type { ResumePageData } from '@scripts/types';
 
 import resume from '@data/lotties/resume.json';
 
-export const Resume: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, funding, partners }) => (
-	<Layout funding={funding} partners={partners}>
-		<Title text="Resume" />
+export const Resume: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ data, funding, partners }) => {
+	const [inline, setInline] = useState(true);
 
-		<Section
-			actions={
-				<>
-					<Button className="c-btn--print" onClick={() => window.print()} type="button">
-						<i className="icon-print"></i> Print
-					</Button>
+	return (
+		<Layout funding={funding} partners={partners}>
+			<Title text="Resume" />
 
-					<Button download href="/resume.pdf" type="anchor">
-						<i className="icon-download"></i> Download
-					</Button>
-				</>
-			}
-			additionalElements={<Animation className="c-section__animation" data={resume} height={150} width={150} />}
-			hasButton
-			id="resume"
-			title="Resume"
-		>
-			<Lines />
+			<Section
+				actions={
+					<>
+						<Button className="c-btn--print" onClick={() => window.print()} type="button">
+							<i className="icon-print"></i> Print
+						</Button>
 
-			<div className="c-resume">
-				{!!data.links?.length && (
-					<ResumeTitle
-						alt={data.owner.alt}
-						data={data.links}
-						image={data.owner.image}
-						name={data.owner.name}
-						title={data.owner.title}
-					/>
-				)}
+						<Button download href="/resume.pdf" type="anchor">
+							<i className="icon-download"></i> Download
+						</Button>
+					</>
+				}
+				additionalElements={
+					<Animation className="c-section__animation" data={resume} height={150} width={150} />
+				}
+				hasButton
+				id="resume"
+				title="Resume"
+			>
+				<Lines />
 
-				<div className="c-resume__content">
-					<ResumeSummary content={data.owner.summary} />
-
-					<ResumeEducation certificates={data.certificates} education={data.education} />
-
-					<ResumeExperience data={data.experience} />
+				<div className="c-resume__controls">
+					<span>Static</span>
+					<input checked={inline} onChange={() => setInline(!inline)} type="checkbox" />
+					<span>Interactive</span>
 				</div>
 
-				<div className="c-resume__aside">
-					<ResumeSkills data={data.skills} />
+				<div className={composeClassName('c-resume', [], inline ? [] : ['hidden'])}>
+					{!!data.links?.length && (
+						<ResumeTitle
+							alt={data.owner.alt}
+							data={data.links}
+							image={data.owner.image}
+							name={data.owner.name}
+							title={data.owner.title}
+						/>
+					)}
 
-					<ResumeStrengths data={data.strengths} />
+					<div className="c-resume__content">
+						<ResumeSummary content={data.owner.summary} />
 
-					<ResumeMore data={data.more} />
+						<ResumeEducation certificates={data.certificates} education={data.education} />
+
+						<ResumeExperience data={data.experience} />
+					</div>
+
+					<div className="c-resume__aside">
+						<ResumeSkills data={data.skills} />
+
+						<ResumeStrengths data={data.strengths} />
+
+						<ResumeMore data={data.more} />
+					</div>
 				</div>
-			</div>
-		</Section>
-	</Layout>
-);
+
+				<div className={inline ? 'hidden' : 'c-resume__book'}>
+					<div className="elfsight-app-a02ee9af-8b51-4a43-a53a-e38343b00992" data-elfsight-app-lazy />
+				</div>
+			</Section>
+		</Layout>
+	);
+};
 
 export const getStaticProps: GetStaticProps<ResumePageData> = async () => ({
 	props: {

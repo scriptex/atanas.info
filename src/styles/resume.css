@@ -438,3 +438,58 @@
 		}
 	}
 }
+
+.c-resume__controls {
+	font-size: 1.125rem;
+	line-height: 1.5;
+	text-align: center;
+	@mixin flex-row nowrap, center, center;
+	padding-bottom: 1rem;
+
+	& input {
+		width: 3.125rem;
+		height: 1.5625rem;
+		display: block;
+		position: relative;
+		margin: 0 1rem;
+		border-radius: 0.75rem;
+		background-color: var(--color-primary);
+		appearance: none;
+		cursor: pointer;
+
+		&::before {
+			content: '';
+			width: 1.3125rem;
+			height: 1.3125rem;
+			display: block;
+			position: absolute;
+			top: 0.125rem;
+			left: 0.125rem;
+			right: auto;
+			background-color: var(--color-action);
+			border-radius: 50%;
+			transform: translateX(1.5625rem);
+			transition: transform var(--timing) var(--easing);
+		}
+
+		&:checked {
+			&::before {
+				transform: translateX(0);
+			}
+		}
+	}
+}
+
+.c-resume__book {
+	padding-bottom: 1rem;
+
+	& [class*='eapps-flipbook'] {
+		& > div > a {
+			width: 0;
+			max-height: 0;
+			clip: rect(0, 0, 0, 0);
+			overflow: hidden;
+			pointer-events: none;
+		}
+	}
+}
