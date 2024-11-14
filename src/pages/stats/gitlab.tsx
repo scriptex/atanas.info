@@ -121,7 +121,7 @@ export const GitlabStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 							</small>
 
 							<div className="o-shell">
-								<h3>Gitlab contributions calendars</h3>
+								<h3>Gitlab contributions calendar</h3>
 
 								<div className="c-calendar__outer">
 									<div className="c-calendar c-calendar--gitlab">
