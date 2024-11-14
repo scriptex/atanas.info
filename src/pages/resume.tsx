@@ -48,7 +48,7 @@ export const Resume: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ dat
 							<i className="icon-print"></i> Print
 						</Button>
 
-						<Button download href="/resume.pdf" type="anchor">
+						<Button download href="/resume-covered.pdf" type="anchor">
 							<i className="icon-download"></i> Download
 						</Button>
 					</>
