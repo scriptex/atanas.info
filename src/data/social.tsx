@@ -37,7 +37,7 @@ export const socialItems: SocialItem[] = [
 		title: 'Instagram Feed'
 	},
 	{
-		element: <div className="sk-ww-linkedin-profile-post" data-embed-id="25385560" />,
+		element: <div className="elfsight-app-b53ffe08-8adc-4751-96ce-e2c209f9709a" data-elfsight-app-lazy />,
 		index: 4,
 		title: 'Personal LinkedIn Feed'
 	},
