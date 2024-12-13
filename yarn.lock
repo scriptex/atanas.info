@@ -15,10 +15,10 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
-"@apollo/client@3.12.2":
-  version "3.12.2"
-  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.12.2.tgz#28cf4a0c07c42ace566dc17e2647ff011424ece8"
-  integrity sha512-dkacsdMgVsrrQhLpN4JqZTIEfnNsPVwny+4vccSRqheWZElzUz1Xi0h39p2+TieS1f+wwvyzwpoJEV57vwzT9Q==
+"@apollo/client@3.12.3":
+  version "3.12.3"
+  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.12.3.tgz#0d252749baad8328e06883fe118dc7e73e3bbb1f"
+  integrity sha512-KZ5zymRdb8bMbGUb1wP2U04ff7qIGgaC1BCdCVC+IPFiXkxEhHBc5fDEQOwAUT+vUo9KbBh3g7QK/JCOswn59w==
   dependencies:
     "@graphql-typed-document-node/core" "^3.1.1"
     "@wry/caches" "^1.0.0"
@@ -1106,10 +1106,10 @@
   resolved "https://registry.yarnpkg.com/@codersrank/work-experience/-/work-experience-0.9.8.tgz#2f00ae781c1e4efbde28e0a2b5c4cf60f5f8c421"
   integrity sha512-DTgDb05dLFkqr4U+TEgz1Xg4SGHHInSe8nrMrkItFRR2vkhe4kypJAAPCwYO0WiXBTIzs+r9vFJTlnKKoVjlug==
 
-"@contentful/content-source-maps@^0.11.6":
-  version "0.11.6"
-  resolved "https://registry.yarnpkg.com/@contentful/content-source-maps/-/content-source-maps-0.11.6.tgz#a547e06953495576e065aa2896295d2f8cc3be49"
-  integrity sha512-kiP0LcqAMj+Kvt+sLpI1KlqSh2isGkQXRulTEwKZGorXDTbSN3rWfFo/4ysHk2CvlWyF1NotNkB4Thz6LNiHTQ==
+"@contentful/content-source-maps@^0.11.7":
+  version "0.11.7"
+  resolved "https://registry.yarnpkg.com/@contentful/content-source-maps/-/content-source-maps-0.11.7.tgz#ddb494bdfeeab74169f95eca1dff2a1e7b88c2b6"
+  integrity sha512-f+AVIM/Z+AmCagM+9hDUhhT63WVFJurbqHhzul8KVyPNIJLaUHAfMns+nxgEKCPRtef+rCk7ufaZ3HEUS1ssYQ==
   dependencies:
     "@vercel/stega" "^0.1.2"
     json-pointer "^0.6.2"
@@ -2117,10 +2117,15 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@mdn/browser-compat-data@^5.2.34", "@mdn/browser-compat-data@^5.5.35":
+"@mdn/browser-compat-data@^5.5.35":
   version "5.6.18"
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.6.18.tgz#62bfd9f7a646e54e68b3739cb34bcf508e699410"
   integrity sha512-WCQcQGyydquw7NXPL2NopMCgmUvIQDG7KM/IGR4PMJSDH5SHZKXUDEF6rdpGWj0MtcjQseOCl/hjzYzj0fMMeA==
+
+"@mdn/browser-compat-data@^5.6.19":
+  version "5.6.23"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.6.23.tgz#6ff21c5b1075039cf9f69e2a14807a64edb960c5"
+  integrity sha512-6h/L/id7JiuCcLKNZSliMfl9S159/ditQ/wc4TPlHJ/gcqoo4PNGggVaY6VcvVef9VFGuhh+UW27iAnEzQn+Kw==
 
 "@mongodb-js/saslprep@^1.1.9":
   version "1.1.9"
@@ -3919,12 +3924,12 @@ assert-plus@1.0.0, assert-plus@^1.0.0:
   resolved "https://registry.yarnpkg.com/assert-plus/-/assert-plus-1.0.0.tgz#f12e0f3c5d77b0b1cdd9146942e4e96c1e4dd525"
   integrity sha512-NfJ4UzBCcQGLDlQq7nHxH+tv3kyZ0hHQqF5BO6J7tNJeP5do1llPr8dZ8zHonfhAu0PHAdMkSo+8o0wxg9lZWw==
 
-ast-metadata-inferer@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/ast-metadata-inferer/-/ast-metadata-inferer-0.8.0.tgz#0f94c3425e310d8da45823ab2161142e3f134343"
-  integrity sha512-jOMKcHht9LxYIEQu+RVd22vtgrPaVCtDRQ/16IGmurdzxvYbDd5ynxjnyrzLnieG96eTcAyaoj/wN/4/1FyyeA==
+ast-metadata-inferer@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/ast-metadata-inferer/-/ast-metadata-inferer-0.8.1.tgz#85081bf30308acd4c35fb8694658b4c5f6f3ee60"
+  integrity sha512-ht3Dm6Zr7SXv6t1Ra6gFo0+kLDglHGrEbYihTkcycrbHw7WCcuhBzPlJYHEsIpycaUwzsJHje+vUcxXUX4ztTA==
   dependencies:
-    "@mdn/browser-compat-data" "^5.2.34"
+    "@mdn/browser-compat-data" "^5.6.19"
 
 ast-types-flow@^0.0.8:
   version "0.0.8"
@@ -4384,10 +4389,15 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001579, caniuse-lite@^1.0.30001639, caniuse-lite@^1.0.30001646, caniuse-lite@^1.0.30001669:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001579, caniuse-lite@^1.0.30001646, caniuse-lite@^1.0.30001669:
   version "1.0.30001684"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001684.tgz#0eca437bab7d5f03452ff0ef9de8299be6b08e16"
   integrity sha512-G1LRwLIQjBQoyq0ZJGqGIJUXzJ8irpbjHLpVRXDvBEScFJ9b17sgK6vlx0GAJFE21okD7zXl08rRRUfq6HdoEQ==
+
+caniuse-lite@^1.0.30001687:
+  version "1.0.30001688"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001688.tgz#f9d3ede749f083ce0db4c13db9d828adaf2e8d0a"
+  integrity sha512-Nmqpru91cuABu/DTCXbM2NSRHzM2uVHfPnhJ/1zEAJx/ILBRVmz3pzH4N7DZqbdG0gWClsCC05Oj0mJ/1AWMbA==
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -4683,12 +4693,12 @@ contentful-sdk-core@^9.0.1:
   optionalDependencies:
     "@rollup/rollup-linux-x64-gnu" "^4.18.0"
 
-contentful@11.3.1:
-  version "11.3.1"
-  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.3.1.tgz#c477183cbd4de7decfed5992e96f0ef7455cb52d"
-  integrity sha512-9kVP4yZPbd9bfGZyvGdmztiHQ1pzZi/sK1uscM65kAYMpQgt0XNrxfO8JyiSrHGA6D+r/wyIxWeEQaEvoyi9GQ==
+contentful@11.3.2:
+  version "11.3.2"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.3.2.tgz#ade1ecbe37969ea64814b8b7fb25c6bc539dad8c"
+  integrity sha512-/SKi8L559e4TPlXxxOf0dOTzqY2HK1/3qZjMCk+ZwGCrNFupdqrOLcyKcfSEPxLssz17kP9lOXU+W0RwedvlyA==
   dependencies:
-    "@contentful/content-source-maps" "^0.11.6"
+    "@contentful/content-source-maps" "^0.11.7"
     "@contentful/rich-text-types" "^16.6.1"
     axios "^1.7.4"
     contentful-resolve-response "^1.9.0"
@@ -5975,15 +5985,15 @@ eslint-module-utils@^2.12.0, eslint-module-utils@^2.8.1:
   dependencies:
     debug "^3.2.7"
 
-eslint-plugin-compat@6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-compat/-/eslint-plugin-compat-6.0.1.tgz#2852f41893802870a530b2ac087499b4556882b6"
-  integrity sha512-0MeIEuoy8kWkOhW38kK8hU4vkb6l/VvyjpuYDymYOXmUY9NvTgyErF16lYuX+HPS5hkmym7lfA+XpYZiWYWmYA==
+eslint-plugin-compat@6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-compat/-/eslint-plugin-compat-6.0.2.tgz#34840c97047b58f1ae012d61a46abb09af7bb0ab"
+  integrity sha512-1ME+YfJjmOz1blH0nPZpHgjMGK4kjgEeoYqGCqoBPQ/mGu/dJzdoP0f1C8H2jcWZjzhZjAMccbM/VdXhPORIfA==
   dependencies:
     "@mdn/browser-compat-data" "^5.5.35"
-    ast-metadata-inferer "^0.8.0"
-    browserslist "^4.23.1"
-    caniuse-lite "^1.0.30001639"
+    ast-metadata-inferer "^0.8.1"
+    browserslist "^4.24.2"
+    caniuse-lite "^1.0.30001687"
     find-up "^5.0.0"
     globals "^15.7.0"
     lodash.memoize "^4.1.2"
@@ -10661,10 +10671,10 @@ punycode@^2.1.0, punycode@^2.1.1, punycode@^2.3.0, punycode@^2.3.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.3.1.tgz#027422e2faec0b25e1549c3e1bd8309b9133b6e5"
   integrity sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==
 
-puppeteer-core@23.10.3:
-  version "23.10.3"
-  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-23.10.3.tgz#0ebab29a40c8401c8a851c794489e3196bb57486"
-  integrity sha512-7JG8klL2qHLyH8t2pOmM9zgykhaulUf7cxnmmqupjdwGfNMiGaYehQka20iUB9R/fwVyG8mFMZcsmw1FHrgKVw==
+puppeteer-core@23.10.4:
+  version "23.10.4"
+  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-23.10.4.tgz#f0a70a0df6a0afd43e787b658064ddb062c07b5a"
+  integrity sha512-pQAY7+IFAndWDkDodsQGguW1/ifV5OMlGXJDspwtK49Asb7poJZ/V5rXJxVSpq57bWrJasjQBZ1X27z1oWVq4Q==
   dependencies:
     "@puppeteer/browsers" "2.6.1"
     chromium-bidi "0.8.0"
@@ -10673,16 +10683,16 @@ puppeteer-core@23.10.3:
     typed-query-selector "^2.12.0"
     ws "^8.18.0"
 
-puppeteer@23.10.3:
-  version "23.10.3"
-  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-23.10.3.tgz#126617da061d4fee24d794c1f89a8e42706d9dfb"
-  integrity sha512-ODG+L9vCSPkQ1j+yDtNDdkSsWt2NXNrQO5C8MlwkYgE2hYnXdqVRbBpsHnoP7+EULJJKbWyR2Q4BdfohjQor3A==
+puppeteer@23.10.4:
+  version "23.10.4"
+  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-23.10.4.tgz#398ff9f04924c05334514d73b61a03a7a36ad101"
+  integrity sha512-i0sYIAIjdO9MoRfFqbkoWFnQYZVmNp8msbztTgG46KbOdoYAv4f56MFzdFwtC0lyZHtkP+yl0H7tP0dNg3RQYA==
   dependencies:
     "@puppeteer/browsers" "2.6.1"
     chromium-bidi "0.8.0"
     cosmiconfig "^9.0.0"
     devtools-protocol "0.0.1367902"
-    puppeteer-core "23.10.3"
+    puppeteer-core "23.10.4"
     typed-query-selector "^2.12.0"
 
 puppeteer@^5.4.1:
