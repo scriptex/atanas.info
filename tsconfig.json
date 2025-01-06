@@ -38,7 +38,8 @@
 			"@svg/*": ["./src/svg/*"],
 			"@npm": ["./npm"],
 			"@lib/*": ["./lib/*"],
-			"@src/*": ["./src/*"]
+			"@src/*": ["./src/*"],
+			"react": ["./node_modules/@types/react"]
 		},
 		"pretty": true,
 		"removeComments": false,
