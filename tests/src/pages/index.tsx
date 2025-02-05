@@ -18,7 +18,7 @@ it('Should test the Home page', async () => {
 
 	expect(asFragment()).toMatchSnapshot();
 
-	act(() => jest.runOnlyPendingTimers());
+	await act(async () => jest.runOnlyPendingTimers());
 
 	expect(asFragment()).toMatchSnapshot();
 });

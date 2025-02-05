@@ -1,13 +1,12 @@
 import { FC, useState } from 'react';
 
-import Carousel, { CarouselItem } from 'react-round-carousel';
-
 import { UTCDate } from '@date-fns/utc';
 import { formatDistance } from 'date-fns/formatDistance';
 import { LastFMRecentTrack, LastFMRecentTracksResponse } from 'lastfm-node-client';
 import useInterval from 'use-interval';
 
-import { ExternalLink, Loader, StatsEntry } from '@components';
+// Keep a copy of Carousel in `/components` until I figure out why the imported version breaks with React 19
+import { Carousel, CarouselItem, ExternalLink, Loader, StatsEntry } from '@components';
 import type { LastFMAlbum, LastFMInsights } from '@insights/utils';
 import { formatDate } from '@scripts/shared';
 

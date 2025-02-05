@@ -40,17 +40,19 @@ declare module '@codersrank/timeline/codersrank-timeline.min' {
 	export default content;
 }
 
-declare namespace JSX {
-	interface IntrinsicElements {
-		'codersrank-activity': HTMLAttributes;
-		'codersrank-education': HTMLAttributes;
-		'codersrank-portfolio': HTMLAttributes;
-		'codersrank-skills-chart': HTMLAttributes;
-		'codersrank-summary': HTMLAttributes;
-		'codersrank-timeline': HTMLAttributes;
-		'codersrank-widget': HTMLAttributes;
-		'codersrank-work-experience': HTMLAttributes;
-		'social-links': HTMLAttributes;
+declare namespace React {
+	namespace JSX {
+		interface IntrinsicElements {
+			'codersrank-activity': HTMLAttributes;
+			'codersrank-education': HTMLAttributes;
+			'codersrank-portfolio': HTMLAttributes;
+			'codersrank-skills-chart': HTMLAttributes;
+			'codersrank-summary': HTMLAttributes;
+			'codersrank-timeline': HTMLAttributes;
+			'codersrank-widget': HTMLAttributes;
+			'codersrank-work-experience': HTMLAttributes;
+			'social-links': HTMLAttributes;
+		}
 	}
 }
 

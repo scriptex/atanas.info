@@ -1,5 +1,6 @@
 export { default as Animation } from './animation';
 export { default as Button } from './button';
+export { default as Carousel, type CarouselItem } from './carousel';
 export { default as Contact } from './contact';
 export { default as EmptyPage } from './empty-page';
 export { default as ExternalLink } from './external-link';

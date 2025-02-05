@@ -7,7 +7,7 @@ const withSerwist = withSerwistInit({
 
 export default withSerwist({
 	images: {
-		domains: ['res.cloudinary.com', 'images.ctfassets.net', 'media.licdn.com'],
+		domains: ['res.cloudinary.com', 'images.ctfassets.net', 'media.licdn.com', 'lastfm.freetls.fastly.net'],
 		unoptimized: true
 	},
 	webpack(config) {

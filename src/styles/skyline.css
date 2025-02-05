@@ -47,6 +47,10 @@
 	bottom: 0;
 	left: 0;
 	z-index: 110;
+
+	& canvas {
+		height: 100%;
+	}
 }
 
 .has-expanded {
