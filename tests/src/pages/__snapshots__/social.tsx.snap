@@ -965,7 +965,14 @@ exports[`Social component Should render the Social component 1`] = `
                   >
                     <img
                       alt="Test weekly album"
-                      src="https://lastfm.freetls.fastly.net/i/u/174s/ade81b221def43c48ba7b364058c13c2.png"
+                      data-nimg="1"
+                      decoding="async"
+                      height="300"
+                      loading="lazy"
+                      src="/_next/image?url=https%3A%2F%2Flastfm.freetls.fastly.net%2Fi%2Fu%2F174s%2Fade81b221def43c48ba7b364058c13c2.png&w=640&q=75"
+                      srcset="/_next/image?url=https%3A%2F%2Flastfm.freetls.fastly.net%2Fi%2Fu%2F174s%2Fade81b221def43c48ba7b364058c13c2.png&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Flastfm.freetls.fastly.net%2Fi%2Fu%2F174s%2Fade81b221def43c48ba7b364058c13c2.png&w=640&q=75 2x"
+                      style="color: transparent;"
+                      width="300"
                     />
                     <div
                       class="carousel__slide-overlay"
@@ -1014,7 +1021,14 @@ exports[`Social component Should render the Social component 1`] = `
                   >
                     <img
                       alt="Test top album"
-                      src="https://lastfm.freetls.fastly.net/i/u/174s/2b20f07b88e2de001eeb4ea110d6a061.png"
+                      data-nimg="1"
+                      decoding="async"
+                      height="300"
+                      loading="lazy"
+                      src="/_next/image?url=https%3A%2F%2Flastfm.freetls.fastly.net%2Fi%2Fu%2F174s%2F2b20f07b88e2de001eeb4ea110d6a061.png&w=640&q=75"
+                      srcset="/_next/image?url=https%3A%2F%2Flastfm.freetls.fastly.net%2Fi%2Fu%2F174s%2F2b20f07b88e2de001eeb4ea110d6a061.png&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Flastfm.freetls.fastly.net%2Fi%2Fu%2F174s%2F2b20f07b88e2de001eeb4ea110d6a061.png&w=640&q=75 2x"
+                      style="color: transparent;"
+                      width="300"
                     />
                     <div
                       class="carousel__slide-overlay"

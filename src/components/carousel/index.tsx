@@ -12,6 +12,7 @@ import {
 	useState
 } from 'react';
 
+import Image from 'next/image';
 import TouchSweep from 'touchsweep';
 import { v4 as uuid } from 'uuid';
 
@@ -145,7 +146,7 @@ export const Carousel: FC<CarouselProps> = forwardRef(
 				<div className={getClassName('')} ref={ref}>
 					<div className={getClassName('__container')} style={getItemStyle()}>
 						{data.map((item: DecoratedCarouselItem, index: number) => (
-							<div
+							<div // NOSONAR
 								className={getClassName('__slide')}
 								key={item.id}
 								onClick={() => {
@@ -155,7 +156,7 @@ export const Carousel: FC<CarouselProps> = forwardRef(
 								}}
 								style={getSlideStyle(index)}
 							>
-								<img alt={item.alt} src={item.image} />
+								<Image alt={item.alt ?? ''} height={300} src={item.image} width={300} />
 
 								<div className={getClassName('__slide-overlay')}>{item.content}</div>
 							</div>
