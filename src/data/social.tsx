@@ -1,7 +1,9 @@
+import { ReactNode } from 'react';
+
 import { ExternalLink } from '@components';
 
 export type SocialItem = {
-	element: JSX.Element;
+	element: ReactNode;
 	index: number;
 	title: string;
 };

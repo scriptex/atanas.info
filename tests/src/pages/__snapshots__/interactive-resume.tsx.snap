@@ -614,9 +614,9 @@ exports[`InteractiveResume component Should render the InteractiveResume compone
             </h3>
             <codersrank-activity
               branding="false"
-              labels="true"
-              legend="true"
-              tooltip="true"
+              labels=""
+              legend=""
+              tooltip=""
               username="scriptex"
             />
           </div>
@@ -630,7 +630,7 @@ exports[`InteractiveResume component Should render the InteractiveResume compone
               branding="false"
               certificates-section-title="Certificates"
               education-section-title="Schools"
-              grid="true"
+              grid=""
               username="scriptex"
             />
           </div>
@@ -642,7 +642,7 @@ exports[`InteractiveResume component Should render the InteractiveResume compone
             </h3>
             <codersrank-portfolio
               branding="false"
-              grid="true"
+              grid=""
               username="scriptex"
             />
           </div>
@@ -654,9 +654,9 @@ exports[`InteractiveResume component Should render the InteractiveResume compone
             </h3>
             <codersrank-skills-chart
               branding="false"
-              labels="true"
-              legend="true"
-              tooltip="true"
+              labels=""
+              legend=""
+              tooltip=""
               username="scriptex"
             />
           </div>
@@ -678,8 +678,8 @@ exports[`InteractiveResume component Should render the InteractiveResume compone
             </h3>
             <codersrank-work-experience
               branding="false"
-              grid="true"
-              logos="true"
+              grid=""
+              logos=""
               username="scriptex"
             />
           </div>
@@ -873,7 +873,6 @@ exports[`InteractiveResume component Should render the InteractiveResume compone
       <input
         name="field"
         type="hidden"
-        value=""
       />
       <div
         class="c-contact__actions"
@@ -2358,7 +2357,6 @@ exports[`Tests the Interactive resume page when offline 1`] = `
       <input
         name="field"
         type="hidden"
-        value=""
       />
       <div
         class="c-contact__actions"

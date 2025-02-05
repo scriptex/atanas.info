@@ -166,7 +166,7 @@ it('Test the GithubStats page with fake timers', async () => {
 
 	const { asFragment } = await test(GithubStatsComponent);
 
-	act(() => jest.runOnlyPendingTimers());
+	await act(async () => jest.runOnlyPendingTimers());
 
 	expect(asFragment()).toMatchSnapshot();
 });

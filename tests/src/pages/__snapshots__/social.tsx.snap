@@ -711,7 +711,6 @@ exports[`Social component Should render the Social component 1`] = `
                 Codersrank Profile
               </h3>
               <codersrank-widget
-                branding="false"
                 username="scriptex"
               />
             </div>
@@ -1212,7 +1211,6 @@ exports[`Social component Should render the Social component 1`] = `
       <input
         name="field"
         type="hidden"
-        value=""
       />
       <div
         class="c-contact__actions"
@@ -2806,7 +2804,6 @@ exports[`Tests the Social page when offline 1`] = `
       <input
         name="field"
         type="hidden"
-        value=""
       />
       <div
         class="c-contact__actions"
