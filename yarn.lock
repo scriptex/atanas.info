@@ -1176,10 +1176,10 @@
   resolved "https://registry.yarnpkg.com/@codersrank/work-experience/-/work-experience-0.9.8.tgz#2f00ae781c1e4efbde28e0a2b5c4cf60f5f8c421"
   integrity sha512-DTgDb05dLFkqr4U+TEgz1Xg4SGHHInSe8nrMrkItFRR2vkhe4kypJAAPCwYO0WiXBTIzs+r9vFJTlnKKoVjlug==
 
-"@contentful/content-source-maps@^0.11.7":
-  version "0.11.7"
-  resolved "https://registry.yarnpkg.com/@contentful/content-source-maps/-/content-source-maps-0.11.7.tgz#ddb494bdfeeab74169f95eca1dff2a1e7b88c2b6"
-  integrity sha512-f+AVIM/Z+AmCagM+9hDUhhT63WVFJurbqHhzul8KVyPNIJLaUHAfMns+nxgEKCPRtef+rCk7ufaZ3HEUS1ssYQ==
+"@contentful/content-source-maps@^0.11.8":
+  version "0.11.8"
+  resolved "https://registry.yarnpkg.com/@contentful/content-source-maps/-/content-source-maps-0.11.8.tgz#31dc2ab03b43854824ce8e860ed1c3a1957153f0"
+  integrity sha512-y1CKBGndtOWDgiGcKkckcz13SvSD3hKWMDf5vueNSzQ8/0ajXo4WQSPwLVNKc94pxu7qqBOVlgms/U8lU/zqYg==
   dependencies:
     "@vercel/stega" "^0.1.2"
     json-pointer "^0.6.2"
@@ -4727,12 +4727,12 @@ contentful-sdk-core@^9.0.1:
   optionalDependencies:
     "@rollup/rollup-linux-x64-gnu" "^4.18.0"
 
-contentful@11.4.6:
-  version "11.4.6"
-  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.4.6.tgz#a7bceaf0525d840d280ba7e6858ddf3c767c268a"
-  integrity sha512-e+jnVTIBDvahn9xR7qndgCKYZi/iig8BaP9CK/mzBWi5F9iad+fZDmV2N5J0aj9qJtDrgDjIt3OgYHuWOpVBWA==
+contentful@11.5.0:
+  version "11.5.0"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.5.0.tgz#33a1e2dd17abbab62afca7952b6647d17c6c1133"
+  integrity sha512-rK+sG4XWzM5x6blv5gkGBR5XsWPKcl3kCvi2/EMVgrlWiWKW1lG6gDEY8n6NcQY1TCYm2S8pBU14RKMd0e8OSg==
   dependencies:
-    "@contentful/content-source-maps" "^0.11.7"
+    "@contentful/content-source-maps" "^0.11.8"
     "@contentful/rich-text-types" "^16.6.1"
     axios "^1.7.9"
     contentful-resolve-response "^1.9.0"
