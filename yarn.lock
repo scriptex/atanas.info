@@ -2499,46 +2499,46 @@
     lodash "^4.17.21"
     request "^2.81.0"
 
-"@serwist/build@9.0.11":
-  version "9.0.11"
-  resolved "https://registry.yarnpkg.com/@serwist/build/-/build-9.0.11.tgz#3283917e88407b6da5966f9255126ab12e1f0588"
-  integrity sha512-mYBBpm6hWN40J/Sj2aNncVgl/o7Ch/CfyHHl3XvEecbowRuJNv8BfIch+Tvwlfd1cqBqNc65kCYvCL2XJms8DA==
+"@serwist/build@9.0.12":
+  version "9.0.12"
+  resolved "https://registry.yarnpkg.com/@serwist/build/-/build-9.0.12.tgz#82089e9d4eda141b518e34f1d8ac2321e015787b"
+  integrity sha512-hGWhaPw6HyQ/Jow7AcKzqhA58OQKvjdGVBqkaAPdxAD6V4ahF2qXfW+FBYHI4Xu6XT8miGTo96TNkCoq1BJlOw==
   dependencies:
     common-tags "1.8.2"
     glob "10.4.5"
     pretty-bytes "6.1.1"
     source-map "0.8.0-beta.0"
-    zod "3.23.8"
+    zod "3.24.2"
 
-"@serwist/next@9.0.11":
-  version "9.0.11"
-  resolved "https://registry.yarnpkg.com/@serwist/next/-/next-9.0.11.tgz#91c73f05e4ecdb876779caf0f220e7fdddbb37b5"
-  integrity sha512-Aa26qgJxnaxbGK8JYAWqAPeDcyfu0xjYUPpvSfc3d9GrIl9G9cdflkcsvcbmJGnOb3Oc4tHN4wncYO6cIKb2wQ==
+"@serwist/next@9.0.12":
+  version "9.0.12"
+  resolved "https://registry.yarnpkg.com/@serwist/next/-/next-9.0.12.tgz#49fc70970634fab53db28c9e46ba8bdb8c3e4073"
+  integrity sha512-hQU4RLbgIT2CuIv/HEZjJx+I34npUvK99CcL+rUnyozviUw8OupxbmFm6GvohWhkSrsDJMedTiTDECcxhn+nFA==
   dependencies:
-    "@serwist/build" "9.0.11"
-    "@serwist/webpack-plugin" "9.0.11"
-    "@serwist/window" "9.0.11"
-    chalk "5.3.0"
+    "@serwist/build" "9.0.12"
+    "@serwist/webpack-plugin" "9.0.12"
+    "@serwist/window" "9.0.12"
+    chalk "5.4.1"
     glob "10.4.5"
-    serwist "9.0.11"
-    zod "3.23.8"
+    serwist "9.0.12"
+    zod "3.24.2"
 
-"@serwist/webpack-plugin@9.0.11":
-  version "9.0.11"
-  resolved "https://registry.yarnpkg.com/@serwist/webpack-plugin/-/webpack-plugin-9.0.11.tgz#f8322897863b8f09a24fe861d1414efe066bf5a6"
-  integrity sha512-ZTxVJqv7nKlPWmhC3oMt7tZc0ssnd7SYr6L8zZLLF7ltJUub9TMyh1K1zL5TJtsr8DyfALNFPwPA/s2yjYSk+w==
+"@serwist/webpack-plugin@9.0.12":
+  version "9.0.12"
+  resolved "https://registry.yarnpkg.com/@serwist/webpack-plugin/-/webpack-plugin-9.0.12.tgz#1dcfa72757dccaec51eee30a052121f9f6f33965"
+  integrity sha512-qpVnTI1ww8MHSVUYUtrnCXQ8QdgFLUlGwVo6iTd38jZxhdzxCqFZZceWGVvL6aGCVduKIoghDsAcFLICSEWbYw==
   dependencies:
-    "@serwist/build" "9.0.11"
+    "@serwist/build" "9.0.12"
     pretty-bytes "6.1.1"
-    zod "3.23.8"
+    zod "3.24.2"
 
-"@serwist/window@9.0.11":
-  version "9.0.11"
-  resolved "https://registry.yarnpkg.com/@serwist/window/-/window-9.0.11.tgz#3723328bec711c59a7a6e19a4e3b9d07cbc81491"
-  integrity sha512-hUJVNxZbqfnJbUTfuJew7SR3f1KBIv/4nwmP1YRxjR6EMthUfN4bVSLzWLW8/u3h5bNaVh7sOhopUVC8m1HTCQ==
+"@serwist/window@9.0.12":
+  version "9.0.12"
+  resolved "https://registry.yarnpkg.com/@serwist/window/-/window-9.0.12.tgz#271bf8dd9ded60e978d064763de64d3d8c1db8a8"
+  integrity sha512-Yy6j2iBpk9b0gSa9tAklsHUp+nJu36OCxH8Oj+mxIeHJ/Z8KvPWtamfesiq2Pzz/6m1gFldmwm+C/tB5UN+ppw==
   dependencies:
     "@types/trusted-types" "2.0.7"
-    serwist "9.0.11"
+    serwist "9.0.12"
 
 "@sinclair/typebox@^0.27.8":
   version "0.27.8"
@@ -4521,10 +4521,10 @@ chalk@4.1.2, chalk@^4.0.0, chalk@^4.0.2, chalk@^4.1.0, chalk@^4.1.2:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chalk@5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/chalk/-/chalk-5.3.0.tgz#67c20a7ebef70e7f3970a01f90fa210cb6860385"
-  integrity sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==
+chalk@5.4.1:
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-5.4.1.tgz#1b48bf0963ec158dce2aacf69c093ae2dd2092d8"
+  integrity sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==
 
 chalk@^1.0.0, chalk@^1.1.3:
   version "1.1.3"
@@ -7337,10 +7337,10 @@ icss-utils@^5.0.0:
   resolved "https://registry.yarnpkg.com/icss-utils/-/icss-utils-5.1.0.tgz#c6be6858abd013d768e98366ae47e25d5887b1ae"
   integrity sha512-soFhflCVWLfRNOPU3iv5Z9VUdT44xFRbzjLsEzSr5AQmgqPMTHdU3PMT1Cf1ssx8fLNJDA1juftYl+PUcv3MqA==
 
-idb@8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/idb/-/idb-8.0.0.tgz#33d7ed894ed36e23bcb542fb701ad579bfaad41f"
-  integrity sha512-l//qvlAKGmQO31Qn7xdzagVPPaHTxXx199MhrAFuVBTPqydcPYBWjkrbv4Y0ktB+GmWOiwHl237UUOrLmQxLvw==
+idb@8.0.2:
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/idb/-/idb-8.0.2.tgz#349af3974281879889e0572bbb231f978b9f3cf0"
+  integrity sha512-CX70rYhx7GDDQzwwQMDwF6kDRQi5vVs6khHUumDrMecBylKkwvZ8HWvKV08AGb7VbpoGCWUQ4aHzNDgoUiOIUg==
 
 ieee754@^1.1.13, ieee754@^1.2.1:
   version "1.2.1"
@@ -11596,12 +11596,12 @@ serialize-javascript@6.0.2, serialize-javascript@^4.0.0, serialize-javascript@^6
   dependencies:
     randombytes "^2.1.0"
 
-serwist@9.0.11:
-  version "9.0.11"
-  resolved "https://registry.yarnpkg.com/serwist/-/serwist-9.0.11.tgz#d6e376a89237b721da7e4c4e9e1409e03b7b9b41"
-  integrity sha512-oUuyOuIFZoj+ZYdwWnPYVsndOw5CoGsTy106mHJ2wxjnz01TrDhg2l26yrsoJek1qT/Doi0pzknYLLXTIFs5og==
+serwist@9.0.12:
+  version "9.0.12"
+  resolved "https://registry.yarnpkg.com/serwist/-/serwist-9.0.12.tgz#bd7e21146da594c9dc29a3406151463f1b522d8a"
+  integrity sha512-u5UIJfG/RwkHtffLzlHAaBjXTHQFkKIGvdLQu/zpCWG3cN/AdMbvmtT7Kx2360wQqfE6infDORMdNTtNXpIpjQ==
   dependencies:
-    idb "8.0.0"
+    idb "8.0.2"
 
 set-function-length@^1.2.2:
   version "1.2.2"
@@ -13326,12 +13326,7 @@ zen-observable@0.8.15:
   resolved "https://registry.yarnpkg.com/zen-observable/-/zen-observable-0.8.15.tgz#96415c512d8e3ffd920afd3889604e30b9eaac15"
   integrity sha512-PQ2PC7R9rslx84ndNBZB/Dkv8V8fZEpk83RLgXtYd0fwUgEjseMn1Dgajh2x6S8QbZAFa9p2qVCEuYZNgve0dQ==
 
-zod@3.23.8:
-  version "3.23.8"
-  resolved "https://registry.yarnpkg.com/zod/-/zod-3.23.8.tgz#e37b957b5d52079769fb8097099b592f0ef4067d"
-  integrity sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==
-
-zod@^3.24.1:
+zod@3.24.2, zod@^3.24.1:
   version "3.24.2"
   resolved "https://registry.yarnpkg.com/zod/-/zod-3.24.2.tgz#8efa74126287c675e92f46871cfc8d15c34372b3"
   integrity sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==
