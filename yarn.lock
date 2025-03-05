@@ -4824,10 +4824,10 @@ contentful-sdk-core@^9.0.1:
   optionalDependencies:
     "@rollup/rollup-linux-x64-gnu" "^4.18.0"
 
-contentful@11.5.3:
-  version "11.5.3"
-  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.5.3.tgz#c6ae4d66a2bd4916d0a3076a15902cc6dc823e53"
-  integrity sha512-cprMvwvV/Nav8ZGkaqlsZv07IXKUeoR4/xnqSnIZeMzHTnrgx3obwqbMhCtVPqnelDIWnKmPJYqEVxLuk1aYBQ==
+contentful@11.5.4:
+  version "11.5.4"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.5.4.tgz#282430bc5f9add6db4cda8f855e4f876a2bfb12c"
+  integrity sha512-RYSAygpIUSgFtM1cYVJKsmtHh7sxjJ8/dfFRFJAevgDV2hmC1XQw8pSNpSA4hTIMB92EqHZyxiDGi1+boQpa9Q==
   dependencies:
     "@contentful/content-source-maps" "^0.11.8"
     "@contentful/rich-text-types" "^16.6.1"
@@ -9373,10 +9373,10 @@ mongodb-connection-string-url@^3.0.0:
     "@types/whatwg-url" "^11.0.2"
     whatwg-url "^14.1.0 || ^13.0.0"
 
-mongodb@6.14.1:
-  version "6.14.1"
-  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-6.14.1.tgz#ab1084c00eba5f736b9ac8a93055d7d3ad0725a8"
-  integrity sha512-GnHWIm4GtgREkssWRv9vYKNvqwbLd8WL5hCW3nCqzI2OxEZ6Q5g6vc3J6L1Grz0x1hx1wmYAprLlRr3kzBLcJg==
+mongodb@6.14.2:
+  version "6.14.2"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-6.14.2.tgz#56533105e62ce795cd10a205a6374ecd8d58ad49"
+  integrity sha512-kMEHNo0F3P6QKDq17zcDuPeaywK/YaJVCEQRzPF3TOM/Bl9MFg64YE5Tu7ifj37qZJMhwU1tl2Ioivws5gRG5Q==
   dependencies:
     "@mongodb-js/saslprep" "^1.1.9"
     bson "^6.10.3"
