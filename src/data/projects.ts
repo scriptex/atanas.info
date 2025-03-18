@@ -827,6 +827,10 @@ export const personalProjects: SubPage[] = withIndex([
 		url: 'https://eonhome.atanas.info'
 	},
 	{
+		text: 'Energo Pro Alerts',
+		url: 'https://energo-pro-alerts.atanas.info'
+	},
+	{
 		text: 'GA Beacon',
 		url: 'https://ga-beacon.atanas.info'
 	},
