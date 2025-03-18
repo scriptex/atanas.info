@@ -56,6 +56,10 @@ export const openSourceProjectsList = [
 		title: 'scriptex/deno-rest-api'
 	},
 	{
+		url: '/portfolio/open-source/energo-pro-alerts',
+		title: 'scriptex/energo-pro-alerts'
+	},
+	{
 		url: '/portfolio/open-source/Evolution',
 		title: 'scriptex/Evolution'
 	},
