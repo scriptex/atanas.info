@@ -1,3 +1,7 @@
+# Running multiple Webpack based applications simultaneously
+
+[![Written By a Human Being](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/scriptex/written-by-a-human-being/main/badge.json)](https://github.com/scriptex/written-by-a-human-being)
+
 Today I ran into the following issue: I wanted to run **multiple Webpack based applications simultaneously** and I couldn't find any resources which help accomplish my goal.
 
 My use case is the following: I have a complex front-end application which consists of three sub applications:
@@ -58,7 +62,7 @@ BRAND_ONE=/Users/user/server/projects/brand-one
 BRAND_TWO=/Users/user/server/projects/brand-two
 ```
 
-I added dummy content in the `.env.example` file and the actual paths in the `.env` file. Then I added the `.env` file to my `.gitignore `file because I don't want to push real environmental variables to my remote repository.
+I added dummy content in the `.env.example` file and the actual paths in the `.env` file. Then I added the `.env` file to my `.gitignore` file because I don't want to push real environmental variables to my remote repository.
 
 Then I created an `index.js` file in the root of my project and updated the `package.json` file like this:
 

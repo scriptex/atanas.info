@@ -1,5 +1,7 @@
 # The last JSConf in Budapest
 
+[![Written By a Human Being](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/scriptex/written-by-a-human-being/main/badge.json)](https://github.com/scriptex/written-by-a-human-being)
+
 I had the pleasure and the honor to attend the JSConf for Eastern-Middle Europe - [JSConf Budapest](https://jsconfbp.com/) which took place in the beautiful [Urania National Movie Theatre](https://urania-nf.hu/en) in the city center of Budapest, Hungary on 27th and 28th of June, 2024.
 
 JSConf Budapest is one of the many events which happen all over the world. This one aims to be the JavaScript Conference for Eastern-Middle Europe, an area so diverse in culture, people and views. It is a strictly nonprofit, open-sourced and community driven conference for the community of JavaScript, with the purpose to build and educate about new technologies, ideas and culture. You can see more on the [about page](https://jsconfbp.com/about-us).
@@ -40,8 +42,8 @@ She gave us some ideas on what tools to use in order to react at least AA confor
 - [Designing Accessible Color Systems](https://stripe.com/blog/accessible-color-systems) - an article by Stripe
 - Following the semantic coding conventions (e.g. don't use a `<div />` if you need to bind a click handler, rather use a `<button />`)
 - Testing
-  - Manual testing - we just need to make sure that our applications can be used by people who use assistive technology such as keyboards, mice, screen readers, etc
-  - Semi automated - [Accessibility Insights](https://accessibilityinsights.io/) extension or Playwright + Ace Core (or Axe React)
+    - Manual testing - we just need to make sure that our applications can be used by people who use assistive technology such as keyboards, mice, screen readers, etc
+    - Semi automated - [Accessibility Insights](https://accessibilityinsights.io/) extension or Playwright + Ace Core (or Axe React)
 
 ### "Hear! Hear! An Accessibility Tale from a Hearing-Impaired Senior Software Engineer" by [Ante Tomić](https://x.com/antetmc2)
 
@@ -139,16 +141,16 @@ His talk was full of fun stuff so I will try to sum them up below:
 - Using of `<datalist></datalist>` element for autocomplete widgets instead of complex and large JavaScript libraries - [here](https://www.sitepoint.com/html5-datalist-autocomplete/) is an example.
 - Secure and native color picker using `<input type="color" />` - since it is built into the browser, it can pick color from anywhere on the page, including the browser dev tools - [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color) is a link to MDN which explain everything you might need to know.
 - In-page transitions using:
-  - the [`scroll-behavior: smooth`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior) CSS declaration
-  - the [`Element.scrollIntoView()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView) with its `behavior` option set to `smooth`
-  - the `window.scrollTo()` method with its `behavior` option set to `smooth`
-  - the [`:target`](https://developer.mozilla.org/en-US/docs/Web/CSS/:target) CSS pseudo class when scrolling to sections
-  - the [`scroll-margin-top`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-margin-top) CSS property if our header is fixed to the top of the browser
+    - the [`scroll-behavior: smooth`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior) CSS declaration
+    - the [`Element.scrollIntoView()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView) with its `behavior` option set to `smooth`
+    - the `window.scrollTo()` method with its `behavior` option set to `smooth`
+    - the [`:target`](https://developer.mozilla.org/en-US/docs/Web/CSS/:target) CSS pseudo class when scrolling to sections
+    - the [`scroll-margin-top`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-margin-top) CSS property if our header is fixed to the top of the browser
 - Pure HTML accordion/collapsible widgets using the `<details></details` element and its `<summary></summary>` - [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) is a link to the documentation. There are some limitations on what can be styled and how but it's pretty awesome that HTML and CSS achieve what previously only JavaScript could.
 - The native modal element or the [`<dialog>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog):
-  - using the `::backdrop` pseudo element we can add an overlay which sits between the page and the open modal
-  - it is currently not possible to open a `<dialog>` element without using of JavaScript, so we still need to add a tiny bit of JS to make it work - [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog#javascript) is what I am talking about.
-  - one interesting thing to note is that a `<form method="dialog">` inside a `<dialog>` will close the dialog when submitted.
+    - using the `::backdrop` pseudo element we can add an overlay which sits between the page and the open modal
+    - it is currently not possible to open a `<dialog>` element without using of JavaScript, so we still need to add a tiny bit of JS to make it work - [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog#javascript) is what I am talking about.
+    - one interesting thing to note is that a `<form method="dialog">` inside a `<dialog>` will close the dialog when submitted.
 - Container queries (`@container`) - these queries allow us to style an element based on its container width and not based on the window width - [here](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries) is the documentation.
 - The `:has()` (parent selector) - it allows us to add styles to an element based on its children - this is a game changer for all frontend developers - a lot of JavaScript can be deleted now because of this selector. Read more about it [here](https://developer.mozilla.org/en-US/docs/Web/CSS/:has).
 - [`field-sizing: content`](https://developer.mozilla.org/en-US/docs/Web/CSS/field-sizing) which (at the time of writing) is not widely supported but this will probably change soon. It allows us to set size a textarea based on its content! How awesome is this?
@@ -267,7 +269,7 @@ Our infrastructure firewalls should be as strict as possible:
 - Set rate limits
 - Consider outbound limits
 - Don’t forget IPv6
-- Check firewall strength with "nmap -p- <hostname>"
+- Check firewall strength with `nmap -p- <hostname>`
 
 It is important to answer the question "Do I need SSH access?" and if the answer is no, simply block all SSH access.
 
@@ -280,18 +282,18 @@ We should:
 - use up-to-date sofware
 - install OS updates as soon as we can
 - automate these OS updates because most of them will be in containers living outside of our own computer
-  - Unattended-upgrades on ubuntu/Debian
-  - RedHat yum-cron
+    - Unattended-upgrades on ubuntu/Debian
+    - RedHat yum-cron
 - Windows Update & Defender
 
 Our services should be configured too. We can use tools to check if we did our job well. For example the [Mozilla SSL config](https://ssl-config.mozilla.org)
 
 - the web server should
-  - have TLS config
-  - use Security headers
+    - have TLS config
+    - use Security headers
 - the database / cache / queue server
-  - should not be accessible from outside
-  - should not be listening on all interfaces: 0.0.0.0, ….
+    - should not be accessible from outside
+    - should not be listening on all interfaces: 0.0.0.0, ….
 
 When it comes to Security Headers, we should consider the following:
 
@@ -363,9 +365,9 @@ Keren's talk was based on her [Medium blog post](https://medium.com/@KerenKenzi/
 - [Principle of Proximity](https://www.nngroup.com/articles/gestalt-proximity/) - close objects are perceived as grouped together
 - Items are also perceived as grouped if they share similar properties - colors, font sizes, fonts
 - In order to bring attention (focusing on certain objects, ignoring the rest)
-  - Outline or highlight certain elements
-  - Use big fonts
-  - Use different colors
+    - Outline or highlight certain elements
+    - Use big fonts
+    - Use different colors
 - People tend to remember better the first and the last thing in a list or sequence
 - Use tagging to highlight important parts (e.g. recommended plan)
 - Offer less options to choose from
@@ -401,7 +403,7 @@ He talked about Genetic programming (GP) and Genetic Algorithms (GA) and explain
 - Evolving game strategies
 - Scheduling problems
 - Complex hardware design
-  - ST5 by NASA included Evolved Antenna which is designed by a GA running on a supercomputer (ST5-33-142-7 Antenna)
+    - ST5 by NASA included Evolved Antenna which is designed by a GA running on a supercomputer (ST5-33-142-7 Antenna)
 
 There are several states of GA:
 
