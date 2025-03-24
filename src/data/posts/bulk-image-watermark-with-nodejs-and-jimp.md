@@ -1,3 +1,7 @@
+# Bulk image watermark with NodeJS and Jimp
+
+[![Written By a Human Being](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/scriptex/written-by-a-human-being/main/badge.json)](https://github.com/scriptex/written-by-a-human-being)
+
 It's been almost two months since I released Mama Culinar - my wife's culinary blog which is based on WordPress. Yesterday I got a new challenging request from her - she wanted to have a watermark on the images attached to recipes.
 
 Now you will say that there are many plugins out there which help you do exactly this but when I checked, most of them were outdated - they weren't tested with the past three versions of WordPress or had too negative reviews.

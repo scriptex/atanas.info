@@ -1,3 +1,7 @@
+# Testing WebSockets with Cypress
+
+[![Written By a Human Being](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/scriptex/written-by-a-human-being/main/badge.json)](https://github.com/scriptex/written-by-a-human-being)
+
 The application I am building relies and uses heavily live data provided via [SSE (Server Sent Events)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) and [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API).
 
 Both live data streams require authentication in order to provide the correct data to the end user. This is relatively simple to achieve with the EventSource API but the WebSockets API does not provide this out-of-the-box. In order to authenticate the WebSocket connection, we must use a custom protocol which is provided as a second argument to the `WebSocket` constructor.
@@ -36,9 +40,9 @@ The parallel web server is a simple NodeJS server which uses Socket.IO. The serv
 
 The `connectWebSocket` function below accepts three arguments:
 
--   the authentication token which is used to sign the connection requests for SSE and WebSockets on the original backend server
--   the URL for the SSE server
--   the URL for the websocket server
+- the authentication token which is used to sign the connection requests for SSE and WebSockets on the original backend server
+- the URL for the SSE server
+- the URL for the websocket server
 
 The URLs can be easily configured as environmental variables but in my case I needed to pass them as arguments.
 

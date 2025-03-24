@@ -1,3 +1,7 @@
+# Polymorphic button component for NextJS
+
+[![Written By a Human Being](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/scriptex/written-by-a-human-being/main/badge.json)](https://github.com/scriptex/written-by-a-human-being)
+
 Today I'd like to show you how to create a (nearly) multi-purpose and reusable `Button` component for React and NextJS (or React Router).
 
 ## Why "nearly"?
