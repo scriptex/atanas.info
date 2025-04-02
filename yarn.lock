@@ -1659,10 +1659,10 @@
   resolved "https://registry.yarnpkg.com/@eslint-community/regexpp/-/regexpp-4.12.1.tgz#cfc6cffe39df390a3841cde2abccf92eaa7ae0e0"
   integrity sha512-CCZCDJuduB9OUkFkY2IgppNZMi2lBQgD2qzwXkEia16cge2pijY/aXi96CJMquDMn3nJdlPV1A5KrJEXwfLNzQ==
 
-"@eslint/compat@1.2.7":
-  version "1.2.7"
-  resolved "https://registry.yarnpkg.com/@eslint/compat/-/compat-1.2.7.tgz#f1a890281631ad27530479420b743dd92626e819"
-  integrity sha512-xvv7hJE32yhegJ8xNAnb62ggiAwTYHBpUCWhRxEj/ksvgDJuSXfoDkBcRYaYNFiJ+jH0IE3K16hd+xXzhBgNbg==
+"@eslint/compat@1.2.8":
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/@eslint/compat/-/compat-1.2.8.tgz#6baa38061ca8850199bf5a322afab34537ba3621"
+  integrity sha512-LqCYHdWL/QqKIJuZ/ucMAv8d4luKGs4oCPgpt8mWztQAtPrHfXKQ/XAUc8ljCHAfJCn6SvkpTcGt5Tsh8saowA==
 
 "@eslint/config-array@^0.19.2":
   version "0.19.2"
@@ -3103,10 +3103,10 @@
   dependencies:
     undici-types "~6.20.0"
 
-"@types/node@22.13.14":
-  version "22.13.14"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.13.14.tgz#70d84ec91013dcd2ba2de35532a5a14c2b4cc912"
-  integrity sha512-Zs/Ollc1SJ8nKUAgc7ivOEdIBM8JAKgrqqUYi2J997JuKO7/tpQC+WCetQ1sypiKCQWHdvdg9wBNpUPEWZae7w==
+"@types/node@22.13.17":
+  version "22.13.17"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.13.17.tgz#9ca6a81a0180cdcfd3719b9cf6c09186756e1754"
+  integrity sha512-nAJuQXoyPj04uLgu+obZcSmsfOenUg6DxPKogeUy6yNCFwWaj5sBF8/G/pNo8EtBJjAfSVgfIlugR/BCOleO+g==
   dependencies:
     undici-types "~6.20.0"
 
@@ -4798,10 +4798,10 @@ contentful-sdk-core@^9.0.1:
   optionalDependencies:
     "@rollup/rollup-linux-x64-gnu" "^4.18.0"
 
-contentful@11.5.11:
-  version "11.5.11"
-  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.5.11.tgz#d2aa8a51d40ef17e02e2b884ec6aeb58f2503513"
-  integrity sha512-aM0wDMou5TuyDTBQaEZ+CxCGqQcaYfBLeFk94RFDeY7vbn+YEG5NNIkIj24+nTk0uJI+TXxOTttL86CGEN99hw==
+contentful@11.5.12:
+  version "11.5.12"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.5.12.tgz#98babab2cd5f78965f24452dc8d01019299b47c7"
+  integrity sha512-kXs4aFXBl7ovWz2D6Q9YuZAC83D10K960Ai4Imbvn6fgMjeKDwkl2n4CDbqtNqh27fSPnOaPw8wgM1+ZhJ8q+Q==
   dependencies:
     "@contentful/content-source-maps" "^0.11.8"
     "@contentful/rich-text-types" "^16.6.1"
