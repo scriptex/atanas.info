@@ -2462,46 +2462,46 @@
     lodash "^4.17.21"
     request "^2.81.0"
 
-"@serwist/build@9.0.13":
-  version "9.0.13"
-  resolved "https://registry.yarnpkg.com/@serwist/build/-/build-9.0.13.tgz#e8c5415aa07486cc5052805d684d1285306e32b2"
-  integrity sha512-Hoc6llxFmnsE8z5Cs95UmRRhRyoNh44OdrMWWPPX8BpW19z0CK/qnBquptjyBIe46jjoOxsPHK0Tt7oZOV4Mbw==
+"@serwist/build@9.0.14":
+  version "9.0.14"
+  resolved "https://registry.yarnpkg.com/@serwist/build/-/build-9.0.14.tgz#d72a9ed9acd9b287b19c9b297b3ec16708047412"
+  integrity sha512-CV8LBBT85c5juyVqodqUUxo9yMFt7LQ3TZUrz0Vzp1XwC+hpggfXfnoMyQfneP1La/85oNjrCxvrvLgp2eCJXQ==
   dependencies:
     common-tags "1.8.2"
     glob "10.4.5"
     pretty-bytes "6.1.1"
     source-map "0.8.0-beta.0"
-    zod "3.24.2"
+    zod "3.24.3"
 
-"@serwist/next@9.0.13":
-  version "9.0.13"
-  resolved "https://registry.yarnpkg.com/@serwist/next/-/next-9.0.13.tgz#25c61ad51fd41c7ff9eb903cffcd45a44f79f0f0"
-  integrity sha512-nI2N4oSEHJGH0YUsE4m1obPfudO3DZ/pXiHPaisw+28YjgkMqD6ePfhzeHGO07ahPmIUiyHca9VNO8OfarbQ1Q==
+"@serwist/next@9.0.14":
+  version "9.0.14"
+  resolved "https://registry.yarnpkg.com/@serwist/next/-/next-9.0.14.tgz#52427c6d9241681c37b1f13b24da64a1bc31f80c"
+  integrity sha512-6VOKuXbwFAM/V98GJs/FRvzcUvV1HCEACornbsPo5x9tfYI5BYhnaSdPRK5SQvXVIdifigS8Kzh/Dx1g0CpCGw==
   dependencies:
-    "@serwist/build" "9.0.13"
-    "@serwist/webpack-plugin" "9.0.13"
-    "@serwist/window" "9.0.13"
+    "@serwist/build" "9.0.14"
+    "@serwist/webpack-plugin" "9.0.14"
+    "@serwist/window" "9.0.14"
     chalk "5.4.1"
     glob "10.4.5"
-    serwist "9.0.13"
-    zod "3.24.2"
+    serwist "9.0.14"
+    zod "3.24.3"
 
-"@serwist/webpack-plugin@9.0.13":
-  version "9.0.13"
-  resolved "https://registry.yarnpkg.com/@serwist/webpack-plugin/-/webpack-plugin-9.0.13.tgz#dfd4cec0fed5c6ff0e14f7b0ec04330445d9c041"
-  integrity sha512-Z+Eve8dckM2FulRCa7Cj7VCF3EOP7QkRA76tI742olF7J2sYZSm3t9Ex13jDxTMmYiU1AxLq6V6gEMIdRAetVw==
+"@serwist/webpack-plugin@9.0.14":
+  version "9.0.14"
+  resolved "https://registry.yarnpkg.com/@serwist/webpack-plugin/-/webpack-plugin-9.0.14.tgz#fcf13053123ba5879c5ffb4710c608bf83bcb5f6"
+  integrity sha512-2CG7gsq/ZgC0fYbdfIIh3SrXXGRJFYlq0Wrph50ek8SABZccTIUx5QRzGkKaMl3I4ICzPJZyM8HVtz5FocVH2w==
   dependencies:
-    "@serwist/build" "9.0.13"
+    "@serwist/build" "9.0.14"
     pretty-bytes "6.1.1"
-    zod "3.24.2"
+    zod "3.24.3"
 
-"@serwist/window@9.0.13":
-  version "9.0.13"
-  resolved "https://registry.yarnpkg.com/@serwist/window/-/window-9.0.13.tgz#129ec394d9c9ac89a29f5f9740c93add4a7d550f"
-  integrity sha512-Cf3RizPuFInDcLt0P1Y5QzG1sA5mW131/PZfMYE3yBuNUSGNgOQGlYuLdwDOWPHgECYoVb/da8pspdQNKs0O5g==
+"@serwist/window@9.0.14":
+  version "9.0.14"
+  resolved "https://registry.yarnpkg.com/@serwist/window/-/window-9.0.14.tgz#5d33eb9d9c3334e161d688b846ead6e5a469b671"
+  integrity sha512-LjcgdZXDGJ2OmE8zo/ULxvLkaQ3dgjc2SsokZ9azt1Z+WR9Gt3fKiyyKf28us6VuCASPlkYtqsWjg7efNXI6pQ==
   dependencies:
     "@types/trusted-types" "2.0.7"
-    serwist "9.0.13"
+    serwist "9.0.14"
 
 "@sinclair/typebox@^0.27.8":
   version "0.27.8"
@@ -11619,10 +11619,10 @@ serialize-javascript@6.0.2, serialize-javascript@^4.0.0, serialize-javascript@^6
   dependencies:
     randombytes "^2.1.0"
 
-serwist@9.0.13:
-  version "9.0.13"
-  resolved "https://registry.yarnpkg.com/serwist/-/serwist-9.0.13.tgz#8cfd79af02a6c80e2d614a122fc95a54dec18a6f"
-  integrity sha512-BF3bmzYdOVT2lF3iHV0044NqTO6q6GAiqrYpc7L9EPYQXZHOy22WajKaHLvCdvpm2Jpji4SsxUL8/uC1WSCZ5g==
+serwist@9.0.14:
+  version "9.0.14"
+  resolved "https://registry.yarnpkg.com/serwist/-/serwist-9.0.14.tgz#4c64aeaeffb3be86fceb58d45aa7f4d31dff54fc"
+  integrity sha512-vr4uqSeB7NxrAJeneCxhnEDDksovTcVAxkWyse4DFj/OP8UVJkdsSEJlzT94gRu5qrTZxKrb+pFrxsIStfWTWg==
   dependencies:
     idb "8.0.2"
 
@@ -13357,7 +13357,12 @@ zen-observable@0.8.15:
   resolved "https://registry.yarnpkg.com/zen-observable/-/zen-observable-0.8.15.tgz#96415c512d8e3ffd920afd3889604e30b9eaac15"
   integrity sha512-PQ2PC7R9rslx84ndNBZB/Dkv8V8fZEpk83RLgXtYd0fwUgEjseMn1Dgajh2x6S8QbZAFa9p2qVCEuYZNgve0dQ==
 
-zod@3.24.2, zod@^3.24.1:
+zod@3.24.3:
+  version "3.24.3"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.24.3.tgz#1f40f750a05e477396da64438e0e1c0995dafd87"
+  integrity sha512-HhY1oqzWCQWuUqvBFnsyrtZRhyPeR7SUGv+C4+MsisMuVfSPx8HpwWqH8tRahSlt6M3PiFAcoeFhZAqIXTxoSg==
+
+zod@^3.24.1:
   version "3.24.2"
   resolved "https://registry.yarnpkg.com/zod/-/zod-3.24.2.tgz#8efa74126287c675e92f46871cfc8d15c34372b3"
   integrity sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==
