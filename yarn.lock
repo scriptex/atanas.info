@@ -4830,10 +4830,10 @@ contentful-sdk-core@^9.0.1:
   optionalDependencies:
     "@rollup/rollup-linux-x64-gnu" "^4.18.0"
 
-contentful@11.5.17:
-  version "11.5.17"
-  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.5.17.tgz#cabdea155d582eaafefca7dd6267b6eac6291348"
-  integrity sha512-XTxAKxnFHmIkoeIqOj3wHyb/S95ZcGJrajB9kssLoa6V9eAt7gAuQMo5V6AO4+p2EUGe9Bjwf4Oe5rhfC8hteQ==
+contentful@11.5.18:
+  version "11.5.18"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.5.18.tgz#5562c1040a4d95d5a434c869e126168765f00bcd"
+  integrity sha512-KdzZ9YcGky5ZFBjVYX77+GUgA6xboDERZU9S0/bK9XONtTMIOKAFU7tgXHDDEJZwq08zvEx2XSjdvH6TiD6Zew==
   dependencies:
     "@contentful/content-source-maps" "^0.11.8"
     "@contentful/rich-text-types" "^16.6.1"
@@ -12688,10 +12688,10 @@ tsutils@3, tsutils@^3.21.0:
   dependencies:
     tslib "^1.8.1"
 
-tsx@4.19.3:
-  version "4.19.3"
-  resolved "https://registry.yarnpkg.com/tsx/-/tsx-4.19.3.tgz#2bdbcb87089374d933596f8645615142ed727666"
-  integrity sha512-4H8vUNGNjQ4V2EOoGw005+c+dGuPSnhpPBPHBtsZdGZBk/iJb4kguGlPWaZTZ3q5nMtFOEsY0nRDlh9PJyd6SQ==
+tsx@4.19.4:
+  version "4.19.4"
+  resolved "https://registry.yarnpkg.com/tsx/-/tsx-4.19.4.tgz#647b4141f4fdd9d773a9b564876773d2846901f4"
+  integrity sha512-gK5GVzDkJK1SI1zwHf32Mqxf2tSJkNx+eYcNly5+nHvWqXUJYUkWBQtKauoESz3ymezAI++ZwT855x5p5eop+Q==
   dependencies:
     esbuild "~0.25.0"
     get-tsconfig "^4.7.5"
