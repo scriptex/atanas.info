@@ -133,7 +133,7 @@ export const projects: WebProject[] = withIndex([
 	{
 		description: 'HTML5, SVG, CSS3, Javascript, React, Styled Components',
 		image: '/images/web-apps/Kinetik-Electric-Karting-Championship.jpg',
-		skip: false,
+		skip: true,
 		title: 'Kinetik Electric Karting Championship',
 		url: 'https://kinetik-championship.com/'
 	},
