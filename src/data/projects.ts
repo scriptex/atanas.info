@@ -133,7 +133,7 @@ export const projects: WebProject[] = withIndex([
 	{
 		description: 'HTML5, SVG, CSS3, Javascript, React, Styled Components',
 		image: '/images/web-apps/Kinetik-Electric-Karting-Championship.jpg',
-		skip: false,
+		skip: true,
 		title: 'Kinetik Electric Karting Championship',
 		url: 'https://kinetik-championship.com/'
 	},
@@ -266,7 +266,7 @@ export const projects: WebProject[] = withIndex([
 	{
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
 		image: '/images/web-apps/mario-pricken.jpg',
-		skip: false,
+		skip: true,
 		title: 'Mario Pricken',
 		url: 'https://www.mariopricken.com/'
 	},
@@ -397,6 +397,13 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://amazingdecisionsbook.com/he/'
 	},
 	{
+		description: 'HTML, SVG, SCSS, PostCSS, Javascript, Webpack',
+		image: '/images/web-apps/The-(Honest)-Truth-About-Dishonesty-(Hebrew-version).jpg',
+		skip: false,
+		title: 'The (Honest) Truth About Dishonesty (Hebrew version)',
+		url: 'https://thehonesttruthaboutdishonesty.com/he/'
+	},
+	{
 		description: 'HTML, SVG, SCSS, PostCSS, Javascript, Swiper, Webpack',
 		image: '/images/web-apps/Payoff-(Hebrew-version).jpg',
 		skip: false,
@@ -448,7 +455,7 @@ export const projects: WebProject[] = withIndex([
 	{
 		description: 'HTML5, CSS3, Javascript, jQuery, PHP, WordPress',
 		image: '/images/web-apps/RoomGo-Blog.jpg',
-		skip: false,
+		skip: true,
 		title: 'RoomGo Blog',
 		url: 'https://www.roomgo.com.ar/blog/'
 	},
@@ -481,6 +488,13 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://misbeliefbook.com/'
 	},
 	{
+		description: 'Typescript, SCSS, SVG, React, Next.js, NodeJS, Swiper',
+		image: '/images/web-apps/Misbelief-(Hebrew-version).jpg',
+		skip: false,
+		title: 'Misbelief (Hebrew version)',
+		url: 'https://misbeliefbook.com/hebrew'
+	},
+	{
 		description: "Dan Ariely's MIT page - HTML, SVG, SCSS",
 		image: '/images/web-apps/Dan-Ariely-MIT.jpg',
 		skip: false,
@@ -490,21 +504,21 @@ export const projects: WebProject[] = withIndex([
 	{
 		description: 'Typescript, SVG, React, Next.js, Emotion',
 		image: '/images/web-apps/Kinetik-STEAM-Education-Kit.jpg',
-		skip: false,
+		skip: true,
 		title: 'Kinetik STEAM Education Kit',
 		url: 'https://edukartgo.com'
 	},
 	{
 		description: 'HTML5, SVG, CSS3, Javascript, React, Styled Components',
 		image: '/images/web-apps/Kinetik-Electric-Karting-Championship.jpg',
-		skip: false,
+		skip: true,
 		title: 'Kinetik Electric Karting Championship',
 		url: 'https://kinetik-e.com/'
 	},
 	{
 		description: 'HTML5, SVG, CSS3, Javascript, jQuery',
 		image: '/images/web-apps/htmlBurger.jpg',
-		skip: false,
+		skip: true,
 		text: 'Built in collaboration with the htmlBurger team',
 		title: 'htmlBurger',
 		url: 'https://htmlburger.com/'
@@ -512,7 +526,7 @@ export const projects: WebProject[] = withIndex([
 	{
 		description: 'HTML5, SVG, CSS3, Javascript, jQuery',
 		image: '/images/web-apps/htmlBoutique.jpg',
-		skip: false,
+		skip: true,
 		text: 'Built in collaboration with the htmlBoutique team',
 		title: 'htmlBoutique',
 		url: 'https://htmlboutique.com/'
@@ -528,7 +542,7 @@ export const projects: WebProject[] = withIndex([
 	{
 		description: 'HTML5, SVG, CSS3, Javascript, jQuery',
 		image: '/images/web-apps/Mail-Bakery.jpg',
-		skip: false,
+		skip: true,
 		text: 'Built in collaboration with the Mail Bakery team',
 		title: 'Mail Bakery',
 		url: 'https://mailbakery.com/'
