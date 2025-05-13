@@ -448,7 +448,7 @@ export const projects: WebProject[] = withIndex([
 	{
 		description: 'HTML5, CSS3, Javascript, jQuery, PHP, WordPress',
 		image: '/images/web-apps/RoomGo-Blog.jpg',
-		skip: false,
+		skip: true,
 		title: 'RoomGo Blog',
 		url: 'https://www.roomgo.com.ar/blog/'
 	},
