@@ -397,6 +397,13 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://amazingdecisionsbook.com/he/'
 	},
 	{
+		description: 'HTML, SVG, SCSS, PostCSS, Javascript, Webpack',
+		image: '/images/web-apps/The-Honest-Truth-About-Dishonesty-(Hebrew-version).jpg',
+		skip: false,
+		title: 'The Honest Truth About Dishonesty (Hebrew version)',
+		url: 'https://thehonesttruthaboutdishonesty.com/he/'
+	},
+	{
 		description: 'HTML, SVG, SCSS, PostCSS, Javascript, Swiper, Webpack',
 		image: '/images/web-apps/Payoff-(Hebrew-version).jpg',
 		skip: false,
@@ -481,6 +488,13 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://misbeliefbook.com/'
 	},
 	{
+		description: 'Typescript, SCSS, SVG, React, Next.js, NodeJS, Swiper',
+		image: '/images/web-apps/Misbelief-(Hebrew-version).jpg',
+		skip: false,
+		title: 'Misbelief (Hebrew version)',
+		url: 'https://misbeliefbook.com/hebrew'
+	},
+	{
 		description: "Dan Ariely's MIT page - HTML, SVG, SCSS",
 		image: '/images/web-apps/Dan-Ariely-MIT.jpg',
 		skip: false,
@@ -497,7 +511,7 @@ export const projects: WebProject[] = withIndex([
 	{
 		description: 'HTML5, SVG, CSS3, Javascript, React, Styled Components',
 		image: '/images/web-apps/Kinetik-Electric-Karting-Championship.jpg',
-		skip: false,
+		skip: true,
 		title: 'Kinetik Electric Karting Championship',
 		url: 'https://kinetik-e.com/'
 	},
