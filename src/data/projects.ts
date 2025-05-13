@@ -490,7 +490,7 @@ export const projects: WebProject[] = withIndex([
 	{
 		description: 'Typescript, SVG, React, Next.js, Emotion',
 		image: '/images/web-apps/Kinetik-STEAM-Education-Kit.jpg',
-		skip: false,
+		skip: true,
 		title: 'Kinetik STEAM Education Kit',
 		url: 'https://edukartgo.com'
 	},
