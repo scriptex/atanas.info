@@ -398,9 +398,9 @@ export const projects: WebProject[] = withIndex([
 	},
 	{
 		description: 'HTML, SVG, SCSS, PostCSS, Javascript, Webpack',
-		image: '/images/web-apps/The-Honest-Truth-About-Dishonesty-(Hebrew-version).jpg',
+		image: '/images/web-apps/The-(Honest)-Truth-About-Dishonesty-(Hebrew-version).jpg',
 		skip: false,
-		title: 'The Honest Truth About Dishonesty (Hebrew version)',
+		title: 'The (Honest) Truth About Dishonesty (Hebrew version)',
 		url: 'https://thehonesttruthaboutdishonesty.com/he/'
 	},
 	{
@@ -518,7 +518,7 @@ export const projects: WebProject[] = withIndex([
 	{
 		description: 'HTML5, SVG, CSS3, Javascript, jQuery',
 		image: '/images/web-apps/htmlBurger.jpg',
-		skip: false,
+		skip: true,
 		text: 'Built in collaboration with the htmlBurger team',
 		title: 'htmlBurger',
 		url: 'https://htmlburger.com/'
@@ -526,7 +526,7 @@ export const projects: WebProject[] = withIndex([
 	{
 		description: 'HTML5, SVG, CSS3, Javascript, jQuery',
 		image: '/images/web-apps/htmlBoutique.jpg',
-		skip: false,
+		skip: true,
 		text: 'Built in collaboration with the htmlBoutique team',
 		title: 'htmlBoutique',
 		url: 'https://htmlboutique.com/'
@@ -542,7 +542,7 @@ export const projects: WebProject[] = withIndex([
 	{
 		description: 'HTML5, SVG, CSS3, Javascript, jQuery',
 		image: '/images/web-apps/Mail-Bakery.jpg',
-		skip: false,
+		skip: true,
 		text: 'Built in collaboration with the Mail Bakery team',
 		title: 'Mail Bakery',
 		url: 'https://mailbakery.com/'
