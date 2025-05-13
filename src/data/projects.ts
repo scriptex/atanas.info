@@ -265,7 +265,7 @@ export const projects: WebProject[] = withIndex([
 	},
 	{
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
-		image: '/images/web-apps/mario-pricken.jpg',
+		image: '/images/web-apps/Mario-Pricken.jpg',
 		skip: true,
 		title: 'Mario Pricken',
 		url: 'https://www.mariopricken.com/'
