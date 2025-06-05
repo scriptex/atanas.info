@@ -19,7 +19,7 @@ it('Test the `postsDirectory` function', () => {
 });
 
 it('Test the `getPostSlugs` function', () => {
-	expect(getPostSlugs(postsFolder)).toHaveLength(6);
+	expect(getPostSlugs(postsFolder)).toHaveLength(7);
 });
 
 it('Test the `getPostBySlug` function', () => {
@@ -35,7 +35,7 @@ it('Test the `getPostBySlug` function', () => {
 it('Test the `getAllPosts` function', () => {
 	const result = getAllPosts(postsFolder, ['slug']);
 
-	expect(result).toHaveLength(6);
+	expect(result).toHaveLength(7);
 
 	for (const item of result) {
 		expect(item.slug).toBeDefined();
