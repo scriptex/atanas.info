@@ -37,5 +37,5 @@ it('Test the `getStaticPaths` function', async () => {
 	expect(result).toBeDefined();
 	expect(result.fallback).toEqual(false);
 	expect(Array.isArray(result.paths)).toEqual(true);
-	expect(result.paths.length).toEqual(5);
+	expect(result.paths.length).toEqual(6);
 });
