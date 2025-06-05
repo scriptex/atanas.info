@@ -24,6 +24,12 @@
 	margin-bottom: 1rem;
 	background-color: var(--color-base);
 
+	& h2,
+	& h3,
+	& h4 {
+		margin-bottom: 1rem;
+	}
+
 	& table {
 		width: 100%;
 		border: 0;
@@ -53,6 +59,15 @@
 	& table,
 	& pre {
 		margin-bottom: 1em;
+	}
+
+	& p {
+		& > img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin: auto;
+		}
 	}
 
 	& ul {
