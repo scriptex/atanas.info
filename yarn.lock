@@ -3122,10 +3122,10 @@
   dependencies:
     undici-types "~6.21.0"
 
-"@types/node@22.15.30":
-  version "22.15.30"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.15.30.tgz#3a20431783e28dd0b0326f84ab386a2ec81d921d"
-  integrity sha512-6Q7lr06bEHdlfplU6YRbgG1SFBdlsfNC4/lX+SkhiTs0cpJkOElmWls8PxDFv4yY/xKb8Y6SO0OmSX4wgqTZbA==
+"@types/node@22.15.31":
+  version "22.15.31"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.15.31.tgz#454f11e2061150135c8353d7f3b3b1823fca9f3f"
+  integrity sha512-jnVe5ULKl6tijxUhvQeNbQG/84fHfg+yMak02cT8QVhBx/F05rAVxCGBYYTh2EKz22D6JF5ktXuNwdx7b9iEGw==
   dependencies:
     undici-types "~6.21.0"
 
@@ -3177,10 +3177,17 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@19.1.6":
+"@types/react@*":
   version "19.1.6"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-19.1.6.tgz#dee39f3e1e9a7d693f156a5840570b6d57f325ea"
   integrity sha512-JeG0rEWak0N6Itr6QUx+X60uQmN+5t3j9r/OVDtWzFXKaj6kD1BwJzOksD0FF6iWxZlbE1kB0q9vtnU2ekqa1Q==
+  dependencies:
+    csstype "^3.0.2"
+
+"@types/react@19.1.7":
+  version "19.1.7"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-19.1.7.tgz#9fc4ab6003a8e4f38710c83cb5f8afbdacb7d687"
+  integrity sha512-BnsPLV43ddr05N71gaGzyZ5hzkCmGwhMvYc8zmvI8Ci1bRkkDSzDDVfAXfN2tk748OwI7ediiPX6PfT9p0QGVg==
   dependencies:
     csstype "^3.0.2"
 
@@ -4898,10 +4905,10 @@ contentful-sdk-core@^9.0.1:
   optionalDependencies:
     "@rollup/rollup-linux-x64-gnu" "^4.18.0"
 
-contentful@11.7.0:
-  version "11.7.0"
-  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.7.0.tgz#e4a9cf9a7e818b08248c0adc140a5d3a0ca359b3"
-  integrity sha512-NvPH10m1uVUiqHCsoOEOc/oQIyGumqW9kwcpXnh26HBdSvv+UVoSoyack84/IfR1a7QmA48wc9K2FvzjH/KTqg==
+contentful@11.7.1:
+  version "11.7.1"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.7.1.tgz#f1c8b8928f1033acdc43d85a3e3d1cd01add9f82"
+  integrity sha512-wcn8ZO4njFRtjkoLSSIMvj5AwW7bKRbtMDTT1IGfCEGVSOndNgIuZU4DmSrYVcUez059pw0G/ACXFa1S3NGk7Q==
   dependencies:
     "@contentful/content-source-maps" "^0.11.8"
     "@contentful/rich-text-types" "^16.6.1"
@@ -11590,10 +11597,10 @@ sass@1.55.0:
     immutable "^4.0.0"
     source-map-js ">=0.6.2 <2.0.0"
 
-sass@1.89.1:
-  version "1.89.1"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.89.1.tgz#9281c52c85b4be54264d310fef63a811dfcfb9d9"
-  integrity sha512-eMLLkl+qz7tx/0cJ9wI+w09GQ2zodTkcE/aVfywwdlRcI3EO19xGnbmJwg/JMIm+5MxVJ6outddLZ4Von4E++Q==
+sass@1.89.2:
+  version "1.89.2"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.89.2.tgz#a771716aeae774e2b529f72c0ff2dfd46c9de10e"
+  integrity sha512-xCmtksBKd/jdJ9Bt9p7nPKiuqrlBMBuuGkQlkhZjjQk3Ty48lv93k5Dq6OPkKt4XwxDJ7tvlfrTa1MPA9bf+QA==
   dependencies:
     chokidar "^4.0.0"
     immutable "^5.0.2"
