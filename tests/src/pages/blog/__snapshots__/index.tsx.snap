@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Blog component Should render the Blog component 1`] = `
 <DocumentFragment>
@@ -562,7 +562,7 @@ exports[`Blog component Should render the Blog component 1`] = `
     <section
       class="c-section c-section--blog c-section--slides fullsize-background"
       id="blog"
-      style="background-image: url(images/temp/articles.jpg);"
+      style="background-image: url("images/temp/articles.jpg");"
     >
       <div
         class="o-shell"
@@ -587,7 +587,7 @@ exports[`Blog component Should render the Blog component 1`] = `
             <a
               class="c-article-link fullsize-background"
               href="https://article.two/"
-              style="background-image: url(https://article.two/image.png);"
+              style="background-image: url("https://article.two/image.png");"
             >
               <strong>
                 Article 2 title

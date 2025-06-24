@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Portfolio component Should render the Portfolio component 1`] = `
 <DocumentFragment>
@@ -586,7 +586,7 @@ exports[`Portfolio component Should render the Portfolio component 1`] = `
             <a
               class="c-article-link fullsize-background"
               href="/portfolio/web-applications"
-              style="background-image: url(/images/temp/web-apps.jpg);"
+              style="background-image: url("/images/temp/web-apps.jpg");"
             >
               <strong>
                 Web applications
@@ -606,7 +606,7 @@ exports[`Portfolio component Should render the Portfolio component 1`] = `
             <a
               class="c-article-link fullsize-background"
               href="/portfolio/mobile-applications"
-              style="background-image: url(/images/temp/mobile-apps.jpg);"
+              style="background-image: url("/images/temp/mobile-apps.jpg");"
             >
               <strong>
                 Mobile applications
@@ -626,7 +626,7 @@ exports[`Portfolio component Should render the Portfolio component 1`] = `
             <a
               class="c-article-link fullsize-background"
               href="/portfolio/automotive-applications"
-              style="background-image: url(/images/temp/automotive-apps.jpg);"
+              style="background-image: url("/images/temp/automotive-apps.jpg");"
             >
               <strong>
                 Automotive applications
@@ -646,7 +646,7 @@ exports[`Portfolio component Should render the Portfolio component 1`] = `
             <a
               class="c-article-link fullsize-background"
               href="/portfolio/email-templates"
-              style="background-image: url(/images/temp/email-templates.jpeg);"
+              style="background-image: url("/images/temp/email-templates.jpeg");"
             >
               <strong>
                 Email templates
@@ -666,7 +666,7 @@ exports[`Portfolio component Should render the Portfolio component 1`] = `
             <a
               class="c-article-link fullsize-background"
               href="/portfolio/personal-projects"
-              style="background-image: url(/images/temp/personal-apps.jpg);"
+              style="background-image: url("/images/temp/personal-apps.jpg");"
             >
               <strong>
                 Personal projects
@@ -686,7 +686,7 @@ exports[`Portfolio component Should render the Portfolio component 1`] = `
             <a
               class="c-article-link fullsize-background"
               href="/portfolio/open-source"
-              style="background-image: url(/images/temp/open-source.jpg);"
+              style="background-image: url("/images/temp/open-source.jpg");"
             >
               <strong>
                 Open source

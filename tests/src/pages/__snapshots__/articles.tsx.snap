@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Articles component Should render the Articles component 1`] = `
 <DocumentFragment>
@@ -562,7 +562,7 @@ exports[`Articles component Should render the Articles component 1`] = `
     <section
       class="c-section c-section--articles c-section--slides fullsize-background"
       id="articles"
-      style="background-image: url(images/temp/articles.jpg);"
+      style="background-image: url("images/temp/articles.jpg");"
     >
       <div
         class="o-shell"
@@ -588,7 +588,7 @@ exports[`Articles component Should render the Articles component 1`] = `
               class="c-article-link fullsize-background"
               href="https://article.one/"
               rel="noopener noreferrer"
-              style="background-image: url(https://article.one/image.png);"
+              style="background-image: url("https://article.one/image.png");"
               target="_blank"
             >
               <strong>
@@ -1922,7 +1922,7 @@ exports[`Articles component Should render the Articles component 2`] = `
     <section
       class="c-section c-section--articles c-section--slides fullsize-background"
       id="articles"
-      style="background-image: url(images/temp/articles.jpg);"
+      style="background-image: url("images/temp/articles.jpg");"
     >
       <div
         class="o-shell"
@@ -1948,7 +1948,7 @@ exports[`Articles component Should render the Articles component 2`] = `
               class="c-article-link fullsize-background"
               href="https://article.one/"
               rel="noopener noreferrer"
-              style="background-image: url(https://article.one/image.png);"
+              style="background-image: url("https://article.one/image.png");"
               target="_blank"
             >
               <strong>
@@ -3282,7 +3282,7 @@ exports[`Articles component Should render the Articles component 3`] = `
     <section
       class="c-section c-section--articles c-section--slides fullsize-background"
       id="articles"
-      style="background-image: url(images/temp/articles.jpg);"
+      style="background-image: url("images/temp/articles.jpg");"
     >
       <div
         class="o-shell"
@@ -3308,7 +3308,7 @@ exports[`Articles component Should render the Articles component 3`] = `
               class="c-article-link fullsize-background"
               href="https://article.one/"
               rel="noopener noreferrer"
-              style="background-image: url(https://article.one/image.png);"
+              style="background-image: url("https://article.one/image.png");"
               target="_blank"
             >
               <strong>
@@ -4642,7 +4642,7 @@ exports[`Articles component Should render the Articles component 4`] = `
     <section
       class="c-section c-section--articles c-section--slides fullsize-background"
       id="articles"
-      style="background-image: url(images/temp/articles.jpg);"
+      style="background-image: url("images/temp/articles.jpg");"
     >
       <div
         class="o-shell"
@@ -4668,7 +4668,7 @@ exports[`Articles component Should render the Articles component 4`] = `
               class="c-article-link fullsize-background"
               href="https://article.one/"
               rel="noopener noreferrer"
-              style="background-image: url(https://article.one/image.png);"
+              style="background-image: url("https://article.one/image.png");"
               target="_blank"
             >
               <strong>
@@ -6002,7 +6002,7 @@ exports[`Articles component Should render the Articles component 5`] = `
     <section
       class="c-section c-section--articles c-section--slides fullsize-background"
       id="articles"
-      style="background-image: url(images/temp/articles.jpg);"
+      style="background-image: url("images/temp/articles.jpg");"
     >
       <div
         class="o-shell"
@@ -6028,7 +6028,7 @@ exports[`Articles component Should render the Articles component 5`] = `
               class="c-article-link fullsize-background"
               href="https://article.one/"
               rel="noopener noreferrer"
-              style="background-image: url(https://article.one/image.png);"
+              style="background-image: url("https://article.one/image.png");"
               target="_blank"
             >
               <strong>
@@ -7362,7 +7362,7 @@ exports[`Articles component Should render the Articles component 6`] = `
     <section
       class="c-section c-section--articles c-section--slides fullsize-background"
       id="articles"
-      style="background-image: url(images/temp/articles.jpg);"
+      style="background-image: url("images/temp/articles.jpg");"
     >
       <div
         class="o-shell"
@@ -7388,7 +7388,7 @@ exports[`Articles component Should render the Articles component 6`] = `
               class="c-article-link fullsize-background"
               href="https://article.one/"
               rel="noopener noreferrer"
-              style="background-image: url(https://article.one/image.png);"
+              style="background-image: url("https://article.one/image.png");"
               target="_blank"
             >
               <strong>
@@ -8722,7 +8722,7 @@ exports[`Articles component Should render the Articles component 7`] = `
     <section
       class="c-section c-section--articles c-section--slides fullsize-background"
       id="articles"
-      style="background-image: url(images/temp/articles.jpg);"
+      style="background-image: url("images/temp/articles.jpg");"
     >
       <div
         class="o-shell"
@@ -8748,7 +8748,7 @@ exports[`Articles component Should render the Articles component 7`] = `
               class="c-article-link fullsize-background"
               href="https://article.one/"
               rel="noopener noreferrer"
-              style="background-image: url(https://article.one/image.png);"
+              style="background-image: url("https://article.one/image.png");"
               target="_blank"
             >
               <strong>
@@ -10082,7 +10082,7 @@ exports[`Articles component Should render the Articles component 8`] = `
     <section
       class="c-section c-section--articles c-section--slides fullsize-background"
       id="articles"
-      style="background-image: url(images/temp/articles.jpg);"
+      style="background-image: url("images/temp/articles.jpg");"
     >
       <div
         class="o-shell"
@@ -10108,7 +10108,7 @@ exports[`Articles component Should render the Articles component 8`] = `
               class="c-article-link fullsize-background"
               href="https://article.one/"
               rel="noopener noreferrer"
-              style="background-image: url(https://article.one/image.png);"
+              style="background-image: url("https://article.one/image.png");"
               target="_blank"
             >
               <strong>
@@ -11442,7 +11442,7 @@ exports[`Articles component Should render the Articles component 9`] = `
     <section
       class="c-section c-section--articles c-section--slides fullsize-background"
       id="articles"
-      style="background-image: url(images/temp/articles.jpg);"
+      style="background-image: url("images/temp/articles.jpg");"
     >
       <div
         class="o-shell"
@@ -11468,7 +11468,7 @@ exports[`Articles component Should render the Articles component 9`] = `
               class="c-article-link fullsize-background"
               href="https://article.one/"
               rel="noopener noreferrer"
-              style="background-image: url(https://article.one/image.png);"
+              style="background-image: url("https://article.one/image.png");"
               target="_blank"
             >
               <strong>
@@ -12802,7 +12802,7 @@ exports[`Articles component Should render the Articles component 10`] = `
     <section
       class="c-section c-section--articles c-section--slides fullsize-background"
       id="articles"
-      style="background-image: url(images/temp/articles.jpg);"
+      style="background-image: url("images/temp/articles.jpg");"
     >
       <div
         class="o-shell"
@@ -12828,7 +12828,7 @@ exports[`Articles component Should render the Articles component 10`] = `
               class="c-article-link fullsize-background"
               href="https://article.one/"
               rel="noopener noreferrer"
-              style="background-image: url(https://article.one/image.png);"
+              style="background-image: url("https://article.one/image.png");"
               target="_blank"
             >
               <strong>
@@ -14162,7 +14162,7 @@ exports[`Articles component Should render the Articles component 11`] = `
     <section
       class="c-section c-section--articles c-section--slides fullsize-background"
       id="articles"
-      style="background-image: url(images/temp/articles.jpg);"
+      style="background-image: url("images/temp/articles.jpg");"
     >
       <div
         class="o-shell"
@@ -14188,7 +14188,7 @@ exports[`Articles component Should render the Articles component 11`] = `
               class="c-article-link fullsize-background"
               href="https://article.one/"
               rel="noopener noreferrer"
-              style="background-image: url(https://article.one/image.png);"
+              style="background-image: url("https://article.one/image.png");"
               target="_blank"
             >
               <strong>

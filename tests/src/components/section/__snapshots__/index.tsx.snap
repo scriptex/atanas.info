@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Section component Should render the Section component 1`] = `
 <DocumentFragment>
@@ -1650,7 +1650,7 @@ exports[`Section component Should render the Section component 18`] = `
       <a
         class="c-article-link fullsize-background"
         href="/stats/github"
-        style="background-image: url(/images/temp/github.jpg);"
+        style="background-image: url("/images/temp/github.jpg");"
       >
         <strong>
           Github
@@ -1670,7 +1670,7 @@ exports[`Section component Should render the Section component 18`] = `
       <a
         class="c-article-link fullsize-background"
         href="/stats/gitlab"
-        style="background-image: url(/images/temp/gitlab.jpg);"
+        style="background-image: url("/images/temp/gitlab.jpg");"
       >
         <strong>
           Gitlab
@@ -1690,7 +1690,7 @@ exports[`Section component Should render the Section component 18`] = `
       <a
         class="c-article-link fullsize-background"
         href="/stats/npm"
-        style="background-image: url(/images/temp/npm.jpg);"
+        style="background-image: url("/images/temp/npm.jpg");"
       >
         <strong>
           NPM
@@ -1719,7 +1719,7 @@ exports[`Section component Should render the Section component 19`] = `
       <a
         class="c-article-link fullsize-background"
         href="/stats/github"
-        style="background-image: url(/images/temp/github.jpg);"
+        style="background-image: url("/images/temp/github.jpg");"
       >
         <strong>
           Github
@@ -1739,7 +1739,7 @@ exports[`Section component Should render the Section component 19`] = `
       <a
         class="c-article-link fullsize-background"
         href="/stats/gitlab"
-        style="background-image: url(/images/temp/gitlab.jpg);"
+        style="background-image: url("/images/temp/gitlab.jpg");"
       >
         <strong>
           Gitlab
@@ -1759,7 +1759,7 @@ exports[`Section component Should render the Section component 19`] = `
       <a
         class="c-article-link fullsize-background"
         href="/stats/npm"
-        style="background-image: url(/images/temp/npm.jpg);"
+        style="background-image: url("/images/temp/npm.jpg");"
       >
         <strong>
           NPM
@@ -1789,7 +1789,7 @@ exports[`Section component Should render the Section component 20`] = `
         class="c-article-link fullsize-background"
         href="/stats/github"
         rel="noopener noreferrer"
-        style="background-image: url(/images/temp/github.jpg);"
+        style="background-image: url("/images/temp/github.jpg");"
         target="_blank"
       >
         <strong>
@@ -1818,7 +1818,7 @@ exports[`Section component Should render the Section component 20`] = `
         class="c-article-link fullsize-background"
         href="/stats/gitlab"
         rel="noopener noreferrer"
-        style="background-image: url(/images/temp/gitlab.jpg);"
+        style="background-image: url("/images/temp/gitlab.jpg");"
         target="_blank"
       >
         <strong>
@@ -1847,7 +1847,7 @@ exports[`Section component Should render the Section component 20`] = `
         class="c-article-link fullsize-background"
         href="/stats/npm"
         rel="noopener noreferrer"
-        style="background-image: url(/images/temp/npm.jpg);"
+        style="background-image: url("/images/temp/npm.jpg");"
         target="_blank"
       >
         <strong>

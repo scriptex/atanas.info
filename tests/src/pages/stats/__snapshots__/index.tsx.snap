@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Stats component Should render the Stats component 1`] = `
 <DocumentFragment>
@@ -586,7 +586,7 @@ exports[`Stats component Should render the Stats component 1`] = `
             <a
               class="c-article-link fullsize-background"
               href="/stats/github"
-              style="background-image: url(/images/temp/github.jpg);"
+              style="background-image: url("/images/temp/github.jpg");"
             >
               <strong>
                 Github
@@ -606,7 +606,7 @@ exports[`Stats component Should render the Stats component 1`] = `
             <a
               class="c-article-link fullsize-background"
               href="/stats/gitlab"
-              style="background-image: url(/images/temp/gitlab.jpg);"
+              style="background-image: url("/images/temp/gitlab.jpg");"
             >
               <strong>
                 Gitlab
@@ -626,7 +626,7 @@ exports[`Stats component Should render the Stats component 1`] = `
             <a
               class="c-article-link fullsize-background"
               href="/stats/npm"
-              style="background-image: url(/images/temp/npm.jpg);"
+              style="background-image: url("/images/temp/npm.jpg");"
             >
               <strong>
                 NPM
