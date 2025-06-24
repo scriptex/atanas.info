@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Slides component Should render the Slides component 1`] = `
 <DocumentFragment>
@@ -562,7 +562,7 @@ exports[`Slides component Should render the Slides component 1`] = `
     <section
       class="c-section c-section--slides fullsize-background"
       id="slides"
-      style="background-image: url(images/temp/presentation.jpg);"
+      style="background-image: url("images/temp/presentation.jpg");"
     >
       <div
         class="o-shell"
@@ -1951,7 +1951,7 @@ exports[`Slides component Should render the Slides component 2`] = `
     <section
       class="c-section c-section--slides fullsize-background"
       id="slides"
-      style="background-image: url(images/temp/presentation.jpg);"
+      style="background-image: url("images/temp/presentation.jpg");"
     >
       <div
         class="o-shell"
@@ -3340,7 +3340,7 @@ exports[`Slides component Should render the Slides component 3`] = `
     <section
       class="c-section c-section--slides fullsize-background"
       id="slides"
-      style="background-image: url(images/temp/presentation.jpg);"
+      style="background-image: url("images/temp/presentation.jpg");"
     >
       <div
         class="o-shell"

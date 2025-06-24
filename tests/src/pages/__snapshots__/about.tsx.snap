@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`About component Should render the About component 1`] = `
 <DocumentFragment>
@@ -562,7 +562,7 @@ exports[`About component Should render the About component 1`] = `
     <section
       class="c-section c-section--about c-article fullsize-background"
       id="about"
-      style="background-image: url(/images/temp/desktop.jpg);"
+      style="background-image: url("/images/temp/desktop.jpg");"
     >
       <div
         class="o-shell"
@@ -1900,7 +1900,7 @@ exports[`About component Should render the About component 2`] = `
     <section
       class="c-section c-section--about c-article fullsize-background"
       id="about"
-      style="background-image: url(/images/temp/desktop.jpg);"
+      style="background-image: url("/images/temp/desktop.jpg");"
     >
       <div
         class="o-shell"
@@ -3262,7 +3262,7 @@ exports[`Tests the About page when offline 1`] = `
     <section
       class="c-section c-section--about c-article fullsize-background"
       id="about"
-      style="background-image: url(/images/temp/desktop.jpg);"
+      style="background-image: url("/images/temp/desktop.jpg");"
     >
       <div
         class="o-shell"
