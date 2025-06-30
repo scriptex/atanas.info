@@ -4822,7 +4822,7 @@ combined-stream@^1.0.6, combined-stream@^1.0.8, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@14.0.0:
+commander@14.0.0, commander@^14.0.0:
   version "14.0.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-14.0.0.tgz#f244fc74a92343514e56229f16ef5c5e22ced5e9"
   integrity sha512-2uM9rYjPvyq39NwLRqaiLtWHyDC1FvryJDa2ATTVims5YAS4PupsEQsDvP14FqhFr0P49CYDugi59xaxJlTXRA==
@@ -11549,14 +11549,14 @@ schema-utils@^4.3.0, schema-utils@^4.3.2:
     ajv-formats "^2.1.1"
     ajv-keywords "^5.1.0"
 
-scriptex-socials@1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/scriptex-socials/-/scriptex-socials-1.8.0.tgz#91288d6df16ec3f75dde1da472f2af2925c14a12"
-  integrity sha512-l/ldo7B3CKDwh63Dubx5s3NQsqOE+CRMGy9wgVoEjAk7pAf8gQNr30LXRK+XKlximI79gvLsRycuMaFvQAMQGw==
+scriptex-socials@1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/scriptex-socials/-/scriptex-socials-1.9.0.tgz#a8bdd78e01b16c927c02f5cb3c59769fccf1dd8c"
+  integrity sha512-PXxq7SMpg3ayd/DXIzDE4RHY5NR92x/iZYi6uAdEyoZ0474mseirdJhHjZ/+a158e64jfcAXZCtI4dXJKDrmpg==
   dependencies:
     cheerio "^1.0.0-rc.12"
-    commander "^12.0.0"
-    svgo "^3.3.2"
+    commander "^14.0.0"
+    svgo "^4.0.0"
 
 scss-goodies@2.2.0:
   version "2.2.0"
@@ -12314,7 +12314,7 @@ svgo@3.0.2:
     csso "^5.0.5"
     picocolors "^1.0.0"
 
-svgo@4.0.0:
+svgo@4.0.0, svgo@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-4.0.0.tgz#17e0fa2eaccf429e0ec0d2179169abde9ba8ad3d"
   integrity sha512-VvrHQ+9uniE+Mvx3+C9IEe/lWasXCU0nXMY2kZeLrHNICuRiC8uMPyM14UEaMOFA5mhyQqEkB02VoQ16n3DLaw==
@@ -12340,7 +12340,7 @@ svgo@^2.7.0:
     picocolors "^1.0.0"
     stable "^0.1.8"
 
-svgo@^3.0.0, svgo@^3.0.2, svgo@^3.3.2:
+svgo@^3.0.0, svgo@^3.0.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-3.3.2.tgz#ad58002652dffbb5986fc9716afe52d869ecbda8"
   integrity sha512-OoohrmuUlBs8B8o6MB2Aevn+pRIH9zDALSR+6hhqVfa6fRwG/Qw9VUMSMW9VNg2CFc/MTIfabtdOVl9ODIJjpw==
