@@ -2,7 +2,6 @@ import { config as dotenvConfig } from 'dotenv';
 import { Document, Filter, MongoClient, MongoClientOptions, ServerApiVersion } from 'mongodb';
 
 declare global {
-	// eslint-disable-next-line no-var
 	var _mongoClientPromise: Promise<MongoClient>;
 }
 

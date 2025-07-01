@@ -47,6 +47,54 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://dmarc.io/'
 	},
 	{
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts, ',
+		image: '/images/web-apps/dmarcian-DMARC-Validator.jpg',
+		skip: false,
+		text: 'Built in collaboration with the dmarcian team',
+		title: 'dmarcian DMARC Validator',
+		url: 'https://us.dmarcian.com/dmarc-validator/'
+	},
+	{
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts, ',
+		image: '/images/web-apps/dmarcian-DMARC-Wizard.jpg',
+		skip: false,
+		text: 'Built in collaboration with the dmarcian team',
+		title: 'dmarcian DMARC Wizard',
+		url: 'https://us.dmarcian.com/dmarc-wizard/'
+	},
+	{
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts, ',
+		image: '/images/web-apps/dmarcian-DMARC-XML-to-Human-Converter.jpg',
+		skip: false,
+		text: 'Built in collaboration with the dmarcian team',
+		title: 'dmarcian DMARC XML to Human Converter',
+		url: 'https://us.dmarcian.com/dmarc-xml/'
+	},
+	{
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts, ',
+		image: '/images/web-apps/dmarcian-TLS-Inspector.jpg',
+		skip: false,
+		text: 'Built in collaboration with the dmarcian team',
+		title: 'dmarcian TLS Inspector',
+		url: 'https://us.dmarcian.com/tls-inspector/'
+	},
+	{
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts, ',
+		image: '/images/web-apps/dmarcian.jpg',
+		skip: false,
+		text: 'Built in collaboration with the dmarcian team',
+		title: 'dmarcian',
+		url: 'https://us.dmarcian.com/accounts/register/'
+	},
+	{
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts, ',
+		image: '/images/web-apps/dmarcian-Login.jpg',
+		skip: false,
+		text: 'Built in collaboration with the dmarcian team',
+		title: 'dmarcian Login',
+		url: 'https://us.dmarcian.com/login/'
+	},
+	{
 		description: 'Typescript, SCSS, React, Redux, MS Azure, AWS, NodeJS, Jest, React Testing Library, Cypress',
 		image: '/images/web-apps/E.ON-Home.jpg',
 		skip: false,
@@ -279,8 +327,8 @@ export const projects: WebProject[] = withIndex([
 	},
 	{
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
-		image: '/images/web-apps/kinetik.jpg',
-		skip: false,
+		image: '/images/web-apps/Kinetik-Fundraising.jpg',
+		skip: true,
 		title: 'Kinetik Fundraising',
 		url: 'https://kinetik.bg/'
 	},
@@ -356,7 +404,7 @@ export const projects: WebProject[] = withIndex([
 	},
 	{
 		description: 'Vue, SVG, SCSS, PostCSS, Javascript, Swiper, Nuxt',
-		image: '/images/web-apps/kinetik-nuxt.jpg',
+		image: '/images/web-apps/Kinetik-Prototype.jpg',
 		skip: false,
 		title: 'Kinetik Prototype',
 		url: 'https://kinetik.atanas.info/'
