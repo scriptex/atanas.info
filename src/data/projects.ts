@@ -989,10 +989,6 @@ export const personalProjects: SubPage[] = withIndex([
 		url: 'https://socials.atanas.info'
 	},
 	{
-		text: 'SOD64',
-		url: 'https://sod.atanas.info'
-	},
-	{
 		text: 'SVG64',
 		url: 'https://svg64.atanas.info'
 	},
