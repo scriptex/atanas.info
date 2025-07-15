@@ -67,7 +67,8 @@ export const getStaticProps: GetStaticProps<PortfolioEmailTemplatesPageData> = a
 	props: {
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
-	}
+	},
+	revalidate: 86400
 });
 
 export default PortfolioEmailTemplates;

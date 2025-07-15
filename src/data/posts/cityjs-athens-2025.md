@@ -564,3 +564,9 @@ We walked away from this session with an understanding of the current state of b
 Tony concluded the conference with an engaging session on the intersection of music and AI, demonstrating how neural networks can be applied to generate and analyze musical compositions.
 
 He shared his attempt to use different APIs leveraging speech recognition in order to implement a script which recognises hip-hop lyrics. This was an interactive talk, actually the first one I ever attended, during which he engages the audience into actively participating while he concluded the event with an awesome hip-hop performance.
+
+## Videos
+
+You can watch all videos from the conference in [this YouTube playlist](https://www.youtube.com/playlist?list=PLYDCh9vbt8_Ly9pJieCeSVIH3IE8KhG2f)
+
+<div><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=EnsMw_KsmU5EXsNR&amp;list=PLYDCh9vbt8_Ly9pJieCeSVIH3IE8KhG2f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>

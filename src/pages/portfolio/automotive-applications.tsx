@@ -38,7 +38,8 @@ export const getStaticProps: GetStaticProps<PortfolioAutomotiveAppsPageData> = a
 	props: {
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
-	}
+	},
+	revalidate: 86400
 });
 
 export default PortfolioAutomotiveApps;

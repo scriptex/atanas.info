@@ -33,7 +33,8 @@ export const getStaticProps: GetStaticProps<PortfolioMobileAppsPageData> = async
 	props: {
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
-	}
+	},
+	revalidate: 86400
 });
 
 export default PortfolioMobileApps;

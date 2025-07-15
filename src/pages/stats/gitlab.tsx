@@ -145,7 +145,8 @@ export const getStaticProps: GetStaticProps<GitlabStatsPageData> = async () => (
 		data: (await getData<GitlabInsights>('Insights', queryGitlab)).props.data,
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
-	}
+	},
+	revalidate: 86400
 });
 
 export default GitlabStats;

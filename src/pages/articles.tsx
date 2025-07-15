@@ -38,7 +38,8 @@ export const getStaticProps: GetStaticProps<ArticlesPageProps> = async () => ({
 		articles: await getArticlesFromCMS(),
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
-	}
+	},
+	revalidate: 86400
 });
 
 export default Articles;

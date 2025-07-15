@@ -125,7 +125,8 @@ export const getStaticProps: GetStaticProps<TestimonialsPageProps> = async () =>
 		data: await getTestimonialsFromCMS(),
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
-	}
+	},
+	revalidate: 86400
 });
 
 export default Testimonials;

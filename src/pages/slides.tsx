@@ -58,7 +58,8 @@ export const getStaticProps: GetStaticProps<SlidesPageData> = async () => ({
 		data: await getSlidesFromCMS(),
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
-	}
+	},
+	revalidate: 86400
 });
 
 export default Slides;

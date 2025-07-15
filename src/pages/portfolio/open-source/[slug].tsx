@@ -67,7 +67,8 @@ export const getStaticProps: GetStaticProps<PortfolioOpenSourceProjectPageData> 
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS(),
 		post: getPostBySlug('src/data/open-source-projects', params?.slug as string, ['slug', 'content'])
-	}
+	},
+	revalidate: 86400
 });
 
 export const getStaticPaths = async (): Promise<StaticPaths> => {

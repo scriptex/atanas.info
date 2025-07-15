@@ -110,7 +110,8 @@ export const getStaticProps: GetStaticProps<InteractiveResumePageProps> = async 
 	props: {
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
-	}
+	},
+	revalidate: 86400
 });
 
 export default InteractiveResume;
