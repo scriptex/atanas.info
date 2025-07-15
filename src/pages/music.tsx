@@ -136,7 +136,8 @@ export const getStaticProps: GetStaticProps<MusicPageProps> = async () => ({
 		data: (await getData('Music', queryMusic)).props.data as Track[],
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
-	}
+	},
+	revalidate: 86400
 });
 
 export default Music;

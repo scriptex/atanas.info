@@ -90,7 +90,8 @@ export const getStaticProps: GetStaticProps<NPMStatsPageProps> = async () => ({
 		data: (await getData('Insights', queryNPM)).props.data as Packages<WithSum & WithError>['data'],
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
-	}
+	},
+	revalidate: 86400
 });
 
 export default NPMStats;

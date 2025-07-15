@@ -72,7 +72,8 @@ export const getStaticProps: GetStaticProps<VideosPageData> = async () => ({
 		data: await getVideosFromCMS(),
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
-	}
+	},
+	revalidate: 86400
 });
 
 export default Videos;

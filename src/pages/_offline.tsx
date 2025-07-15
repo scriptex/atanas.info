@@ -22,7 +22,8 @@ export const getStaticProps: GetStaticProps<OfflinePageProps> = async () => ({
 	props: {
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
-	}
+	},
+	revalidate: 86400
 });
 
 export default OfflinePage;

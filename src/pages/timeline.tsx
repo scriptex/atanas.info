@@ -47,7 +47,8 @@ export const getStaticProps: GetStaticProps<TimelinePageData> = async () => ({
 		data: await getTimelineFromCMS(),
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
-	}
+	},
+	revalidate: 86400
 });
 
 export default Timeline;

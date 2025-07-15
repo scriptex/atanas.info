@@ -66,7 +66,8 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => ({
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS(),
 		titles: await getTitlesFromCMS()
-	}
+	},
+	revalidate: 86400
 });
 
 export default Home;

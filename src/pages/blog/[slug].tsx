@@ -40,7 +40,8 @@ export const getStaticProps: GetStaticProps<BlogPostPageData<typeof getPostBySlu
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS(),
 		post: getPostBySlug('src/data/posts', params?.slug as string, ['slug', 'content'])
-	}
+	},
+	revalidate: 86400
 });
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

@@ -296,7 +296,8 @@ export const getStaticProps: GetStaticProps<GithubStatsPageData> = async () => (
 		funding: await getFundingFromCMS(),
 		githubSkyline: await getGithubSkylineFromCMS(),
 		partners: await getPartnersFromCMS()
-	}
+	},
+	revalidate: 86400
 });
 
 export default GithubStats;

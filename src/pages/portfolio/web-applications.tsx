@@ -87,7 +87,8 @@ export const getStaticProps: GetStaticProps<PortfolioWebAppsPageData> = async ()
 		data: (await getData('Screenshots', queryScreenshots)).props.data as WebProject[],
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
-	}
+	},
+	revalidate: 86400
 });
 
 export default PortfolioWebApps;

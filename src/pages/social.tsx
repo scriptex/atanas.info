@@ -80,7 +80,8 @@ export const getStaticProps: GetStaticProps<SocialPageData> = async () => ({
 		data: (await getData('Insights', queryLastFM)).props.data as LastFMInsights,
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
-	}
+	},
+	revalidate: 86400
 });
 
 export default Social;
