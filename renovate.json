@@ -43,5 +43,7 @@
 			"matchPackagePatterns": ["testing-library"],
 			"groupName": "testing-library"
 		}
-	]
+	],
+  "schedule": "* * * * 0,6",
+  "timezone": "Europe/Sofia"
 }
