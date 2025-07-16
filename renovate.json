@@ -1,4 +1,5 @@
 {
+	"assignees": ["@scriptex"],
 	"extends": [
 		"config:base",
 		":automergePatch",
@@ -7,14 +8,7 @@
 		":disableDependencyDashboard",
 		"group:allNonMajor"
 	],
-	"assignees": ["@scriptex"],
-	"labels": ["dependencies"],
-	"rebaseWhen": "conflicted",
-	"vulnerabilityAlerts": {
-		"labels": ["security"],
-		"assignees": ["@scriptex"]
-	},
-	"rangeStrategy": "replace",
+	"labels": ["dependencies", "renovate"],
 	"major": {
 		"automerge": false
 	},
@@ -43,5 +37,13 @@
 			"matchPackagePatterns": ["testing-library"],
 			"groupName": "testing-library"
 		}
-	]
+	],
+	"rangeStrategy": "replace",
+	"rebaseWhen": "conflicted",
+	"schedule": "* * * * 0,6",
+	"timezone": "Europe/Sofia",
+	"vulnerabilityAlerts": {
+		"labels": ["security"],
+		"assignees": ["@scriptex"]
+	}
 }
