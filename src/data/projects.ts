@@ -186,7 +186,7 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://kinetik-championship.com/'
 	},
 	{
-		description: 'HTML5, CSS3, Javascript, jQuery, PHP',
+		description: 'TypeScript, CSS3, React, D3, NextJS, Vercel',
 		image: '/images/web-apps/SOD-64-(СОД-64).jpg',
 		skip: false,
 		title: 'SOD 64 (СОД 64)',
