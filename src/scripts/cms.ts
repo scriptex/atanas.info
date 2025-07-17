@@ -193,8 +193,13 @@ export type Badge = {
 	url: string;
 };
 
+const isPreview = process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production';
+const host = isPreview ? 'preview.contentful.com' : 'cdn.contentful.com';
+const accessToken = isPreview ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN! : process.env.CONTENTFUL_ACCESS_TOKEN!;
+
 const client = createClient({
-	accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
+	accessToken,
+	host,
 	space: process.env.CONTENTFUL_SPACE_ID!
 });
 
