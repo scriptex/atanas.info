@@ -3,7 +3,7 @@ import { TextEncoder } from 'node:util';
 
 import * as shared from '@scripts/shared';
 
-global.TextEncoder = TextEncoder;
+global.TextEncoder = TextEncoder as any;
 
 window.HTMLMediaElement.prototype.load = () => {
 	/* do nothing */

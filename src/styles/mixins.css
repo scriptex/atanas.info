@@ -1,3 +1,6 @@
+/* stylelint-disable no-invalid-position-declaration */
+/* stylelint-disable nesting-selector-no-missing-scoping-root */
+
 @define-mixin slanted {
 	color: var(--color-primary);
 	display: inline-block;
