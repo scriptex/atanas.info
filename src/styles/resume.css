@@ -241,7 +241,7 @@
 		& > div > a {
 			width: 0;
 			max-height: 0;
-			clip: rect(0, 0, 0, 0);
+			clip-path: inset(0);
 			overflow: hidden;
 			pointer-events: none;
 		}
@@ -428,7 +428,6 @@
 	.c-resume__experience,
 	.c-resume__aside .c-resume__block {
 		break-inside: avoid;
-		page-break-inside: avoid;
 	}
 
 	.c-resume__experience {

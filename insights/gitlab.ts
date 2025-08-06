@@ -60,19 +60,22 @@ export const getGitlabInsights = async (): Promise<GitlabInsights> => {
 	try {
 		log('atanas.info: Getting data for user "scriptex" from Gitlab...');
 		const user = await gitlab<Record<string, string>>('users/1896847');
+		const userOrg = await gitlab<Record<string, string>>('users/19601887');
 		const args = 'projects?per_page=100&statistics=true';
 
 		log('atanas.info: Getting projects for user "scriptex" from Gitlab...');
 		const userProjects1 = await gitlab<GitlabProject[]>(`users/${user.id}/${args}`);
 		const userProjects2 = await gitlab<GitlabProject[]>(`users/${user.id}/${args}&page=2`);
 		const userProjects3 = await gitlab<GitlabProject[]>(`users/${user.id}/${args}&page=3`);
+		const orgProjects = await gitlab<GitlabProject[]>(`users/${userOrg.id}/${args}`);
 
 		const calendar = await getCalendar();
 
 		const projects: GitlabProject[] = [
 			...userProjects1.map((project: GitlabProject) => setOwner(project, 'scriptex')),
 			...userProjects2.map((project: GitlabProject) => setOwner(project, 'scriptex')),
-			...userProjects3.map((project: GitlabProject) => setOwner(project, 'scriptex'))
+			...userProjects3.map((project: GitlabProject) => setOwner(project, 'scriptex')),
+			...orgProjects.map((project: GitlabProject) => setOwner(project, 'scriptex'))
 		];
 		const repositories: GitlabRepository[] = [];
 

@@ -28,7 +28,7 @@ export const music = (container: HTMLDivElement): MusicFunctions => {
 	let context: AudioContext;
 	let isPause = false;
 	let analyser: AnalyserNode;
-	let dataArray: Uint8Array;
+	let dataArray: Uint8Array<ArrayBuffer>;
 	let bufferLength: number;
 
 	const createCircles = (): void => {
