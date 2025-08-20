@@ -3,32 +3,36 @@ import type { Document } from '@contentful/rich-text-types';
 import { Asset, createClient, EntryCollection, EntrySkeletonType } from 'contentful';
 
 import type { ForceNode } from '@data/skills-list';
+import { getCMSData } from '@lib/cms-cache';
 
 import type { Partner } from './types';
 
-type CMSType =
-	| 'bio'
-	| 'badge'
-	| 'owner'
-	| 'slide'
-	| 'video'
-	| 'titles'
-	| 'article'
-	| 'funding'
-	| 'partner'
-	| 'strength'
-	| 'timeline'
-	| 'education'
-	| 'experience'
-	| 'occupation'
-	| 'certificate'
-	| 'resume link'
-	| 'resume more'
-	| 'testimonial'
-	| 'resume skills'
-	| 'githubskyline';
+export const allCMSTypes = [
+	'bio',
+	'badge',
+	'owner',
+	'slide',
+	'video',
+	'titles',
+	'article',
+	'funding',
+	'partner',
+	'strength',
+	'timeline',
+	'education',
+	'experience',
+	'occupation',
+	'certificate',
+	'resume link',
+	'resume more',
+	'testimonial',
+	'resume skills',
+	'githubskyline'
+] as const;
 
-type RawCMSData = EntryCollection<EntrySkeletonType, undefined, string>;
+export type CMSType = (typeof allCMSTypes)[number];
+
+export type RawCMSData = EntryCollection<EntrySkeletonType, undefined, string>;
 
 export type BioEntry = {
 	content: string;
@@ -205,7 +209,8 @@ const client = createClient({
 
 const getHTMLString = <T extends Document>(data?: T): string => (data ? documentToHtmlString(data) : '');
 
-const getCMSData = async (type: CMSType): Promise<RawCMSData> => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const _getCMSData = async (type: CMSType): Promise<RawCMSData> => {
 	const contentTypes = await client.getContentTypes();
 	const content_type = contentTypes.items.find(item => item.name.toLowerCase() === type)?.sys.id;
 
