@@ -24,6 +24,7 @@ jobs:
                   yarn type-coverage
               env:
                   GTM_ID: ${{ secrets.GTM_ID }}
+                  REDIS_URL: ${{ secrets.REDIS_URL }}
                   MONGODB_URI: ${{ secrets.MONGODB_URI }}
                   GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
                   GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
