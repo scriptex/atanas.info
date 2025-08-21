@@ -4,7 +4,7 @@ import { CMSType, RawCMSData } from '@scripts/cms';
 
 import { getRedisClient } from './redis';
 
-const cfClient = createClient({
+const contentfulClient = createClient({
 	accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
 	space: process.env.CONTENTFUL_SPACE_ID!
 });
@@ -22,7 +22,6 @@ export async function getCMSData(type: CMSType): Promise<RawCMSData> {
 
 	const data = await fetchFromContentful(type);
 
-	// Cache in Redis
 	await redis.set(cacheKey, JSON.stringify(data), { EX: CACHE_TTL });
 
 	return data;
@@ -39,5 +38,17 @@ export async function refreshCMSData(type: CMSType): Promise<RawCMSData> {
 }
 
 async function fetchFromContentful(type: CMSType): Promise<RawCMSData> {
-	return await cfClient.getEntries({ content_type: type });
+	const contentTypes = await contentfulClient.getContentTypes();
+	const content_type = contentTypes.items.find(item => item.name.toLowerCase() === type)?.sys.id;
+
+	if (!content_type) {
+		return {
+			items: [],
+			limit: 0,
+			skip: 0,
+			total: 0
+		};
+	}
+
+	return await contentfulClient.getEntries({ content_type, order: ['fields.index'] });
 }
