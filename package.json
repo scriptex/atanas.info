@@ -52,11 +52,11 @@
 		"prepare": "husky"
 	},
 	"dependencies": {
-		"@apollo/client": "3.13.9",
-		"@babylonjs/core": "8.23.2",
-		"@babylonjs/gui": "8.23.2",
-		"@babylonjs/loaders": "8.23.2",
-		"@babylonjs/materials": "8.23.2",
+		"@apollo/client": "4.0.0",
+		"@babylonjs/core": "8.24.0",
+		"@babylonjs/gui": "8.24.0",
+		"@babylonjs/loaders": "8.24.0",
+		"@babylonjs/materials": "8.24.0",
 		"@codersrank/activity": "0.9.14",
 		"@codersrank/education": "0.9.12",
 		"@codersrank/portfolio": "0.9.10",
@@ -73,7 +73,7 @@
 		"animateme": "2.4.2",
 		"async-array-prototype": "1.1.1",
 		"attr-i18n": "1.0.0",
-		"babylonjs-gltf2interface": "8.23.2",
+		"babylonjs-gltf2interface": "8.24.0",
 		"contentful": "11.7.15",
 		"d3": "7.9.0",
 		"date-fns": "4.1.0",
@@ -133,7 +133,7 @@
 		"@next/env": "15.5.0",
 		"@svgr/webpack": "8.1.0",
 		"@testing-library/dom": "10.4.1",
-		"@testing-library/jest-dom": "6.7.0",
+		"@testing-library/jest-dom": "6.8.0",
 		"@testing-library/react": "16.3.0",
 		"@types/d3": "7.4.3",
 		"@types/jest": "30.0.0",
@@ -167,6 +167,7 @@
 		"eslint-plugin-sort-destructure-keys": "2.0.0",
 		"eslint-plugin-sort-keys-fix": "1.1.2",
 		"eslint-plugin-typescript-sort-keys": "3.3.0",
+		"form-data": "4.0.4",
 		"globals": "16.3.0",
 		"gray-matter": "4.0.3",
 		"html-minifier": "4.0.0",
@@ -233,6 +234,6 @@
 	"resolutions": {
 		"postcss": "8.5.6",
 		"serialize-javascript": "6.0.2",
-		"tough-cookie": "5.1.2"
+		"tough-cookie": "6.0.0"
 	}
 }
