@@ -27,7 +27,7 @@ const compat = new FlatCompat({
 
 export default [
 	{
-		ignores: ['**/*.config.js', '**/*.config.mjs', 'src/data/open-source.ts']
+		ignores: ['**/*.config.js', '**/*.config.mjs', 'src/data/open-source.ts', './next-env.d.ts']
 	},
 	...fixupConfigRules(
 		compat.extends(

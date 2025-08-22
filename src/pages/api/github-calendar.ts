@@ -30,7 +30,7 @@ export default async function handler(_: NextApiRequest, res: NextApiResponse): 
 					}
 				}
 			}
-		} = await client.query({
+		} = await client.query<any>({
 			query: gql`
 				{
 					user(login: "scriptex") {
