@@ -1005,6 +1005,10 @@ export const personalProjects: SubPage[] = withIndex([
 		url: 'https://ts-helpers.atanas.info'
 	},
 	{
+		text: 'Uptime',
+		url: 'https://scriptex.js.org/uptime/'
+	},
+	{
 		text: 'ViK Varna Alerts',
 		url: 'https://vik-varna-alerts.atanas.info'
 	}
