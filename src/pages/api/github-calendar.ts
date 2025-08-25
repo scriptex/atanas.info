@@ -1,25 +1,26 @@
-import { ApolloClient, createHttpLink, gql, InMemoryCache } from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
+import { ApolloClient, gql, HttpLink, InMemoryCache } from '@apollo/client';
+import { SetContextLink } from '@apollo/client/link/context';
+import { LocalState } from '@apollo/client/local-state';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { GithubProfileData } from '@scripts/types';
 
 export default async function handler(_: NextApiRequest, res: NextApiResponse): Promise<void> {
 	try {
-		const httpLink = createHttpLink({
+		const httpLink = new HttpLink({
 			uri: 'https://api.github.com/graphql'
 		});
 
-		const authLink = setContext((_, { headers }) => ({
+		const authLink = new SetContextLink(() => ({
 			headers: {
-				...headers,
 				authorization: `Bearer ${process.env.GITHUB_TOKEN}`
 			}
 		}));
 
 		const client = new ApolloClient({
 			cache: new InMemoryCache(),
-			link: authLink.concat(httpLink)
+			link: authLink.concat(httpLink),
+			localState: new LocalState({})
 		});
 
 		const {
