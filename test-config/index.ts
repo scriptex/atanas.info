@@ -149,3 +149,12 @@ jest.mock('contentful', () => ({
 		getEntries: jest.fn(() => Promise.resolve({ items: [] }))
 	}))
 }));
+
+let counter = 0;
+
+jest.mock('uuid', () => ({
+	v4: () => {
+		counter += 1;
+		return `mock-uuid-${counter}`;
+	}
+}));
