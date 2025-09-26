@@ -1148,7 +1148,7 @@
   resolved "https://registry.yarnpkg.com/@codersrank/work-experience/-/work-experience-0.9.8.tgz#2f00ae781c1e4efbde28e0a2b5c4cf60f5f8c421"
   integrity sha512-DTgDb05dLFkqr4U+TEgz1Xg4SGHHInSe8nrMrkItFRR2vkhe4kypJAAPCwYO0WiXBTIzs+r9vFJTlnKKoVjlug==
 
-"@contentful/content-source-maps@^0.11.8":
+"@contentful/content-source-maps@^0.11.33":
   version "0.11.33"
   resolved "https://registry.yarnpkg.com/@contentful/content-source-maps/-/content-source-maps-0.11.33.tgz#2150c1bf0944d0fb1922abce6f86ca216d365ea1"
   integrity sha512-5C5dLmG9L7se9i+DvO+sT3AocyRNmqVXWO/zoDKUsu7PuyWhDFbZHh/eZQCd0D15bGKOm3jN+lwxW13f8ogiYA==
@@ -4273,7 +4273,7 @@ axe-core@^4.10.0:
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.10.3.tgz#04145965ac7894faddbac30861e5d8f11bfd14fc"
   integrity sha512-Xm7bpRXnDSX2YE2YFfBk2FnF0ep6tmG7xPh8iHee8MIcrgq762Nkce856dYtJYLkuIoYZvGfTs/PbZhideTcEg==
 
-axios@^1.11.0:
+axios@^1.12.2:
   version "1.12.2"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.12.2.tgz#6c307390136cf7a2278d09cec63b136dfc6e6da7"
   integrity sha512-vMJzPewAlRyOgxV2dU0Cuz2O8zzzx9VYtbJOaBgXFeLc4IV/Eg50n4LowmehOOR61S8ZMpc2K5Sa7g6A4jfkUw==
@@ -4977,14 +4977,14 @@ contentful-sdk-core@^9.0.1:
   optionalDependencies:
     "@rollup/rollup-linux-x64-gnu" "^4.18.0"
 
-contentful@11.7.19:
-  version "11.7.19"
-  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.7.19.tgz#20c0f2186ded7d0f13acb9bc516c9461ccbed0a5"
-  integrity sha512-5nRYjU3Pug3iY/s4Ze9XpNoCqLHqYEZwJfABjKon4SovRO/T//jcZjPCiiEugJoR9ATEayOZX69te6u24Kzy6A==
+contentful@11.8.1:
+  version "11.8.1"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.8.1.tgz#3fadcc048dc98a9606ff5e759f39d10c9fe67ac5"
+  integrity sha512-EoSDFCEfoUgBvSQRZXTGB+lVxNRgWAd+pJMq2lg6zoqRdkt86h2SkUqF652e8sx45ykvlOqH7hC0sg4DG9jpgA==
   dependencies:
-    "@contentful/content-source-maps" "^0.11.8"
+    "@contentful/content-source-maps" "^0.11.33"
     "@contentful/rich-text-types" "^16.6.1"
-    axios "^1.11.0"
+    axios "^1.12.2"
     contentful-resolve-response "^1.9.0"
     contentful-sdk-core "^9.0.1"
     json-stringify-safe "^5.0.1"
