@@ -27,12 +27,13 @@ const compat = new FlatCompat({
 
 export default [
 	{
-		ignores: ['**/*.config.js', '**/*.config.mjs', 'src/data/open-source.ts', './next-env.d.ts']
+		ignores: ['**/*.config.js', '**/*.config.mjs', 'src/data/open-source.ts', './next-env.d.ts', '.next/**']
 	},
 	...fixupConfigRules(
 		compat.extends(
 			'prettier',
 			'next/core-web-vitals',
+			'next/typescript',
 			'plugin:react/recommended',
 			'plugin:react-hooks/recommended',
 			'plugin:compat/recommended',

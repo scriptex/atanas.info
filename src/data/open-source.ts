@@ -32,6 +32,10 @@ export const openSourceProjectsList = [
 		title: 'scriptex/awesome-useless-websites'
 	},
 	{
+		url: '/portfolio/open-source/batty-flight',
+		title: 'scriptex/batty-flight'
+	},
+	{
 		url: '/portfolio/open-source/best-resorts-in-bulgaria',
 		title: 'scriptex/best-resorts-in-bulgaria'
 	},
@@ -58,6 +62,10 @@ export const openSourceProjectsList = [
 	{
 		url: '/portfolio/open-source/energo-pro-alerts',
 		title: 'scriptex/energo-pro-alerts'
+	},
+	{
+		url: '/portfolio/open-source/entra-docs',
+		title: 'scriptex/entra-docs'
 	},
 	{
 		url: '/portfolio/open-source/Evolution',

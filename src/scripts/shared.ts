@@ -68,6 +68,7 @@ export const useNetworkState = (): boolean => {
 	const [online, setOnline] = useState(true);
 
 	useEffect(() => {
+		// eslint-disable-next-line react-hooks/set-state-in-effect
 		setOnline(navigator.onLine);
 	}, []);
 
