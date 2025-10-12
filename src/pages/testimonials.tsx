@@ -44,6 +44,7 @@ const List: FC<ListProps> = ({ data, swiper }) => (
 		}}
 		effect="coverflow"
 		grabCursor
+		// eslint-disable-next-line react-hooks/purity
 		initialSlide={Math.floor(Math.random() * data.length)}
 		keyboard
 		loop
