@@ -113,7 +113,7 @@ export const projects: WebProject[] = withIndex([
 		image: '/images/web-apps/Mama-Culinar.jpg',
 		skip: false,
 		title: 'Mama Culinar',
-		url: ''
+		url: 'https://mama-culinar.com/'
 	},
 	{
 		description: 'Typescript, SCSS, Angular, Redux, MS Azure, AWS, NodeJS, Jest, React Testing Library',
