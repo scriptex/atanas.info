@@ -12238,11 +12238,12 @@ stylelint-config-recommended@17.0.0:
   resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-17.0.0.tgz#4f77c70609b2d7093cc60bb48adfabdde434aa5d"
   integrity sha512-WaMSdEiPfZTSFVoYmJbxorJfA610O0tlYuU2aEwY33UQhSPgFbClrVJYWvy3jGJx+XW37O+LyNLiZOEXhKhJmA==
 
-stylelint-no-unsupported-browser-features@8.0.4:
-  version "8.0.4"
-  resolved "https://registry.yarnpkg.com/stylelint-no-unsupported-browser-features/-/stylelint-no-unsupported-browser-features-8.0.4.tgz#4212fab92cc827c1670ea42c15b2be8fd8c1c31a"
-  integrity sha512-MNdjegsgfTu1iDBsJM+1uBVZsIt0EWzqAX5qgUBAGavXkddwRqh+S1KD2VnWqUhiEuyddVrWJH8vKsNI40orxA==
+stylelint-no-unsupported-browser-features@8.0.5:
+  version "8.0.5"
+  resolved "https://registry.yarnpkg.com/stylelint-no-unsupported-browser-features/-/stylelint-no-unsupported-browser-features-8.0.5.tgz#9c49b1748e34f7f93d093d71cb780e8988f89bb6"
+  integrity sha512-fCfV7C6q9PM/fb3oYERoxqiWEqDQf1S2NfKLy8tv1tiIhilFQ3zlw7AunE4kZHbGh6bD67SEiU0UwvJyNnvyKQ==
   dependencies:
+    browserslist "^4.26.3"
     doiuse "^6.0.5"
     postcss "^8.4.32"
 
