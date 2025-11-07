@@ -14,7 +14,7 @@
 		"incremental": true,
 		"isolatedModules": true,
 		"noEmitHelpers": true,
-		"jsx": "preserve",
+		"jsx": "react-jsx",
 		"lib": ["DOM", "DOM.Iterable", "ESNext", "WebWorker"],
 		"module": "ESNext",
 		"moduleResolution": "Node",
