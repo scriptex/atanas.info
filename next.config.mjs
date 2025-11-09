@@ -7,7 +7,12 @@ const withSerwist = withSerwistInit({
 
 export default withSerwist({
 	images: {
-		domains: ['res.cloudinary.com', 'images.ctfassets.net', 'media.licdn.com', 'lastfm.freetls.fastly.net'],
+		remotePatterns: [
+			{ hostname: 'res.cloudinary.com' },
+			{ hostname: 'images.ctfassets.net' },
+			{ hostname: 'media.licdn.com' },
+			{ hostname: 'lastfm.freetls.fastly.net' }
+		],
 		unoptimized: true
 	},
 	webpack(config) {
