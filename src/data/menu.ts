@@ -41,12 +41,12 @@ export const menuItems: Array<Readonly<MenuItem>> = [
 		index: 4,
 		title: 'My resume'
 	},
-	{
-		content: 'Interactive resume',
-		href: Routes.INTERACTIVE_RESUME,
-		index: 5,
-		title: 'My interactive resume'
-	},
+	// {
+	// 	content: 'Interactive resume',
+	// 	href: Routes.INTERACTIVE_RESUME,
+	// 	index: 5,
+	// 	title: 'My interactive resume'
+	// },
 	{
 		content: 'Portfolio',
 		href: Routes.PORTFOLIO,
