@@ -10,7 +10,6 @@
 [![Screenshots & Music](https://github.com/scriptex/atanas.info/actions/workflows/screenshots.yml/badge.svg)](https://github.com/scriptex/atanas.info/actions/workflows/screenshots.yml)
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/6fa769779a30427e95c9fc7f399182d9)](https://www.codacy.com/gh/scriptex/atanas.info/dashboard)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/6fa769779a30427e95c9fc7f399182d9)](https://www.codacy.com/gh/scriptex/atanas.info/dashboard)
-[![codebeat badge](https://codebeat.co/badges/807a5061-9e43-4fec-9819-1c47c37c2e9f)](https://codebeat.co/projects/github-com-scriptex-atanas-info-master)
 [![CodeFactor](https://www.codefactor.io/repository/github/scriptex/atanas.info/badge)](https://www.codefactor.io/repository/github/scriptex/atanas.info)
 [![DeepScan grade](https://deepscan.io/api/teams/3574/projects/5291/branches/40827/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=3574&pid=5291&bid=40827)
 [![Type Coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fscriptex%2Fatanas.info%2Fmaster%2Fpackage.json)](https://github.com/scriptex/atanas.infp)
@@ -136,11 +135,11 @@ MIT
     </a>
     &nbsp;
     <a href="https://profile.codersrank.io/user/scriptex">
-        <img src="https://raw.githubusercontent.com/scriptex/socials/master/styled-assets/codersrank.svg" height="20" alt="">
+        <img src="https://raw.githubusercontent.com/scriptex/socials/master/styled-assets/codersrank.svg" width="32" height="20" alt="">
     </a>
     &nbsp;
     <a href="https://linktr.ee/scriptex">
-        <img src="https://raw.githubusercontent.com/scriptex/socials/master/styled-assets/linktree.svg" height="20" alt="">
+        <img src="https://raw.githubusercontent.com/scriptex/socials/master/styled-assets/linktree.svg" width="24" height="20" alt="">
     </a>
 </div>
 
