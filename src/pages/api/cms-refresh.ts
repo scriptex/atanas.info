@@ -1,9 +1,9 @@
-import { NextResponse } from 'next/server';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { refreshCMSData } from '@lib/cms-cache';
 import { allCMSTypes } from '@scripts/cms';
 
-export const POST = async () => {
+export default async function handler(_: NextApiRequest, res: NextApiResponse): Promise<void> {
 	try {
 		for (const type of allCMSTypes) {
 			try {
@@ -13,9 +13,9 @@ export const POST = async () => {
 			}
 		}
 
-		return NextResponse.json({ refreshed: true });
+		return res.json({ refreshed: true });
 	} catch (err) {
 		console.error(err);
-		return NextResponse.json({ error: 'Failed to refresh all content' }, { status: 500 });
+		return res.status(500).json({ error: 'Failed to refresh all content' });
 	}
-};
+}
