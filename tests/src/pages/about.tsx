@@ -1,5 +1,7 @@
 import { About } from '@pages/about';
+
 import * as shared from '@scripts/shared';
+
 import { snapshotTest, test } from '@test-config/helpers';
 import { funding, resumeOwner as owner, partners } from '@test-config/mocks';
 

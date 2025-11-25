@@ -1,4 +1,4 @@
-import { Testimonial } from '@scripts/cms';
+import type { Testimonial } from '@scripts/cms';
 
 export const testimonials: Testimonial[] = [
 	{

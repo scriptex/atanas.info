@@ -1,18 +1,8 @@
-import {
-	CSSProperties,
-	FC,
-	forwardRef,
-	ReactNode,
-	Ref,
-	useCallback,
-	useEffect,
-	useImperativeHandle,
-	useMemo,
-	useRef,
-	useState
-} from 'react';
+import type { CSSProperties, FC, ReactNode, Ref } from 'react';
+import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
 
 import Image from 'next/image';
+
 import TouchSweep from 'touchsweep';
 import { v4 as uuid } from 'uuid';
 
@@ -27,10 +17,10 @@ export type DecoratedCarouselItem = CarouselItem & Readonly<{ id: string }>;
 
 export type CarouselProps = Readonly<{
 	classNamePrefix?: string;
-	itemWidth?: number;
 	items: CarouselItem[];
-	nextButtonContent?: string | ReactNode;
-	prevButtonContent?: string | ReactNode;
+	itemWidth?: number;
+	nextButtonContent?: ReactNode | string;
+	prevButtonContent?: ReactNode | string;
 	ref?: Ref<CarouselRef>;
 	showControls?: boolean;
 	slideOnClick?: boolean;
@@ -48,8 +38,8 @@ export const Carousel: FC<CarouselProps> = forwardRef(
 	(
 		{
 			classNamePrefix = 'carousel',
-			itemWidth = 210,
 			items,
+			itemWidth = 210,
 			nextButtonContent = 'Next',
 			prevButtonContent = 'Previous',
 			showControls = true,

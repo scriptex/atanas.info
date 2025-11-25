@@ -1,6 +1,6 @@
 import type { Asset } from 'contentful';
 
-import { Article } from '@scripts/cms';
+import type { Article } from '@scripts/cms';
 
 export const articles: Article[] = [
 	{

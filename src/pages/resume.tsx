@@ -1,4 +1,5 @@
-import { FC, useState } from 'react';
+import type { FC } from 'react';
+import { useState } from 'react';
 
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
@@ -17,6 +18,7 @@ import {
 	Section,
 	Title
 } from '@components';
+
 import {
 	getCertificatesFromCMS,
 	getEducationFromCMS,

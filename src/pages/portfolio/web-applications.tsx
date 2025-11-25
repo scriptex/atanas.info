@@ -4,14 +4,17 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { ExternalLink, Icon, Layout, Loader, Section, SectionNav, Title } from '@components';
-import { portfolioSectionProps } from '@data/pages';
-import type { WebProject } from '@data/projects';
-import { Routes } from '@data/routes';
 import { getData, queryScreenshots } from '@lib/mongodb';
+
+import { ExternalLink, Icon, Layout, Loader, Section, SectionNav, Title } from '@components';
+
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { composeClassName, useCurrentPageParam, useNetworkState, usePagination } from '@scripts/shared';
 import type { PortfolioWebAppsPageData } from '@scripts/types';
+
+import { portfolioSectionProps } from '@data/pages';
+import type { WebProject } from '@data/projects';
+import { Routes } from '@data/routes';
 
 export const PortfolioWebApps: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({
 	data = [],

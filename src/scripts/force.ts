@@ -1,23 +1,16 @@
 import { range } from 'd3-array';
-import { D3DragEvent, drag } from 'd3-drag';
-import {
-	forceCenter,
-	forceCollide,
-	forceLink,
-	forceManyBody,
-	forceSimulation,
-	forceX,
-	forceY,
-	Simulation,
-	SimulationLinkDatum,
-	SimulationNodeDatum
-} from 'd3-force';
+import type { D3DragEvent } from 'd3-drag';
+import { drag } from 'd3-drag';
+import type { Simulation, SimulationLinkDatum, SimulationNodeDatum } from 'd3-force';
+import { forceCenter, forceCollide, forceLink, forceManyBody, forceSimulation, forceX, forceY } from 'd3-force';
 import { randomUniform } from 'd3-random';
-import { select, Selection } from 'd3-selection';
+import type { Selection } from 'd3-selection';
+import { select } from 'd3-selection';
 
 import type { ForceNode } from '@data/skills-list';
 
-import { Canvas, createSVG } from './canvas';
+import type { Canvas } from './canvas';
+import { createSVG } from './canvas';
 
 type Node = ForceNode & Readonly<{ r: number }>;
 
@@ -34,7 +27,7 @@ type Data = {
 	nodes: Node[];
 };
 
-type ForceGraphType = 'skills' | 'occupation';
+type ForceGraphType = 'occupation' | 'skills';
 type ForceSimulation = Simulation<LinkedNode, SimulationLinkDatum<LinkedNode>>;
 type DragEvent = D3DragEvent<Element, LinkedNode, LinkedNode>;
 
@@ -156,7 +149,7 @@ export const createNodes = (
 		const group = select(this.parentNode as Element);
 		const { height, width } = d;
 
-		let link: Selection<HTMLAnchorElement, unknown, null, undefined> | null = null;
+		let link: null | Selection<HTMLAnchorElement, unknown, null, undefined> = null;
 
 		if (d.url) {
 			link = group.append('a').attr('href', d.url).attr('target', '_blank').attr('rel', 'noopener noreferrer');

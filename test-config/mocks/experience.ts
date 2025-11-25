@@ -1,4 +1,4 @@
-import { Experience } from '@scripts/cms';
+import type { Experience } from '@scripts/cms';
 
 export const experience: Experience[] = [
 	{

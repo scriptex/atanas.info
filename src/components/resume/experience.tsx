@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 
 import { ResumeEntry } from '@components';
+
 import type { Experience } from '@scripts/cms';
 
 type Props = {

@@ -1,4 +1,4 @@
-import { FundingNetwork } from '@scripts/cms';
+import type { FundingNetwork } from '@scripts/cms';
 
 export const funding: FundingNetwork[] = [
 	{

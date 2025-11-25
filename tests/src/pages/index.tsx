@@ -1,6 +1,7 @@
 import { act } from 'react';
 
 import { Home } from '@pages/index';
+
 import { snapshotTest, test } from '@test-config/helpers';
 import { funding, partners } from '@test-config/mocks';
 

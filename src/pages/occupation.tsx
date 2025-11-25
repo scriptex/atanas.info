@@ -1,8 +1,10 @@
-import { type FC, useEffect } from 'react';
+import type { FC } from 'react';
+import { useEffect } from 'react';
 
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Animation, Layout, Section, Title } from '@components';
+
 import { getFundingFromCMS, getOccupationFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import type { OccupationPageProps } from '@scripts/types';
 

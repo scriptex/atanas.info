@@ -38,7 +38,7 @@ registerPaint(
 			}
 		}
 
-		private parseProps(props: Map<string, string>): Array<string[] | void | number> {
+		private parseProps(props: Map<string, string>): Array<number | string[] | void> {
 			return ['--colors', '--min-radius', '--max-radius', '--min-opacity', '--max-opacity', '--num-circles'].map(
 				(prop: string) => {
 					if (!props.get(prop)!.length) {

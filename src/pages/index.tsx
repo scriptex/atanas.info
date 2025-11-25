@@ -1,9 +1,12 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import type { FC } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+
 import useInterval from 'use-interval';
 
 import { Animation, Layout, Section, Title } from '@components';
+
 import { getFundingFromCMS, getPartnersFromCMS, getTitlesFromCMS } from '@scripts/cms';
 import type { HomePageProps } from '@scripts/types';
 

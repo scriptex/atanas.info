@@ -1,16 +1,24 @@
-import { ComponentType, FC, useEffect, useMemo, useState } from 'react';
+import type { ComponentType, FC } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import CookieConsent from 'react-cookie-consent';
+import { createPortal } from 'react-dom';
+
 import type { AppProps } from 'next/app';
 import { Fira_Sans } from 'next/font/google';
 import Script from 'next/script';
 
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 import { Head } from '@components';
-import { AppContext } from '@data/context';
-import { onThemeChange, setThemeClassName, Theme } from '@scripts/shared';
+
+import type { Theme } from '@scripts/shared';
+import { onThemeChange, setThemeClassName } from '@scripts/shared';
 
 import '@styles/index.css';
+
+import { AppContext } from '@data/context';
 
 type ExtendedAppProps = AppProps & { Component: ComponentType };
 
@@ -22,6 +30,7 @@ const titleFont = Fira_Sans({
 export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppProps) => {
 	const [contactVisible, setContactVisible] = useState(false);
 	const value = useMemo(() => ({ contactVisible, setContactVisible }), [contactVisible]);
+	const [cookieConsentEl, setCookieConsentEl] = useState<HTMLElement | null>(null);
 
 	useEffect(() => {
 		setThemeClassName(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -54,6 +63,8 @@ export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppP
 				});
 			})
 			.catch(console.error);
+
+		setCookieConsentEl(document.body);
 	}, []);
 
 	return (
@@ -73,6 +84,28 @@ export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppP
 			<Analytics />
 
 			<SpeedInsights />
+
+			{cookieConsentEl &&
+				createPortal(
+					<CookieConsent
+						buttonClasses="c-btn c-btn--small"
+						buttonText="Accept"
+						buttonWrapperClasses="c-cookie-consent__actions"
+						containerClasses="c-cookie-consent"
+						contentClasses="c-cookie-consent__content"
+						cookieName="atanas-info-cookie-consent"
+						declineButtonClasses="c-btn c-btn--small c-btn--decline"
+						declineButtonText="Decline"
+						declineCookieValue="declined"
+						disableStyles
+						enableDeclineButton
+						location="bottom"
+						setDeclineCookie
+					>
+						This web app uses cookies from third party providers to enhance user experience.
+					</CookieConsent>,
+					cookieConsentEl
+				)}
 
 			<Script
 				onLoad={() => {

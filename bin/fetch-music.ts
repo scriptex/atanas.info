@@ -1,8 +1,11 @@
 #!/usr/bin/env ts-node-script
 
-import { Track, music as tracks } from '@data/music';
 import clientPromise, { queryMusic } from '@lib/mongodb';
+
 import { log } from '@scripts/shared';
+
+import type { Track } from '@data/music';
+import { music as tracks } from '@data/music';
 
 (async () => {
 	const data = tracks.map((track: Track) => {

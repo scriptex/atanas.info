@@ -1,4 +1,5 @@
 import { Music } from '@pages/music';
+
 import { mockAudioContext, snapshotTest } from '@test-config/helpers';
 import { funding, partners } from '@test-config/mocks';
 

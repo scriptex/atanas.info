@@ -1,8 +1,12 @@
-import { FC, useCallback, useMemo } from 'react';
+import type { FC } from 'react';
+import { useCallback, useMemo } from 'react';
 
 import { Button } from '@components';
-import { MenuItem, menuItems } from '@data/menu';
+
 import { composeClassName } from '@scripts/shared';
+
+import type { MenuItem } from '@data/menu';
+import { menuItems } from '@data/menu';
 
 import { Anchor } from './anchor';
 import type { Props } from './types';

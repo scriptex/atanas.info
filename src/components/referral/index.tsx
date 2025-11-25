@@ -1,7 +1,6 @@
 import type { FC } from 'react';
 
 import { Animation, ExternalLink } from '@components';
-
 import 'swiper/css';
 
 type Props = {

@@ -1,11 +1,12 @@
-import type { FC } from 'react';
+import type { ComponentProps, FC } from 'react';
 import { act } from 'react';
 
-import { render, RenderResult, waitFor } from '@testing-library/react';
+import type { RenderResult } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 
 import * as shared from '@scripts/shared';
 
-type ComponentType = FC<Readonly<React.ComponentProps<any>>>;
+type ComponentType = FC<Readonly<ComponentProps<any>>>;
 
 export const test = async (Component: ComponentType): Promise<RenderResult> => {
 	let result!: RenderResult;

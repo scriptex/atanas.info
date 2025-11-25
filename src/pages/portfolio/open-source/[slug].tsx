@@ -4,12 +4,15 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import ErrorPage from 'next/error';
 import { useRouter } from 'next/router';
 
-import { ExternalLink, Layout, MDX as Mdx, Title } from '@components';
-import { openSourceProjects } from '@data/pages';
-import { Routes } from '@data/routes';
 import { getAllPosts, getPostBySlug } from '@lib/markdown';
+
+import { ExternalLink, Layout, MDX as Mdx, Title } from '@components';
+
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import type { PortfolioOpenSourceProjectPageData } from '@scripts/types';
+
+import { openSourceProjects } from '@data/pages';
+import { Routes } from '@data/routes';
 
 type Params = {
 	params: {

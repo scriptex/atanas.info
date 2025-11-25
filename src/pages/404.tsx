@@ -4,9 +4,11 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
 
 import { EmptyPage } from '@components';
-import { Routes } from '@data/routes';
+
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import type { ErrorPageProps } from '@scripts/types';
+
+import { Routes } from '@data/routes';
 
 export const ErrorPage: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners }) => (
 	<EmptyPage funding={funding} partners={partners}>

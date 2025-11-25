@@ -1,4 +1,4 @@
-import { Certificate } from '@scripts/cms';
+import type { Certificate } from '@scripts/cms';
 
 export const certificates: Certificate[] = [
 	{

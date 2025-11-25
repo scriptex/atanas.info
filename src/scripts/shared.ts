@@ -1,12 +1,14 @@
-import { MutableRefObject, useEffect, useMemo, useState } from 'react';
+import type { RefObject } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+
+import { useSearchParams } from 'next/navigation';
 
 import { format } from 'date-fns/format';
-import { useSearchParams } from 'next/navigation';
 
 import type { Project } from '@data/projects';
 
 export type Theme = 'dark' | 'light';
-export type Ref<T> = MutableRefObject<T | null>;
+export type Ref<T> = RefObject<null | T>;
 export type PaginationData<T> = {
 	items: T[][] | undefined;
 	menu: Project[] | undefined;
@@ -19,7 +21,7 @@ export const random = (): number => {
 	return crypto.getRandomValues(array)[0] / (Math.pow(2, 32) - 1);
 };
 
-export const formatDate = (date: string | number, formatter = 'dd MMM yyyy'): string => {
+export const formatDate = (date: number | string, formatter = 'dd MMM yyyy'): string => {
 	if (!date) {
 		return '';
 	}

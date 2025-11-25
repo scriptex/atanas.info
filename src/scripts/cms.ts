@@ -1,9 +1,11 @@
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import type { Document } from '@contentful/rich-text-types';
-import { Asset, createClient, EntryCollection, EntrySkeletonType } from 'contentful';
+import type { Asset, EntryCollection, EntrySkeletonType } from 'contentful';
+import { createClient } from 'contentful';
+
+import { getCMSData } from '@lib/cms-cache';
 
 import type { ForceNode } from '@data/skills-list';
-import { getCMSData } from '@lib/cms-cache';
 
 import type { Partner } from './types';
 
@@ -51,14 +53,14 @@ export type Article = Readonly<{
 export type TimelineItem = Readonly<{
 	content: string;
 	date: string;
-	icon: 'work' | 'education' | 'personal';
+	icon: 'education' | 'personal' | 'work';
 	index: number;
 	location: string;
 	title: string;
 }>;
 
 export type ResumeLink = Readonly<{
-	icon: 'mail' | 'link' | 'location';
+	icon: 'link' | 'location' | 'mail';
 	index: number;
 	text: string;
 }>;
@@ -105,7 +107,7 @@ export type ResumeSkills = Readonly<{
 
 export type Strength = Readonly<{
 	content: string;
-	icon: 'share' | 'star' | 'brush' | 'clock';
+	icon: 'brush' | 'clock' | 'share' | 'star';
 	index: number;
 	title: string;
 }>;

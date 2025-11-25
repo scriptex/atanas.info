@@ -1,5 +1,7 @@
 import { Section, SectionGrid, SectionNav } from '@components';
+
 import { statsItems } from '@data/projects';
+
 import { snapshotTest } from '@test-config/helpers';
 import { videos } from '@test-config/mocks';
 

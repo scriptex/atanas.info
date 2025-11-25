@@ -5,7 +5,7 @@ import statistics from '@data/lotties/statistics.json';
 export type GeneralInsight = Readonly<{
 	index: number;
 	title: string;
-	value: string | number;
+	value: number | string;
 }>;
 
 export const addTitles = (selector: string, getTitle: (rect: SVGRectElement) => string): void => {

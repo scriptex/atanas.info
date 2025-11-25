@@ -3,6 +3,7 @@
 import { existsSync, unlinkSync, writeFileSync } from 'node:fs';
 
 import { getGithubRepositories } from '@insights/github';
+
 import { log } from '@scripts/shared';
 
 type Project = {

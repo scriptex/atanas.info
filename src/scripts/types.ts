@@ -1,8 +1,9 @@
 import type { ReactNode } from 'react';
 
+import type { LastFMInsights } from '@insights/utils';
+
 import type { WebProject } from '@data/projects';
 import type { ForceNode } from '@data/skills-list';
-import type { LastFMInsights } from '@insights/utils';
 
 import type {
 	Article,
@@ -19,7 +20,7 @@ import type {
 	Video
 } from './cms';
 
-export type Nullable<T> = T | null;
+export type Nullable<T> = null | T;
 
 export type Track = {
 	metaData: {
@@ -30,7 +31,7 @@ export type Track = {
 };
 
 export type GithubCount = {
-	count: number | null;
+	count: null | number;
 };
 
 export type GithubContribution = GithubCount & {
@@ -43,7 +44,7 @@ export type GithubRepository = {
 	fork: boolean;
 	has_pages: boolean;
 	issues: number;
-	language: string | null;
+	language: null | string;
 	name: string;
 	private: boolean;
 	size: number;
@@ -95,7 +96,7 @@ export type GitlabInsights = {
 	updated: Nullable<number>;
 };
 
-export type ReactChild = string | ReactNode | ReactNode[];
+export type ReactChild = ReactNode | ReactNode[] | string;
 
 export type ReactChildren = ReactChild | ReactChild[];
 

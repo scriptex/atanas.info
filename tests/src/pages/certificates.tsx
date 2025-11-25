@@ -1,4 +1,5 @@
 import { Certificates } from '@pages/certificates';
+
 import { snapshotTest } from '@test-config/helpers';
 import { badges, certificates, funding, partners } from '@test-config/mocks';
 

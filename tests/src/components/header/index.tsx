@@ -1,6 +1,7 @@
 import { fireEvent } from '@testing-library/react';
 
 import { Header } from '@components';
+
 import { snapshotTest, test } from '@test-config/helpers';
 
 snapshotTest(Header);

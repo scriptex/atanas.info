@@ -1,8 +1,10 @@
 import { randomBytes } from 'node:crypto';
 
-import info, { Package } from 'package-info';
+import type { Package } from 'package-info';
+import info from 'package-info';
 
 import { saveInsights } from '@insights/utils';
+
 import { log } from '@scripts/shared';
 
 export type NPMResponse = {

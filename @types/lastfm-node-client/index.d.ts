@@ -1,5 +1,5 @@
 declare module 'lastfm-node-client' {
-	export type BooleanNumber = 1 | 0;
+	export type BooleanNumber = 0 | 1;
 
 	export type LastFMDefaultOptions = {
 		autocorrect: BooleanNumber;
@@ -12,12 +12,12 @@ declare module 'lastfm-node-client' {
 	};
 
 	export type LastFMPeriod = {
-		period: '7day' | '1month' | '3month' | '6month' | '12month' | 'overall';
+		period: '1month' | '3month' | '6month' | '7day' | '12month' | 'overall';
 	};
 
 	export type LastFMImage = {
 		'#text': string;
-		size: 'small' | 'medium' | 'large' | 'extralarge';
+		size: 'extralarge' | 'large' | 'medium' | 'small';
 	};
 
 	export type LastFMUserResponse = {
@@ -122,7 +122,7 @@ declare module 'lastfm-node-client' {
 
 	export type LastFMRecentTrack = {
 		'@attr'?: {
-			nowplaying: 'true' | 'false';
+			nowplaying: 'false' | 'true';
 		};
 		album: {
 			'#text': string;

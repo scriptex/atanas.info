@@ -1,6 +1,6 @@
-import { Asset } from 'contentful';
+import type { Asset } from 'contentful';
 
-import { Badge } from '@scripts/cms';
+import type { Badge } from '@scripts/cms';
 
 export const badges: Badge[] = [
 	{

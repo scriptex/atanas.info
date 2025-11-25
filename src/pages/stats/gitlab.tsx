@@ -1,15 +1,21 @@
-import { FC, useEffect, useRef } from 'react';
+import type { FC } from 'react';
+import { useEffect, useRef } from 'react';
 
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
 
-import { Layout, Section, StatsEntry, StatsError, Title } from '@components';
-import { Routes } from '@data/routes';
 import { getData, queryGitlab } from '@lib/mongodb';
+
+import { Layout, Section, StatsEntry, StatsError, Title } from '@components';
+
 import { getFundingFromCMS, getOwnerDetailsFromCMS, getPartnersFromCMS } from '@scripts/cms';
-import { formatDate, Ref } from '@scripts/shared';
-import { addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
+import type { Ref } from '@scripts/shared';
+import { formatDate } from '@scripts/shared';
+import type { GeneralInsight } from '@scripts/stats';
+import { addTitles, sectionStatsProps } from '@scripts/stats';
 import type { GitlabInsights, GitlabRepository, GitlabStatsPageData } from '@scripts/types';
+
+import { Routes } from '@data/routes';
 
 const extractGitlabData = ({ calendar, general, repositories }: GitlabInsights): GeneralInsight[] => {
 	if (!repositories || !general || !calendar) {

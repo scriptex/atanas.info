@@ -1,8 +1,8 @@
 import { Animation } from '@components';
-import { openSourceProjectsList } from '@data/open-source';
 
 import book from '@data/lotties/book.json';
 import portfolio from '@data/lotties/portfolio.json';
+import { openSourceProjectsList } from '@data/open-source';
 
 export const blogProps = {
 	additionalElements: <Animation className="c-section__animation" data={book} height={150} width={150} />,

@@ -1,4 +1,4 @@
-import { LastFMRecentTracksResponse } from 'lastfm-node-client';
+import type { LastFMRecentTracksResponse } from 'lastfm-node-client';
 
 export const recentTracks: LastFMRecentTracksResponse = {
 	recenttracks: {

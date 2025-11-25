@@ -1,9 +1,12 @@
-import { FC, useEffect, useMemo, useState } from 'react';
+import type { FC } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import { Button, Loader } from '@components';
+
 import { composeClassName } from '@scripts/shared';
 
-import { createEngine, GithubSkylineProps } from './utils';
+import type { GithubSkylineProps } from './utils';
+import { createEngine } from './utils';
 
 export const GithubSkyline: FC<Readonly<GithubSkylineProps>> = (props: GithubSkylineProps) => {
 	const canvasId = useMemo(() => `c-skyline__item-${props.index}`, [props.index]);

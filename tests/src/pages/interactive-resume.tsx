@@ -1,5 +1,7 @@
 import { InteractiveResume } from '@pages/interactive-resume';
+
 import * as shared from '@scripts/shared';
+
 import { snapshotTest, test } from '@test-config/helpers';
 import { funding, partners } from '@test-config/mocks';
 

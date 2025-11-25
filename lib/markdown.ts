@@ -1,9 +1,9 @@
+import fs from 'node:fs';
+import { join } from 'node:path';
+
 import matter from 'gray-matter';
 import markdownIt from 'markdown-it';
 import markdownItPrism from 'markdown-it-prism';
-
-import fs from 'node:fs';
-import { join } from 'node:path';
 
 const MarkdownIt = new markdownIt({
 	html: true

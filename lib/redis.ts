@@ -1,6 +1,6 @@
 import { createClient } from 'redis';
 
-let redisClient: ReturnType<typeof createClient> | null = null;
+let redisClient: null | ReturnType<typeof createClient> = null;
 
 export async function getRedisClient() {
 	if (!redisClient) {

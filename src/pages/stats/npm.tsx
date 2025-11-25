@@ -3,12 +3,15 @@ import type { FC } from 'react';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
 
-import { ExternalLink, Layout, Section, Title } from '@components';
-import { Routes } from '@data/routes';
 import { getData, queryNPM } from '@lib/mongodb';
+
+import { ExternalLink, Layout, Section, Title } from '@components';
+
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { sectionStatsProps } from '@scripts/stats';
 import type { NPMStatsPageProps, Packages, WithError, WithSum } from '@scripts/types';
+
+import { Routes } from '@data/routes';
 
 const PackagesList: FC<Readonly<Packages>> = ({ data }: Packages) => (
 	<div className="o-grid c-packages">

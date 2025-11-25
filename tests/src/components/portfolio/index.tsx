@@ -1,5 +1,7 @@
 import { PortfolioSliders } from '@components';
+
 import { automotiveProjects } from '@data/projects';
+
 import { snapshotTest } from '@test-config/helpers';
 
 snapshotTest(

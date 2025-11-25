@@ -1,4 +1,4 @@
-import { Strength } from '@scripts/cms';
+import type { Strength } from '@scripts/cms';
 
 export const strengths: Strength[] = [
 	{

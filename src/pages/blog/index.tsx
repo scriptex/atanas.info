@@ -4,9 +4,12 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
 
 import { Layout, Loader, Section, Title } from '@components';
-import { blogProps } from '@data/pages';
-import { Article, getArticlesFromCMS, getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
+
+import type { Article } from '@scripts/cms';
+import { getArticlesFromCMS, getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import type { BlogPageData } from '@scripts/types';
+
+import { blogProps } from '@data/pages';
 
 export const Blog: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ articles, funding, partners }) => (
 	<Layout funding={funding} partners={partners}>

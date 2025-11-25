@@ -4,11 +4,13 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
 
 import { Layout, PortfolioSliders, Section, Title } from '@components';
+
+import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
+import type { PortfolioMobileAppsPageData } from '@scripts/types';
+
 import { portfolioSectionProps } from '@data/pages';
 import { mobileApps } from '@data/projects';
 import { Routes } from '@data/routes';
-import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
-import type { PortfolioMobileAppsPageData } from '@scripts/types';
 
 export const PortfolioMobileApps: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners }) => (
 	<Layout funding={funding} partners={partners}>

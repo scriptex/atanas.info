@@ -3,15 +3,19 @@ import type { FC } from 'react';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Script from 'next/script';
 
-import { Animation, Icon, Layout, Lines, LinkedInBadge, Section, SocialMusic, Title } from '@components';
-import { SocialItem, socialItems } from '@data/social';
-import type { LastFMInsights } from '@insights/utils';
 import { getData, queryLastFM } from '@lib/mongodb';
+
+import type { LastFMInsights } from '@insights/utils';
+
+import { Animation, Icon, Layout, Lines, LinkedInBadge, Section, SocialMusic, Title } from '@components';
+
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { useNetworkState } from '@scripts/shared';
 import type { SocialPageData } from '@scripts/types';
 
 import socialMedia from '@data/lotties/social-media.json';
+import type { SocialItem } from '@data/social';
+import { socialItems } from '@data/social';
 
 export const Social: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({ data, funding, partners }) => {
 	const online = useNetworkState();

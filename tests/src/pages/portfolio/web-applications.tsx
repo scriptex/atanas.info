@@ -1,7 +1,9 @@
 import { PortfolioWebApps } from '@pages/portfolio/web-applications';
 
-import { WebProject } from '@data/projects';
 import * as shared from '@scripts/shared';
+
+import type { WebProject } from '@data/projects';
+
 import { snapshotTest } from '@test-config/helpers';
 import { funding, partners } from '@test-config/mocks';
 

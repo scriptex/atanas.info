@@ -1,4 +1,5 @@
 import { Resume } from '@pages/resume';
+
 import { snapshotTest } from '@test-config/helpers';
 import {
 	certificates,

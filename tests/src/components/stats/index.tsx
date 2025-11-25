@@ -1,4 +1,5 @@
 import { StatsEntry, StatsError } from '@components';
+
 import { snapshotTest } from '@test-config/helpers';
 
 snapshotTest(() => <StatsError network="Github" />, undefined, 'StatsError');

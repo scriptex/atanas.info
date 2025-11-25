@@ -8,7 +8,8 @@ import type {
 import { log } from '@scripts/shared';
 
 import { lastFm } from './client';
-import { asyncForEach, LastFMInsights, saveInsights } from './utils';
+import type { LastFMInsights } from './utils';
+import { asyncForEach, saveInsights } from './utils';
 
 const ITEMS_LIMIT = 20;
 

@@ -1,9 +1,12 @@
-import { FC, useState } from 'react';
+import type { FC } from 'react';
+import { useState } from 'react';
 
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Animation, Layout, Lines, Loader, Section, SectionNav, Title } from '@components';
-import { getFundingFromCMS, getPartnersFromCMS, getVideosFromCMS, Video } from '@scripts/cms';
+
+import type { Video } from '@scripts/cms';
+import { getFundingFromCMS, getPartnersFromCMS, getVideosFromCMS } from '@scripts/cms';
 import { composeClassName } from '@scripts/shared';
 import type { VideosPageData } from '@scripts/types';
 

@@ -1,5 +1,3 @@
-/* eslint-disable prefer-const */
-
 type Bubble = {
 	color: string;
 	r: number;
@@ -55,7 +53,7 @@ registerPaint(
 			}
 		}
 
-		private parseProps(props: Map<string, string>): Array<string | string[] | number | void> {
+		private parseProps(props: Map<string, string>): Array<number | string | string[] | void> {
 			return [
 				'--bubbles-colors',
 				'--bubbles-min-radius',

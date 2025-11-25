@@ -3,10 +3,12 @@ import type { FC } from 'react';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Layout, Section, SectionGrid, Title } from '@components';
-import { statsItems } from '@data/projects';
+
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { sectionStatsProps } from '@scripts/stats';
 import type { StatsPageData } from '@scripts/types';
+
+import { statsItems } from '@data/projects';
 
 export const Stats: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners }) => (
 	<Layout funding={funding} partners={partners}>
