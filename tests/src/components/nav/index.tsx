@@ -1,4 +1,5 @@
 import { Nav } from '@components';
+
 import { snapshotTest } from '@test-config/helpers';
 
 jest.mock('@data/menu', () => ({

@@ -1,4 +1,4 @@
-import { TimelineItem } from '@scripts/cms';
+import type { TimelineItem } from '@scripts/cms';
 
 export const timelineItems: TimelineItem[] = [
 	{

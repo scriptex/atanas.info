@@ -1,8 +1,11 @@
-import { FC, useContext, useState } from 'react';
+import type { FC } from 'react';
+import { useContext, useState } from 'react';
 
 import { Button, ExternalLink, Icon } from '@components';
-import { AppContext } from '@data/context';
+
 import { composeClassName } from '@scripts/shared';
+
+import { AppContext } from '@data/context';
 
 import type { Props } from './types';
 

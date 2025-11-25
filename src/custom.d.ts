@@ -43,15 +43,15 @@ declare module '@codersrank/timeline/codersrank-timeline.min' {
 declare namespace React {
 	namespace JSX {
 		interface IntrinsicElements {
-			'codersrank-activity': HTMLAttributes;
-			'codersrank-education': HTMLAttributes;
-			'codersrank-portfolio': HTMLAttributes;
-			'codersrank-skills-chart': HTMLAttributes;
-			'codersrank-summary': HTMLAttributes;
-			'codersrank-timeline': HTMLAttributes;
-			'codersrank-widget': HTMLAttributes;
-			'codersrank-work-experience': HTMLAttributes;
-			'social-links': HTMLAttributes;
+			'codersrank-activity': any;
+			'codersrank-education': any;
+			'codersrank-portfolio': any;
+			'codersrank-skills-chart': any;
+			'codersrank-summary': any;
+			'codersrank-timeline': any;
+			'codersrank-widget': any;
+			'codersrank-work-experience': any;
+			'social-links': any;
 		}
 	}
 }

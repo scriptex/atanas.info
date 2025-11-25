@@ -3,6 +3,7 @@ import { act } from 'react';
 import { GitlabStats } from '@pages/stats/gitlab';
 
 import type { GitlabInsights } from '@scripts/types';
+
 import { snapshotTest, test } from '@test-config/helpers';
 import { funding, partners, resumeOwner } from '@test-config/mocks';
 

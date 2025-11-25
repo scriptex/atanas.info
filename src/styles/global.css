@@ -14,6 +14,10 @@ body {
 	font-family: var(--font-fira-sans);
 	color: var(--color-primary);
 	background-color: var(--color-secondary);
+
+	& > div > .floatingchat-container-wrap {
+		z-index: 999 !important;
+	}
 }
 
 @media (--hover) {
@@ -106,4 +110,29 @@ body {
 	clip-path: inset(0);
 	overflow-wrap: normal;
 	border: 0;
+}
+
+.c-cookie-consent {
+	@mixin flex-row wrap, center, space-between;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: var(--color-primary);
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: 1000;
+	padding: 1rem;
+	border-top: 1px solid;
+	background-color: var(--color-secondary);
+}
+
+.c-cookie-consent__actions {
+	@mixin flex-row nowrap, center, space-between;
+	flex-direction: row-reverse;
+	gap: 1rem;
+
+	.c-btn--decline {
+		color: var(--color-action);
+		background-color: var(--color-primary);
+	}
 }

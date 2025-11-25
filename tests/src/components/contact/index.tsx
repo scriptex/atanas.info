@@ -1,8 +1,11 @@
 import { act } from 'react';
 
 import { Contact } from '@components';
-import { AppContext } from '@data/context';
+
 import { Status } from '@scripts/types';
+
+import { AppContext } from '@data/context';
+
 import { mockFetch, snapshotTest, test } from '@test-config/helpers';
 
 const fetch = global.fetch;

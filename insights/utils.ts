@@ -1,7 +1,9 @@
 import * as cheerio from 'cheerio';
 import type { LastFMImage, LastFMUserResponse } from 'lastfm-node-client';
 
-import clientPromise, { Query, queryGithub, queryGitlab, queryLastFM, queryNPM } from '@lib/mongodb';
+import type { Query } from '@lib/mongodb';
+import clientPromise, { queryGithub, queryGitlab, queryLastFM, queryNPM } from '@lib/mongodb';
+
 import { log } from '@scripts/shared';
 
 export type Project = Readonly<{
@@ -11,7 +13,7 @@ export type Project = Readonly<{
 
 export type Contribution = {
 	color: string;
-	count: number | null;
+	count: null | number;
 };
 
 export type LastFMAlbum = {
@@ -28,7 +30,7 @@ export type LastFMInsights = {
 	weeklyAlbumChart: LastFMAlbum[];
 };
 
-export type InsightsType = 'Github' | 'Gitlab' | 'NPM' | 'LastFM';
+export type InsightsType = 'Github' | 'Gitlab' | 'LastFM' | 'NPM';
 
 export const asyncForEach = async <T, R>(
 	array: T[],

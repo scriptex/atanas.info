@@ -1,4 +1,5 @@
 import { Testimonials } from '@pages/testimonials';
+
 import { snapshotTest } from '@test-config/helpers';
 import { funding, partners, testimonials } from '@test-config/mocks';
 

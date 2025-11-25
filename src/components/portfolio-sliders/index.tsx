@@ -5,8 +5,10 @@ import Slider from 'react-slick';
 import Image from 'next/image';
 
 import { ExternalLink, Loader } from '@components';
-import { ExtendedProject } from '@data/projects';
+
 import { composeClassName } from '@scripts/shared';
+
+import type { ExtendedProject } from '@data/projects';
 
 type Props = {
 	className?: string;

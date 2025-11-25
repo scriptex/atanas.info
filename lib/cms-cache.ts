@@ -1,6 +1,6 @@
 import { createClient } from 'contentful';
 
-import { CMSType, RawCMSData } from '@scripts/cms';
+import type { CMSType, RawCMSData } from '@scripts/cms';
 
 import { getRedisClient } from './redis';
 

@@ -3,6 +3,7 @@ import type { ComponentProps } from 'react';
 import { NPMStats } from '@pages/stats/npm';
 
 import type { Package, WithError, WithSum } from '@scripts/types';
+
 import { snapshotTest } from '@test-config/helpers';
 import { funding, partners } from '@test-config/mocks';
 

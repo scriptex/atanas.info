@@ -19,8 +19,8 @@ export type ExtendedProject = Project &
 		adjustable?: boolean;
 		details: string;
 		imageHeight?: number;
-		imageWidth?: number;
 		images: string[];
+		imageWidth?: number;
 	}>;
 
 export type SubPage = Readonly<{
@@ -609,7 +609,6 @@ export const mobileApps: ExtendedProject[] = withIndex([
 		description: 'An award winning smart energy management application for iOS',
 		details: 'Typescript, React, React Native, Redux, MS Azure, AWS, NodeJS',
 		imageHeight: 1299,
-		imageWidth: 600,
 		images: [
 			'eon-home-iphone-dark1.jpg',
 			'eon-home-iphone-dark2.jpg',
@@ -620,6 +619,7 @@ export const mobileApps: ExtendedProject[] = withIndex([
 			'eon-home-iphone-light3.jpg',
 			'eon-home-iphone-light4.jpg'
 		],
+		imageWidth: 600,
 		title: 'E.ON Home for iPhone',
 		url: 'https://apps.apple.com/gb/app/e-on-home-solar-and-heating/id1468486784#?platform=iphone'
 	},
@@ -627,7 +627,6 @@ export const mobileApps: ExtendedProject[] = withIndex([
 		description: 'Smart energy management application for iOS',
 		details: 'Typescript, React, React Native, Redux, MS Azure, AWS, NodeJS',
 		imageHeight: 1299,
-		imageWidth: 600,
 		images: [
 			'foton-home-iphone-light1.jpg',
 			'foton-home-iphone-light2.jpg',
@@ -638,6 +637,7 @@ export const mobileApps: ExtendedProject[] = withIndex([
 			'foton-home-iphone-dark3.jpg',
 			'foton-home-iphone-dark4.jpg'
 		],
+		imageWidth: 600,
 		title: 'Foton Home for iPhone',
 		url: 'https://apps.apple.com/us/app/foton-home/id1525688620#?platform=iphone'
 	},
@@ -645,7 +645,6 @@ export const mobileApps: ExtendedProject[] = withIndex([
 		description: 'An award winning smart energy management application for Android',
 		details: 'Typescript, React, React Native, Redux, MS Azure, AWS, NodeJS',
 		imageHeight: 620,
-		imageWidth: 310,
 		images: [
 			'eon-home-android1.jpg',
 			'eon-home-android2.jpg',
@@ -656,6 +655,7 @@ export const mobileApps: ExtendedProject[] = withIndex([
 			'eon-home-android7.jpg',
 			'eon-home-android8.jpg'
 		],
+		imageWidth: 310,
 		title: 'E.ON Home for Android',
 		url: 'https://play.google.com/store/apps/details?id=com.eon.home.eu'
 	},
@@ -663,7 +663,6 @@ export const mobileApps: ExtendedProject[] = withIndex([
 		description: 'Smart energy management application for Android',
 		details: 'Typescript, React, React Native, Redux, MS Azure, AWS, NodeJS',
 		imageHeight: 620,
-		imageWidth: 310,
 		images: [
 			'foton-home-android5.jpg',
 			'foton-home-android6.jpg',
@@ -674,6 +673,7 @@ export const mobileApps: ExtendedProject[] = withIndex([
 			'foton-home-android3.jpg',
 			'foton-home-android4.jpg'
 		],
+		imageWidth: 310,
 		title: 'Foton Home for Android',
 		url: 'https://play.google.com/store/apps/details?id=com.foton.home.eu'
 	},
@@ -682,8 +682,8 @@ export const mobileApps: ExtendedProject[] = withIndex([
 		description: 'An award winning smart energy management application for iPad',
 		details: 'Typescript, React, React Native, Redux, MS Azure, AWS, NodeJS',
 		imageHeight: 1716,
-		imageWidth: 1286,
 		images: ['eon-home-ipad-dark.jpg', 'eon-home-ipad-light.jpg'],
+		imageWidth: 1286,
 		title: 'E.ON Home for iPad',
 		url: 'https://apps.apple.com/gb/app/e-on-home-solar-and-heating/id1468486784#?platform=ipad'
 	},
@@ -692,8 +692,8 @@ export const mobileApps: ExtendedProject[] = withIndex([
 		description: 'Smart energy management application for iPad',
 		details: 'Typescript, React, React Native, Redux, MS Azure, AWS, NodeJS',
 		imageHeight: 1716,
-		imageWidth: 1286,
 		images: ['foton-home-ipad-light.jpg', 'foton-home-ipad-dark.jpg'],
+		imageWidth: 1286,
 		title: 'Foton Home for iPad',
 		url: 'https://apps.apple.com/us/app/foton-home/id1525688620#?platform=ipad'
 	},
@@ -702,7 +702,6 @@ export const mobileApps: ExtendedProject[] = withIndex([
 		description: 'Notes, Reminders and Todos App for Android and iOS',
 		details: 'AngularJS, Ionic 1, Cordova, Firebase, JavaScript, CSS',
 		imageHeight: 1357,
-		imageWidth: 678,
 		images: [
 			'notabene-1.jpeg',
 			'notabene-2.jpeg',
@@ -715,6 +714,7 @@ export const mobileApps: ExtendedProject[] = withIndex([
 			'notabene-9.jpeg',
 			'notabene-10.jpeg'
 		],
+		imageWidth: 678,
 		title: 'Notabene',
 		url: 'https://github.com/scriptex/Notabene'
 	},
@@ -723,8 +723,8 @@ export const mobileApps: ExtendedProject[] = withIndex([
 		description: 'A game based on the popular 2048 game',
 		details: 'AngularJS, Ionic 1, Cordova, Firebase, JavaScript, CSS',
 		imageHeight: 1357,
-		imageWidth: 678,
 		images: ['evolution-1.jpeg', 'evolution-2.jpeg', 'evolution-3.jpeg', 'evolution-4.jpeg'],
+		imageWidth: 678,
 		title: 'Evolution',
 		url: 'https://github.com/scriptex/Evolution'
 	}
@@ -735,7 +735,6 @@ export const automotiveProjects: ExtendedProject[] = withIndex([
 		description: 'Dashboard and infotainment system for the Kinetik Model 27 electric kart',
 		details: 'Typescript, SCSS, SVG, React, Redux, NodeJS, Express, WebSocket, Electron',
 		imageHeight: 1440,
-		imageWidth: 2400,
 		images: [
 			'kinetik-infotainment-1.jpg',
 			'kinetik-infotainment-2.jpg',
@@ -747,6 +746,7 @@ export const automotiveProjects: ExtendedProject[] = withIndex([
 			'kinetik-infotainment-8.jpg',
 			'kinetik-infotainment-9.jpg'
 		],
+		imageWidth: 2400,
 		title: 'Kinetik Infotainment',
 		url: 'https://gokart-ui.atanas.info/'
 	},
@@ -754,7 +754,6 @@ export const automotiveProjects: ExtendedProject[] = withIndex([
 		description: 'Dashboard system for the Volvo P1800 custom hybrid automobile',
 		details: 'Typescript, SCSS, SVG, React, Redux, NodeJS, Express, WebSocket',
 		imageHeight: 411,
-		imageWidth: 1536,
 		images: [
 			'volvo-dashboard-1.jpg',
 			'volvo-dashboard-2.jpg',
@@ -762,6 +761,7 @@ export const automotiveProjects: ExtendedProject[] = withIndex([
 			'volvo-dashboard-4.jpg',
 			'volvo-dashboard-5.jpg'
 		],
+		imageWidth: 1536,
 		title: 'Volvo Dashboard',
 		url: 'https://volvo-dashboard.atanas.info/'
 	},
@@ -769,13 +769,13 @@ export const automotiveProjects: ExtendedProject[] = withIndex([
 		description: 'Dashboard for the electric motorcycle built by Kinetik Automotive',
 		details: 'Typescript, SCSS, SVG, React, Redux, NodeJS, Express, WebSocket',
 		imageHeight: 960,
-		imageWidth: 1600,
 		images: [
 			'motorcycle-dashboard01.jpg',
 			'motorcycle-dashboard02.jpg',
 			'motorcycle-dashboard03.jpg',
 			'motorcycle-dashboard04.jpg'
 		],
+		imageWidth: 1600,
 		// url: 'https://telemetry2-go-ui.vercel.app/',
 		title: 'Motorcycle Dashboard',
 		url: ''
@@ -784,7 +784,6 @@ export const automotiveProjects: ExtendedProject[] = withIndex([
 		description: "Cloud-based telemetry system built for the Kinetik's E-Go-Kart",
 		details: 'Typescript, SCSS, SVG, React, React Query, NodeJS, Express, WebSocket, NextJS, Google Maps',
 		imageHeight: 960,
-		imageWidth: 1600,
 		images: [
 			'telemetry1.png',
 			'telemetry2.jpg',
@@ -803,6 +802,7 @@ export const automotiveProjects: ExtendedProject[] = withIndex([
 			'telemetry15.jpg',
 			'telemetry16.jpg'
 		],
+		imageWidth: 1600,
 		title: 'GoKart Telemetry',
 		url: ''
 	}

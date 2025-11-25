@@ -1,8 +1,10 @@
-import { FC, useEffect, useState } from 'react';
+import type { FC } from 'react';
+import { useEffect, useState } from 'react';
 
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import { Button, Icon } from '@components';
+
 import { composeClassName } from '@scripts/shared';
 
 type Props = {

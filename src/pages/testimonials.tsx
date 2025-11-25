@@ -1,13 +1,16 @@
-import { FC, useState } from 'react';
+import type { FC } from 'react';
+import { useState } from 'react';
 
-import { format } from 'date-fns/format';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Image from 'next/image';
+
+import { format } from 'date-fns/format';
 import type { Swiper as SwiperInstance } from 'swiper';
 import { Autoplay, EffectCoverflow, Keyboard, Thumbs } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { Animation, ExternalLink, Layout, Lines, Section, Title } from '@components';
+
 import { getFundingFromCMS, getPartnersFromCMS, getTestimonialsFromCMS } from '@scripts/cms';
 import type { TestimonialsPageProps } from '@scripts/types';
 
@@ -22,12 +25,12 @@ type DataProps = Pick<Props, 'data'>;
 
 type ListProps = DataProps &
 	Readonly<{
-		swiper: SwiperInstance | null;
+		swiper: null | SwiperInstance;
 	}>;
 
 type PaginationProps = DataProps &
 	Readonly<{
-		setSwiper: (swiper: SwiperInstance | null) => void;
+		setSwiper: (swiper: null | SwiperInstance) => void;
 	}>;
 
 const List: FC<ListProps> = ({ data, swiper }) => (
@@ -94,7 +97,7 @@ const Pagination: FC<PaginationProps> = ({ data, setSwiper }) => (
 );
 
 export const Testimonials: FC<Props> = ({ data, funding, partners }) => {
-	const [swiper, setSwiper] = useState<SwiperInstance | null>(null);
+	const [swiper, setSwiper] = useState<null | SwiperInstance>(null);
 
 	return (
 		<Layout funding={funding} partners={partners}>

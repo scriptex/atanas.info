@@ -2,66 +2,68 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import js from '@eslint/js';
-import { FlatCompat } from '@eslint/eslintrc';
-import { fixupConfigRules, fixupPluginRules } from '@eslint/compat';
+import { fixupPluginRules } from '@eslint/compat';
 
 import globals from 'globals';
 
-import jest from 'eslint-plugin-jest';
 import tsParser from '@typescript-eslint/parser';
+
+import jest from 'eslint-plugin-jest';
+import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import sortKeysFix from 'eslint-plugin-sort-keys-fix';
-import importPlugin from 'eslint-plugin-import';
+import nextPlugin from '@next/eslint-plugin-next';
+import perfectionist from 'eslint-plugin-perfectionist';
 import typescriptEslint from '@typescript-eslint/eslint-plugin';
-import typescriptSortKeys from 'eslint-plugin-typescript-sort-keys';
-import sortDestructureKeys from 'eslint-plugin-sort-destructure-keys';
+
+import prettierExtends from 'eslint-config-prettier';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const compat = new FlatCompat({
-	baseDirectory: __dirname,
-	recommendedConfig: js.configs.recommended,
-	allConfig: js.configs.all
-});
-
 export default [
 	{
-		ignores: ['**/*.config.js', '**/*.config.mjs', 'src/data/open-source.ts', './next-env.d.ts', '.next/**']
+		ignores: [
+			'.github/**',
+			'.husky/**',
+			'.next/**',
+			'.vercel/**',
+			'bin/*.sh',
+			'coverage/**',
+			'design/**',
+			'email/**',
+			'public/**',
+			'./next-env.d.ts',
+			'./svgo-config.mjs',
+			'**/*.config.js',
+			'**/*.config.mjs',
+			'src/data/open-source.ts'
+		]
 	},
-	...fixupConfigRules(
-		compat.extends(
-			'prettier',
-			'next/core-web-vitals',
-			'next/typescript',
-			'plugin:react/recommended',
-			'plugin:react-hooks/recommended',
-			'plugin:compat/recommended',
-			'plugin:@typescript-eslint/recommended'
-		)
-	),
 	{
 		name: 'atanas.info',
+		files: ['**/*.{ts,tsx}'],
 		plugins: {
 			jest,
-			import: fixupPluginRules(importPlugin),
-			'@typescript-eslint': fixupPluginRules(typescriptEslint),
+			react,
+			perfectionist,
 			'react-hooks': fixupPluginRules(reactHooks),
-			'sort-keys-fix': sortKeysFix,
-			'sort-destructure-keys': sortDestructureKeys,
-			'typescript-sort-keys': fixupPluginRules(typescriptSortKeys)
+			'@next/next': nextPlugin,
+			'@typescript-eslint': fixupPluginRules(typescriptEslint)
 		},
 		languageOptions: {
 			globals: {
 				...globals.browser,
 				...globals.node,
-				...jest.environments.globals.globals
+				...jest.environments.globals.globals,
+				NodeJS: true,
+				registerPaint: true
 			},
 			parser: tsParser,
-			ecmaVersion: 5,
+			ecmaVersion: 'latest',
 			sourceType: 'module',
 			parserOptions: {
-				project: 'tsconfig.json'
+				project: 'tsconfig.json',
+				tsconfigRootDir: __dirname
 			}
 		},
 		settings: {
@@ -70,8 +72,13 @@ export default [
 			}
 		},
 		rules: {
-			...typescriptSortKeys.configs.recommended.rules,
-			'compat/compat': 'off',
+			...js.configs.recommended.rules,
+			...prettierExtends.rules,
+			...react.configs.recommended.rules,
+			...reactHooks.configs.recommended.rules,
+			...typescriptEslint.configs.recommended.rules,
+			...nextPlugin.configs.recommended.rules,
+			...nextPlugin.configs['core-web-vitals'].rules,
 			'no-console': 'off',
 			'react/display-name': 'off',
 			'react-hooks/rules-of-hooks': 'error',
@@ -81,18 +88,7 @@ export default [
 					additionalHooks: ''
 				}
 			],
-			'react/jsx-sort-props': [
-				2,
-				{
-					callbacksLast: false,
-					shorthandFirst: false,
-					shorthandLast: false,
-					ignoreCase: true,
-					noSortAlphabetically: false,
-					reservedFirst: false,
-					locale: 'auto'
-				}
-			],
+			'react/jsx-sort-props': 'off',
 			'react/react-in-jsx-scope': 'off',
 			'react/no-unknown-property': [
 				2,
@@ -100,116 +96,83 @@ export default [
 					ignore: ['global', 'jsx']
 				}
 			],
-			'react/no-unescaped-entities': 'off',
-			'sort-imports': [
+			'perfectionist/sort-objects': [
 				'error',
 				{
-					ignoreCase: true,
-					ignoreDeclarationSort: true
+					type: 'natural',
+					order: 'asc'
 				}
 			],
-			'sort-keys': [
-				'error',
-				'asc',
-				{
-					caseSensitive: true,
-					natural: false,
-					minKeys: 2
-				}
-			],
-			'sort-keys-fix/sort-keys-fix': 'warn',
 			'sort-vars': 'error',
-			'sort-destructure-keys/sort-destructure-keys': 2,
-			'import/order': [
+			'perfectionist/sort-jsx-props': 'error',
+			'perfectionist/sort-interfaces': 'error',
+			'perfectionist/sort-object-types': 'error',
+			'perfectionist/sort-imports': [
 				'error',
 				{
-					groups: ['external', 'builtin', 'internal', ['sibling', 'parent'], 'index'],
-					pathGroups: [
-						{
-							pattern: '@(react|react-native)',
-							group: 'external',
-							position: 'before'
-						},
-						{
-							pattern: 'react-*',
-							group: 'external',
-							position: 'before'
-						},
-						{
-							pattern: 'react-*/**',
-							group: 'external',
-							position: 'before'
-						},
-						{
-							pattern:
-								'@*(test-config|components|insights|scripts|public|pages|tests|data|npm|lib|src){,/*}',
-							group: 'internal',
-							position: 'after'
-						},
-						{
-							pattern: '@*(styles){,/*}',
-							patternOptions: {
-								dot: true,
-								nocomment: true
-							},
-							group: 'type',
-							position: 'before'
-						},
-						{
-							pattern: '**/*.+(css|sass|less|scss|pcss|styl)',
-							patternOptions: {
-								dot: true,
-								nocomment: true
-							},
-							group: 'type',
-							position: 'before'
-						},
-						{
-							pattern: '{.,..}/**/*.+(css|sass|less|scss|pcss|styl)',
-							patternOptions: {
-								dot: true,
-								nocomment: true
-							},
-							group: 'type',
-							position: 'before'
-						},
-						{
-							pattern: '@*(svg){,/*}',
-							group: 'index',
-							patternOptions: {
-								matchBase: true
-							},
-							position: 'after'
-						},
-						{
-							pattern:
-								'{.,..}/**/*.+(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|json)',
-							group: 'index',
-							patternOptions: {
-								matchBase: true
-							},
-							position: 'after'
-						},
-						{
-							pattern:
-								'**/*.+(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|json)',
-							group: 'index',
-							patternOptions: {
-								matchBase: true
-							},
-							position: 'after'
-						}
+					type: 'natural',
+					order: 'asc',
+					newlinesBetween: 'always',
+					groups: [
+						'builtin',
+						'react',
+						'reactEcosystem',
+						'next',
+						'external',
+						'lib',
+						'insights',
+						'components',
+						'pages',
+						'scripts',
+						'shared',
+						'data',
+						'src',
+						'testConfig',
+						'internal'
 					],
-					pathGroupsExcludedImportTypes: ['@(react|react-native)'],
-					'newlines-between': 'always',
-					alphabetize: {
-						order: 'asc',
-						caseInsensitive: true
-					}
+					customGroups: Object.entries({
+						react: ['^react$'],
+						reactEcosystem: ['^react-.+'],
+						next: ['^next.*'],
+						lib: ['^@lib/.+'],
+						insights: ['^@insights/.+'],
+						components: ['^@components'],
+						pages: ['^@pages/.+'],
+						scripts: ['^@scripts/.+'],
+						shared: ['^@shared/.+'],
+						data: ['^@data/.+'],
+						src: ['^@src/.+'],
+						testConfig: ['^@test-config/.+']
+					}).flatMap(([groupName, elementNamePattern]) => [
+						{
+							selector: 'type',
+							groupName,
+							elementNamePattern
+						},
+						{
+							groupName,
+							elementNamePattern
+						}
+					])
+				}
+			],
+			'perfectionist/sort-named-imports': [
+				'error',
+				{
+					type: 'natural',
+					order: 'asc'
+				}
+			],
+			'perfectionist/sort-union-types': [
+				'error',
+				{
+					type: 'natural',
+					order: 'asc'
 				}
 			],
 			'@typescript-eslint/ban-ts-comment': 'off',
-			'@typescript-eslint/no-explicit-any': 'off'
+			'@typescript-eslint/no-explicit-any': 'off',
+			'@typescript-eslint/consistent-type-imports': 'error'
 		}
 	}
 ];

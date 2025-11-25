@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { AnchorHTMLAttributes, ButtonHTMLAttributes, FC, useMemo } from 'react';
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes, FC } from 'react';
+import { useMemo } from 'react';
 
-import Link, { LinkProps as ILinkProps } from 'next/link';
+import type { LinkProps as ILinkProps } from 'next/link';
+import Link from 'next/link';
 
 import { composeClassName } from '@scripts/shared';
 import type { ReactChildren } from '@scripts/types';
@@ -15,7 +17,7 @@ type LinkProps = CustomProps & ILinkProps & { children: ReactChildren; type: 'li
 type AnchorProps = CustomProps & AnchorHTMLAttributes<HTMLAnchorElement> & { type: 'anchor' };
 type ButtonProps = CustomProps & ButtonHTMLAttributes<HTMLButtonElement> & { type: 'button' | 'reset' | 'submit' };
 
-type Props = LinkProps | AnchorProps | ButtonProps;
+type Props = AnchorProps | ButtonProps | LinkProps;
 
 const getClassName = <T extends Props>({ className, unstyled }: T): string | undefined => {
 	if (unstyled) {

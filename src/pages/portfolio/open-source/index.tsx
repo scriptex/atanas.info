@@ -4,11 +4,13 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
 
 import { Layout, Section, SectionGrid, Title } from '@components';
-import { openSourceProjects, portfolioSectionProps } from '@data/pages';
-import { Routes } from '@data/routes';
+
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { useCurrentPageParam } from '@scripts/shared';
 import type { PortfolioOpenSourcePageData } from '@scripts/types';
+
+import { openSourceProjects, portfolioSectionProps } from '@data/pages';
+import { Routes } from '@data/routes';
 
 export const PortfolioOpenSourceProjects: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 	funding,

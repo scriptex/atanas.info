@@ -1,16 +1,23 @@
-import { FC, MutableRefObject, Ref, useEffect, useRef, useState } from 'react';
+import type { FC, Ref, RefObject } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-import { Asset } from 'contentful';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
 
-import { Button, GithubSkyline, Layout, Loader, Section, StatsEntry, StatsError, Title } from '@components';
-import { Routes } from '@data/routes';
+import type { Asset } from 'contentful';
+
 import { getData, queryGithub } from '@lib/mongodb';
-import { getFundingFromCMS, getGithubSkylineFromCMS, getPartnersFromCMS, GithubSkylineData } from '@scripts/cms';
+
+import { Button, GithubSkyline, Layout, Loader, Section, StatsEntry, StatsError, Title } from '@components';
+
+import type { GithubSkylineData } from '@scripts/cms';
+import { getFundingFromCMS, getGithubSkylineFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { formatDate, getHoliday } from '@scripts/shared';
-import { addTitles, GeneralInsight, sectionStatsProps } from '@scripts/stats';
+import type { GeneralInsight } from '@scripts/stats';
+import { addTitles, sectionStatsProps } from '@scripts/stats';
 import type { GithubInsights, GithubProfileData, GithubRepository, GithubStatsPageData } from '@scripts/types';
+
+import { Routes } from '@data/routes';
 
 const extractGithubData = ({
 	general,
@@ -218,7 +225,7 @@ export const GithubStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 	const { error: statsError, updated, ...rest }: GithubInsights = data;
 	const blocks: GeneralInsight[] = statsError ? [] : extractGithubData(rest);
 
-	const calendarRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
+	const calendarRef: RefObject<HTMLDivElement | null> = useRef(null);
 
 	const [error, setError] = useState(false);
 	const [loading, setLoading] = useState(true);

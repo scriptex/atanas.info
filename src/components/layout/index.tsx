@@ -1,8 +1,10 @@
 import type { FC } from 'react';
 
 import { Contact, Footer, Header, Nav, Partners } from '@components';
+
 import type { FundingNetwork } from '@scripts/cms';
 import type { Partner, ReactChildren } from '@scripts/types';
+
 import SVGSprite from '@src/sprite.svg';
 
 type Props = {

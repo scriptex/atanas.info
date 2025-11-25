@@ -1,12 +1,17 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import type { FC } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import { Button, Layout, Section, Title } from '@components';
 import { getData, queryMusic } from '@lib/mongodb';
+
+import { Button, Layout, Section, Title } from '@components';
+
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
-import { music, MusicFunctions } from '@scripts/music';
-import { composeClassName, Ref } from '@scripts/shared';
+import type { MusicFunctions } from '@scripts/music';
+import { music } from '@scripts/music';
+import type { Ref } from '@scripts/shared';
+import { composeClassName } from '@scripts/shared';
 import type { MusicPageProps, Track } from '@scripts/types';
 
 const getTrackArtist = (data: string): string => {

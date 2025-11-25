@@ -1,9 +1,11 @@
-import { FC, useMemo } from 'react';
+import type { FC } from 'react';
+import { useMemo } from 'react';
 
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import { Icon } from '@components';
+
 import { Routes } from '@data/routes';
 
 import type { AnchorProps } from './types';

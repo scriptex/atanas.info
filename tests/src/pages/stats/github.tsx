@@ -4,6 +4,7 @@ import { GithubStats } from '@pages/stats/github';
 
 import * as shared from '@scripts/shared';
 import type { GithubContribution, GithubCount, GithubInsights, GithubProfileData } from '@scripts/types';
+
 import { mockFetch, snapshotTest, test } from '@test-config/helpers';
 import { funding, partners } from '@test-config/mocks';
 

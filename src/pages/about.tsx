@@ -4,7 +4,9 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Image from 'next/image';
 
 import { Animation, Icon, Layout, Section, Title } from '@components';
-import { BioEntry, getBioFromCMS, getFundingFromCMS, getOwnerDetailsFromCMS, getPartnersFromCMS } from '@scripts/cms';
+
+import type { BioEntry } from '@scripts/cms';
+import { getBioFromCMS, getFundingFromCMS, getOwnerDetailsFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { useNetworkState } from '@scripts/shared';
 import type { AboutPageProps } from '@scripts/types';
 

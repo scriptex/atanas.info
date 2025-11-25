@@ -1,12 +1,16 @@
 #!/usr/bin/env ts-node-script
 
-import { v2 as cloudinary, UploadApiOptions, UploadApiResponse } from 'cloudinary';
+import type { UploadApiOptions, UploadApiResponse } from 'cloudinary';
+import { v2 as cloudinary } from 'cloudinary';
 import { config as dotenvConfig } from 'dotenv';
 import * as puppeteer from 'puppeteer';
 
-import { projects, WebProject } from '@data/projects';
 import clientPromise, { queryCloudinary, queryScreenshots } from '@lib/mongodb';
+
 import { log } from '@scripts/shared';
+
+import type { WebProject } from '@data/projects';
+import { projects } from '@data/projects';
 
 import * as pckg from '../package.json';
 
@@ -36,7 +40,7 @@ async function delay(time: number): Promise<void> {
 	return new Promise(resolve => setTimeout(resolve, time));
 }
 
-async function createScreenshot(url: string, name: string, timeout = 2000): Promise<UploadApiResponse | null> {
+async function createScreenshot(url: string, name: string, timeout = 2000): Promise<null | UploadApiResponse> {
 	log(`atanas.info: Launching new browser for ${name}...`);
 	const browser = await puppeteer.launch({
 		args: ['--no-sandbox'],
@@ -102,7 +106,7 @@ function upload(shotResult: Uint8Array, options: UploadApiOptions, name: string)
 }
 
 async function createScreenshots(allPages: WebProject[]): Promise<void> {
-	const results: Array<UploadApiResponse | null> = [];
+	const results: Array<null | UploadApiResponse> = [];
 
 	let newProjects: WebProject[] = [...projects];
 

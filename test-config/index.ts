@@ -78,9 +78,9 @@ jest.mock('gsap/Draggable', () => ({
 }));
 
 jest.mock('gitlab-calendar', () => ({
-	GitlabCalendar: jest.fn(() => 'Gitlab Calendar'),
 	__esModule: true,
-	default: jest.fn(() => 'Gitlab Calendar')
+	default: jest.fn(() => 'Gitlab Calendar'),
+	GitlabCalendar: jest.fn(() => 'Gitlab Calendar')
 }));
 
 jest.mock('swiper/react', () => ({

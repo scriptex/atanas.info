@@ -9,7 +9,7 @@ export type ForceNode = Readonly<{
 	width: number;
 }>;
 
-export const defaultForceNodeSize: Pick<ForceNode, 'width' | 'height'> = {
+export const defaultForceNodeSize: Pick<ForceNode, 'height' | 'width'> = {
 	height: 34,
 	width: 34
 };

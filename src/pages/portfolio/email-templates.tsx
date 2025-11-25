@@ -1,4 +1,5 @@
-import { FC, useState } from 'react';
+import type { FC } from 'react';
+import { useState } from 'react';
 
 import Modal from 'react-modal';
 
@@ -6,11 +7,13 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
 
 import { Button, Layout, Section, Title } from '@components';
+
+import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
+import type { PortfolioEmailTemplatesPageData } from '@scripts/types';
+
 import { portfolioSectionProps } from '@data/pages';
 import { emailTemplates } from '@data/projects';
 import { Routes } from '@data/routes';
-import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
-import type { PortfolioEmailTemplatesPageData } from '@scripts/types';
 
 type Props = {
 	template: string;

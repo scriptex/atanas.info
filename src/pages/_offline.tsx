@@ -3,6 +3,7 @@ import type { FC } from 'react';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { EmptyPage } from '@components';
+
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import type { OfflinePageProps } from '@scripts/types';
 

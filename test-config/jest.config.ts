@@ -1,5 +1,3 @@
-/* eslint-disable sort-keys */
-/* eslint-disable sort-keys-fix/sort-keys-fix */
 import type { Config } from '@jest/types';
 
 const config: Config.InitialOptions = {
@@ -33,6 +31,7 @@ const config: Config.InitialOptions = {
 	},
 	moduleDirectories: ['node_modules', 'insights', 'lib', 'npm', 'screenshots', 'src', 'test-config', 'tests'],
 	moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+	/* eslint-disable perfectionist/sort-objects */
 	moduleNameMapper: {
 		'\\.(css|scss)$': '<rootDir>/test-config/style-mock.ts',
 		'\\.svg': '<rootDir>/test-config/svg.ts',
@@ -51,6 +50,7 @@ const config: Config.InitialOptions = {
 		'@tests(.*)': '<rootDir>/tests/$1',
 		'swiper/css': '<rootDir>/test-config/style-mock.ts'
 	},
+	/* eslint-enable perfectionist/sort-objects */
 	preset: 'ts-jest',
 	setupFiles: ['jest-canvas-mock', '<rootDir>/test-config/index.ts'],
 	testPathIgnorePatterns: [],

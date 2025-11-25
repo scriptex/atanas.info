@@ -1,4 +1,4 @@
-import { ForceNode } from '@data/skills-list';
+import type { ForceNode } from '@data/skills-list';
 
 export const occupation: ForceNode[] = [
 	{

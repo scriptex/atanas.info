@@ -1,10 +1,12 @@
-import { FC, ReactNode, useMemo } from 'react';
+import type { FC, ReactNode } from 'react';
+import { useMemo } from 'react';
 
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
 import { Lines, Section } from '@components';
-import { Routes } from '@data/routes';
+
+import type { Routes } from '@data/routes';
 
 type Props = {
 	additionalActions?: ReactNode;

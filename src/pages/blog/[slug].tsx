@@ -2,11 +2,15 @@ import type { FC } from 'react';
 
 import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import { Layout, MDX as Mdx, Title } from '@components';
-import { Routes } from '@data/routes';
 import { getAllPosts, getPostBySlug } from '@lib/markdown';
-import { Article, getArticlesFromCMS, getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
+
+import { Layout, MDX as Mdx, Title } from '@components';
+
+import type { Article } from '@scripts/cms';
+import { getArticlesFromCMS, getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import type { BlogPostPageData } from '@scripts/types';
+
+import { Routes } from '@data/routes';
 
 export const OpenSourceProject: FC<Readonly<InferGetStaticPropsType<typeof getStaticProps>>> = ({
 	articles,

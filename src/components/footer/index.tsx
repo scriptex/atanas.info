@@ -1,16 +1,18 @@
-import { FC, useEffect } from 'react';
+import type { FC } from 'react';
+import { useEffect } from 'react';
 
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { ExternalLink, Funding, Referral } from '@components';
-import { updatedAt } from '@data/updated-at';
+
 import type { FundingNetwork } from '@scripts/cms';
 import { formatDate } from '@scripts/shared';
 
 import BraintrustHire from '@data/lotties/hire1.json';
 import ToptalHire from '@data/lotties/hire2.json';
 import BraintrustTalent from '@data/lotties/talent.json';
+import { updatedAt } from '@data/updated-at';
 
 type Props = {
 	funding: FundingNetwork[];

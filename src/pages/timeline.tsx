@@ -5,7 +5,9 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Animation, Icon, Layout, Section, Title } from '@components';
-import { getFundingFromCMS, getPartnersFromCMS, getTimelineFromCMS, TimelineItem } from '@scripts/cms';
+
+import type { TimelineItem } from '@scripts/cms';
+import { getFundingFromCMS, getPartnersFromCMS, getTimelineFromCMS } from '@scripts/cms';
 import type { TimelinePageData } from '@scripts/types';
 
 import timeline from '@data/lotties/timeline.json';

@@ -4,12 +4,14 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
 
 import { Layout, Section, SectionGrid, Title } from '@components';
-import { portfolioSectionProps } from '@data/pages';
-import { personalProjects } from '@data/projects';
-import { Routes } from '@data/routes';
+
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { useCurrentPageParam } from '@scripts/shared';
 import type { PortfolioPersonalProjectsPageData } from '@scripts/types';
+
+import { portfolioSectionProps } from '@data/pages';
+import { personalProjects } from '@data/projects';
+import { Routes } from '@data/routes';
 
 export const PortfolioPersonalProjects: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 	funding,

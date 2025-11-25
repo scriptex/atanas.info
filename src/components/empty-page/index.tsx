@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 
 import { Layout, Lines, Title } from '@components';
+
 import type { FundingNetwork } from '@scripts/cms';
 import type { Partner, ReactChildren } from '@scripts/types';
 

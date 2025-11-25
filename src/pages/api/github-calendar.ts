@@ -1,9 +1,10 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+
 import { ApolloClient, gql, HttpLink, InMemoryCache } from '@apollo/client';
 import { SetContextLink } from '@apollo/client/link/context';
 import { LocalState } from '@apollo/client/local-state';
-import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { GithubProfileData } from '@scripts/types';
+import type { GithubProfileData } from '@scripts/types';
 
 export default async function handler(_: NextApiRequest, res: NextApiResponse): Promise<void> {
 	try {

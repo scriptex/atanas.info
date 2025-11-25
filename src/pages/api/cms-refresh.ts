@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { refreshCMSData } from '@lib/cms-cache';
+
 import { allCMSTypes } from '@scripts/cms';
 
 export default async function handler(_: NextApiRequest, res: NextApiResponse): Promise<void> {

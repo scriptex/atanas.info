@@ -1,9 +1,12 @@
-import { FC, useState } from 'react';
+import type { FC } from 'react';
+import { useState } from 'react';
 
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Animation, Layout, Loader, Section, SectionNav, Title } from '@components';
-import { getFundingFromCMS, getPartnersFromCMS, getSlidesFromCMS, Slide } from '@scripts/cms';
+
+import type { Slide } from '@scripts/cms';
+import { getFundingFromCMS, getPartnersFromCMS, getSlidesFromCMS } from '@scripts/cms';
 import { composeClassName } from '@scripts/shared';
 import type { SlidesPageData } from '@scripts/types';
 

@@ -1,6 +1,7 @@
-import { FC, useEffect, useRef } from 'react';
+import type { FC } from 'react';
+import { useEffect, useRef } from 'react';
 
-import { AnimationConfig, AnimationItem } from 'lottie-web';
+import type { AnimationConfig, AnimationItem } from 'lottie-web';
 
 type Props = {
 	className: string;

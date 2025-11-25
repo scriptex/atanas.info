@@ -1,11 +1,13 @@
 import type { FC } from 'react';
 
 import { Button } from '@components';
-import { Routes } from '@data/routes';
-import { Article, Slide, Video } from '@scripts/cms';
+
+import type { Article, Slide, Video } from '@scripts/cms';
 import { composeClassName } from '@scripts/shared';
 
-type AllowedDataTypes = Video | Slide | Article;
+import type { Routes } from '@data/routes';
+
+type AllowedDataTypes = Article | Slide | Video;
 
 type Props = {
 	active: number;

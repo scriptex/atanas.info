@@ -3,9 +3,11 @@ import type { ReactNode } from 'react';
 import Link from 'next/link';
 
 import { ExternalLink, Loader, SectionNav } from '@components';
-import { SubPage } from '@data/projects';
-import { Routes } from '@data/routes';
+
 import { usePagination } from '@scripts/shared';
+
+import type { SubPage } from '@data/projects';
+import type { Routes } from '@data/routes';
 
 type SectionGridProps = {
 	data: SubPage[];

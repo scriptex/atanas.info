@@ -1,10 +1,13 @@
-import { FC, useState } from 'react';
+import type { FC } from 'react';
+import { useState } from 'react';
 
 import Link from 'next/link';
 
 import { Button, Icon, Nav, ThemeSwitcher } from '@components';
-import { Routes } from '@data/routes';
+
 import { composeClassName } from '@scripts/shared';
+
+import { Routes } from '@data/routes';
 
 export const Header: FC = () => {
 	const [open, setOpen] = useState(false);

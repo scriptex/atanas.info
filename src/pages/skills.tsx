@@ -1,12 +1,16 @@
-import { FC, useEffect, useState } from 'react';
+import type { FC } from 'react';
+import { useEffect, useState } from 'react';
 
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Button, Icon, Layout, Lines, Section, Title } from '@components';
-import { ForceNode, skills } from '@data/skills-list';
+
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { composeClassName } from '@scripts/shared';
 import type { SkillsPageData } from '@scripts/types';
+
+import type { ForceNode } from '@data/skills-list';
+import { skills } from '@data/skills-list';
 
 export const Skills: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ funding, partners }) => {
 	const [showTable, setShowTable] = useState(false);

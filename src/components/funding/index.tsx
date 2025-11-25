@@ -1,8 +1,10 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import type { FC } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import gsap from 'gsap';
 
 import { Button } from '@components';
+
 import type { FundingNetwork as FundingNetworkType } from '@scripts/cms';
 import { composeClassName } from '@scripts/shared';
 

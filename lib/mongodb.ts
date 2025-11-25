@@ -1,5 +1,6 @@
 import { config as dotenvConfig } from 'dotenv';
-import { Document, Filter, MongoClient, MongoClientOptions, ServerApiVersion } from 'mongodb';
+import type { Document, Filter, MongoClientOptions } from 'mongodb';
+import { MongoClient, ServerApiVersion } from 'mongodb';
 
 declare global {
 	var _mongoClientPromise: Promise<MongoClient>;

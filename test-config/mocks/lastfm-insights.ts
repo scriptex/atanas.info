@@ -1,4 +1,4 @@
-import { LastFMInsights } from '@insights/utils';
+import type { LastFMInsights } from '@insights/utils';
 
 export const lastFmInsights: LastFMInsights = {
 	error: false,

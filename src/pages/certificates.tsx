@@ -1,18 +1,14 @@
 import type { FC } from 'react';
 
-import { format } from 'date-fns/format';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Image from 'next/image';
 
+import { format } from 'date-fns/format';
+
 import { Animation, ExternalLink, Layout, Loader, Section, Title } from '@components';
-import {
-	Badge,
-	Certificate,
-	getBadgesFromCMS,
-	getCertificatesFromCMS,
-	getFundingFromCMS,
-	getPartnersFromCMS
-} from '@scripts/cms';
+
+import type { Badge, Certificate } from '@scripts/cms';
+import { getBadgesFromCMS, getCertificatesFromCMS, getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import type { CertificatesPageProps } from '@scripts/types';
 
 import certificate from '@data/lotties/certificate.json';

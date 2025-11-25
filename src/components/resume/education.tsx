@@ -1,8 +1,10 @@
-import { FC, Fragment } from 'react';
+import type { FC } from 'react';
+import { Fragment } from 'react';
 
 import { format } from 'date-fns/format';
 
 import { ResumeEntry } from '@components';
+
 import type { Certificate, Education } from '@scripts/cms';
 
 type Props = {

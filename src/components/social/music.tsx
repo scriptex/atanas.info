@@ -1,13 +1,17 @@
-import { FC, useState } from 'react';
+import type { FC } from 'react';
+import { useState } from 'react';
 
 import { UTCDate } from '@date-fns/utc';
 import { formatDistance } from 'date-fns/formatDistance';
-import { LastFMRecentTrack, LastFMRecentTracksResponse } from 'lastfm-node-client';
+import type { LastFMRecentTrack, LastFMRecentTracksResponse } from 'lastfm-node-client';
 import useInterval from 'use-interval';
 
-// Keep a copy of Carousel in `/components` until I figure out why the imported version breaks with React 19
-import { Carousel, CarouselItem, ExternalLink, Loader, StatsEntry } from '@components';
 import type { LastFMAlbum, LastFMInsights } from '@insights/utils';
+
+// Keep a copy of Carousel in `/components` until I figure out why the imported version breaks with React 19
+import type { CarouselItem } from '@components';
+import { Carousel, ExternalLink, Loader, StatsEntry } from '@components';
+
 import { formatDate } from '@scripts/shared';
 
 import { filteredData } from './utils';
@@ -15,7 +19,7 @@ import { filteredData } from './utils';
 type Props = {
 	condition: boolean;
 	data: LastFMAlbum[];
-	period: 'week' | 'month';
+	period: 'month' | 'week';
 };
 
 const SocialMusicCarousel: FC<Readonly<Props>> = ({ condition, data, period }: Props) =>

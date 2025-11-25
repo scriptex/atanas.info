@@ -1,9 +1,12 @@
-import { ChangeEvent, FC, FormEvent, useCallback, useContext, useState } from 'react';
+import type { ChangeEvent, FC, FormEvent } from 'react';
+import { useCallback, useContext, useState } from 'react';
 
 import { Button } from '@components';
-import { AppContext } from '@data/context';
+
 import { composeClassName } from '@scripts/shared';
 import { Status } from '@scripts/types';
+
+import { AppContext } from '@data/context';
 
 type Props = {
 	initialStatus?: Status;

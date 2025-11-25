@@ -1,8 +1,10 @@
-import { FC, useEffect } from 'react';
+import type { FC } from 'react';
+import { useEffect } from 'react';
 
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { Animation, Icon, Layout, Lines, Section, Title } from '@components';
+
 import { getFundingFromCMS, getPartnersFromCMS } from '@scripts/cms';
 import { useNetworkState } from '@scripts/shared';
 import type { InteractiveResumePageProps } from '@scripts/types';
