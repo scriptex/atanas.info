@@ -15,7 +15,8 @@ body {
 	color: var(--color-primary);
 	background-color: var(--color-secondary);
 
-	& > div > .floatingchat-container-wrap {
+	& > div > .floatingchat-container-wrap,
+	& > div > .floatingchat-container-wrap-mobi {
 		z-index: 999 !important;
 	}
 }
