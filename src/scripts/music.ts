@@ -1,7 +1,7 @@
 import { Power4, TweenMax } from 'gsap';
 import { createNoise2D } from 'simplex-noise';
 
-import { onThemeChange, random } from './shared';
+import { onThemeChange } from './shared';
 
 let src: MediaElementAudioSourceNode;
 
@@ -121,8 +121,8 @@ export const music = (container: HTMLDivElement): MusicFunctions => {
 		constructor(index: number) {
 			this.index = index;
 
-			this.xR = random();
-			this.yR = random();
+			this.xR = Math.random();
+			this.yR = Math.random();
 
 			this.i = 0;
 			this.value = 0;
