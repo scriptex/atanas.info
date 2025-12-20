@@ -14,13 +14,6 @@ export type PaginationData<T> = {
 	menu: Project[] | undefined;
 };
 
-export const random = (): number => {
-	const crypto = window.crypto;
-	const array = new Uint32Array(1);
-
-	return crypto.getRandomValues(array)[0] / (Math.pow(2, 32) - 1);
-};
-
 export const formatDate = (date: number | string, formatter = 'dd MMM yyyy'): string => {
 	if (!date) {
 		return '';

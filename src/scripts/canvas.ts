@@ -1,7 +1,5 @@
 import * as d3 from 'd3';
 
-import { random } from '@scripts/shared';
-
 export type Dots = d3.Selection<SVGCircleElement, any, SVGSVGElement, any>;
 export type Canvas = d3.Selection<SVGSVGElement, unknown, HTMLElement, any>;
 
@@ -15,7 +13,7 @@ type Data = {
 
 let circleIndex = 0;
 
-const rand = (modifier: number): number => random() * modifier;
+const rand = (modifier: number): number => Math.random() * modifier;
 const eventType: string = 'ontouchstart' in document ? 'touchmove' : 'mousemove';
 const dispatcher: d3.Dispatch<EventTarget> = d3.dispatch('remove-circle');
 const { innerHeight, innerWidth } = window;
