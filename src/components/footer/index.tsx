@@ -27,7 +27,7 @@ export const Footer: FC<Readonly<Props>> = ({ funding }) => {
 		<footer className="c-footer">
 			<div className="o-shell o-shell--flex">
 				<p>
-					&copy; {new Date().getFullYear()} Atanas Atanasov. <br className="visible-xs-block" />
+					&copy; 2011 - {new Date().getFullYear()} Atanas Atanasov. <br className="visible-xs-block" />
 					All rights reserved.
 				</p>
 
