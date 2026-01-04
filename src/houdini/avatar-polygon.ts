@@ -23,8 +23,8 @@ registerPaint(
 			ctx.translate(-width / 2, -height / 2);
 			ctx.beginPath();
 
-			let xPos: number = center.x + radius * Math.cos((2 * Math.PI * 0) / steps);
-			let yPos: number = center.y + radius * Math.sin((2 * Math.PI * 0) / steps);
+			let xPos: number = center.x + radius * Math.cos(0);
+			let yPos: number = center.y + radius * Math.sin(0);
 
 			ctx.moveTo(xPos, yPos);
 

@@ -112,7 +112,7 @@ export default [
 				{
 					type: 'natural',
 					order: 'asc',
-					newlinesBetween: 'always',
+					newlinesBetween: 1,
 					groups: [
 						'builtin',
 						'react',
