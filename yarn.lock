@@ -2729,48 +2729,56 @@
     lodash "^4.17.21"
     request "^2.81.0"
 
-"@serwist/build@9.4.2":
-  version "9.4.2"
-  resolved "https://registry.yarnpkg.com/@serwist/build/-/build-9.4.2.tgz#7f98cee21c683e5ff88e94d0e0eba98dfd7dd1cb"
-  integrity sha512-DVwXEs8zbYxkm9FlwRVGtsnakWuJ5wfre4UL9CABbjh4lzkqrLidkrZZA0zc33kqUtDEfxhG/QWukOl+ujJDlA==
+"@serwist/build@9.4.4":
+  version "9.4.4"
+  resolved "https://registry.yarnpkg.com/@serwist/build/-/build-9.4.4.tgz#094ef8862f4d41a194af76dfad3c9b0fc8fd4825"
+  integrity sha512-qd5/XyKMXM1ipFYO503et+07xvQGJFjhrExVuOWr6mHV7KKGLUJjs6VEti57Tv0wJDkBOS7i1jW5fSrEMnFFug==
   dependencies:
+    "@serwist/utils" "9.4.4"
     common-tags "1.8.2"
     glob "10.5.0"
     pretty-bytes "6.1.1"
     source-map "0.8.0-beta.0"
     zod "4.2.1"
 
-"@serwist/next@9.4.2":
-  version "9.4.2"
-  resolved "https://registry.yarnpkg.com/@serwist/next/-/next-9.4.2.tgz#4db2a926699fa8376b6fc2cb03787404fbf3cef5"
-  integrity sha512-S7LYUGDd1Cc/HGrfitSPeeew1I++VAVcgTFToXe6lejz1JpjjlyTmM060r3aZvqb6lAvyukZ27DT21WUjSogSA==
+"@serwist/next@9.4.4":
+  version "9.4.4"
+  resolved "https://registry.yarnpkg.com/@serwist/next/-/next-9.4.4.tgz#a169ed6fbb65fcb74a04da7e8eac2b1f2c63416c"
+  integrity sha512-C4H9G+RJVhuPqUAaT++RbAOBtuBc2zpuieLeZxTVyiASrwhDWEp+v+qBDDzY8dCuQobsq7UO26FltJrXleGOZw==
   dependencies:
-    "@serwist/build" "9.4.2"
-    "@serwist/webpack-plugin" "9.4.2"
-    "@serwist/window" "9.4.2"
+    "@serwist/build" "9.4.4"
+    "@serwist/utils" "9.4.4"
+    "@serwist/webpack-plugin" "9.4.4"
+    "@serwist/window" "9.4.4"
     browserslist "4.28.1"
     glob "10.5.0"
     kolorist "1.8.0"
     semver "7.7.3"
-    serwist "9.4.2"
+    serwist "9.4.4"
     zod "4.2.1"
 
-"@serwist/webpack-plugin@9.4.2":
-  version "9.4.2"
-  resolved "https://registry.yarnpkg.com/@serwist/webpack-plugin/-/webpack-plugin-9.4.2.tgz#5d8697567659b63b80a2c6444b7337b9f8a2e0ab"
-  integrity sha512-pj7NxWkEB9yG6xQJ3NKGnbw+sFdzIi66eLgfvVIPco2toBbNllC/SFLo3+VtE0ITi5XcMAgfT87dT1Y/0iVGVA==
+"@serwist/utils@9.4.4":
+  version "9.4.4"
+  resolved "https://registry.yarnpkg.com/@serwist/utils/-/utils-9.4.4.tgz#21d824f546de91b7119467d701e48e11e452d2bd"
+  integrity sha512-esgNORd4ihQC5FAOaHRsAt0E6h7cYfsZvACWMotwIqcC+Cw0Q1NDoTg8hKV1sJ9Sc1UKA0SF3jyaWRPnlKTsGQ==
+
+"@serwist/webpack-plugin@9.4.4":
+  version "9.4.4"
+  resolved "https://registry.yarnpkg.com/@serwist/webpack-plugin/-/webpack-plugin-9.4.4.tgz#a24eb4ea898f7290fbf503f904ba5aa25f754027"
+  integrity sha512-4FeUyw2CaGA9BkCs1Pst0kMXZ7xrYx4K1ZDKfH9w7alIIPDoTnV2YmrNCjptqhkLFVB3ErZRy4Un716YzYx3Qw==
   dependencies:
-    "@serwist/build" "9.4.2"
+    "@serwist/build" "9.4.4"
+    "@serwist/utils" "9.4.4"
     pretty-bytes "6.1.1"
     zod "4.2.1"
 
-"@serwist/window@9.4.2":
-  version "9.4.2"
-  resolved "https://registry.yarnpkg.com/@serwist/window/-/window-9.4.2.tgz#f6ebd92843a5b4a2f234981992ca3fdffe0b0b6c"
-  integrity sha512-v1PqWOHj/ysNg9G84hq2ej4FzOQZsbld74QmsI4AXGYCji/dP+wcpvz/I6kw+fRH2/9ZhX3KuJHWHPUebBe5+Q==
+"@serwist/window@9.4.4":
+  version "9.4.4"
+  resolved "https://registry.yarnpkg.com/@serwist/window/-/window-9.4.4.tgz#7b3096f9002daf684d284bbfed76867bf3d9d84b"
+  integrity sha512-NA7/r5njJ77gsnuTPQoGLokdYB73exnp2kao4bjcRtKL0ZBFHK6D7BtaCTfx2qQiQAbqQy7pLv0ARfsUu4bYkQ==
   dependencies:
     "@types/trusted-types" "2.0.7"
-    serwist "9.4.2"
+    serwist "9.4.4"
 
 "@sinclair/typebox@^0.34.0":
   version "0.34.46"
@@ -11523,11 +11531,12 @@ serialize-javascript@7.0.2, serialize-javascript@^4.0.0, serialize-javascript@^6
   resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-7.0.2.tgz#3939e695db5adff30b282bb36466b58e518008bb"
   integrity sha512-Y/agDAqbUWRYFWLF5pMT9Rb8wN5ERPMbQH7oq6R+4YgFdMNO4+ELo4PjFCW3H+2CbXirPr/XUgYT+3iXJfTbZQ==
 
-serwist@9.4.2:
-  version "9.4.2"
-  resolved "https://registry.yarnpkg.com/serwist/-/serwist-9.4.2.tgz#d6089fec4811e0abbe416d57f2bfac5c0460b7aa"
-  integrity sha512-IHbZjUTAOdUstD/ZWRxgG4aCaxyZtQVLxkvVIGHJh3u0+uIMXweBSDaOOXZCP8luXYdbpfb5AdSU8oQiFKlHCQ==
+serwist@9.4.4:
+  version "9.4.4"
+  resolved "https://registry.yarnpkg.com/serwist/-/serwist-9.4.4.tgz#b7afb1f17e6f4e684d766dcfde480465dfaf8d74"
+  integrity sha512-MrsVo5ruv8De4zRphWRyBh2XnQNtSplVg4NR1j4RNoQrjECMLncxYUirnJqkplBH7CA5IIUl+mlsKs4uD5JjiA==
   dependencies:
+    "@serwist/utils" "9.4.4"
     idb "8.0.3"
 
 set-function-length@^1.2.2:
