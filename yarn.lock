@@ -3425,10 +3425,17 @@
   dependencies:
     "@types/mjml-core" "*"
 
-"@types/node@*", "@types/node@25.0.10":
+"@types/node@*":
   version "25.0.10"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-25.0.10.tgz#4864459c3c9459376b8b75fd051315071c8213e7"
   integrity sha512-zWW5KPngR/yvakJgGOmZ5vTBemDoSqF3AcV/LrO5u5wTWyEAVVh+IT39G4gtyAkh3CtTZs8aX/yRM82OfzHJRg==
+  dependencies:
+    undici-types "~7.16.0"
+
+"@types/node@25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.1.0.tgz#95cc584f1f478301efc86de4f1867e5875e83571"
+  integrity sha512-t7frlewr6+cbx+9Ohpl0NOTKXZNV9xHRmNOvql47BFJKcEG1CxtxlPEEe+gR9uhVWM4DwhnvTF110mIL4yP9RA==
   dependencies:
     undici-types "~7.16.0"
 
@@ -6949,10 +6956,10 @@ global-prefix@^3.0.0:
     kind-of "^6.0.2"
     which "^1.3.1"
 
-globals@17.1.0:
-  version "17.1.0"
-  resolved "https://registry.yarnpkg.com/globals/-/globals-17.1.0.tgz#03448e667caa3914312a7937eef48c4a59dc6859"
-  integrity sha512-8HoIcWI5fCvG5NADj4bDav+er9B9JMj2vyL2pI8D0eismKyUvPLTSs+Ln3wqhwcp306i73iyVnEKx3F6T47TGw==
+globals@17.2.0:
+  version "17.2.0"
+  resolved "https://registry.yarnpkg.com/globals/-/globals-17.2.0.tgz#41d29408d6f5408457d2ef965d29215e3026779f"
+  integrity sha512-tovnCz/fEq+Ripoq+p/gN1u7l6A7wwkoBT9pRCzTHzsD/LvADIzXZdjmRymh5Ztf0DYC3Rwg5cZRYjxzBmzbWg==
 
 globals@^13.19.0:
   version "13.24.0"
@@ -8480,10 +8487,10 @@ lastfm-node-client@2.2.0:
   resolved "https://registry.yarnpkg.com/lastfm-node-client/-/lastfm-node-client-2.2.0.tgz#c5fb02f860c05d5194b62284a50cfad36e8f14a8"
   integrity sha512-nhHxrRPaNKIJnEuRov68HGjQRAFel2UWnG86ieQAklaVOdBciC6DO0vajZjzPZGqwvUAxQzDHPsp2ceDOtKW2w==
 
-lastfm-ts-api@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/lastfm-ts-api/-/lastfm-ts-api-2.5.0.tgz#3cadc5d5a78bc54679a90ab5c0690489cb3c8e5d"
-  integrity sha512-UT+hh74C9+Jwn+gA7ieM66qkh5eGP1V/6CP9KyfVENqU7oXTC0AwRTU18i9jd3oE7cd/gEn1MruwB7WRoUxj8Q==
+lastfm-ts-api@2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/lastfm-ts-api/-/lastfm-ts-api-2.6.0.tgz#22125d1e78114ac57ae5f790e9b78b705281c117"
+  integrity sha512-Kr4B4/LlEHumvmnzLawXGRQAzn2ApsQ/n+locPyDpGIQgJg/oK9OSAVTS1d47D00NLnZCNoa/+9YB/bkeXL46Q==
 
 leven@^3.1.0:
   version "3.1.0"
@@ -12269,10 +12276,10 @@ svgo@^3.0.0, svgo@^3.0.2:
     csso "^5.0.5"
     picocolors "^1.0.0"
 
-swiper@12.0.3:
-  version "12.0.3"
-  resolved "https://registry.yarnpkg.com/swiper/-/swiper-12.0.3.tgz#c7804fd39955189d3ec652d9832896bd3d04733e"
-  integrity sha512-BHd6U1VPEIksrXlyXjMmRWO0onmdNPaTAFduzqR3pgjvi7KfmUCAm/0cj49u2D7B0zNjMw02TSeXfinC1hDCXg==
+swiper@12.1.0:
+  version "12.1.0"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-12.1.0.tgz#5e020f3bdbbff6fc9d9be01714d0ad5452050a58"
+  integrity sha512-BD4CpAOOyEvZ2f0CDx362ea+vmOwukVcmbsQx+0BhRIaBUz8wvcCd//E7RFmvBZCrfyqXCHUVqmgUwts6ywlxw==
 
 symbol-tree@^3.2.4:
   version "3.2.4"
