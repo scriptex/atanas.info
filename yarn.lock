@@ -5796,7 +5796,7 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-doiuse@^6.0.5:
+doiuse@^6.0.6:
   version "6.0.6"
   resolved "https://registry.yarnpkg.com/doiuse/-/doiuse-6.0.6.tgz#6a21b510b848e517fcb2a4203fb99b1483ea5ffb"
   integrity sha512-XuPRslcWHhQJ+WjCjimRUcNfhZvOiC0610FsY6WeSlzXvoZYtm6iOpR9K0N4wRoM/lP4i7LatT+IhltAzouSOw==
@@ -12156,13 +12156,13 @@ stylelint-config-recommended@18.0.0:
   resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-18.0.0.tgz#1d86be73565c3cd5e6babb8abcc932012a86bd76"
   integrity sha512-mxgT2XY6YZ3HWWe3Di8umG6aBmWmHTblTgu/f10rqFXnyWxjKWwNdjSWkgkwCtxIKnqjSJzvFmPT5yabVIRxZg==
 
-stylelint-no-unsupported-browser-features@8.0.5:
-  version "8.0.5"
-  resolved "https://registry.yarnpkg.com/stylelint-no-unsupported-browser-features/-/stylelint-no-unsupported-browser-features-8.0.5.tgz#9c49b1748e34f7f93d093d71cb780e8988f89bb6"
-  integrity sha512-fCfV7C6q9PM/fb3oYERoxqiWEqDQf1S2NfKLy8tv1tiIhilFQ3zlw7AunE4kZHbGh6bD67SEiU0UwvJyNnvyKQ==
+stylelint-no-unsupported-browser-features@8.1.1:
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/stylelint-no-unsupported-browser-features/-/stylelint-no-unsupported-browser-features-8.1.1.tgz#20451d4a4d26c5884e4e57eaacbfb5996dee8089"
+  integrity sha512-sLEe6NUFoWL2vGt6IKKllQEKfKgVxmvTBFs1JVMHKKLWzxtWAXaqSxJvH+j0URM4vLQQqzC/wXc9Kp3XBNKdBw==
   dependencies:
     browserslist "^4.26.3"
-    doiuse "^6.0.5"
+    doiuse "^6.0.6"
     postcss "^8.4.32"
 
 stylelint@17.1.0:
