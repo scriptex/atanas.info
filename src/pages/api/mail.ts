@@ -3,15 +3,15 @@ import { join } from 'node:path';
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { SendSmtpEmail, TransactionalEmailsApi } from '@getbrevo/brevo';
+import { BrevoClient, BrevoError } from '@getbrevo/brevo';
+import { TooManyRequestsError, UnauthorizedError } from '@getbrevo/brevo/dist/cjs/api';
 import mjml2html from 'mjml';
 
 import type { FormData } from '@scripts/types';
 
-const sendSMTPEmail = new SendSmtpEmail();
-const transactionalEmailsAPI = new TransactionalEmailsApi();
-
-transactionalEmailsAPI['authentications']['apiKey'].apiKey = process.env.SENDINBLUE_API_KEY ?? '';
+const brevo = new BrevoClient({
+	apiKey: process.env.SENDINBLUE_API_KEY ?? ''
+});
 
 const emailTemplate = readFileSync(join(process.cwd(), 'email', 'contact.mjml'), 'utf8');
 
@@ -38,17 +38,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 	const htmlContent = interpolateTemplate(emailTemplate, data);
 
-	sendSMTPEmail.to = [{ email: 'hi@atanas.info' }];
-	sendSMTPEmail.sender = { email: data.email };
-	sendSMTPEmail.subject = 'New contact form submission from https://atanas.info';
-	sendSMTPEmail.htmlContent = htmlContent;
-
 	try {
-		result = await transactionalEmailsAPI.sendTransacEmail(sendSMTPEmail);
+		result = await brevo.transactionalEmails.sendTransacEmail({
+			to: [{ email: 'hi@atanas.info' }],
+			sender: { email: data.email },
+			subject: 'New contact form submission from https://atanas.info',
+			htmlContent: htmlContent
+		});
 
 		return res.status(200).json(result);
 	} catch (error) {
 		result = { error };
+
+		if (error instanceof UnauthorizedError) {
+			console.error('Invalid API key');
+		} else if (error instanceof TooManyRequestsError) {
+			const retryAfter = (error.rawResponse?.headers as any)['retry-after'];
+
+			console.error(`Rate limited. Retry after ${retryAfter} seconds`);
+		} else if (error instanceof BrevoError) {
+			console.error(`API Error ${error.statusCode}:`, error.message);
+		}
 
 		return res.status(400).json(result);
 	}
