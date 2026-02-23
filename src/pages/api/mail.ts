@@ -3,8 +3,7 @@ import { join } from 'node:path';
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { BrevoClient, BrevoError } from '@getbrevo/brevo';
-import { TooManyRequestsError, UnauthorizedError } from '@getbrevo/brevo/dist/cjs/api';
+import { BrevoClient } from '@getbrevo/brevo';
 import mjml2html from 'mjml';
 
 import type { FormData } from '@scripts/types';
@@ -51,15 +50,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 	} catch (error) {
 		result = { error };
 
-		if (error instanceof UnauthorizedError) {
-			console.error('Invalid API key');
-		} else if (error instanceof TooManyRequestsError) {
-			const retryAfter = (error.rawResponse?.headers as any)['retry-after'];
-
-			console.error(`Rate limited. Retry after ${retryAfter} seconds`);
-		} else if (error instanceof BrevoError) {
-			console.error(`API Error ${error.statusCode}:`, error.message);
-		}
+		console.error(result);
 
 		return res.status(400).json(result);
 	}
