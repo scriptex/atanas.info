@@ -3,15 +3,14 @@ import { join } from 'node:path';
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { SendSmtpEmail, TransactionalEmailsApi } from '@getbrevo/brevo';
+import { BrevoClient } from '@getbrevo/brevo';
 import mjml2html from 'mjml';
 
 import type { FormData } from '@scripts/types';
 
-const sendSMTPEmail = new SendSmtpEmail();
-const transactionalEmailsAPI = new TransactionalEmailsApi();
-
-transactionalEmailsAPI['authentications']['apiKey'].apiKey = process.env.SENDINBLUE_API_KEY ?? '';
+const brevo = new BrevoClient({
+	apiKey: process.env.SENDINBLUE_API_KEY ?? ''
+});
 
 const emailTemplate = readFileSync(join(process.cwd(), 'email', 'contact.mjml'), 'utf8');
 
@@ -34,21 +33,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 		});
 	}
 
+	// eslint-disable-next-line no-useless-assignment
 	let result = {};
 
 	const htmlContent = interpolateTemplate(emailTemplate, data);
 
-	sendSMTPEmail.to = [{ email: 'hi@atanas.info' }];
-	sendSMTPEmail.sender = { email: data.email };
-	sendSMTPEmail.subject = 'New contact form submission from https://atanas.info';
-	sendSMTPEmail.htmlContent = htmlContent;
-
 	try {
-		result = await transactionalEmailsAPI.sendTransacEmail(sendSMTPEmail);
+		result = await brevo.transactionalEmails.sendTransacEmail({
+			htmlContent: htmlContent,
+			sender: { email: data.email },
+			subject: 'New contact form submission from https://atanas.info',
+			to: [{ email: 'hi@atanas.info' }]
+		});
 
 		return res.status(200).json(result);
 	} catch (error) {
 		result = { error };
+
+		console.error(result);
 
 		return res.status(400).json(result);
 	}
