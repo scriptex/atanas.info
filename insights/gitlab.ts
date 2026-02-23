@@ -37,6 +37,7 @@ export const getCalendar = async (): Promise<Record<string, number>> => {
 		const value1 = calendar1[key];
 		const value2 = calendar2[key];
 
+		// eslint-disable-next-line no-useless-assignment
 		let result = undefined;
 
 		if (typeof value1 === 'undefined') {

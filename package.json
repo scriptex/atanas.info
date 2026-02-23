@@ -49,7 +49,7 @@
 		"pre": "yarn time && yarn fetch-projects && yarn svg",
 		"post": "yarn tsc && yarn houdini && yarn next:build && next-sitemap",
 		"build": "yarn pre && yarn post",
-		"prepare": "husky"
+		"prepare": "husky && husky install"
 	},
 	"dependencies": {
 		"@apollo/client": "4.1.5",

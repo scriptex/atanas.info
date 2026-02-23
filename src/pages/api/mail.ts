@@ -34,16 +34,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 		});
 	}
 
+	// eslint-disable-next-line no-useless-assignment
 	let result = {};
 
 	const htmlContent = interpolateTemplate(emailTemplate, data);
 
 	try {
 		result = await brevo.transactionalEmails.sendTransacEmail({
-			to: [{ email: 'hi@atanas.info' }],
+			htmlContent: htmlContent,
 			sender: { email: data.email },
 			subject: 'New contact form submission from https://atanas.info',
-			htmlContent: htmlContent
+			to: [{ email: 'hi@atanas.info' }]
 		});
 
 		return res.status(200).json(result);
