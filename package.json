@@ -53,10 +53,10 @@
 	},
 	"dependencies": {
 		"@apollo/client": "4.1.6",
-		"@babylonjs/core": "8.53.0",
-		"@babylonjs/gui": "8.53.0",
-		"@babylonjs/loaders": "8.53.0",
-		"@babylonjs/materials": "8.53.0",
+		"@babylonjs/core": "8.54.1",
+		"@babylonjs/gui": "8.54.1",
+		"@babylonjs/loaders": "8.54.1",
+		"@babylonjs/materials": "8.54.1",
 		"@codersrank/activity": "0.9.14",
 		"@codersrank/education": "0.9.12",
 		"@codersrank/portfolio": "0.9.10",
@@ -73,14 +73,14 @@
 		"animateme": "2.4.2",
 		"async-array-prototype": "1.1.1",
 		"attr-i18n": "1.0.0",
-		"babylonjs-gltf2interface": "8.53.0",
+		"babylonjs-gltf2interface": "8.54.1",
 		"contentful": "11.10.5",
 		"d3": "7.9.0",
 		"date-fns": "4.1.0",
 		"dator": "2.0.0",
 		"disqus-react": "1.1.7",
 		"gitlab-calendar": "2.0.1",
-		"graphql": "16.13.0",
+		"graphql": "16.13.1",
 		"gsap": "3.14.2",
 		"hover-media-query": "1.2.3",
 		"html-head-component": "1.2.1",
@@ -141,7 +141,7 @@
 		"@types/jest": "30.0.0",
 		"@types/markdown-it": "14.1.2",
 		"@types/mjml": "4.7.4",
-		"@types/node": "25.3.3",
+		"@types/node": "25.3.5",
 		"@types/react": "19.2.14",
 		"@types/react-copy-to-clipboard": "5.0.7",
 		"@types/react-dom": "19.2.3",
@@ -180,7 +180,7 @@
 		"markdown-it-prism": "3.0.1",
 		"mjml": "4.18.0",
 		"package-info": "5.0.7",
-		"postcss": "8.5.6",
+		"postcss": "8.5.8",
 		"postcss-browser-comments": "7.0.0",
 		"postcss-calc": "10.1.1",
 		"postcss-cli": "11.0.1",
@@ -192,6 +192,7 @@
 		"postcss-extend": "1.0.5",
 		"postcss-flexbugs-fixes": "5.0.2",
 		"postcss-for": "2.1.1",
+		"postcss-import": "16.1.1",
 		"postcss-merge-rules": "7.0.7",
 		"postcss-mixins": "12.1.2",
 		"postcss-nested": "7.0.2",
@@ -200,7 +201,7 @@
 		"postcss-utilities": "0.8.4",
 		"postcss-watch-folder": "2.0.0",
 		"prettier": "3.8.1",
-		"puppeteer": "24.37.5",
+		"puppeteer": "24.38.0",
 		"sass": "1.97.3",
 		"serwist": "9.5.6",
 		"stylelint": "17.4.0",
@@ -218,13 +219,13 @@
 		"type-coverage": "2.29.7",
 		"typescript": "5.9.3",
 		"universal-github-client": "1.0.3",
-		"webpack": "5.105.3"
+		"webpack": "5.105.4"
 	},
 	"private": true,
 	"typeCoverage": {
 		"atLeast": 99.3
 	},
 	"resolutions": {
-		"postcss": "8.5.6"
+		"postcss": "8.5.8"
 	}
 }
