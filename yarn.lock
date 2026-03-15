@@ -2764,56 +2764,56 @@
   resolved "https://registry.yarnpkg.com/@rtsao/scc/-/scc-1.1.0.tgz#927dd2fae9bc3361403ac2c7a00c32ddce9ad7e8"
   integrity sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==
 
-"@serwist/build@9.5.6":
-  version "9.5.6"
-  resolved "https://registry.yarnpkg.com/@serwist/build/-/build-9.5.6.tgz#843f8e45ae274220818322380585b7e1b85d0937"
-  integrity sha512-/YUi2BKrvnIkYg8k/PW5N/lAR4N0h/F8eBaqCaDNOy2fdOiNCkvRaWq/ZaoYN5tocvNsMc7OSm7+m1aJqR7trQ==
+"@serwist/build@9.5.7":
+  version "9.5.7"
+  resolved "https://registry.yarnpkg.com/@serwist/build/-/build-9.5.7.tgz#598873357b99791000a66a1f028b571ee8d6bd2d"
+  integrity sha512-bcIeDFgsMnUq8Sqhnv15KXZhusXekpP9v8MPWVtF7+6WmNqDPztqYjGVgQz2VxOhCgrTu3ji/KeGeuKV+TN8vQ==
   dependencies:
-    "@serwist/utils" "9.5.6"
+    "@serwist/utils" "9.5.7"
     common-tags "1.8.2"
     glob "10.5.0"
     pretty-bytes "6.1.1"
     source-map "0.8.0-beta.0"
     zod "4.3.6"
 
-"@serwist/next@9.5.6":
-  version "9.5.6"
-  resolved "https://registry.yarnpkg.com/@serwist/next/-/next-9.5.6.tgz#fef3ebeea637856bb27b2063672086dd1296e285"
-  integrity sha512-xObhrC3ctSgLMXeDiAypJr9smetEKTKLd79Z5GrgVzh+xjCIOqsdr2f/FrlzDxKX9SO8TMjRt7BjIjv4RrcOBg==
+"@serwist/next@9.5.7":
+  version "9.5.7"
+  resolved "https://registry.yarnpkg.com/@serwist/next/-/next-9.5.7.tgz#9186f143a7e3a471dee40bda1d80c3583a4aebaa"
+  integrity sha512-QJi/aICIIGduVFYj5Eh5w39+CjqTKlMzhhXOyOEH/WpPoCCu0iyG5kdp/Un+JBJYk+NMfzcUmHufgLQZDfHf0Q==
   dependencies:
-    "@serwist/build" "9.5.6"
-    "@serwist/utils" "9.5.6"
-    "@serwist/webpack-plugin" "9.5.6"
-    "@serwist/window" "9.5.6"
+    "@serwist/build" "9.5.7"
+    "@serwist/utils" "9.5.7"
+    "@serwist/webpack-plugin" "9.5.7"
+    "@serwist/window" "9.5.7"
     browserslist "4.28.1"
     glob "10.5.0"
     kolorist "1.8.0"
-    semver "7.7.3"
-    serwist "9.5.6"
+    semver "7.7.4"
+    serwist "9.5.7"
     zod "4.3.6"
 
-"@serwist/utils@9.5.6":
-  version "9.5.6"
-  resolved "https://registry.yarnpkg.com/@serwist/utils/-/utils-9.5.6.tgz#0f44de1d3d8acecba432b480739cced48ac5c574"
-  integrity sha512-WV5hAZd/Oo8hyHv7Pd39EDZu3bIhKe0lW39lyMlKVHm5gIGEnPdrH3DojlXAFHiV18nz/bLeqkVo6rK82kBGHw==
+"@serwist/utils@9.5.7":
+  version "9.5.7"
+  resolved "https://registry.yarnpkg.com/@serwist/utils/-/utils-9.5.7.tgz#77b67dc9c9e6a3fab14d71ae53cc80fe57caa619"
+  integrity sha512-OmMfa9W8MDI6+2DM6fD8Ou0bXSV++P1DHfrcPlLsROEvRHYqV44yF0f/U3RYNA1JDy7iFLNyVnK7zARKjhQayQ==
 
-"@serwist/webpack-plugin@9.5.6":
-  version "9.5.6"
-  resolved "https://registry.yarnpkg.com/@serwist/webpack-plugin/-/webpack-plugin-9.5.6.tgz#259e64faab55e70a051523aea80401008b954414"
-  integrity sha512-kdDqe4AVDJMcS3zTCpV42p+WjJRKb4t0P3flqmceMXfKUDrvhZR3kUWN6yCFi8TLSbHd4hnZZ0cyKa5bCHaa+Q==
+"@serwist/webpack-plugin@9.5.7":
+  version "9.5.7"
+  resolved "https://registry.yarnpkg.com/@serwist/webpack-plugin/-/webpack-plugin-9.5.7.tgz#2d4c0ee22899cc01aacc01c2049f445ff56bb63b"
+  integrity sha512-wnpXoB7PIq8opP/jsVph4GFEl1GzGHzXysFil7vmUDSBRyG8VediSTfxq1F4ag6E+HoaXQtASypG6MDZ/hBkzg==
   dependencies:
-    "@serwist/build" "9.5.6"
-    "@serwist/utils" "9.5.6"
+    "@serwist/build" "9.5.7"
+    "@serwist/utils" "9.5.7"
     pretty-bytes "6.1.1"
     zod "4.3.6"
 
-"@serwist/window@9.5.6":
-  version "9.5.6"
-  resolved "https://registry.yarnpkg.com/@serwist/window/-/window-9.5.6.tgz#ec983b5b6853cc8f24619afbc0131ac4ff52a3a0"
-  integrity sha512-/RztZ97HxiEFlDSCpiLd/6nGz3oDQkKMSDF8epJcta7xdUTAZVwMksEodl3x9Y7jyGItF6T/jY7OBCPrN5IVqQ==
+"@serwist/window@9.5.7":
+  version "9.5.7"
+  resolved "https://registry.yarnpkg.com/@serwist/window/-/window-9.5.7.tgz#e41343b6b07d6f540060b892f80ea68907c7b24b"
+  integrity sha512-K2aRARXbO22LPyU8xL5UXhkNx6Zs+KrPSR1BydqaZPoa+RsBwVTwtwCHN9rcwu1Til+OUbfGwTWj5h1J4IkCOg==
   dependencies:
     "@types/trusted-types" "2.0.7"
-    serwist "9.5.6"
+    serwist "9.5.7"
 
 "@sinclair/typebox@^0.34.0":
   version "0.34.48"
@@ -11520,20 +11520,15 @@ secure-compare@3.0.1:
   resolved "https://registry.yarnpkg.com/secure-compare/-/secure-compare-3.0.1.tgz#f1a0329b308b221fae37b9974f3d578d0ca999e3"
   integrity sha512-AckIIV90rPDcBcglUwXPF3kg0P0qmPsPXAj6BBEENQE1p5yA1xfmDJzfi1Tappj37Pv2mVbKpL3Z1T+Nn7k1Qw==
 
-semver@7.7.3:
-  version "7.7.3"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.7.3.tgz#4b5f4143d007633a8dc671cd0a6ef9147b8bb946"
-  integrity sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==
+semver@7.7.4, semver@^7.3.4, semver@^7.3.5, semver@^7.5.3, semver@^7.5.4, semver@^7.7.2, semver@^7.7.3, semver@^7.7.4:
+  version "7.7.4"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.7.4.tgz#28464e36060e991fa7a11d0279d2d3f3b57a7e8a"
+  integrity sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==
 
 semver@^6.0.0, semver@^6.3.1:
   version "6.3.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.1.tgz#556d2ef8689146e46dcea4bfdd095f3434dffcb4"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
-
-semver@^7.3.4, semver@^7.3.5, semver@^7.5.3, semver@^7.5.4, semver@^7.7.2, semver@^7.7.3, semver@^7.7.4:
-  version "7.7.4"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.7.4.tgz#28464e36060e991fa7a11d0279d2d3f3b57a7e8a"
-  integrity sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==
 
 serialize-javascript@^4.0.0:
   version "4.0.0"
@@ -11542,12 +11537,12 @@ serialize-javascript@^4.0.0:
   dependencies:
     randombytes "^2.1.0"
 
-serwist@9.5.6:
-  version "9.5.6"
-  resolved "https://registry.yarnpkg.com/serwist/-/serwist-9.5.6.tgz#be915c59e6c8921e2ca5df0ed2d75cba76c07c7b"
-  integrity sha512-WoseghF1DUevNGnEqsmyXzVyk1KT18S3CJoFZmzav4vEqGWit+I7ErFav+ocrYq2IUoDhJpbTg15a68UdZy0Vw==
+serwist@9.5.7:
+  version "9.5.7"
+  resolved "https://registry.yarnpkg.com/serwist/-/serwist-9.5.7.tgz#01beef0e50249e385ed76c7f69aec60f09b1dd9d"
+  integrity sha512-4R3kezBK0YAwkU6kIKbJc1I7QmbDV+wauV6Rf2+PdEHN5tBFK+3S92JPgj+XAa1ZCtg55qJGyyzAQ+d0G5AjDg==
   dependencies:
-    "@serwist/utils" "9.5.6"
+    "@serwist/utils" "9.5.7"
     idb "8.0.3"
 
 set-function-length@^1.2.2:
