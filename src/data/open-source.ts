@@ -272,6 +272,10 @@ export const openSourceProjectsList = [
 		title: 'scriptex/socials'
 	},
 	{
+		url: '/portfolio/open-source/stefan',
+		title: 'scriptex/stefan'
+	},
+	{
 		url: '/portfolio/open-source/sublime-snippets',
 		title: 'scriptex/sublime-snippets'
 	},
@@ -286,6 +290,10 @@ export const openSourceProjectsList = [
 	{
 		url: '/portfolio/open-source/svgo-add-viewbox',
 		title: 'scriptex/svgo-add-viewbox'
+	},
+	{
+		url: '/portfolio/open-source/svgo-bimi',
+		title: 'scriptex/svgo-bimi'
 	},
 	{
 		url: '/portfolio/open-source/svgo-viewbox',
