@@ -1,6 +1,8 @@
 import { randomBytes } from 'node:crypto';
 
+// @ts-expect-error
 import type { Package } from 'package-info';
+// @ts-expect-error
 import info from 'package-info';
 
 import { saveInsights } from '@insights/utils';
