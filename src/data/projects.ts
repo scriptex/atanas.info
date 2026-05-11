@@ -48,6 +48,22 @@ export const projects: WebProject[] = withIndex([
 	},
 	{
 		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts, ',
+		image: '/images/web-apps/dmarcian-BIMI-inspector.jpeg',
+		skip: false,
+		text: 'Built in collaboration with the dmarcian team',
+		title: 'dmarcian BIMI Inspector',
+		url: 'https://us.dmarcian.com/bimi-inspector/'
+	},
+	{
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts, ',
+		image: '/images/web-apps/dmarcian-BIMI-builder.jpeg',
+		skip: false,
+		text: 'Built in collaboration with the dmarcian team',
+		title: 'dmarcian BIMI Builder',
+		url: 'https://us.dmarcian.com/bimi-inspector/?tab=2'
+	},
+	{
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts, ',
 		image: '/images/web-apps/dmarcian-DMARC-Validator.jpg',
 		skip: false,
 		text: 'Built in collaboration with the dmarcian team',
