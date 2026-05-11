@@ -14,8 +14,8 @@ const brevo = new BrevoClient({
 
 const emailTemplate = readFileSync(join(process.cwd(), 'email', 'contact.mjml'), 'utf8');
 
-const interpolateTemplate = (template: string, vars: Record<string, string>): string => {
-	let { html } = mjml2html(template);
+const interpolateTemplate = async (template: string, vars: Record<string, string>): Promise<string> => {
+	let { html } = await mjml2html(template);
 
 	for (const prop in vars) {
 		html = html.replaceAll(`{{ ${prop} }}`, vars[prop]);
@@ -36,7 +36,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 	// eslint-disable-next-line no-useless-assignment
 	let result = {};
 
-	const htmlContent = interpolateTemplate(emailTemplate, data);
+	const htmlContent = await interpolateTemplate(emailTemplate, data);
 
 	try {
 		result = await brevo.transactionalEmails.sendTransacEmail({
