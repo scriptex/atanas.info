@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 import { TextEncoder } from 'node:util';
 
+import { jest } from '@jest/globals';
+
 import * as shared from '@scripts/shared';
 
 global.TextEncoder = TextEncoder as any;
@@ -17,6 +19,7 @@ window.HTMLMediaElement.prototype.pause = () => {
 	/* do nothing */
 };
 
+// @ts-expect-error
 global.IntersectionObserver = class IntersectionObserver {
 	root = null;
 	rootMargin = '';
@@ -143,7 +146,7 @@ jest.mock('next/font/google', () => ({
 }));
 
 jest.mock('contentful', () => ({
-	...jest.requireActual('contentful'),
+	...(jest.requireActual('contentful') as any),
 	createClient: jest.fn(() => ({
 		getContentTypes: jest.fn(() => Promise.resolve([])),
 		getEntries: jest.fn(() => Promise.resolve({ items: [] }))
