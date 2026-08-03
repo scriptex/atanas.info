@@ -2,7 +2,6 @@ import type { ComponentType, FC } from 'react';
 import { useEffect, useMemo, useState } from 'react';
 
 import CookieConsent from 'react-cookie-consent';
-import { createPortal } from 'react-dom';
 
 import type { AppProps } from 'next/app';
 import { Fira_Sans } from 'next/font/google';
@@ -30,7 +29,6 @@ const titleFont = Fira_Sans({
 export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppProps) => {
 	const [contactVisible, setContactVisible] = useState(false);
 	const value = useMemo(() => ({ contactVisible, setContactVisible }), [contactVisible]);
-	const [cookieConsentEl, setCookieConsentEl] = useState<HTMLElement | null>(null);
 
 	useEffect(() => {
 		setThemeClassName(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -63,8 +61,6 @@ export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppP
 				});
 			})
 			.catch(console.error);
-
-		setCookieConsentEl(document.body);
 	}, []);
 
 	return (
@@ -85,27 +81,23 @@ export const App: FC<ExtendedAppProps> = ({ Component, pageProps }: ExtendedAppP
 
 			<SpeedInsights />
 
-			{cookieConsentEl &&
-				createPortal(
-					<CookieConsent
-						buttonClasses="c-btn c-btn--small"
-						buttonText="Accept"
-						buttonWrapperClasses="c-cookie-consent__actions"
-						containerClasses="c-cookie-consent"
-						contentClasses="c-cookie-consent__content"
-						cookieName="atanas-info-cookie-consent"
-						declineButtonClasses="c-btn c-btn--small c-btn--decline"
-						declineButtonText="Decline"
-						declineCookieValue="declined"
-						disableStyles
-						enableDeclineButton
-						location="bottom"
-						setDeclineCookie
-					>
-						This web app uses cookies from third party providers to enhance user experience.
-					</CookieConsent>,
-					cookieConsentEl
-				)}
+			<CookieConsent
+				buttonClasses="c-btn c-btn--small"
+				buttonText="Accept"
+				buttonWrapperClasses="c-cookie-consent__actions"
+				containerClasses="c-cookie-consent"
+				contentClasses="c-cookie-consent__content"
+				cookieName="atanas-info-cookie-consent"
+				declineButtonClasses="c-btn c-btn--small c-btn--decline"
+				declineButtonText="Decline"
+				declineCookieValue="declined"
+				disableStyles
+				enableDeclineButton
+				location="bottom"
+				setDeclineCookie
+			>
+				This web app uses cookies from third party providers to enhance user experience.
+			</CookieConsent>
 
 			<Script
 				onLoad={() => {
