@@ -53,7 +53,7 @@
 		"strictNullChecks": true,
 		"target": "ESNext",
 		"typeRoots": ["./@types", "node_modules/@types"],
-		"types": ["jest"]
+		"types": ["jest", "lastfm-node-client", "network-information-api", "npmtotal"]
 	},
 	"include": ["next-env.d.ts", "**/*.mts", "**/*.ts", "**/*.tsx"],
 	"exclude": ["node_modules", "**/*.js"],
