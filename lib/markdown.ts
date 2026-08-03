@@ -7,7 +7,13 @@ import markdownItPrism from 'markdown-it-prism';
 
 const MarkdownIt = new markdownIt({
 	html: true
-}).use(markdownItPrism);
+}).use(markdownItPrism, {
+	highlightInlineCode: true,
+	init() {
+		// silence
+	},
+	plugins: []
+});
 
 export const markdownToHtml = (markdown: string): string => MarkdownIt.render(markdown);
 

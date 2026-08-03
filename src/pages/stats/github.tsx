@@ -117,7 +117,7 @@ const GithubCalendar: FC<Props> = ({ data, error, loading }: Props) => {
 		import('gitlab-calendar')
 			.then(({ GitlabCalendar }) => {
 				if (calendarPlaceholder.current && !!data.days) {
-					new GitlabCalendar( //NOSONAR
+					new GitlabCalendar(
 						calendarPlaceholder.current,
 						data.days.reduce(
 							(result, item) => ({

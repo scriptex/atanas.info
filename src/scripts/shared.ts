@@ -79,14 +79,13 @@ export const log = (message: string): void => {
 };
 
 export const usePagination = <T>(data: T[], size = 10): PaginationData<T> => {
-	const [items, setItems] = useState<T[][] | undefined>();
+	const mappedData = data.map((item, index) => ({ ...item, index }));
 
-	data = data.map((item, index) => ({ ...item, index }));
-
-	useEffect(() => {
-		setItems([...Array(Math.ceil(data.length / size))].map((_, i) => data.slice(size * i, size + size * i)));
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	const items = useMemo(
+		() =>
+			[...Array(Math.ceil(mappedData.length / size))].map((_, i) => mappedData.slice(size * i, size + size * i)),
+		[mappedData, size]
+	);
 
 	return {
 		items,

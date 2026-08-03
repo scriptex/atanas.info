@@ -20,9 +20,9 @@ type Props = {
 
 const url = typeof window !== 'undefined' ? window.location.href : '';
 
-export const MDX: FC<Readonly<Props>> = ({ additionalActions, back, content, id, image, slug, title }: Props) => {
-	const DiscussionEmbed = dynamic(() => import('disqus-react').then(mod => mod.DiscussionEmbed), { ssr: false });
+const DiscussionEmbed = dynamic(() => import('disqus-react').then(mod => mod.DiscussionEmbed), { ssr: false });
 
+export const MDX: FC<Readonly<Props>> = ({ additionalActions, back, content, id, image, slug, title }: Props) => {
 	const disqusConfig = useMemo(
 		() => ({
 			identifier: slug,

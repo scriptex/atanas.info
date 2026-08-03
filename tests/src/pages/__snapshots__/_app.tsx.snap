@@ -11,6 +11,34 @@ exports[`App component Should render the App component 1`] = `
   </style>
   <div />
   Vercel AnalyticsVercel Speed Insights
+  <div
+    class="c-cookie-consent"
+    style="bottom: 0px;"
+  >
+    <div
+      class="c-cookie-consent__content"
+    >
+      This web app uses cookies from third party providers to enhance user experience.
+    </div>
+    <div
+      class="c-cookie-consent__actions"
+    >
+      <button
+        aria-label="Decline cookies"
+        class="c-btn c-btn--small c-btn--decline"
+        id="rcc-decline-button"
+      >
+        Decline
+      </button>
+      <button
+        aria-label="Accept cookies"
+        class="c-btn c-btn--small"
+        id="rcc-confirm-button"
+      >
+        Accept
+      </button>
+    </div>
+  </div>
 </DocumentFragment>
 `;
 

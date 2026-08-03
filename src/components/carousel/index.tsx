@@ -120,16 +120,13 @@ export const Carousel: FC<CarouselProps> = forwardRef(
 			};
 		});
 
-		useImperativeHandle(
-			CarouselRef,
-			(): CarouselRef => ({
-				getItems: () => data,
-				getSelectedIndex: () => selectedIndex,
-				next,
-				prev,
-				setSelectedIndex: (index: number) => setSelectedIndex(index)
-			})
-		);
+		useImperativeHandle(CarouselRef, (): CarouselRef => ({
+			getItems: () => data,
+			getSelectedIndex: () => selectedIndex,
+			next,
+			prev,
+			setSelectedIndex: (index: number) => setSelectedIndex(index)
+		}));
 
 		return (
 			<>
