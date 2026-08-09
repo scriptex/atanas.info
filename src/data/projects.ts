@@ -47,23 +47,31 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://dmarc.io/'
 	},
 	{
-		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts, ',
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts',
 		image: '/images/web-apps/dmarcian-BIMI-inspector.jpeg',
 		skip: false,
 		text: 'Built in collaboration with the dmarcian team',
 		title: 'dmarcian BIMI Inspector',
-		url: 'https://us.dmarcian.com/bimi-inspector/'
+		url: 'https://dmarcian.com/bimi-lookup/'
 	},
 	{
-		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts, ',
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts',
 		image: '/images/web-apps/dmarcian-BIMI-builder.jpeg',
 		skip: false,
 		text: 'Built in collaboration with the dmarcian team',
 		title: 'dmarcian BIMI Builder',
-		url: 'https://us.dmarcian.com/bimi-inspector/?tab=2'
+		url: 'https://dmarcian.com/bimi-lookup/builder/'
 	},
 	{
-		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts, ',
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts',
+		image: '/images/web-apps/dmarcian-BIMI-SVG-Validator.jpeg',
+		skip: false,
+		text: 'Built in collaboration with the dmarcian team',
+		title: 'dmarcian BIMI SVG Validator',
+		url: 'https://dmarcian.com/bimi-lookup/svg-validator/'
+	},
+	{
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts',
 		image: '/images/web-apps/dmarcian-DMARC-Validator.jpg',
 		skip: false,
 		text: 'Built in collaboration with the dmarcian team',
@@ -71,7 +79,7 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://us.dmarcian.com/dmarc-validator/'
 	},
 	{
-		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts, ',
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts',
 		image: '/images/web-apps/dmarcian-DMARC-Wizard.jpg',
 		skip: false,
 		text: 'Built in collaboration with the dmarcian team',
@@ -79,7 +87,7 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://us.dmarcian.com/dmarc-wizard/'
 	},
 	{
-		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts, ',
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts',
 		image: '/images/web-apps/dmarcian-DMARC-XML-to-Human-Converter.jpg',
 		skip: false,
 		text: 'Built in collaboration with the dmarcian team',
@@ -87,7 +95,7 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://us.dmarcian.com/dmarc-xml/'
 	},
 	{
-		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts, ',
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts',
 		image: '/images/web-apps/dmarcian-TLS-Inspector.jpg',
 		skip: false,
 		text: 'Built in collaboration with the dmarcian team',
@@ -95,7 +103,7 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://us.dmarcian.com/tls-inspector/'
 	},
 	{
-		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts, ',
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts',
 		image: '/images/web-apps/dmarcian.jpg',
 		skip: false,
 		text: 'Built in collaboration with the dmarcian team',
@@ -103,7 +111,7 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://us.dmarcian.com/accounts/register/'
 	},
 	{
-		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts, ',
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts',
 		image: '/images/web-apps/dmarcian-Login.jpg',
 		skip: false,
 		text: 'Built in collaboration with the dmarcian team',
@@ -532,8 +540,8 @@ export const projects: WebProject[] = withIndex([
 	},
 	{
 		description: 'HTML5, CSS3, Javascript, jQuery, AngularJS',
-		image: '/images/web-apps/Issta.jpg',
-		skip: false,
+		image: '/images/web-apps/Issta.jpeg',
+		skip: true,
 		title: 'Issta',
 		url: 'https://www.issta.co.il/'
 	},
