@@ -10063,7 +10063,15 @@ postcss-browser-comments@^6.0.1:
   resolved "https://registry.yarnpkg.com/postcss-browser-comments/-/postcss-browser-comments-6.0.2.tgz#6fb4f12d4aba7037282c91fce4bd026959cabb8e"
   integrity sha512-bZFLM8UZupVsuZDR4zFbzrPtKN6Xqpgj+C+vaxlL8r5E0cyhSO4OD3z+MjKstoQsIaKiQS+/Xci5jBUGyo9HlA==
 
-postcss-calc@10.1.1, postcss-calc@^10.1.1:
+postcss-calc@11.0.0:
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-11.0.0.tgz#1594a0279d5be2de60a2d0212bba36e1537a6e01"
+  integrity sha512-LPFvrfMpfsdZs5SirGIcYvCuZjMzRYT3Iw8SIr0qIPTKzVCNBhcXU8DrpkhB8+mGW1wSLI2B4BEvxMJu3/+zOg==
+  dependencies:
+    "@csstools/css-parser-algorithms" "^4.0.0"
+    "@csstools/css-tokenizer" "^4.0.0"
+
+postcss-calc@^10.1.1:
   version "10.1.1"
   resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-10.1.1.tgz#52b385f2e628239686eb6e3a16207a43f36064ca"
   integrity sha512-NYEsLHh8DgG/PRH2+G9BTuUdtf9ViS+vdoQ0YA5OQdGsfN4ztiwtDWNtBl9EKeqNMFnIu8IKZ0cLxEQ5r5KVMw==
