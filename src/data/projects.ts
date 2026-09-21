@@ -38,6 +38,14 @@ const withIndex = <T>(items: T[]) =>
 
 export const projects: WebProject[] = withIndex([
 	{
+		description: 'PHP, SCSS, SVG, JS, WordPress',
+		image: '/images/web-apps/dmarcian-blog.jpeg',
+		skip: false,
+		text: 'Built in collaboration with the dmarcian team',
+		title: 'dmarcian Blog',
+		url: 'https://dmarcian.com/news-and-knowledge/'
+	},
+	{
 		description:
 			'Typescript, SCSS, SVG, Python, React, Redux, Django, NodeJS, Google Cloud Platform, Jest, React Testing Library, Cypress',
 		image: '/images/web-apps/DMARC.io.jpg',
@@ -190,8 +198,8 @@ export const projects: WebProject[] = withIndex([
 	},
 	{
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
-		image: '/images/web-apps/Nulla-TV.jpg',
-		skip: false,
+		image: '/images/web-apps/Nulla-TV.jpeg',
+		skip: true,
 		title: 'Nulla TV',
 		url: 'https://www.nulla.tv/'
 	},
@@ -317,7 +325,7 @@ export const projects: WebProject[] = withIndex([
 	{
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
 		image: '/images/web-apps/Varna-Food-Tours.jpg',
-		skip: false,
+		skip: true,
 		title: 'Varna Food Tours',
 		url: 'https://varnafoodtours.com/'
 	},
@@ -345,7 +353,7 @@ export const projects: WebProject[] = withIndex([
 	{
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
 		image: '/images/web-apps/sqillinehealth.jpg',
-		skip: false,
+		skip: true,
 		title: 'Sqillinehealth',
 		url: 'https://sqillinehealth.com/'
 	},
