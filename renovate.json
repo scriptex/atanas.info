@@ -14,28 +14,9 @@
 	},
 	"packageRules": [
 		{
-			"matchPackagePatterns": ["babylonjs"],
-			"groupName": "babylonjs"
-		},
-		{
-			"matchPackagePatterns": ["codersrank"],
-			"groupName": "codersrank"
-		},
-		{
-			"matchPackagePatterns": ["postcss"],
-			"groupName": "postcss"
-		},
-		{
-			"matchPackagePatterns": ["serwist"],
-			"groupName": "serwist"
-		},
-		{
-			"matchPackagePatterns": ["stylelint"],
-			"groupName": "stylelint"
-		},
-		{
-			"matchPackagePatterns": ["testing-library"],
-			"groupName": "testing-library"
+			"matchPackagePatterns": ["babylonjs", "codersrank", "postcss", "serwist", "stylelint", "testing-library"],
+			"matchUpdateTypes": ["major"],
+			"groupName": "{{packageName}} major"
 		}
 	],
 	"rangeStrategy": "replace",
