@@ -5467,6 +5467,13 @@ cssnano-utils@^8.0.2:
   dependencies:
     "@csstools/css-tokenizer" "^4.0.2"
 
+cssnano-utils@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/cssnano-utils/-/cssnano-utils-8.1.0.tgz#fb9bec2d2137bf9f1c9704603594841975877906"
+  integrity sha512-Mzcc0ju/a19+qiqwPk+b6ieJa+tFVNNnrD2gLbk7CmENdJvlUtCuII+sIRZnfl1shHEKGQpmG2rwRpNaqe43xA==
+  dependencies:
+    "@csstools/css-tokenizer" "^4.0.2"
+
 cssnano@^5.0.1:
   version "5.1.15"
   resolved "https://registry.yarnpkg.com/cssnano/-/cssnano-5.1.15.tgz#ded66b5480d5127fcb44dac12ea5a983755136bf"
@@ -10384,15 +10391,15 @@ postcss-merge-longhand@^7.0.7:
     postcss-value-parser "^4.2.0"
     stylehacks "^7.0.11"
 
-postcss-merge-rules@9.0.7:
-  version "9.0.7"
-  resolved "https://registry.yarnpkg.com/postcss-merge-rules/-/postcss-merge-rules-9.0.7.tgz#ff006f815209e6cde9d1480954c130f0770923d3"
-  integrity sha512-FGZhuSWCJTMFrPb+3QiVSI6WLoFIbyL5o8+nhlNvKg5rrUGdHVor26xG+ttQjPhlB7Ysv/ONj0F8oBLvIO5iOQ==
+postcss-merge-rules@9.0.8:
+  version "9.0.8"
+  resolved "https://registry.yarnpkg.com/postcss-merge-rules/-/postcss-merge-rules-9.0.8.tgz#d923340235678ac11fc313f9ca43e34c352fd8ef"
+  integrity sha512-kp14dE0AlXwd69pcfU6VWG9G6pCPK11OWJqlb3/ccoO9CRKGVsqiHOq/hpkAm4scYzuo3ZMYQs1E0O7c2K8SSA==
   dependencies:
     "@csstools/css-tokenizer" "^4.0.2"
     browserslist "^4.29.3"
     caniuse-api "^4.0.0"
-    cssnano-utils "^8.0.2"
+    cssnano-utils "^8.1.0"
     postcss-minify-selectors "^9.0.6"
 
 postcss-merge-rules@^5.1.4:
