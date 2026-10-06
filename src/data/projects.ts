@@ -38,7 +38,7 @@ const withIndex = <T>(items: T[]) =>
 
 export const projects: WebProject[] = withIndex([
 	{
-		description: 'PHP, SCSS, SVG, JS, WordPress',
+		description: 'PHP, SCSS, SVG, JS, SCSS, WordPress',
 		image: '/images/web-apps/dmarcian-blog.jpeg',
 		skip: false,
 		text: 'Built in collaboration with the dmarcian team',
@@ -55,7 +55,7 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://dmarc.io/'
 	},
 	{
-		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts',
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry',
 		image: '/images/web-apps/dmarcian-BIMI-inspector.jpeg',
 		skip: false,
 		text: 'Built in collaboration with the dmarcian team',
@@ -63,7 +63,7 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://dmarcian.com/bimi-lookup/'
 	},
 	{
-		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts',
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry',
 		image: '/images/web-apps/dmarcian-BIMI-builder.jpeg',
 		skip: false,
 		text: 'Built in collaboration with the dmarcian team',
@@ -71,7 +71,7 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://dmarcian.com/bimi-lookup/builder/'
 	},
 	{
-		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts',
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry',
 		image: '/images/web-apps/dmarcian-BIMI-SVG-Validator.jpeg',
 		skip: false,
 		text: 'Built in collaboration with the dmarcian team',
@@ -79,7 +79,7 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://dmarcian.com/bimi-lookup/svg-validator/'
 	},
 	{
-		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts',
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry',
 		image: '/images/web-apps/dmarcian-DMARC-Validator.jpg',
 		skip: false,
 		text: 'Built in collaboration with the dmarcian team',
@@ -87,7 +87,7 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://us.dmarcian.com/dmarc-validator/'
 	},
 	{
-		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts',
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry',
 		image: '/images/web-apps/dmarcian-DMARC-Wizard.jpg',
 		skip: false,
 		text: 'Built in collaboration with the dmarcian team',
@@ -103,7 +103,7 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://us.dmarcian.com/dmarc-xml/'
 	},
 	{
-		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts',
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry',
 		image: '/images/web-apps/dmarcian-TLS-Inspector.jpg',
 		skip: false,
 		text: 'Built in collaboration with the dmarcian team',
@@ -119,12 +119,20 @@ export const projects: WebProject[] = withIndex([
 		url: 'https://us.dmarcian.com/accounts/register/'
 	},
 	{
-		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry, Highcharts',
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry',
 		image: '/images/web-apps/dmarcian-Login.jpg',
 		skip: false,
 		text: 'Built in collaboration with the dmarcian team',
 		title: 'dmarcian Login',
 		url: 'https://us.dmarcian.com/login/'
+	},
+	{
+		description: 'TypeScript, SVG, Python, SCSS Modules, React, Django, Postgres, Vite, Sentry',
+		image: '/images/web-apps/dmarcian-Email-Header-Analyzer.jpeg',
+		skip: false,
+		text: 'Built in collaboration with the dmarcian team',
+		title: 'dmarcian Email Header Analyzer',
+		url: 'https://dmarcian.com/email-header-analyzer/'
 	},
 	{
 		description: 'Typescript, SCSS, React, Redux, MS Azure, AWS, NodeJS, Jest, React Testing Library, Cypress',
