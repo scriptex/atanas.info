@@ -38,7 +38,7 @@ const withIndex = <T>(items: T[]) =>
 
 export const projects: WebProject[] = withIndex([
 	{
-		description: 'PHP, SCSS, SVG, JS, SCSS, WordPress',
+		description: 'PHP, SCSS, SVG, JS, WordPress',
 		image: '/images/web-apps/dmarcian-blog.jpeg',
 		skip: false,
 		text: 'Built in collaboration with the dmarcian team',
@@ -363,7 +363,7 @@ export const projects: WebProject[] = withIndex([
 		image: '/images/web-apps/sqillinehealth.jpg',
 		skip: true,
 		title: 'Sqillinehealth',
-		url: 'https://sqillinehealth.com/'
+		url: ''
 	},
 	{
 		description: 'HTML5, CSS3, Javascript, PHP, WordPress',
