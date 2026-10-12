@@ -1,0 +1,85 @@
+{
+	"nodes": [
+		{
+			"id": "src_data_posts_running_multiple_webpack_based_applications_simultaneously_post",
+			"label": "Running multiple Webpack based applications simultaneously",
+			"file_type": "document",
+			"source_file": "src/data/posts/running-multiple-webpack-based-applications-simultaneously.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null,
+			"rationale": "concurrently/npm-run-all did not fit and bash skills were limited, so NodeJS used as automation tool"
+		},
+		{
+			"id": "src_data_posts_running_multiple_webpack_based_applications_simultaneously_child_process",
+			"label": "NodeJS child_process parallel runner",
+			"file_type": "concept",
+			"source_file": "src/data/posts/running-multiple-webpack-based-applications-simultaneously.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "src_data_posts_running_multiple_webpack_based_applications_simultaneously_white_label",
+			"label": "White-label branding asset apps",
+			"file_type": "concept",
+			"source_file": "src/data/posts/running-multiple-webpack-based-applications-simultaneously.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		}
+	],
+	"edges": [
+		{
+			"source": "src_data_posts_running_multiple_webpack_based_applications_simultaneously_post",
+			"target": "src_data_posts_running_multiple_webpack_based_applications_simultaneously_child_process",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/running-multiple-webpack-based-applications-simultaneously.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_running_multiple_webpack_based_applications_simultaneously_post",
+			"target": "src_data_posts_running_multiple_webpack_based_applications_simultaneously_white_label",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/running-multiple-webpack-based-applications-simultaneously.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_running_multiple_webpack_based_applications_simultaneously_child_process",
+			"target": "src_data_posts_testing_websockets_with_cypress_socketio_proxy",
+			"relation": "semantically_similar_to",
+			"confidence": "INFERRED",
+			"confidence_score": 0.65,
+			"source_file": "src/data/posts/running-multiple-webpack-based-applications-simultaneously.md",
+			"source_location": null,
+			"weight": 1.0
+		}
+	],
+	"hyperedges": [
+		{
+			"id": "nodejs_automation_scripts",
+			"label": "NodeJS-as-automation-tool blog posts",
+			"nodes": [
+				"src_data_posts_bulk_image_watermark_with_nodejs_and_jimp_post",
+				"src_data_posts_running_multiple_webpack_based_applications_simultaneously_post",
+				"src_data_posts_testing_websockets_with_cypress_post"
+			],
+			"relation": "participate_in",
+			"confidence": "INFERRED",
+			"confidence_score": 0.75,
+			"source_file": "src/data/posts/running-multiple-webpack-based-applications-simultaneously.md"
+		}
+	]
+}

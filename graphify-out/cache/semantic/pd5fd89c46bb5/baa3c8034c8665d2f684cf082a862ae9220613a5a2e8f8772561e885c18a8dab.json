@@ -1,0 +1,39 @@
+{
+	"nodes": [
+		{
+			"id": "public_robots_robots_txt",
+			"label": "robots.txt (allow all, sitemap)",
+			"file_type": "document",
+			"source_file": "public/robots.txt",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "public_robots_sitemap_0_xml",
+			"label": "Sitemap atanas.info/sitemap-0.xml",
+			"file_type": "concept",
+			"source_file": "public/robots.txt",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		}
+	],
+	"edges": [
+		{
+			"source": "public_robots_robots_txt",
+			"target": "public_robots_sitemap_0_xml",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "public/robots.txt",
+			"source_location": null,
+			"weight": 1.0
+		}
+	],
+	"hyperedges": []
+}

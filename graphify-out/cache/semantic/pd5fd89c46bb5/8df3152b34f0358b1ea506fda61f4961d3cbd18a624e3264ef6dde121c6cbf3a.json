@@ -1,0 +1,133 @@
+{
+	"nodes": [
+		{
+			"id": "src_data_posts_cityjs_athens_2025_post",
+			"label": "CityJS Athens 2025 conference recap",
+			"file_type": "document",
+			"source_file": "src/data/posts/cityjs-athens-2025.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "src_data_posts_cityjs_athens_2025_micro_frontends",
+			"label": "Micro Frontend challenges (Roei Berkovich)",
+			"file_type": "concept",
+			"source_file": "src/data/posts/cityjs-athens-2025.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "src_data_posts_cityjs_athens_2025_angular_signals",
+			"label": "Angular Signals / SSR talks",
+			"file_type": "concept",
+			"source_file": "src/data/posts/cityjs-athens-2025.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "src_data_posts_cityjs_athens_2025_facade_pattern",
+			"label": "Facade pattern for third-party integrations (CareerOS)",
+			"file_type": "rationale",
+			"source_file": "src/data/posts/cityjs-athens-2025.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "src_data_posts_cityjs_athens_2025_memory_management",
+			"label": "JS/Node memory management (Shelley Vohr)",
+			"file_type": "concept",
+			"source_file": "src/data/posts/cityjs-athens-2025.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "src_data_posts_cityjs_athens_2025_test_automation",
+			"label": "Scaling test automation (Mesut Durukal)",
+			"file_type": "concept",
+			"source_file": "src/data/posts/cityjs-athens-2025.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		}
+	],
+	"edges": [
+		{
+			"source": "src_data_posts_cityjs_athens_2025_post",
+			"target": "src_data_posts_cityjs_athens_2025_micro_frontends",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/cityjs-athens-2025.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_cityjs_athens_2025_post",
+			"target": "src_data_posts_cityjs_athens_2025_angular_signals",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/cityjs-athens-2025.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_cityjs_athens_2025_post",
+			"target": "src_data_posts_cityjs_athens_2025_facade_pattern",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/cityjs-athens-2025.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_cityjs_athens_2025_post",
+			"target": "src_data_posts_cityjs_athens_2025_memory_management",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/cityjs-athens-2025.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_cityjs_athens_2025_post",
+			"target": "src_data_posts_cityjs_athens_2025_test_automation",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/cityjs-athens-2025.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_cityjs_athens_2025_test_automation",
+			"target": "src_data_posts_testing_websockets_with_cypress_cypress",
+			"relation": "conceptually_related_to",
+			"confidence": "INFERRED",
+			"confidence_score": 0.65,
+			"source_file": "src/data/posts/cityjs-athens-2025.md",
+			"source_location": null,
+			"weight": 1.0
+		}
+	],
+	"hyperedges": []
+}

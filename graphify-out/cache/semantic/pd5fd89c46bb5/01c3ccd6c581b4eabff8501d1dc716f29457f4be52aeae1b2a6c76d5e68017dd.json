@@ -1,0 +1,79 @@
+{
+	"nodes": [
+		{
+			"id": "_github_workflows_build_workflow",
+			"label": "Code quality & Build workflow",
+			"file_type": "code",
+			"source_file": ".github/workflows/build.yml",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "_github_workflows_build_codacy_coverage",
+			"label": "Codacy coverage reporter job",
+			"file_type": "code",
+			"source_file": ".github/workflows/build.yml",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		}
+	],
+	"edges": [
+		{
+			"source": "_github_workflows_build_codacy_coverage",
+			"target": "_github_workflows_build_workflow",
+			"relation": "shares_data_with",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": ".github/workflows/build.yml",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "_github_workflows_build_workflow",
+			"target": "readme_jest",
+			"relation": "references",
+			"confidence": "INFERRED",
+			"confidence_score": 0.85,
+			"source_file": ".github/workflows/build.yml",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "_github_workflows_build_workflow",
+			"target": "readme_contentful",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": ".github/workflows/build.yml",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "_github_workflows_build_workflow",
+			"target": "readme_redis",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": ".github/workflows/build.yml",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "_github_workflows_build_workflow",
+			"target": "readme_mongodb",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": ".github/workflows/build.yml",
+			"source_location": null,
+			"weight": 1.0
+		}
+	],
+	"hyperedges": []
+}

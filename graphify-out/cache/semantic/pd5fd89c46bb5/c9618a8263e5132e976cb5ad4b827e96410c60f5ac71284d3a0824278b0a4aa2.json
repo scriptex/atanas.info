@@ -1,0 +1,273 @@
+{
+	"nodes": [
+		{
+			"id": "readme_atanas_info",
+			"label": "atanas.info personal website (PWA)",
+			"file_type": "document",
+			"source_file": "README.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "readme_nextjs",
+			"label": "NextJS",
+			"file_type": "concept",
+			"source_file": "README.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "readme_vercel",
+			"label": "Vercel",
+			"file_type": "concept",
+			"source_file": "README.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "readme_mongodb",
+			"label": "MongoDB",
+			"file_type": "concept",
+			"source_file": "README.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "readme_redis",
+			"label": "Redis",
+			"file_type": "concept",
+			"source_file": "README.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "readme_cloudinary",
+			"label": "Cloudinary",
+			"file_type": "concept",
+			"source_file": "README.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "readme_contentful",
+			"label": "Contentful",
+			"file_type": "concept",
+			"source_file": "README.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "readme_puppeteer",
+			"label": "Puppeteer",
+			"file_type": "concept",
+			"source_file": "README.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "readme_jest",
+			"label": "Jest",
+			"file_type": "concept",
+			"source_file": "README.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "readme_itcss",
+			"label": "ITCSS architecture",
+			"file_type": "rationale",
+			"source_file": "README.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		}
+	],
+	"edges": [
+		{
+			"source": "readme_atanas_info",
+			"target": "_github_workflows_build_workflow",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "README.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "readme_atanas_info",
+			"target": "_github_workflows_codeql_analysis_workflow",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "README.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "readme_atanas_info",
+			"target": "_github_workflows_deploy_workflow",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "README.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "readme_atanas_info",
+			"target": "_github_workflows_insights_workflow",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "README.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "readme_atanas_info",
+			"target": "_github_workflows_screenshots_workflow",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "README.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "readme_atanas_info",
+			"target": "readme_nextjs",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "README.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "readme_atanas_info",
+			"target": "readme_vercel",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "README.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "readme_atanas_info",
+			"target": "readme_mongodb",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "README.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "readme_atanas_info",
+			"target": "readme_redis",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "README.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "readme_atanas_info",
+			"target": "readme_cloudinary",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "README.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "readme_atanas_info",
+			"target": "readme_contentful",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "README.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "readme_atanas_info",
+			"target": "readme_puppeteer",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "README.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "readme_atanas_info",
+			"target": "readme_jest",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "README.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "readme_atanas_info",
+			"target": "readme_itcss",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "README.md",
+			"source_location": null,
+			"weight": 1.0
+		}
+	],
+	"hyperedges": [
+		{
+			"id": "scheduled_ci_cd_pipeline",
+			"label": "GitHub Actions CI/CD and scheduled data refresh pipeline",
+			"nodes": [
+				"_github_workflows_build_workflow",
+				"_github_workflows_codeql_analysis_workflow",
+				"_github_workflows_deploy_workflow",
+				"_github_workflows_insights_workflow",
+				"_github_workflows_screenshots_workflow"
+			],
+			"relation": "form",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "README.md"
+		}
+	]
+}

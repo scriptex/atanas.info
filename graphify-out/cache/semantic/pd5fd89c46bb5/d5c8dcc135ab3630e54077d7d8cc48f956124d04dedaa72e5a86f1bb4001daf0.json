@@ -1,0 +1,118 @@
+{
+	"nodes": [
+		{
+			"id": "src_data_posts_comparing_dns_records_post",
+			"label": "Comparing DNS Records: DMARC, SPF, DKIM",
+			"file_type": "document",
+			"source_file": "src/data/posts/comparing-dns-records.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "src_data_posts_comparing_dns_records_jsdiff",
+			"label": "jsdiff library (diffWordsWithSpace)",
+			"file_type": "concept",
+			"source_file": "src/data/posts/comparing-dns-records.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "src_data_posts_comparing_dns_records_dmarc_diff_algorithm",
+			"label": "DMARC record difference algorithm",
+			"file_type": "rationale",
+			"source_file": "src/data/posts/comparing-dns-records.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "src_data_posts_comparing_dns_records_dkim_diff_algorithm",
+			"label": "DKIM record difference algorithm",
+			"file_type": "rationale",
+			"source_file": "src/data/posts/comparing-dns-records.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null,
+			"rationale": "Public key values marked as whole-value changes rather than character diffs"
+		},
+		{
+			"id": "src_data_posts_comparing_dns_records_spf_diff_algorithm",
+			"label": "SPF record difference algorithm",
+			"file_type": "rationale",
+			"source_file": "src/data/posts/comparing-dns-records.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		}
+	],
+	"edges": [
+		{
+			"source": "src_data_posts_comparing_dns_records_post",
+			"target": "src_data_posts_comparing_dns_records_jsdiff",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/comparing-dns-records.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_comparing_dns_records_dmarc_diff_algorithm",
+			"target": "src_data_posts_comparing_dns_records_jsdiff",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/comparing-dns-records.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_comparing_dns_records_dkim_diff_algorithm",
+			"target": "src_data_posts_comparing_dns_records_jsdiff",
+			"relation": "references",
+			"confidence": "INFERRED",
+			"confidence_score": 0.85,
+			"source_file": "src/data/posts/comparing-dns-records.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_comparing_dns_records_spf_diff_algorithm",
+			"target": "src_data_posts_comparing_dns_records_jsdiff",
+			"relation": "references",
+			"confidence": "INFERRED",
+			"confidence_score": 0.85,
+			"source_file": "src/data/posts/comparing-dns-records.md",
+			"source_location": null,
+			"weight": 1.0
+		}
+	],
+	"hyperedges": [
+		{
+			"id": "dns_record_diff_algorithms",
+			"label": "DMARC/DKIM/SPF diff algorithms built on jsdiff",
+			"nodes": [
+				"src_data_posts_comparing_dns_records_dmarc_diff_algorithm",
+				"src_data_posts_comparing_dns_records_dkim_diff_algorithm",
+				"src_data_posts_comparing_dns_records_spf_diff_algorithm",
+				"src_data_posts_comparing_dns_records_jsdiff"
+			],
+			"relation": "implement",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/comparing-dns-records.md"
+		}
+	]
+}

@@ -1,0 +1,28 @@
+{
+	"nodes": [
+		{
+			"id": "_config_jekyll_theme_slate",
+			"label": "Jekyll theme slate (GitHub Pages)",
+			"file_type": "document",
+			"source_file": "_config.yml",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		}
+	],
+	"edges": [
+		{
+			"source": "_config_jekyll_theme_slate",
+			"target": "__config_jekyll_relative_links",
+			"relation": "conceptually_related_to",
+			"confidence": "INFERRED",
+			"confidence_score": 0.85,
+			"source_file": "_config.yml",
+			"source_location": null,
+			"weight": 1.0
+		}
+	],
+	"hyperedges": []
+}

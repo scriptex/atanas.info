@@ -1,0 +1,28 @@
+{
+	"nodes": [
+		{
+			"id": "_github_workflows_insights_workflow",
+			"label": "Insights & NPM Stats workflow",
+			"file_type": "code",
+			"source_file": ".github/workflows/insights.yml",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		}
+	],
+	"edges": [
+		{
+			"source": "_github_workflows_insights_workflow",
+			"target": "readme_mongodb",
+			"relation": "shares_data_with",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": ".github/workflows/insights.yml",
+			"source_location": null,
+			"weight": 1.0
+		}
+	],
+	"hyperedges": []
+}

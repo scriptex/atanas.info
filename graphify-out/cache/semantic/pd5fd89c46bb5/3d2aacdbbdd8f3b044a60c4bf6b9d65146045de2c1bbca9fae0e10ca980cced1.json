@@ -1,0 +1,71 @@
+{
+	"nodes": [
+		{
+			"id": "src_data_posts_polymorphic_button_for_nextjs_post",
+			"label": "Polymorphic button component for NextJS",
+			"file_type": "document",
+			"source_file": "src/data/posts/polymorphic-button-for-nextjs.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "src_data_posts_polymorphic_button_for_nextjs_button",
+			"label": "Polymorphic Button (Link/Anchor/Button union props)",
+			"file_type": "rationale",
+			"source_file": "src/data/posts/polymorphic-button-for-nextjs.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null,
+			"rationale": "Single reusable component renders button, router Link or anchor based on discriminated 'type' prop"
+		},
+		{
+			"id": "src_data_posts_polymorphic_button_for_nextjs_composeclassname",
+			"label": "composeClassName (@scripts/shared)",
+			"file_type": "code",
+			"source_file": "src/data/posts/polymorphic-button-for-nextjs.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		}
+	],
+	"edges": [
+		{
+			"source": "src_data_posts_polymorphic_button_for_nextjs_post",
+			"target": "src_data_posts_polymorphic_button_for_nextjs_button",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/polymorphic-button-for-nextjs.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_polymorphic_button_for_nextjs_button",
+			"target": "src_data_posts_polymorphic_button_for_nextjs_composeclassname",
+			"relation": "calls",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/polymorphic-button-for-nextjs.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_polymorphic_button_for_nextjs_button",
+			"target": "readme_nextjs",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/polymorphic-button-for-nextjs.md",
+			"source_location": null,
+			"weight": 1.0
+		}
+	],
+	"hyperedges": []
+}

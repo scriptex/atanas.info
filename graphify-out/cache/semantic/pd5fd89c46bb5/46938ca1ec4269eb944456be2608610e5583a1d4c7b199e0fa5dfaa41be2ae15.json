@@ -1,0 +1,92 @@
+{
+	"nodes": [
+		{
+			"id": "src_data_posts_bulk_image_watermark_with_nodejs_and_jimp_post",
+			"label": "Bulk image watermark with NodeJS and Jimp",
+			"file_type": "document",
+			"source_file": "src/data/posts/bulk-image-watermark-with-nodejs-and-jimp.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null,
+			"rationale": "WordPress watermark plugins were outdated or poorly reviewed; NodeJS chosen for async heavy data manipulation"
+		},
+		{
+			"id": "src_data_posts_bulk_image_watermark_with_nodejs_and_jimp_jimp",
+			"label": "Jimp image library",
+			"file_type": "concept",
+			"source_file": "src/data/posts/bulk-image-watermark-with-nodejs-and-jimp.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "src_data_posts_bulk_image_watermark_with_nodejs_and_jimp_mama_culinar",
+			"label": "Mama Culinar (WordPress culinary blog)",
+			"file_type": "concept",
+			"source_file": "src/data/posts/bulk-image-watermark-with-nodejs-and-jimp.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "src_data_posts_bulk_image_watermark_with_nodejs_and_jimp_env_configuration",
+			"label": "dotenv-driven watermark configuration",
+			"file_type": "rationale",
+			"source_file": "src/data/posts/bulk-image-watermark-with-nodejs-and-jimp.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		}
+	],
+	"edges": [
+		{
+			"source": "src_data_posts_bulk_image_watermark_with_nodejs_and_jimp_post",
+			"target": "src_data_posts_bulk_image_watermark_with_nodejs_and_jimp_jimp",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/bulk-image-watermark-with-nodejs-and-jimp.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_bulk_image_watermark_with_nodejs_and_jimp_post",
+			"target": "src_data_posts_bulk_image_watermark_with_nodejs_and_jimp_mama_culinar",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/bulk-image-watermark-with-nodejs-and-jimp.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_bulk_image_watermark_with_nodejs_and_jimp_post",
+			"target": "src_data_posts_bulk_image_watermark_with_nodejs_and_jimp_env_configuration",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/bulk-image-watermark-with-nodejs-and-jimp.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_bulk_image_watermark_with_nodejs_and_jimp_post",
+			"target": "src_data_posts_running_multiple_webpack_based_applications_simultaneously_post",
+			"relation": "semantically_similar_to",
+			"confidence": "INFERRED",
+			"confidence_score": 0.75,
+			"source_file": "src/data/posts/bulk-image-watermark-with-nodejs-and-jimp.md",
+			"source_location": null,
+			"weight": 1.0
+		}
+	],
+	"hyperedges": []
+}

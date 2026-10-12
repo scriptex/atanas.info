@@ -1,0 +1,102 @@
+{
+	"nodes": [
+		{
+			"id": "public_email_templates_template1_eon_home_app",
+			"label": "E.ON Home App",
+			"file_type": "concept",
+			"source_file": "public/email-templates/template1.html",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "public_email_templates_template1_mjml_responsive_email_layout",
+			"label": "MJML-style Responsive Table Email Layout",
+			"file_type": "rationale",
+			"source_file": "public/email-templates/template1.html",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "public_email_templates_template1_email",
+			"label": "E.ON Home tado Thermostat Email (IT)",
+			"file_type": "document",
+			"source_file": "public/email-templates/template1.html",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		}
+	],
+	"edges": [
+		{
+			"source": "public_email_templates_template1_email",
+			"target": "public_email_templates_template1_eon_home_app",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "public/email-templates/template1.html",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "public_email_templates_template1_email",
+			"target": "public_email_templates_template11_eon_energia_italia",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "public/email-templates/template1.html",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "public_email_templates_template1_email",
+			"target": "public_email_templates_template1_mjml_responsive_email_layout",
+			"relation": "implements",
+			"confidence": "INFERRED",
+			"confidence_score": 0.85,
+			"source_file": "public/email-templates/template1.html",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "public_email_templates_template1_mjml_responsive_email_layout",
+			"target": "public_resume_atanas_atanasov",
+			"relation": "conceptually_related_to",
+			"confidence": "AMBIGUOUS",
+			"confidence_score": 0.2,
+			"source_file": "public/email-templates/template1.html",
+			"source_location": null,
+			"weight": 1.0
+		}
+	],
+	"hyperedges": [
+		{
+			"id": "eon_home_onboarding_email_campaign",
+			"label": "E.ON Home App Onboarding Email Campaign",
+			"nodes": [
+				"public_email_templates_template1_email",
+				"public_email_templates_template2_email",
+				"public_email_templates_template3_email",
+				"public_email_templates_template4_email",
+				"public_email_templates_template5_email",
+				"public_email_templates_template7_email",
+				"public_email_templates_template8_email",
+				"public_email_templates_template11_email",
+				"public_email_templates_template12_email",
+				"public_email_templates_template13_email",
+				"public_email_templates_template1_eon_home_app"
+			],
+			"relation": "participate_in",
+			"confidence": "INFERRED",
+			"confidence_score": 0.85,
+			"source_file": "public/email-templates/template1.html"
+		}
+	]
+}
