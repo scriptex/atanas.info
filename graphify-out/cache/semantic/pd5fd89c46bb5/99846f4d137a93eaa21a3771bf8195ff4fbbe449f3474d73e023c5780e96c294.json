@@ -1,0 +1,38 @@
+{
+	"nodes": [
+		{
+			"id": "public_resume_covered_resume_covered",
+			"label": "Resume with Cover (Chrome-printed, 4 pages)",
+			"file_type": "document",
+			"source_file": "public/resume-covered.pdf",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		}
+	],
+	"edges": [
+		{
+			"source": "public_resume_covered_resume_covered",
+			"target": "public_resume_resume",
+			"relation": "semantically_similar_to",
+			"confidence": "INFERRED",
+			"confidence_score": 0.75,
+			"source_file": "public/resume-covered.pdf",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "public_resume_covered_resume_covered",
+			"target": "public_resume_atanas_atanasov",
+			"relation": "references",
+			"confidence": "INFERRED",
+			"confidence_score": 0.85,
+			"source_file": "public/resume-covered.pdf",
+			"source_location": null,
+			"weight": 1.0
+		}
+	],
+	"hyperedges": []
+}

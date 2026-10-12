@@ -1,0 +1,59 @@
+{
+	"nodes": [
+		{
+			"id": "public_email_templates_template7_gdpr_eu_2016_679",
+			"label": "GDPR (EU) 2016/679",
+			"file_type": "concept",
+			"source_file": "public/email-templates/template7.html",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "public_email_templates_template7_email",
+			"label": "E.ON Hungary Energy Solutions Email (HU)",
+			"file_type": "document",
+			"source_file": "public/email-templates/template7.html",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		}
+	],
+	"edges": [
+		{
+			"source": "public_email_templates_template7_email",
+			"target": "public_email_templates_template1_eon_home_app",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "public/email-templates/template7.html",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "public_email_templates_template7_email",
+			"target": "public_email_templates_template7_gdpr_eu_2016_679",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "public/email-templates/template7.html",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "public_email_templates_template7_email",
+			"target": "public_email_templates_template1_mjml_responsive_email_layout",
+			"relation": "implements",
+			"confidence": "INFERRED",
+			"confidence_score": 0.85,
+			"source_file": "public/email-templates/template7.html",
+			"source_location": null,
+			"weight": 1.0
+		}
+	],
+	"hyperedges": []
+}

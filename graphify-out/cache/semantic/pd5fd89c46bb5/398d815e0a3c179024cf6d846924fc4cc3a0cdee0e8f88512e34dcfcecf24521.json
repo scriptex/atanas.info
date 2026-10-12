@@ -1,0 +1,91 @@
+{
+	"nodes": [
+		{
+			"id": "src_data_posts_the_last_jsconf_in_budapest_post",
+			"label": "The last JSConf in Budapest (2024)",
+			"file_type": "document",
+			"source_file": "src/data/posts/the-last-jsconf-in-budapest.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "src_data_posts_the_last_jsconf_in_budapest_tc39",
+			"label": "TC39 / ES2024-ES2025 proposals (Nicolo Ribaudo)",
+			"file_type": "concept",
+			"source_file": "src/data/posts/the-last-jsconf-in-budapest.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "src_data_posts_the_last_jsconf_in_budapest_accessibility",
+			"label": "Web accessibility / WCAG talks",
+			"file_type": "concept",
+			"source_file": "src/data/posts/the-last-jsconf-in-budapest.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "src_data_posts_the_last_jsconf_in_budapest_typescript_types",
+			"label": "Decoding Perplexing TypeScript (mapped types)",
+			"file_type": "concept",
+			"source_file": "src/data/posts/the-last-jsconf-in-budapest.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		}
+	],
+	"edges": [
+		{
+			"source": "src_data_posts_the_last_jsconf_in_budapest_post",
+			"target": "src_data_posts_the_last_jsconf_in_budapest_tc39",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/the-last-jsconf-in-budapest.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_the_last_jsconf_in_budapest_post",
+			"target": "src_data_posts_the_last_jsconf_in_budapest_accessibility",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/the-last-jsconf-in-budapest.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_the_last_jsconf_in_budapest_post",
+			"target": "src_data_posts_the_last_jsconf_in_budapest_typescript_types",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/the-last-jsconf-in-budapest.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_the_last_jsconf_in_budapest_post",
+			"target": "src_data_posts_cityjs_athens_2025_post",
+			"relation": "semantically_similar_to",
+			"confidence": "INFERRED",
+			"confidence_score": 0.85,
+			"source_file": "src/data/posts/the-last-jsconf-in-budapest.md",
+			"source_location": null,
+			"weight": 1.0
+		}
+	],
+	"hyperedges": []
+}

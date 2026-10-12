@@ -1,0 +1,41 @@
+{
+	"nodes": [
+		{
+			"id": "$graphify-root$_bin_prettier_sh",
+			"label": "prettier.sh",
+			"file_type": "code",
+			"source_file": "bin/prettier.sh",
+			"source_location": "L1",
+			"metadata": { "language": "bash", "kind": "file" }
+		},
+		{
+			"id": "$graphify-root$_bin_prettier_sh__entry",
+			"label": "prettier.sh script",
+			"file_type": "code",
+			"source_file": "bin/prettier.sh",
+			"source_location": "L1",
+			"metadata": { "language": "bash", "kind": "bash_entrypoint" }
+		}
+	],
+	"edges": [
+		{
+			"source": "$graphify-root$_bin_prettier_sh",
+			"target": "$graphify-root$_bin_prettier_sh__entry",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "bin/prettier.sh",
+			"source_location": "L1",
+			"weight": 1.0
+		}
+	],
+	"raw_calls": [
+		{
+			"language": "bash",
+			"callee": "prettier",
+			"caller_nid": "$graphify-root$_bin_prettier_sh__entry",
+			"source_file": "bin/prettier.sh",
+			"source_location": "L3"
+		}
+	],
+	"bash_sources": []
+}

@@ -1,0 +1,4690 @@
+{
+	".claude/CLAUDE.md": {
+		"size": 226,
+		"mtime_ns": 1791787024761479369,
+		"indexed_at_ns": 1791787159347715000,
+		"word_count": 29,
+		"hashes": { ".claude/claude.md": "c6f7fc2f062904d246b700d446ba3ad03e77f41809b12eccfb5e090a11f4fad2" }
+	},
+	".claude/settings.json": {
+		"size": 517,
+		"mtime_ns": 1791787075442124724,
+		"indexed_at_ns": 1791787157814810000,
+		"word_count": 42,
+		"hashes": { ".claude/settings.json": "c6b733fd5601d20e525a11e00be809ed7db35b86ba6241ad4348e6849614c70d" }
+	},
+	".claude/skills/graphify/SKILL.md": {
+		"size": 41276,
+		"mtime_ns": 1791787024761090828,
+		"indexed_at_ns": 1791787107716195000,
+		"word_count": 5211
+	},
+	".claude/skills/graphify/references/add-watch.md": {
+		"size": 2486,
+		"mtime_ns": 1790317122315720901,
+		"indexed_at_ns": 1791787107717007000,
+		"word_count": 366
+	},
+	".claude/skills/graphify/references/exports.md": {
+		"size": 3362,
+		"mtime_ns": 1790317122315825108,
+		"indexed_at_ns": 1791787107717650000,
+		"word_count": 470
+	},
+	".claude/skills/graphify/references/extraction-spec.md": {
+		"size": 7960,
+		"mtime_ns": 1790317122315948148,
+		"indexed_at_ns": 1791787107718401000,
+		"word_count": 1038
+	},
+	".claude/skills/graphify/references/github-and-merge.md": {
+		"size": 2177,
+		"mtime_ns": 1790317122316037438,
+		"indexed_at_ns": 1791787107718966000,
+		"word_count": 271
+	},
+	".claude/skills/graphify/references/hooks.md": {
+		"size": 1267,
+		"mtime_ns": 1790317122316114895,
+		"indexed_at_ns": 1791787107719404000,
+		"word_count": 193
+	},
+	".claude/skills/graphify/references/query.md": {
+		"size": 13456,
+		"mtime_ns": 1790317122316262019,
+		"indexed_at_ns": 1791787107720086000,
+		"word_count": 1763
+	},
+	".claude/skills/graphify/references/transcribe.md": {
+		"size": 3173,
+		"mtime_ns": 1790317122316337851,
+		"indexed_at_ns": 1791787107720752000,
+		"word_count": 418
+	},
+	".claude/skills/graphify/references/update.md": {
+		"size": 10425,
+		"mtime_ns": 1790317122316486890,
+		"indexed_at_ns": 1791787107721381000,
+		"word_count": 1196
+	},
+	".github/FUNDING.yml": {
+		"size": 486,
+		"mtime_ns": 1705474430636284762,
+		"indexed_at_ns": 1791787159348409000,
+		"word_count": 58,
+		"hashes": { ".github/funding.yml": "249b33d988c6476455de0b1e6319ac48c63c1abad7ded5c9e501d311943f68ac" }
+	},
+	".github/workflows/build.yml": {
+		"size": 2298,
+		"mtime_ns": 1785651951064849673,
+		"indexed_at_ns": 1791787159348684000,
+		"word_count": 141,
+		"hashes": { ".github/workflows/build.yml": "01c3ccd6c581b4eabff8501d1dc716f29457f4be52aeae1b2a6c76d5e68017dd" }
+	},
+	".github/workflows/codeql-analysis.yml": {
+		"size": 943,
+		"mtime_ns": 1785651951065130210,
+		"indexed_at_ns": 1791787159348952000,
+		"word_count": 74,
+		"hashes": {
+			".github/workflows/codeql-analysis.yml": "ad4d49f2bd75f58955c8b1ce656e551e142a6b4da6d85531f94b28f20fd54f83"
+		}
+	},
+	".github/workflows/deploy.yml": {
+		"size": 561,
+		"mtime_ns": 1785651951065598035,
+		"indexed_at_ns": 1791787159349216000,
+		"word_count": 40,
+		"hashes": { ".github/workflows/deploy.yml": "46140693735b3cf852b7b396daa3da3f9427ba45e4fcd4f69994b07e80536bfd" }
+	},
+	".github/workflows/insights.yml": {
+		"size": 760,
+		"mtime_ns": 1785651951065751241,
+		"indexed_at_ns": 1791787159349467000,
+		"word_count": 58,
+		"hashes": {
+			".github/workflows/insights.yml": "fee4bb654e11a335e17fd2519cdcbe8167345779ebcd31c27aa1496c4b0aca11"
+		}
+	},
+	".github/workflows/screenshots.yml": {
+		"size": 808,
+		"mtime_ns": 1785651951065913488,
+		"indexed_at_ns": 1791787159349719000,
+		"word_count": 57,
+		"hashes": {
+			".github/workflows/screenshots.yml": "f0eeb996809bb87b606ebf865929592039923d8484c32e771507fdcde425541b"
+		}
+	},
+	".markdownlint.json": {
+		"size": 80,
+		"mtime_ns": 1742802225768740259,
+		"indexed_at_ns": 1791787157815157000,
+		"word_count": 11,
+		"hashes": { ".markdownlint.json": "2ee9c7f808829941e6d4da4efd3d56a4977f9128ca4e4d32b850601ac7572883" }
+	},
+	"@types/lastfm-node-client/index.d.ts": {
+		"size": 3183,
+		"mtime_ns": 1765204915940419623,
+		"indexed_at_ns": 1791787107728424000,
+		"word_count": 367
+	},
+	"@types/network-information-api/index.d.ts": {
+		"size": 809,
+		"mtime_ns": 1764081091377558978,
+		"indexed_at_ns": 1791787107728736000,
+		"word_count": 86
+	},
+	"@types/npmtotal/index.d.ts": {
+		"size": 315,
+		"mtime_ns": 1764081093972454329,
+		"indexed_at_ns": 1791787107729218000,
+		"word_count": 37
+	},
+	"CLAUDE.md": {
+		"size": 772,
+		"mtime_ns": 1791787024762104994,
+		"indexed_at_ns": 1791787159349958000,
+		"word_count": 106,
+		"hashes": { "claude.md": "3612256e7473a2e5f67ef4778d4edeefb44794ef22bac5529bee9c87dc5d8f3d" }
+	},
+	"README.md": {
+		"size": 11511,
+		"mtime_ns": 1763709159649934147,
+		"indexed_at_ns": 1791787159350211000,
+		"word_count": 359,
+		"hashes": { "readme.md": "c9618a8263e5132e976cb5ad4b827e96410c60f5ac71284d3a0824278b0a4aa2" }
+	},
+	"_.config.yml": {
+		"size": 276,
+		"mtime_ns": 1705474430637605129,
+		"indexed_at_ns": 1791787159350457000,
+		"word_count": 25,
+		"hashes": { "_.config.yml": "536dde0ab1466e1f42a2d704df24c17161ab474a8fc47e41e125de342853db60" }
+	},
+	"_config.yml": {
+		"size": 26,
+		"mtime_ns": 1705474430637650087,
+		"indexed_at_ns": 1791787159350704000,
+		"word_count": 2,
+		"hashes": { "_config.yml": "c1afda73619496925107b97df965f374f869d3022c449c2e4ec09335d5869bbe" }
+	},
+	"bin/fetch-music.ts": {
+		"size": 725,
+		"mtime_ns": 1765204915940908748,
+		"indexed_at_ns": 1791787107731499000,
+		"word_count": 93
+	},
+	"bin/fetch-projects.ts": {
+		"size": 2355,
+		"mtime_ns": 1765204915941272373,
+		"indexed_at_ns": 1791787107731892000,
+		"word_count": 255
+	},
+	"bin/lint.sh": {
+		"size": 68,
+		"mtime_ns": 1765204915941648081,
+		"indexed_at_ns": 1791787157815485000,
+		"word_count": 6,
+		"hashes": { "bin/lint.sh": "dd680bd8c098b836ef6d1cb7c6520c23c395bbc2b6f3f200b08bbad9202a7e25" }
+	},
+	"bin/prettier.sh": {
+		"size": 170,
+		"mtime_ns": 1705474430637892335,
+		"indexed_at_ns": 1791787157815790000,
+		"word_count": 15,
+		"hashes": { "bin/prettier.sh": "b30e6709d4a8f722d33a4d9a53e4ee1a4911197529a11dd3ecfcd3b1fbb982c9" }
+	},
+	"bin/svg.sh": {
+		"size": 199,
+		"mtime_ns": 1710935224388664470,
+		"indexed_at_ns": 1791787157816051000,
+		"word_count": 20,
+		"hashes": { "bin/svg.sh": "d4ca05d417795ad99ea62757c2dc35ca95d2f9c7a95e33d869ab5142c77536c6" }
+	},
+	"bin/time.sh": {
+		"size": 83,
+		"mtime_ns": 1705474430637988835,
+		"indexed_at_ns": 1791787157816320000,
+		"word_count": 10,
+		"hashes": { "bin/time.sh": "f6989a62d2b5988836509aa5b4f1cc0ed5c37e52aacd1ca8994cb593603fb72d" }
+	},
+	"eslint.config.mjs": {
+		"size": 3956,
+		"mtime_ns": 1772780691995518872,
+		"indexed_at_ns": 1791787107734629000,
+		"word_count": 291
+	},
+	"insights/client.ts": {
+		"size": 729,
+		"mtime_ns": 1765204915942441122,
+		"indexed_at_ns": 1791787107735136000,
+		"word_count": 82
+	},
+	"insights/github.ts": {
+		"size": 2734,
+		"mtime_ns": 1764081631712297516,
+		"indexed_at_ns": 1791787107735385000,
+		"word_count": 279
+	},
+	"insights/gitlab.ts": {
+		"size": 3928,
+		"mtime_ns": 1772780691995799121,
+		"indexed_at_ns": 1791787107735709000,
+		"word_count": 378
+	},
+	"insights/index.ts": {
+		"size": 474,
+		"mtime_ns": 1764081396191647044,
+		"indexed_at_ns": 1791787107736000000,
+		"word_count": 56
+	},
+	"insights/last-fm.ts": {
+		"size": 1992,
+		"mtime_ns": 1765204915942838705,
+		"indexed_at_ns": 1791787107736290000,
+		"word_count": 194
+	},
+	"insights/utils.ts": {
+		"size": 2409,
+		"mtime_ns": 1765204915943216580,
+		"indexed_at_ns": 1791787107736532000,
+		"word_count": 314
+	},
+	"lib/cms-cache.ts": {
+		"size": 1392,
+		"mtime_ns": 1765204915943540329,
+		"indexed_at_ns": 1791787107736800000,
+		"word_count": 148
+	},
+	"lib/markdown.ts": {
+		"size": 1489,
+		"mtime_ns": 1785746976792228197,
+		"indexed_at_ns": 1791787107737055000,
+		"word_count": 176
+	},
+	"lib/mongodb.ts": {
+		"size": 1992,
+		"mtime_ns": 1765204915944367412,
+		"indexed_at_ns": 1791787107737529000,
+		"word_count": 252
+	},
+	"lib/redis.ts": {
+		"size": 412,
+		"mtime_ns": 1765204915944840828,
+		"indexed_at_ns": 1791787107737787000,
+		"word_count": 44
+	},
+	"next-env.d.ts": {
+		"size": 298,
+		"mtime_ns": 1791786729834342439,
+		"indexed_at_ns": 1791787107738008000,
+		"word_count": 26
+	},
+	"next-sitemap.config.js": {
+		"size": 54,
+		"mtime_ns": 1705474430644580750,
+		"indexed_at_ns": 1791787107738301000,
+		"word_count": 6
+	},
+	"next.config.mjs": {
+		"size": 918,
+		"mtime_ns": 1762935704060277473,
+		"indexed_at_ns": 1791787107738509000,
+		"word_count": 98
+	},
+	"npm/index.ts": {
+		"size": 4348,
+		"mtime_ns": 1776188971752213341,
+		"indexed_at_ns": 1791787107739002000,
+		"word_count": 467
+	},
+	"package.json": {
+		"size": 7404,
+		"mtime_ns": 1791786860665394599,
+		"indexed_at_ns": 1791787157816571000,
+		"word_count": 550,
+		"hashes": { "package.json": "b3a42e0a4c3b2eb464166db573557499283e1bb4b2c1e1f9ee7a5b500d51863b" }
+	},
+	"postcss.config.js": {
+		"size": 448,
+		"mtime_ns": 1705474430644952290,
+		"indexed_at_ns": 1791787107739810000,
+		"word_count": 38
+	},
+	"public/email-templates/template1.html": {
+		"size": 28096,
+		"mtime_ns": 1705474430645200663,
+		"indexed_at_ns": 1791787159350952000,
+		"word_count": 1595,
+		"hashes": {
+			"public/email-templates/template1.html": "cd5a14eab803ad53b024ad71a1e4832d2694b9f6f93f61773fe9a7978316c288"
+		}
+	},
+	"public/email-templates/template10.html": {
+		"size": 27306,
+		"mtime_ns": 1705474430645321329,
+		"indexed_at_ns": 1791787159351210000,
+		"word_count": 1594,
+		"hashes": {
+			"public/email-templates/template10.html": "9b87a4b1fb9693ee40a1e0176661eef38889a43b626214d637a2f025b7cd6cbd"
+		}
+	},
+	"public/email-templates/template11.html": {
+		"size": 42083,
+		"mtime_ns": 1705474430645424412,
+		"indexed_at_ns": 1791787159351463000,
+		"word_count": 2510,
+		"hashes": {
+			"public/email-templates/template11.html": "9b7a73e119a51283ff7ea2b35d36a32f0e9a0ab8450ecb4dd5a52759032ac0f8"
+		}
+	},
+	"public/email-templates/template12.html": {
+		"size": 25819,
+		"mtime_ns": 1705474430645491203,
+		"indexed_at_ns": 1791787159351717000,
+		"word_count": 1672,
+		"hashes": {
+			"public/email-templates/template12.html": "5d0e0fa9873fca6ce62d2643a2c29d60a34c519f56e69e377787403b25195bb2"
+		}
+	},
+	"public/email-templates/template13.html": {
+		"size": 35087,
+		"mtime_ns": 1705474430645581369,
+		"indexed_at_ns": 1791787159351973000,
+		"word_count": 2164,
+		"hashes": {
+			"public/email-templates/template13.html": "58ce3aecf5695701b3777c2523ec03358bd951d9c91c2ae1abe68115217b4298"
+		}
+	},
+	"public/email-templates/template2.html": {
+		"size": 25298,
+		"mtime_ns": 1705474430645677160,
+		"indexed_at_ns": 1791787159352225000,
+		"word_count": 1600,
+		"hashes": {
+			"public/email-templates/template2.html": "b07394192d7ce46d0cd19468266e6c9eb5ddc7b17d601af12a8bac335bb60f02"
+		}
+	},
+	"public/email-templates/template3.html": {
+		"size": 21722,
+		"mtime_ns": 1705474430645789576,
+		"indexed_at_ns": 1791787159352492000,
+		"word_count": 1096,
+		"hashes": {
+			"public/email-templates/template3.html": "294eb3b0871e4fc57ad1b0e44ab04d8e2a9c47d0bf35edd829d6b14f87113c8f"
+		}
+	},
+	"public/email-templates/template4.html": {
+		"size": 17892,
+		"mtime_ns": 1705474430645897242,
+		"indexed_at_ns": 1791787159352753000,
+		"word_count": 924,
+		"hashes": {
+			"public/email-templates/template4.html": "acc6af5021fcf492954ff719355c426d40f70e8aff52838bb4d991ca33a09768"
+		}
+	},
+	"public/email-templates/template5.html": {
+		"size": 25549,
+		"mtime_ns": 1705474430646047824,
+		"indexed_at_ns": 1791787159353003000,
+		"word_count": 1660,
+		"hashes": {
+			"public/email-templates/template5.html": "4449885d49a73e954a2a16d1ecbcc5fa7756b1410e52be20719950576c4cb547"
+		}
+	},
+	"public/email-templates/template6.html": {
+		"size": 16701,
+		"mtime_ns": 1705474430646129615,
+		"indexed_at_ns": 1791787159353263000,
+		"word_count": 827,
+		"hashes": {
+			"public/email-templates/template6.html": "ce7e242949ab89a449dab894a02d6bb682beb45633e7c222fa728173043b7e69"
+		}
+	},
+	"public/email-templates/template7.html": {
+		"size": 24410,
+		"mtime_ns": 1705474430646482863,
+		"indexed_at_ns": 1791787159353544000,
+		"word_count": 1154,
+		"hashes": {
+			"public/email-templates/template7.html": "d16cefd0f863c0e1269847fa7435bcdf9a27c2a69c3aafc7afc65f5340620220"
+		}
+	},
+	"public/email-templates/template8.html": {
+		"size": 59491,
+		"mtime_ns": 1705474430646613779,
+		"indexed_at_ns": 1791787159353793000,
+		"word_count": 3537,
+		"hashes": {
+			"public/email-templates/template8.html": "f552e728b43162012b517a89efdc59f882e61fcae216ee142e01156190aa7749"
+		}
+	},
+	"public/email-templates/template9.html": {
+		"size": 23383,
+		"mtime_ns": 1705474430646707070,
+		"indexed_at_ns": 1791787159354055000,
+		"word_count": 1468,
+		"hashes": {
+			"public/email-templates/template9.html": "2c2cc97779886f0f94e13831579d6fb0dc70981aff7012b04255ca93636d909e"
+		}
+	},
+	"public/fonts/fontello.svg": {
+		"size": 5238,
+		"mtime_ns": 1705474430647261358,
+		"indexed_at_ns": 1791787107751577000,
+		"word_count": 586
+	},
+	"public/images/automotive-apps/kinetik-infotainment-1.jpg": {
+		"size": 174424,
+		"mtime_ns": 1705474430648488392,
+		"indexed_at_ns": 1791787107752525000,
+		"word_count": 5868
+	},
+	"public/images/automotive-apps/kinetik-infotainment-2.jpg": {
+		"size": 116303,
+		"mtime_ns": 1705474430648790723,
+		"indexed_at_ns": 1791787107754651000,
+		"word_count": 3974
+	},
+	"public/images/automotive-apps/kinetik-infotainment-3.jpg": {
+		"size": 167285,
+		"mtime_ns": 1705474430649895675,
+		"indexed_at_ns": 1791787107756059000,
+		"word_count": 5619
+	},
+	"public/images/automotive-apps/kinetik-infotainment-4.jpg": {
+		"size": 178516,
+		"mtime_ns": 1705474430650569129,
+		"indexed_at_ns": 1791787107757843000,
+		"word_count": 6632
+	},
+	"public/images/automotive-apps/kinetik-infotainment-5.jpg": {
+		"size": 190939,
+		"mtime_ns": 1705474430651366707,
+		"indexed_at_ns": 1791787107759774000,
+		"word_count": 7167
+	},
+	"public/images/automotive-apps/kinetik-infotainment-6.jpg": {
+		"size": 191945,
+		"mtime_ns": 1705474430652046577,
+		"indexed_at_ns": 1791787107761991000,
+		"word_count": 6944
+	},
+	"public/images/automotive-apps/kinetik-infotainment-7.jpg": {
+		"size": 164868,
+		"mtime_ns": 1705474430653070321,
+		"indexed_at_ns": 1791787107764030000,
+		"word_count": 5529
+	},
+	"public/images/automotive-apps/kinetik-infotainment-8.jpg": {
+		"size": 104724,
+		"mtime_ns": 1705474430653333861,
+		"indexed_at_ns": 1791787107765830000,
+		"word_count": 3262
+	},
+	"public/images/automotive-apps/kinetik-infotainment-9.jpg": {
+		"size": 99705,
+		"mtime_ns": 1705474430653574859,
+		"indexed_at_ns": 1791787107766986000,
+		"word_count": 3010
+	},
+	"public/images/automotive-apps/motorcycle-dashboard01.jpg": {
+		"size": 85967,
+		"mtime_ns": 1721293205040901013,
+		"indexed_at_ns": 1791787107768099000,
+		"word_count": 3150
+	},
+	"public/images/automotive-apps/motorcycle-dashboard02.jpg": {
+		"size": 78223,
+		"mtime_ns": 1721293205041286762,
+		"indexed_at_ns": 1791787107769453000,
+		"word_count": 2700
+	},
+	"public/images/automotive-apps/motorcycle-dashboard03.jpg": {
+		"size": 80804,
+		"mtime_ns": 1721293205041784927,
+		"indexed_at_ns": 1791787107770585000,
+		"word_count": 2884
+	},
+	"public/images/automotive-apps/motorcycle-dashboard04.jpg": {
+		"size": 80377,
+		"mtime_ns": 1721293205042112385,
+		"indexed_at_ns": 1791787107771658000,
+		"word_count": 2928
+	},
+	"public/images/automotive-apps/telemetry1.png": {
+		"size": 37327,
+		"mtime_ns": 1721293205042315509,
+		"indexed_at_ns": 1791787107772711000,
+		"word_count": 703
+	},
+	"public/images/automotive-apps/telemetry10.jpg": {
+		"size": 195654,
+		"mtime_ns": 1721293205042907008,
+		"indexed_at_ns": 1791787107773440000,
+		"word_count": 5959
+	},
+	"public/images/automotive-apps/telemetry11.jpg": {
+		"size": 565806,
+		"mtime_ns": 1721293205044495462,
+		"indexed_at_ns": 1791787107775359000,
+		"word_count": 19590
+	},
+	"public/images/automotive-apps/telemetry12.jpg": {
+		"size": 560864,
+		"mtime_ns": 1721293205047834037,
+		"indexed_at_ns": 1791787107781077000,
+		"word_count": 19432
+	},
+	"public/images/automotive-apps/telemetry13.jpg": {
+		"size": 426908,
+		"mtime_ns": 1721293205050350656,
+		"indexed_at_ns": 1791787107786301000,
+		"word_count": 15283
+	},
+	"public/images/automotive-apps/telemetry14.jpg": {
+		"size": 385164,
+		"mtime_ns": 1721293205051500069,
+		"indexed_at_ns": 1791787107790146000,
+		"word_count": 13366
+	},
+	"public/images/automotive-apps/telemetry15.jpg": {
+		"size": 297305,
+		"mtime_ns": 1721293205052744233,
+		"indexed_at_ns": 1791787107793576000,
+		"word_count": 9912
+	},
+	"public/images/automotive-apps/telemetry16.jpg": {
+		"size": 306471,
+		"mtime_ns": 1721293205054616145,
+		"indexed_at_ns": 1791787107796177000,
+		"word_count": 11605
+	},
+	"public/images/automotive-apps/telemetry2.jpg": {
+		"size": 234855,
+		"mtime_ns": 1721293205055951391,
+		"indexed_at_ns": 1791787107798697000,
+		"word_count": 7651
+	},
+	"public/images/automotive-apps/telemetry3.jpg": {
+		"size": 211346,
+		"mtime_ns": 1721293205056828639,
+		"indexed_at_ns": 1791787107800946000,
+		"word_count": 7010
+	},
+	"public/images/automotive-apps/telemetry4.jpg": {
+		"size": 250577,
+		"mtime_ns": 1721293205057995386,
+		"indexed_at_ns": 1791787107802924000,
+		"word_count": 9240
+	},
+	"public/images/automotive-apps/telemetry5.jpg": {
+		"size": 494267,
+		"mtime_ns": 1721293205059801965,
+		"indexed_at_ns": 1791787107805272000,
+		"word_count": 16692
+	},
+	"public/images/automotive-apps/telemetry6.jpg": {
+		"size": 615263,
+		"mtime_ns": 1721293205061784585,
+		"indexed_at_ns": 1791787107809375000,
+		"word_count": 21471
+	},
+	"public/images/automotive-apps/telemetry7.jpg": {
+		"size": 912263,
+		"mtime_ns": 1721293205063385164,
+		"indexed_at_ns": 1791787107815185000,
+		"word_count": 31453
+	},
+	"public/images/automotive-apps/telemetry8.jpg": {
+		"size": 382597,
+		"mtime_ns": 1721293205064668410,
+		"indexed_at_ns": 1791787107823689000,
+		"word_count": 13054
+	},
+	"public/images/automotive-apps/telemetry9.jpg": {
+		"size": 163040,
+		"mtime_ns": 1721293205065293992,
+		"indexed_at_ns": 1791787107827308000,
+		"word_count": 5226
+	},
+	"public/images/automotive-apps/volvo-dashboard-1.jpg": {
+		"size": 72365,
+		"mtime_ns": 1705474430674530307,
+		"indexed_at_ns": 1791787107828971000,
+		"word_count": 2559
+	},
+	"public/images/automotive-apps/volvo-dashboard-2.jpg": {
+		"size": 80683,
+		"mtime_ns": 1705474430674958721,
+		"indexed_at_ns": 1791787107830065000,
+		"word_count": 2699
+	},
+	"public/images/automotive-apps/volvo-dashboard-3.jpg": {
+		"size": 79476,
+		"mtime_ns": 1705474430675518843,
+		"indexed_at_ns": 1791787107831244000,
+		"word_count": 2651
+	},
+	"public/images/automotive-apps/volvo-dashboard-4.jpg": {
+		"size": 75898,
+		"mtime_ns": 1705474430675748091,
+		"indexed_at_ns": 1791787107832378000,
+		"word_count": 2536
+	},
+	"public/images/automotive-apps/volvo-dashboard-5.jpg": {
+		"size": 27982,
+		"mtime_ns": 1705474430675860132,
+		"indexed_at_ns": 1791787107833450000,
+		"word_count": 927
+	},
+	"public/images/blog/cityjs-athens-2025/1.jpeg": {
+		"size": 58512,
+		"mtime_ns": 1791264534434335293,
+		"indexed_at_ns": 1791787107834215000,
+		"word_count": 1989
+	},
+	"public/images/blog/cityjs-athens-2025/10.jpeg": {
+		"size": 67126,
+		"mtime_ns": 1791264534435519036,
+		"indexed_at_ns": 1791787107835345000,
+		"word_count": 2495
+	},
+	"public/images/blog/cityjs-athens-2025/11.jpeg": {
+		"size": 54410,
+		"mtime_ns": 1791264534436311406,
+		"indexed_at_ns": 1791787107836378000,
+		"word_count": 1918
+	},
+	"public/images/blog/cityjs-athens-2025/12.jpeg": {
+		"size": 71444,
+		"mtime_ns": 1791264534437596357,
+		"indexed_at_ns": 1791787107837345000,
+		"word_count": 2573
+	},
+	"public/images/blog/cityjs-athens-2025/13.jpeg": {
+		"size": 54867,
+		"mtime_ns": 1791264534438069771,
+		"indexed_at_ns": 1791787107838385000,
+		"word_count": 2013
+	},
+	"public/images/blog/cityjs-athens-2025/14.jpeg": {
+		"size": 62943,
+		"mtime_ns": 1791264534440222757,
+		"indexed_at_ns": 1791787107839318000,
+		"word_count": 2272
+	},
+	"public/images/blog/cityjs-athens-2025/15.jpeg": {
+		"size": 59262,
+		"mtime_ns": 1791264534440864295,
+		"indexed_at_ns": 1791787107840327000,
+		"word_count": 1994
+	},
+	"public/images/blog/cityjs-athens-2025/16.jpeg": {
+		"size": 55418,
+		"mtime_ns": 1791264534441429792,
+		"indexed_at_ns": 1791787107841271000,
+		"word_count": 2107
+	},
+	"public/images/blog/cityjs-athens-2025/17.jpeg": {
+		"size": 55314,
+		"mtime_ns": 1791264534442447577,
+		"indexed_at_ns": 1791787107842202000,
+		"word_count": 1994
+	},
+	"public/images/blog/cityjs-athens-2025/18.jpeg": {
+		"size": 51419,
+		"mtime_ns": 1791264534442981199,
+		"indexed_at_ns": 1791787107843098000,
+		"word_count": 1878
+	},
+	"public/images/blog/cityjs-athens-2025/19.jpeg": {
+		"size": 61601,
+		"mtime_ns": 1791264534443544112,
+		"indexed_at_ns": 1791787107844084000,
+		"word_count": 2313
+	},
+	"public/images/blog/cityjs-athens-2025/2.jpeg": {
+		"size": 60267,
+		"mtime_ns": 1791264534444644022,
+		"indexed_at_ns": 1791787107845226000,
+		"word_count": 2112
+	},
+	"public/images/blog/cityjs-athens-2025/20.jpeg": {
+		"size": 56907,
+		"mtime_ns": 1791264534445701724,
+		"indexed_at_ns": 1791787107846191000,
+		"word_count": 2072
+	},
+	"public/images/blog/cityjs-athens-2025/21.jpeg": {
+		"size": 71548,
+		"mtime_ns": 1791264534446515594,
+		"indexed_at_ns": 1791787107847164000,
+		"word_count": 2567
+	},
+	"public/images/blog/cityjs-athens-2025/22.jpeg": {
+		"size": 53448,
+		"mtime_ns": 1791264534447047382,
+		"indexed_at_ns": 1791787107848225000,
+		"word_count": 1992
+	},
+	"public/images/blog/cityjs-athens-2025/23.jpeg": {
+		"size": 62830,
+		"mtime_ns": 1791264534448409041,
+		"indexed_at_ns": 1791787107849130000,
+		"word_count": 2263
+	},
+	"public/images/blog/cityjs-athens-2025/24.jpeg": {
+		"size": 56575,
+		"mtime_ns": 1791264534449223619,
+		"indexed_at_ns": 1791787107850102000,
+		"word_count": 2020
+	},
+	"public/images/blog/cityjs-athens-2025/25.jpeg": {
+		"size": 86249,
+		"mtime_ns": 1791264534449754449,
+		"indexed_at_ns": 1791787107851026000,
+		"word_count": 3099
+	},
+	"public/images/blog/cityjs-athens-2025/26.jpeg": {
+		"size": 58367,
+		"mtime_ns": 1791264534450967483,
+		"indexed_at_ns": 1791787107852227000,
+		"word_count": 2123
+	},
+	"public/images/blog/cityjs-athens-2025/27.jpeg": {
+		"size": 54120,
+		"mtime_ns": 1791264534451456147,
+		"indexed_at_ns": 1791787107853319000,
+		"word_count": 1958
+	},
+	"public/images/blog/cityjs-athens-2025/28.jpeg": {
+		"size": 57562,
+		"mtime_ns": 1791264534452309809,
+		"indexed_at_ns": 1791787107854264000,
+		"word_count": 2063
+	},
+	"public/images/blog/cityjs-athens-2025/3.jpeg": {
+		"size": 70149,
+		"mtime_ns": 1791264534452853555,
+		"indexed_at_ns": 1791787107855243000,
+		"word_count": 2533
+	},
+	"public/images/blog/cityjs-athens-2025/4.jpeg": {
+		"size": 67538,
+		"mtime_ns": 1791264534453450510,
+		"indexed_at_ns": 1791787107856326000,
+		"word_count": 2407
+	},
+	"public/images/blog/cityjs-athens-2025/5.jpeg": {
+		"size": 64577,
+		"mtime_ns": 1791264534454272255,
+		"indexed_at_ns": 1791787107857425000,
+		"word_count": 2384
+	},
+	"public/images/blog/cityjs-athens-2025/6.jpeg": {
+		"size": 59183,
+		"mtime_ns": 1791264534455148083,
+		"indexed_at_ns": 1791787107858543000,
+		"word_count": 2210
+	},
+	"public/images/blog/cityjs-athens-2025/7.jpeg": {
+		"size": 71486,
+		"mtime_ns": 1791264534456489325,
+		"indexed_at_ns": 1791787107859479000,
+		"word_count": 2621
+	},
+	"public/images/blog/cityjs-athens-2025/8.jpeg": {
+		"size": 55733,
+		"mtime_ns": 1791264534456980864,
+		"indexed_at_ns": 1791787107860561000,
+		"word_count": 1893
+	},
+	"public/images/blog/cityjs-athens-2025/9.jpeg": {
+		"size": 62904,
+		"mtime_ns": 1791264534457866316,
+		"indexed_at_ns": 1791787107861535000,
+		"word_count": 2353
+	},
+	"public/images/clients/2create.svg": {
+		"size": 427,
+		"mtime_ns": 1710313604896097618,
+		"indexed_at_ns": 1791787107862680000,
+		"word_count": 30
+	},
+	"public/images/clients/dmarcian.svg": {
+		"size": 3128,
+		"mtime_ns": 1710313604896408989,
+		"indexed_at_ns": 1791787107863276000,
+		"word_count": 292
+	},
+	"public/images/clients/duke-university.svg": {
+		"size": 13439,
+		"mtime_ns": 1710313604897025938,
+		"indexed_at_ns": 1791787107863676000,
+		"word_count": 1334
+	},
+	"public/images/clients/emailio.svg": {
+		"size": 4156,
+		"mtime_ns": 1710313604897384058,
+		"indexed_at_ns": 1791787107864178000,
+		"word_count": 388
+	},
+	"public/images/clients/eon.svg": {
+		"size": 2684,
+		"mtime_ns": 1710313604897748095,
+		"indexed_at_ns": 1791787107864599000,
+		"word_count": 279
+	},
+	"public/images/clients/htmlboutique.svg": {
+		"size": 7257,
+		"mtime_ns": 1710313604898062341,
+		"indexed_at_ns": 1791787107864945000,
+		"word_count": 650
+	},
+	"public/images/clients/htmlburger.svg": {
+		"size": 19872,
+		"mtime_ns": 1710313604898436877,
+		"indexed_at_ns": 1791787107865334000,
+		"word_count": 1971
+	},
+	"public/images/clients/kinetik.svg": {
+		"size": 3664,
+		"mtime_ns": 1710313604898698873,
+		"indexed_at_ns": 1791787107865766000,
+		"word_count": 295
+	},
+	"public/images/clients/robert-ladkani.svg": {
+		"size": 2422,
+		"mtime_ns": 1710313604898987661,
+		"indexed_at_ns": 1791787107866205000,
+		"word_count": 230
+	},
+	"public/images/clients/sod-64.svg": {
+		"size": 5492,
+		"mtime_ns": 1710313604899393405,
+		"indexed_at_ns": 1791787107866565000,
+		"word_count": 525
+	},
+	"public/images/clients/three11.svg": {
+		"size": 9032,
+		"mtime_ns": 1710313604899764192,
+		"indexed_at_ns": 1791787107866947000,
+		"word_count": 922
+	},
+	"public/images/email-templates/eon1.jpg": {
+		"size": 211986,
+		"mtime_ns": 1705474430679654691,
+		"indexed_at_ns": 1791787107867336000,
+		"word_count": 7865
+	},
+	"public/images/email-templates/eon2.jpg": {
+		"size": 229664,
+		"mtime_ns": 1705474430680518894,
+		"indexed_at_ns": 1791787107869625000,
+		"word_count": 8532
+	},
+	"public/images/email-templates/eon3.jpg": {
+		"size": 113145,
+		"mtime_ns": 1705474430680825100,
+		"indexed_at_ns": 1791787107872000000,
+		"word_count": 4289
+	},
+	"public/images/email-templates/eon4.jpg": {
+		"size": 157359,
+		"mtime_ns": 1705474430681521929,
+		"indexed_at_ns": 1791787107873390000,
+		"word_count": 5730
+	},
+	"public/images/email-templates/eon5.jpg": {
+		"size": 184747,
+		"mtime_ns": 1705474430682162508,
+		"indexed_at_ns": 1791787107875187000,
+		"word_count": 6536
+	},
+	"public/images/email-templates/eon6.jpg": {
+		"size": 143839,
+		"mtime_ns": 1705474430682680755,
+		"indexed_at_ns": 1791787107877172000,
+		"word_count": 5285
+	},
+	"public/images/email-templates/foton1.jpg": {
+		"size": 252816,
+		"mtime_ns": 1705474430683592791,
+		"indexed_at_ns": 1791787107878957000,
+		"word_count": 8791
+	},
+	"public/images/email-templates/foton2.jpg": {
+		"size": 83848,
+		"mtime_ns": 1705474430683857872,
+		"indexed_at_ns": 1791787107881496000,
+		"word_count": 3021
+	},
+	"public/images/favicon/apple-touch-icon-114x114.png": {
+		"size": 8909,
+		"mtime_ns": 1705474430683978122,
+		"indexed_at_ns": 1791787107882688000,
+		"word_count": 322
+	},
+	"public/images/favicon/apple-touch-icon-120x120.png": {
+		"size": 9573,
+		"mtime_ns": 1705474430684049746,
+		"indexed_at_ns": 1791787107883191000,
+		"word_count": 330
+	},
+	"public/images/favicon/apple-touch-icon-144x144.png": {
+		"size": 12654,
+		"mtime_ns": 1705474430684139579,
+		"indexed_at_ns": 1791787107883661000,
+		"word_count": 412
+	},
+	"public/images/favicon/apple-touch-icon-152x152.png": {
+		"size": 13863,
+		"mtime_ns": 1705474430684216495,
+		"indexed_at_ns": 1791787107884186000,
+		"word_count": 529
+	},
+	"public/images/favicon/apple-touch-icon-57x57.png": {
+		"size": 4110,
+		"mtime_ns": 1705474430684270870,
+		"indexed_at_ns": 1791787107884698000,
+		"word_count": 155
+	},
+	"public/images/favicon/apple-touch-icon-60x60.png": {
+		"size": 4316,
+		"mtime_ns": 1705474430684321036,
+		"indexed_at_ns": 1791787107885087000,
+		"word_count": 165
+	},
+	"public/images/favicon/apple-touch-icon-72x72.png": {
+		"size": 5131,
+		"mtime_ns": 1705474430684372786,
+		"indexed_at_ns": 1791787107885527000,
+		"word_count": 192
+	},
+	"public/images/favicon/apple-touch-icon-76x76.png": {
+		"size": 5430,
+		"mtime_ns": 1705474430684427202,
+		"indexed_at_ns": 1791787107885856000,
+		"word_count": 196
+	},
+	"public/images/favicon/favicon-128x128.png": {
+		"size": 10542,
+		"mtime_ns": 1705474430684598784,
+		"indexed_at_ns": 1791787107886195000,
+		"word_count": 380
+	},
+	"public/images/favicon/favicon-16x16.png": {
+		"size": 783,
+		"mtime_ns": 1705474430684641909,
+		"indexed_at_ns": 1791787107886584000,
+		"word_count": 34
+	},
+	"public/images/favicon/favicon-196x196.png": {
+		"size": 19106,
+		"mtime_ns": 1705474430684688659,
+		"indexed_at_ns": 1791787107887039000,
+		"word_count": 735
+	},
+	"public/images/favicon/favicon-32x32.png": {
+		"size": 2056,
+		"mtime_ns": 1705474430684739242,
+		"indexed_at_ns": 1791787107887656000,
+		"word_count": 99
+	},
+	"public/images/favicon/favicon-96x96.png": {
+		"size": 7547,
+		"mtime_ns": 1705474430684790491,
+		"indexed_at_ns": 1791787107888054000,
+		"word_count": 262
+	},
+	"public/images/favicon/ms-tile-144x144.png": {
+		"size": 12654,
+		"mtime_ns": 1705474430685090323,
+		"indexed_at_ns": 1791787107888575000,
+		"word_count": 412
+	},
+	"public/images/favicon/ms-tile-150x150.png": {
+		"size": 13589,
+		"mtime_ns": 1705474430685159781,
+		"indexed_at_ns": 1791787107888962000,
+		"word_count": 453
+	},
+	"public/images/favicon/ms-tile-310x150.png": {
+		"size": 16749,
+		"mtime_ns": 1705474430685291196,
+		"indexed_at_ns": 1791787107889488000,
+		"word_count": 612
+	},
+	"public/images/favicon/ms-tile-310x310.png": {
+		"size": 33247,
+		"mtime_ns": 1705474430685384446,
+		"indexed_at_ns": 1791787107890022000,
+		"word_count": 1197
+	},
+	"public/images/favicon/ms-tile-70x70.png": {
+		"size": 4934,
+		"mtime_ns": 1705474430685449487,
+		"indexed_at_ns": 1791787107890744000,
+		"word_count": 174
+	},
+	"public/images/icons/icon-128x128.png": {
+		"size": 10542,
+		"mtime_ns": 1705474430685533487,
+		"indexed_at_ns": 1791787107891061000,
+		"word_count": 380
+	},
+	"public/images/icons/icon-144x144.png": {
+		"size": 12654,
+		"mtime_ns": 1705474430685613069,
+		"indexed_at_ns": 1791787107891429000,
+		"word_count": 412
+	},
+	"public/images/icons/icon-152x152.png": {
+		"size": 13863,
+		"mtime_ns": 1705474430685684319,
+		"indexed_at_ns": 1791787107891944000,
+		"word_count": 529
+	},
+	"public/images/icons/icon-192x192.png": {
+		"size": 18876,
+		"mtime_ns": 1705474430685860235,
+		"indexed_at_ns": 1791787107892435000,
+		"word_count": 687
+	},
+	"public/images/icons/icon-384x384.png": {
+		"size": 43919,
+		"mtime_ns": 1705474430685989775,
+		"indexed_at_ns": 1791787107892969000,
+		"word_count": 1632
+	},
+	"public/images/icons/icon-512x512.png": {
+		"size": 65734,
+		"mtime_ns": 1705474430686187107,
+		"indexed_at_ns": 1791787107893792000,
+		"word_count": 2354
+	},
+	"public/images/icons/icon-72x72.png": {
+		"size": 5131,
+		"mtime_ns": 1705474430686255607,
+		"indexed_at_ns": 1791787107894944000,
+		"word_count": 192
+	},
+	"public/images/icons/icon-96x96.png": {
+		"size": 7547,
+		"mtime_ns": 1705474430686315023,
+		"indexed_at_ns": 1791787107895431000,
+		"word_count": 262
+	},
+	"public/images/icons/icon.png": {
+		"size": 55399,
+		"mtime_ns": 1705474430686563980,
+		"indexed_at_ns": 1791787107895945000,
+		"word_count": 2000
+	},
+	"public/images/icons/logo-alt.svg": {
+		"size": 2601,
+		"mtime_ns": 1705474430686626313,
+		"indexed_at_ns": 1791787107896908000,
+		"word_count": 176
+	},
+	"public/images/icons/splash.png": {
+		"size": 28274,
+		"mtime_ns": 1705474430686718062,
+		"indexed_at_ns": 1791787107897360000,
+		"word_count": 578
+	},
+	"public/images/launch-screens/launch-screen-1125x2436.png": {
+		"size": 63848,
+		"mtime_ns": 1705474430686932644,
+		"indexed_at_ns": 1791787107897984000,
+		"word_count": 2106
+	},
+	"public/images/launch-screens/launch-screen-1136x640.png": {
+		"size": 23887,
+		"mtime_ns": 1705474430687370308,
+		"indexed_at_ns": 1791787107898969000,
+		"word_count": 705
+	},
+	"public/images/launch-screens/launch-screen-1242x2208.png": {
+		"size": 57978,
+		"mtime_ns": 1705474430687744431,
+		"indexed_at_ns": 1791787107899595000,
+		"word_count": 2401
+	},
+	"public/images/launch-screens/launch-screen-1242x2688.png": {
+		"size": 72606,
+		"mtime_ns": 1705474430688201344,
+		"indexed_at_ns": 1791787107900540000,
+		"word_count": 2762
+	},
+	"public/images/launch-screens/launch-screen-1334x750.png": {
+		"size": 29233,
+		"mtime_ns": 1705474430688322302,
+		"indexed_at_ns": 1791787107901576000,
+		"word_count": 923
+	},
+	"public/images/launch-screens/launch-screen-1536x2048.png": {
+		"size": 55146,
+		"mtime_ns": 1705474430688645508,
+		"indexed_at_ns": 1791787107902236000,
+		"word_count": 1952
+	},
+	"public/images/launch-screens/launch-screen-1668x2224.png": {
+		"size": 61733,
+		"mtime_ns": 1705474430688824507,
+		"indexed_at_ns": 1791787107903104000,
+		"word_count": 1754
+	},
+	"public/images/launch-screens/launch-screen-1668x2388.png": {
+		"size": 67088,
+		"mtime_ns": 1705474430689024631,
+		"indexed_at_ns": 1791787107904139000,
+		"word_count": 2158
+	},
+	"public/images/launch-screens/launch-screen-1792x828.png": {
+		"size": 41935,
+		"mtime_ns": 1705474430689311587,
+		"indexed_at_ns": 1791787107905142000,
+		"word_count": 1309
+	},
+	"public/images/launch-screens/launch-screen-2048x1536.png": {
+		"size": 55582,
+		"mtime_ns": 1705474430689468669,
+		"indexed_at_ns": 1791787107905988000,
+		"word_count": 1738
+	},
+	"public/images/launch-screens/launch-screen-2048x2732.png": {
+		"size": 83669,
+		"mtime_ns": 1705474430689686710,
+		"indexed_at_ns": 1791787107906934000,
+		"word_count": 2425
+	},
+	"public/images/launch-screens/launch-screen-2208x1242.png": {
+		"size": 59485,
+		"mtime_ns": 1705474430690019374,
+		"indexed_at_ns": 1791787107908111000,
+		"word_count": 1782
+	},
+	"public/images/launch-screens/launch-screen-2224x1668.png": {
+		"size": 61968,
+		"mtime_ns": 1705474430691604072,
+		"indexed_at_ns": 1791787107909074000,
+		"word_count": 1800
+	},
+	"public/images/launch-screens/launch-screen-2388x1668.png": {
+		"size": 68053,
+		"mtime_ns": 1705474430691830863,
+		"indexed_at_ns": 1791787107910017000,
+		"word_count": 1914
+	},
+	"public/images/launch-screens/launch-screen-2436x1125.png": {
+		"size": 64665,
+		"mtime_ns": 1705474430692175777,
+		"indexed_at_ns": 1791787107911050000,
+		"word_count": 1778
+	},
+	"public/images/launch-screens/launch-screen-2688x1242.png": {
+		"size": 75113,
+		"mtime_ns": 1705474430692397901,
+		"indexed_at_ns": 1791787107912069000,
+		"word_count": 2126
+	},
+	"public/images/launch-screens/launch-screen-2732x2048.png": {
+		"size": 84920,
+		"mtime_ns": 1705474430692911189,
+		"indexed_at_ns": 1791787107913181000,
+		"word_count": 2249
+	},
+	"public/images/launch-screens/launch-screen-640x1136.png": {
+		"size": 23430,
+		"mtime_ns": 1705474430693035938,
+		"indexed_at_ns": 1791787107914274000,
+		"word_count": 860
+	},
+	"public/images/launch-screens/launch-screen-750x1334.png": {
+		"size": 28723,
+		"mtime_ns": 1705474430693154813,
+		"indexed_at_ns": 1791787107914910000,
+		"word_count": 1039
+	},
+	"public/images/launch-screens/launch-screen-828x1792.png": {
+		"size": 40723,
+		"mtime_ns": 1705474430693293020,
+		"indexed_at_ns": 1791787107915584000,
+		"word_count": 1303
+	},
+	"public/images/mobile-apps/eon-home-android1.jpg": {
+		"size": 33908,
+		"mtime_ns": 1705474430693468352,
+		"indexed_at_ns": 1791787107916462000,
+		"word_count": 1242
+	},
+	"public/images/mobile-apps/eon-home-android2.jpg": {
+		"size": 25619,
+		"mtime_ns": 1705474430693805808,
+		"indexed_at_ns": 1791787107917267000,
+		"word_count": 933
+	},
+	"public/images/mobile-apps/eon-home-android3.jpg": {
+		"size": 32880,
+		"mtime_ns": 1705474430693949974,
+		"indexed_at_ns": 1791787107917891000,
+		"word_count": 1095
+	},
+	"public/images/mobile-apps/eon-home-android4.jpg": {
+		"size": 31542,
+		"mtime_ns": 1705474430694069057,
+		"indexed_at_ns": 1791787107918599000,
+		"word_count": 1039
+	},
+	"public/images/mobile-apps/eon-home-android5.jpg": {
+		"size": 35340,
+		"mtime_ns": 1705474430694337597,
+		"indexed_at_ns": 1791787107919463000,
+		"word_count": 1311
+	},
+	"public/images/mobile-apps/eon-home-android6.jpg": {
+		"size": 25164,
+		"mtime_ns": 1705474430694463512,
+		"indexed_at_ns": 1791787107920166000,
+		"word_count": 940
+	},
+	"public/images/mobile-apps/eon-home-android7.jpg": {
+		"size": 31997,
+		"mtime_ns": 1705474430694596637,
+		"indexed_at_ns": 1791787107920766000,
+		"word_count": 1136
+	},
+	"public/images/mobile-apps/eon-home-android8.jpg": {
+		"size": 31998,
+		"mtime_ns": 1705474430694881010,
+		"indexed_at_ns": 1791787107921532000,
+		"word_count": 1141
+	},
+	"public/images/mobile-apps/eon-home-ipad-dark.jpg": {
+		"size": 171476,
+		"mtime_ns": 1705474430695517339,
+		"indexed_at_ns": 1791787107922238000,
+		"word_count": 5609
+	},
+	"public/images/mobile-apps/eon-home-ipad-light.jpg": {
+		"size": 165054,
+		"mtime_ns": 1705474430696118418,
+		"indexed_at_ns": 1791787107924029000,
+		"word_count": 5644
+	},
+	"public/images/mobile-apps/eon-home-iphone-dark1.jpg": {
+		"size": 84904,
+		"mtime_ns": 1705474430696338250,
+		"indexed_at_ns": 1791787107925789000,
+		"word_count": 2915
+	},
+	"public/images/mobile-apps/eon-home-iphone-dark2.jpg": {
+		"size": 63687,
+		"mtime_ns": 1705474430696766164,
+		"indexed_at_ns": 1791787107926905000,
+		"word_count": 2102
+	},
+	"public/images/mobile-apps/eon-home-iphone-dark3.jpg": {
+		"size": 92160,
+		"mtime_ns": 1705474430697010663,
+		"indexed_at_ns": 1791787107927858000,
+		"word_count": 3341
+	},
+	"public/images/mobile-apps/eon-home-iphone-dark4.jpg": {
+		"size": 83511,
+		"mtime_ns": 1705474430697431202,
+		"indexed_at_ns": 1791787107929203000,
+		"word_count": 2886
+	},
+	"public/images/mobile-apps/eon-home-iphone-light1.jpg": {
+		"size": 86682,
+		"mtime_ns": 1705474430697682283,
+		"indexed_at_ns": 1791787107930338000,
+		"word_count": 3072
+	},
+	"public/images/mobile-apps/eon-home-iphone-light2.jpg": {
+		"size": 65551,
+		"mtime_ns": 1705474430698086447,
+		"indexed_at_ns": 1791787107931525000,
+		"word_count": 2256
+	},
+	"public/images/mobile-apps/eon-home-iphone-light3.jpg": {
+		"size": 90799,
+		"mtime_ns": 1705474430698332862,
+		"indexed_at_ns": 1791787107932524000,
+		"word_count": 3301
+	},
+	"public/images/mobile-apps/eon-home-iphone-light4.jpg": {
+		"size": 85797,
+		"mtime_ns": 1705474430698751068,
+		"indexed_at_ns": 1791787107933705000,
+		"word_count": 3190
+	},
+	"public/images/mobile-apps/evolution-1.jpeg": {
+		"size": 85217,
+		"mtime_ns": 1721293205066316198,
+		"indexed_at_ns": 1791787107934847000,
+		"word_count": 2993
+	},
+	"public/images/mobile-apps/evolution-2.jpeg": {
+		"size": 131477,
+		"mtime_ns": 1721293205067380445,
+		"indexed_at_ns": 1791787107935996000,
+		"word_count": 4708
+	},
+	"public/images/mobile-apps/evolution-3.jpeg": {
+		"size": 81328,
+		"mtime_ns": 1721293205068038152,
+		"indexed_at_ns": 1791787107937607000,
+		"word_count": 2409
+	},
+	"public/images/mobile-apps/evolution-4.jpeg": {
+		"size": 111013,
+		"mtime_ns": 1721293205068576650,
+		"indexed_at_ns": 1791787107938704000,
+		"word_count": 3758
+	},
+	"public/images/mobile-apps/foton-home-android1.jpg": {
+		"size": 37575,
+		"mtime_ns": 1705474430698920900,
+		"indexed_at_ns": 1791787107940063000,
+		"word_count": 1393
+	},
+	"public/images/mobile-apps/foton-home-android2.jpg": {
+		"size": 27285,
+		"mtime_ns": 1705474430699046566,
+		"indexed_at_ns": 1791787107940806000,
+		"word_count": 958
+	},
+	"public/images/mobile-apps/foton-home-android3.jpg": {
+		"size": 37363,
+		"mtime_ns": 1705474430699350856,
+		"indexed_at_ns": 1791787107941486000,
+		"word_count": 1292
+	},
+	"public/images/mobile-apps/foton-home-android4.jpg": {
+		"size": 35413,
+		"mtime_ns": 1705474430699488480,
+		"indexed_at_ns": 1791787107942227000,
+		"word_count": 1193
+	},
+	"public/images/mobile-apps/foton-home-android5.jpg": {
+		"size": 35728,
+		"mtime_ns": 1705474430699626104,
+		"indexed_at_ns": 1791787107942972000,
+		"word_count": 1359
+	},
+	"public/images/mobile-apps/foton-home-android6.jpg": {
+		"size": 27789,
+		"mtime_ns": 1705474430699747228,
+		"indexed_at_ns": 1791787107943694000,
+		"word_count": 1039
+	},
+	"public/images/mobile-apps/foton-home-android7.jpg": {
+		"size": 33862,
+		"mtime_ns": 1705474430700039810,
+		"indexed_at_ns": 1791787107944331000,
+		"word_count": 1195
+	},
+	"public/images/mobile-apps/foton-home-android8.jpg": {
+		"size": 34547,
+		"mtime_ns": 1705474430700184892,
+		"indexed_at_ns": 1791787107945029000,
+		"word_count": 1214
+	},
+	"public/images/mobile-apps/foton-home-ipad-dark.jpg": {
+		"size": 164778,
+		"mtime_ns": 1705474430700723222,
+		"indexed_at_ns": 1791787107945753000,
+		"word_count": 5701
+	},
+	"public/images/mobile-apps/foton-home-ipad-light.jpg": {
+		"size": 160164,
+		"mtime_ns": 1705474430701276718,
+		"indexed_at_ns": 1791787107947574000,
+		"word_count": 5299
+	},
+	"public/images/mobile-apps/foton-home-iphone-dark1.jpg": {
+		"size": 90748,
+		"mtime_ns": 1705474430701665591,
+		"indexed_at_ns": 1791787107949290000,
+		"word_count": 3162
+	},
+	"public/images/mobile-apps/foton-home-iphone-dark2.jpg": {
+		"size": 67410,
+		"mtime_ns": 1705474430701841006,
+		"indexed_at_ns": 1791787107950481000,
+		"word_count": 2241
+	},
+	"public/images/mobile-apps/foton-home-iphone-dark3.jpg": {
+		"size": 96472,
+		"mtime_ns": 1705474430702223587,
+		"indexed_at_ns": 1791787107951478000,
+		"word_count": 3376
+	},
+	"public/images/mobile-apps/foton-home-iphone-dark4.jpg": {
+		"size": 86622,
+		"mtime_ns": 1705474430702441461,
+		"indexed_at_ns": 1791787107952700000,
+		"word_count": 2954
+	},
+	"public/images/mobile-apps/foton-home-iphone-light1.jpg": {
+		"size": 91295,
+		"mtime_ns": 1705474430702801917,
+		"indexed_at_ns": 1791787107953883000,
+		"word_count": 3134
+	},
+	"public/images/mobile-apps/foton-home-iphone-light2.jpg": {
+		"size": 69938,
+		"mtime_ns": 1705474430702999332,
+		"indexed_at_ns": 1791787107955133000,
+		"word_count": 2382
+	},
+	"public/images/mobile-apps/foton-home-iphone-light3.jpg": {
+		"size": 94393,
+		"mtime_ns": 1705474430703479413,
+		"indexed_at_ns": 1791787107956142000,
+		"word_count": 3423
+	},
+	"public/images/mobile-apps/foton-home-iphone-light4.jpg": {
+		"size": 88758,
+		"mtime_ns": 1705474430703695953,
+		"indexed_at_ns": 1791787107957346000,
+		"word_count": 3162
+	},
+	"public/images/mobile-apps/notabene-1.jpeg": {
+		"size": 234638,
+		"mtime_ns": 1721293205069604398,
+		"indexed_at_ns": 1791787107958498000,
+		"word_count": 8123
+	},
+	"public/images/mobile-apps/notabene-10.jpeg": {
+		"size": 372630,
+		"mtime_ns": 1721293205070952645,
+		"indexed_at_ns": 1791787107960868000,
+		"word_count": 12982
+	},
+	"public/images/mobile-apps/notabene-2.jpeg": {
+		"size": 219150,
+		"mtime_ns": 1721293205071832059,
+		"indexed_at_ns": 1791787107964775000,
+		"word_count": 7484
+	},
+	"public/images/mobile-apps/notabene-3.jpeg": {
+		"size": 235533,
+		"mtime_ns": 1721293205074405719,
+		"indexed_at_ns": 1791787107967046000,
+		"word_count": 8029
+	},
+	"public/images/mobile-apps/notabene-4.jpeg": {
+		"size": 224203,
+		"mtime_ns": 1721293205075160467,
+		"indexed_at_ns": 1791787107969482000,
+		"word_count": 7752
+	},
+	"public/images/mobile-apps/notabene-5.jpeg": {
+		"size": 151980,
+		"mtime_ns": 1721293205076065965,
+		"indexed_at_ns": 1791787107971844000,
+		"word_count": 5129
+	},
+	"public/images/mobile-apps/notabene-6.jpeg": {
+		"size": 218633,
+		"mtime_ns": 1721293205076797879,
+		"indexed_at_ns": 1791787107973533000,
+		"word_count": 7458
+	},
+	"public/images/mobile-apps/notabene-7.jpeg": {
+		"size": 206490,
+		"mtime_ns": 1721293205077617169,
+		"indexed_at_ns": 1791787107975805000,
+		"word_count": 7068
+	},
+	"public/images/mobile-apps/notabene-8.jpeg": {
+		"size": 211997,
+		"mtime_ns": 1721293205078418000,
+		"indexed_at_ns": 1791787107978005000,
+		"word_count": 7032
+	},
+	"public/images/mobile-apps/notabene-9.jpeg": {
+		"size": 269903,
+		"mtime_ns": 1721293205079239165,
+		"indexed_at_ns": 1791787107980342000,
+		"word_count": 9263
+	},
+	"public/images/temp/articles.jpg": {
+		"size": 133732,
+		"mtime_ns": 1705474430704260949,
+		"indexed_at_ns": 1791787107983210000,
+		"word_count": 4823
+	},
+	"public/images/temp/atanas.jpg": {
+		"size": 105988,
+		"mtime_ns": 1721293205082726364,
+		"indexed_at_ns": 1791787107984784000,
+		"word_count": 3977
+	},
+	"public/images/temp/atanas2.jpeg": {
+		"size": 284766,
+		"mtime_ns": 1721293205083963444,
+		"indexed_at_ns": 1791787107986171000,
+		"word_count": 10938
+	},
+	"public/images/temp/automotive-apps.jpg": {
+		"size": 282612,
+		"mtime_ns": 1705474430705309401,
+		"indexed_at_ns": 1791787107989134000,
+		"word_count": 10536
+	},
+	"public/images/temp/desktop.jpg": {
+		"size": 82051,
+		"mtime_ns": 1705474430705539691,
+		"indexed_at_ns": 1791787107991992000,
+		"word_count": 2770
+	},
+	"public/images/temp/email-templates.jpeg": {
+		"size": 254653,
+		"mtime_ns": 1705474430706138854,
+		"indexed_at_ns": 1791787107993100000,
+		"word_count": 9229
+	},
+	"public/images/temp/github.jpg": {
+		"size": 110445,
+		"mtime_ns": 1705474430706601976,
+		"indexed_at_ns": 1791787107995864000,
+		"word_count": 3818
+	},
+	"public/images/temp/gitlab.jpg": {
+		"size": 109201,
+		"mtime_ns": 1705474430707184430,
+		"indexed_at_ns": 1791787107997263000,
+		"word_count": 3781
+	},
+	"public/images/temp/logo.png": {
+		"size": 7807,
+		"mtime_ns": 1705474430707269555,
+		"indexed_at_ns": 1791787107998634000,
+		"word_count": 201
+	},
+	"public/images/temp/mobile-apps.jpg": {
+		"size": 236540,
+		"mtime_ns": 1705474430707901967,
+		"indexed_at_ns": 1791787107999002000,
+		"word_count": 8588
+	},
+	"public/images/temp/npm.jpg": {
+		"size": 271135,
+		"mtime_ns": 1705474430708677962,
+		"indexed_at_ns": 1791787108001487000,
+		"word_count": 9558
+	},
+	"public/images/temp/open-source.jpg": {
+		"size": 132752,
+		"mtime_ns": 1705474430709134835,
+		"indexed_at_ns": 1791787108004325000,
+		"word_count": 4518
+	},
+	"public/images/temp/personal-apps.jpg": {
+		"size": 158611,
+		"mtime_ns": 1705474430709645790,
+		"indexed_at_ns": 1791787108005932000,
+		"word_count": 5616
+	},
+	"public/images/temp/presentation.jpg": {
+		"size": 177179,
+		"mtime_ns": 1705474430710373410,
+		"indexed_at_ns": 1791787108007726000,
+		"word_count": 6449
+	},
+	"public/images/temp/web-apps.jpg": {
+		"size": 167689,
+		"mtime_ns": 1705474430710734199,
+		"indexed_at_ns": 1791787108009648000,
+		"word_count": 6281
+	},
+	"public/images/unsplash/1.jpeg": {
+		"size": 204412,
+		"mtime_ns": 1705474430711478819,
+		"indexed_at_ns": 1791787108011477000,
+		"word_count": 7185
+	},
+	"public/images/unsplash/10.jpeg": {
+		"size": 187512,
+		"mtime_ns": 1705474430712084482,
+		"indexed_at_ns": 1791787108013663000,
+		"word_count": 6609
+	},
+	"public/images/unsplash/11.jpeg": {
+		"size": 174351,
+		"mtime_ns": 1705474430712477480,
+		"indexed_at_ns": 1791787108015733000,
+		"word_count": 5883
+	},
+	"public/images/unsplash/12.jpeg": {
+		"size": 291031,
+		"mtime_ns": 1705474430713158684,
+		"indexed_at_ns": 1791787108017657000,
+		"word_count": 10561
+	},
+	"public/images/unsplash/13.jpeg": {
+		"size": 150025,
+		"mtime_ns": 1705474430713679888,
+		"indexed_at_ns": 1791787108020642000,
+		"word_count": 5117
+	},
+	"public/images/unsplash/14.jpeg": {
+		"size": 207659,
+		"mtime_ns": 1705474430714370676,
+		"indexed_at_ns": 1791787108022386000,
+		"word_count": 7356
+	},
+	"public/images/unsplash/15.jpeg": {
+		"size": 115151,
+		"mtime_ns": 1705474430714826131,
+		"indexed_at_ns": 1791787108024590000,
+		"word_count": 3997
+	},
+	"public/images/unsplash/16.jpeg": {
+		"size": 121802,
+		"mtime_ns": 1705474430715295378,
+		"indexed_at_ns": 1791787108026004000,
+		"word_count": 4362
+	},
+	"public/images/unsplash/17.jpeg": {
+		"size": 105151,
+		"mtime_ns": 1705474430715509335,
+		"indexed_at_ns": 1791787108027462000,
+		"word_count": 3536
+	},
+	"public/images/unsplash/18.jpeg": {
+		"size": 138196,
+		"mtime_ns": 1705474430716030873,
+		"indexed_at_ns": 1791787108028953000,
+		"word_count": 4696
+	},
+	"public/images/unsplash/19.jpeg": {
+		"size": 109168,
+		"mtime_ns": 1705474430716239664,
+		"indexed_at_ns": 1791787108030600000,
+		"word_count": 3787
+	},
+	"public/images/unsplash/2.jpeg": {
+		"size": 139370,
+		"mtime_ns": 1705474430716768952,
+		"indexed_at_ns": 1791787108031978000,
+		"word_count": 4822
+	},
+	"public/images/unsplash/20.jpeg": {
+		"size": 107825,
+		"mtime_ns": 1705474430717232282,
+		"indexed_at_ns": 1791787108033606000,
+		"word_count": 3829
+	},
+	"public/images/unsplash/21.jpeg": {
+		"size": 208054,
+		"mtime_ns": 1705474430717913778,
+		"indexed_at_ns": 1791787108034974000,
+		"word_count": 7270
+	},
+	"public/images/unsplash/22.jpeg": {
+		"size": 143782,
+		"mtime_ns": 1705474430718380567,
+		"indexed_at_ns": 1791787108037215000,
+		"word_count": 4879
+	},
+	"public/images/unsplash/23.jpeg": {
+		"size": 159514,
+		"mtime_ns": 1705474430718883063,
+		"indexed_at_ns": 1791787108038877000,
+		"word_count": 5582
+	},
+	"public/images/unsplash/24.jpeg": {
+		"size": 143179,
+		"mtime_ns": 1705474430719342852,
+		"indexed_at_ns": 1791787108040705000,
+		"word_count": 4892
+	},
+	"public/images/unsplash/25.jpeg": {
+		"size": 303312,
+		"mtime_ns": 1705474430719913598,
+		"indexed_at_ns": 1791787108042349000,
+		"word_count": 10906
+	},
+	"public/images/unsplash/3.jpeg": {
+		"size": 132873,
+		"mtime_ns": 1705474430720365429,
+		"indexed_at_ns": 1791787108045592000,
+		"word_count": 4582
+	},
+	"public/images/unsplash/4.jpeg": {
+		"size": 107361,
+		"mtime_ns": 1705474430720747760,
+		"indexed_at_ns": 1791787108047187000,
+		"word_count": 3860
+	},
+	"public/images/unsplash/5.jpeg": {
+		"size": 219522,
+		"mtime_ns": 1705474430721903627,
+		"indexed_at_ns": 1791787108048546000,
+		"word_count": 7900
+	},
+	"public/images/unsplash/6.jpeg": {
+		"size": 196889,
+		"mtime_ns": 1705474430722349249,
+		"indexed_at_ns": 1791787108051012000,
+		"word_count": 7141
+	},
+	"public/images/unsplash/7.jpeg": {
+		"size": 187443,
+		"mtime_ns": 1705474430722888746,
+		"indexed_at_ns": 1791787108053213000,
+		"word_count": 6523
+	},
+	"public/images/unsplash/8.jpeg": {
+		"size": 218460,
+		"mtime_ns": 1705474430723597450,
+		"indexed_at_ns": 1791787108055372000,
+		"word_count": 7606
+	},
+	"public/images/unsplash/9.jpeg": {
+		"size": 154015,
+		"mtime_ns": 1705474430723932822,
+		"indexed_at_ns": 1791787108057695000,
+		"word_count": 5518
+	},
+	"public/images/web-apps/2048.jpg": {
+		"size": 29762,
+		"mtime_ns": 1705474430724177029,
+		"indexed_at_ns": 1791787108059574000,
+		"word_count": 641
+	},
+	"public/images/web-apps/Advanced-Hindsight.jpg": {
+		"size": 144078,
+		"mtime_ns": 1721293205084830109,
+		"indexed_at_ns": 1791787108060205000,
+		"word_count": 4923
+	},
+	"public/images/web-apps/Amazing-Decisions-(Hebrew-version).jpg": {
+		"size": 111738,
+		"mtime_ns": 1721293205086022314,
+		"indexed_at_ns": 1791787108061935000,
+		"word_count": 3915
+	},
+	"public/images/web-apps/Amazing-Decisions.jpg": {
+		"size": 104170,
+		"mtime_ns": 1721293205086441855,
+		"indexed_at_ns": 1791787108063283000,
+		"word_count": 3513
+	},
+	"public/images/web-apps/At-the-Wall.jpg": {
+		"size": 82864,
+		"mtime_ns": 1705474430725495063,
+		"indexed_at_ns": 1791787108064580000,
+		"word_count": 2179
+	},
+	"public/images/web-apps/BMMC.jpg": {
+		"size": 90996,
+		"mtime_ns": 1721293205086820312,
+		"indexed_at_ns": 1791787108065763000,
+		"word_count": 3078
+	},
+	"public/images/web-apps/DMARC.io.jpg": {
+		"size": 143760,
+		"mtime_ns": 1721293205087925143,
+		"indexed_at_ns": 1791787108066945000,
+		"word_count": 4812
+	},
+	"public/images/web-apps/Dan-Ariely-(Hebrew-version).jpg": {
+		"size": 69680,
+		"mtime_ns": 1721293205088770807,
+		"indexed_at_ns": 1791787108068663000,
+		"word_count": 2241
+	},
+	"public/images/web-apps/Dan-Ariely-MIT.jpg": {
+		"size": 262334,
+		"mtime_ns": 1721293205089588722,
+		"indexed_at_ns": 1791787108069741000,
+		"word_count": 9256
+	},
+	"public/images/web-apps/Dan-Ariely.jpg": {
+		"size": 110374,
+		"mtime_ns": 1721293205090054929,
+		"indexed_at_ns": 1791787108072477000,
+		"word_count": 3725
+	},
+	"public/images/web-apps/Dan-vs-ChatGPT.jpg": {
+		"size": 138338,
+		"mtime_ns": 1721293205090560719,
+		"indexed_at_ns": 1791787108073848000,
+		"word_count": 4910
+	},
+	"public/images/web-apps/E.ON-H.E.M.S-(Home-Energy-Management-System).jpg": {
+		"size": 100338,
+		"mtime_ns": 1721293205090977801,
+		"indexed_at_ns": 1791787108075612000,
+		"word_count": 3480
+	},
+	"public/images/web-apps/E.ON-Home.jpg": {
+		"size": 24198,
+		"mtime_ns": 1721293205091848883,
+		"indexed_at_ns": 1791787108076959000,
+		"word_count": 575
+	},
+	"public/images/web-apps/Emailio-Landing.jpg": {
+		"size": 32236,
+		"mtime_ns": 1705474430728581334,
+		"indexed_at_ns": 1791787108077556000,
+		"word_count": 642
+	},
+	"public/images/web-apps/Emailio-Web-Application.jpg": {
+		"size": 38536,
+		"mtime_ns": 1721293205092115549,
+		"indexed_at_ns": 1791787108078260000,
+		"word_count": 1198
+	},
+	"public/images/web-apps/F-Type-For-Sale.jpg": {
+		"size": 104109,
+		"mtime_ns": 1721293205092496589,
+		"indexed_at_ns": 1791787108079170000,
+		"word_count": 3709
+	},
+	"public/images/web-apps/Fertility-tool.jpg": {
+		"size": 92577,
+		"mtime_ns": 1721293205092865172,
+		"indexed_at_ns": 1791787108080531000,
+		"word_count": 3161
+	},
+	"public/images/web-apps/Foton-Home.jpg": {
+		"size": 27342,
+		"mtime_ns": 1721293205093364170,
+		"indexed_at_ns": 1791787108081802000,
+		"word_count": 705
+	},
+	"public/images/web-apps/Freelance-Salary-Calculator.jpg": {
+		"size": 57217,
+		"mtime_ns": 1721293205093640711,
+		"indexed_at_ns": 1791787108082405000,
+		"word_count": 2180
+	},
+	"public/images/web-apps/Galaktika.jpg": {
+		"size": 51672,
+		"mtime_ns": 1721293205093889919,
+		"indexed_at_ns": 1791787108083311000,
+		"word_count": 1474
+	},
+	"public/images/web-apps/Graphic-Mama.jpeg": {
+		"size": 263981,
+		"mtime_ns": 1721293205094750125,
+		"indexed_at_ns": 1791787108084130000,
+		"word_count": 9553
+	},
+	"public/images/web-apps/HTML-Lab.jpg": {
+		"size": 48063,
+		"mtime_ns": 1721293205095009666,
+		"indexed_at_ns": 1791787108086903000,
+		"word_count": 1778
+	},
+	"public/images/web-apps/Hochzeitskiste.jpg": {
+		"size": 171105,
+		"mtime_ns": 1721293205095607831,
+		"indexed_at_ns": 1791787108087717000,
+		"word_count": 5970
+	},
+	"public/images/web-apps/H\u00e0la.jpg": {
+		"size": 144064,
+		"mtime_ns": 1721293205096046872,
+		"indexed_at_ns": 1791787108089568000,
+		"word_count": 4964
+	},
+	"public/images/web-apps/IMGN.jpg": {
+		"size": 30639,
+		"mtime_ns": 1721293205096626329,
+		"indexed_at_ns": 1791787108091271000,
+		"word_count": 798
+	},
+	"public/images/web-apps/Influencing-For-Good.jpg": {
+		"size": 159287,
+		"mtime_ns": 1721293205097155577,
+		"indexed_at_ns": 1791787108091921000,
+		"word_count": 5392
+	},
+	"public/images/web-apps/Irrationally-Yours-(Hebrew-version).jpg": {
+		"size": 105846,
+		"mtime_ns": 1721293205097633701,
+		"indexed_at_ns": 1791787108093702000,
+		"word_count": 3366
+	},
+	"public/images/web-apps/Irrationally-Yours.jpg": {
+		"size": 121938,
+		"mtime_ns": 1721293205098221075,
+		"indexed_at_ns": 1791787108095044000,
+		"word_count": 4085
+	},
+	"public/images/web-apps/Issta.jpeg": {
+		"size": 744740,
+		"mtime_ns": 1791264534461324795,
+		"indexed_at_ns": 1791787108096562000,
+		"word_count": 25641
+	},
+	"public/images/web-apps/Kinetik-Automotive.jpg": {
+		"size": 68431,
+		"mtime_ns": 1721293205098551782,
+		"indexed_at_ns": 1791787108103447000,
+		"word_count": 2301
+	},
+	"public/images/web-apps/Kinetik-Electric-Karting-Championship.jpg": {
+		"size": 129285,
+		"mtime_ns": 1791264534462621621,
+		"indexed_at_ns": 1791787108104516000,
+		"word_count": 4499
+	},
+	"public/images/web-apps/Kinetik-Fundraising.jpg": {
+		"size": 155028,
+		"mtime_ns": 1721293205099410030,
+		"indexed_at_ns": 1791787108106049000,
+		"word_count": 5208
+	},
+	"public/images/web-apps/Kinetik-Prototype.jpg": {
+		"size": 28531,
+		"mtime_ns": 1721293205099581280,
+		"indexed_at_ns": 1791787108107987000,
+		"word_count": 781
+	},
+	"public/images/web-apps/Kinetik-STEAM-Education-Kit.jpg": {
+		"size": 103281,
+		"mtime_ns": 1791264534463868905,
+		"indexed_at_ns": 1791787108108689000,
+		"word_count": 3710
+	},
+	"public/images/web-apps/Mail-Bakery.jpg": {
+		"size": 68183,
+		"mtime_ns": 1791264534465767102,
+		"indexed_at_ns": 1791787108109998000,
+		"word_count": 2091
+	},
+	"public/images/web-apps/Malaika-Pictures.jpg": {
+		"size": 118694,
+		"mtime_ns": 1721293205103443978,
+		"indexed_at_ns": 1791787108111027000,
+		"word_count": 4285
+	},
+	"public/images/web-apps/Mama-Culinar.jpg": {
+		"size": 146045,
+		"mtime_ns": 1721293205104045726,
+		"indexed_at_ns": 1791787108112529000,
+		"word_count": 5122
+	},
+	"public/images/web-apps/Mario-Pricken.jpg": {
+		"size": 117550,
+		"mtime_ns": 1791264534466445431,
+		"indexed_at_ns": 1791787108114197000,
+		"word_count": 4296
+	},
+	"public/images/web-apps/Material-Snake.jpg": {
+		"size": 17136,
+		"mtime_ns": 1721293205104657725,
+		"indexed_at_ns": 1791787108115662000,
+		"word_count": 1486
+	},
+	"public/images/web-apps/Material-Tetris.jpg": {
+		"size": 29034,
+		"mtime_ns": 1721293205104818766,
+		"indexed_at_ns": 1791787108116199000,
+		"word_count": 1013
+	},
+	"public/images/web-apps/Misbelief-(Hebrew-version).jpg": {
+		"size": 95140,
+		"mtime_ns": 1791264534467131093,
+		"indexed_at_ns": 1791787108116822000,
+		"word_count": 3520
+	},
+	"public/images/web-apps/Misbelief.jpg": {
+		"size": 150107,
+		"mtime_ns": 1721293205105325556,
+		"indexed_at_ns": 1791787108118056000,
+		"word_count": 5166
+	},
+	"public/images/web-apps/Nulla-TV.jpeg": {
+		"size": 166218,
+		"mtime_ns": 1791264534468501085,
+		"indexed_at_ns": 1791787108119844000,
+		"word_count": 5973
+	},
+	"public/images/web-apps/One-Logic.jpg": {
+		"size": 104719,
+		"mtime_ns": 1721293205106477178,
+		"indexed_at_ns": 1791787108121746000,
+		"word_count": 3646
+	},
+	"public/images/web-apps/Pascoe.jpg": {
+		"size": 145786,
+		"mtime_ns": 1721293205107042010,
+		"indexed_at_ns": 1791787108123121000,
+		"word_count": 5016
+	},
+	"public/images/web-apps/Paternalism-For-Good.jpg": {
+		"size": 53103,
+		"mtime_ns": 1721293205107188260,
+		"indexed_at_ns": 1791787108124789000,
+		"word_count": 1696
+	},
+	"public/images/web-apps/Payoff-(Hebrew-version).jpg": {
+		"size": 132146,
+		"mtime_ns": 1721293205107573801,
+		"indexed_at_ns": 1791787108125661000,
+		"word_count": 4521
+	},
+	"public/images/web-apps/Payoff.jpg": {
+		"size": 151552,
+		"mtime_ns": 1721293205108004050,
+		"indexed_at_ns": 1791787108127238000,
+		"word_count": 5269
+	},
+	"public/images/web-apps/Predictably-Irrational-(Hebrew-version).jpg": {
+		"size": 113753,
+		"mtime_ns": 1721293205108830006,
+		"indexed_at_ns": 1791787108129027000,
+		"word_count": 3924
+	},
+	"public/images/web-apps/Predictably-Irrational.jpg": {
+		"size": 144298,
+		"mtime_ns": 1721293205109340171,
+		"indexed_at_ns": 1791787108130578000,
+		"word_count": 5006
+	},
+	"public/images/web-apps/Retirement-calculator.jpg": {
+		"size": 77102,
+		"mtime_ns": 1721293205109670837,
+		"indexed_at_ns": 1791787108132282000,
+		"word_count": 2487
+	},
+	"public/images/web-apps/RoomGo-Blog.jpg": {
+		"size": 133608,
+		"mtime_ns": 1791264534469781744,
+		"indexed_at_ns": 1791787108133353000,
+		"word_count": 4532
+	},
+	"public/images/web-apps/SOD-64-(\u0421\u041e\u0414-64).jpg": {
+		"size": 135956,
+		"mtime_ns": 1721293205110709459,
+		"indexed_at_ns": 1791787108134881000,
+		"word_count": 5025
+	},
+	"public/images/web-apps/Social-Capital.png": {
+		"size": 165561,
+		"mtime_ns": 1721293205111400166,
+		"indexed_at_ns": 1791787108136381000,
+		"word_count": 6210
+	},
+	"public/images/web-apps/Social-Header.jpg": {
+		"size": 53162,
+		"mtime_ns": 1721293205111635332,
+		"indexed_at_ns": 1791787108138350000,
+		"word_count": 1798
+	},
+	"public/images/web-apps/Sqillinehealth.jpg": {
+		"size": 58486,
+		"mtime_ns": 1721293205111879706,
+		"indexed_at_ns": 1791787108139170000,
+		"word_count": 1934
+	},
+	"public/images/web-apps/The-(Honest)-Truth-About-Dishonesty-(Hebrew-version).jpg": {
+		"size": 79402,
+		"mtime_ns": 1791264534470744030,
+		"indexed_at_ns": 1791787108140074000,
+		"word_count": 2600
+	},
+	"public/images/web-apps/The-(Honest)-Truth-About-Dishonesty.jpg": {
+		"size": 80936,
+		"mtime_ns": 1721293205112172789,
+		"indexed_at_ns": 1791787108141300000,
+		"word_count": 2702
+	},
+	"public/images/web-apps/The-House-Z.jpg": {
+		"size": 120259,
+		"mtime_ns": 1721293205112582579,
+		"indexed_at_ns": 1791787108142420000,
+		"word_count": 4384
+	},
+	"public/images/web-apps/Three-11-Company-Flows.jpg": {
+		"size": 44251,
+		"mtime_ns": 1721293205112793162,
+		"indexed_at_ns": 1791787108143919000,
+		"word_count": 1321
+	},
+	"public/images/web-apps/Three-11.jpg": {
+		"size": 25964,
+		"mtime_ns": 1705474430744135067,
+		"indexed_at_ns": 1791787108144717000,
+		"word_count": 459
+	},
+	"public/images/web-apps/Varna-Food-Tours.jpg": {
+		"size": 132749,
+		"mtime_ns": 1721293205113445452,
+		"indexed_at_ns": 1791787108145364000,
+		"word_count": 4470
+	},
+	"public/images/web-apps/XPND-Ebook.jpg": {
+		"size": 79367,
+		"mtime_ns": 1721293205113756326,
+		"indexed_at_ns": 1791787108146978000,
+		"word_count": 2620
+	},
+	"public/images/web-apps/XPND-demo-application.jpg": {
+		"size": 47432,
+		"mtime_ns": 1721293205113997034,
+		"indexed_at_ns": 1791787108148052000,
+		"word_count": 1711
+	},
+	"public/images/web-apps/XPND.jpg": {
+		"size": 64814,
+		"mtime_ns": 1721293205114259742,
+		"indexed_at_ns": 1791787108148825000,
+		"word_count": 1998
+	},
+	"public/images/web-apps/Zeevan.jpg": {
+		"size": 93470,
+		"mtime_ns": 1721293205114598033,
+		"indexed_at_ns": 1791787108149793000,
+		"word_count": 3338
+	},
+	"public/images/web-apps/atelier-coolinar.png": {
+		"size": 116079,
+		"mtime_ns": 1705474430746236345,
+		"indexed_at_ns": 1791787108151129000,
+		"word_count": 3729
+	},
+	"public/images/web-apps/dmarcian-BIMI-SVG-validator.jpeg": {
+		"size": 345752,
+		"mtime_ns": 1791264534472271104,
+		"indexed_at_ns": 1791787108152549000,
+		"word_count": 11260
+	},
+	"public/images/web-apps/dmarcian-BIMI-builder.jpeg": {
+		"size": 372445,
+		"mtime_ns": 1791264534474235300,
+		"indexed_at_ns": 1791787108155768000,
+		"word_count": 12785
+	},
+	"public/images/web-apps/dmarcian-BIMI-inspector.jpeg": {
+		"size": 384456,
+		"mtime_ns": 1791264534475781082,
+		"indexed_at_ns": 1791787108159176000,
+		"word_count": 13128
+	},
+	"public/images/web-apps/dmarcian-DMARC-Validator.jpg": {
+		"size": 41221,
+		"mtime_ns": 1791264534477586154,
+		"indexed_at_ns": 1791787108162871000,
+		"word_count": 1134
+	},
+	"public/images/web-apps/dmarcian-DMARC-Wizard.jpg": {
+		"size": 84273,
+		"mtime_ns": 1791264534478745314,
+		"indexed_at_ns": 1791787108163602000,
+		"word_count": 2797
+	},
+	"public/images/web-apps/dmarcian-DMARC-XML-to-Human-Converter.jpg": {
+		"size": 102064,
+		"mtime_ns": 1791264534479700350,
+		"indexed_at_ns": 1791787108164768000,
+		"word_count": 3595
+	},
+	"public/images/web-apps/dmarcian-Email-Header-Analyzer.jpeg": {
+		"size": 413417,
+		"mtime_ns": 1791784449755274607,
+		"indexed_at_ns": 1791787108166072000,
+		"word_count": 13371
+	},
+	"public/images/web-apps/dmarcian-Login.jpg": {
+		"size": 89700,
+		"mtime_ns": 1791264534480687802,
+		"indexed_at_ns": 1791787108170222000,
+		"word_count": 3064
+	},
+	"public/images/web-apps/dmarcian-TLS-Inspector.jpg": {
+		"size": 41277,
+		"mtime_ns": 1791264534481449756,
+		"indexed_at_ns": 1791787108171500000,
+		"word_count": 1136
+	},
+	"public/images/web-apps/dmarcian-blog.jpeg": {
+		"size": 209179,
+		"mtime_ns": 1791264534483145037,
+		"indexed_at_ns": 1791787108172295000,
+		"word_count": 7550
+	},
+	"public/images/web-apps/dmarcian.jpg": {
+		"size": 136129,
+		"mtime_ns": 1791264534485571064,
+		"indexed_at_ns": 1791787108174618000,
+		"word_count": 4675
+	},
+	"public/images/web-apps/faraon-bg.jpg": {
+		"size": 134106,
+		"mtime_ns": 1705474430746645509,
+		"indexed_at_ns": 1791787108176327000,
+		"word_count": 4569
+	},
+	"public/images/web-apps/htmlBoutique.jpg": {
+		"size": 93207,
+		"mtime_ns": 1791264534486061894,
+		"indexed_at_ns": 1791787108177929000,
+		"word_count": 3380
+	},
+	"public/images/web-apps/htmlBurger.jpg": {
+		"size": 112322,
+		"mtime_ns": 1791264534486611974,
+		"indexed_at_ns": 1791787108179185000,
+		"word_count": 3780
+	},
+	"public/images/web-apps/sirius-real-estate.png": {
+		"size": 221101,
+		"mtime_ns": 1791264534488120424,
+		"indexed_at_ns": 1791787108180562000,
+		"word_count": 7267
+	},
+	"public/images/web-apps/x-form.png": {
+		"size": 132604,
+		"mtime_ns": 1705474430747430546,
+		"indexed_at_ns": 1791787108182942000,
+		"word_count": 4696
+	},
+	"public/manifest.json": {
+		"size": 1074,
+		"mtime_ns": 1705474430747495171,
+		"indexed_at_ns": 1791787157816724000,
+		"word_count": 104,
+		"hashes": { "public/manifest.json": "6fcc2ffe1ebe8860b26d7cc80e962fb6a6f622b1bf159ab952d09f9015b20f87" }
+	},
+	"public/resume-covered.pdf": {
+		"size": 166816,
+		"mtime_ns": 1731596612075824693,
+		"indexed_at_ns": 1791787159356709000,
+		"word_count": 0,
+		"hashes": { "public/resume-covered.pdf": "99846f4d137a93eaa21a3771bf8195ff4fbbe449f3474d73e023c5780e96c294" }
+	},
+	"public/resume.pdf": {
+		"size": 2724836,
+		"mtime_ns": 1722498144195149667,
+		"indexed_at_ns": 1791787159357557000,
+		"word_count": 0,
+		"hashes": { "public/resume.pdf": "92e1ac1a1baf15b4bc363775a54db085dd231e04b713e86891289ab61262f68d" }
+	},
+	"public/robots.txt": {
+		"size": 66,
+		"mtime_ns": 1747741002298573737,
+		"indexed_at_ns": 1791787159354299000,
+		"word_count": 6,
+		"hashes": { "public/robots.txt": "baa3c8034c8665d2f684cf082a862ae9220613a5a2e8f8772561e885c18a8dab" }
+	},
+	"renovate.json": {
+		"size": 679,
+		"mtime_ns": 1789976380051846411,
+		"indexed_at_ns": 1791787157817104000,
+		"word_count": 57,
+		"hashes": { "renovate.json": "3e57ec8f5cc94a3f28670aa5cbfd5c8a34f6fdc535949d41b30a6cd7146e434d" }
+	},
+	"screenshots/index.ts": {
+		"size": 4217,
+		"mtime_ns": 1765204915945965453,
+		"indexed_at_ns": 1791787108186833000,
+		"word_count": 452
+	},
+	"src/components/animation/index.tsx": {
+		"size": 1179,
+		"mtime_ns": 1765204915946376077,
+		"indexed_at_ns": 1791787108187471000,
+		"word_count": 135
+	},
+	"src/components/button/index.tsx": {
+		"size": 1897,
+		"mtime_ns": 1765204915946706244,
+		"indexed_at_ns": 1791787108187855000,
+		"word_count": 238
+	},
+	"src/components/carousel/index.tsx": {
+		"size": 4490,
+		"mtime_ns": 1785746976793021575,
+		"indexed_at_ns": 1791787108188334000,
+		"word_count": 455
+	},
+	"src/components/contact/index.tsx": {
+		"size": 3215,
+		"mtime_ns": 1765204915947519452,
+		"indexed_at_ns": 1791787108188764000,
+		"word_count": 299
+	},
+	"src/components/empty-page/index.tsx": {
+		"size": 1712,
+		"mtime_ns": 1765204915947894243,
+		"indexed_at_ns": 1791787108189090000,
+		"word_count": 188
+	},
+	"src/components/external-link/index.tsx": {
+		"size": 522,
+		"mtime_ns": 1764081490514081978,
+		"indexed_at_ns": 1791787108189387000,
+		"word_count": 68
+	},
+	"src/components/footer/index.tsx": {
+		"size": 2694,
+		"mtime_ns": 1767512558899324284,
+		"indexed_at_ns": 1791787108189748000,
+		"word_count": 235
+	},
+	"src/components/funding/crypto.tsx": {
+		"size": 1204,
+		"mtime_ns": 1765204915948580201,
+		"indexed_at_ns": 1791787108190226000,
+		"word_count": 142
+	},
+	"src/components/funding/index.tsx": {
+		"size": 1817,
+		"mtime_ns": 1765204915948930242,
+		"indexed_at_ns": 1791787108190528000,
+		"word_count": 187
+	},
+	"src/components/funding/network.tsx": {
+		"size": 841,
+		"mtime_ns": 1710350076067209901,
+		"indexed_at_ns": 1791787108190818000,
+		"word_count": 80
+	},
+	"src/components/github-skyline/constants.ts": {
+		"size": 25,
+		"mtime_ns": 1728969903758415848,
+		"indexed_at_ns": 1791787108191269000,
+		"word_count": 5
+	},
+	"src/components/github-skyline/index.tsx": {
+		"size": 1399,
+		"mtime_ns": 1765204915949378659,
+		"indexed_at_ns": 1791787108191914000,
+		"word_count": 148
+	},
+	"src/components/github-skyline/utils.ts": {
+		"size": 3745,
+		"mtime_ns": 1738761922840942089,
+		"indexed_at_ns": 1791787108192218000,
+		"word_count": 360
+	},
+	"src/components/head/index.tsx": {
+		"size": 11538,
+		"mtime_ns": 1720795802400432455,
+		"indexed_at_ns": 1791787108192636000,
+		"word_count": 783
+	},
+	"src/components/header/index.tsx": {
+		"size": 1058,
+		"mtime_ns": 1765204915949848533,
+		"indexed_at_ns": 1791787108193293000,
+		"word_count": 112
+	},
+	"src/components/icon/index.tsx": {
+		"size": 372,
+		"mtime_ns": 1710350076067847685,
+		"indexed_at_ns": 1791787108193596000,
+		"word_count": 50
+	},
+	"src/components/index.ts": {
+		"size": 1337,
+		"mtime_ns": 1738761922841697713,
+		"indexed_at_ns": 1791787108194013000,
+		"word_count": 214
+	},
+	"src/components/layout/index.tsx": {
+		"size": 697,
+		"mtime_ns": 1765204915950287116,
+		"indexed_at_ns": 1791787108194466000,
+		"word_count": 88
+	},
+	"src/components/lines/index.tsx": {
+		"size": 437,
+		"mtime_ns": 1705474430798982047,
+		"indexed_at_ns": 1791787108194778000,
+		"word_count": 51
+	},
+	"src/components/loader/index.tsx": {
+		"size": 167,
+		"mtime_ns": 1705474430799050297,
+		"indexed_at_ns": 1791787108195238000,
+		"word_count": 24
+	},
+	"src/components/mdx/index.tsx": {
+		"size": 1364,
+		"mtime_ns": 1785746976793229826,
+		"indexed_at_ns": 1791787108195656000,
+		"word_count": 161
+	},
+	"src/components/nav/anchor.tsx": {
+		"size": 842,
+		"mtime_ns": 1765204915951165782,
+		"indexed_at_ns": 1791787108196054000,
+		"word_count": 113
+	},
+	"src/components/nav/index.tsx": {
+		"size": 2569,
+		"mtime_ns": 1765204915951725740,
+		"indexed_at_ns": 1791787108196362000,
+		"word_count": 288
+	},
+	"src/components/nav/types.ts": {
+		"size": 248,
+		"mtime_ns": 1705474430799283045,
+		"indexed_at_ns": 1791787108196672000,
+		"word_count": 35
+	},
+	"src/components/partners/index.tsx": {
+		"size": 685,
+		"mtime_ns": 1710350076068575259,
+		"indexed_at_ns": 1791787108196979000,
+		"word_count": 79
+	},
+	"src/components/portfolio-sliders/index.tsx": {
+		"size": 1572,
+		"mtime_ns": 1765204915952348115,
+		"indexed_at_ns": 1791787108197357000,
+		"word_count": 141
+	},
+	"src/components/referral/index.tsx": {
+		"size": 660,
+		"mtime_ns": 1765204915952761406,
+		"indexed_at_ns": 1791787108197661000,
+		"word_count": 69
+	},
+	"src/components/resume/education.tsx": {
+		"size": 1052,
+		"mtime_ns": 1765204915953214947,
+		"indexed_at_ns": 1791787108198093000,
+		"word_count": 106
+	},
+	"src/components/resume/entry.tsx": {
+		"size": 366,
+		"mtime_ns": 1710350076069074962,
+		"indexed_at_ns": 1791787108198397000,
+		"word_count": 45
+	},
+	"src/components/resume/experience.tsx": {
+		"size": 755,
+		"mtime_ns": 1765204915953579406,
+		"indexed_at_ns": 1791787108198753000,
+		"word_count": 74
+	},
+	"src/components/resume/index.ts": {
+		"size": 430,
+		"mtime_ns": 1705474430799716043,
+		"indexed_at_ns": 1791787108199062000,
+		"word_count": 64
+	},
+	"src/components/resume/more.tsx": {
+		"size": 471,
+		"mtime_ns": 1710350076069293334,
+		"indexed_at_ns": 1791787108199360000,
+		"word_count": 57
+	},
+	"src/components/resume/skills.tsx": {
+		"size": 507,
+		"mtime_ns": 1705474430799810750,
+		"indexed_at_ns": 1791787108199871000,
+		"word_count": 58
+	},
+	"src/components/resume/strengths.tsx": {
+		"size": 532,
+		"mtime_ns": 1705474430799851375,
+		"indexed_at_ns": 1791787108200168000,
+		"word_count": 58
+	},
+	"src/components/resume/summary.tsx": {
+		"size": 300,
+		"mtime_ns": 1705474430799898208,
+		"indexed_at_ns": 1791787108200456000,
+		"word_count": 39
+	},
+	"src/components/resume/title.tsx": {
+		"size": 695,
+		"mtime_ns": 1710350076069417249,
+		"indexed_at_ns": 1791787108200740000,
+		"word_count": 81
+	},
+	"src/components/section/elements.tsx": {
+		"size": 2558,
+		"mtime_ns": 1765204915954220280,
+		"indexed_at_ns": 1791787108201086000,
+		"word_count": 221
+	},
+	"src/components/section/grid.tsx": {
+		"size": 1709,
+		"mtime_ns": 1765204915954557655,
+		"indexed_at_ns": 1791787108201397000,
+		"word_count": 209
+	},
+	"src/components/section/index.tsx": {
+		"size": 639,
+		"mtime_ns": 1710350076069764703,
+		"indexed_at_ns": 1791787108201698000,
+		"word_count": 79
+	},
+	"src/components/section/nav.tsx": {
+		"size": 1343,
+		"mtime_ns": 1765204915954859321,
+		"indexed_at_ns": 1791787108201992000,
+		"word_count": 161
+	},
+	"src/components/section/types.ts": {
+		"size": 376,
+		"mtime_ns": 1710350076069990367,
+		"indexed_at_ns": 1791787108202293000,
+		"word_count": 43
+	},
+	"src/components/social/index.ts": {
+		"size": 105,
+		"mtime_ns": 1705474430800293705,
+		"indexed_at_ns": 1791787108202585000,
+		"word_count": 16
+	},
+	"src/components/social/linkedin.tsx": {
+		"size": 999,
+		"mtime_ns": 1764085507889013129,
+		"indexed_at_ns": 1791787108202877000,
+		"word_count": 80
+	},
+	"src/components/social/music.tsx": {
+		"size": 4767,
+		"mtime_ns": 1791786609363458812,
+		"indexed_at_ns": 1791787108203514000,
+		"word_count": 498
+	},
+	"src/components/social/utils.tsx": {
+		"size": 447,
+		"mtime_ns": 1710350076070340821,
+		"indexed_at_ns": 1791787108203947000,
+		"word_count": 42
+	},
+	"src/components/stats/entry.tsx": {
+		"size": 604,
+		"mtime_ns": 1710350076070461820,
+		"indexed_at_ns": 1791787108204257000,
+		"word_count": 62
+	},
+	"src/components/stats/error.tsx": {
+		"size": 421,
+		"mtime_ns": 1705474430800611953,
+		"indexed_at_ns": 1791787108204555000,
+		"word_count": 52
+	},
+	"src/components/stats/index.ts": {
+		"size": 98,
+		"mtime_ns": 1705474430800663828,
+		"indexed_at_ns": 1791787108204983000,
+		"word_count": 16
+	},
+	"src/components/theme-switcher/crater.tsx": {
+		"size": 363,
+		"mtime_ns": 1710350076070572610,
+		"indexed_at_ns": 1791787108205384000,
+		"word_count": 48
+	},
+	"src/components/theme-switcher/data.ts": {
+		"size": 7521,
+		"mtime_ns": 1710350076070780732,
+		"indexed_at_ns": 1791787108205675000,
+		"word_count": 712
+	},
+	"src/components/theme-switcher/index.tsx": {
+		"size": 650,
+		"mtime_ns": 1710350076070927689,
+		"indexed_at_ns": 1791787108206105000,
+		"word_count": 73
+	},
+	"src/components/theme-switcher/moon.tsx": {
+		"size": 2515,
+		"mtime_ns": 1710350076071053396,
+		"indexed_at_ns": 1791787108206398000,
+		"word_count": 203
+	},
+	"src/components/theme-switcher/sun.tsx": {
+		"size": 2254,
+		"mtime_ns": 1710350076071187936,
+		"indexed_at_ns": 1791787108206709000,
+		"word_count": 164
+	},
+	"src/components/title/index.tsx": {
+		"size": 471,
+		"mtime_ns": 1765204915955679320,
+		"indexed_at_ns": 1791787108207006000,
+		"word_count": 68
+	},
+	"src/custom.d.ts": {
+		"size": 1720,
+		"mtime_ns": 1765204915956095654,
+		"indexed_at_ns": 1791787108207264000,
+		"word_count": 176
+	},
+	"src/data/context.ts": {
+		"size": 250,
+		"mtime_ns": 1765204915956520362,
+		"indexed_at_ns": 1791787108207642000,
+		"word_count": 29
+	},
+	"src/data/lotties/book.json": {
+		"size": 12042,
+		"mtime_ns": 1705474430801335699,
+		"indexed_at_ns": 1791787157817600000,
+		"word_count": 100,
+		"hashes": { "src/data/lotties/book.json": "2a3a68dacfe2ae890f423a83137f2f87f666072b6b8a91df0aa9c0f4b151a86b" }
+	},
+	"src/data/lotties/certificate.json": {
+		"size": 17293,
+		"mtime_ns": 1705474430801449990,
+		"indexed_at_ns": 1791787157817968000,
+		"word_count": 298,
+		"hashes": {
+			"src/data/lotties/certificate.json": "3aede3ba37de8cbd651a4f97a7464da960b0bca0a65b515549199d8113c19893"
+		}
+	},
+	"src/data/lotties/hello.json": {
+		"size": 62513,
+		"mtime_ns": 1705474430801527531,
+		"indexed_at_ns": 1791787157818295000,
+		"word_count": 718,
+		"hashes": { "src/data/lotties/hello.json": "111aaf958e6ea7f96f7cb0ee50d5b65755355ac0d084017c0cd6bf9d1479033c" }
+	},
+	"src/data/lotties/hire1.json": {
+		"size": 152494,
+		"mtime_ns": 1710350076071985843,
+		"indexed_at_ns": 1791787157818673000,
+		"word_count": 1552,
+		"hashes": { "src/data/lotties/hire1.json": "40d10bf9591088a06e473ee5e049a637cf1ae690b723fb23fe42dbfe57f9bb99" }
+	},
+	"src/data/lotties/hire2.json": {
+		"size": 95465,
+		"mtime_ns": 1710350076072185340,
+		"indexed_at_ns": 1791787157819127000,
+		"word_count": 1370,
+		"hashes": { "src/data/lotties/hire2.json": "847d4c95a628a32c640cf44a97a4216bc72b9ac9399a5281827334f9000c573c" }
+	},
+	"src/data/lotties/portfolio.json": {
+		"size": 87205,
+		"mtime_ns": 1705474430801678363,
+		"indexed_at_ns": 1791787157819525000,
+		"word_count": 1085,
+		"hashes": {
+			"src/data/lotties/portfolio.json": "0a3127eae25db5c1993ddcd115ed7751676c9449bb97bb4e0c772b711d70887e"
+		}
+	},
+	"src/data/lotties/presentation.json": {
+		"size": 18663,
+		"mtime_ns": 1705474430801756988,
+		"indexed_at_ns": 1791787157819923000,
+		"word_count": 242,
+		"hashes": {
+			"src/data/lotties/presentation.json": "2b6074e589ee08d1f6a90326f8ed124c68277d09d4c998e5932cc7304d78e59b"
+		}
+	},
+	"src/data/lotties/resume.json": {
+		"size": 25232,
+		"mtime_ns": 1705474430801848237,
+		"indexed_at_ns": 1791787157820531000,
+		"word_count": 317,
+		"hashes": { "src/data/lotties/resume.json": "18a2989780c29ec7af4e4f2f39edbdf27fe1608fc2d4752466012f66a97ebb9a" }
+	},
+	"src/data/lotties/social-media.json": {
+		"size": 556404,
+		"mtime_ns": 1705474430802511441,
+		"indexed_at_ns": 1791787157820881000,
+		"word_count": 2903,
+		"hashes": {
+			"src/data/lotties/social-media.json": "94c01215272ef990776c0eb73a485576739733b6bb707c09ab6f12811dac7ef1"
+		}
+	},
+	"src/data/lotties/statistics.json": {
+		"size": 287458,
+		"mtime_ns": 1705474430802741190,
+		"indexed_at_ns": 1791787157821547000,
+		"word_count": 519,
+		"hashes": {
+			"src/data/lotties/statistics.json": "c92289a6d4726e5aa0ede60347e9b83599c77c4c5515d54b3bd1eb1d94a93be9"
+		}
+	},
+	"src/data/lotties/talent.json": {
+		"size": 814477,
+		"mtime_ns": 1710350076072872373,
+		"indexed_at_ns": 1791787157822067000,
+		"word_count": 10352,
+		"hashes": { "src/data/lotties/talent.json": "afd1474f48c482b436c0b0e403008b536daf57a78f3400b4c25a6b9d89f742d6" }
+	},
+	"src/data/lotties/testimonials.json": {
+		"size": 396350,
+		"mtime_ns": 1705474430803648434,
+		"indexed_at_ns": 1791787157822820000,
+		"word_count": 4867,
+		"hashes": {
+			"src/data/lotties/testimonials.json": "cf478dcc15ab0f1efd46aa90794468e7e99eab614ee14c146f82a2f6ed3065a8"
+		}
+	},
+	"src/data/lotties/timeline.json": {
+		"size": 33557,
+		"mtime_ns": 1705474430803757017,
+		"indexed_at_ns": 1791787157823437000,
+		"word_count": 352,
+		"hashes": {
+			"src/data/lotties/timeline.json": "02097ecb3c818bf608cb751ceae848c438dcbbd7e89819a4f60522ee7cb11d64"
+		}
+	},
+	"src/data/lotties/video-camera.json": {
+		"size": 30646,
+		"mtime_ns": 1705474430803867766,
+		"indexed_at_ns": 1791787157823771000,
+		"word_count": 432,
+		"hashes": {
+			"src/data/lotties/video-camera.json": "a87409f5e8ebe1a0e0e9ae4e5d0399104ee73493faf86c435ca236eca468de46"
+		}
+	},
+	"src/data/lotties/working.json": {
+		"size": 73268,
+		"mtime_ns": 1705474430804003807,
+		"indexed_at_ns": 1791787157824089000,
+		"word_count": 938,
+		"hashes": {
+			"src/data/lotties/working.json": "194897f73066ffde94bfc5d27251248dbb58e66aad767b84dc2e46aac6f61084"
+		}
+	},
+	"src/data/menu.ts": {
+		"size": 3002,
+		"mtime_ns": 1768382447963934332,
+		"indexed_at_ns": 1791787108218030000,
+		"word_count": 353
+	},
+	"src/data/music.ts": {
+		"size": 10726,
+		"mtime_ns": 1728969903759312663,
+		"indexed_at_ns": 1791787108218610000,
+		"word_count": 644
+	},
+	"src/data/open-source.ts": {
+		"size": 7912,
+		"mtime_ns": 1785745496020810149,
+		"indexed_at_ns": 1791787108229690000,
+		"word_count": 534
+	},
+	"src/data/pages.tsx": {
+		"size": 863,
+		"mtime_ns": 1765204915956974320,
+		"indexed_at_ns": 1791787108230381000,
+		"word_count": 82
+	},
+	"src/data/posts/bulk-image-watermark-with-nodejs-and-jimp.md": {
+		"size": 9205,
+		"mtime_ns": 1742802225769958277,
+		"indexed_at_ns": 1791787159354569000,
+		"word_count": 1350,
+		"hashes": {
+			"src/data/posts/bulk-image-watermark-with-nodejs-and-jimp.md": "46938ca1ec4269eb944456be2608610e5583a1d4c7b199e0fa5dfaa41be2ae15"
+		}
+	},
+	"src/data/posts/cityjs-athens-2025.md": {
+		"size": 53629,
+		"mtime_ns": 1752576634213798359,
+		"indexed_at_ns": 1791787159354828000,
+		"word_count": 8041,
+		"hashes": {
+			"src/data/posts/cityjs-athens-2025.md": "8df3152b34f0358b1ea506fda61f4961d3cbd18a624e3264ef6dde121c6cbf3a"
+		}
+	},
+	"src/data/posts/comparing-dns-records.md": {
+		"size": 6559,
+		"mtime_ns": 1749125218597244665,
+		"indexed_at_ns": 1791787159355104000,
+		"word_count": 875,
+		"hashes": {
+			"src/data/posts/comparing-dns-records.md": "d5c8dcc135ab3630e54077d7d8cc48f956124d04dedaa72e5a86f1bb4001daf0"
+		}
+	},
+	"src/data/posts/data-driven-fat-loss.md": {
+		"size": 4271,
+		"mtime_ns": 1776187135924686394,
+		"indexed_at_ns": 1791787159355362000,
+		"word_count": 685,
+		"hashes": {
+			"src/data/posts/data-driven-fat-loss.md": "b37e765896a7492ebdcb58467f1dc78f41e5a36b2df803f7d0bc2617f4df940b"
+		}
+	},
+	"src/data/posts/polymorphic-button-for-nextjs.md": {
+		"size": 8819,
+		"mtime_ns": 1742802225770358783,
+		"indexed_at_ns": 1791787159355614000,
+		"word_count": 1297,
+		"hashes": {
+			"src/data/posts/polymorphic-button-for-nextjs.md": "3d2aacdbbdd8f3b044a60c4bf6b9d65146045de2c1bbca9fae0e10ca980cced1"
+		}
+	},
+	"src/data/posts/running-multiple-webpack-based-applications-simultaneously.md": {
+		"size": 6428,
+		"mtime_ns": 1742802225770744914,
+		"indexed_at_ns": 1791787159355876000,
+		"word_count": 946,
+		"hashes": {
+			"src/data/posts/running-multiple-webpack-based-applications-simultaneously.md": "58ea1ee61bf5cd7db367890a9b9aa85fb1f7e3b7c00817f4dd9d448afd90f6e0"
+		}
+	},
+	"src/data/posts/testing-websockets-with-cypress.md": {
+		"size": 11233,
+		"mtime_ns": 1742802225771249296,
+		"indexed_at_ns": 1791787159356153000,
+		"word_count": 1576,
+		"hashes": {
+			"src/data/posts/testing-websockets-with-cypress.md": "21356ba159983b23a2fe453e0854b4924336848f753721203a65cef4ba8bef17"
+		}
+	},
+	"src/data/posts/the-last-jsconf-in-budapest.md": {
+		"size": 30969,
+		"mtime_ns": 1742802225771812346,
+		"indexed_at_ns": 1791787159356419000,
+		"word_count": 4376,
+		"hashes": {
+			"src/data/posts/the-last-jsconf-in-budapest.md": "398d815e0a3c179024cf6d846924fc4cc3a0cdee0e8f88512e34dcfcecf24521"
+		}
+	},
+	"src/data/projects.ts": {
+		"size": 29844,
+		"mtime_ns": 1791784449755617814,
+		"indexed_at_ns": 1791787108238374000,
+		"word_count": 2726
+	},
+	"src/data/routes.ts": {
+		"size": 885,
+		"mtime_ns": 1710350076073737821,
+		"indexed_at_ns": 1791787108238918000,
+		"word_count": 83
+	},
+	"src/data/skills-list.ts": {
+		"size": 14097,
+		"mtime_ns": 1765204915957751569,
+		"indexed_at_ns": 1791787108239352000,
+		"word_count": 1508
+	},
+	"src/data/social.tsx": {
+		"size": 2515,
+		"mtime_ns": 1791786860665654474,
+		"indexed_at_ns": 1791787108239799000,
+		"word_count": 213
+	},
+	"src/houdini/avatar-polygon.ts": {
+		"size": 1148,
+		"mtime_ns": 1767512558899732657,
+		"indexed_at_ns": 1791787108240166000,
+		"word_count": 150
+	},
+	"src/houdini/blotto.ts": {
+		"size": 1395,
+		"mtime_ns": 1710350076074249648,
+		"indexed_at_ns": 1791787108240541000,
+		"word_count": 135
+	},
+	"src/houdini/bubbles.ts": {
+		"size": 3070,
+		"mtime_ns": 1765204915958350444,
+		"indexed_at_ns": 1791787108240810000,
+		"word_count": 367
+	},
+	"src/houdini/bytemare.ts": {
+		"size": 2122,
+		"mtime_ns": 1710350076074460937,
+		"indexed_at_ns": 1791787108241180000,
+		"word_count": 218
+	},
+	"src/houdini/circles.ts": {
+		"size": 1899,
+		"mtime_ns": 1765204915958613360,
+		"indexed_at_ns": 1791787108241468000,
+		"word_count": 220
+	},
+	"src/houdini/confetti.ts": {
+		"size": 1424,
+		"mtime_ns": 1710350076074724392,
+		"indexed_at_ns": 1791787108241890000,
+		"word_count": 176
+	},
+	"src/houdini/parallelowow.ts": {
+		"size": 3103,
+		"mtime_ns": 1710350076074875349,
+		"indexed_at_ns": 1791787108242184000,
+		"word_count": 291
+	},
+	"src/houdini/slanted-backgrounds.ts": {
+		"size": 983,
+		"mtime_ns": 1710350076074993847,
+		"indexed_at_ns": 1791787108242474000,
+		"word_count": 91
+	},
+	"src/pages/404.tsx": {
+		"size": 906,
+		"mtime_ns": 1765204915958982193,
+		"indexed_at_ns": 1791787108242756000,
+		"word_count": 101
+	},
+	"src/pages/_app.tsx": {
+		"size": 3759,
+		"mtime_ns": 1785746976793439493,
+		"indexed_at_ns": 1791787108243026000,
+		"word_count": 295
+	},
+	"src/pages/_document.tsx": {
+		"size": 251,
+		"mtime_ns": 1710350076075350343,
+		"indexed_at_ns": 1791787108243403000,
+		"word_count": 39
+	},
+	"src/pages/_offline.tsx": {
+		"size": 852,
+		"mtime_ns": 1765204915959669609,
+		"indexed_at_ns": 1791787108243704000,
+		"word_count": 94
+	},
+	"src/pages/about.tsx": {
+		"size": 1967,
+		"mtime_ns": 1765204915960016234,
+		"indexed_at_ns": 1791787108244142000,
+		"word_count": 195
+	},
+	"src/pages/api/cms-refresh.ts": {
+		"size": 578,
+		"mtime_ns": 1765204915960355067,
+		"indexed_at_ns": 1791787108244462000,
+		"word_count": 74
+	},
+	"src/pages/api/github-calendar.ts": {
+		"size": 1815,
+		"mtime_ns": 1765204915960611859,
+		"indexed_at_ns": 1791787108244768000,
+		"word_count": 182
+	},
+	"src/pages/api/last-fm.ts": {
+		"size": 389,
+		"mtime_ns": 1729572932324977816,
+		"indexed_at_ns": 1791787108245079000,
+		"word_count": 46
+	},
+	"src/pages/api/mail.ts": {
+		"size": 1533,
+		"mtime_ns": 1778491623438025826,
+		"indexed_at_ns": 1791787108245701000,
+		"word_count": 177
+	},
+	"src/pages/articles.tsx": {
+		"size": 1463,
+		"mtime_ns": 1765204915961486733,
+		"indexed_at_ns": 1791787108246346000,
+		"word_count": 139
+	},
+	"src/pages/blog/[slug].tsx": {
+		"size": 1781,
+		"mtime_ns": 1765204915961889899,
+		"indexed_at_ns": 1791787108246659000,
+		"word_count": 189
+	},
+	"src/pages/blog/index.tsx": {
+		"size": 1444,
+		"mtime_ns": 1765204915962470982,
+		"indexed_at_ns": 1791787108246946000,
+		"word_count": 142
+	},
+	"src/pages/certificates.tsx": {
+		"size": 2543,
+		"mtime_ns": 1765204915962965607,
+		"indexed_at_ns": 1791787108247224000,
+		"word_count": 214
+	},
+	"src/pages/index.tsx": {
+		"size": 1983,
+		"mtime_ns": 1772781393800070916,
+		"indexed_at_ns": 1791787108247507000,
+		"word_count": 214
+	},
+	"src/pages/interactive-resume.tsx": {
+		"size": 3248,
+		"mtime_ns": 1765204915963594148,
+		"indexed_at_ns": 1791787108247840000,
+		"word_count": 282
+	},
+	"src/pages/music.tsx": {
+		"size": 3934,
+		"mtime_ns": 1765204915963865898,
+		"indexed_at_ns": 1791787108248147000,
+		"word_count": 374
+	},
+	"src/pages/occupation.tsx": {
+		"size": 1449,
+		"mtime_ns": 1765204915964132273,
+		"indexed_at_ns": 1791787108248478000,
+		"word_count": 137
+	},
+	"src/pages/portfolio/automotive-applications.tsx": {
+		"size": 1310,
+		"mtime_ns": 1765204915964526106,
+		"indexed_at_ns": 1791787108248790000,
+		"word_count": 125
+	},
+	"src/pages/portfolio/email-templates.tsx": {
+		"size": 1991,
+		"mtime_ns": 1765204915964810647,
+		"indexed_at_ns": 1791787108249094000,
+		"word_count": 205
+	},
+	"src/pages/portfolio/index.tsx": {
+		"size": 916,
+		"mtime_ns": 1765204915965110647,
+		"indexed_at_ns": 1791787108249391000,
+		"word_count": 100
+	},
+	"src/pages/portfolio/mobile-applications.tsx": {
+		"size": 1210,
+		"mtime_ns": 1765204915965469063,
+		"indexed_at_ns": 1791787108249805000,
+		"word_count": 124
+	},
+	"src/pages/portfolio/open-source/[slug].tsx": {
+		"size": 2200,
+		"mtime_ns": 1765204915965853272,
+		"indexed_at_ns": 1791787108250138000,
+		"word_count": 232
+	},
+	"src/pages/portfolio/open-source/index.tsx": {
+		"size": 1376,
+		"mtime_ns": 1765204915966162730,
+		"indexed_at_ns": 1791787108250472000,
+		"word_count": 133
+	},
+	"src/pages/portfolio/personal-projects.tsx": {
+		"size": 1438,
+		"mtime_ns": 1765204915966487563,
+		"indexed_at_ns": 1791787108250772000,
+		"word_count": 139
+	},
+	"src/pages/portfolio/web-applications.tsx": {
+		"size": 2614,
+		"mtime_ns": 1765204915966833937,
+		"indexed_at_ns": 1791787108251075000,
+		"word_count": 245
+	},
+	"src/pages/resume.tsx": {
+		"size": 3217,
+		"mtime_ns": 1765204915967177854,
+		"indexed_at_ns": 1791787108251369000,
+		"word_count": 257
+	},
+	"src/pages/skills.tsx": {
+		"size": 2473,
+		"mtime_ns": 1765204915967576187,
+		"indexed_at_ns": 1791787108251656000,
+		"word_count": 237
+	},
+	"src/pages/slides.tsx": {
+		"size": 1917,
+		"mtime_ns": 1765204915968236936,
+		"indexed_at_ns": 1791787108251935000,
+		"word_count": 177
+	},
+	"src/pages/social.tsx": {
+		"size": 2621,
+		"mtime_ns": 1791786197597537275,
+		"indexed_at_ns": 1791787108252216000,
+		"word_count": 236
+	},
+	"src/pages/stats/github.tsx": {
+		"size": 8619,
+		"mtime_ns": 1785746976793643952,
+		"indexed_at_ns": 1791787108252624000,
+		"word_count": 888
+	},
+	"src/pages/stats/gitlab.tsx": {
+		"size": 4641,
+		"mtime_ns": 1765204915969104352,
+		"indexed_at_ns": 1791787108253075000,
+		"word_count": 466
+	},
+	"src/pages/stats/index.tsx": {
+		"size": 899,
+		"mtime_ns": 1765204915969351852,
+		"indexed_at_ns": 1791787108253526000,
+		"word_count": 101
+	},
+	"src/pages/stats/npm.tsx": {
+		"size": 2515,
+		"mtime_ns": 1765204915969708727,
+		"indexed_at_ns": 1791787108253828000,
+		"word_count": 259
+	},
+	"src/pages/testimonials.tsx": {
+		"size": 3617,
+		"mtime_ns": 1765204915969988768,
+		"indexed_at_ns": 1791787108254120000,
+		"word_count": 338
+	},
+	"src/pages/timeline.tsx": {
+		"size": 1738,
+		"mtime_ns": 1765204915970388143,
+		"indexed_at_ns": 1791787108254407000,
+		"word_count": 150
+	},
+	"src/pages/videos.tsx": {
+		"size": 2222,
+		"mtime_ns": 1765204915970695476,
+		"indexed_at_ns": 1791787108254797000,
+		"word_count": 203
+	},
+	"src/scripts/canvas.ts": {
+		"size": 3172,
+		"mtime_ns": 1766394987745930412,
+		"indexed_at_ns": 1791787108255078000,
+		"word_count": 367
+	},
+	"src/scripts/cms.ts": {
+		"size": 11513,
+		"mtime_ns": 1772781817519585171,
+		"indexed_at_ns": 1791787108255488000,
+		"word_count": 1386
+	},
+	"src/scripts/force.ts": {
+		"size": 5148,
+		"mtime_ns": 1765204915971381142,
+		"indexed_at_ns": 1791787108255976000,
+		"word_count": 574
+	},
+	"src/scripts/music.ts": {
+		"size": 4122,
+		"mtime_ns": 1766394987746264326,
+		"indexed_at_ns": 1791787108256409000,
+		"word_count": 487
+	},
+	"src/scripts/shared.ts": {
+		"size": 3244,
+		"mtime_ns": 1785746976793831036,
+		"indexed_at_ns": 1791787108256803000,
+		"word_count": 396
+	},
+	"src/scripts/stats.tsx": {
+		"size": 1024,
+		"mtime_ns": 1765204915972262017,
+		"indexed_at_ns": 1791787108257202000,
+		"word_count": 94
+	},
+	"src/scripts/types.ts": {
+		"size": 5086,
+		"mtime_ns": 1765204915972558975,
+		"indexed_at_ns": 1791787108257481000,
+		"word_count": 611
+	},
+	"src/sprite.svg": {
+		"size": 385833,
+		"mtime_ns": 1776188389005719382,
+		"indexed_at_ns": 1791787108257776000,
+		"word_count": 27130
+	},
+	"src/svg/9am.svg": {
+		"size": 6465,
+		"mtime_ns": 1776188387902013899,
+		"indexed_at_ns": 1791787108265795000,
+		"word_count": 480
+	},
+	"src/svg/adobeillustrator.svg": {
+		"size": 968,
+		"mtime_ns": 1776188387903366900,
+		"indexed_at_ns": 1791787108266263000,
+		"word_count": 49
+	},
+	"src/svg/adobephotoshop.svg": {
+		"size": 1645,
+		"mtime_ns": 1776188387904097568,
+		"indexed_at_ns": 1791787108266805000,
+		"word_count": 78
+	},
+	"src/svg/adobexd.svg": {
+		"size": 1750,
+		"mtime_ns": 1776188387904606319,
+		"indexed_at_ns": 1791787108267223000,
+		"word_count": 183
+	},
+	"src/svg/affinitydesigner.svg": {
+		"size": 346,
+		"mtime_ns": 1776188387905258361,
+		"indexed_at_ns": 1791787108267535000,
+		"word_count": 41
+	},
+	"src/svg/agile.svg": {
+		"size": 5706,
+		"mtime_ns": 1776188387906075862,
+		"indexed_at_ns": 1791787108267819000,
+		"word_count": 417
+	},
+	"src/svg/amazonaws.svg": {
+		"size": 3115,
+		"mtime_ns": 1776188387906482113,
+		"indexed_at_ns": 1791787108268201000,
+		"word_count": 196
+	},
+	"src/svg/andela.svg": {
+		"size": 3877,
+		"mtime_ns": 1776188387906922196,
+		"indexed_at_ns": 1791787108268484000,
+		"word_count": 279
+	},
+	"src/svg/angular.svg": {
+		"size": 248,
+		"mtime_ns": 1776188387907293114,
+		"indexed_at_ns": 1791787108268775000,
+		"word_count": 16
+	},
+	"src/svg/angularjs.svg": {
+		"size": 313,
+		"mtime_ns": 1776188387907646572,
+		"indexed_at_ns": 1791787108269049000,
+		"word_count": 27
+	},
+	"src/svg/apachecordova.svg": {
+		"size": 542,
+		"mtime_ns": 1776188387907949198,
+		"indexed_at_ns": 1791787108269321000,
+		"word_count": 31
+	},
+	"src/svg/azuredevops.svg": {
+		"size": 230,
+		"mtime_ns": 1776188387908204240,
+		"indexed_at_ns": 1791787108269585000,
+		"word_count": 16
+	},
+	"src/svg/azurefunctions.svg": {
+		"size": 592,
+		"mtime_ns": 1776188387908465907,
+		"indexed_at_ns": 1791787108269854000,
+		"word_count": 76
+	},
+	"src/svg/babel.svg": {
+		"size": 3903,
+		"mtime_ns": 1776188387908801324,
+		"indexed_at_ns": 1791787108270122000,
+		"word_count": 124
+	},
+	"src/svg/babylonjs.svg": {
+		"size": 882,
+		"mtime_ns": 1776188387909259866,
+		"indexed_at_ns": 1791787108270402000,
+		"word_count": 63
+	},
+	"src/svg/backbonedotjs.svg": {
+		"size": 434,
+		"mtime_ns": 1776188387909501867,
+		"indexed_at_ns": 1791787108270846000,
+		"word_count": 30
+	},
+	"src/svg/bem.svg": {
+		"size": 685,
+		"mtime_ns": 1776188387909730909,
+		"indexed_at_ns": 1791787108271132000,
+		"word_count": 39
+	},
+	"src/svg/bitcoin.svg": {
+		"size": 1108,
+		"mtime_ns": 1776188387909994909,
+		"indexed_at_ns": 1791787108271399000,
+		"word_count": 73
+	},
+	"src/svg/bootstrap.svg": {
+		"size": 819,
+		"mtime_ns": 1776188387910244326,
+		"indexed_at_ns": 1791787108271672000,
+		"word_count": 52
+	},
+	"src/svg/braintrust-logo.svg": {
+		"size": 2905,
+		"mtime_ns": 1776188387910524076,
+		"indexed_at_ns": 1791787108272044000,
+		"word_count": 285
+	},
+	"src/svg/braintrust-referral.svg": {
+		"size": 10533,
+		"mtime_ns": 1776188387911901661,
+		"indexed_at_ns": 1791787108272476000,
+		"word_count": 1293
+	},
+	"src/svg/braintrust.svg": {
+		"size": 1343,
+		"mtime_ns": 1776188387912212203,
+		"indexed_at_ns": 1791787108272879000,
+		"word_count": 137
+	},
+	"src/svg/bulma.svg": {
+		"size": 132,
+		"mtime_ns": 1776188387912512371,
+		"indexed_at_ns": 1791787108273155000,
+		"word_count": 14
+	},
+	"src/svg/canva.svg": {
+		"size": 2725,
+		"mtime_ns": 1776188387912861746,
+		"indexed_at_ns": 1791787108273446000,
+		"word_count": 146
+	},
+	"src/svg/chartdotjs.svg": {
+		"size": 855,
+		"mtime_ns": 1776188387913193413,
+		"indexed_at_ns": 1791787108273731000,
+		"word_count": 52
+	},
+	"src/svg/circleci.svg": {
+		"size": 584,
+		"mtime_ns": 1776188387913476455,
+		"indexed_at_ns": 1791787108274007000,
+		"word_count": 69
+	},
+	"src/svg/clickup.svg": {
+		"size": 329,
+		"mtime_ns": 1776188387914305831,
+		"indexed_at_ns": 1791787108274363000,
+		"word_count": 34
+	},
+	"src/svg/codepen.svg": {
+		"size": 2552,
+		"mtime_ns": 1776188387915177916,
+		"indexed_at_ns": 1791787108274846000,
+		"word_count": 131
+	},
+	"src/svg/codersrank.svg": {
+		"size": 830,
+		"mtime_ns": 1776188387915640958,
+		"indexed_at_ns": 1791787108275203000,
+		"word_count": 83
+	},
+	"src/svg/confluence.svg": {
+		"size": 695,
+		"mtime_ns": 1776188387916199959,
+		"indexed_at_ns": 1791787108275678000,
+		"word_count": 73
+	},
+	"src/svg/contentful.svg": {
+		"size": 1879,
+		"mtime_ns": 1776188387916487501,
+		"indexed_at_ns": 1791787108276209000,
+		"word_count": 145
+	},
+	"src/svg/css3.svg": {
+		"size": 298,
+		"mtime_ns": 1776188387916799210,
+		"indexed_at_ns": 1791787108276552000,
+		"word_count": 21
+	},
+	"src/svg/cssmodules.svg": {
+		"size": 3860,
+		"mtime_ns": 1776188387917299627,
+		"indexed_at_ns": 1791787108276907000,
+		"word_count": 153
+	},
+	"src/svg/cypress.svg": {
+		"size": 899,
+		"mtime_ns": 1776188387917622711,
+		"indexed_at_ns": 1791787108277192000,
+		"word_count": 77
+	},
+	"src/svg/d3dotjs.svg": {
+		"size": 456,
+		"mtime_ns": 1776188387917896253,
+		"indexed_at_ns": 1791787108277472000,
+		"word_count": 66
+	},
+	"src/svg/dart.svg": {
+		"size": 476,
+		"mtime_ns": 1776188387918106544,
+		"indexed_at_ns": 1791787108277745000,
+		"word_count": 28
+	},
+	"src/svg/deno.svg": {
+		"size": 2573,
+		"mtime_ns": 1776188387918385044,
+		"indexed_at_ns": 1791787108278019000,
+		"word_count": 178
+	},
+	"src/svg/disconnected.svg": {
+		"size": 1158,
+		"mtime_ns": 1776188387918722586,
+		"indexed_at_ns": 1791787108278291000,
+		"word_count": 114
+	},
+	"src/svg/dmarcian.svg": {
+		"size": 1131,
+		"mtime_ns": 1776188387919100295,
+		"indexed_at_ns": 1791787108278560000,
+		"word_count": 76
+	},
+	"src/svg/education.svg": {
+		"size": 879,
+		"mtime_ns": 1776188387919377045,
+		"indexed_at_ns": 1791787108278933000,
+		"word_count": 62
+	},
+	"src/svg/email.svg": {
+		"size": 1048,
+		"mtime_ns": 1776188387919655004,
+		"indexed_at_ns": 1791787108279169000,
+		"word_count": 98
+	},
+	"src/svg/eon-home.svg": {
+		"size": 4734,
+		"mtime_ns": 1776188387920823672,
+		"indexed_at_ns": 1791787108279410000,
+		"word_count": 322
+	},
+	"src/svg/eon.svg": {
+		"size": 2186,
+		"mtime_ns": 1776188387921167798,
+		"indexed_at_ns": 1791787108279744000,
+		"word_count": 181
+	},
+	"src/svg/eslint.svg": {
+		"size": 710,
+		"mtime_ns": 1776188387921670465,
+		"indexed_at_ns": 1791787108280005000,
+		"word_count": 71
+	},
+	"src/svg/expo.svg": {
+		"size": 423,
+		"mtime_ns": 1776188387921926340,
+		"indexed_at_ns": 1791787108280320000,
+		"word_count": 33
+	},
+	"src/svg/express.svg": {
+		"size": 755,
+		"mtime_ns": 1776188387922235216,
+		"indexed_at_ns": 1791787108280561000,
+		"word_count": 80
+	},
+	"src/svg/external-link.svg": {
+		"size": 237,
+		"mtime_ns": 1776188387922551716,
+		"indexed_at_ns": 1791787108280801000,
+		"word_count": 24
+	},
+	"src/svg/figma.svg": {
+		"size": 1062,
+		"mtime_ns": 1776188387922846425,
+		"indexed_at_ns": 1791787108281039000,
+		"word_count": 79
+	},
+	"src/svg/firebase.svg": {
+		"size": 290,
+		"mtime_ns": 1776188387923144217,
+		"indexed_at_ns": 1791787108281280000,
+		"word_count": 32
+	},
+	"src/svg/flexwork.svg": {
+		"size": 4933,
+		"mtime_ns": 1776188387923852384,
+		"indexed_at_ns": 1791787108281522000,
+		"word_count": 276
+	},
+	"src/svg/flutter.svg": {
+		"size": 188,
+		"mtime_ns": 1776188387924093676,
+		"indexed_at_ns": 1791787108281854000,
+		"word_count": 17
+	},
+	"src/svg/foundation.svg": {
+		"size": 13171,
+		"mtime_ns": 1776188387924833636,
+		"indexed_at_ns": 1791787108282099000,
+		"word_count": 1090
+	},
+	"src/svg/freelancer.svg": {
+		"size": 4025,
+		"mtime_ns": 1776188387925327511,
+		"indexed_at_ns": 1791787108282508000,
+		"word_count": 248
+	},
+	"src/svg/gatsby.svg": {
+		"size": 478,
+		"mtime_ns": 1776188387925664012,
+		"indexed_at_ns": 1791787108282761000,
+		"word_count": 51
+	},
+	"src/svg/git.svg": {
+		"size": 572,
+		"mtime_ns": 1776188387926357971,
+		"indexed_at_ns": 1791787108283008000,
+		"word_count": 80
+	},
+	"src/svg/github.svg": {
+		"size": 1975,
+		"mtime_ns": 1776188387926624846,
+		"indexed_at_ns": 1791787108283356000,
+		"word_count": 164
+	},
+	"src/svg/githubactions.svg": {
+		"size": 1687,
+		"mtime_ns": 1776188387927008805,
+		"indexed_at_ns": 1791787108283671000,
+		"word_count": 232
+	},
+	"src/svg/githubpages.svg": {
+		"size": 3574,
+		"mtime_ns": 1776188387927418097,
+		"indexed_at_ns": 1791787108284036000,
+		"word_count": 331
+	},
+	"src/svg/gitlab.svg": {
+		"size": 468,
+		"mtime_ns": 1776188387927646264,
+		"indexed_at_ns": 1791787108284329000,
+		"word_count": 55
+	},
+	"src/svg/gnubash.svg": {
+		"size": 1521,
+		"mtime_ns": 1776188387927909848,
+		"indexed_at_ns": 1791787108284595000,
+		"word_count": 97
+	},
+	"src/svg/google-plus.svg": {
+		"size": 399,
+		"mtime_ns": 1776188387928323932,
+		"indexed_at_ns": 1791787108284839000,
+		"word_count": 40
+	},
+	"src/svg/googleanalytics.svg": {
+		"size": 450,
+		"mtime_ns": 1776188387928587057,
+		"indexed_at_ns": 1791787108285077000,
+		"word_count": 65
+	},
+	"src/svg/googlechrome.svg": {
+		"size": 496,
+		"mtime_ns": 1776188387928830808,
+		"indexed_at_ns": 1791787108285314000,
+		"word_count": 68
+	},
+	"src/svg/googlefonts.svg": {
+		"size": 284,
+		"mtime_ns": 1776188387929052599,
+		"indexed_at_ns": 1791787108285553000,
+		"word_count": 49
+	},
+	"src/svg/googlemaps.svg": {
+		"size": 987,
+		"mtime_ns": 1776188387929266141,
+		"indexed_at_ns": 1791787108285907000,
+		"word_count": 64
+	},
+	"src/svg/googletagmanager.svg": {
+		"size": 705,
+		"mtime_ns": 1776188387929470642,
+		"indexed_at_ns": 1791787108286261000,
+		"word_count": 91
+	},
+	"src/svg/grunt.svg": {
+		"size": 6323,
+		"mtime_ns": 1776188387929987767,
+		"indexed_at_ns": 1791787108286620000,
+		"word_count": 356
+	},
+	"src/svg/gulp.svg": {
+		"size": 6102,
+		"mtime_ns": 1776188387930338226,
+		"indexed_at_ns": 1791787108286956000,
+		"word_count": 379
+	},
+	"src/svg/handlebarsdotjs.svg": {
+		"size": 1014,
+		"mtime_ns": 1776188387930593643,
+		"indexed_at_ns": 1791787108287292000,
+		"word_count": 82
+	},
+	"src/svg/highcharts.svg": {
+		"size": 637,
+		"mtime_ns": 1776188387930993977,
+		"indexed_at_ns": 1791787108287640000,
+		"word_count": 56
+	},
+	"src/svg/homebrew.svg": {
+		"size": 3695,
+		"mtime_ns": 1776188387931278477,
+		"indexed_at_ns": 1791787108288073000,
+		"word_count": 411
+	},
+	"src/svg/houdini.svg": {
+		"size": 682,
+		"mtime_ns": 1776188387931498769,
+		"indexed_at_ns": 1791787108288474000,
+		"word_count": 66
+	},
+	"src/svg/html5.svg": {
+		"size": 295,
+		"mtime_ns": 1776188387931728561,
+		"indexed_at_ns": 1791787108288773000,
+		"word_count": 18
+	},
+	"src/svg/i18next.svg": {
+		"size": 1061,
+		"mtime_ns": 1776188387931961478,
+		"indexed_at_ns": 1791787108289045000,
+		"word_count": 72
+	},
+	"src/svg/ionic.svg": {
+		"size": 672,
+		"mtime_ns": 1776188387932308812,
+		"indexed_at_ns": 1791787108289310000,
+		"word_count": 84
+	},
+	"src/svg/issuehunt.svg": {
+		"size": 11544,
+		"mtime_ns": 1776188387932988480,
+		"indexed_at_ns": 1791787108289553000,
+		"word_count": 1133
+	},
+	"src/svg/javascript.svg": {
+		"size": 938,
+		"mtime_ns": 1776188387933293188,
+		"indexed_at_ns": 1791787108289936000,
+		"word_count": 50
+	},
+	"src/svg/jest.svg": {
+		"size": 2669,
+		"mtime_ns": 1776188387933552772,
+		"indexed_at_ns": 1791787108290182000,
+		"word_count": 220
+	},
+	"src/svg/jira.svg": {
+		"size": 448,
+		"mtime_ns": 1776188387933797606,
+		"indexed_at_ns": 1791787108290432000,
+		"word_count": 59
+	},
+	"src/svg/jquery.svg": {
+		"size": 3346,
+		"mtime_ns": 1776188387934047314,
+		"indexed_at_ns": 1791787108290698000,
+		"word_count": 154
+	},
+	"src/svg/json.svg": {
+		"size": 2417,
+		"mtime_ns": 1776188387934314023,
+		"indexed_at_ns": 1791787108290965000,
+		"word_count": 256
+	},
+	"src/svg/kinetik.svg": {
+		"size": 5347,
+		"mtime_ns": 1776188387935619358,
+		"indexed_at_ns": 1791787108291213000,
+		"word_count": 338
+	},
+	"src/svg/ko-fi.svg": {
+		"size": 672,
+		"mtime_ns": 1776188387936010775,
+		"indexed_at_ns": 1791787108291460000,
+		"word_count": 62
+	},
+	"src/svg/less.svg": {
+		"size": 3002,
+		"mtime_ns": 1776188387936282609,
+		"indexed_at_ns": 1791787108291836000,
+		"word_count": 140
+	},
+	"src/svg/liberapay.svg": {
+		"size": 1061,
+		"mtime_ns": 1776188387936520359,
+		"indexed_at_ns": 1791787108292083000,
+		"word_count": 76
+	},
+	"src/svg/linkedin.svg": {
+		"size": 897,
+		"mtime_ns": 1776188387936731401,
+		"indexed_at_ns": 1791787108292342000,
+		"word_count": 74
+	},
+	"src/svg/linux.svg": {
+		"size": 5467,
+		"mtime_ns": 1776188387937067277,
+		"indexed_at_ns": 1791787108292613000,
+		"word_count": 247
+	},
+	"src/svg/lodash.svg": {
+		"size": 538,
+		"mtime_ns": 1776188387937307777,
+		"indexed_at_ns": 1791787108292894000,
+		"word_count": 37
+	},
+	"src/svg/logo-fill.svg": {
+		"size": 788,
+		"mtime_ns": 1776188387937595694,
+		"indexed_at_ns": 1791787108293166000,
+		"word_count": 63
+	},
+	"src/svg/logo.svg": {
+		"size": 745,
+		"mtime_ns": 1776188387937879528,
+		"indexed_at_ns": 1791787108293459000,
+		"word_count": 60
+	},
+	"src/svg/macos.svg": {
+		"size": 1594,
+		"mtime_ns": 1776188387938388153,
+		"indexed_at_ns": 1791787108293852000,
+		"word_count": 95
+	},
+	"src/svg/mailchimp.svg": {
+		"size": 4142,
+		"mtime_ns": 1776188387938736529,
+		"indexed_at_ns": 1791787108294213000,
+		"word_count": 214
+	},
+	"src/svg/mamp.svg": {
+		"size": 752,
+		"mtime_ns": 1776188387939132571,
+		"indexed_at_ns": 1791787108294579000,
+		"word_count": 47
+	},
+	"src/svg/markdown.svg": {
+		"size": 374,
+		"mtime_ns": 1776188387939412571,
+		"indexed_at_ns": 1791787108294852000,
+		"word_count": 36
+	},
+	"src/svg/mdx.svg": {
+		"size": 525,
+		"mtime_ns": 1776188387939829239,
+		"indexed_at_ns": 1791787108295118000,
+		"word_count": 37
+	},
+	"src/svg/microsoftexcel.svg": {
+		"size": 522,
+		"mtime_ns": 1776188387940119447,
+		"indexed_at_ns": 1791787108295389000,
+		"word_count": 24
+	},
+	"src/svg/microsoftpowerpoint.svg": {
+		"size": 1277,
+		"mtime_ns": 1776188387940346781,
+		"indexed_at_ns": 1791787108295779000,
+		"word_count": 68
+	},
+	"src/svg/microsoftword.svg": {
+		"size": 470,
+		"mtime_ns": 1776188387940564198,
+		"indexed_at_ns": 1791787108296047000,
+		"word_count": 22
+	},
+	"src/svg/miro.svg": {
+		"size": 248,
+		"mtime_ns": 1776188387940805573,
+		"indexed_at_ns": 1791787108296314000,
+		"word_count": 24
+	},
+	"src/svg/mjml.svg": {
+		"size": 544,
+		"mtime_ns": 1776188387941076449,
+		"indexed_at_ns": 1791787108296578000,
+		"word_count": 54
+	},
+	"src/svg/mocha.svg": {
+		"size": 888,
+		"mtime_ns": 1776188387941293074,
+		"indexed_at_ns": 1791787108296843000,
+		"word_count": 62
+	},
+	"src/svg/mongodb.svg": {
+		"size": 497,
+		"mtime_ns": 1776188387941503741,
+		"indexed_at_ns": 1791787108297115000,
+		"word_count": 37
+	},
+	"src/svg/netlify.svg": {
+		"size": 3672,
+		"mtime_ns": 1776188387941762950,
+		"indexed_at_ns": 1791787108297384000,
+		"word_count": 261
+	},
+	"src/svg/nextdotjs.svg": {
+		"size": 1264,
+		"mtime_ns": 1776188387941973533,
+		"indexed_at_ns": 1791787108297655000,
+		"word_count": 107
+	},
+	"src/svg/nodedotjs.svg": {
+		"size": 1325,
+		"mtime_ns": 1776188387942175033,
+		"indexed_at_ns": 1791787108298013000,
+		"word_count": 115
+	},
+	"src/svg/npm.svg": {
+		"size": 159,
+		"mtime_ns": 1776188387942525117,
+		"indexed_at_ns": 1791787108298361000,
+		"word_count": 10
+	},
+	"src/svg/nuxtdotjs.svg": {
+		"size": 409,
+		"mtime_ns": 1776188387942710076,
+		"indexed_at_ns": 1791787108298632000,
+		"word_count": 35
+	},
+	"src/svg/open-source.svg": {
+		"size": 1193,
+		"mtime_ns": 1776188387942922868,
+		"indexed_at_ns": 1791787108298902000,
+		"word_count": 61
+	},
+	"src/svg/parcel.svg": {
+		"size": 20796,
+		"mtime_ns": 1776188387944302245,
+		"indexed_at_ns": 1791787108299173000,
+		"word_count": 1144
+	},
+	"src/svg/patreon.svg": {
+		"size": 437,
+		"mtime_ns": 1776188387944680620,
+		"indexed_at_ns": 1791787108299560000,
+		"word_count": 33
+	},
+	"src/svg/paypal.svg": {
+		"size": 1728,
+		"mtime_ns": 1776188387944932870,
+		"indexed_at_ns": 1791787108299985000,
+		"word_count": 152
+	},
+	"src/svg/personal.svg": {
+		"size": 3265,
+		"mtime_ns": 1776188387945176079,
+		"indexed_at_ns": 1791787108300253000,
+		"word_count": 201
+	},
+	"src/svg/photopea.svg": {
+		"size": 610,
+		"mtime_ns": 1776188387945368704,
+		"indexed_at_ns": 1791787108300529000,
+		"word_count": 69
+	},
+	"src/svg/php.svg": {
+		"size": 1096,
+		"mtime_ns": 1776188387945569830,
+		"indexed_at_ns": 1791787108300798000,
+		"word_count": 60
+	},
+	"src/svg/playwright.svg": {
+		"size": 4999,
+		"mtime_ns": 1776188387946483706,
+		"indexed_at_ns": 1791787108301064000,
+		"word_count": 482
+	},
+	"src/svg/postcss.svg": {
+		"size": 22095,
+		"mtime_ns": 1776188387947418457,
+		"indexed_at_ns": 1791787108301394000,
+		"word_count": 651
+	},
+	"src/svg/postgresql.svg": {
+		"size": 5194,
+		"mtime_ns": 1776188387947884666,
+		"indexed_at_ns": 1791787108301791000,
+		"word_count": 214
+	},
+	"src/svg/posthtml.svg": {
+		"size": 3815,
+		"mtime_ns": 1776188387948280458,
+		"indexed_at_ns": 1791787108302153000,
+		"word_count": 246
+	},
+	"src/svg/postman.svg": {
+		"size": 1331,
+		"mtime_ns": 1776188387948499458,
+		"indexed_at_ns": 1791787108302421000,
+		"word_count": 127
+	},
+	"src/svg/pph.svg": {
+		"size": 9018,
+		"mtime_ns": 1776188387948972917,
+		"indexed_at_ns": 1791787108302684000,
+		"word_count": 624
+	},
+	"src/svg/preact.svg": {
+		"size": 3917,
+		"mtime_ns": 1776188387949336251,
+		"indexed_at_ns": 1791787108303081000,
+		"word_count": 498
+	},
+	"src/svg/prettier.svg": {
+		"size": 1777,
+		"mtime_ns": 1776188387949614751,
+		"indexed_at_ns": 1791787108303356000,
+		"word_count": 239
+	},
+	"src/svg/prisma.svg": {
+		"size": 557,
+		"mtime_ns": 1776188387950004710,
+		"indexed_at_ns": 1791787108303625000,
+		"word_count": 17
+	},
+	"src/svg/puppeteer.svg": {
+		"size": 7992,
+		"mtime_ns": 1776188387950456836,
+		"indexed_at_ns": 1791787108303891000,
+		"word_count": 572
+	},
+	"src/svg/pwa.svg": {
+		"size": 577,
+		"mtime_ns": 1776188387950701586,
+		"indexed_at_ns": 1791787108304200000,
+		"word_count": 37
+	},
+	"src/svg/react.svg": {
+		"size": 2816,
+		"mtime_ns": 1776188387951060378,
+		"indexed_at_ns": 1791787108304463000,
+		"word_count": 229
+	},
+	"src/svg/reacthookform.svg": {
+		"size": 1102,
+		"mtime_ns": 1776188387951290004,
+		"indexed_at_ns": 1791787108304731000,
+		"word_count": 105
+	},
+	"src/svg/reactrouter.svg": {
+		"size": 1062,
+		"mtime_ns": 1776188387951509587,
+		"indexed_at_ns": 1791787108304999000,
+		"word_count": 69
+	},
+	"src/svg/redux.svg": {
+		"size": 1404,
+		"mtime_ns": 1776188387951728171,
+		"indexed_at_ns": 1791787108305275000,
+		"word_count": 108
+	},
+	"src/svg/reduxsaga.svg": {
+		"size": 1956,
+		"mtime_ns": 1776188387951956171,
+		"indexed_at_ns": 1791787108305544000,
+		"word_count": 147
+	},
+	"src/svg/renovatebot.svg": {
+		"size": 1456,
+		"mtime_ns": 1776188387952161588,
+		"indexed_at_ns": 1791787108305810000,
+		"word_count": 104
+	},
+	"src/svg/revolut.svg": {
+		"size": 1685,
+		"mtime_ns": 1776188387952393922,
+		"indexed_at_ns": 1791787108306073000,
+		"word_count": 110
+	},
+	"src/svg/rollupdotjs.svg": {
+		"size": 600,
+		"mtime_ns": 1776188387952589964,
+		"indexed_at_ns": 1791787108306337000,
+		"word_count": 65
+	},
+	"src/svg/sass.svg": {
+		"size": 1190,
+		"mtime_ns": 1776188387952797381,
+		"indexed_at_ns": 1791787108306600000,
+		"word_count": 76
+	},
+	"src/svg/sentry.svg": {
+		"size": 654,
+		"mtime_ns": 1776188387952986964,
+		"indexed_at_ns": 1791787108306865000,
+		"word_count": 82
+	},
+	"src/svg/shiba-inu.svg": {
+		"size": 7353,
+		"mtime_ns": 1776188387954172674,
+		"indexed_at_ns": 1791787108307142000,
+		"word_count": 656
+	},
+	"src/svg/sketch.svg": {
+		"size": 371,
+		"mtime_ns": 1776188387954396883,
+		"indexed_at_ns": 1791787108307590000,
+		"word_count": 33
+	},
+	"src/svg/sod-64.svg": {
+		"size": 7733,
+		"mtime_ns": 1776188387954868883,
+		"indexed_at_ns": 1791787108307857000,
+		"word_count": 365
+	},
+	"src/svg/solidity.svg": {
+		"size": 408,
+		"mtime_ns": 1776188387955086259,
+		"indexed_at_ns": 1791787108308276000,
+		"word_count": 25
+	},
+	"src/svg/stackoverflow.svg": {
+		"size": 445,
+		"mtime_ns": 1776188387955340759,
+		"indexed_at_ns": 1791787108308559000,
+		"word_count": 29
+	},
+	"src/svg/storybook.svg": {
+		"size": 640,
+		"mtime_ns": 1776188387955681426,
+		"indexed_at_ns": 1791787108308849000,
+		"word_count": 64
+	},
+	"src/svg/styledcomponents.svg": {
+		"size": 2651,
+		"mtime_ns": 1776188387955939176,
+		"indexed_at_ns": 1791787108309131000,
+		"word_count": 151
+	},
+	"src/svg/stylelint.svg": {
+		"size": 1216,
+		"mtime_ns": 1776188387956179302,
+		"indexed_at_ns": 1791787108309409000,
+		"word_count": 105
+	},
+	"src/svg/stylus.svg": {
+		"size": 2883,
+		"mtime_ns": 1776188387956555885,
+		"indexed_at_ns": 1791787108309768000,
+		"word_count": 129
+	},
+	"src/svg/sublimetext.svg": {
+		"size": 482,
+		"mtime_ns": 1776188387956760719,
+		"indexed_at_ns": 1791787108310118000,
+		"word_count": 22
+	},
+	"src/svg/subversion.svg": {
+		"size": 1488,
+		"mtime_ns": 1776188387956964094,
+		"indexed_at_ns": 1791787108310380000,
+		"word_count": 82
+	},
+	"src/svg/svg.svg": {
+		"size": 1442,
+		"mtime_ns": 1776188387957184553,
+		"indexed_at_ns": 1791787108310645000,
+		"word_count": 173
+	},
+	"src/svg/svgo.svg": {
+		"size": 1519,
+		"mtime_ns": 1776188387957485303,
+		"indexed_at_ns": 1791787108310911000,
+		"word_count": 204
+	},
+	"src/svg/swagger.svg": {
+		"size": 1839,
+		"mtime_ns": 1776188387957741637,
+		"indexed_at_ns": 1791787108311178000,
+		"word_count": 126
+	},
+	"src/svg/swiper.svg": {
+		"size": 1365,
+		"mtime_ns": 1776188387957975804,
+		"indexed_at_ns": 1791787108311446000,
+		"word_count": 121
+	},
+	"src/svg/tailwindcss.svg": {
+		"size": 591,
+		"mtime_ns": 1776188387958217221,
+		"indexed_at_ns": 1791787108311720000,
+		"word_count": 13
+	},
+	"src/svg/testinglibrary.svg": {
+		"size": 5284,
+		"mtime_ns": 1776188387958676472,
+		"indexed_at_ns": 1791787108311985000,
+		"word_count": 347
+	},
+	"src/svg/three11.svg": {
+		"size": 12788,
+		"mtime_ns": 1776188387959311556,
+		"indexed_at_ns": 1791787108312391000,
+		"word_count": 601
+	},
+	"src/svg/toptal-logo.svg": {
+		"size": 632,
+		"mtime_ns": 1776188387959516514,
+		"indexed_at_ns": 1791787108312822000,
+		"word_count": 44
+	},
+	"src/svg/toptal.svg": {
+		"size": 261,
+		"mtime_ns": 1776188387959696640,
+		"indexed_at_ns": 1791787108313085000,
+		"word_count": 19
+	},
+	"src/svg/travisci.svg": {
+		"size": 3740,
+		"mtime_ns": 1776188387960189432,
+		"indexed_at_ns": 1791787108313345000,
+		"word_count": 284
+	},
+	"src/svg/tsnode.svg": {
+		"size": 747,
+		"mtime_ns": 1776188387960392099,
+		"indexed_at_ns": 1791787108313612000,
+		"word_count": 49
+	},
+	"src/svg/twitter.svg": {
+		"size": 1082,
+		"mtime_ns": 1776188387960698516,
+		"indexed_at_ns": 1791787108313969000,
+		"word_count": 98
+	},
+	"src/svg/typescript.svg": {
+		"size": 1258,
+		"mtime_ns": 1776188387960906933,
+		"indexed_at_ns": 1791787108314318000,
+		"word_count": 122
+	},
+	"src/svg/upwork.svg": {
+		"size": 1000,
+		"mtime_ns": 1776188387961164350,
+		"indexed_at_ns": 1791787108314724000,
+		"word_count": 124
+	},
+	"src/svg/vercel.svg": {
+		"size": 109,
+		"mtime_ns": 1776188387961356309,
+		"indexed_at_ns": 1791787108314992000,
+		"word_count": 10
+	},
+	"src/svg/visualstudiocode.svg": {
+		"size": 439,
+		"mtime_ns": 1776188387961574850,
+		"indexed_at_ns": 1791787108315255000,
+		"word_count": 57
+	},
+	"src/svg/vite.svg": {
+		"size": 879,
+		"mtime_ns": 1776188387961777976,
+		"indexed_at_ns": 1791787108315517000,
+		"word_count": 86
+	},
+	"src/svg/vuedotjs.svg": {
+		"size": 170,
+		"mtime_ns": 1776188387961956559,
+		"indexed_at_ns": 1791787108315780000,
+		"word_count": 16
+	},
+	"src/svg/vuepress.svg": {
+		"size": 8597,
+		"mtime_ns": 1776188387962579227,
+		"indexed_at_ns": 1791787108316037000,
+		"word_count": 406
+	},
+	"src/svg/webcomponents.svg": {
+		"size": 1343,
+		"mtime_ns": 1776188387962921977,
+		"indexed_at_ns": 1791787108316411000,
+		"word_count": 89
+	},
+	"src/svg/webpack.svg": {
+		"size": 504,
+		"mtime_ns": 1776188387963145477,
+		"indexed_at_ns": 1791787108316670000,
+		"word_count": 32
+	},
+	"src/svg/wellfound.svg": {
+		"size": 4862,
+		"mtime_ns": 1776188387963605811,
+		"indexed_at_ns": 1791787108316943000,
+		"word_count": 438
+	},
+	"src/svg/wordpress.svg": {
+		"size": 1019,
+		"mtime_ns": 1776188387963852978,
+		"indexed_at_ns": 1791787108317219000,
+		"word_count": 85
+	},
+	"src/svg/work.svg": {
+		"size": 2024,
+		"mtime_ns": 1776188387964130687,
+		"indexed_at_ns": 1791787108317478000,
+		"word_count": 118
+	},
+	"src/svg/xampp.svg": {
+		"size": 1791,
+		"mtime_ns": 1776188387964476354,
+		"indexed_at_ns": 1791787108317746000,
+		"word_count": 108
+	},
+	"src/svg/yarn.svg": {
+		"size": 1903,
+		"mtime_ns": 1776188387964878605,
+		"indexed_at_ns": 1791787108318007000,
+		"word_count": 106
+	},
+	"src/svg/youtube.svg": {
+		"size": 478,
+		"mtime_ns": 1776188387965551231,
+		"indexed_at_ns": 1791787108318269000,
+		"word_count": 56
+	},
+	"src/sw.ts": {
+		"size": 541,
+		"mtime_ns": 1765204915973148516,
+		"indexed_at_ns": 1791787108318520000,
+		"word_count": 57
+	},
+	"svgo-config.mjs": {
+		"size": 529,
+		"mtime_ns": 1705474430821332903,
+		"indexed_at_ns": 1791787108318791000,
+		"word_count": 36
+	},
+	"test-config/helpers.tsx": {
+		"size": 2581,
+		"mtime_ns": 1765204915973513933,
+		"indexed_at_ns": 1791787108319146000,
+		"word_count": 269
+	},
+	"test-config/index.ts": {
+		"size": 3564,
+		"mtime_ns": 1785746976794045828,
+		"indexed_at_ns": 1791787108319446000,
+		"word_count": 378
+	},
+	"test-config/jest.config.ts": {
+		"size": 2062,
+		"mtime_ns": 1765204915974216932,
+		"indexed_at_ns": 1791787108319806000,
+		"word_count": 141
+	},
+	"test-config/mocks/articles.ts": {
+		"size": 471,
+		"mtime_ns": 1765204915974468849,
+		"indexed_at_ns": 1791787108320134000,
+		"word_count": 60
+	},
+	"test-config/mocks/badges.ts": {
+		"size": 661,
+		"mtime_ns": 1765204915974688057,
+		"indexed_at_ns": 1791787108320492000,
+		"word_count": 79
+	},
+	"test-config/mocks/certificates.ts": {
+		"size": 253,
+		"mtime_ns": 1765204915974908973,
+		"indexed_at_ns": 1791787108320824000,
+		"word_count": 27
+	},
+	"test-config/mocks/experience.ts": {
+		"size": 291,
+		"mtime_ns": 1765204915975133765,
+		"indexed_at_ns": 1791787108321157000,
+		"word_count": 39
+	},
+	"test-config/mocks/funding.ts": {
+		"size": 306,
+		"mtime_ns": 1765204915975373306,
+		"indexed_at_ns": 1791787108321775000,
+		"word_count": 36
+	},
+	"test-config/mocks/index.ts": {
+		"size": 436,
+		"mtime_ns": 1729572932325680945,
+		"indexed_at_ns": 1791787108322072000,
+		"word_count": 60
+	},
+	"test-config/mocks/lastfm-insights.ts": {
+		"size": 1808,
+		"mtime_ns": 1765204915975612306,
+		"indexed_at_ns": 1791787108322445000,
+		"word_count": 139
+	},
+	"test-config/mocks/occupation.ts": {
+		"size": 368,
+		"mtime_ns": 1765204915975866598,
+		"indexed_at_ns": 1791787108322847000,
+		"word_count": 44
+	},
+	"test-config/mocks/partners.ts": {
+		"size": 190,
+		"mtime_ns": 1710350076081102272,
+		"indexed_at_ns": 1791787108323119000,
+		"word_count": 24
+	},
+	"test-config/mocks/recent-tracks.ts": {
+		"size": 520,
+		"mtime_ns": 1765204915976162764,
+		"indexed_at_ns": 1791787108323477000,
+		"word_count": 58
+	},
+	"test-config/mocks/resume.ts": {
+		"size": 1127,
+		"mtime_ns": 1710350076081201896,
+		"indexed_at_ns": 1791787108323749000,
+		"word_count": 151
+	},
+	"test-config/mocks/slides.ts": {
+		"size": 321,
+		"mtime_ns": 1710350076081329353,
+		"indexed_at_ns": 1791787108324074000,
+		"word_count": 42
+	},
+	"test-config/mocks/strengths.ts": {
+		"size": 185,
+		"mtime_ns": 1765204915976559430,
+		"indexed_at_ns": 1791787108324588000,
+		"word_count": 28
+	},
+	"test-config/mocks/testimonials.ts": {
+		"size": 659,
+		"mtime_ns": 1765204915976980555,
+		"indexed_at_ns": 1791787108324864000,
+		"word_count": 66
+	},
+	"test-config/mocks/timeline.ts": {
+		"size": 450,
+		"mtime_ns": 1765204915977296430,
+		"indexed_at_ns": 1791787108325131000,
+		"word_count": 56
+	},
+	"test-config/mocks/videos.ts": {
+		"size": 321,
+		"mtime_ns": 1710350076081908929,
+		"indexed_at_ns": 1791787108325393000,
+		"word_count": 42
+	},
+	"test-config/style-mock.ts": {
+		"size": 71,
+		"mtime_ns": 1710350076082046136,
+		"indexed_at_ns": 1791787108325641000,
+		"word_count": 12
+	},
+	"test-config/svg.ts": {
+		"size": 83,
+		"mtime_ns": 1705474430822387272,
+		"indexed_at_ns": 1791787108325889000,
+		"word_count": 13
+	},
+	"test-config/utils.ts": {
+		"size": 769,
+		"mtime_ns": 1730624128799036099,
+		"indexed_at_ns": 1791787108326255000,
+		"word_count": 102
+	},
+	"tests/lib/markdown.ts": {
+		"size": 1503,
+		"mtime_ns": 1776187135924992478,
+		"indexed_at_ns": 1791787108326828000,
+		"word_count": 133
+	},
+	"tests/src/components/animation/index.tsx": {
+		"size": 121,
+		"mtime_ns": 1765204915977560805,
+		"indexed_at_ns": 1791787108327257000,
+		"word_count": 13
+	},
+	"tests/src/components/button/index.tsx": {
+		"size": 487,
+		"mtime_ns": 1765204915977829763,
+		"indexed_at_ns": 1791787108327585000,
+		"word_count": 57
+	},
+	"tests/src/components/contact/index.tsx": {
+		"size": 1331,
+		"mtime_ns": 1765204915978090054,
+		"indexed_at_ns": 1791787108327905000,
+		"word_count": 130
+	},
+	"tests/src/components/external-link/index.tsx": {
+		"size": 225,
+		"mtime_ns": 1765204915978371554,
+		"indexed_at_ns": 1791787108328221000,
+		"word_count": 20
+	},
+	"tests/src/components/footer/index.tsx": {
+		"size": 210,
+		"mtime_ns": 1765204915978644512,
+		"indexed_at_ns": 1791787108328562000,
+		"word_count": 25
+	},
+	"tests/src/components/funding/index.tsx": {
+		"size": 1212,
+		"mtime_ns": 1765204915978902387,
+		"indexed_at_ns": 1791787108328894000,
+		"word_count": 111
+	},
+	"tests/src/components/head/index.tsx": {
+		"size": 111,
+		"mtime_ns": 1765204915979155595,
+		"indexed_at_ns": 1791787108329221000,
+		"word_count": 13
+	},
+	"tests/src/components/header/index.tsx": {
+		"size": 638,
+		"mtime_ns": 1765204915979510595,
+		"indexed_at_ns": 1791787108329569000,
+		"word_count": 46
+	},
+	"tests/src/components/layout/index.tsx": {
+		"size": 284,
+		"mtime_ns": 1765204915979937011,
+		"indexed_at_ns": 1791787108329902000,
+		"word_count": 33
+	},
+	"tests/src/components/lines/index.tsx": {
+		"size": 113,
+		"mtime_ns": 1765204915980194886,
+		"indexed_at_ns": 1791787108330220000,
+		"word_count": 13
+	},
+	"tests/src/components/loader/index.tsx": {
+		"size": 115,
+		"mtime_ns": 1765204915980515844,
+		"indexed_at_ns": 1791787108330544000,
+		"word_count": 13
+	},
+	"tests/src/components/mdx/index.tsx": {
+		"size": 291,
+		"mtime_ns": 1765204915980755844,
+		"indexed_at_ns": 1791787108331011000,
+		"word_count": 35
+	},
+	"tests/src/components/nav/index.tsx": {
+		"size": 414,
+		"mtime_ns": 1765204915981100594,
+		"indexed_at_ns": 1791787108331342000,
+		"word_count": 47
+	},
+	"tests/src/components/portfolio/index.tsx": {
+		"size": 416,
+		"mtime_ns": 1765204915981503885,
+		"indexed_at_ns": 1791787108331663000,
+		"word_count": 45
+	},
+	"tests/src/components/section/index.tsx": {
+		"size": 1946,
+		"mtime_ns": 1765204915982237759,
+		"indexed_at_ns": 1791787108331982000,
+		"word_count": 180
+	},
+	"tests/src/components/social/index.tsx": {
+		"size": 735,
+		"mtime_ns": 1765204915982641551,
+		"indexed_at_ns": 1791787108332305000,
+		"word_count": 76
+	},
+	"tests/src/components/stats/index.tsx": {
+		"size": 337,
+		"mtime_ns": 1765204915983229634,
+		"indexed_at_ns": 1791787108332627000,
+		"word_count": 40
+	},
+	"tests/src/pages/404.tsx": {
+		"size": 248,
+		"mtime_ns": 1765204915983567008,
+		"indexed_at_ns": 1791787108332917000,
+		"word_count": 27
+	},
+	"tests/src/pages/_app.tsx": {
+		"size": 527,
+		"mtime_ns": 1765204915983786175,
+		"indexed_at_ns": 1791787108333206000,
+		"word_count": 78
+	},
+	"tests/src/pages/_document.tsx": {
+		"size": 263,
+		"mtime_ns": 1765204915984009008,
+		"indexed_at_ns": 1791787108333501000,
+		"word_count": 38
+	},
+	"tests/src/pages/_offline.tsx": {
+		"size": 259,
+		"mtime_ns": 1765204915984218050,
+		"indexed_at_ns": 1791787108333792000,
+		"word_count": 27
+	},
+	"tests/src/pages/about.tsx": {
+		"size": 862,
+		"mtime_ns": 1765204915984496383,
+		"indexed_at_ns": 1791787108334082000,
+		"word_count": 97
+	},
+	"tests/src/pages/articles.tsx": {
+		"size": 279,
+		"mtime_ns": 1765204915984787633,
+		"indexed_at_ns": 1791787108334374000,
+		"word_count": 29
+	},
+	"tests/src/pages/blog/[slug].tsx": {
+		"size": 963,
+		"mtime_ns": 1776187135925259978,
+		"indexed_at_ns": 1791787108334689000,
+		"word_count": 88
+	},
+	"tests/src/pages/blog/index.tsx": {
+		"size": 264,
+		"mtime_ns": 1765204915985089466,
+		"indexed_at_ns": 1791787108335026000,
+		"word_count": 29
+	},
+	"tests/src/pages/certificates.tsx": {
+		"size": 329,
+		"mtime_ns": 1765204915985440216,
+		"indexed_at_ns": 1791787108335320000,
+		"word_count": 33
+	},
+	"tests/src/pages/index.tsx": {
+		"size": 783,
+		"mtime_ns": 1765204915985794924,
+		"indexed_at_ns": 1791787108335700000,
+		"word_count": 86
+	},
+	"tests/src/pages/interactive-resume.tsx": {
+		"size": 692,
+		"mtime_ns": 1765204915986176340,
+		"indexed_at_ns": 1791787108336097000,
+		"word_count": 67
+	},
+	"tests/src/pages/music.tsx": {
+		"size": 1155,
+		"mtime_ns": 1765204915986826214,
+		"indexed_at_ns": 1791787108336663000,
+		"word_count": 109
+	},
+	"tests/src/pages/occupation.tsx": {
+		"size": 288,
+		"mtime_ns": 1765204915987208798,
+		"indexed_at_ns": 1791787108336963000,
+		"word_count": 29
+	},
+	"tests/src/pages/portfolio/automotive-applications.tsx": {
+		"size": 325,
+		"mtime_ns": 1764086467693120975,
+		"indexed_at_ns": 1791787108337290000,
+		"word_count": 29
+	},
+	"tests/src/pages/portfolio/email-templates.tsx": {
+		"size": 349,
+		"mtime_ns": 1764086467693123266,
+		"indexed_at_ns": 1791787108337719000,
+		"word_count": 30
+	},
+	"tests/src/pages/portfolio/index.tsx": {
+		"size": 254,
+		"mtime_ns": 1765204915987531964,
+		"indexed_at_ns": 1791787108338168000,
+		"word_count": 27
+	},
+	"tests/src/pages/portfolio/mobile-applications.tsx": {
+		"size": 304,
+		"mtime_ns": 1764086467693132684,
+		"indexed_at_ns": 1791787108338498000,
+		"word_count": 27
+	},
+	"tests/src/pages/portfolio/open-source/[slug].tsx": {
+		"size": 1423,
+		"mtime_ns": 1764086467693143143,
+		"indexed_at_ns": 1791787108338842000,
+		"word_count": 139
+	},
+	"tests/src/pages/portfolio/open-source/index.tsx": {
+		"size": 325,
+		"mtime_ns": 1764086467693143226,
+		"indexed_at_ns": 1791787108339181000,
+		"word_count": 29
+	},
+	"tests/src/pages/portfolio/personal-projects.tsx": {
+		"size": 325,
+		"mtime_ns": 1764086467693146018,
+		"indexed_at_ns": 1791787108339515000,
+		"word_count": 29
+	},
+	"tests/src/pages/portfolio/web-applications.tsx": {
+		"size": 1835,
+		"mtime_ns": 1765204915987774756,
+		"indexed_at_ns": 1791787108339826000,
+		"word_count": 199
+	},
+	"tests/src/pages/resume.tsx": {
+		"size": 626,
+		"mtime_ns": 1765204915988091755,
+		"indexed_at_ns": 1791787108340117000,
+		"word_count": 65
+	},
+	"tests/src/pages/skills.tsx": {
+		"size": 279,
+		"mtime_ns": 1765204915988420047,
+		"indexed_at_ns": 1791787108340417000,
+		"word_count": 31
+	},
+	"tests/src/pages/slides.tsx": {
+		"size": 279,
+		"mtime_ns": 1765204915988744671,
+		"indexed_at_ns": 1791787108340703000,
+		"word_count": 30
+	},
+	"tests/src/pages/social.tsx": {
+		"size": 826,
+		"mtime_ns": 1765204915988988963,
+		"indexed_at_ns": 1791787108340990000,
+		"word_count": 89
+	},
+	"tests/src/pages/stats/github.tsx": {
+		"size": 3472,
+		"mtime_ns": 1765204915989357671,
+		"indexed_at_ns": 1791787108341311000,
+		"word_count": 362
+	},
+	"tests/src/pages/stats/gitlab.tsx": {
+		"size": 2004,
+		"mtime_ns": 1765204915989738671,
+		"indexed_at_ns": 1791787108341641000,
+		"word_count": 208
+	},
+	"tests/src/pages/stats/index.tsx": {
+		"size": 345,
+		"mtime_ns": 1765204915990132295,
+		"indexed_at_ns": 1791787108341963000,
+		"word_count": 42
+	},
+	"tests/src/pages/stats/npm.tsx": {
+		"size": 1332,
+		"mtime_ns": 1765204915990457712,
+		"indexed_at_ns": 1791787108342283000,
+		"word_count": 148
+	},
+	"tests/src/pages/testimonials.tsx": {
+		"size": 419,
+		"mtime_ns": 1765204915990715420,
+		"indexed_at_ns": 1791787108342578000,
+		"word_count": 40
+	},
+	"tests/src/pages/timeline.tsx": {
+		"size": 286,
+		"mtime_ns": 1765204915990944420,
+		"indexed_at_ns": 1791787108342862000,
+		"word_count": 29
+	},
+	"tests/src/pages/videos.tsx": {
+		"size": 279,
+		"mtime_ns": 1765204915991170586,
+		"indexed_at_ns": 1791787108343161000,
+		"word_count": 30
+	},
+	"tsconfig-houdini.json": {
+		"size": 141,
+		"mtime_ns": 1705474430830961674,
+		"indexed_at_ns": 1791787157824531000,
+		"word_count": 12,
+		"hashes": { "tsconfig-houdini.json": "7825be7ca434d6077e258707034d358ce06c637c6cc1956798fb229260b97b9b" }
+	},
+	"tsconfig-tsnode.json": {
+		"size": 143,
+		"mtime_ns": 1705474430831002674,
+		"indexed_at_ns": 1791787157824845000,
+		"word_count": 14,
+		"hashes": { "tsconfig-tsnode.json": "a2f566b944d680a351364702f3c0f2c12e355cb7e1d02b0e6fea618de350cb78" }
+	},
+	"tsconfig.json": {
+		"size": 1869,
+		"mtime_ns": 1785746976794470413,
+		"indexed_at_ns": 1791787157825094000,
+		"word_count": 137,
+		"hashes": { "tsconfig.json": "b8f41c12d7892f5edcd4d15ec560f003b42f9df6ddea4a2c7a12ac5c8a9a35fd" }
+	}
+}

@@ -1,0 +1,61 @@
+{
+	"nodes": [
+		{
+			"id": "src_data_posts_data_driven_fat_loss_post",
+			"label": "Data-Driven Fat Loss: Debugging a Legacy System",
+			"file_type": "document",
+			"source_file": "src/data/posts/data-driven-fat-loss.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null,
+			"rationale": "Treats the body as a legacy system monitored with logs (MyFitnessPal) and telemetry dashboards"
+		},
+		{
+			"id": "src_data_posts_data_driven_fat_loss_myfitnesspal_logging",
+			"label": "MyFitnessPal input logging",
+			"file_type": "concept",
+			"source_file": "src/data/posts/data-driven-fat-loss.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "src_data_posts_data_driven_fat_loss_data_noise_whoosh",
+			"label": "Data noise: ECV and the Whoosh effect",
+			"file_type": "concept",
+			"source_file": "src/data/posts/data-driven-fat-loss.md",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		}
+	],
+	"edges": [
+		{
+			"source": "src_data_posts_data_driven_fat_loss_post",
+			"target": "src_data_posts_data_driven_fat_loss_myfitnesspal_logging",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/data-driven-fat-loss.md",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "src_data_posts_data_driven_fat_loss_post",
+			"target": "src_data_posts_data_driven_fat_loss_data_noise_whoosh",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "src/data/posts/data-driven-fat-loss.md",
+			"source_location": null,
+			"weight": 1.0
+		}
+	],
+	"hyperedges": []
+}

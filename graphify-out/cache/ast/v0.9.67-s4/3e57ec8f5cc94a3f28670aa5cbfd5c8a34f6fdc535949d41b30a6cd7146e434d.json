@@ -1,0 +1,323 @@
+{
+	"nodes": [
+		{
+			"id": "$graphify-root$_renovate_json",
+			"label": "renovate.json",
+			"file_type": "code",
+			"source_file": "renovate.json",
+			"source_location": "L1"
+		},
+		{
+			"id": "$graphify-root$_renovate_assignees",
+			"label": "assignees",
+			"file_type": "code",
+			"source_file": "renovate.json",
+			"source_location": "L2"
+		},
+		{
+			"id": "$graphify-root$_renovate_extends",
+			"label": "extends",
+			"file_type": "code",
+			"source_file": "renovate.json",
+			"source_location": "L3"
+		},
+		{
+			"id": "ref_config_base",
+			"label": "config:base",
+			"file_type": "concept",
+			"source_file": "renovate.json",
+			"source_location": "L3"
+		},
+		{
+			"id": "ref_automergepatch",
+			"label": ":automergePatch",
+			"file_type": "concept",
+			"source_file": "renovate.json",
+			"source_location": "L3"
+		},
+		{
+			"id": "ref_automergeminor",
+			"label": ":automergeMinor",
+			"file_type": "concept",
+			"source_file": "renovate.json",
+			"source_location": "L3"
+		},
+		{
+			"id": "ref_automergebranch",
+			"label": ":automergeBranch",
+			"file_type": "concept",
+			"source_file": "renovate.json",
+			"source_location": "L3"
+		},
+		{
+			"id": "ref_disabledependencydashboard",
+			"label": ":disableDependencyDashboard",
+			"file_type": "concept",
+			"source_file": "renovate.json",
+			"source_location": "L3"
+		},
+		{
+			"id": "ref_group_allnonmajor",
+			"label": "group:allNonMajor",
+			"file_type": "concept",
+			"source_file": "renovate.json",
+			"source_location": "L3"
+		},
+		{
+			"id": "$graphify-root$_renovate_labels",
+			"label": "labels",
+			"file_type": "code",
+			"source_file": "renovate.json",
+			"source_location": "L11"
+		},
+		{
+			"id": "$graphify-root$_renovate_major",
+			"label": "major",
+			"file_type": "code",
+			"source_file": "renovate.json",
+			"source_location": "L12"
+		},
+		{
+			"id": "$graphify-root$_renovate_major_automerge",
+			"label": "automerge",
+			"file_type": "code",
+			"source_file": "renovate.json",
+			"source_location": "L13"
+		},
+		{
+			"id": "$graphify-root$_renovate_packagerules",
+			"label": "packageRules",
+			"file_type": "code",
+			"source_file": "renovate.json",
+			"source_location": "L15"
+		},
+		{
+			"id": "$graphify-root$_renovate_rangestrategy",
+			"label": "rangeStrategy",
+			"file_type": "code",
+			"source_file": "renovate.json",
+			"source_location": "L22"
+		},
+		{
+			"id": "$graphify-root$_renovate_rebasewhen",
+			"label": "rebaseWhen",
+			"file_type": "code",
+			"source_file": "renovate.json",
+			"source_location": "L23"
+		},
+		{
+			"id": "$graphify-root$_renovate_schedule",
+			"label": "schedule",
+			"file_type": "code",
+			"source_file": "renovate.json",
+			"source_location": "L24"
+		},
+		{
+			"id": "$graphify-root$_renovate_timezone",
+			"label": "timezone",
+			"file_type": "code",
+			"source_file": "renovate.json",
+			"source_location": "L25"
+		},
+		{
+			"id": "$graphify-root$_renovate_vulnerabilityalerts",
+			"label": "vulnerabilityAlerts",
+			"file_type": "code",
+			"source_file": "renovate.json",
+			"source_location": "L26"
+		},
+		{
+			"id": "$graphify-root$_renovate_vulnerabilityalerts_labels",
+			"label": "labels",
+			"file_type": "code",
+			"source_file": "renovate.json",
+			"source_location": "L27"
+		},
+		{
+			"id": "$graphify-root$_renovate_vulnerabilityalerts_assignees",
+			"label": "assignees",
+			"file_type": "code",
+			"source_file": "renovate.json",
+			"source_location": "L28"
+		}
+	],
+	"edges": [
+		{
+			"source": "$graphify-root$_renovate_json",
+			"target": "$graphify-root$_renovate_assignees",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L2",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_renovate_json",
+			"target": "$graphify-root$_renovate_extends",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L3",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_renovate_extends",
+			"target": "ref_config_base",
+			"relation": "extends",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L3",
+			"weight": 1.0,
+			"context": "import"
+		},
+		{
+			"source": "$graphify-root$_renovate_extends",
+			"target": "ref_automergepatch",
+			"relation": "extends",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L3",
+			"weight": 1.0,
+			"context": "import"
+		},
+		{
+			"source": "$graphify-root$_renovate_extends",
+			"target": "ref_automergeminor",
+			"relation": "extends",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L3",
+			"weight": 1.0,
+			"context": "import"
+		},
+		{
+			"source": "$graphify-root$_renovate_extends",
+			"target": "ref_automergebranch",
+			"relation": "extends",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L3",
+			"weight": 1.0,
+			"context": "import"
+		},
+		{
+			"source": "$graphify-root$_renovate_extends",
+			"target": "ref_disabledependencydashboard",
+			"relation": "extends",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L3",
+			"weight": 1.0,
+			"context": "import"
+		},
+		{
+			"source": "$graphify-root$_renovate_extends",
+			"target": "ref_group_allnonmajor",
+			"relation": "extends",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L3",
+			"weight": 1.0,
+			"context": "import"
+		},
+		{
+			"source": "$graphify-root$_renovate_json",
+			"target": "$graphify-root$_renovate_labels",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L11",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_renovate_json",
+			"target": "$graphify-root$_renovate_major",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L12",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_renovate_major",
+			"target": "$graphify-root$_renovate_major_automerge",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L13",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_renovate_json",
+			"target": "$graphify-root$_renovate_packagerules",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L15",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_renovate_json",
+			"target": "$graphify-root$_renovate_rangestrategy",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L22",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_renovate_json",
+			"target": "$graphify-root$_renovate_rebasewhen",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L23",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_renovate_json",
+			"target": "$graphify-root$_renovate_schedule",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L24",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_renovate_json",
+			"target": "$graphify-root$_renovate_timezone",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L25",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_renovate_json",
+			"target": "$graphify-root$_renovate_vulnerabilityalerts",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L26",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_renovate_vulnerabilityalerts",
+			"target": "$graphify-root$_renovate_vulnerabilityalerts_labels",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L27",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_renovate_vulnerabilityalerts",
+			"target": "$graphify-root$_renovate_vulnerabilityalerts_assignees",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "renovate.json",
+			"source_location": "L28",
+			"weight": 1.0
+		}
+	]
+}

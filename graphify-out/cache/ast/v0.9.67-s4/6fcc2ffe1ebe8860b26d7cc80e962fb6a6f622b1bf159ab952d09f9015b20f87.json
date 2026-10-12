@@ -1,0 +1,205 @@
+{
+	"nodes": [
+		{
+			"id": "$graphify-root$_public_manifest_json",
+			"label": "manifest.json",
+			"file_type": "code",
+			"source_file": "public/manifest.json",
+			"source_location": "L1"
+		},
+		{
+			"id": "$graphify-root$_public_manifest_name",
+			"label": "name",
+			"file_type": "code",
+			"source_file": "public/manifest.json",
+			"source_location": "L2"
+		},
+		{
+			"id": "$graphify-root$_public_manifest_short_name",
+			"label": "short_name",
+			"file_type": "code",
+			"source_file": "public/manifest.json",
+			"source_location": "L3"
+		},
+		{
+			"id": "$graphify-root$_public_manifest_start_url",
+			"label": "start_url",
+			"file_type": "code",
+			"source_file": "public/manifest.json",
+			"source_location": "L4"
+		},
+		{
+			"id": "$graphify-root$_public_manifest_display",
+			"label": "display",
+			"file_type": "code",
+			"source_file": "public/manifest.json",
+			"source_location": "L5"
+		},
+		{
+			"id": "$graphify-root$_public_manifest_background_color",
+			"label": "background_color",
+			"file_type": "code",
+			"source_file": "public/manifest.json",
+			"source_location": "L6"
+		},
+		{
+			"id": "$graphify-root$_public_manifest_lang",
+			"label": "lang",
+			"file_type": "code",
+			"source_file": "public/manifest.json",
+			"source_location": "L7"
+		},
+		{
+			"id": "$graphify-root$_public_manifest_scope",
+			"label": "scope",
+			"file_type": "code",
+			"source_file": "public/manifest.json",
+			"source_location": "L8"
+		},
+		{
+			"id": "$graphify-root$_public_manifest_dir",
+			"label": "dir",
+			"file_type": "code",
+			"source_file": "public/manifest.json",
+			"source_location": "L9"
+		},
+		{
+			"id": "$graphify-root$_public_manifest_description",
+			"label": "description",
+			"file_type": "code",
+			"source_file": "public/manifest.json",
+			"source_location": "L10"
+		},
+		{
+			"id": "$graphify-root$_public_manifest_theme_color",
+			"label": "theme_color",
+			"file_type": "code",
+			"source_file": "public/manifest.json",
+			"source_location": "L11"
+		},
+		{
+			"id": "$graphify-root$_public_manifest_orientation",
+			"label": "orientation",
+			"file_type": "code",
+			"source_file": "public/manifest.json",
+			"source_location": "L12"
+		},
+		{
+			"id": "$graphify-root$_public_manifest_icons",
+			"label": "icons",
+			"file_type": "code",
+			"source_file": "public/manifest.json",
+			"source_location": "L13"
+		}
+	],
+	"edges": [
+		{
+			"source": "$graphify-root$_public_manifest_json",
+			"target": "$graphify-root$_public_manifest_name",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "public/manifest.json",
+			"source_location": "L2",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_public_manifest_json",
+			"target": "$graphify-root$_public_manifest_short_name",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "public/manifest.json",
+			"source_location": "L3",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_public_manifest_json",
+			"target": "$graphify-root$_public_manifest_start_url",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "public/manifest.json",
+			"source_location": "L4",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_public_manifest_json",
+			"target": "$graphify-root$_public_manifest_display",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "public/manifest.json",
+			"source_location": "L5",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_public_manifest_json",
+			"target": "$graphify-root$_public_manifest_background_color",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "public/manifest.json",
+			"source_location": "L6",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_public_manifest_json",
+			"target": "$graphify-root$_public_manifest_lang",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "public/manifest.json",
+			"source_location": "L7",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_public_manifest_json",
+			"target": "$graphify-root$_public_manifest_scope",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "public/manifest.json",
+			"source_location": "L8",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_public_manifest_json",
+			"target": "$graphify-root$_public_manifest_dir",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "public/manifest.json",
+			"source_location": "L9",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_public_manifest_json",
+			"target": "$graphify-root$_public_manifest_description",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "public/manifest.json",
+			"source_location": "L10",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_public_manifest_json",
+			"target": "$graphify-root$_public_manifest_theme_color",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "public/manifest.json",
+			"source_location": "L11",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_public_manifest_json",
+			"target": "$graphify-root$_public_manifest_orientation",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "public/manifest.json",
+			"source_location": "L12",
+			"weight": 1.0
+		},
+		{
+			"source": "$graphify-root$_public_manifest_json",
+			"target": "$graphify-root$_public_manifest_icons",
+			"relation": "contains",
+			"confidence": "EXTRACTED",
+			"source_file": "public/manifest.json",
+			"source_location": "L13",
+			"weight": 1.0
+		}
+	]
+}

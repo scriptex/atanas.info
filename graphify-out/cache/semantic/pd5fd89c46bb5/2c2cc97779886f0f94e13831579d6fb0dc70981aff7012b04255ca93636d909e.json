@@ -1,0 +1,74 @@
+{
+	"nodes": [
+		{
+			"id": "public_email_templates_template9_e_on_foton_technik",
+			"label": "E.ON FOTON (Foton Technik)",
+			"file_type": "concept",
+			"source_file": "public/email-templates/template9.html",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		},
+		{
+			"id": "public_email_templates_template9_email",
+			"label": "E.ON FOTON App Activation Email (PL)",
+			"file_type": "document",
+			"source_file": "public/email-templates/template9.html",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		}
+	],
+	"edges": [
+		{
+			"source": "public_email_templates_template9_email",
+			"target": "public_email_templates_template9_e_on_foton_technik",
+			"relation": "references",
+			"confidence": "EXTRACTED",
+			"confidence_score": 1.0,
+			"source_file": "public/email-templates/template9.html",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "public_email_templates_template9_email",
+			"target": "public_email_templates_template1_mjml_responsive_email_layout",
+			"relation": "implements",
+			"confidence": "INFERRED",
+			"confidence_score": 0.85,
+			"source_file": "public/email-templates/template9.html",
+			"source_location": null,
+			"weight": 1.0
+		},
+		{
+			"source": "public_email_templates_template6_email",
+			"target": "public_email_templates_template9_email",
+			"relation": "semantically_similar_to",
+			"confidence": "INFERRED",
+			"confidence_score": 0.85,
+			"source_file": "public/email-templates/template9.html",
+			"source_location": null,
+			"weight": 1.0
+		}
+	],
+	"hyperedges": [
+		{
+			"id": "foton_app_activation_emails",
+			"label": "FOTON App Activation Emails (PL)",
+			"nodes": [
+				"public_email_templates_template6_email",
+				"public_email_templates_template9_email",
+				"public_email_templates_template10_email",
+				"public_email_templates_template9_e_on_foton_technik"
+			],
+			"relation": "participate_in",
+			"confidence": "INFERRED",
+			"confidence_score": 0.85,
+			"source_file": "public/email-templates/template9.html"
+		}
+	]
+}

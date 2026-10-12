@@ -1,0 +1,28 @@
+{
+	"nodes": [
+		{
+			"id": "_github_funding_funding_config",
+			"label": "GitHub Funding Config (scriptex)",
+			"file_type": "document",
+			"source_file": ".github/FUNDING.yml",
+			"source_location": null,
+			"source_url": null,
+			"captured_at": null,
+			"author": null,
+			"contributor": null
+		}
+	],
+	"edges": [
+		{
+			"source": "_github_funding_funding_config",
+			"target": "readme_atanas_info",
+			"relation": "conceptually_related_to",
+			"confidence": "INFERRED",
+			"confidence_score": 0.65,
+			"source_file": ".github/FUNDING.yml",
+			"source_location": null,
+			"weight": 1.0
+		}
+	],
+	"hyperedges": []
+}
