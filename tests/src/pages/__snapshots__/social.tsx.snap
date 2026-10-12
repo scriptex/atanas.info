@@ -710,7 +710,8 @@ exports[`Social component Should render the Social component 1`] = `
               <h3>
                 Codersrank Profile
               </h3>
-              <codersrank-widget
+              <codersrank-summary
+                style="--bg-color: var(--color-action); --header-bg-color: var(--color-action);"
                 username="scriptex"
               />
             </div>

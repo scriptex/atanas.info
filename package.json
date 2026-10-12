@@ -125,7 +125,6 @@
 		"touchsweep": "2.2.0",
 		"tough-cookie": "6.0.2",
 		"typed-usa-states": "2.1.0",
-		"undici": ">=6.24.0",
 		"universal-github-client": "1.0.3",
 		"use-interval": "1.4.0",
 		"uuid": "14.0.3"
@@ -230,9 +229,10 @@
 	},
 	"resolutions": {
 		"brace-expansion": ">=2.1.4",
-		"postcss": "8.5.29",
+		"postcss": ">=8.5.29",
 		"serialize-javascript": ">=7.1.2",
-		"svgo": "4.1.0",
-		"undici": ">=6.24.0"
+		"svgo": ">=4.1.0",
+		"undici": ">=6.24.0",
+		"uuid": ">=14.0.0"
 	}
 }

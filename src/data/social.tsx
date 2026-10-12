@@ -10,7 +10,16 @@ export type SocialItem = {
 
 export const socialItems: SocialItem[] = [
 	{
-		element: <codersrank-widget branding={false} username="scriptex" />,
+		element: (
+			<codersrank-summary
+				branding={false}
+				style={{
+					'--bg-color': 'var(--color-action)',
+					'--header-bg-color': 'var(--color-action)'
+				}}
+				username="scriptex"
+			/>
+		),
 		index: 0,
 		title: 'Codersrank Profile'
 	},
