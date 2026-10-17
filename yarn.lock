@@ -10396,12 +10396,12 @@ postcss-modules@^4.0.0:
     postcss-modules-values "^4.0.0"
     string-hash "^1.1.1"
 
-postcss-nested@8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-8.0.1.tgz#4e204d832d1af59080f4d209df141954622736ec"
-  integrity sha512-PvSIwDVh1NTw939iu4FBK+oeZfSm0cbErFAjXCTPiStammzobBNE2SiQNezy8Xp+Oud2uLXaLpTauv3UdxWjbQ==
+postcss-nested@9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-9.0.0.tgz#277dfd765196fc41f93fa713eb13b45c0ffbf904"
+  integrity sha512-cYlRG8MiABEAPvxMj1ms9Ame0Xi31AlSe0pY9I61dhUOKUZ6PQU/4i0WdVetUYKlowi3552nnbjhdYYbf2o7UA==
   dependencies:
-    postcss-selector-parser "^7.1.4"
+    postcss-selector-parser "^7.1.6"
 
 postcss-nesting@^14.0.3:
   version "14.0.3"
@@ -10740,7 +10740,7 @@ postcss-selector-parser@^6.0.4, postcss-selector-parser@^6.0.5, postcss-selector
     cssesc "^3.0.0"
     util-deprecate "^1.0.2"
 
-postcss-selector-parser@^7.0.0, postcss-selector-parser@^7.1.1, postcss-selector-parser@^7.1.4, postcss-selector-parser@^7.1.5:
+postcss-selector-parser@^7.0.0, postcss-selector-parser@^7.1.1, postcss-selector-parser@^7.1.5, postcss-selector-parser@^7.1.6:
   version "7.1.6"
   resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-7.1.6.tgz#45e970f2d93d4547d6754167ed1132f43012c4bf"
   integrity sha512-7qASPzhKF2l2KLboRZux8CCTRMdGiV08vWmyKzPz22qZ7ZjQBOeY7rNzNoCLSUiftJ7HUq0GERHmxw/t0dCdMw==
