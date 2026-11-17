@@ -194,6 +194,7 @@
 
 @for $i from 1 to 20 {
 	.c-nav li:nth-child($(i)) {
+		/* stylelint-disable-next-line value-no-invalid */
 		transition-delay: calc(0.075s * $i);
 	}
 }
