@@ -39,7 +39,7 @@ const getAllPaths = async (): Promise<string[]> => {
 const getRequestedPaths = (req: NextApiRequest): string[] => {
 	const { path } = req.query;
 
-	return (Array.isArray(path) ? path : path ? [path] : []).filter(item => item.startsWith('/'));
+	return Array.isArray(path) ? path : path ? [path] : [];
 };
 
 const revalidatePaths = async (
@@ -56,7 +56,7 @@ const revalidatePaths = async (
 					await res.revalidate(path);
 					revalidated.push(path);
 				} catch (err) {
-					console.error(`Failed to revalidate ${path}`, err);
+					console.error('Failed to revalidate %s', path, err);
 					failed.push(path);
 				}
 			})
@@ -93,13 +93,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 			try {
 				await refreshCMSData(type);
 			} catch (err) {
-				console.error(`Failed to refresh ${type}`, err);
+				console.error('Failed to refresh %s', type, err);
 				refreshFailed.push(type);
 			}
 		}
 
+		const allPaths = await getAllPaths();
 		const requested = getRequestedPaths(req);
-		const paths = requested.length > 0 ? requested : await getAllPaths();
+
+		// Only known pages can be regenerated; anything else is rejected outright.
+		if (requested.some(path => !allPaths.includes(path))) {
+			return res.status(400).json({ error: 'Unknown path' });
+		}
+
+		const paths = requested.length > 0 ? requested : allPaths;
 		const { failed, revalidated } = await revalidatePaths(res, paths);
 
 		return res.status(failed.length > 0 || refreshFailed.length > 0 ? 207 : 200).json({
