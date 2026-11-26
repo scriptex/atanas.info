@@ -44,7 +44,7 @@ export const getStaticProps: GetStaticProps<OccupationPageProps> = async () => (
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	},
-	revalidate: 86400
+	revalidate: 604800
 });
 
 export default Occupation;

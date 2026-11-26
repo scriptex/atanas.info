@@ -56,7 +56,7 @@ export const getStaticProps: GetStaticProps<AboutPageProps> = async () => ({
 		owner: await getOwnerDetailsFromCMS(),
 		partners: await getPartnersFromCMS()
 	},
-	revalidate: 86400
+	revalidate: 604800
 });
 
 export default About;

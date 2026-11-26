@@ -121,7 +121,7 @@ export const getStaticProps: GetStaticProps<ResumePageData> = async () => ({
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	},
-	revalidate: 86400
+	revalidate: 604800
 });
 
 export default Resume;

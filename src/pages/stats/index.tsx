@@ -25,7 +25,7 @@ export const getStaticProps: GetStaticProps<StatsPageData> = async () => ({
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	},
-	revalidate: 86400
+	revalidate: 604800
 });
 
 export default Stats;

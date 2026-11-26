@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import { spriteHref } from '@scripts/shared';
+
 type Props = {
 	className: string;
 	fill?: string;
@@ -10,7 +12,7 @@ type Props = {
 
 export const Icon: FC<Readonly<Props>> = ({ className, fill, height, name, width }: Props) => (
 	<svg className={className} height={height} width={width}>
-		<use fill={fill} xlinkHref={`#${name}`} />
+		<use fill={fill} href={spriteHref(name)} />
 	</svg>
 );
 

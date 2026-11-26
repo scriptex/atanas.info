@@ -14,6 +14,10 @@ export type PaginationData<T> = {
 	menu: Project[] | undefined;
 };
 
+// The sprite is served as a static file (public/sprite.svg) instead of being inlined
+// in every page, which keeps ISR-cached pages small.
+export const spriteHref = (id: string): string => `/sprite.svg#${id}`;
+
 export const formatDate = (date: number | string, formatter = 'dd MMM yyyy'): string => {
 	if (!date) {
 		return '';
