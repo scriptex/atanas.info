@@ -98,7 +98,7 @@ export const SocialMusic: FC<Readonly<{ data: LastFMInsights }>> = ({ data }) =>
 			<header className="c-section__header">
 				<h2>
 					<ExternalLink href="https://www.last.fm/user/scriptex">Last.FM</ExternalLink> statistics
-					<small>Updated at {formatDate(updated, 'dd MMM yyyy HH:mm:ss')}</small>
+					<small>Updated at {formatDate(updated, 'dd MMM yyyy HH:mm:ss')} UTC</small>
 				</h2>
 			</header>
 

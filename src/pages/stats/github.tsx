@@ -281,7 +281,7 @@ export const GithubStats: FC<Readonly<InferGetStaticPropsType<typeof getStaticPr
 
 						<div className="c-section__entry">
 							<small className="c-section__stamp">
-								Last updated: {formatDate(updated ?? new Date().getTime(), 'dd MMM yyyy HH:mm:ss')}
+								Last updated: {formatDate(updated ?? new Date().getTime(), 'dd MMM yyyy HH:mm:ss')} UTC
 							</small>
 
 							<div className="o-shell" ref={calendarRef}>

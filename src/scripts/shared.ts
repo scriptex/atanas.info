@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { useSearchParams } from 'next/navigation';
 
+import { UTCDate } from '@date-fns/utc';
 import { format } from 'date-fns/format';
 
 import type { Project } from '@data/projects';
@@ -23,7 +24,7 @@ export const formatDate = (date: number | string, formatter = 'dd MMM yyyy'): st
 		return '';
 	}
 
-	return format(new Date(date), formatter);
+	return format(new UTCDate(date), formatter);
 };
 
 export const setThemeClassName = (theme: Theme): void => {
