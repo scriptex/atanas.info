@@ -4065,7 +4065,7 @@ acorn-walk@^8.1.1:
   dependencies:
     acorn "^8.11.0"
 
-acorn@^8.11.0, acorn@^8.15.0, acorn@^8.16.0, acorn@^8.4.1:
+acorn@^8.11.0, acorn@^8.15.0, acorn@^8.16.0, acorn@^8.19.0, acorn@^8.4.1:
   version "8.19.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.19.0.tgz#6b26fd97ce1cc9dc50bdf7ad305e9f1384d4f28a"
   integrity sha512-oJlA3XiRm7Cyk6qFD2Jn8ak9B7jSy0qy00ADO3+8dpT0LSjFihQYv4C02LFCSYJV3Q37xYwwRy5m+IpIiUzqWw==
@@ -7173,16 +7173,17 @@ html-head-component@1.2.1:
   resolved "https://registry.yarnpkg.com/html-head-component/-/html-head-component-1.2.1.tgz#dfd7e07f1de751c40ffb63aefce86bf0fab427d7"
   integrity sha512-d4bPkHM36cROtl7QyCnM5QADF6uZ5rz6KqcokAlvhupmQEq8PscuZMXhUZg5Orj1qxDwIuDOOR4oqrTUN6dpEA==
 
-html-minifier@5.4.0:
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/html-minifier/-/html-minifier-5.4.0.tgz#f38b529e6155b9e86d243384734ddc2c759b099b"
-  integrity sha512-2/FyKe9K8MVxF3sKt54SNRx8RZI9tdeYDGnYZnAqU2D7qpzw8g271+BNL4QZrRWX7eAnCQwmwpL+nKnl6tBKrQ==
+html-minifier@5.4.1:
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/html-minifier/-/html-minifier-5.4.1.tgz#51c87e0ec66623c09987c32f344a428f69dc1fc8"
+  integrity sha512-lRM8xRRFpNWoE0tnv/LchwQWOcz68j/6cl+BctcAA7BehbfokIx/BEng2KhVhu67I89h7dYC30xneddc7juGzw==
   dependencies:
+    acorn "^8.19.0"
     commander "^15.1.0"
     entities "^9.0.0"
     lightningcss "^1.33.0"
     svgo "^4.1.0"
-    terser "^5.51.3"
+    terser "^5.51.4"
 
 html5-form-validator@2.0.1:
   version "2.0.1"
@@ -12386,17 +12387,7 @@ tar-stream@^2.1.4:
     inherits "^2.0.3"
     readable-stream "^3.1.1"
 
-terser@^5.0.0, terser@^5.51.0, terser@^5.7.0:
-  version "5.51.2"
-  resolved "https://registry.yarnpkg.com/terser/-/terser-5.51.2.tgz#555912425a7f2ff7737425c3718fa76c7069f6ef"
-  integrity sha512-bWnjSNscmuI+GJze6ZupnHP8G/cTcsJF+bXCeQknk2SHQsgbNJnLrqiH9jZ2W4STPVXH2mDKKRX3iwPhc9Cn/Q==
-  dependencies:
-    "@jridgewell/source-map" "^0.3.3"
-    acorn "^8.15.0"
-    commander "^2.20.0"
-    source-map-support "~0.5.20"
-
-terser@^5.51.3:
+terser@^5.0.0, terser@^5.51.0, terser@^5.51.4, terser@^5.7.0:
   version "5.51.4"
   resolved "https://registry.yarnpkg.com/terser/-/terser-5.51.4.tgz#b3874fdb414054ec2cb54522fef78c6773a0fc85"
   integrity sha512-VPi1CkDvCWLGUVIToctNBG+NdHbSXwOPjHJnQ3pdB0XknaldnI76wSkAFOGxV2ZdkzOP5d6gpQ5c58XvDghRvw==
