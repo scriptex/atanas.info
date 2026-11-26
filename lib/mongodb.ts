@@ -1,9 +1,10 @@
+import { attachDatabasePool } from '@vercel/functions';
 import { config as dotenvConfig } from 'dotenv';
 import type { Document, Filter, MongoClientOptions } from 'mongodb';
 import { MongoClient, ServerApiVersion } from 'mongodb';
 
 declare global {
-	var _mongoClientPromise: Promise<MongoClient>;
+	var _mongoClientPromise: Promise<MongoClient> | undefined;
 }
 
 export type Query = Filter<Document>;
@@ -17,25 +18,38 @@ if (!process.env.MONGODB_URI) {
 }
 
 const uri = encodeURI(process.env.MONGODB_URI);
-const options: MongoClientOptions = { serverApi: ServerApiVersion.v1 };
+const options: MongoClientOptions = {
+	// Close idle connections before MongoDB Atlas drops them while the function instance is paused.
+	maxIdleTimeMS: 5000,
+	serverApi: ServerApiVersion.v1,
+	// Fail within a few seconds instead of the 30 s default, which can outlast the function itself.
+	serverSelectionTimeoutMS: 5000
+};
 
-let client;
-let clientPromise: Promise<MongoClient>;
-
-if (process.env.NODE_ENV === 'development') {
-	// In development mode, use a global variable so that the value
-	// is preserved across module reloads caused by HMR (Hot Module Replacement).
+// One shared connection per function instance (and across HMR reloads in development).
+// A failed attempt is forgotten so the next call reconnects, instead of every later call on this
+// instance reusing the same rejected promise.
+const connect = (): Promise<MongoClient> => {
 	if (!global._mongoClientPromise) {
-		client = new MongoClient(uri, options);
-		global._mongoClientPromise = client.connect();
+		const client = new MongoClient(uri, options);
+
+		// Lets Vercel release idle pool connections before suspending the function instance.
+		attachDatabasePool(client);
+
+		global._mongoClientPromise = client.connect().catch((error: unknown) => {
+			global._mongoClientPromise = undefined;
+
+			throw error;
+		});
 	}
 
-	clientPromise = global._mongoClientPromise;
-} else {
-	// In production mode, it's best to not use a global variable.
-	client = new MongoClient(uri, options);
-	clientPromise = client.connect();
-}
+	return global._mongoClientPromise;
+};
+
+const clientPromise = connect();
+
+// Connecting at import time is only a head start; getData() reconnects if it failed.
+clientPromise.catch(() => undefined);
 
 export const queryNPM: Query = { name: 'atanas-info-npm' };
 export const queryMusic: Query = { name: 'atanas-info-music' };
@@ -52,16 +66,22 @@ type MongoDBProps<T> = {
 };
 
 export const getData = async <T>(name: string, query: Query): Promise<MongoDBProps<T>> => {
-	const client = await clientPromise;
-	const db = client.db('All');
-	const collection = db.collection(name);
-	const result = await collection.findOne(query);
+	try {
+		const client = await connect();
+		const result = await client.db('All').collection(name).findOne(query);
 
-	return {
-		props: {
-			data: result?.data as T
-		}
-	};
+		return {
+			props: {
+				data: result?.data as T
+			}
+		};
+	} catch (error: unknown) {
+		// One searchable line in the Vercel logs. Rethrown on purpose: a failed ISR regeneration
+		// keeps serving the last good page, whereas returning empty data would replace it.
+		console.error('[mongodb] getData failed for %s %s: %s', name, JSON.stringify(query), String(error));
+
+		throw error;
+	}
 };
 
 export default clientPromise;

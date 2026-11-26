@@ -48,7 +48,7 @@ export const getStaticProps: GetStaticProps<PortfolioOpenSourcePageData> = async
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	},
-	revalidate: 86400
+	revalidate: 604800
 });
 
 export default PortfolioOpenSourceProjects;

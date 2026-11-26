@@ -50,7 +50,7 @@ export const getStaticProps: GetStaticProps<PortfolioPersonalProjectsPageData> =
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	},
-	revalidate: 86400
+	revalidate: 604800
 });
 
 export default PortfolioPersonalProjects;

@@ -27,7 +27,8 @@ export const Footer: FC<Readonly<Props>> = ({ funding }) => {
 		<footer className="c-footer">
 			<div className="o-shell o-shell--flex">
 				<p>
-					&copy; 2011 - {new Date().getFullYear()} Atanas Atanasov. <br className="visible-xs-block" />
+					&copy; 2011 - {new Date(updatedAt * 1000).getUTCFullYear()} Atanas Atanasov.{' '}
+					<br className="visible-xs-block" />
 					All rights reserved.
 				</p>
 
@@ -46,7 +47,7 @@ export const Footer: FC<Readonly<Props>> = ({ funding }) => {
 					.
 				</small>
 
-				<small>Updated at {formatDate(updatedAt * 1000, 'dd MMM yyyy HH:mm:ss')}</small>
+				<small>Updated at {formatDate(updatedAt * 1000, 'dd MMM yyyy HH:mm:ss')} UTC</small>
 
 				<Funding data={funding} />
 

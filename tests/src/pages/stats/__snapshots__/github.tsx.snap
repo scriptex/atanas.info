@@ -2,7 +2,6 @@
 
 exports[`GithubStats component Should render the GithubStats component 1`] = `
 <DocumentFragment>
-  <svg />
   <header
     class="c-header"
   >
@@ -15,7 +14,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
         class="c-svg-logo"
       >
         <use
-          xlink:href="#svg-logo"
+          href="/sprite.svg#svg-logo"
         />
       </svg>
     </a>
@@ -719,7 +718,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
         <small
           class="c-section__stamp"
         >
-          Last updated: Mock date
+          Last updated: Mock date UTC
         </small>
         <div
           class="o-shell js--titles-added"
@@ -763,7 +762,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-email"
+                  href="/sprite.svg#svg-email"
                 />
               </svg>
               <span>
@@ -785,7 +784,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-braintrust"
+                  href="/sprite.svg#svg-braintrust"
                 />
               </svg>
               <span>
@@ -798,7 +797,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -814,7 +813,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-toptal"
+                  href="/sprite.svg#svg-toptal"
                 />
               </svg>
               <span>
@@ -827,7 +826,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -1203,7 +1202,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
             class="c-svg-external-link"
           >
             <use
-              xlink:href="#svg-external-link"
+              href="/sprite.svg#svg-external-link"
             />
           </svg>
         </a>
@@ -1218,14 +1217,14 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
             class="c-svg-external-link"
           >
             <use
-              xlink:href="#svg-external-link"
+              href="/sprite.svg#svg-external-link"
             />
           </svg>
         </a>
         .
       </small>
       <small>
-        Updated at Mock date
+        Updated at Mock date UTC
       </small>
       <div
         class="c-funding"
@@ -1269,10 +1268,10 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
                 </text>
                 <use
                   height="40"
+                  href="/sprite.svg#svg-funding 1"
                   transform="rotate(60 397.2243347167969 165)"
                   width="40"
                   x="377.2243347167969"
-                  xlink:href="#svg-funding 1"
                   y="145"
                 />
               </a>
@@ -1302,10 +1301,10 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
                 </text>
                 <use
                   height="40"
+                  href="/sprite.svg#svg-funding 2"
                   transform="rotate(60 397.2243347167969 165)"
                   width="40"
                   x="377.2243347167969"
-                  xlink:href="#svg-funding 2"
                   y="145"
                 />
               </a>
@@ -1344,7 +1343,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
               class="c-funding__crypto-icon"
             >
               <use
-                xlink:href="#svg-bitcoin"
+                href="/sprite.svg#svg-bitcoin"
               />
             </svg>
           </button>
@@ -1368,7 +1367,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
               class="c-funding__crypto-icon"
             >
               <use
-                xlink:href="#svg-shiba-inu"
+                href="/sprite.svg#svg-shiba-inu"
               />
             </svg>
           </button>
@@ -1413,7 +1412,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -1446,7 +1445,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -1479,7 +1478,7 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -1493,7 +1492,6 @@ exports[`GithubStats component Should render the GithubStats component 1`] = `
 
 exports[`GithubStats component Should render the GithubStats component 2`] = `
 <DocumentFragment>
-  <svg />
   <header
     class="c-header"
   >
@@ -1506,7 +1504,7 @@ exports[`GithubStats component Should render the GithubStats component 2`] = `
         class="c-svg-logo"
       >
         <use
-          xlink:href="#svg-logo"
+          href="/sprite.svg#svg-logo"
         />
       </svg>
     </a>
@@ -2089,7 +2087,7 @@ exports[`GithubStats component Should render the GithubStats component 2`] = `
         <small
           class="c-section__stamp"
         >
-          Last updated: Mock date
+          Last updated: Mock date UTC
         </small>
         <div
           class="o-shell js--titles-added"
@@ -2133,7 +2131,7 @@ exports[`GithubStats component Should render the GithubStats component 2`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-email"
+                  href="/sprite.svg#svg-email"
                 />
               </svg>
               <span>
@@ -2155,7 +2153,7 @@ exports[`GithubStats component Should render the GithubStats component 2`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-braintrust"
+                  href="/sprite.svg#svg-braintrust"
                 />
               </svg>
               <span>
@@ -2168,7 +2166,7 @@ exports[`GithubStats component Should render the GithubStats component 2`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -2184,7 +2182,7 @@ exports[`GithubStats component Should render the GithubStats component 2`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-toptal"
+                  href="/sprite.svg#svg-toptal"
                 />
               </svg>
               <span>
@@ -2197,7 +2195,7 @@ exports[`GithubStats component Should render the GithubStats component 2`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -2573,7 +2571,7 @@ exports[`GithubStats component Should render the GithubStats component 2`] = `
             class="c-svg-external-link"
           >
             <use
-              xlink:href="#svg-external-link"
+              href="/sprite.svg#svg-external-link"
             />
           </svg>
         </a>
@@ -2588,14 +2586,14 @@ exports[`GithubStats component Should render the GithubStats component 2`] = `
             class="c-svg-external-link"
           >
             <use
-              xlink:href="#svg-external-link"
+              href="/sprite.svg#svg-external-link"
             />
           </svg>
         </a>
         .
       </small>
       <small>
-        Updated at Mock date
+        Updated at Mock date UTC
       </small>
       <div
         class="c-funding"
@@ -2639,10 +2637,10 @@ exports[`GithubStats component Should render the GithubStats component 2`] = `
                 </text>
                 <use
                   height="40"
+                  href="/sprite.svg#svg-funding 1"
                   transform="rotate(60 397.2243347167969 165)"
                   width="40"
                   x="377.2243347167969"
-                  xlink:href="#svg-funding 1"
                   y="145"
                 />
               </a>
@@ -2672,10 +2670,10 @@ exports[`GithubStats component Should render the GithubStats component 2`] = `
                 </text>
                 <use
                   height="40"
+                  href="/sprite.svg#svg-funding 2"
                   transform="rotate(60 397.2243347167969 165)"
                   width="40"
                   x="377.2243347167969"
-                  xlink:href="#svg-funding 2"
                   y="145"
                 />
               </a>
@@ -2714,7 +2712,7 @@ exports[`GithubStats component Should render the GithubStats component 2`] = `
               class="c-funding__crypto-icon"
             >
               <use
-                xlink:href="#svg-bitcoin"
+                href="/sprite.svg#svg-bitcoin"
               />
             </svg>
           </button>
@@ -2738,7 +2736,7 @@ exports[`GithubStats component Should render the GithubStats component 2`] = `
               class="c-funding__crypto-icon"
             >
               <use
-                xlink:href="#svg-shiba-inu"
+                href="/sprite.svg#svg-shiba-inu"
               />
             </svg>
           </button>
@@ -2783,7 +2781,7 @@ exports[`GithubStats component Should render the GithubStats component 2`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -2816,7 +2814,7 @@ exports[`GithubStats component Should render the GithubStats component 2`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -2849,7 +2847,7 @@ exports[`GithubStats component Should render the GithubStats component 2`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -2863,7 +2861,6 @@ exports[`GithubStats component Should render the GithubStats component 2`] = `
 
 exports[`GithubStats component Should render the GithubStats component 3`] = `
 <DocumentFragment>
-  <svg />
   <header
     class="c-header"
   >
@@ -2876,7 +2873,7 @@ exports[`GithubStats component Should render the GithubStats component 3`] = `
         class="c-svg-logo"
       >
         <use
-          xlink:href="#svg-logo"
+          href="/sprite.svg#svg-logo"
         />
       </svg>
     </a>
@@ -3482,7 +3479,7 @@ exports[`GithubStats component Should render the GithubStats component 3`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-email"
+                  href="/sprite.svg#svg-email"
                 />
               </svg>
               <span>
@@ -3504,7 +3501,7 @@ exports[`GithubStats component Should render the GithubStats component 3`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-braintrust"
+                  href="/sprite.svg#svg-braintrust"
                 />
               </svg>
               <span>
@@ -3517,7 +3514,7 @@ exports[`GithubStats component Should render the GithubStats component 3`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -3533,7 +3530,7 @@ exports[`GithubStats component Should render the GithubStats component 3`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-toptal"
+                  href="/sprite.svg#svg-toptal"
                 />
               </svg>
               <span>
@@ -3546,7 +3543,7 @@ exports[`GithubStats component Should render the GithubStats component 3`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -3922,7 +3919,7 @@ exports[`GithubStats component Should render the GithubStats component 3`] = `
             class="c-svg-external-link"
           >
             <use
-              xlink:href="#svg-external-link"
+              href="/sprite.svg#svg-external-link"
             />
           </svg>
         </a>
@@ -3937,14 +3934,14 @@ exports[`GithubStats component Should render the GithubStats component 3`] = `
             class="c-svg-external-link"
           >
             <use
-              xlink:href="#svg-external-link"
+              href="/sprite.svg#svg-external-link"
             />
           </svg>
         </a>
         .
       </small>
       <small>
-        Updated at Mock date
+        Updated at Mock date UTC
       </small>
       <div
         class="c-funding"
@@ -3988,10 +3985,10 @@ exports[`GithubStats component Should render the GithubStats component 3`] = `
                 </text>
                 <use
                   height="40"
+                  href="/sprite.svg#svg-funding 1"
                   transform="rotate(60 397.2243347167969 165)"
                   width="40"
                   x="377.2243347167969"
-                  xlink:href="#svg-funding 1"
                   y="145"
                 />
               </a>
@@ -4021,10 +4018,10 @@ exports[`GithubStats component Should render the GithubStats component 3`] = `
                 </text>
                 <use
                   height="40"
+                  href="/sprite.svg#svg-funding 2"
                   transform="rotate(60 397.2243347167969 165)"
                   width="40"
                   x="377.2243347167969"
-                  xlink:href="#svg-funding 2"
                   y="145"
                 />
               </a>
@@ -4063,7 +4060,7 @@ exports[`GithubStats component Should render the GithubStats component 3`] = `
               class="c-funding__crypto-icon"
             >
               <use
-                xlink:href="#svg-bitcoin"
+                href="/sprite.svg#svg-bitcoin"
               />
             </svg>
           </button>
@@ -4087,7 +4084,7 @@ exports[`GithubStats component Should render the GithubStats component 3`] = `
               class="c-funding__crypto-icon"
             >
               <use
-                xlink:href="#svg-shiba-inu"
+                href="/sprite.svg#svg-shiba-inu"
               />
             </svg>
           </button>
@@ -4132,7 +4129,7 @@ exports[`GithubStats component Should render the GithubStats component 3`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -4165,7 +4162,7 @@ exports[`GithubStats component Should render the GithubStats component 3`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -4198,7 +4195,7 @@ exports[`GithubStats component Should render the GithubStats component 3`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -4212,7 +4209,6 @@ exports[`GithubStats component Should render the GithubStats component 3`] = `
 
 exports[`GithubStats component Should render the GithubStats component 4`] = `
 <DocumentFragment>
-  <svg />
   <header
     class="c-header"
   >
@@ -4225,7 +4221,7 @@ exports[`GithubStats component Should render the GithubStats component 4`] = `
         class="c-svg-logo"
       >
         <use
-          xlink:href="#svg-logo"
+          href="/sprite.svg#svg-logo"
         />
       </svg>
     </a>
@@ -4929,7 +4925,7 @@ exports[`GithubStats component Should render the GithubStats component 4`] = `
         <small
           class="c-section__stamp"
         >
-          Last updated: Mock date
+          Last updated: Mock date UTC
         </small>
         <div
           class="o-shell js--titles-added"
@@ -4973,7 +4969,7 @@ exports[`GithubStats component Should render the GithubStats component 4`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-email"
+                  href="/sprite.svg#svg-email"
                 />
               </svg>
               <span>
@@ -4995,7 +4991,7 @@ exports[`GithubStats component Should render the GithubStats component 4`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-braintrust"
+                  href="/sprite.svg#svg-braintrust"
                 />
               </svg>
               <span>
@@ -5008,7 +5004,7 @@ exports[`GithubStats component Should render the GithubStats component 4`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -5024,7 +5020,7 @@ exports[`GithubStats component Should render the GithubStats component 4`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-toptal"
+                  href="/sprite.svg#svg-toptal"
                 />
               </svg>
               <span>
@@ -5037,7 +5033,7 @@ exports[`GithubStats component Should render the GithubStats component 4`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -5413,7 +5409,7 @@ exports[`GithubStats component Should render the GithubStats component 4`] = `
             class="c-svg-external-link"
           >
             <use
-              xlink:href="#svg-external-link"
+              href="/sprite.svg#svg-external-link"
             />
           </svg>
         </a>
@@ -5428,14 +5424,14 @@ exports[`GithubStats component Should render the GithubStats component 4`] = `
             class="c-svg-external-link"
           >
             <use
-              xlink:href="#svg-external-link"
+              href="/sprite.svg#svg-external-link"
             />
           </svg>
         </a>
         .
       </small>
       <small>
-        Updated at Mock date
+        Updated at Mock date UTC
       </small>
       <div
         class="c-funding"
@@ -5479,10 +5475,10 @@ exports[`GithubStats component Should render the GithubStats component 4`] = `
                 </text>
                 <use
                   height="40"
+                  href="/sprite.svg#svg-funding 1"
                   transform="rotate(60 397.2243347167969 165)"
                   width="40"
                   x="377.2243347167969"
-                  xlink:href="#svg-funding 1"
                   y="145"
                 />
               </a>
@@ -5512,10 +5508,10 @@ exports[`GithubStats component Should render the GithubStats component 4`] = `
                 </text>
                 <use
                   height="40"
+                  href="/sprite.svg#svg-funding 2"
                   transform="rotate(60 397.2243347167969 165)"
                   width="40"
                   x="377.2243347167969"
-                  xlink:href="#svg-funding 2"
                   y="145"
                 />
               </a>
@@ -5554,7 +5550,7 @@ exports[`GithubStats component Should render the GithubStats component 4`] = `
               class="c-funding__crypto-icon"
             >
               <use
-                xlink:href="#svg-bitcoin"
+                href="/sprite.svg#svg-bitcoin"
               />
             </svg>
           </button>
@@ -5578,7 +5574,7 @@ exports[`GithubStats component Should render the GithubStats component 4`] = `
               class="c-funding__crypto-icon"
             >
               <use
-                xlink:href="#svg-shiba-inu"
+                href="/sprite.svg#svg-shiba-inu"
               />
             </svg>
           </button>
@@ -5623,7 +5619,7 @@ exports[`GithubStats component Should render the GithubStats component 4`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -5656,7 +5652,7 @@ exports[`GithubStats component Should render the GithubStats component 4`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -5689,7 +5685,7 @@ exports[`GithubStats component Should render the GithubStats component 4`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -5703,7 +5699,6 @@ exports[`GithubStats component Should render the GithubStats component 4`] = `
 
 exports[`GithubStats component Should render the GithubStats component 5`] = `
 <DocumentFragment>
-  <svg />
   <header
     class="c-header"
   >
@@ -5716,7 +5711,7 @@ exports[`GithubStats component Should render the GithubStats component 5`] = `
         class="c-svg-logo"
       >
         <use
-          xlink:href="#svg-logo"
+          href="/sprite.svg#svg-logo"
         />
       </svg>
     </a>
@@ -6420,7 +6415,7 @@ exports[`GithubStats component Should render the GithubStats component 5`] = `
         <small
           class="c-section__stamp"
         >
-          Last updated: Mock date
+          Last updated: Mock date UTC
         </small>
         <div
           class="o-shell js--titles-added"
@@ -6464,7 +6459,7 @@ exports[`GithubStats component Should render the GithubStats component 5`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-email"
+                  href="/sprite.svg#svg-email"
                 />
               </svg>
               <span>
@@ -6486,7 +6481,7 @@ exports[`GithubStats component Should render the GithubStats component 5`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-braintrust"
+                  href="/sprite.svg#svg-braintrust"
                 />
               </svg>
               <span>
@@ -6499,7 +6494,7 @@ exports[`GithubStats component Should render the GithubStats component 5`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -6515,7 +6510,7 @@ exports[`GithubStats component Should render the GithubStats component 5`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-toptal"
+                  href="/sprite.svg#svg-toptal"
                 />
               </svg>
               <span>
@@ -6528,7 +6523,7 @@ exports[`GithubStats component Should render the GithubStats component 5`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -6904,7 +6899,7 @@ exports[`GithubStats component Should render the GithubStats component 5`] = `
             class="c-svg-external-link"
           >
             <use
-              xlink:href="#svg-external-link"
+              href="/sprite.svg#svg-external-link"
             />
           </svg>
         </a>
@@ -6919,14 +6914,14 @@ exports[`GithubStats component Should render the GithubStats component 5`] = `
             class="c-svg-external-link"
           >
             <use
-              xlink:href="#svg-external-link"
+              href="/sprite.svg#svg-external-link"
             />
           </svg>
         </a>
         .
       </small>
       <small>
-        Updated at Mock date
+        Updated at Mock date UTC
       </small>
       <div
         class="c-funding"
@@ -6970,10 +6965,10 @@ exports[`GithubStats component Should render the GithubStats component 5`] = `
                 </text>
                 <use
                   height="40"
+                  href="/sprite.svg#svg-funding 1"
                   transform="rotate(60 397.2243347167969 165)"
                   width="40"
                   x="377.2243347167969"
-                  xlink:href="#svg-funding 1"
                   y="145"
                 />
               </a>
@@ -7003,10 +6998,10 @@ exports[`GithubStats component Should render the GithubStats component 5`] = `
                 </text>
                 <use
                   height="40"
+                  href="/sprite.svg#svg-funding 2"
                   transform="rotate(60 397.2243347167969 165)"
                   width="40"
                   x="377.2243347167969"
-                  xlink:href="#svg-funding 2"
                   y="145"
                 />
               </a>
@@ -7045,7 +7040,7 @@ exports[`GithubStats component Should render the GithubStats component 5`] = `
               class="c-funding__crypto-icon"
             >
               <use
-                xlink:href="#svg-bitcoin"
+                href="/sprite.svg#svg-bitcoin"
               />
             </svg>
           </button>
@@ -7069,7 +7064,7 @@ exports[`GithubStats component Should render the GithubStats component 5`] = `
               class="c-funding__crypto-icon"
             >
               <use
-                xlink:href="#svg-shiba-inu"
+                href="/sprite.svg#svg-shiba-inu"
               />
             </svg>
           </button>
@@ -7114,7 +7109,7 @@ exports[`GithubStats component Should render the GithubStats component 5`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -7147,7 +7142,7 @@ exports[`GithubStats component Should render the GithubStats component 5`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -7180,7 +7175,7 @@ exports[`GithubStats component Should render the GithubStats component 5`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -7194,7 +7189,6 @@ exports[`GithubStats component Should render the GithubStats component 5`] = `
 
 exports[`GithubStats component Should render the GithubStats component 6`] = `
 <DocumentFragment>
-  <svg />
   <header
     class="c-header"
   >
@@ -7207,7 +7201,7 @@ exports[`GithubStats component Should render the GithubStats component 6`] = `
         class="c-svg-logo"
       >
         <use
-          xlink:href="#svg-logo"
+          href="/sprite.svg#svg-logo"
         />
       </svg>
     </a>
@@ -7909,7 +7903,7 @@ exports[`GithubStats component Should render the GithubStats component 6`] = `
         <small
           class="c-section__stamp"
         >
-          Last updated: Mock date
+          Last updated: Mock date UTC
         </small>
         <div
           class="o-shell js--titles-added"
@@ -7953,7 +7947,7 @@ exports[`GithubStats component Should render the GithubStats component 6`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-email"
+                  href="/sprite.svg#svg-email"
                 />
               </svg>
               <span>
@@ -7975,7 +7969,7 @@ exports[`GithubStats component Should render the GithubStats component 6`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-braintrust"
+                  href="/sprite.svg#svg-braintrust"
                 />
               </svg>
               <span>
@@ -7988,7 +7982,7 @@ exports[`GithubStats component Should render the GithubStats component 6`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -8004,7 +7998,7 @@ exports[`GithubStats component Should render the GithubStats component 6`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-toptal"
+                  href="/sprite.svg#svg-toptal"
                 />
               </svg>
               <span>
@@ -8017,7 +8011,7 @@ exports[`GithubStats component Should render the GithubStats component 6`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -8393,7 +8387,7 @@ exports[`GithubStats component Should render the GithubStats component 6`] = `
             class="c-svg-external-link"
           >
             <use
-              xlink:href="#svg-external-link"
+              href="/sprite.svg#svg-external-link"
             />
           </svg>
         </a>
@@ -8408,14 +8402,14 @@ exports[`GithubStats component Should render the GithubStats component 6`] = `
             class="c-svg-external-link"
           >
             <use
-              xlink:href="#svg-external-link"
+              href="/sprite.svg#svg-external-link"
             />
           </svg>
         </a>
         .
       </small>
       <small>
-        Updated at Mock date
+        Updated at Mock date UTC
       </small>
       <div
         class="c-funding"
@@ -8459,10 +8453,10 @@ exports[`GithubStats component Should render the GithubStats component 6`] = `
                 </text>
                 <use
                   height="40"
+                  href="/sprite.svg#svg-funding 1"
                   transform="rotate(60 397.2243347167969 165)"
                   width="40"
                   x="377.2243347167969"
-                  xlink:href="#svg-funding 1"
                   y="145"
                 />
               </a>
@@ -8492,10 +8486,10 @@ exports[`GithubStats component Should render the GithubStats component 6`] = `
                 </text>
                 <use
                   height="40"
+                  href="/sprite.svg#svg-funding 2"
                   transform="rotate(60 397.2243347167969 165)"
                   width="40"
                   x="377.2243347167969"
-                  xlink:href="#svg-funding 2"
                   y="145"
                 />
               </a>
@@ -8534,7 +8528,7 @@ exports[`GithubStats component Should render the GithubStats component 6`] = `
               class="c-funding__crypto-icon"
             >
               <use
-                xlink:href="#svg-bitcoin"
+                href="/sprite.svg#svg-bitcoin"
               />
             </svg>
           </button>
@@ -8558,7 +8552,7 @@ exports[`GithubStats component Should render the GithubStats component 6`] = `
               class="c-funding__crypto-icon"
             >
               <use
-                xlink:href="#svg-shiba-inu"
+                href="/sprite.svg#svg-shiba-inu"
               />
             </svg>
           </button>
@@ -8603,7 +8597,7 @@ exports[`GithubStats component Should render the GithubStats component 6`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -8636,7 +8630,7 @@ exports[`GithubStats component Should render the GithubStats component 6`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -8669,7 +8663,7 @@ exports[`GithubStats component Should render the GithubStats component 6`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -8695,7 +8689,6 @@ exports[`GithubStats component Should unmount the GithubStats component 6`] = `<
 
 exports[`Test the GithubStats page with fake timers 1`] = `
 <DocumentFragment>
-  <svg />
   <header
     class="c-header"
   >
@@ -8708,7 +8701,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
         class="c-svg-logo"
       >
         <use
-          xlink:href="#svg-logo"
+          href="/sprite.svg#svg-logo"
         />
       </svg>
     </a>
@@ -9412,7 +9405,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
         <small
           class="c-section__stamp"
         >
-          Last updated: Mock date
+          Last updated: Mock date UTC
         </small>
         <div
           class="o-shell js--titles-added"
@@ -9456,7 +9449,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-email"
+                  href="/sprite.svg#svg-email"
                 />
               </svg>
               <span>
@@ -9478,7 +9471,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-braintrust"
+                  href="/sprite.svg#svg-braintrust"
                 />
               </svg>
               <span>
@@ -9491,7 +9484,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -9507,7 +9500,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 class="c-section__actions-icon"
               >
                 <use
-                  xlink:href="#svg-toptal"
+                  href="/sprite.svg#svg-toptal"
                 />
               </svg>
               <span>
@@ -9520,7 +9513,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -9896,7 +9889,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
             class="c-svg-external-link"
           >
             <use
-              xlink:href="#svg-external-link"
+              href="/sprite.svg#svg-external-link"
             />
           </svg>
         </a>
@@ -9911,14 +9904,14 @@ exports[`Test the GithubStats page with fake timers 1`] = `
             class="c-svg-external-link"
           >
             <use
-              xlink:href="#svg-external-link"
+              href="/sprite.svg#svg-external-link"
             />
           </svg>
         </a>
         .
       </small>
       <small>
-        Updated at Mock date
+        Updated at Mock date UTC
       </small>
       <div
         class="c-funding"
@@ -9962,10 +9955,10 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 </text>
                 <use
                   height="40"
+                  href="/sprite.svg#svg-funding 1"
                   transform="rotate(60 397.2243347167969 165)"
                   width="40"
                   x="377.2243347167969"
-                  xlink:href="#svg-funding 1"
                   y="145"
                 />
               </a>
@@ -9995,10 +9988,10 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 </text>
                 <use
                   height="40"
+                  href="/sprite.svg#svg-funding 2"
                   transform="rotate(60 397.2243347167969 165)"
                   width="40"
                   x="377.2243347167969"
-                  xlink:href="#svg-funding 2"
                   y="145"
                 />
               </a>
@@ -10037,7 +10030,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
               class="c-funding__crypto-icon"
             >
               <use
-                xlink:href="#svg-bitcoin"
+                href="/sprite.svg#svg-bitcoin"
               />
             </svg>
           </button>
@@ -10061,7 +10054,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
               class="c-funding__crypto-icon"
             >
               <use
-                xlink:href="#svg-shiba-inu"
+                href="/sprite.svg#svg-shiba-inu"
               />
             </svg>
           </button>
@@ -10106,7 +10099,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -10139,7 +10132,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>
@@ -10172,7 +10165,7 @@ exports[`Test the GithubStats page with fake timers 1`] = `
                 class="c-svg-external-link"
               >
                 <use
-                  xlink:href="#svg-external-link"
+                  href="/sprite.svg#svg-external-link"
                 />
               </svg>
             </a>

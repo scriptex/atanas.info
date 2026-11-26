@@ -36,7 +36,8 @@ export default [
 			'./svgo-config.mjs',
 			'**/*.config.js',
 			'**/*.config.mjs',
-			'src/data/open-source.ts'
+			'src/data/open-source.ts',
+			'graphify-out/**/*'
 		]
 	},
 	{

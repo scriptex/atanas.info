@@ -29,7 +29,7 @@ export const getStaticProps: GetStaticProps<ErrorPageProps> = async () => ({
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	},
-	revalidate: 86400
+	revalidate: 604800
 });
 
 export default ErrorPage;

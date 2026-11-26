@@ -70,7 +70,7 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => ({
 		partners: await getPartnersFromCMS(),
 		titles: await getTitlesFromCMS()
 	},
-	revalidate: 86400
+	revalidate: 604800
 });
 
 export default Home;

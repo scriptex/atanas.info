@@ -25,7 +25,7 @@ export const getStaticProps: GetStaticProps<PortfolioPageData> = async () => ({
 		funding: await getFundingFromCMS(),
 		partners: await getPartnersFromCMS()
 	},
-	revalidate: 86400
+	revalidate: 604800
 });
 
 export default Portfolio;

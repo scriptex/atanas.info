@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { useSearchParams } from 'next/navigation';
 
+import { UTCDate } from '@date-fns/utc';
 import { format } from 'date-fns/format';
 
 import type { Project } from '@data/projects';
@@ -14,12 +15,16 @@ export type PaginationData<T> = {
 	menu: Project[] | undefined;
 };
 
+// The sprite is served as a static file (public/sprite.svg) instead of being inlined
+// in every page, which keeps ISR-cached pages small.
+export const spriteHref = (id: string): string => `/sprite.svg#${id}`;
+
 export const formatDate = (date: number | string, formatter = 'dd MMM yyyy'): string => {
 	if (!date) {
 		return '';
 	}
 
-	return format(new Date(date), formatter);
+	return format(new UTCDate(date), formatter);
 };
 
 export const setThemeClassName = (theme: Theme): void => {

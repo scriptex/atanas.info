@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 
 import type { FundingNetwork as FundingNetworkType } from '@scripts/cms';
+import { spriteHref } from '@scripts/shared';
 
 type Props = Omit<FundingNetworkType, 'index'>;
 
@@ -22,10 +23,10 @@ export const FundingNetwork: FC<Props> = ({ matrix, name, url }: Props) => (
 
 			<use
 				height="40"
+				href={spriteHref(`svg-${name.toLowerCase()}`)}
 				transform="rotate(60 397.2243347167969 165)"
 				width="40"
 				x="377.2243347167969"
-				xlinkHref={`#svg-${name.toLowerCase()}`}
 				y="145"
 			/>
 		</a>

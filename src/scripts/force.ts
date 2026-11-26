@@ -11,6 +11,7 @@ import type { ForceNode } from '@data/skills-list';
 
 import type { Canvas } from './canvas';
 import { createSVG } from './canvas';
+import { spriteHref } from './shared';
 
 type Node = ForceNode & Readonly<{ r: number }>;
 
@@ -162,7 +163,7 @@ export const createNodes = (
 			.attr('width', width)
 			.attr('height', height)
 			.attr('transform', `translate(-${width / 2},-${height / 2})`)
-			.attr('xlink:xlink:href', `#svg-${d.icon}`)
+			.attr('href', spriteHref(`svg-${d.icon}`))
 			.attr('fill', d.iconFill!);
 
 		parent
