@@ -38,6 +38,15 @@ const withIndex = <T>(items: T[]) =>
 
 export const projects: WebProject[] = withIndex([
 	{
+		description:
+			'Typescript, SCSS, SVG, Python, PHP, React, Django, NodeJS, WordPress, Google Cloud Platform, Jest, React Testing Library, Cypress',
+		image: '/images/web-apps/dmarcian-DMARC-ROI-calculator.jpeg',
+		skip: false,
+		text: 'Built in collaboration with the dmarcian team',
+		title: 'dmarcian DMARC ROI Calculator',
+		url: 'https://dmarcian.com/dmarc-roi/'
+	},
+	{
 		description: 'PHP, SCSS, SVG, JS, WordPress',
 		image: '/images/web-apps/dmarcian-blog.jpeg',
 		skip: false,
