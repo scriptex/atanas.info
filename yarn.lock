@@ -1170,25 +1170,25 @@
     "@babel/helper-string-parser" "^8.1.3"
     "@babel/helper-validator-identifier" "^8.0.6"
 
-"@babylonjs/core@9.37.2":
-  version "9.37.2"
-  resolved "https://registry.yarnpkg.com/@babylonjs/core/-/core-9.37.2.tgz#2622cccc4aea59f7b7c2ba2779dbd553aaff5def"
-  integrity sha512-Adv1f6q9ckP1ICqB00Dz6Y+cKaynlQBc4mtBM4MnsCLNxyNB5Jh7COzAVev4Bz8zPNIjS05gMM/qRQmaSkVDlg==
+"@babylonjs/core@9.38.0":
+  version "9.38.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/core/-/core-9.38.0.tgz#de8d8d8736f6109f06615aa2d402c30eae1653c0"
+  integrity sha512-P1ezKHwPmalJ/ywh3ePzIBr1t8e8pWypZ+dakrlsUmzmoU9jeXc/yzDfnxr0PQsy1MV9NBcrQh5RuLY3kaUtNg==
 
-"@babylonjs/gui@9.37.2":
-  version "9.37.2"
-  resolved "https://registry.yarnpkg.com/@babylonjs/gui/-/gui-9.37.2.tgz#25abdb210c929dd8da39fd11aafa6a6182d4d2ce"
-  integrity sha512-srRNQ2t3sWJwfAZRdF6Nuz7xDtZBHOaHRillpVPty3oK/Wi09Yo92sHAA8seqamn9+JfX4VMEqhIfNkaKOOzrw==
+"@babylonjs/gui@9.38.0":
+  version "9.38.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/gui/-/gui-9.38.0.tgz#a957f9dcc8b5964f1d5af0d44a2bfffdfd3ba8a5"
+  integrity sha512-P+eTn70ZeEq6SFHyOAfSKFldiQv3X2AdQ/fg04GgBMR0r6xr6R23f8wPLwgJvfRE1pShvlwDQ+d/h/CkLS5xBw==
 
-"@babylonjs/loaders@9.37.2":
-  version "9.37.2"
-  resolved "https://registry.yarnpkg.com/@babylonjs/loaders/-/loaders-9.37.2.tgz#cfb09100f78fe8cb513be1fc393520eb3777cf5d"
-  integrity sha512-vz/MybqLd70+CWrbI/sFi1SLPlTupFfhv9MscPE/dSz7+wpZs2Ra5sDWnJymXEML1Zq2pE3HbnGyqy0t4R2e4w==
+"@babylonjs/loaders@9.38.0":
+  version "9.38.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/loaders/-/loaders-9.38.0.tgz#028f1817875a7a4fe72575d41ed9f78ed8bb28db"
+  integrity sha512-kYAnlnEasPpxqeTN8KntRw+DUNvvN+Snt+uhjggVir7i0qc4HGp0uM6rNlT3H2YShonipsRdY1Mz0ZQLryR9mw==
 
-"@babylonjs/materials@9.37.2":
-  version "9.37.2"
-  resolved "https://registry.yarnpkg.com/@babylonjs/materials/-/materials-9.37.2.tgz#c171057827a9e84f0695b33dfa56cdb9c4c20536"
-  integrity sha512-6I4LxKcl3O42Ywmaz8l/kiGvWPeBN8fFoEejmiUXBxoBmprxHz1IcgGOsfNthX2q4XA/q0tqESKK+phJcbOrIg==
+"@babylonjs/materials@9.38.0":
+  version "9.38.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/materials/-/materials-9.38.0.tgz#73b076b4ddcb11b90e5e3c4fb2fa2f238770a69b"
+  integrity sha512-giPueiraLQbEOw0fTGw5b4x1MNu6IJXMKaV8PhSxp9L1QTr2vj6vXze5wpWqh2da+fhbw++KLR+lEjxQVST3EQ==
 
 "@bcoe/v8-coverage@^0.2.3":
   version "0.2.3"
@@ -1994,10 +1994,10 @@
   dependencies:
     "@eslint/core" "^1.2.1"
 
-"@eslint/config-array@^0.23.6":
-  version "0.23.6"
-  resolved "https://registry.yarnpkg.com/@eslint/config-array/-/config-array-0.23.6.tgz#cf69071fd9dc0950e90c352e2716fa8a26e631a4"
-  integrity sha512-WrTH7nioI9QPY4NZGnsywmecswJdgeq4BCM76qok9VgjTO29ZgUzUvcuJLVPYVQM4uDbaPBU0M33R9DIxI8X3w==
+"@eslint/config-array@^0.23.7":
+  version "0.23.7"
+  resolved "https://registry.yarnpkg.com/@eslint/config-array/-/config-array-0.23.7.tgz#f34166bf1132532938e7dec769878857a92baf67"
+  integrity sha512-Ix1tmZjA7/OmE7ROAfORe83hVnqlDzLpZVHFjHQt5mvLm1U03qMexpaxKqFIL362QV32SoPaZqmKQr3tdqFY2w==
   dependencies:
     "@eslint/object-schema" "^3.0.5"
     debug "^4.3.1"
@@ -3841,10 +3841,10 @@
   dependencies:
     execa "5.1.1"
 
-"@vercel/functions@3.11.4":
-  version "3.11.4"
-  resolved "https://registry.yarnpkg.com/@vercel/functions/-/functions-3.11.4.tgz#99faeafbe27e1d5c30e8a6914629f09fd1cedde2"
-  integrity sha512-2qi3V2qLE57l62CXUKwriRAFa4l5/HIbeRkoRpuIvmGYHqJWXdUKoTMxJP5efSRJtU0x9qV/u0iBHpm+8mGevA==
+"@vercel/functions@3.12.0":
+  version "3.12.0"
+  resolved "https://registry.yarnpkg.com/@vercel/functions/-/functions-3.12.0.tgz#5bc19a3a09518fbd96088327c79380c4a92e8cd9"
+  integrity sha512-nblcv/WNBBgiqPbD0bYywmPsQ8gYzfqDmuWFHnGSoD1kkO29C6AfTyQ5ZBpv0mpeaw9XK5dkfMvWAyw8TBogyA==
   dependencies:
     "@vercel/oidc" "5.0.0"
 
@@ -4491,10 +4491,10 @@ babel-preset-jest@30.5.0:
     babel-plugin-jest-hoist "30.5.0"
     babel-preset-current-node-syntax "^1.2.0"
 
-babylonjs-gltf2interface@9.37.2:
-  version "9.37.2"
-  resolved "https://registry.yarnpkg.com/babylonjs-gltf2interface/-/babylonjs-gltf2interface-9.37.2.tgz#9e562fe374d2ce63900028510c319b797879a8e7"
-  integrity sha512-mzLL6vyBTgYRVJ1KFyk5o+ViSDGifUtBmad1hDOklkBLL5hlAp9SLPpgI4OU3BsYT7NYRvIGNeP1FYTMH5GNcg==
+babylonjs-gltf2interface@9.38.0:
+  version "9.38.0"
+  resolved "https://registry.yarnpkg.com/babylonjs-gltf2interface/-/babylonjs-gltf2interface-9.38.0.tgz#248884e4d02a3939c5d0c3ed6bd18ea7ef037fce"
+  integrity sha512-FWxuPgI1HGhV5PjFdtaYj2DdN6v9IEVOrh9eYwVsaxsyZCrK+eS/5I49a05pK7rBAznSKFAjNFdsjZQikbxT6A==
 
 balanced-match@^1.0.0:
   version "1.0.2"
@@ -6358,14 +6358,14 @@ eslint-visitor-keys@^5.0.0, eslint-visitor-keys@^5.0.1:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-5.0.1.tgz#9e3c9489697824d2d4ce3a8ad12628f91e9f59be"
   integrity sha512-tD40eHxA35h0PEIZNeIjkHoDR4YjjJp34biM0mDvplBe//mB+IHCqHDGV7pxF+7MklTvighcCPPZC7ynWyjdTA==
 
-eslint@10.15.0:
-  version "10.15.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-10.15.0.tgz#dd29a7f78bc47cb7107a40acd3350f19c9089435"
-  integrity sha512-+5Wg4p+ze3sG1WErYgUO/3H1IQIfFBymVUA0Fo/XTeBOLS6UQIUekpSJ8sdRkn7O7wjh84b55w/roqavH2aScg==
+eslint@10.16.0:
+  version "10.16.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-10.16.0.tgz#2e0ea3be9faded0cba3862057513d9da2a12d1f8"
+  integrity sha512-Xu3PRLG/wCaZWZ20gkExUcNqL2mWWsXTR+Lln3Sof4Y9WuA678fH9hrlQ8B6UNwbTnsKdDdBYOd2jxtycXVTGQ==
   dependencies:
     "@eslint-community/eslint-utils" "^4.8.0"
     "@eslint-community/regexpp" "^4.12.2"
-    "@eslint/config-array" "^0.23.6"
+    "@eslint/config-array" "^0.23.7"
     "@eslint/config-helpers" "^0.7.0"
     "@eslint/core" "^1.2.1"
     "@eslint/plugin-kit" "^0.7.3"
@@ -12316,10 +12316,10 @@ svgo@3.0.2, svgo@4.1.0, svgo@>=4.1.0, svgo@^2.7.0, svgo@^3.0.0, svgo@^3.0.2, svg
     picocolors "^1.1.1"
     sax "1.6.1"
 
-swiper@14.4.0:
-  version "14.4.0"
-  resolved "https://registry.yarnpkg.com/swiper/-/swiper-14.4.0.tgz#9c6a7f787e1afdb52862e3f2c7c0d16bc3652108"
-  integrity sha512-6axnAuBsttFJe0gwsM5tT203/Bts0vcI+FwIX6dqFE4pUFVW6qrdRprNFQVxOYMW7V0S6A/KIqJ6JaPpNN2MCw==
+swiper@14.5.0:
+  version "14.5.0"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-14.5.0.tgz#37c3e82d8a9719687f488620ff2efe5c2c0bf4b0"
+  integrity sha512-d4fR/Dj27KfLksSpz9/Ji2PdZJZZPTLBP83vZGHfJEDuWBt8EPXMpy9aM7KEEE+oSWR7T2i7lfrgJMdaox8WSg==
 
 symbol-tree@^3.2.4:
   version "3.2.4"
